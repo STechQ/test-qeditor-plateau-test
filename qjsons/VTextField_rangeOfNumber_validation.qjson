@@ -1,0 +1,108 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_2",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"PostRender": {
+					"H": "var min = 10\r\nvar max = 100\r\ncomponents.EdtrComp_110.rules = [(v) => (v > min && v < max) || 'Value should be between ' + min + ' and ' + max]",
+					"TO": 1,
+					"HL": "TS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_2"
+			},
+			"O": {
+				"cType": "child"
+			}
+		},
+		{
+			"T": "VTextField",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_110",
+					"T": "prop"
+				},
+				"label": {
+					"H": "'Text field label'",
+					"T": "prop"
+				},
+				"rules": {
+					"H": "[Quick.validation.required()]",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_110"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_2",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"PostRender": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nvar min = 10;\r\nvar max = 100;\r\ncomponents.EdtrComp_110.rules = [function (v) { return (v > min && v < max) || 'Value should be between ' + min + ' and ' + max; }];\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfMl9Qb3N0UmVuZGVyX0UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJFZHRyQ29tcF8yX1Bvc3RSZW5kZXJfRS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQ0EsSUFBSSxHQUFHLEdBQUcsRUFBRSxDQUFBO0FBQ1osSUFBSSxHQUFHLEdBQUcsR0FBRyxDQUFBO0FBQ2IsVUFBVSxDQUFDLFlBQVksQ0FBQyxLQUFLLEdBQUcsQ0FBQyxVQUFDLENBQUMsSUFBSyxPQUFBLENBQUMsQ0FBQyxHQUFHLEdBQUcsSUFBSSxDQUFDLEdBQUcsR0FBRyxDQUFDLElBQUksMEJBQTBCLEdBQUcsR0FBRyxHQUFHLE9BQU8sR0FBRyxHQUFHLEVBQXhFLENBQXdFLENBQUMsQ0FBQSIsInNvdXJjZXNDb250ZW50IjpbIlxudmFyIG1pbiA9IDEwXHJcbnZhciBtYXggPSAxMDBcclxuY29tcG9uZW50cy5FZHRyQ29tcF8xMTAucnVsZXMgPSBbKHYpID0+ICh2ID4gbWluICYmIHYgPCBtYXgpIHx8ICdWYWx1ZSBzaG91bGQgYmUgYmV0d2VlbiAnICsgbWluICsgJyBhbmQgJyArIG1heF1cbiBleHBvcnR7fTtcbiJdfQ==",
+					"TO": 1,
+					"HL": "JS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_2"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			}
+		},
+		{
+			"T": "VTextField",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_110",
+					"T": "prop"
+				},
+				"label": {
+					"H": "╬'Text field label'╩╩",
+					"T": "prop"
+				},
+				"rules": {
+					"H": "╬[]╠()╣.╣.╣Quick╩╠validation╩╩╠required╩╩╩╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_110"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {}
+};
+export default pjson

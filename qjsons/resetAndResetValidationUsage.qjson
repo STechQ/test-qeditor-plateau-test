@@ -1,0 +1,3725 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VCard",
+			"P": {
+				"ID": {
+					"H": "VcardExample",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VContainer",
+							"P": {
+								"ID": {
+									"H": "VcontainerExample",
+									"T": "prop"
+								},
+								"class": {
+									"H": "'container container--fluid'",
+									"T": "class"
+								},
+								"visible": {
+									"H": "true",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VInlineDatepicker",
+											"P": {
+												"ID": {
+													"H": "dpExample",
+													"T": "prop"
+												},
+												"label": {
+													"H": "'Pick a date'",
+													"T": "prop"
+												},
+												"locale": {
+													"H": "'tr'",
+													"T": "prop"
+												},
+												"willAttach": {
+													"H": "'true'",
+													"T": "prop"
+												},
+												"rules": {
+													"H": "[Quick.validation.required()]",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_737"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										},
+										{
+											"T": "VTextField",
+											"P": {
+												"ID": {
+													"H": "txtExample",
+													"T": "prop"
+												},
+												"label": {
+													"H": "'Text field label'",
+													"T": "prop"
+												},
+												"visible": {
+													"H": "true",
+													"T": "prop"
+												},
+												"rules": {
+													"H": "[Quick.validation.required(), Quick.validation.minLength(5, 'Enter at least 5 characters')]",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_736"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_734"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_738"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		},
+		{
+			"T": "VCard",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_232",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VContainer",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_233",
+									"T": "prop"
+								},
+								"class": {
+									"H": "'container container--fluid'",
+									"T": "class"
+								},
+								"visible": {
+									"H": "true",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VRow",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_234",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_236",
+																					"T": "prop"
+																				},
+																				"tagType": {
+																					"H": "'span'",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'Reset Validations with Typescript'",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_236"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"tt:text-h6",
+																							"te:font-weight-medium"
+																						]
+																					},
+																					"class": "text-h6 font-weight-medium"
+																				}
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_235",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_235"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"d:d-flex",
+																			"c:col-4"
+																		]
+																	},
+																	"class": "d-flex col-4"
+																}
+															}
+														},
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VBtn",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_238",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "'primary'",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"click": {
+																					"H": "quick.Quick.resetValidation('txtExample')",
+																					"P": "mouseEvent:unknown | undefined",
+																					"HL": "TS"
+																				}
+																			},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"C": {},
+																							"E": {},
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_239",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "'Textfield'",
+																									"T": "prop"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_239"
+																							},
+																							"O": {
+																								"cType": "child"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_238"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_237",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_237"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														},
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VBtn",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_241",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "'success'",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"click": {
+																					"H": "quick.Quick.resetValidation('VcontainerExample')",
+																					"P": "mouseEvent:unknown | undefined",
+																					"HL": "TS"
+																				}
+																			},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"C": {},
+																							"E": {},
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_242",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "'Container'",
+																									"T": "prop"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_242"
+																							},
+																							"O": {
+																								"cType": "child"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_241"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_240",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_240"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														},
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VBtn",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_244",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "'error'",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"click": {
+																					"H": "quick.Quick.resetValidation('VcardExample')",
+																					"P": "mouseEvent:unknown | undefined",
+																					"HL": "TS"
+																				}
+																			},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"C": {},
+																							"E": {},
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_245",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "'Card'",
+																									"T": "prop"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_245"
+																							},
+																							"O": {
+																								"cType": "child"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_244"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_243",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_243"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_234"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										},
+										{
+											"T": "VRow",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_246",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_248",
+																					"T": "prop"
+																				},
+																				"tagType": {
+																					"H": "'span'",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'Reset Validations with Qscript'",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_248"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"tt:text-h6",
+																							"te:font-weight-medium"
+																						]
+																					},
+																					"class": "text-h6 font-weight-medium"
+																				}
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_247",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_247"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"d:d-flex",
+																			"c:col-4"
+																		]
+																	},
+																	"class": "d-flex col-4"
+																}
+															}
+														},
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VBtn",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_250",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "'primary'",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"click": {
+																					"H": "Quick.resetValidation('dpExample')",
+																					"P": "mouseEvent",
+																					"HL": "QS"
+																				}
+																			},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"C": {},
+																							"E": {},
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_251",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "'DatePicker'",
+																									"T": "prop"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_251"
+																							},
+																							"O": {
+																								"cType": "child"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_250"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_249",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_249"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														},
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VBtn",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_253",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "'success'",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"click": {
+																					"H": "Quick.resetValidation('VcontainerExample')",
+																					"P": "mouseEvent",
+																					"HL": "QS"
+																				}
+																			},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"C": {},
+																							"E": {},
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_254",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "'Container'",
+																									"T": "prop"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_254"
+																							},
+																							"O": {
+																								"cType": "child"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_253"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_252",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_252"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														},
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VBtn",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_256",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "'error'",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"click": {
+																					"H": "Quick.resetValidation('VcardExample')",
+																					"P": "mouseEvent",
+																					"HL": "QS"
+																				}
+																			},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"C": {},
+																							"E": {},
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_257",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "'Card'",
+																									"T": "prop"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_257"
+																							},
+																							"O": {
+																								"cType": "child"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_256"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_255",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_255"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_246"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										},
+										{
+											"T": "VRow",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_9",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "Ghost",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_41",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_41"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_10",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_10"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"d:d-flex",
+																			"c:col-4"
+																		]
+																	},
+																	"class": "d-flex col-4"
+																}
+															}
+														},
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "Ghost",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_55",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_55"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_12",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_12"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														},
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "Ghost",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_66",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_66"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_15",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_15"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														},
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VBtn",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_19",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "'error'",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"click": {
+																					"H": "Quick.validateAll('VcardExample')\r\n",
+																					"P": "mouseEvent",
+																					"HL": "QS"
+																				}
+																			},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"C": {},
+																							"E": {},
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_20",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "'ValidateAll'",
+																									"T": "prop"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_20"
+																							},
+																							"O": {
+																								"cType": "child"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_19"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_18",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_18"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_9"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_233"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_232"
+			},
+			"O": {
+				"cType": "slot",
+				"layout": {
+					"dOpt": {
+						"xs": [
+							"sp:mt-10"
+						]
+					},
+					"class": "mt-10"
+				}
+			}
+		},
+		{
+			"T": "VCard",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_841",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VContainer",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_847",
+									"T": "prop"
+								},
+								"class": {
+									"H": "'container container--fluid'",
+									"T": "class"
+								},
+								"visible": {
+									"H": "true",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VRow",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_748",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_788",
+																					"T": "prop"
+																				},
+																				"tagType": {
+																					"H": "'span'",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'Reset with Typescript'",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_788"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"tt:text-h6",
+																							"te:font-weight-medium"
+																						]
+																					},
+																					"class": "text-h6 font-weight-medium"
+																				}
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_751",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_751"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"d:d-flex",
+																			"c:col-4"
+																		]
+																	},
+																	"class": "d-flex col-4"
+																}
+															}
+														},
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VBtn",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_45",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "'primary'",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"click": {
+																					"H": "quick.Quick.reset('txtExample')",
+																					"P": "mouseEvent:unknown | undefined",
+																					"HL": "TS"
+																				}
+																			},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"C": {},
+																							"E": {},
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_46",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "'Textfield'",
+																									"T": "prop"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_46"
+																							},
+																							"O": {
+																								"cType": "child"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_45"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_44",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_44"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														},
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VBtn",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_744",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "'success'",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"click": {
+																					"H": "quick.Quick.reset('VcontainerExample')",
+																					"P": "mouseEvent:unknown | undefined",
+																					"HL": "TS"
+																				}
+																			},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"C": {},
+																							"E": {},
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_745",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "'Container'",
+																									"T": "prop"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_745"
+																							},
+																							"O": {
+																								"cType": "child"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_744"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_757",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_757"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														},
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VBtn",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_746",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "'error'",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"click": {
+																					"H": "quick.Quick.reset('VcardExample')",
+																					"P": "mouseEvent:unknown | undefined",
+																					"HL": "TS"
+																				}
+																			},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"C": {},
+																							"E": {},
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_747",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "'Card'",
+																									"T": "prop"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_747"
+																							},
+																							"O": {
+																								"cType": "child"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_746"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_753",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_753"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_748"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										},
+										{
+											"T": "VRow",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_878",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_877",
+																					"T": "prop"
+																				},
+																				"tagType": {
+																					"H": "'span'",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'Reset with Qscript'",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_877"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"tt:text-h6",
+																							"te:font-weight-medium"
+																						]
+																					},
+																					"class": "text-h6 font-weight-medium"
+																				}
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_879",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_879"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"d:d-flex",
+																			"c:col-4"
+																		]
+																	},
+																	"class": "d-flex col-4"
+																}
+															}
+														},
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VBtn",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_117",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "'primary'",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"click": {
+																					"H": "Quick.reset('dpExample')",
+																					"P": "mouseEvent",
+																					"HL": "QS"
+																				}
+																			},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"C": {},
+																							"E": {},
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_118",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "'DatePicker'",
+																									"T": "prop"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_118"
+																							},
+																							"O": {
+																								"cType": "child"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_117"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_116",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_116"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														},
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VBtn",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_886",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "'success'",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"click": {
+																					"H": "Quick.reset('VcontainerExample')",
+																					"P": "mouseEvent",
+																					"HL": "QS"
+																				}
+																			},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"C": {},
+																							"E": {},
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_887",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "'Container'",
+																									"T": "prop"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_887"
+																							},
+																							"O": {
+																								"cType": "child"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_886"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_885",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_885"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														},
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VBtn",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_889",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "'error'",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"click": {
+																					"H": "Quick.reset('VcardExample')",
+																					"P": "mouseEvent",
+																					"HL": "QS"
+																				}
+																			},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"C": {},
+																							"E": {},
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_890",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "'Card'",
+																									"T": "prop"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_890"
+																							},
+																							"O": {
+																								"cType": "child"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_889"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_888",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_888"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_878"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_847"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_841"
+			},
+			"O": {
+				"cType": "slot",
+				"layout": {
+					"dOpt": {
+						"xs": [
+							"sp:mt-10"
+						]
+					},
+					"class": "mt-10"
+				}
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VCard",
+			"P": {
+				"ID": {
+					"H": "VcardExample",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VContainer",
+							"P": {
+								"ID": {
+									"H": "VcontainerExample",
+									"T": "prop"
+								},
+								"class": {
+									"H": "╬'container container--fluid'╩╩",
+									"T": "class"
+								},
+								"visible": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VInlineDatepicker",
+											"P": {
+												"ID": {
+													"H": "dpExample",
+													"T": "prop"
+												},
+												"label": {
+													"H": "╬'Pick a date'╩╩",
+													"T": "prop"
+												},
+												"locale": {
+													"H": "╬'tr'╩╩",
+													"T": "prop"
+												},
+												"willAttach": {
+													"H": "╬'true'╩╩",
+													"T": "prop"
+												},
+												"rules": {
+													"H": "╬[]╠()╣.╣.╣Quick╩╠validation╩╩╠required╩╩╩╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_737"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-inline-date-picker-div-class newDropBorder"
+											}
+										},
+										{
+											"T": "VTextField",
+											"P": {
+												"ID": {
+													"H": "txtExample",
+													"T": "prop"
+												},
+												"label": {
+													"H": "╬'Text field label'╩╩",
+													"T": "prop"
+												},
+												"visible": {
+													"H": "╬true╩╩",
+													"T": "prop"
+												},
+												"rules": {
+													"H": "╬[]╠()╣.╣.╣Quick╩╠validation╩╩╠required╩╩╩╠()╣.╣.╣Quick╩╠validation╩╩╠minLength╩╩╠5╩╠'Enter at least 5 characters'╩╩╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_736"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted undefined newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_734"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "container container--fluid newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_738"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-card v-sheet theme--light newDropBorder"
+			}
+		},
+		{
+			"T": "VCard",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_232",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VContainer",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_233",
+									"T": "prop"
+								},
+								"class": {
+									"H": "╬'container container--fluid'╩╩",
+									"T": "class"
+								},
+								"visible": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VRow",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_234",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_236",
+																					"T": "prop"
+																				},
+																				"tagType": {
+																					"H": "╬'span'╩╩",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'Reset Validations with Typescript'╩╩",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_236"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"tt:text-h6",
+																							"te:font-weight-medium"
+																						]
+																					},
+																					"class": "text-h6 font-weight-medium"
+																				},
+																				"compDomClasses": "q-label text-h6 font-weight-medium newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_235",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_235"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"d:d-flex",
+																			"c:col-4"
+																		]
+																	},
+																	"class": "d-flex col-4"
+																},
+																"compDomClasses": "col d-flex col-4 newDropBorder"
+															}
+														},
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VBtn",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_238",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "╬'primary'╩╩",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"click": {
+																					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.Quick.resetValidation('txtExample');\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfMjM4X2NsaWNrX0UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJFZHRyQ29tcF8yMzhfY2xpY2tfRS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQ0EsS0FBSyxDQUFDLEtBQUssQ0FBQyxlQUFlLENBQUMsWUFBWSxDQUFDLENBQUEiLCJzb3VyY2VzQ29udGVudCI6WyJkZWNsYXJlIHZhciBtb3VzZUV2ZW50OnVua25vd24gfCB1bmRlZmluZWRcbnF1aWNrLlF1aWNrLnJlc2V0VmFsaWRhdGlvbigndHh0RXhhbXBsZScpXG4gZXhwb3J0e307XG4iXX0=",
+																					"P": "mouseEvent:unknown | undefined",
+																					"HL": "JS"
+																				}
+																			},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"C": {},
+																							"E": {},
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_239",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "╬'Textfield'╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_239"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"compDomClasses": "q-label newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_238"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_237",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_237"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "col newDropBorder"
+															}
+														},
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VBtn",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_241",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "╬'success'╩╩",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"click": {
+																					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.Quick.resetValidation('VcontainerExample');\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfMjQxX2NsaWNrX0UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJFZHRyQ29tcF8yNDFfY2xpY2tfRS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQ0EsS0FBSyxDQUFDLEtBQUssQ0FBQyxlQUFlLENBQUMsbUJBQW1CLENBQUMsQ0FBQSIsInNvdXJjZXNDb250ZW50IjpbImRlY2xhcmUgdmFyIG1vdXNlRXZlbnQ6dW5rbm93biB8IHVuZGVmaW5lZFxucXVpY2suUXVpY2sucmVzZXRWYWxpZGF0aW9uKCdWY29udGFpbmVyRXhhbXBsZScpXG4gZXhwb3J0e307XG4iXX0=",
+																					"P": "mouseEvent:unknown | undefined",
+																					"HL": "JS"
+																				}
+																			},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"C": {},
+																							"E": {},
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_242",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "╬'Container'╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_242"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"compDomClasses": "q-label newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_241"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default success newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_240",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_240"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "col newDropBorder"
+															}
+														},
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VBtn",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_244",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "╬'error'╩╩",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"click": {
+																					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.Quick.resetValidation('VcardExample');\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfMjQ0X2NsaWNrX0UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJFZHRyQ29tcF8yNDRfY2xpY2tfRS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQ0EsS0FBSyxDQUFDLEtBQUssQ0FBQyxlQUFlLENBQUMsY0FBYyxDQUFDLENBQUEiLCJzb3VyY2VzQ29udGVudCI6WyJkZWNsYXJlIHZhciBtb3VzZUV2ZW50OnVua25vd24gfCB1bmRlZmluZWRcbnF1aWNrLlF1aWNrLnJlc2V0VmFsaWRhdGlvbignVmNhcmRFeGFtcGxlJylcbiBleHBvcnR7fTtcbiJdfQ==",
+																					"P": "mouseEvent:unknown | undefined",
+																					"HL": "JS"
+																				}
+																			},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"C": {},
+																							"E": {},
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_245",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "╬'Card'╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_245"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"compDomClasses": "q-label newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_244"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default error newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_243",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_243"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "col newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_234"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "row newDropBorder"
+											}
+										},
+										{
+											"T": "VRow",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_246",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_248",
+																					"T": "prop"
+																				},
+																				"tagType": {
+																					"H": "╬'span'╩╩",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'Reset Validations with Qscript'╩╩",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_248"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"tt:text-h6",
+																							"te:font-weight-medium"
+																						]
+																					},
+																					"class": "text-h6 font-weight-medium"
+																				},
+																				"compDomClasses": "q-label text-h6 font-weight-medium newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_247",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_247"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"d:d-flex",
+																			"c:col-4"
+																		]
+																	},
+																	"class": "d-flex col-4"
+																},
+																"compDomClasses": "col d-flex col-4 newDropBorder"
+															}
+														},
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VBtn",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_250",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "╬'primary'╩╩",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"click": {
+																					"H": "╬()╣.╣Quick╩╠resetValidation╩╩╠'dpExample'╩╩╩",
+																					"P": "mouseEvent",
+																					"HL": "QS"
+																				}
+																			},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"C": {},
+																							"E": {},
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_251",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "╬'DatePicker'╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_251"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"compDomClasses": "q-label newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_250"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_249",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_249"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "col newDropBorder"
+															}
+														},
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VBtn",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_253",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "╬'success'╩╩",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"click": {
+																					"H": "╬()╣.╣Quick╩╠resetValidation╩╩╠'VcontainerExample'╩╩╩",
+																					"P": "mouseEvent",
+																					"HL": "QS"
+																				}
+																			},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"C": {},
+																							"E": {},
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_254",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "╬'Container'╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_254"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"compDomClasses": "q-label newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_253"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default success newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_252",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_252"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "col newDropBorder"
+															}
+														},
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VBtn",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_256",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "╬'error'╩╩",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"click": {
+																					"H": "╬()╣.╣Quick╩╠resetValidation╩╩╠'VcardExample'╩╩╩",
+																					"P": "mouseEvent",
+																					"HL": "QS"
+																				}
+																			},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"C": {},
+																							"E": {},
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_257",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "╬'Card'╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_257"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"compDomClasses": "q-label newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_256"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default error newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_255",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_255"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "col newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_246"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "row newDropBorder"
+											}
+										},
+										{
+											"T": "VRow",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_9",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "Ghost",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_41",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_41"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "editor-ghost-comp newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_10",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_10"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"d:d-flex",
+																			"c:col-4"
+																		]
+																	},
+																	"class": "d-flex col-4"
+																},
+																"compDomClasses": "col d-flex col-4 newDropBorder"
+															}
+														},
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "Ghost",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_55",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_55"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "editor-ghost-comp newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_12",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_12"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "col newDropBorder"
+															}
+														},
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "Ghost",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_66",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_66"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "editor-ghost-comp newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_15",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_15"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "col newDropBorder"
+															}
+														},
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VBtn",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_19",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "╬'error'╩╩",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"click": {
+																					"H": "╬()╣.╣Quick╩╠validateAll╩╩╠'VcardExample'╩╩╩",
+																					"P": "mouseEvent",
+																					"HL": "QS"
+																				}
+																			},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"C": {},
+																							"E": {},
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_20",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "╬'ValidateAll'╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_20"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"compDomClasses": "q-label newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_19"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default error newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_18",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_18"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "col newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_9"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "row newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_233"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "container container--fluid newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_232"
+			},
+			"O": {
+				"cType": "slot",
+				"layout": {
+					"dOpt": {
+						"xs": [
+							"sp:mt-10"
+						]
+					},
+					"class": "mt-10"
+				},
+				"compDomClasses": "v-card v-sheet theme--light mt-10 newDropBorder"
+			}
+		},
+		{
+			"T": "VCard",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_841",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VContainer",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_847",
+									"T": "prop"
+								},
+								"class": {
+									"H": "╬'container container--fluid'╩╩",
+									"T": "class"
+								},
+								"visible": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VRow",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_748",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_788",
+																					"T": "prop"
+																				},
+																				"tagType": {
+																					"H": "╬'span'╩╩",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'Reset with Typescript'╩╩",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_788"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"tt:text-h6",
+																							"te:font-weight-medium"
+																						]
+																					},
+																					"class": "text-h6 font-weight-medium"
+																				},
+																				"compDomClasses": "q-label text-h6 font-weight-medium newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_751",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_751"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"d:d-flex",
+																			"c:col-4"
+																		]
+																	},
+																	"class": "d-flex col-4"
+																},
+																"compDomClasses": "col d-flex col-4 newDropBorder"
+															}
+														},
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VBtn",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_45",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "╬'primary'╩╩",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"click": {
+																					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.Quick.reset('txtExample');\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfNDVfY2xpY2tfRS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkVkdHJDb21wXzQ1X2NsaWNrX0UudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUNBLEtBQUssQ0FBQyxLQUFLLENBQUMsS0FBSyxDQUFDLFlBQVksQ0FBQyxDQUFBIiwic291cmNlc0NvbnRlbnQiOlsiZGVjbGFyZSB2YXIgbW91c2VFdmVudDp1bmtub3duIHwgdW5kZWZpbmVkXG5xdWljay5RdWljay5yZXNldCgndHh0RXhhbXBsZScpXG4gZXhwb3J0e307XG4iXX0=",
+																					"P": "mouseEvent:unknown | undefined",
+																					"HL": "JS"
+																				}
+																			},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"C": {},
+																							"E": {},
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_46",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "╬'Textfield'╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_46"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"compDomClasses": "q-label newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_45"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_44",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_44"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "col newDropBorder"
+															}
+														},
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VBtn",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_744",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "╬'success'╩╩",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"click": {
+																					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.Quick.reset('VcontainerExample');\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfNzQ0X2NsaWNrX0UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJFZHRyQ29tcF83NDRfY2xpY2tfRS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQ0EsS0FBSyxDQUFDLEtBQUssQ0FBQyxLQUFLLENBQUMsbUJBQW1CLENBQUMsQ0FBQSIsInNvdXJjZXNDb250ZW50IjpbImRlY2xhcmUgdmFyIG1vdXNlRXZlbnQ6dW5rbm93biB8IHVuZGVmaW5lZFxucXVpY2suUXVpY2sucmVzZXQoJ1Zjb250YWluZXJFeGFtcGxlJylcbiBleHBvcnR7fTtcbiJdfQ==",
+																					"P": "mouseEvent:unknown | undefined",
+																					"HL": "JS"
+																				}
+																			},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"C": {},
+																							"E": {},
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_745",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "╬'Container'╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_745"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"compDomClasses": "q-label newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_744"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default success newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_757",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_757"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "col newDropBorder"
+															}
+														},
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VBtn",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_746",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "╬'error'╩╩",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"click": {
+																					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.Quick.reset('VcardExample');\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfNzQ2X2NsaWNrX0UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJFZHRyQ29tcF83NDZfY2xpY2tfRS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQ0EsS0FBSyxDQUFDLEtBQUssQ0FBQyxLQUFLLENBQUMsY0FBYyxDQUFDLENBQUEiLCJzb3VyY2VzQ29udGVudCI6WyJkZWNsYXJlIHZhciBtb3VzZUV2ZW50OnVua25vd24gfCB1bmRlZmluZWRcbnF1aWNrLlF1aWNrLnJlc2V0KCdWY2FyZEV4YW1wbGUnKVxuIGV4cG9ydHt9O1xuIl19",
+																					"P": "mouseEvent:unknown | undefined",
+																					"HL": "JS"
+																				}
+																			},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"C": {},
+																							"E": {},
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_747",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "╬'Card'╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_747"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"compDomClasses": "q-label newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_746"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default error newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_753",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_753"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "col newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_748"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "row newDropBorder"
+											}
+										},
+										{
+											"T": "VRow",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_878",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_877",
+																					"T": "prop"
+																				},
+																				"tagType": {
+																					"H": "╬'span'╩╩",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'Reset with Qscript'╩╩",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_877"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"tt:text-h6",
+																							"te:font-weight-medium"
+																						]
+																					},
+																					"class": "text-h6 font-weight-medium"
+																				},
+																				"compDomClasses": "q-label text-h6 font-weight-medium newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_879",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_879"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"d:d-flex",
+																			"c:col-4"
+																		]
+																	},
+																	"class": "d-flex col-4"
+																},
+																"compDomClasses": "col d-flex col-4 newDropBorder"
+															}
+														},
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VBtn",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_117",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "╬'primary'╩╩",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"click": {
+																					"H": "╬()╣.╣Quick╩╠reset╩╩╠'dpExample'╩╩╩",
+																					"P": "mouseEvent",
+																					"HL": "QS"
+																				}
+																			},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"C": {},
+																							"E": {},
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_118",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "╬'DatePicker'╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_118"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"compDomClasses": "q-label newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_117"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_116",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_116"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "col newDropBorder"
+															}
+														},
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VBtn",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_886",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "╬'success'╩╩",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"click": {
+																					"H": "╬()╣.╣Quick╩╠reset╩╩╠'VcontainerExample'╩╩╩",
+																					"P": "mouseEvent",
+																					"HL": "QS"
+																				}
+																			},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"C": {},
+																							"E": {},
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_887",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "╬'Container'╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_887"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"compDomClasses": "q-label newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_886"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default success newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_885",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_885"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "col newDropBorder"
+															}
+														},
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VBtn",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_889",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "╬'error'╩╩",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"click": {
+																					"H": "╬()╣.╣Quick╩╠reset╩╩╠'VcardExample'╩╩╩",
+																					"P": "mouseEvent",
+																					"HL": "QS"
+																				}
+																			},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"C": {},
+																							"E": {},
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_890",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "╬'Card'╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_890"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"compDomClasses": "q-label newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_889"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default error newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_888",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_888"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "col newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_878"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "row newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_847"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "container container--fluid newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_841"
+			},
+			"O": {
+				"cType": "slot",
+				"layout": {
+					"dOpt": {
+						"xs": [
+							"sp:mt-10"
+						]
+					},
+					"class": "mt-10"
+				},
+				"compDomClasses": "v-card v-sheet theme--light mt-10 newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {}
+};
+export default pjson

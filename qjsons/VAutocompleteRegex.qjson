@@ -1,0 +1,86 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VAutocomplete",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_3",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "true",
+					"T": "prop"
+				},
+				"items": {
+					"H": "[{text = 'test1', value = 1},\n{ text = 'test2', value = 2}]",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				},
+				"format": {
+					"H": "'regex'",
+					"T": "attr"
+				},
+				"formatValues": {
+					"H": "{'regex' = '^[a-zA-Z0-9]*$'}",
+					"T": "attr"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_3"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VAutocomplete",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_3",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"items": {
+					"H": "╬[]╠{}╠=╣text╩╠'test1'╩╩╠=╣value╩╠1╩╩╩╠{}╠=╣text╩╠'test2'╩╩╠=╣value╩╠2╩╩╩╩╩",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"format": {
+					"H": "╬'regex'╩╩",
+					"T": "attr"
+				},
+				"formatValues": {
+					"H": "╬{}╠=╣'regex'╩╠'^[a-zA-Z0-9]*$'╩╩╩╩",
+					"T": "attr"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_3"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted v-select v-autocomplete newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {},
+	"opt": {}
+};
+export default pjson

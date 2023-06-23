@@ -1,0 +1,984 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "QTutorial",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_4",
+					"T": "prop"
+				},
+				"nextButtonLabel": {
+					"H": "'Next'",
+					"T": "prop"
+				},
+				"skipButtonLabel": {
+					"H": "'Skip'",
+					"T": "prop"
+				},
+				"prevButtonLabel": {
+					"H": "'Back'",
+					"T": "prop"
+				},
+				"doneButtonLabel": {
+					"H": "'Done'",
+					"T": "prop"
+				},
+				"steps": {
+					"H": "[{ text='Softtech Logo', compID='Logo' },{ text='Welcome Title', compID='Title' },{ text='Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived not only five centuries but also the leap into electronic typesetting remaining essentially u', compID='Lorem' },{ text='Exit Here', compID='exit' }]",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"beforeExit": {
+					"H": "EM.trace('onBeforeExit')\r\nEM.trace('CurrentStepValue='+EdtrComp_4.currentStepValue)\r\nif (EdtrComp_4.currentStepValue==1) {\r\n    EM.trace('1.stepde çıktın')\r\n}\r\nif (EdtrComp_4.currentStepValue==2) {\r\n    EM.trace('2.stepde çıktın')\r\n}\r\nif (EdtrComp_4.currentStepValue==3) {\r\n    EM.trace('3.stepde çıktın')\r\n}\r\n"
+				},
+				"oncomplete": {
+					"H": "EM.trace('Im Done!!!!!!!!!')\r\n"
+				},
+				"onafterchange": {
+					"H": "EM.trace('I changed!!!!!!!!')"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_4"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "hello"
+			}
+		},
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_5",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"PostRender": {
+					"H": "MM.delay('test',{delayTime=700})\r\n",
+					"TO": 1
+				},
+				"test": {
+					"H": "EdtrComp_4.start()\r\n//EdtrComp_4.goToStep(2)",
+					"C": true
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_5"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": ""
+			}
+		},
+		{
+			"T": "VRow",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'d-flex flex-row justify-center'",
+					"T": "class"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VCol",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_18",
+									"T": "prop"
+								},
+								"class": {
+									"H": "''",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VImg",
+											"P": {
+												"ID": {
+													"H": "Logo",
+													"T": "prop"
+												},
+												"src": {
+													"H": "'https://softtech.com.tr/wp-content/uploads/2017/12/standart-logo.png'",
+													"T": "prop"
+												},
+												"maxWidth": {
+													"H": "'300px'",
+													"T": "prop"
+												},
+												"maxHeight": {
+													"H": "'100px'",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_3"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-image v-responsive theme--light"
+											}
+										},
+										{
+											"T": "VRow",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_26",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'d-flex flex-row justify-end'",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "exit",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "'primary'",
+																	"T": "prop"
+																},
+																"regular": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"icon": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VIcon",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_31",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'mdi-exit-to-app'",
+																					"T": "text"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_31"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-icon notranslate mdi mdi-exit-to-app theme--light"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_24"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-btn v-btn--flat v-btn--icon v-btn--round theme--light v-size--default primary--text"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_26"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "row d-flex flex-row justify-end"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_18"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "col d-flex flex-row",
+								"layout": {
+									"dOpt": {
+										"xs": [
+											"d:d-flex",
+											"fd:flex-row"
+										]
+									},
+									"class": "d-flex flex-row"
+								}
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "d-flex flex-row justify-center"
+			}
+		},
+		{
+			"T": "VRow",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_7",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'d-flex flex-row'",
+					"T": "class"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VCard",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_12",
+									"T": "prop"
+								},
+								"class": {
+									"H": "'d-flex flex-row justify-center'",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "Lorem",
+													"T": "prop"
+												},
+												"text": {
+													"H": "'Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived not only five centuries but also the leap into electronic typesetting remaining essentially uLorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived not only five centuries but also the leap into electronic typesetting remaining essentially uLorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived not only five centuries but also the leap into electronic typesetting remaining essentially uLorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived not only five centuries but also the leap into electronic typesetting remaining essentially uLorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived not only five centuries but also the leap into electronic typesetting remaining essentially uLorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived not only five centuries but also the leap into electronic typesetting remaining essentially uLorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived not only five centuries but also the leap into electronic typesetting remaining essentially uLorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived not only five centuries but also the leap into electronic typesetting remaining essentially uLorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived not only five centuries but also the leap into electronic typesetting remaining essentially uLorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived not only five centuries but also the leap into electronic typesetting remaining essentially uLorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived not only five centuries but also the leap into electronic typesetting remaining essentially u'",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'primary--text'\r\n\r\n",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_14"
+											},
+											"O": {
+												"cType": "child",
+												"compDomClasses": "q-label  primary--text"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_12"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "v-card v-sheet theme--light d-flex flex-row justify-center"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_7"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "d-flex flex-row"
+			}
+		},
+		{
+			"T": "VRow",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_6",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'d-flex flex-row justify-center'",
+					"T": "class"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VCard",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_2",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "Title",
+													"T": "prop"
+												},
+												"text": {
+													"H": "'Welcome'",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'display-4'",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_8"
+											},
+											"O": {
+												"cType": "child",
+												"compDomClasses": "q-label  display-4"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_2"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "v-card v-sheet theme--light"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_6"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "d-flex flex-row justify-center mt-4",
+				"layout": {
+					"dOpt": {
+						"xs": [
+							"sp:mt-4"
+						]
+					},
+					"class": "mt-4"
+				}
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_9",
+					"T": "prop"
+				},
+				"color": {
+					"H": "'primary'",
+					"T": "prop"
+				},
+				"regular": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "EdtrComp_4.start()",
+					"P": "mouseEvent"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_10",
+									"T": "prop"
+								},
+								"text": {
+									"H": "'Test Button'",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_10"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "q-label "
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_9"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "QTutorial",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_4",
+					"T": "prop"
+				},
+				"nextButtonLabel": {
+					"H": "╬'Next'╩╩",
+					"T": "prop"
+				},
+				"skipButtonLabel": {
+					"H": "╬'Skip'╩╩",
+					"T": "prop"
+				},
+				"prevButtonLabel": {
+					"H": "╬'Back'╩╩",
+					"T": "prop"
+				},
+				"doneButtonLabel": {
+					"H": "╬'Done'╩╩",
+					"T": "prop"
+				},
+				"steps": {
+					"H": "╬[]╠{}╠=╣text╩╠'Softtech Logo'╩╩╠=╣compID╩╠'Logo'╩╩╩╠{}╠=╣text╩╠'Welcome Title'╩╩╠=╣compID╩╠'Title'╩╩╩╠{}╠=╣text╩╠'Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived not only five centuries but also the leap into electronic typesetting remaining essentially u'╩╩╠=╣compID╩╠'Lorem'╩╩╩╠{}╠=╣text╩╠'Exit Here'╩╩╠=╣compID╩╠'exit'╩╩╩╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"beforeExit": {
+					"H": "╬()╣.╣EM╩╠trace╩╩╠'onBeforeExit'╩╩╬()╣.╣EM╩╠trace╩╩╠+╣'CurrentStepValue='╩╠.╣EdtrComp_4╩╠currentStepValue╩╩╩╩╬if╣==╣.╣EdtrComp_4╩╠currentStepValue╩╩╠1╩╩╠╬()╣.╣EM╩╠trace╩╩╠'1.stepde çıktın'╩╩╩╠■╩╬if╣==╣.╣EdtrComp_4╩╠currentStepValue╩╩╠2╩╩╠╬()╣.╣EM╩╠trace╩╩╠'2.stepde çıktın'╩╩╩╠■╩╬if╣==╣.╣EdtrComp_4╩╠currentStepValue╩╩╠3╩╩╠╬()╣.╣EM╩╠trace╩╩╠'3.stepde çıktın'╩╩╩╠■╩╩"
+				},
+				"oncomplete": {
+					"H": "╬()╣.╣EM╩╠trace╩╩╠'Im Done!!!!!!!!!'╩╩╩"
+				},
+				"onafterchange": {
+					"H": "╬()╣.╣EM╩╠trace╩╩╠'I changed!!!!!!!!'╩╩╩"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_4"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "hello"
+			}
+		},
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_5",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"PostRender": {
+					"H": "╬()╣.╣MM╩╠delay╩╩╠'test'╩╠{}╠=╣delayTime╩╠700╩╩╩╩╩",
+					"TO": 1
+				},
+				"test": {
+					"H": "╬()╣.╣EdtrComp_4╩╠start╩╩╩╩",
+					"C": true
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_5"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			}
+		},
+		{
+			"T": "VRow",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'d-flex flex-row justify-center'╩╩",
+					"T": "class"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VCol",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_18",
+									"T": "prop"
+								},
+								"class": {
+									"H": "╬''╩╩",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VImg",
+											"P": {
+												"ID": {
+													"H": "Logo",
+													"T": "prop"
+												},
+												"src": {
+													"H": "╬'https://softtech.com.tr/wp-content/uploads/2017/12/standart-logo.png'╩╩",
+													"T": "prop"
+												},
+												"maxWidth": {
+													"H": "╬'300px'╩╩",
+													"T": "prop"
+												},
+												"maxHeight": {
+													"H": "╬'100px'╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_3"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-image v-responsive theme--light newDropBorder"
+											}
+										},
+										{
+											"T": "VRow",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_26",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'d-flex flex-row justify-end'╩╩",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "exit",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "╬'primary'╩╩",
+																	"T": "prop"
+																},
+																"regular": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"icon": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VIcon",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_31",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'mdi-exit-to-app'╩╩",
+																					"T": "text"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_31"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-icon notranslate mdi mdi-exit-to-app theme--light newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_24"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-btn v-btn--flat v-btn--icon v-btn--round theme--light v-size--default primary--text newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_26"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "row d-flex flex-row justify-end newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_18"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "col d-flex flex-row newDropBorder",
+								"layout": {
+									"dOpt": {
+										"xs": [
+											"d:d-flex",
+											"fd:flex-row"
+										]
+									},
+									"class": "d-flex flex-row"
+								}
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "d-flex flex-row justify-center newDropBorder"
+			}
+		},
+		{
+			"T": "VRow",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_7",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'d-flex flex-row'╩╩",
+					"T": "class"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VCard",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_12",
+									"T": "prop"
+								},
+								"class": {
+									"H": "╬'d-flex flex-row justify-center'╩╩",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "Lorem",
+													"T": "prop"
+												},
+												"text": {
+													"H": "╬'Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived not only five centuries but also the leap into electronic typesetting remaining essentially uLorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived not only five centuries but also the leap into electronic typesetting remaining essentially uLorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived not only five centuries but also the leap into electronic typesetting remaining essentially uLorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived not only five centuries but also the leap into electronic typesetting remaining essentially uLorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived not only five centuries but also the leap into electronic typesetting remaining essentially uLorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived not only five centuries but also the leap into electronic typesetting remaining essentially uLorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived not only five centuries but also the leap into electronic typesetting remaining essentially uLorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived not only five centuries but also the leap into electronic typesetting remaining essentially uLorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived not only five centuries but also the leap into electronic typesetting remaining essentially uLorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived not only five centuries but also the leap into electronic typesetting remaining essentially uLorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industrys standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived not only five centuries but also the leap into electronic typesetting remaining essentially u'╩╩",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'primary--text'╩╩",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_14"
+											},
+											"O": {
+												"cType": "child",
+												"compDomClasses": "q-label primary--text newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_12"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "v-card v-sheet theme--light d-flex flex-row justify-center newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_7"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "d-flex flex-row newDropBorder"
+			}
+		},
+		{
+			"T": "VRow",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_6",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'d-flex flex-row justify-center'╩╩",
+					"T": "class"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VCard",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_2",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "Title",
+													"T": "prop"
+												},
+												"text": {
+													"H": "╬'Welcome'╩╩",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'display-4'╩╩",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_8"
+											},
+											"O": {
+												"cType": "child",
+												"compDomClasses": "q-label  display-4"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_2"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "v-card v-sheet theme--light"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_6"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "d-flex flex-row justify-center mt-4",
+				"layout": {
+					"dOpt": {
+						"xs": [
+							"sp:mt-4"
+						]
+					},
+					"class": "mt-4"
+				}
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_9",
+					"T": "prop"
+				},
+				"color": {
+					"H": "╬'primary'╩╩",
+					"T": "prop"
+				},
+				"regular": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "╬()╣.╣EdtrComp_4╩╠start╩╩╩╩",
+					"P": "mouseEvent"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_10",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬'Test Button'╩╩",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_10"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "q-label "
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_9"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {}
+};
+export default pjson

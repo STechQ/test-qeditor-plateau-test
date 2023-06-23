@@ -1,0 +1,290 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VInlineDatepicker",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				},
+				"label": {
+					"H": "'Pick a date'",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"compDomClasses": "container",
+				"cType": "child"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_2",
+					"T": "prop"
+				},
+				"color": {
+					"H": "'primary'",
+					"T": "prop"
+				},
+				"regular": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "EM.trace(EdtrComp_1.value)\r\n",
+					"P": "mouseEvent"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_3",
+									"T": "prop"
+								},
+								"text": {
+									"H": "'Getter'",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_3"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "q-label "
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_2"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_4",
+					"T": "prop"
+				},
+				"color": {
+					"H": "'primary'",
+					"T": "prop"
+				},
+				"regular": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "EdtrComp_1.value='20201012'",
+					"P": "mouseEvent"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_5",
+									"T": "prop"
+								},
+								"text": {
+									"H": "'Setter'",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_5"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "q-label "
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_4"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VInlineDatepicker",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				},
+				"label": {
+					"H": "╬'Pick a date'╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"compDomClasses": "container",
+				"cType": "child"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_2",
+					"T": "prop"
+				},
+				"color": {
+					"H": "╬'primary'╩╩",
+					"T": "prop"
+				},
+				"regular": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "╬()╣.╣EM╩╠trace╩╩╠.╣EdtrComp_1╩╠value╩╩╩╩",
+					"P": "mouseEvent"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_3",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬'Getter'╩╩",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_3"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "q-label "
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_2"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_4",
+					"T": "prop"
+				},
+				"color": {
+					"H": "╬'primary'╩╩",
+					"T": "prop"
+				},
+				"regular": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "╬=╣.╣EdtrComp_1╩╠value╩╩╠'20201012'╩╩╩",
+					"P": "mouseEvent"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_5",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬'Setter'╩╩",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_5"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "q-label "
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_4"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {}
+};
+export default pjson

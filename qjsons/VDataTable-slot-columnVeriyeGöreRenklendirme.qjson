@@ -1,0 +1,953 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "MessagingComp",
+					"T": "prop"
+				},
+				"triggerOnRestored": {
+					"H": "false",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_21"
+			},
+			"S": {
+				"pageBackgroundColor": "#ffffff",
+				"statusBarColor": "#ffffff"
+			},
+			"O": {
+				"cType": "child"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container container--fluid'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "VRowComp",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VDataTable",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_7",
+																	"T": "prop"
+																},
+																"footerProps": {
+																	"H": "{showFirstLastPage = true,\nfirstIcon = 'mdi-arrow-collapse-left',\nlastIcon = 'mdi-arrow-collapse-right',\nprevIcon = 'mdi-minus',\nnextIcon = 'mdi-plus'}",
+																	"T": "prop"
+																},
+																"headers": {
+																	"H": "[{ text = 'Dessert (100g serving)', align= 'start', sortable= false, value= 'name'},\n{ text = 'Calories', value= 'calories', sortable = true },\n{ text = 'Fat (g)', value= 'fat' },\n{ text = 'Carbs (g)', value= 'carbs' },\n{ text = 'Protein (g)', value= 'protein' },\n{ text = 'Iron (%)', value= 'iron' }]",
+																	"T": "prop"
+																},
+																"items": {
+																	"H": "[{name = 'Frozens Yogurt', calories = 159, fat = '6.0', carbs = 24, protein = '4.0', iron = 'iptal'},\n{name = 'Ice cream sandwich', calories = 237, fat = '9.0', carbs = 37, protein = '4.3', iron = 'basarili'},\n{name = 'Eclair', calories = 262, fat = '16.0', carbs = 23, protein = '6.0', iron = 'iptal'},\n{name = 'Cupcake', calories = 305, fat = '3.7', carbs = 67, protein = '4.3', iron = 'basarili'},\n{name = 'Gingerbread',calories = 356, fat = '16.0', carbs = 49, protein = '3.9', iron = 'iptal'},\n{name = 'Jelly bean', calories = 375,  fat = '0.0', carbs = 94, protein = '0.0', iron = 'basarili'},\n{name = 'Lollipop', calories = 392, fat = '0.2', carbs = 98, protein = '0.0', iron = 'iptal'},\n{name = 'Honeycomb', calories = 408, fat = '3.2', carbs = 87, protein = '6.5', iron = 'basarili'},\n{name = 'Donut', calories = 452, fat = '25.0', carbs = 51, protein = '4.9', iron = 'iptal'},\n{name = 'KitKat', calories = 518, fat = '26.0', carbs = 65, protein = '7', iron=  'basarili'}]",
+																	"T": "prop"
+																},
+																"itemsPerPage": {
+																	"H": "5",
+																	"T": "prop"
+																},
+																"mobileBreakpoint": {
+																	"H": "600",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"item.iron": {
+																	"c": [
+																		{
+																			"T": "VSheet",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_15",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"class": {
+																					"H": "if(item.iron == 'basarili'){\r\n    'yellow'\r\n}else {\r\n    'red'\r\n}",
+																					"T": "class"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_23",
+																									"T": "prop"
+																								},
+																								"tagType": {
+																									"H": "'span'",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "item.iron",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"processHtml": {
+																									"H": "false",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_23"
+																							},
+																							"S": {
+																								"xs-xl": {
+																									"marginTop": "",
+																									"marginRight": "",
+																									"marginBottom": "",
+																									"marginLeft": "",
+																									"paddingTop": "",
+																									"paddingRight": "",
+																									"paddingBottom": "",
+																									"paddingLeft": ""
+																								},
+																								"fontColor": "#000000",
+																								"fontFamily": "Roboto",
+																								"fontSize": "16px",
+																								"fontStyle": "normal",
+																								"fontWeight": "400"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_15"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": []
+																					},
+																					"class": ""
+																				}
+																			}
+																		}
+																	],
+																	"cType": "scopedSlot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_7"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginLeft": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginTop": "",
+																	"paddingTop": "",
+																	"paddingBottom": "",
+																	"paddingLeft": "",
+																	"paddingRight": ""
+																},
+																"width": "",
+																"height": "",
+																"headerFontColor": "#686868",
+																"headerFontFamily": "Roboto",
+																"headerFontSize": "16px",
+																"headerFontStyle": "normal",
+																"headerFontWeight": "400",
+																"footerText": "#686868",
+																"footerFontFamily": "Roboto",
+																"footerFontSize": "16px",
+																"footerFontStyle": "normal",
+																"footerFontWeight": "400",
+																"textColor": "#010101",
+																"itemFontFamily": "Roboto",
+																"itemFontSize": "16px",
+																"itemFontStyle": "normal",
+																"itemFontWeight": "400",
+																"backgroundColor": "#ffffff",
+																"hoverColor": "#ffffff",
+																"footerColor": "#FFFFFF",
+																"headerColor": "#FFFFFF",
+																"selectedBackground": "#FFFFFF",
+																"expandedContent": "#010101",
+																"lineColor": "#0000001f",
+																"lineSize": "1",
+																"boxShadow": ""
+															},
+															"O": {
+																"cType": "scopedSlot"
+															}
+														},
+														{
+															"T": "VDataTable",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_5",
+																	"T": "prop"
+																},
+																"footerProps": {
+																	"H": "{showFirstLastPage = true,\nfirstIcon = 'mdi-arrow-collapse-left',\nlastIcon = 'mdi-arrow-collapse-right',\nprevIcon = 'mdi-minus',\nnextIcon = 'mdi-plus'}",
+																	"T": "prop"
+																},
+																"headers": {
+																	"H": "[{ text = 'Dessert (100g serving)', align= 'start', sortable= false, value= 'name'},\n{ text = 'Calories', value= 'calories', sortable = true },\n{ text = 'Fat (g)', value= 'fat' },\n{ text = 'Carbs (g)', value= 'carbs' },\n{ text = 'Protein (g)', value= 'protein' },\n{ text = 'Iron (%)', value= 'iron' }]",
+																	"T": "prop"
+																},
+																"items": {
+																	"H": "[{name = 'Frozens Yogurt', calories = 159, fat = '6.0', carbs = 24, protein = '4.0', iron = 'iptal'},\n{name = 'Ice cream sandwich', calories = 237, fat = '9.0', carbs = 37, protein = '4.3', iron = 'basarili'},\n{name = 'Eclair', calories = 262, fat = '16.0', carbs = 23, protein = '6.0', iron = 'iptal'},\n{name = 'Cupcake', calories = 305, fat = '3.7', carbs = 67, protein = '4.3', iron = 'basarili'},\n{name = 'Gingerbread',calories = 356, fat = '16.0', carbs = 49, protein = '3.9', iron = 'iptal'},\n{name = 'Jelly bean', calories = 375,  fat = '0.0', carbs = 94, protein = '0.0', iron = 'basarili'},\n{name = 'Lollipop', calories = 392, fat = '0.2', carbs = 98, protein = '0.0', iron = 'iptal'},\n{name = 'Honeycomb', calories = 408, fat = '3.2', carbs = 87, protein = '6.5', iron = 'basarili'},\n{name = 'Donut', calories = 452, fat = '25.0', carbs = 51, protein = '4.9', iron = 'iptal'},\n{name = 'KitKat', calories = 518, fat = '26.0', carbs = 65, protein = '7', iron=  'basarili'}]",
+																	"T": "prop"
+																},
+																"itemsPerPage": {
+																	"H": "5",
+																	"T": "prop"
+																},
+																"mobileBreakpoint": {
+																	"H": "600",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"item.iron": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_14",
+																					"T": "prop"
+																				},
+																				"tagType": {
+																					"H": "'span'",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "item.iron",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"processHtml": {
+																					"H": "false",
+																					"T": "prop"
+																				},
+																				"class": {
+																					"H": "if(item.iron == 'iptal') {\r\n    'red--text'\r\n}else {\r\n    'green--text'\r\n}",
+																					"T": "class"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_14"
+																			},
+																			"S": {
+																				"xs-xl": {
+																					"marginTop": "",
+																					"marginRight": "",
+																					"marginBottom": "",
+																					"marginLeft": "",
+																					"paddingTop": "",
+																					"paddingRight": "",
+																					"paddingBottom": "",
+																					"paddingLeft": ""
+																				},
+																				"fontColor": "#000000",
+																				"fontFamily": "Roboto",
+																				"fontSize": "16px",
+																				"fontStyle": "normal",
+																				"fontWeight": "400"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "scopedSlot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_5"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginLeft": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginTop": "",
+																	"paddingTop": "",
+																	"paddingBottom": "",
+																	"paddingLeft": "",
+																	"paddingRight": ""
+																},
+																"width": "",
+																"height": "",
+																"headerFontColor": "#686868",
+																"headerFontFamily": "Roboto",
+																"headerFontSize": "16px",
+																"headerFontStyle": "normal",
+																"headerFontWeight": "400",
+																"footerText": "#686868",
+																"footerFontFamily": "Roboto",
+																"footerFontSize": "16px",
+																"footerFontStyle": "normal",
+																"footerFontWeight": "400",
+																"textColor": "#010101",
+																"itemFontFamily": "Roboto",
+																"itemFontSize": "16px",
+																"itemFontStyle": "normal",
+																"itemFontWeight": "400",
+																"backgroundColor": "#ffffff",
+																"hoverColor": "#ffffff",
+																"footerColor": "#FFFFFF",
+																"headerColor": "#FFFFFF",
+																"selectedBackground": "#FFFFFF",
+																"expandedContent": "#010101",
+																"lineColor": "#0000001f",
+																"lineSize": "1",
+																"boxShadow": ""
+															},
+															"O": {
+																"cType": "scopedSlot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "VColComp",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_27"
+											},
+											"O": {
+												"cType": "slot"
+											},
+											"S": {
+												"xs-xl": {
+													"col": "",
+													"flexDirection": "column",
+													"alignItems": "",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "",
+													"paddingBottom": "",
+													"paddingLeft": "",
+													"paddingRight": ""
+												},
+												"backgroundColor": "#ffffff",
+												"boxShadow": ""
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_24"
+							},
+							"S": {
+								"xs-xl": {
+									"marginLeft": "",
+									"marginRight": "",
+									"marginBottom": "",
+									"marginTop": "",
+									"paddingTop": "",
+									"paddingBottom": "",
+									"paddingLeft": "",
+									"paddingRight": ""
+								},
+								"width": "",
+								"height": "",
+								"backgroundColor": "#ffffff",
+								"boxShadow": ""
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_22"
+			},
+			"S": {
+				"xs-xl": {
+					"marginLeft": "",
+					"marginRight": "",
+					"marginBottom": "",
+					"marginTop": "",
+					"paddingTop": "",
+					"paddingBottom": "",
+					"paddingLeft": "",
+					"paddingRight": ""
+				},
+				"width": "",
+				"height": "",
+				"backgroundColor": "#ffffff",
+				"boxShadow": ""
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "MessagingComp",
+					"T": "prop"
+				},
+				"triggerOnRestored": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_21"
+			},
+			"S": {
+				"pageBackgroundColor": "#ffffff",
+				"statusBarColor": "#ffffff"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container container--fluid'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "VRowComp",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VDataTable",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_7",
+																	"T": "prop"
+																},
+																"footerProps": {
+																	"H": "╬{}╠=╣showFirstLastPage╩╠true╩╩╠=╣firstIcon╩╠'mdi-arrow-collapse-left'╩╩╠=╣lastIcon╩╠'mdi-arrow-collapse-right'╩╩╠=╣prevIcon╩╠'mdi-minus'╩╩╠=╣nextIcon╩╠'mdi-plus'╩╩╩╩",
+																	"T": "prop"
+																},
+																"headers": {
+																	"H": "╬[]╠{}╠=╣text╩╠'Dessert (100g serving)'╩╩╠=╣align╩╠'start'╩╩╠=╣sortable╩╠false╩╩╠=╣value╩╠'name'╩╩╩╠{}╠=╣text╩╠'Calories'╩╩╠=╣value╩╠'calories'╩╩╠=╣sortable╩╠true╩╩╩╠{}╠=╣text╩╠'Fat (g)'╩╩╠=╣value╩╠'fat'╩╩╩╠{}╠=╣text╩╠'Carbs (g)'╩╩╠=╣value╩╠'carbs'╩╩╩╠{}╠=╣text╩╠'Protein (g)'╩╩╠=╣value╩╠'protein'╩╩╩╠{}╠=╣text╩╠'Iron (%)'╩╩╠=╣value╩╠'iron'╩╩╩╩╩",
+																	"T": "prop"
+																},
+																"items": {
+																	"H": "╬[]╠{}╠=╣name╩╠'Frozens Yogurt'╩╩╠=╣calories╩╠159╩╩╠=╣fat╩╠'6.0'╩╩╠=╣carbs╩╠24╩╩╠=╣protein╩╠'4.0'╩╩╠=╣iron╩╠'iptal'╩╩╩╠{}╠=╣name╩╠'Ice cream sandwich'╩╩╠=╣calories╩╠237╩╩╠=╣fat╩╠'9.0'╩╩╠=╣carbs╩╠37╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'basarili'╩╩╩╠{}╠=╣name╩╠'Eclair'╩╩╠=╣calories╩╠262╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠23╩╩╠=╣protein╩╠'6.0'╩╩╠=╣iron╩╠'iptal'╩╩╩╠{}╠=╣name╩╠'Cupcake'╩╩╠=╣calories╩╠305╩╩╠=╣fat╩╠'3.7'╩╩╠=╣carbs╩╠67╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'basarili'╩╩╩╠{}╠=╣name╩╠'Gingerbread'╩╩╠=╣calories╩╠356╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠49╩╩╠=╣protein╩╠'3.9'╩╩╠=╣iron╩╠'iptal'╩╩╩╠{}╠=╣name╩╠'Jelly bean'╩╩╠=╣calories╩╠375╩╩╠=╣fat╩╠'0.0'╩╩╠=╣carbs╩╠94╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'basarili'╩╩╩╠{}╠=╣name╩╠'Lollipop'╩╩╠=╣calories╩╠392╩╩╠=╣fat╩╠'0.2'╩╩╠=╣carbs╩╠98╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'iptal'╩╩╩╠{}╠=╣name╩╠'Honeycomb'╩╩╠=╣calories╩╠408╩╩╠=╣fat╩╠'3.2'╩╩╠=╣carbs╩╠87╩╩╠=╣protein╩╠'6.5'╩╩╠=╣iron╩╠'basarili'╩╩╩╠{}╠=╣name╩╠'Donut'╩╩╠=╣calories╩╠452╩╩╠=╣fat╩╠'25.0'╩╩╠=╣carbs╩╠51╩╩╠=╣protein╩╠'4.9'╩╩╠=╣iron╩╠'iptal'╩╩╩╠{}╠=╣name╩╠'KitKat'╩╩╠=╣calories╩╠518╩╩╠=╣fat╩╠'26.0'╩╩╠=╣carbs╩╠65╩╩╠=╣protein╩╠'7'╩╩╠=╣iron╩╠'basarili'╩╩╩╩╩",
+																	"T": "prop"
+																},
+																"itemsPerPage": {
+																	"H": "╬5╩╩",
+																	"T": "prop"
+																},
+																"mobileBreakpoint": {
+																	"H": "╬600╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"item.iron": {
+																	"c": [
+																		{
+																			"T": "VSheet",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_15",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"class": {
+																					"H": "╬if╣==╣.╣item╩╠iron╩╩╠'basarili'╩╩╠╬'yellow'╩╩╠╬'red'╩╩╩╩",
+																					"T": "class"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_23",
+																									"T": "prop"
+																								},
+																								"tagType": {
+																									"H": "╬'span'╩╩",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "╬.╣item╩╠iron╩╩╩",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"processHtml": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_23"
+																							},
+																							"S": {
+																								"xs-xl": {
+																									"marginTop": "",
+																									"marginRight": "",
+																									"marginBottom": "",
+																									"marginLeft": "",
+																									"paddingTop": "",
+																									"paddingRight": "",
+																									"paddingBottom": "",
+																									"paddingLeft": ""
+																								},
+																								"fontColor": "#000000",
+																								"fontFamily": "Roboto",
+																								"fontSize": "16px",
+																								"fontStyle": "normal",
+																								"fontWeight": "400"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "q-label newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_15"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": []
+																					},
+																					"class": ""
+																				},
+																				"compDomClasses": "v-sheet theme--light red newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "scopedSlot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_7"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginLeft": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginTop": "",
+																	"paddingTop": "",
+																	"paddingBottom": "",
+																	"paddingLeft": "",
+																	"paddingRight": ""
+																},
+																"width": "",
+																"height": "",
+																"headerFontColor": "#686868",
+																"headerFontFamily": "Roboto",
+																"headerFontSize": "16px",
+																"headerFontStyle": "normal",
+																"headerFontWeight": "400",
+																"footerText": "#686868",
+																"footerFontFamily": "Roboto",
+																"footerFontSize": "16px",
+																"footerFontStyle": "normal",
+																"footerFontWeight": "400",
+																"textColor": "#010101",
+																"itemFontFamily": "Roboto",
+																"itemFontSize": "16px",
+																"itemFontStyle": "normal",
+																"itemFontWeight": "400",
+																"backgroundColor": "#ffffff",
+																"hoverColor": "#ffffff",
+																"footerColor": "#FFFFFF",
+																"headerColor": "#FFFFFF",
+																"selectedBackground": "#FFFFFF",
+																"expandedContent": "#010101",
+																"lineColor": "#0000001f",
+																"lineSize": "1",
+																"boxShadow": ""
+															},
+															"O": {
+																"cType": "scopedSlot",
+																"compDomClasses": "v-data-table v-data-table--has-bottom theme--light newDropBorder"
+															}
+														},
+														{
+															"T": "VDataTable",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_5",
+																	"T": "prop"
+																},
+																"footerProps": {
+																	"H": "╬{}╠=╣showFirstLastPage╩╠true╩╩╠=╣firstIcon╩╠'mdi-arrow-collapse-left'╩╩╠=╣lastIcon╩╠'mdi-arrow-collapse-right'╩╩╠=╣prevIcon╩╠'mdi-minus'╩╩╠=╣nextIcon╩╠'mdi-plus'╩╩╩╩",
+																	"T": "prop"
+																},
+																"headers": {
+																	"H": "╬[]╠{}╠=╣text╩╠'Dessert (100g serving)'╩╩╠=╣align╩╠'start'╩╩╠=╣sortable╩╠false╩╩╠=╣value╩╠'name'╩╩╩╠{}╠=╣text╩╠'Calories'╩╩╠=╣value╩╠'calories'╩╩╠=╣sortable╩╠true╩╩╩╠{}╠=╣text╩╠'Fat (g)'╩╩╠=╣value╩╠'fat'╩╩╩╠{}╠=╣text╩╠'Carbs (g)'╩╩╠=╣value╩╠'carbs'╩╩╩╠{}╠=╣text╩╠'Protein (g)'╩╩╠=╣value╩╠'protein'╩╩╩╠{}╠=╣text╩╠'Iron (%)'╩╩╠=╣value╩╠'iron'╩╩╩╩╩",
+																	"T": "prop"
+																},
+																"items": {
+																	"H": "╬[]╠{}╠=╣name╩╠'Frozens Yogurt'╩╩╠=╣calories╩╠159╩╩╠=╣fat╩╠'6.0'╩╩╠=╣carbs╩╠24╩╩╠=╣protein╩╠'4.0'╩╩╠=╣iron╩╠'iptal'╩╩╩╠{}╠=╣name╩╠'Ice cream sandwich'╩╩╠=╣calories╩╠237╩╩╠=╣fat╩╠'9.0'╩╩╠=╣carbs╩╠37╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'basarili'╩╩╩╠{}╠=╣name╩╠'Eclair'╩╩╠=╣calories╩╠262╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠23╩╩╠=╣protein╩╠'6.0'╩╩╠=╣iron╩╠'iptal'╩╩╩╠{}╠=╣name╩╠'Cupcake'╩╩╠=╣calories╩╠305╩╩╠=╣fat╩╠'3.7'╩╩╠=╣carbs╩╠67╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'basarili'╩╩╩╠{}╠=╣name╩╠'Gingerbread'╩╩╠=╣calories╩╠356╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠49╩╩╠=╣protein╩╠'3.9'╩╩╠=╣iron╩╠'iptal'╩╩╩╠{}╠=╣name╩╠'Jelly bean'╩╩╠=╣calories╩╠375╩╩╠=╣fat╩╠'0.0'╩╩╠=╣carbs╩╠94╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'basarili'╩╩╩╠{}╠=╣name╩╠'Lollipop'╩╩╠=╣calories╩╠392╩╩╠=╣fat╩╠'0.2'╩╩╠=╣carbs╩╠98╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'iptal'╩╩╩╠{}╠=╣name╩╠'Honeycomb'╩╩╠=╣calories╩╠408╩╩╠=╣fat╩╠'3.2'╩╩╠=╣carbs╩╠87╩╩╠=╣protein╩╠'6.5'╩╩╠=╣iron╩╠'basarili'╩╩╩╠{}╠=╣name╩╠'Donut'╩╩╠=╣calories╩╠452╩╩╠=╣fat╩╠'25.0'╩╩╠=╣carbs╩╠51╩╩╠=╣protein╩╠'4.9'╩╩╠=╣iron╩╠'iptal'╩╩╩╠{}╠=╣name╩╠'KitKat'╩╩╠=╣calories╩╠518╩╩╠=╣fat╩╠'26.0'╩╩╠=╣carbs╩╠65╩╩╠=╣protein╩╠'7'╩╩╠=╣iron╩╠'basarili'╩╩╩╩╩",
+																	"T": "prop"
+																},
+																"itemsPerPage": {
+																	"H": "╬5╩╩",
+																	"T": "prop"
+																},
+																"mobileBreakpoint": {
+																	"H": "╬600╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"item.iron": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_14",
+																					"T": "prop"
+																				},
+																				"tagType": {
+																					"H": "╬'span'╩╩",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬.╣item╩╠iron╩╩╩",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"processHtml": {
+																					"H": "╬false╩╩",
+																					"T": "prop"
+																				},
+																				"class": {
+																					"H": "╬if╣==╣.╣item╩╠iron╩╩╠'iptal'╩╩╠╬'red--text'╩╩╠╬'green--text'╩╩╩╩",
+																					"T": "class"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_14"
+																			},
+																			"S": {
+																				"xs-xl": {
+																					"marginTop": "",
+																					"marginRight": "",
+																					"marginBottom": "",
+																					"marginLeft": "",
+																					"paddingTop": "",
+																					"paddingRight": "",
+																					"paddingBottom": "",
+																					"paddingLeft": ""
+																				},
+																				"fontColor": "#000000",
+																				"fontFamily": "Roboto",
+																				"fontSize": "16px",
+																				"fontStyle": "normal",
+																				"fontWeight": "400"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "q-label red--text newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "scopedSlot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_5"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginLeft": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginTop": "",
+																	"paddingTop": "",
+																	"paddingBottom": "",
+																	"paddingLeft": "",
+																	"paddingRight": ""
+																},
+																"width": "",
+																"height": "",
+																"headerFontColor": "#686868",
+																"headerFontFamily": "Roboto",
+																"headerFontSize": "16px",
+																"headerFontStyle": "normal",
+																"headerFontWeight": "400",
+																"footerText": "#686868",
+																"footerFontFamily": "Roboto",
+																"footerFontSize": "16px",
+																"footerFontStyle": "normal",
+																"footerFontWeight": "400",
+																"textColor": "#010101",
+																"itemFontFamily": "Roboto",
+																"itemFontSize": "16px",
+																"itemFontStyle": "normal",
+																"itemFontWeight": "400",
+																"backgroundColor": "#ffffff",
+																"hoverColor": "#ffffff",
+																"footerColor": "#FFFFFF",
+																"headerColor": "#FFFFFF",
+																"selectedBackground": "#FFFFFF",
+																"expandedContent": "#010101",
+																"lineColor": "#0000001f",
+																"lineSize": "1",
+																"boxShadow": ""
+															},
+															"O": {
+																"cType": "scopedSlot",
+																"compDomClasses": "v-data-table v-data-table--has-bottom theme--light newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "VColComp",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_27"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											},
+											"S": {
+												"xs-xl": {
+													"col": "",
+													"flexDirection": "column",
+													"alignItems": "",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "",
+													"paddingBottom": "",
+													"paddingLeft": "",
+													"paddingRight": ""
+												},
+												"backgroundColor": "#ffffff",
+												"boxShadow": ""
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_24"
+							},
+							"S": {
+								"xs-xl": {
+									"marginLeft": "",
+									"marginRight": "",
+									"marginBottom": "",
+									"marginTop": "",
+									"paddingTop": "",
+									"paddingBottom": "",
+									"paddingLeft": "",
+									"paddingRight": ""
+								},
+								"width": "",
+								"height": "",
+								"backgroundColor": "#ffffff",
+								"boxShadow": ""
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_22"
+			},
+			"S": {
+				"xs-xl": {
+					"marginLeft": "",
+					"marginRight": "",
+					"marginBottom": "",
+					"marginTop": "",
+					"paddingTop": "",
+					"paddingBottom": "",
+					"paddingLeft": "",
+					"paddingRight": ""
+				},
+				"width": "",
+				"height": "",
+				"backgroundColor": "#ffffff",
+				"boxShadow": ""
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container container--fluid newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"opt": {}
+};
+export default pjson

@@ -1,0 +1,1266 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "MessagingComp",
+					"T": "prop"
+				},
+				"triggerOnRestored": {
+					"H": "false",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "VRowComp",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Ghost",
+															"P": {
+																"ID": {
+																	"H": "GhostComp",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_2"
+															},
+															"O": {
+																"cType": "child"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "VColComp",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_3"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "Bar",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_8",
+									"T": "prop"
+								},
+								"backgroundColor": {
+									"H": "['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)']",
+									"T": "prop"
+								},
+								"borderColor": {
+									"H": "['rgba(255, 99, 132, 1)','rgba(54, 162, 235, 1)','rgba(255, 206, 86, 1)','rgba(75, 192, 192, 1)','rgba(153, 102, 255, 1)','rgba(255, 159, 64, 1)']",
+									"T": "prop"
+								},
+								"borderWidth": {
+									"H": "1",
+									"T": "prop"
+								},
+								"data": {
+									"H": "[12, 19, 3, 5, 2, 3]",
+									"T": "prop"
+								},
+								"label": {
+									"H": "'# of Votes'",
+									"T": "prop"
+								},
+								"indexAxis": {
+									"H": "'x'",
+									"T": "prop"
+								},
+								"labels": {
+									"H": "['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange']",
+									"T": "prop"
+								},
+								"width": {
+									"H": "'32vw'",
+									"T": "prop"
+								},
+								"height": {
+									"H": "'48vh'",
+									"T": "prop"
+								},
+								"xDrawOnChartArea": {
+									"H": "true",
+									"T": "prop"
+								},
+								"yDrawOnChartArea": {
+									"H": "true",
+									"T": "prop"
+								},
+								"xDisplay": {
+									"H": "true",
+									"T": "prop"
+								},
+								"yDisplay": {
+									"H": "true",
+									"T": "prop"
+								},
+								"legendPosition": {
+									"H": "'top'",
+									"T": "prop"
+								},
+								"legendDisplay": {
+									"H": "true",
+									"T": "prop"
+								},
+								"legendFontSize": {
+									"H": "12",
+									"T": "prop"
+								},
+								"title": {
+									"H": "'Sample Bar Chart'",
+									"T": "prop"
+								},
+								"titleDisplay": {
+									"H": "true",
+									"T": "prop"
+								},
+								"titleFontSize": {
+									"H": "12",
+									"T": "prop"
+								},
+								"labelAlign": {
+									"H": "'center'",
+									"T": "prop"
+								},
+								"labelAnchor": {
+									"H": "'center'",
+									"T": "prop"
+								},
+								"labelBorderRadius": {
+									"H": "0",
+									"T": "prop"
+								},
+								"labelBorderWidth": {
+									"H": "0",
+									"T": "prop"
+								},
+								"labelClamp": {
+									"H": "false",
+									"T": "prop"
+								},
+								"labelClip": {
+									"H": "false",
+									"T": "prop"
+								},
+								"labelDisplay": {
+									"H": "false",
+									"T": "prop"
+								},
+								"labelFontWeight": {
+									"H": "'normal'",
+									"T": "prop"
+								},
+								"labelFontLineHeight": {
+									"H": "'1.2'",
+									"T": "prop"
+								},
+								"labelOffset": {
+									"H": "'4'",
+									"T": "prop"
+								},
+								"labelOpacity": {
+									"H": "1",
+									"T": "prop"
+								},
+								"labelPaddingTop": {
+									"H": "4",
+									"T": "prop"
+								},
+								"labelPaddingRight": {
+									"H": "4",
+									"T": "prop"
+								},
+								"labelPaddingBottom": {
+									"H": "4",
+									"T": "prop"
+								},
+								"labelPaddingLeft": {
+									"H": "4",
+									"T": "prop"
+								},
+								"labelRotation": {
+									"H": "0",
+									"T": "prop"
+								},
+								"labelTextAlign": {
+									"H": "'start'",
+									"T": "prop"
+								},
+								"labelTextStrokeWidth": {
+									"H": "0",
+									"T": "prop"
+								},
+								"labelTextShadowBlur": {
+									"H": "0",
+									"T": "prop"
+								}
+							},
+							"E": {
+								"tooltipLabel": {
+									"H": "quick.return(context.formattedValue + \" - \" + context.label);",
+									"PE": true,
+									"P": "context:{ chart : any; dataIndex:number; dataset: any;  datasetIndex:number; element: any; formattedValue:string; label:string; parsed:any; raw:any; }",
+									"HL": "TS"
+								}
+							},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_8"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_5"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		},
+		{
+			"T": "Doughnut",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_11",
+					"T": "prop"
+				},
+				"backgroundColor": {
+					"H": "['rgb(255, 99, 132)', 'rgb(255, 159, 64)', 'rgb(255, 205, 86)', 'rgb(75, 192, 192)', 'rgb(54, 162, 235)']",
+					"T": "prop"
+				},
+				"borderColor": {
+					"H": "['rgb(255, 99, 132)', 'rgb(255, 159, 64)', 'rgb(255, 205, 86)', 'rgb(75, 192, 192)', 'rgb(54, 162, 235)']",
+					"T": "prop"
+				},
+				"data": {
+					"H": "[99, 70, 31, 93, 91]",
+					"T": "prop"
+				},
+				"labels": {
+					"H": "['Red', 'Orange', 'Yellow', 'Green','Blue']",
+					"T": "prop"
+				},
+				"cutoutPercentage": {
+					"H": "50",
+					"T": "prop"
+				},
+				"width": {
+					"H": "'40vw'",
+					"T": "prop"
+				},
+				"legendPosition": {
+					"H": "'top'",
+					"T": "prop"
+				},
+				"legendDisplay": {
+					"H": "true",
+					"T": "prop"
+				},
+				"legendFontSize": {
+					"H": "12",
+					"T": "prop"
+				},
+				"title": {
+					"H": "'Sample Doughnut Chart'",
+					"T": "prop"
+				},
+				"titleDisplay": {
+					"H": "true",
+					"T": "prop"
+				},
+				"titleFontSize": {
+					"H": "12",
+					"T": "prop"
+				},
+				"labelAlign": {
+					"H": "'center'",
+					"T": "prop"
+				},
+				"labelAnchor": {
+					"H": "'center'",
+					"T": "prop"
+				},
+				"labelBorderRadius": {
+					"H": "0",
+					"T": "prop"
+				},
+				"labelBorderWidth": {
+					"H": "0",
+					"T": "prop"
+				},
+				"labelClamp": {
+					"H": "false",
+					"T": "prop"
+				},
+				"labelClip": {
+					"H": "false",
+					"T": "prop"
+				},
+				"labelDisplay": {
+					"H": "false",
+					"T": "prop"
+				},
+				"labelFontWeight": {
+					"H": "'normal'",
+					"T": "prop"
+				},
+				"labelFontLineHeight": {
+					"H": "'1.2'",
+					"T": "prop"
+				},
+				"labelOffset": {
+					"H": "'4'",
+					"T": "prop"
+				},
+				"labelOpacity": {
+					"H": "1",
+					"T": "prop"
+				},
+				"labelPaddingTop": {
+					"H": "4",
+					"T": "prop"
+				},
+				"labelPaddingRight": {
+					"H": "4",
+					"T": "prop"
+				},
+				"labelPaddingBottom": {
+					"H": "4",
+					"T": "prop"
+				},
+				"labelPaddingLeft": {
+					"H": "4",
+					"T": "prop"
+				},
+				"labelRotation": {
+					"H": "0",
+					"T": "prop"
+				},
+				"labelTextAlign": {
+					"H": "'start'",
+					"T": "prop"
+				},
+				"labelTextStrokeWidth": {
+					"H": "0",
+					"T": "prop"
+				},
+				"labelTextShadowBlur": {
+					"H": "0",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"tooltipLabel": {
+					"H": "quick.return(context.formattedValue + \" - \" + context.label);",
+					"PE": true,
+					"P": "context:{ chart : any; dataIndex:number; dataset: any;  datasetIndex:number; element: any; formattedValue:string; label:string; parsed:any; raw:any; }",
+					"HL": "TS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_11"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		},
+		{
+			"T": "Line",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_14",
+					"T": "prop"
+				},
+				"backgroundColor": {
+					"H": "'rgb(255, 99, 132)'",
+					"T": "prop"
+				},
+				"borderColor": {
+					"H": "'rgb(255, 99, 132)'",
+					"T": "prop"
+				},
+				"data": {
+					"H": "[99, 70, 31, 93, 91]",
+					"T": "prop"
+				},
+				"fill": {
+					"H": "false",
+					"T": "prop"
+				},
+				"tension": {
+					"H": "'0'",
+					"T": "prop"
+				},
+				"label": {
+					"H": "'# of Votes'",
+					"T": "prop"
+				},
+				"labels": {
+					"H": "['Red', 'Orange', 'Yellow', 'Green','Blue']",
+					"T": "prop"
+				},
+				"width": {
+					"H": "'40vw'",
+					"T": "prop"
+				},
+				"xDrawOnChartArea": {
+					"H": "true",
+					"T": "prop"
+				},
+				"yDrawOnChartArea": {
+					"H": "true",
+					"T": "prop"
+				},
+				"xDisplay": {
+					"H": "true",
+					"T": "prop"
+				},
+				"yDisplay": {
+					"H": "true",
+					"T": "prop"
+				},
+				"legendPosition": {
+					"H": "'top'",
+					"T": "prop"
+				},
+				"legendDisplay": {
+					"H": "true",
+					"T": "prop"
+				},
+				"legendFontSize": {
+					"H": "12",
+					"T": "prop"
+				},
+				"title": {
+					"H": "'Sample Line Chart'",
+					"T": "prop"
+				},
+				"titleDisplay": {
+					"H": "true",
+					"T": "prop"
+				},
+				"titleFontSize": {
+					"H": "12",
+					"T": "prop"
+				},
+				"labelAlign": {
+					"H": "'center'",
+					"T": "prop"
+				},
+				"labelAnchor": {
+					"H": "'center'",
+					"T": "prop"
+				},
+				"labelBorderRadius": {
+					"H": "0",
+					"T": "prop"
+				},
+				"labelBorderWidth": {
+					"H": "0",
+					"T": "prop"
+				},
+				"labelClamp": {
+					"H": "false",
+					"T": "prop"
+				},
+				"labelClip": {
+					"H": "false",
+					"T": "prop"
+				},
+				"labelDisplay": {
+					"H": "false",
+					"T": "prop"
+				},
+				"labelFontWeight": {
+					"H": "'normal'",
+					"T": "prop"
+				},
+				"labelFontLineHeight": {
+					"H": "'1.2'",
+					"T": "prop"
+				},
+				"labelOffset": {
+					"H": "'4'",
+					"T": "prop"
+				},
+				"labelOpacity": {
+					"H": "1",
+					"T": "prop"
+				},
+				"labelPaddingTop": {
+					"H": "4",
+					"T": "prop"
+				},
+				"labelPaddingRight": {
+					"H": "4",
+					"T": "prop"
+				},
+				"labelPaddingBottom": {
+					"H": "4",
+					"T": "prop"
+				},
+				"labelPaddingLeft": {
+					"H": "4",
+					"T": "prop"
+				},
+				"labelRotation": {
+					"H": "0",
+					"T": "prop"
+				},
+				"labelTextAlign": {
+					"H": "'start'",
+					"T": "prop"
+				},
+				"labelTextStrokeWidth": {
+					"H": "0",
+					"T": "prop"
+				},
+				"labelTextShadowBlur": {
+					"H": "0",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"tooltipLabel": {
+					"H": "quick.return(context.formattedValue + \" - \" + context.label);",
+					"PE": true,
+					"P": "context:{ chart : any; dataIndex:number; dataset: any;  datasetIndex:number; element: any; formattedValue:string; label:string; parsed:any; raw:any; }",
+					"HL": "TS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_14"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "MessagingComp",
+					"T": "prop"
+				},
+				"triggerOnRestored": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "VRowComp",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Ghost",
+															"P": {
+																"ID": {
+																	"H": "GhostComp",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_2"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "editor-ghost-comp newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "VColComp",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_3"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												},
+												"compDomClasses": "col d-flex flex-column newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						},
+						{
+							"T": "Bar",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_8",
+									"T": "prop"
+								},
+								"backgroundColor": {
+									"H": "╬[]╠'rgba(255, 99, 132, 0.2)'╩╠'rgba(54, 162, 235, 0.2)'╩╠'rgba(255, 206, 86, 0.2)'╩╠'rgba(75, 192, 192, 0.2)'╩╠'rgba(153, 102, 255, 0.2)'╩╠'rgba(255, 159, 64, 0.2)'╩╩╩",
+									"T": "prop"
+								},
+								"borderColor": {
+									"H": "╬[]╠'rgba(255, 99, 132, 1)'╩╠'rgba(54, 162, 235, 1)'╩╠'rgba(255, 206, 86, 1)'╩╠'rgba(75, 192, 192, 1)'╩╠'rgba(153, 102, 255, 1)'╩╠'rgba(255, 159, 64, 1)'╩╩╩",
+									"T": "prop"
+								},
+								"borderWidth": {
+									"H": "╬1╩╩",
+									"T": "prop"
+								},
+								"data": {
+									"H": "╬[]╠12╩╠19╩╠3╩╠5╩╠2╩╠3╩╩╩",
+									"T": "prop"
+								},
+								"label": {
+									"H": "╬'# of Votes'╩╩",
+									"T": "prop"
+								},
+								"indexAxis": {
+									"H": "╬'x'╩╩",
+									"T": "prop"
+								},
+								"labels": {
+									"H": "╬[]╠'Red'╩╠'Blue'╩╠'Yellow'╩╠'Green'╩╠'Purple'╩╠'Orange'╩╩╩",
+									"T": "prop"
+								},
+								"width": {
+									"H": "╬'32vw'╩╩",
+									"T": "prop"
+								},
+								"height": {
+									"H": "╬'48vh'╩╩",
+									"T": "prop"
+								},
+								"xDrawOnChartArea": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"yDrawOnChartArea": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"xDisplay": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"yDisplay": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"legendPosition": {
+									"H": "╬'top'╩╩",
+									"T": "prop"
+								},
+								"legendDisplay": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"legendFontSize": {
+									"H": "╬12╩╩",
+									"T": "prop"
+								},
+								"title": {
+									"H": "╬'Sample Bar Chart'╩╩",
+									"T": "prop"
+								},
+								"titleDisplay": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"titleFontSize": {
+									"H": "╬12╩╩",
+									"T": "prop"
+								},
+								"labelAlign": {
+									"H": "╬'center'╩╩",
+									"T": "prop"
+								},
+								"labelAnchor": {
+									"H": "╬'center'╩╩",
+									"T": "prop"
+								},
+								"labelBorderRadius": {
+									"H": "╬0╩╩",
+									"T": "prop"
+								},
+								"labelBorderWidth": {
+									"H": "╬0╩╩",
+									"T": "prop"
+								},
+								"labelClamp": {
+									"H": "╬false╩╩",
+									"T": "prop"
+								},
+								"labelClip": {
+									"H": "╬false╩╩",
+									"T": "prop"
+								},
+								"labelDisplay": {
+									"H": "╬false╩╩",
+									"T": "prop"
+								},
+								"labelFontWeight": {
+									"H": "╬'normal'╩╩",
+									"T": "prop"
+								},
+								"labelFontLineHeight": {
+									"H": "╬'1.2'╩╩",
+									"T": "prop"
+								},
+								"labelOffset": {
+									"H": "╬'4'╩╩",
+									"T": "prop"
+								},
+								"labelOpacity": {
+									"H": "╬1╩╩",
+									"T": "prop"
+								},
+								"labelPaddingTop": {
+									"H": "╬4╩╩",
+									"T": "prop"
+								},
+								"labelPaddingRight": {
+									"H": "╬4╩╩",
+									"T": "prop"
+								},
+								"labelPaddingBottom": {
+									"H": "╬4╩╩",
+									"T": "prop"
+								},
+								"labelPaddingLeft": {
+									"H": "╬4╩╩",
+									"T": "prop"
+								},
+								"labelRotation": {
+									"H": "╬0╩╩",
+									"T": "prop"
+								},
+								"labelTextAlign": {
+									"H": "╬'start'╩╩",
+									"T": "prop"
+								},
+								"labelTextStrokeWidth": {
+									"H": "╬0╩╩",
+									"T": "prop"
+								},
+								"labelTextShadowBlur": {
+									"H": "╬0╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {
+								"tooltipLabel": {
+									"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.return(context.formattedValue + \" - \" + context.label);\r\n",
+									"PE": true,
+									"P": "context:{ chart : any; dataIndex:number; dataset: any;  datasetIndex:number; element: any; formattedValue:string; label:string; parsed:any; raw:any; }",
+									"HL": "JS"
+								}
+							},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_8"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_5"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container newDropBorder"
+			}
+		},
+		{
+			"T": "Doughnut",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_11",
+					"T": "prop"
+				},
+				"backgroundColor": {
+					"H": "╬[]╠'rgb(255, 99, 132)'╩╠'rgb(255, 159, 64)'╩╠'rgb(255, 205, 86)'╩╠'rgb(75, 192, 192)'╩╠'rgb(54, 162, 235)'╩╩╩",
+					"T": "prop"
+				},
+				"borderColor": {
+					"H": "╬[]╠'rgb(255, 99, 132)'╩╠'rgb(255, 159, 64)'╩╠'rgb(255, 205, 86)'╩╠'rgb(75, 192, 192)'╩╠'rgb(54, 162, 235)'╩╩╩",
+					"T": "prop"
+				},
+				"data": {
+					"H": "╬[]╠99╩╠70╩╠31╩╠93╩╠91╩╩╩",
+					"T": "prop"
+				},
+				"labels": {
+					"H": "╬[]╠'Red'╩╠'Orange'╩╠'Yellow'╩╠'Green'╩╠'Blue'╩╩╩",
+					"T": "prop"
+				},
+				"cutoutPercentage": {
+					"H": "╬50╩╩",
+					"T": "prop"
+				},
+				"width": {
+					"H": "╬'40vw'╩╩",
+					"T": "prop"
+				},
+				"legendPosition": {
+					"H": "╬'top'╩╩",
+					"T": "prop"
+				},
+				"legendDisplay": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"legendFontSize": {
+					"H": "╬12╩╩",
+					"T": "prop"
+				},
+				"title": {
+					"H": "╬'Sample Doughnut Chart'╩╩",
+					"T": "prop"
+				},
+				"titleDisplay": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"titleFontSize": {
+					"H": "╬12╩╩",
+					"T": "prop"
+				},
+				"labelAlign": {
+					"H": "╬'center'╩╩",
+					"T": "prop"
+				},
+				"labelAnchor": {
+					"H": "╬'center'╩╩",
+					"T": "prop"
+				},
+				"labelBorderRadius": {
+					"H": "╬0╩╩",
+					"T": "prop"
+				},
+				"labelBorderWidth": {
+					"H": "╬0╩╩",
+					"T": "prop"
+				},
+				"labelClamp": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				},
+				"labelClip": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				},
+				"labelDisplay": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				},
+				"labelFontWeight": {
+					"H": "╬'normal'╩╩",
+					"T": "prop"
+				},
+				"labelFontLineHeight": {
+					"H": "╬'1.2'╩╩",
+					"T": "prop"
+				},
+				"labelOffset": {
+					"H": "╬'4'╩╩",
+					"T": "prop"
+				},
+				"labelOpacity": {
+					"H": "╬1╩╩",
+					"T": "prop"
+				},
+				"labelPaddingTop": {
+					"H": "╬4╩╩",
+					"T": "prop"
+				},
+				"labelPaddingRight": {
+					"H": "╬4╩╩",
+					"T": "prop"
+				},
+				"labelPaddingBottom": {
+					"H": "╬4╩╩",
+					"T": "prop"
+				},
+				"labelPaddingLeft": {
+					"H": "╬4╩╩",
+					"T": "prop"
+				},
+				"labelRotation": {
+					"H": "╬0╩╩",
+					"T": "prop"
+				},
+				"labelTextAlign": {
+					"H": "╬'start'╩╩",
+					"T": "prop"
+				},
+				"labelTextStrokeWidth": {
+					"H": "╬0╩╩",
+					"T": "prop"
+				},
+				"labelTextShadowBlur": {
+					"H": "╬0╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"tooltipLabel": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.return(context.formattedValue + \" - \" + context.label);\r\n",
+					"PE": true,
+					"P": "context:{ chart : any; dataIndex:number; dataset: any;  datasetIndex:number; element: any; formattedValue:string; label:string; parsed:any; raw:any; }",
+					"HL": "JS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_11"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "newDropBorder"
+			}
+		},
+		{
+			"T": "Line",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_14",
+					"T": "prop"
+				},
+				"backgroundColor": {
+					"H": "╬'rgb(255, 99, 132)'╩╩",
+					"T": "prop"
+				},
+				"borderColor": {
+					"H": "╬'rgb(255, 99, 132)'╩╩",
+					"T": "prop"
+				},
+				"data": {
+					"H": "╬[]╠99╩╠70╩╠31╩╠93╩╠91╩╩╩",
+					"T": "prop"
+				},
+				"fill": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				},
+				"tension": {
+					"H": "╬'0'╩╩",
+					"T": "prop"
+				},
+				"label": {
+					"H": "╬'# of Votes'╩╩",
+					"T": "prop"
+				},
+				"labels": {
+					"H": "╬[]╠'Red'╩╠'Orange'╩╠'Yellow'╩╠'Green'╩╠'Blue'╩╩╩",
+					"T": "prop"
+				},
+				"width": {
+					"H": "╬'40vw'╩╩",
+					"T": "prop"
+				},
+				"xDrawOnChartArea": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"yDrawOnChartArea": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"xDisplay": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"yDisplay": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"legendPosition": {
+					"H": "╬'top'╩╩",
+					"T": "prop"
+				},
+				"legendDisplay": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"legendFontSize": {
+					"H": "╬12╩╩",
+					"T": "prop"
+				},
+				"title": {
+					"H": "╬'Sample Line Chart'╩╩",
+					"T": "prop"
+				},
+				"titleDisplay": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"titleFontSize": {
+					"H": "╬12╩╩",
+					"T": "prop"
+				},
+				"labelAlign": {
+					"H": "╬'center'╩╩",
+					"T": "prop"
+				},
+				"labelAnchor": {
+					"H": "╬'center'╩╩",
+					"T": "prop"
+				},
+				"labelBorderRadius": {
+					"H": "╬0╩╩",
+					"T": "prop"
+				},
+				"labelBorderWidth": {
+					"H": "╬0╩╩",
+					"T": "prop"
+				},
+				"labelClamp": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				},
+				"labelClip": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				},
+				"labelDisplay": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				},
+				"labelFontWeight": {
+					"H": "╬'normal'╩╩",
+					"T": "prop"
+				},
+				"labelFontLineHeight": {
+					"H": "╬'1.2'╩╩",
+					"T": "prop"
+				},
+				"labelOffset": {
+					"H": "╬'4'╩╩",
+					"T": "prop"
+				},
+				"labelOpacity": {
+					"H": "╬1╩╩",
+					"T": "prop"
+				},
+				"labelPaddingTop": {
+					"H": "╬4╩╩",
+					"T": "prop"
+				},
+				"labelPaddingRight": {
+					"H": "╬4╩╩",
+					"T": "prop"
+				},
+				"labelPaddingBottom": {
+					"H": "╬4╩╩",
+					"T": "prop"
+				},
+				"labelPaddingLeft": {
+					"H": "╬4╩╩",
+					"T": "prop"
+				},
+				"labelRotation": {
+					"H": "╬0╩╩",
+					"T": "prop"
+				},
+				"labelTextAlign": {
+					"H": "╬'start'╩╩",
+					"T": "prop"
+				},
+				"labelTextStrokeWidth": {
+					"H": "╬0╩╩",
+					"T": "prop"
+				},
+				"labelTextShadowBlur": {
+					"H": "╬0╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"tooltipLabel": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.return(context.formattedValue + \" - \" + context.label);\r\n",
+					"PE": true,
+					"P": "context:{ chart : any; dataIndex:number; dataset: any;  datasetIndex:number; element: any; formattedValue:string; label:string; parsed:any; raw:any; }",
+					"HL": "JS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_14"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"opt": {}
+};
+export default pjson

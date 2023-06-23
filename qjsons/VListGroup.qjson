@@ -1,0 +1,3686 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_320",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container container--fluid'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_730",
+									"T": "prop"
+								},
+								"tagType": {
+									"H": "'span'",
+									"T": "prop"
+								},
+								"text": {
+									"H": "'appendIcon'",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "true",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_730"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_322",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VList",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_576",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VListGroup",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_583",
+																					"T": "prop"
+																				},
+																				"eager": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"subGroup": {
+																					"H": "false",
+																					"T": "prop"
+																				},
+																				"noAction": {
+																					"H": "false",
+																					"T": "prop"
+																				},
+																				"appendIcon": {
+																					"H": "'mdi-arrow-down-drop-circle-outline'",
+																					"T": "prop"
+																				},
+																				"class": {
+																					"H": "'blue darken-3'",
+																					"T": "class"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"activator": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_617",
+																									"T": "prop"
+																								},
+																								"tagType": {
+																									"H": "'span'",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "'Reports'",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"class": {
+																									"H": "'white--text'",
+																									"T": "class"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_617"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"layout": {
+																									"dOpt": {
+																										"xs": []
+																									},
+																									"class": ""
+																								}
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				},
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VListItemGroup",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_595",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "VListItem",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_603",
+																													"T": "prop"
+																												},
+																												"visible": {
+																													"H": "true",
+																													"T": "prop"
+																												}
+																											},
+																											"E": {},
+																											"C": {
+																												"default": {
+																													"c": [
+																														{
+																															"T": "QLabel",
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_609",
+																																	"T": "prop"
+																																},
+																																"tagType": {
+																																	"H": "'span'",
+																																	"T": "prop"
+																																},
+																																"text": {
+																																	"H": "'Annual Reports'",
+																																	"T": "prop"
+																																},
+																																"visible": {
+																																	"H": "true",
+																																	"T": "prop"
+																																},
+																																"class": {
+																																	"H": "'white--text'",
+																																	"T": "class"
+																																}
+																															},
+																															"E": {},
+																															"C": {},
+																															"_Editor": {
+																																"eID": "EdtrComp_609"
+																															},
+																															"O": {
+																																"cType": "slot",
+																																"layout": {
+																																	"dOpt": {
+																																		"xs": [
+																																			"sp:pl-5"
+																																		]
+																																	},
+																																	"class": "pl-5"
+																																}
+																															}
+																														}
+																													],
+																													"cType": "slot"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_603"
+																											},
+																											"O": {
+																												"cType": "slot"
+																											}
+																										},
+																										{
+																											"T": "VListItem",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_646",
+																													"T": "prop"
+																												},
+																												"visible": {
+																													"H": "true",
+																													"T": "prop"
+																												}
+																											},
+																											"E": {},
+																											"C": {
+																												"default": {
+																													"c": [
+																														{
+																															"T": "QLabel",
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_647",
+																																	"T": "prop"
+																																},
+																																"tagType": {
+																																	"H": "'span'",
+																																	"T": "prop"
+																																},
+																																"text": {
+																																	"H": "'Integrated Reports'",
+																																	"T": "prop"
+																																},
+																																"visible": {
+																																	"H": "true",
+																																	"T": "prop"
+																																},
+																																"class": {
+																																	"H": "'white--text'",
+																																	"T": "class"
+																																}
+																															},
+																															"E": {},
+																															"C": {},
+																															"_Editor": {
+																																"eID": "EdtrComp_647"
+																															},
+																															"O": {
+																																"cType": "slot",
+																																"layout": {
+																																	"dOpt": {
+																																		"xs": [
+																																			"sp:pl-5"
+																																		]
+																																	},
+																																	"class": "pl-5"
+																																}
+																															}
+																														}
+																													],
+																													"cType": "slot"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_646"
+																											},
+																											"O": {
+																												"cType": "slot"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_595"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_583"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_576"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_325",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_325"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_322"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "QLabel",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_737",
+									"T": "prop"
+								},
+								"tagType": {
+									"H": "'span'",
+									"T": "prop"
+								},
+								"text": {
+									"H": "'activeClass : warning'",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "true",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_737"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_742",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VList",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_744",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VListGroup",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_745",
+																					"T": "prop"
+																				},
+																				"eager": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"subGroup": {
+																					"H": "false",
+																					"T": "prop"
+																				},
+																				"noAction": {
+																					"H": "false",
+																					"T": "prop"
+																				},
+																				"activeClass": {
+																					"H": "'warning'",
+																					"T": "prop"
+																				},
+																				"class": {
+																					"H": "'blue darken-3'",
+																					"T": "class"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"activator": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_746",
+																									"T": "prop"
+																								},
+																								"tagType": {
+																									"H": "'span'",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "'Reports'",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"class": {
+																									"H": "'white--text'",
+																									"T": "class"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_746"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"layout": {
+																									"dOpt": {
+																										"xs": []
+																									},
+																									"class": ""
+																								}
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				},
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VListItemGroup",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_747",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "VListItem",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_748",
+																													"T": "prop"
+																												},
+																												"visible": {
+																													"H": "true",
+																													"T": "prop"
+																												}
+																											},
+																											"E": {},
+																											"C": {
+																												"default": {
+																													"c": [
+																														{
+																															"T": "QLabel",
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_749",
+																																	"T": "prop"
+																																},
+																																"tagType": {
+																																	"H": "'span'",
+																																	"T": "prop"
+																																},
+																																"text": {
+																																	"H": "'Annual Reports'",
+																																	"T": "prop"
+																																},
+																																"visible": {
+																																	"H": "true",
+																																	"T": "prop"
+																																},
+																																"class": {
+																																	"H": "'white--text'",
+																																	"T": "class"
+																																}
+																															},
+																															"E": {},
+																															"C": {},
+																															"_Editor": {
+																																"eID": "EdtrComp_749"
+																															},
+																															"O": {
+																																"cType": "slot",
+																																"layout": {
+																																	"dOpt": {
+																																		"xs": [
+																																			"sp:pl-5"
+																																		]
+																																	},
+																																	"class": "pl-5"
+																																}
+																															}
+																														}
+																													],
+																													"cType": "slot"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_748"
+																											},
+																											"O": {
+																												"cType": "slot"
+																											}
+																										},
+																										{
+																											"T": "VListItem",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_750",
+																													"T": "prop"
+																												},
+																												"visible": {
+																													"H": "true",
+																													"T": "prop"
+																												}
+																											},
+																											"E": {},
+																											"C": {
+																												"default": {
+																													"c": [
+																														{
+																															"T": "QLabel",
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_751",
+																																	"T": "prop"
+																																},
+																																"tagType": {
+																																	"H": "'span'",
+																																	"T": "prop"
+																																},
+																																"text": {
+																																	"H": "'Integrated Reports'",
+																																	"T": "prop"
+																																},
+																																"visible": {
+																																	"H": "true",
+																																	"T": "prop"
+																																},
+																																"class": {
+																																	"H": "'white--text'",
+																																	"T": "class"
+																																}
+																															},
+																															"E": {},
+																															"C": {},
+																															"_Editor": {
+																																"eID": "EdtrComp_751"
+																															},
+																															"O": {
+																																"cType": "slot",
+																																"layout": {
+																																	"dOpt": {
+																																		"xs": [
+																																			"sp:pl-5"
+																																		]
+																																	},
+																																	"class": "pl-5"
+																																}
+																															}
+																														}
+																													],
+																													"cType": "slot"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_750"
+																											},
+																											"O": {
+																												"cType": "slot"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_747"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_745"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_744"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_743",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_743"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_742"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "QLabel",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_839",
+									"T": "prop"
+								},
+								"tagType": {
+									"H": "'span'",
+									"T": "prop"
+								},
+								"text": {
+									"H": "'color : orange'",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "true",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_839"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_823",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VList",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_825",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VListGroup",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_826",
+																					"T": "prop"
+																				},
+																				"eager": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"subGroup": {
+																					"H": "false",
+																					"T": "prop"
+																				},
+																				"noAction": {
+																					"H": "false",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "'orange'",
+																					"T": "prop"
+																				},
+																				"class": {
+																					"H": "'blue darken-3'",
+																					"T": "class"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"activator": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_827",
+																									"T": "prop"
+																								},
+																								"tagType": {
+																									"H": "'span'",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "'Reports'",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"class": {
+																									"H": "'white--text'",
+																									"T": "class"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_827"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"layout": {
+																									"dOpt": {
+																										"xs": []
+																									},
+																									"class": ""
+																								}
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				},
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VListItemGroup",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_828",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "VListItem",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_829",
+																													"T": "prop"
+																												},
+																												"visible": {
+																													"H": "true",
+																													"T": "prop"
+																												}
+																											},
+																											"E": {},
+																											"C": {
+																												"default": {
+																													"c": [
+																														{
+																															"T": "QLabel",
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_830",
+																																	"T": "prop"
+																																},
+																																"tagType": {
+																																	"H": "'span'",
+																																	"T": "prop"
+																																},
+																																"text": {
+																																	"H": "'Annual Reports'",
+																																	"T": "prop"
+																																},
+																																"visible": {
+																																	"H": "true",
+																																	"T": "prop"
+																																},
+																																"class": {
+																																	"H": "'white--text'",
+																																	"T": "class"
+																																}
+																															},
+																															"E": {},
+																															"C": {},
+																															"_Editor": {
+																																"eID": "EdtrComp_830"
+																															},
+																															"O": {
+																																"cType": "slot",
+																																"layout": {
+																																	"dOpt": {
+																																		"xs": [
+																																			"sp:pl-5"
+																																		]
+																																	},
+																																	"class": "pl-5"
+																																}
+																															}
+																														}
+																													],
+																													"cType": "slot"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_829"
+																											},
+																											"O": {
+																												"cType": "slot"
+																											}
+																										},
+																										{
+																											"T": "VListItem",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_831",
+																													"T": "prop"
+																												},
+																												"visible": {
+																													"H": "true",
+																													"T": "prop"
+																												}
+																											},
+																											"E": {},
+																											"C": {
+																												"default": {
+																													"c": [
+																														{
+																															"T": "QLabel",
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_832",
+																																	"T": "prop"
+																																},
+																																"tagType": {
+																																	"H": "'span'",
+																																	"T": "prop"
+																																},
+																																"text": {
+																																	"H": "'Integrated Reports'",
+																																	"T": "prop"
+																																},
+																																"visible": {
+																																	"H": "true",
+																																	"T": "prop"
+																																},
+																																"class": {
+																																	"H": "'white--text'",
+																																	"T": "class"
+																																}
+																															},
+																															"E": {},
+																															"C": {},
+																															"_Editor": {
+																																"eID": "EdtrComp_832"
+																															},
+																															"O": {
+																																"cType": "slot",
+																																"layout": {
+																																	"dOpt": {
+																																		"xs": [
+																																			"sp:pl-5"
+																																		]
+																																	},
+																																	"class": "pl-5"
+																																}
+																															}
+																														}
+																													],
+																													"cType": "slot"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_831"
+																											},
+																											"O": {
+																												"cType": "slot"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_828"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_826"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_825"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_824",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_824"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_823"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "QLabel",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_3289",
+									"T": "prop"
+								},
+								"tagType": {
+									"H": "'span'",
+									"T": "prop"
+								},
+								"text": {
+									"H": "'prependIcon'",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "true",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_3289"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_3269",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VList",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_3271",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VListGroup",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_3272",
+																					"T": "prop"
+																				},
+																				"eager": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"subGroup": {
+																					"H": "false",
+																					"T": "prop"
+																				},
+																				"noAction": {
+																					"H": "false",
+																					"T": "prop"
+																				},
+																				"prependIcon": {
+																					"H": "'mdi-file-chart-outline'",
+																					"T": "prop"
+																				},
+																				"class": {
+																					"H": "'blue darken-3'",
+																					"T": "class"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"activator": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_3273",
+																									"T": "prop"
+																								},
+																								"tagType": {
+																									"H": "'span'",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "'Reports'",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"class": {
+																									"H": "'white--text'",
+																									"T": "class"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_3273"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"layout": {
+																									"dOpt": {
+																										"xs": []
+																									},
+																									"class": ""
+																								}
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				},
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VListItemGroup",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_3274",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "VListItem",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_3275",
+																													"T": "prop"
+																												},
+																												"visible": {
+																													"H": "true",
+																													"T": "prop"
+																												}
+																											},
+																											"E": {},
+																											"C": {
+																												"default": {
+																													"c": [
+																														{
+																															"T": "QLabel",
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_3276",
+																																	"T": "prop"
+																																},
+																																"tagType": {
+																																	"H": "'span'",
+																																	"T": "prop"
+																																},
+																																"text": {
+																																	"H": "'Annual Reports'",
+																																	"T": "prop"
+																																},
+																																"visible": {
+																																	"H": "true",
+																																	"T": "prop"
+																																},
+																																"class": {
+																																	"H": "'white--text'",
+																																	"T": "class"
+																																}
+																															},
+																															"E": {},
+																															"C": {},
+																															"_Editor": {
+																																"eID": "EdtrComp_3276"
+																															},
+																															"O": {
+																																"cType": "slot",
+																																"layout": {
+																																	"dOpt": {
+																																		"xs": [
+																																			"sp:pl-5"
+																																		]
+																																	},
+																																	"class": "pl-5"
+																																}
+																															}
+																														}
+																													],
+																													"cType": "slot"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_3275"
+																											},
+																											"O": {
+																												"cType": "slot"
+																											}
+																										},
+																										{
+																											"T": "VListItem",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_3277",
+																													"T": "prop"
+																												},
+																												"visible": {
+																													"H": "true",
+																													"T": "prop"
+																												}
+																											},
+																											"E": {},
+																											"C": {
+																												"default": {
+																													"c": [
+																														{
+																															"T": "QLabel",
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_3278",
+																																	"T": "prop"
+																																},
+																																"tagType": {
+																																	"H": "'span'",
+																																	"T": "prop"
+																																},
+																																"text": {
+																																	"H": "'Integrated Reports'",
+																																	"T": "prop"
+																																},
+																																"visible": {
+																																	"H": "true",
+																																	"T": "prop"
+																																},
+																																"class": {
+																																	"H": "'white--text'",
+																																	"T": "class"
+																																}
+																															},
+																															"E": {},
+																															"C": {},
+																															"_Editor": {
+																																"eID": "EdtrComp_3278"
+																															},
+																															"O": {
+																																"cType": "slot",
+																																"layout": {
+																																	"dOpt": {
+																																		"xs": [
+																																			"sp:pl-5"
+																																		]
+																																	},
+																																	"class": "pl-5"
+																																}
+																															}
+																														}
+																													],
+																													"cType": "slot"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_3277"
+																											},
+																											"O": {
+																												"cType": "slot"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_3274"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_3272"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_3271"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_3270",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_3270"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_3269"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "QLabel",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_948",
+									"T": "prop"
+								},
+								"tagType": {
+									"H": "'span'",
+									"T": "prop"
+								},
+								"text": {
+									"H": "'subGroup : true'",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "true",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_948"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_930",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VList",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_2511",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VListGroup",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_2522",
+																					"T": "prop"
+																				},
+																				"eager": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"noAction": {
+																					"H": "false",
+																					"T": "prop"
+																				},
+																				"subGroup": {
+																					"H": "false",
+																					"T": "prop"
+																				},
+																				"class": {
+																					"H": "'blue darken-3'",
+																					"T": "class"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VListGroup",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_2809",
+																									"T": "prop"
+																								},
+																								"eager": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"subGroup": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"noAction": {
+																									"H": "false",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "VListItemGroup",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_2928",
+																													"T": "prop"
+																												},
+																												"visible": {
+																													"H": "true",
+																													"T": "prop"
+																												}
+																											},
+																											"E": {},
+																											"C": {
+																												"default": {
+																													"c": [
+																														{
+																															"T": "VListItem",
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_2946",
+																																	"T": "prop"
+																																},
+																																"visible": {
+																																	"H": "true",
+																																	"T": "prop"
+																																}
+																															},
+																															"E": {},
+																															"C": {
+																																"default": {
+																																	"c": [
+																																		{
+																																			"T": "QLabel",
+																																			"P": {
+																																				"ID": {
+																																					"H": "EdtrComp_2964",
+																																					"T": "prop"
+																																				},
+																																				"tagType": {
+																																					"H": "'span'",
+																																					"T": "prop"
+																																				},
+																																				"text": {
+																																					"H": "'Car Loan'",
+																																					"T": "prop"
+																																				},
+																																				"visible": {
+																																					"H": "true",
+																																					"T": "prop"
+																																				},
+																																				"class": {
+																																					"H": "'white--text'",
+																																					"T": "class"
+																																				}
+																																			},
+																																			"E": {},
+																																			"C": {},
+																																			"_Editor": {
+																																				"eID": "EdtrComp_2964"
+																																			},
+																																			"O": {
+																																				"cType": "slot",
+																																				"layout": {
+																																					"dOpt": {
+																																						"xs": [
+																																							"sp:ml-16"
+																																						]
+																																					},
+																																					"class": "ml-16"
+																																				}
+																																			}
+																																		}
+																																	],
+																																	"cType": "slot"
+																																}
+																															},
+																															"_Editor": {
+																																"eID": "EdtrComp_2946"
+																															},
+																															"O": {
+																																"cType": "slot"
+																															}
+																														}
+																													],
+																													"cType": "slot"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_2928"
+																											},
+																											"O": {
+																												"cType": "slot"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								},
+																								"activator": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_2843",
+																													"T": "prop"
+																												},
+																												"tagType": {
+																													"H": "'span'",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "'Loans'",
+																													"T": "prop"
+																												},
+																												"visible": {
+																													"H": "true",
+																													"T": "prop"
+																												},
+																												"class": {
+																													"H": "'white--text'",
+																													"T": "class"
+																												}
+																											},
+																											"E": {},
+																											"C": {},
+																											"_Editor": {
+																												"eID": "EdtrComp_2843"
+																											},
+																											"O": {
+																												"cType": "slot"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_2809"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				},
+																				"activator": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_2556",
+																									"T": "prop"
+																								},
+																								"tagType": {
+																									"H": "'span'",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "'Personal Banking'",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"class": {
+																									"H": "'white--text'",
+																									"T": "class"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_2556"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_2522"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_2511"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_931",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_931"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_930"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_320"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_320",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container container--fluid'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_730",
+									"T": "prop"
+								},
+								"tagType": {
+									"H": "╬'span'╩╩",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬'appendIcon'╩╩",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_730"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "q-label newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_322",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VList",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_576",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VListGroup",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_583",
+																					"T": "prop"
+																				},
+																				"eager": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"subGroup": {
+																					"H": "╬false╩╩",
+																					"T": "prop"
+																				},
+																				"noAction": {
+																					"H": "╬false╩╩",
+																					"T": "prop"
+																				},
+																				"appendIcon": {
+																					"H": "╬'mdi-arrow-down-drop-circle-outline'╩╩",
+																					"T": "prop"
+																				},
+																				"class": {
+																					"H": "╬'blue darken-3'╩╩",
+																					"T": "class"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"activator": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_617",
+																									"T": "prop"
+																								},
+																								"tagType": {
+																									"H": "╬'span'╩╩",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "╬'Reports'╩╩",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"class": {
+																									"H": "╬'white--text'╩╩",
+																									"T": "class"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_617"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"layout": {
+																									"dOpt": {
+																										"xs": []
+																									},
+																									"class": ""
+																								},
+																								"compDomClasses": "q-label white--text newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				},
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VListItemGroup",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_595",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "VListItem",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_603",
+																													"T": "prop"
+																												},
+																												"visible": {
+																													"H": "╬true╩╩",
+																													"T": "prop"
+																												}
+																											},
+																											"E": {},
+																											"C": {
+																												"default": {
+																													"c": [
+																														{
+																															"T": "QLabel",
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_609",
+																																	"T": "prop"
+																																},
+																																"tagType": {
+																																	"H": "╬'span'╩╩",
+																																	"T": "prop"
+																																},
+																																"text": {
+																																	"H": "╬'Annual Reports'╩╩",
+																																	"T": "prop"
+																																},
+																																"visible": {
+																																	"H": "╬true╩╩",
+																																	"T": "prop"
+																																},
+																																"class": {
+																																	"H": "╬'white--text'╩╩",
+																																	"T": "class"
+																																}
+																															},
+																															"E": {},
+																															"C": {},
+																															"_Editor": {
+																																"eID": "EdtrComp_609"
+																															},
+																															"O": {
+																																"cType": "slot",
+																																"layout": {
+																																	"dOpt": {
+																																		"xs": [
+																																			"sp:pl-5"
+																																		]
+																																	},
+																																	"class": "pl-5"
+																																},
+																																"compDomClasses": "q-label  white--text pl-5"
+																															}
+																														}
+																													],
+																													"cType": "slot"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_603"
+																											},
+																											"O": {
+																												"cType": "slot",
+																												"compDomClasses": "v-list-item v-list-item--link theme--light"
+																											}
+																										},
+																										{
+																											"T": "VListItem",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_646",
+																													"T": "prop"
+																												},
+																												"visible": {
+																													"H": "╬true╩╩",
+																													"T": "prop"
+																												}
+																											},
+																											"E": {},
+																											"C": {
+																												"default": {
+																													"c": [
+																														{
+																															"T": "QLabel",
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_647",
+																																	"T": "prop"
+																																},
+																																"tagType": {
+																																	"H": "╬'span'╩╩",
+																																	"T": "prop"
+																																},
+																																"text": {
+																																	"H": "╬'Integrated Reports'╩╩",
+																																	"T": "prop"
+																																},
+																																"visible": {
+																																	"H": "╬true╩╩",
+																																	"T": "prop"
+																																},
+																																"class": {
+																																	"H": "╬'white--text'╩╩",
+																																	"T": "class"
+																																}
+																															},
+																															"E": {},
+																															"C": {},
+																															"_Editor": {
+																																"eID": "EdtrComp_647"
+																															},
+																															"O": {
+																																"cType": "slot",
+																																"layout": {
+																																	"dOpt": {
+																																		"xs": [
+																																			"sp:pl-5"
+																																		]
+																																	},
+																																	"class": "pl-5"
+																																},
+																																"compDomClasses": "q-label  white--text pl-5"
+																															}
+																														}
+																													],
+																													"cType": "slot"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_646"
+																											},
+																											"O": {
+																												"cType": "slot",
+																												"compDomClasses": "v-list-item v-list-item--link theme--light"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_595"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "v-item-group theme--light v-list-item-group"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_583"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-list-group blue darken-3 newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_576"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-list v-sheet theme--light newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_325",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_325"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_322"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						},
+						{
+							"T": "QLabel",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_737",
+									"T": "prop"
+								},
+								"tagType": {
+									"H": "╬'span'╩╩",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬'activeClass : warning'╩╩",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_737"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "q-label newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_742",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VList",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_744",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VListGroup",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_745",
+																					"T": "prop"
+																				},
+																				"eager": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"subGroup": {
+																					"H": "╬false╩╩",
+																					"T": "prop"
+																				},
+																				"noAction": {
+																					"H": "╬false╩╩",
+																					"T": "prop"
+																				},
+																				"activeClass": {
+																					"H": "╬'warning'╩╩",
+																					"T": "prop"
+																				},
+																				"class": {
+																					"H": "╬'blue darken-3'╩╩",
+																					"T": "class"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"activator": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_746",
+																									"T": "prop"
+																								},
+																								"tagType": {
+																									"H": "╬'span'╩╩",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "╬'Reports'╩╩",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"class": {
+																									"H": "╬'white--text'╩╩",
+																									"T": "class"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_746"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"layout": {
+																									"dOpt": {
+																										"xs": []
+																									},
+																									"class": ""
+																								},
+																								"compDomClasses": "q-label white--text newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				},
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VListItemGroup",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_747",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "VListItem",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_748",
+																													"T": "prop"
+																												},
+																												"visible": {
+																													"H": "╬true╩╩",
+																													"T": "prop"
+																												}
+																											},
+																											"E": {},
+																											"C": {
+																												"default": {
+																													"c": [
+																														{
+																															"T": "QLabel",
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_749",
+																																	"T": "prop"
+																																},
+																																"tagType": {
+																																	"H": "╬'span'╩╩",
+																																	"T": "prop"
+																																},
+																																"text": {
+																																	"H": "╬'Annual Reports'╩╩",
+																																	"T": "prop"
+																																},
+																																"visible": {
+																																	"H": "╬true╩╩",
+																																	"T": "prop"
+																																},
+																																"class": {
+																																	"H": "╬'white--text'╩╩",
+																																	"T": "class"
+																																}
+																															},
+																															"E": {},
+																															"C": {},
+																															"_Editor": {
+																																"eID": "EdtrComp_749"
+																															},
+																															"O": {
+																																"cType": "slot",
+																																"layout": {
+																																	"dOpt": {
+																																		"xs": [
+																																			"sp:pl-5"
+																																		]
+																																	},
+																																	"class": "pl-5"
+																																},
+																																"compDomClasses": "q-label  white--text pl-5"
+																															}
+																														}
+																													],
+																													"cType": "slot"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_748"
+																											},
+																											"O": {
+																												"cType": "slot",
+																												"compDomClasses": "v-list-item v-list-item--link theme--light"
+																											}
+																										},
+																										{
+																											"T": "VListItem",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_750",
+																													"T": "prop"
+																												},
+																												"visible": {
+																													"H": "╬true╩╩",
+																													"T": "prop"
+																												}
+																											},
+																											"E": {},
+																											"C": {
+																												"default": {
+																													"c": [
+																														{
+																															"T": "QLabel",
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_751",
+																																	"T": "prop"
+																																},
+																																"tagType": {
+																																	"H": "╬'span'╩╩",
+																																	"T": "prop"
+																																},
+																																"text": {
+																																	"H": "╬'Integrated Reports'╩╩",
+																																	"T": "prop"
+																																},
+																																"visible": {
+																																	"H": "╬true╩╩",
+																																	"T": "prop"
+																																},
+																																"class": {
+																																	"H": "╬'white--text'╩╩",
+																																	"T": "class"
+																																}
+																															},
+																															"E": {},
+																															"C": {},
+																															"_Editor": {
+																																"eID": "EdtrComp_751"
+																															},
+																															"O": {
+																																"cType": "slot",
+																																"layout": {
+																																	"dOpt": {
+																																		"xs": [
+																																			"sp:pl-5"
+																																		]
+																																	},
+																																	"class": "pl-5"
+																																},
+																																"compDomClasses": "q-label  white--text pl-5"
+																															}
+																														}
+																													],
+																													"cType": "slot"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_750"
+																											},
+																											"O": {
+																												"cType": "slot",
+																												"compDomClasses": "v-list-item v-list-item--link theme--light"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_747"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "v-item-group theme--light v-list-item-group"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_745"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-list-group blue darken-3 newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_744"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-list v-sheet theme--light newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_743",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_743"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_742"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						},
+						{
+							"T": "QLabel",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_839",
+									"T": "prop"
+								},
+								"tagType": {
+									"H": "╬'span'╩╩",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬'color : orange'╩╩",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_839"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "q-label newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_823",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VList",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_825",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VListGroup",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_826",
+																					"T": "prop"
+																				},
+																				"eager": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"subGroup": {
+																					"H": "╬false╩╩",
+																					"T": "prop"
+																				},
+																				"noAction": {
+																					"H": "╬false╩╩",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "╬'orange'╩╩",
+																					"T": "prop"
+																				},
+																				"class": {
+																					"H": "╬'blue darken-3'╩╩",
+																					"T": "class"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"activator": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_827",
+																									"T": "prop"
+																								},
+																								"tagType": {
+																									"H": "╬'span'╩╩",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "╬'Reports'╩╩",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"class": {
+																									"H": "╬'white--text'╩╩",
+																									"T": "class"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_827"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"layout": {
+																									"dOpt": {
+																										"xs": []
+																									},
+																									"class": ""
+																								},
+																								"compDomClasses": "q-label white--text newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				},
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VListItemGroup",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_828",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "VListItem",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_829",
+																													"T": "prop"
+																												},
+																												"visible": {
+																													"H": "╬true╩╩",
+																													"T": "prop"
+																												}
+																											},
+																											"E": {},
+																											"C": {
+																												"default": {
+																													"c": [
+																														{
+																															"T": "QLabel",
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_830",
+																																	"T": "prop"
+																																},
+																																"tagType": {
+																																	"H": "╬'span'╩╩",
+																																	"T": "prop"
+																																},
+																																"text": {
+																																	"H": "╬'Annual Reports'╩╩",
+																																	"T": "prop"
+																																},
+																																"visible": {
+																																	"H": "╬true╩╩",
+																																	"T": "prop"
+																																},
+																																"class": {
+																																	"H": "╬'white--text'╩╩",
+																																	"T": "class"
+																																}
+																															},
+																															"E": {},
+																															"C": {},
+																															"_Editor": {
+																																"eID": "EdtrComp_830"
+																															},
+																															"O": {
+																																"cType": "slot",
+																																"layout": {
+																																	"dOpt": {
+																																		"xs": [
+																																			"sp:pl-5"
+																																		]
+																																	},
+																																	"class": "pl-5"
+																																},
+																																"compDomClasses": "q-label  white--text pl-5"
+																															}
+																														}
+																													],
+																													"cType": "slot"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_829"
+																											},
+																											"O": {
+																												"cType": "slot",
+																												"compDomClasses": "v-list-item v-list-item--link theme--light"
+																											}
+																										},
+																										{
+																											"T": "VListItem",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_831",
+																													"T": "prop"
+																												},
+																												"visible": {
+																													"H": "╬true╩╩",
+																													"T": "prop"
+																												}
+																											},
+																											"E": {},
+																											"C": {
+																												"default": {
+																													"c": [
+																														{
+																															"T": "QLabel",
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_832",
+																																	"T": "prop"
+																																},
+																																"tagType": {
+																																	"H": "╬'span'╩╩",
+																																	"T": "prop"
+																																},
+																																"text": {
+																																	"H": "╬'Integrated Reports'╩╩",
+																																	"T": "prop"
+																																},
+																																"visible": {
+																																	"H": "╬true╩╩",
+																																	"T": "prop"
+																																},
+																																"class": {
+																																	"H": "╬'white--text'╩╩",
+																																	"T": "class"
+																																}
+																															},
+																															"E": {},
+																															"C": {},
+																															"_Editor": {
+																																"eID": "EdtrComp_832"
+																															},
+																															"O": {
+																																"cType": "slot",
+																																"layout": {
+																																	"dOpt": {
+																																		"xs": [
+																																			"sp:pl-5"
+																																		]
+																																	},
+																																	"class": "pl-5"
+																																},
+																																"compDomClasses": "q-label  white--text pl-5"
+																															}
+																														}
+																													],
+																													"cType": "slot"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_831"
+																											},
+																											"O": {
+																												"cType": "slot",
+																												"compDomClasses": "v-list-item v-list-item--link theme--light"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_828"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "v-item-group theme--light v-list-item-group"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_826"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-list-group blue darken-3 newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_825"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-list v-sheet theme--light newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_824",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_824"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_823"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						},
+						{
+							"T": "QLabel",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_3289",
+									"T": "prop"
+								},
+								"tagType": {
+									"H": "╬'span'╩╩",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬'prependIcon'╩╩",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_3289"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "q-label newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_3269",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VList",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_3271",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VListGroup",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_3272",
+																					"T": "prop"
+																				},
+																				"eager": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"subGroup": {
+																					"H": "╬false╩╩",
+																					"T": "prop"
+																				},
+																				"noAction": {
+																					"H": "╬false╩╩",
+																					"T": "prop"
+																				},
+																				"prependIcon": {
+																					"H": "╬'mdi-file-chart-outline'╩╩",
+																					"T": "prop"
+																				},
+																				"class": {
+																					"H": "╬'blue darken-3'╩╩",
+																					"T": "class"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"activator": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_3273",
+																									"T": "prop"
+																								},
+																								"tagType": {
+																									"H": "╬'span'╩╩",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "╬'Reports'╩╩",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"class": {
+																									"H": "╬'white--text'╩╩",
+																									"T": "class"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_3273"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"layout": {
+																									"dOpt": {
+																										"xs": []
+																									},
+																									"class": ""
+																								},
+																								"compDomClasses": "q-label white--text newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				},
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VListItemGroup",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_3274",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "VListItem",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_3275",
+																													"T": "prop"
+																												},
+																												"visible": {
+																													"H": "╬true╩╩",
+																													"T": "prop"
+																												}
+																											},
+																											"E": {},
+																											"C": {
+																												"default": {
+																													"c": [
+																														{
+																															"T": "QLabel",
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_3276",
+																																	"T": "prop"
+																																},
+																																"tagType": {
+																																	"H": "╬'span'╩╩",
+																																	"T": "prop"
+																																},
+																																"text": {
+																																	"H": "╬'Annual Reports'╩╩",
+																																	"T": "prop"
+																																},
+																																"visible": {
+																																	"H": "╬true╩╩",
+																																	"T": "prop"
+																																},
+																																"class": {
+																																	"H": "╬'white--text'╩╩",
+																																	"T": "class"
+																																}
+																															},
+																															"E": {},
+																															"C": {},
+																															"_Editor": {
+																																"eID": "EdtrComp_3276"
+																															},
+																															"O": {
+																																"cType": "slot",
+																																"layout": {
+																																	"dOpt": {
+																																		"xs": [
+																																			"sp:pl-5"
+																																		]
+																																	},
+																																	"class": "pl-5"
+																																},
+																																"compDomClasses": "q-label  white--text pl-5"
+																															}
+																														}
+																													],
+																													"cType": "slot"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_3275"
+																											},
+																											"O": {
+																												"cType": "slot",
+																												"compDomClasses": "v-list-item v-list-item--link theme--light"
+																											}
+																										},
+																										{
+																											"T": "VListItem",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_3277",
+																													"T": "prop"
+																												},
+																												"visible": {
+																													"H": "╬true╩╩",
+																													"T": "prop"
+																												}
+																											},
+																											"E": {},
+																											"C": {
+																												"default": {
+																													"c": [
+																														{
+																															"T": "QLabel",
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_3278",
+																																	"T": "prop"
+																																},
+																																"tagType": {
+																																	"H": "╬'span'╩╩",
+																																	"T": "prop"
+																																},
+																																"text": {
+																																	"H": "╬'Integrated Reports'╩╩",
+																																	"T": "prop"
+																																},
+																																"visible": {
+																																	"H": "╬true╩╩",
+																																	"T": "prop"
+																																},
+																																"class": {
+																																	"H": "╬'white--text'╩╩",
+																																	"T": "class"
+																																}
+																															},
+																															"E": {},
+																															"C": {},
+																															"_Editor": {
+																																"eID": "EdtrComp_3278"
+																															},
+																															"O": {
+																																"cType": "slot",
+																																"layout": {
+																																	"dOpt": {
+																																		"xs": [
+																																			"sp:pl-5"
+																																		]
+																																	},
+																																	"class": "pl-5"
+																																},
+																																"compDomClasses": "q-label  white--text pl-5"
+																															}
+																														}
+																													],
+																													"cType": "slot"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_3277"
+																											},
+																											"O": {
+																												"cType": "slot",
+																												"compDomClasses": "v-list-item v-list-item--link theme--light"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_3274"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "v-item-group theme--light v-list-item-group"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_3272"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-list-group blue darken-3 newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_3271"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-list v-sheet theme--light newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_3270",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_3270"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_3269"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						},
+						{
+							"T": "QLabel",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_948",
+									"T": "prop"
+								},
+								"tagType": {
+									"H": "╬'span'╩╩",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬'subGroup : true'╩╩",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_948"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "q-label newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_930",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VList",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_2511",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VListGroup",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_2522",
+																					"T": "prop"
+																				},
+																				"eager": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"noAction": {
+																					"H": "╬false╩╩",
+																					"T": "prop"
+																				},
+																				"subGroup": {
+																					"H": "╬false╩╩",
+																					"T": "prop"
+																				},
+																				"class": {
+																					"H": "╬'blue darken-3'╩╩",
+																					"T": "class"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VListGroup",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_2809",
+																									"T": "prop"
+																								},
+																								"eager": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"subGroup": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"noAction": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "VListItemGroup",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_2928",
+																													"T": "prop"
+																												},
+																												"visible": {
+																													"H": "╬true╩╩",
+																													"T": "prop"
+																												}
+																											},
+																											"E": {},
+																											"C": {
+																												"default": {
+																													"c": [
+																														{
+																															"T": "VListItem",
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_2946",
+																																	"T": "prop"
+																																},
+																																"visible": {
+																																	"H": "╬true╩╩",
+																																	"T": "prop"
+																																}
+																															},
+																															"E": {},
+																															"C": {
+																																"default": {
+																																	"c": [
+																																		{
+																																			"T": "QLabel",
+																																			"P": {
+																																				"ID": {
+																																					"H": "EdtrComp_2964",
+																																					"T": "prop"
+																																				},
+																																				"tagType": {
+																																					"H": "╬'span'╩╩",
+																																					"T": "prop"
+																																				},
+																																				"text": {
+																																					"H": "╬'Car Loan'╩╩",
+																																					"T": "prop"
+																																				},
+																																				"visible": {
+																																					"H": "╬true╩╩",
+																																					"T": "prop"
+																																				},
+																																				"class": {
+																																					"H": "╬'white--text'╩╩",
+																																					"T": "class"
+																																				}
+																																			},
+																																			"E": {},
+																																			"C": {},
+																																			"_Editor": {
+																																				"eID": "EdtrComp_2964"
+																																			},
+																																			"O": {
+																																				"cType": "slot",
+																																				"layout": {
+																																					"dOpt": {
+																																						"xs": [
+																																							"sp:ml-16"
+																																						]
+																																					},
+																																					"class": "ml-16"
+																																				},
+																																				"compDomClasses": "q-label  white--text ml-16"
+																																			}
+																																		}
+																																	],
+																																	"cType": "slot"
+																																}
+																															},
+																															"_Editor": {
+																																"eID": "EdtrComp_2946"
+																															},
+																															"O": {
+																																"cType": "slot",
+																																"compDomClasses": "v-list-item v-list-item--link theme--light"
+																															}
+																														}
+																													],
+																													"cType": "slot"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_2928"
+																											},
+																											"O": {
+																												"cType": "slot",
+																												"compDomClasses": "v-item-group theme--light v-list-item-group"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								},
+																								"activator": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_2843",
+																													"T": "prop"
+																												},
+																												"tagType": {
+																													"H": "╬'span'╩╩",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "╬'Loans'╩╩",
+																													"T": "prop"
+																												},
+																												"visible": {
+																													"H": "╬true╩╩",
+																													"T": "prop"
+																												},
+																												"class": {
+																													"H": "╬'white--text'╩╩",
+																													"T": "class"
+																												}
+																											},
+																											"E": {},
+																											"C": {},
+																											"_Editor": {
+																												"eID": "EdtrComp_2843"
+																											},
+																											"O": {
+																												"cType": "slot",
+																												"compDomClasses": "q-label  white--text"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_2809"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "v-list-group v-list-group--sub-group"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				},
+																				"activator": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_2556",
+																									"T": "prop"
+																								},
+																								"tagType": {
+																									"H": "╬'span'╩╩",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "╬'Personal Banking'╩╩",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"class": {
+																									"H": "╬'white--text'╩╩",
+																									"T": "class"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_2556"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "q-label white--text newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_2522"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-list-group blue darken-3 newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_2511"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-list v-sheet theme--light newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_931",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_931"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_930"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_320"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container container--fluid newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {}
+};
+export default pjson

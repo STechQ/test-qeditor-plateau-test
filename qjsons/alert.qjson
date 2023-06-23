@@ -1,0 +1,931 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"PostRender": {
+					"H": "if (quick.parent.props) {\r\n    quick.EM.trace(quick.parent.props);\r\n\r\n    //Quick.alert({text= 'Kayıt silinecektir onaylıyor musunuz?', category='Warning', actionButtons=[{name='Onayla', type='Confirm', clickEventName='onConfirm'},{ name='İptal', type='Cancel', clickEventName='onCancel'}]})\r\n    //Quick.alert({ error= { errorMessage= error.response.message, errorCode= 'HTTP_' + error.response.status, errorSource= 'Network' }\r\n\r\n    //---ALERT PARAMS---//\r\n\r\n    //title?: string\r\n    //text? : string\r\n    //category? : enum (Warning - Info - Success - Error)\r\n    //actionButtons?: [{name: string, type: enum (Confirm - Cancel), clickEventName: string}]\r\n    //error?: { errorMessage?: string, errorCode?: string, errorSource?: enum ( Network - Page - Validation )}\r\n\r\n    //Display Samples\r\n    components.cancelButton.visible = false;\r\n    components.confirmButton.visible = false;\r\n    components.validationBtn.visible = false;\r\n\r\n\r\n    if (quick.parent.props.error) {\r\n        if (quick.parent.props.error.errorSource == 'Validation') {\r\n            //validation error display\r\n            components.alertHeader.type = 'error';\r\n            components.alertHeaderText.text = quick.LR(quick.parent.props.error.errorCode);\r\n            components.validationBtn.visible = true;\r\n            components.validationBtnText.text = quick.parent.props.actionButtons[0].name;\r\n        }\r\n        if (quick.parent.props.error.errorSource == 'Network') {\r\n            //network error display\r\n            components.alertHeader.type = 'error';\r\n            components.alertHeaderText.text = quick.parent.props.error.errorCode;\r\n            components.alertText.text = quick.parent.props.error.errorMessage;\r\n        }\r\n    }\r\n    else {\r\n        //Confirm diplay\r\n        components.alertHeader.type = quick.parent.props.category;\r\n        components.alertHeaderText.text = quick.parent.props.title;\r\n        components.alertText.text = quick.parent.props.text;\r\n\r\n        let actionButtonList = [];\r\n        if (quick.parent.props.actionButtons != null) {\r\n            actionButtonList = quick.parent.props.actionButtons;\r\n        }\r\n\r\n        actionButtonList.forEach(actionButton => {\r\n            quick.EM.trace('actionButtons');\r\n            quick.EM.trace(actionButton);\r\n\r\n            if (actionButton.type == 'Confirm') {\r\n                components.confirmButton.visible = true\r\n                components.confimButtonText.text = actionButton.name;\r\n            }\r\n            if (actionButton.type == 'Cancel') {\r\n                components.cancelButton.visible = true;\r\n                components.cancelButtonText.text = actionButton.name;\r\n            }\r\n        }\r\n        );\r\n    }\r\n\r\n    components.alertSampleDialog.qValue = true;\r\n\r\n    debugger;\r\n    if (quick.parent.props.additionals?.props?.timeout) {\r\n        setTimeout(() => {\r\n            components.alertSampleDialog.qValue = false;\r\n        }, quick.parent.props.additionals?.props?.timeout)\r\n    }\r\n}",
+					"TO": 1,
+					"HL": "TS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child"
+			}
+		},
+		{
+			"T": "VRow",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_40",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'d-flex justify-center'",
+					"T": "class"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VDialog",
+							"P": {
+								"ID": {
+									"H": "alertSampleDialog",
+									"T": "prop"
+								},
+								"class": {
+									"H": "'col-4'",
+									"T": "class"
+								},
+								"eager": {
+									"H": "true",
+									"T": "prop"
+								},
+								"hideOverlay": {
+									"H": "true",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCard",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_65",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'col-xl-12 justify-space-around align-start'",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VAlert",
+															"P": {
+																"ID": {
+																	"H": "alertHeader",
+																	"T": "prop"
+																},
+																"type": {
+																	"H": "'warning'",
+																	"T": "prop"
+																},
+																"icon": {
+																	"H": "'mdi-alert'",
+																	"T": "prop"
+																},
+																"prominent": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"render": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"P": {
+																				"ID": {
+																					"H": "alertHeaderText",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'home'",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_6"
+																			},
+																			"O": {
+																				"cType": "child"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_2"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_65"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										},
+										{
+											"T": "VCard",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_70",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'col-xl-12 align-start'",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VContainer",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_74",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VRow",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_78",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"P": {
+																								"ID": {
+																									"H": "alertText",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_81"
+																							},
+																							"O": {
+																								"cType": "child"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_78"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		},
+																		{
+																			"T": "VRow",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_82",
+																					"T": "prop"
+																				},
+																				"class": {
+																					"H": "'justify-space-around'",
+																					"T": "class"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "confirmButton",
+																									"T": "prop"
+																								},
+																								"class": {
+																									"H": "'success'",
+																									"T": "class"
+																								}
+																							},
+																							"E": {
+																								"click": {
+																									"H": "quick.EM.trace('alert.qjson dialog Confirm type button clicked - onConfirmTask custom event on owner component will be triggered');\r\n\r\ncomponents.alertSampleDialog.qValue = false;\r\nquick.parent.events.onConfirm();",
+																									"P": "mouseEvent:unknown | undefined",
+																									"HL": "TS"
+																								}
+																							},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"C": {},
+																											"E": {},
+																											"P": {
+																												"ID": {
+																													"H": "confimButtonText",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "'Evet'",
+																													"T": "prop"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_90"
+																											},
+																											"O": {
+																												"cType": "child"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_89"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						},
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "validationBtn",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "'primary'",
+																									"T": "prop"
+																								},
+																								"regular": {
+																									"H": "true",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"C": {},
+																											"E": {},
+																											"P": {
+																												"ID": {
+																													"H": "validationBtnText",
+																													"T": "prop"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_4"
+																											},
+																											"O": {
+																												"cType": "child"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_3"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						},
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "cancelButton",
+																									"T": "prop"
+																								},
+																								"class": {
+																									"H": "'error'",
+																									"T": "class"
+																								}
+																							},
+																							"E": {
+																								"click": {
+																									"H": "quick.EM.trace('alert.qjson dialog Cancel type button clicked - ononCancelTask custom event on owner component will be triggered');\r\n\r\ncomponents.alertSampleDialog.qValue = false;\r\nquick.parent.events.onCancel();",
+																									"P": "mouseEvent:unknown | undefined",
+																									"HL": "TS"
+																								}
+																							},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"C": {},
+																											"E": {},
+																											"P": {
+																												"ID": {
+																													"H": "cancelButtonText",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "'Hayır'",
+																													"T": "prop"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_88"
+																											},
+																											"O": {
+																												"cType": "child"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_87"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_82"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_74"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_70"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_58"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_40"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"PostRender": {
+					"H": "var _a, _b, _c, _d;\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nif (quick.parent.props) {\r\n    quick.EM.trace(quick.parent.props);\r\n    //Quick.alert({text= 'Kayıt silinecektir onaylıyor musunuz?', category='Warning', actionButtons=[{name='Onayla', type='Confirm', clickEventName='onConfirm'},{ name='İptal', type='Cancel', clickEventName='onCancel'}]})\r\n    //Quick.alert({ error= { errorMessage= error.response.message, errorCode= 'HTTP_' + error.response.status, errorSource= 'Network' }\r\n    //---ALERT PARAMS---//\r\n    //title?: string\r\n    //text? : string\r\n    //category? : enum (Warning - Info - Success - Error)\r\n    //actionButtons?: [{name: string, type: enum (Confirm - Cancel), clickEventName: string}]\r\n    //error?: { errorMessage?: string, errorCode?: string, errorSource?: enum ( Network - Page - Validation )}\r\n    //Display Samples\r\n    components.cancelButton.visible = false;\r\n    components.confirmButton.visible = false;\r\n    components.validationBtn.visible = false;\r\n    if (quick.parent.props.error) {\r\n        if (quick.parent.props.error.errorSource == 'Validation') {\r\n            //validation error display\r\n            components.alertHeader.type = 'error';\r\n            components.alertHeaderText.text = quick.LR(quick.parent.props.error.errorCode);\r\n            components.validationBtn.visible = true;\r\n            components.validationBtnText.text = quick.parent.props.actionButtons[0].name;\r\n        }\r\n        if (quick.parent.props.error.errorSource == 'Network') {\r\n            //network error display\r\n            components.alertHeader.type = 'error';\r\n            components.alertHeaderText.text = quick.parent.props.error.errorCode;\r\n            components.alertText.text = quick.parent.props.error.errorMessage;\r\n        }\r\n    }\r\n    else {\r\n        //Confirm diplay\r\n        components.alertHeader.type = quick.parent.props.category;\r\n        components.alertHeaderText.text = quick.parent.props.title;\r\n        components.alertText.text = quick.parent.props.text;\r\n        var actionButtonList = [];\r\n        if (quick.parent.props.actionButtons != null) {\r\n            actionButtonList = quick.parent.props.actionButtons;\r\n        }\r\n        actionButtonList.forEach(function (actionButton) {\r\n            quick.EM.trace('actionButtons');\r\n            quick.EM.trace(actionButton);\r\n            if (actionButton.type == 'Confirm') {\r\n                components.confirmButton.visible = true;\r\n                components.confimButtonText.text = actionButton.name;\r\n            }\r\n            if (actionButton.type == 'Cancel') {\r\n                components.cancelButton.visible = true;\r\n                components.cancelButtonText.text = actionButton.name;\r\n            }\r\n        });\r\n    }\r\n    components.alertSampleDialog.qValue = true;\r\n    debugger;\r\n    if ((_b = (_a = quick.parent.props.additionals) === null || _a === void 0 ? void 0 : _a.props) === null || _b === void 0 ? void 0 : _b.timeout) {\r\n        setTimeout(function () {\r\n            components.alertSampleDialog.qValue = false;\r\n        }, (_d = (_c = quick.parent.props.additionals) === null || _c === void 0 ? void 0 : _c.props) === null || _d === void 0 ? void 0 : _d.timeout);\r\n    }\r\n}\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfMV9Qb3N0UmVuZGVyX0UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJFZHRyQ29tcF8xX1Bvc3RSZW5kZXJfRS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUNBLElBQUksS0FBSyxDQUFDLE1BQU0sQ0FBQyxLQUFLLEVBQUU7SUFDcEIsS0FBSyxDQUFDLEVBQUUsQ0FBQyxLQUFLLENBQUMsS0FBSyxDQUFDLE1BQU0sQ0FBQyxLQUFLLENBQUMsQ0FBQztJQUVuQyx5TkFBeU47SUFDek4sbUlBQW1JO0lBRW5JLHNCQUFzQjtJQUV0QixnQkFBZ0I7SUFDaEIsZ0JBQWdCO0lBQ2hCLHFEQUFxRDtJQUNyRCx5RkFBeUY7SUFDekYsMEdBQTBHO0lBRTFHLGlCQUFpQjtJQUNqQixVQUFVLENBQUMsWUFBWSxDQUFDLE9BQU8sR0FBRyxLQUFLLENBQUM7SUFDeEMsVUFBVSxDQUFDLGFBQWEsQ0FBQyxPQUFPLEdBQUcsS0FBSyxDQUFDO0lBQ3pDLFVBQVUsQ0FBQyxhQUFhLENBQUMsT0FBTyxHQUFHLEtBQUssQ0FBQztJQUd6QyxJQUFJLEtBQUssQ0FBQyxNQUFNLENBQUMsS0FBSyxDQUFDLEtBQUssRUFBRTtRQUMxQixJQUFJLEtBQUssQ0FBQyxNQUFNLENBQUMsS0FBSyxDQUFDLEtBQUssQ0FBQyxXQUFXLElBQUksWUFBWSxFQUFFO1lBQ3RELDBCQUEwQjtZQUMxQixVQUFVLENBQUMsV0FBVyxDQUFDLElBQUksR0FBRyxPQUFPLENBQUM7WUFDdEMsVUFBVSxDQUFDLGVBQWUsQ0FBQyxJQUFJLEdBQUcsS0FBSyxDQUFDLEVBQUUsQ0FBQyxLQUFLLENBQUMsTUFBTSxDQUFDLEtBQUssQ0FBQyxLQUFLLENBQUMsU0FBUyxDQUFDLENBQUM7WUFDL0UsVUFBVSxDQUFDLGFBQWEsQ0FBQyxPQUFPLEdBQUcsSUFBSSxDQUFDO1lBQ3hDLFVBQVUsQ0FBQyxpQkFBaUIsQ0FBQyxJQUFJLEdBQUcsS0FBSyxDQUFDLE1BQU0sQ0FBQyxLQUFLLENBQUMsYUFBYSxDQUFDLENBQUMsQ0FBQyxDQUFDLElBQUksQ0FBQztTQUNoRjtRQUNELElBQUksS0FBSyxDQUFDLE1BQU0sQ0FBQyxLQUFLLENBQUMsS0FBSyxDQUFDLFdBQVcsSUFBSSxTQUFTLEVBQUU7WUFDbkQsdUJBQXVCO1lBQ3ZCLFVBQVUsQ0FBQyxXQUFXLENBQUMsSUFBSSxHQUFHLE9BQU8sQ0FBQztZQUN0QyxVQUFVLENBQUMsZUFBZSxDQUFDLElBQUksR0FBRyxLQUFLLENBQUMsTUFBTSxDQUFDLEtBQUssQ0FBQyxLQUFLLENBQUMsU0FBUyxDQUFDO1lBQ3JFLFVBQVUsQ0FBQyxTQUFTLENBQUMsSUFBSSxHQUFHLEtBQUssQ0FBQyxNQUFNLENBQUMsS0FBSyxDQUFDLEtBQUssQ0FBQyxZQUFZLENBQUM7U0FDckU7S0FDSjtTQUNJO1FBQ0QsZ0JBQWdCO1FBQ2hCLFVBQVUsQ0FBQyxXQUFXLENBQUMsSUFBSSxHQUFHLEtBQUssQ0FBQyxNQUFNLENBQUMsS0FBSyxDQUFDLFFBQVEsQ0FBQztRQUMxRCxVQUFVLENBQUMsZUFBZSxDQUFDLElBQUksR0FBRyxLQUFLLENBQUMsTUFBTSxDQUFDLEtBQUssQ0FBQyxLQUFLLENBQUM7UUFDM0QsVUFBVSxDQUFDLFNBQVMsQ0FBQyxJQUFJLEdBQUcsS0FBSyxDQUFDLE1BQU0sQ0FBQyxLQUFLLENBQUMsSUFBSSxDQUFDO1FBRXBELElBQUksZ0JBQWdCLEdBQUcsRUFBRSxDQUFDO1FBQzFCLElBQUksS0FBSyxDQUFDLE1BQU0sQ0FBQyxLQUFLLENBQUMsYUFBYSxJQUFJLElBQUksRUFBRTtZQUMxQyxnQkFBZ0IsR0FBRyxLQUFLLENBQUMsTUFBTSxDQUFDLEtBQUssQ0FBQyxhQUFhLENBQUM7U0FDdkQ7UUFFRCxnQkFBZ0IsQ0FBQyxPQUFPLENBQUMsVUFBQSxZQUFZO1lBQ2pDLEtBQUssQ0FBQyxFQUFFLENBQUMsS0FBSyxDQUFDLGVBQWUsQ0FBQyxDQUFDO1lBQ2hDLEtBQUssQ0FBQyxFQUFFLENBQUMsS0FBSyxDQUFDLFlBQVksQ0FBQyxDQUFDO1lBRTdCLElBQUksWUFBWSxDQUFDLElBQUksSUFBSSxTQUFTLEVBQUU7Z0JBQ2hDLFVBQVUsQ0FBQyxhQUFhLENBQUMsT0FBTyxHQUFHLElBQUksQ0FBQTtnQkFDdkMsVUFBVSxDQUFDLGdCQUFnQixDQUFDLElBQUksR0FBRyxZQUFZLENBQUMsSUFBSSxDQUFDO2FBQ3hEO1lBQ0QsSUFBSSxZQUFZLENBQUMsSUFBSSxJQUFJLFFBQVEsRUFBRTtnQkFDL0IsVUFBVSxDQUFDLFlBQVksQ0FBQyxPQUFPLEdBQUcsSUFBSSxDQUFDO2dCQUN2QyxVQUFVLENBQUMsZ0JBQWdCLENBQUMsSUFBSSxHQUFHLFlBQVksQ0FBQyxJQUFJLENBQUM7YUFDeEQ7UUFDTCxDQUFDLENBQ0EsQ0FBQztLQUNMO0lBRUQsVUFBVSxDQUFDLGlCQUFpQixDQUFDLE1BQU0sR0FBRyxJQUFJLENBQUM7SUFFM0MsUUFBUSxDQUFDO0lBQ1QsZ0JBQUksS0FBSyxDQUFDLE1BQU0sQ0FBQyxLQUFLLENBQUMsV0FBVywwQ0FBRSxLQUFLLDBDQUFFLE9BQU8sRUFBRTtRQUNoRCxVQUFVLENBQUM7WUFDUCxVQUFVLENBQUMsaUJBQWlCLENBQUMsTUFBTSxHQUFHLEtBQUssQ0FBQztRQUNoRCxDQUFDLGNBQUUsS0FBSyxDQUFDLE1BQU0sQ0FBQyxLQUFLLENBQUMsV0FBVywwQ0FBRSxLQUFLLDBDQUFFLE9BQU8sQ0FBQyxDQUFBO0tBQ3JEO0NBQ0oiLCJzb3VyY2VzQ29udGVudCI6WyJcbmlmIChxdWljay5wYXJlbnQucHJvcHMpIHtcclxuICAgIHF1aWNrLkVNLnRyYWNlKHF1aWNrLnBhcmVudC5wcm9wcyk7XHJcblxyXG4gICAgLy9RdWljay5hbGVydCh7dGV4dD0gJ0thecSxdCBzaWxpbmVjZWt0aXIgb25heWzEsXlvciBtdXN1bnV6PycsIGNhdGVnb3J5PSdXYXJuaW5nJywgYWN0aW9uQnV0dG9ucz1be25hbWU9J09uYXlsYScsIHR5cGU9J0NvbmZpcm0nLCBjbGlja0V2ZW50TmFtZT0nb25Db25maXJtJ30seyBuYW1lPSfEsHB0YWwnLCB0eXBlPSdDYW5jZWwnLCBjbGlja0V2ZW50TmFtZT0nb25DYW5jZWwnfV19KVxyXG4gICAgLy9RdWljay5hbGVydCh7IGVycm9yPSB7IGVycm9yTWVzc2FnZT0gZXJyb3IucmVzcG9uc2UubWVzc2FnZSwgZXJyb3JDb2RlPSAnSFRUUF8nICsgZXJyb3IucmVzcG9uc2Uuc3RhdHVzLCBlcnJvclNvdXJjZT0gJ05ldHdvcmsnIH1cclxuXHJcbiAgICAvLy0tLUFMRVJUIFBBUkFNUy0tLS8vXHJcblxyXG4gICAgLy90aXRsZT86IHN0cmluZ1xyXG4gICAgLy90ZXh0PyA6IHN0cmluZ1xyXG4gICAgLy9jYXRlZ29yeT8gOiBlbnVtIChXYXJuaW5nIC0gSW5mbyAtIFN1Y2Nlc3MgLSBFcnJvcilcclxuICAgIC8vYWN0aW9uQnV0dG9ucz86IFt7bmFtZTogc3RyaW5nLCB0eXBlOiBlbnVtIChDb25maXJtIC0gQ2FuY2VsKSwgY2xpY2tFdmVudE5hbWU6IHN0cmluZ31dXHJcbiAgICAvL2Vycm9yPzogeyBlcnJvck1lc3NhZ2U/OiBzdHJpbmcsIGVycm9yQ29kZT86IHN0cmluZywgZXJyb3JTb3VyY2U/OiBlbnVtICggTmV0d29yayAtIFBhZ2UgLSBWYWxpZGF0aW9uICl9XHJcblxyXG4gICAgLy9EaXNwbGF5IFNhbXBsZXNcclxuICAgIGNvbXBvbmVudHMuY2FuY2VsQnV0dG9uLnZpc2libGUgPSBmYWxzZTtcclxuICAgIGNvbXBvbmVudHMuY29uZmlybUJ1dHRvbi52aXNpYmxlID0gZmFsc2U7XHJcbiAgICBjb21wb25lbnRzLnZhbGlkYXRpb25CdG4udmlzaWJsZSA9IGZhbHNlO1xyXG5cclxuXHJcbiAgICBpZiAocXVpY2sucGFyZW50LnByb3BzLmVycm9yKSB7XHJcbiAgICAgICAgaWYgKHF1aWNrLnBhcmVudC5wcm9wcy5lcnJvci5lcnJvclNvdXJjZSA9PSAnVmFsaWRhdGlvbicpIHtcclxuICAgICAgICAgICAgLy92YWxpZGF0aW9uIGVycm9yIGRpc3BsYXlcclxuICAgICAgICAgICAgY29tcG9uZW50cy5hbGVydEhlYWRlci50eXBlID0gJ2Vycm9yJztcclxuICAgICAgICAgICAgY29tcG9uZW50cy5hbGVydEhlYWRlclRleHQudGV4dCA9IHF1aWNrLkxSKHF1aWNrLnBhcmVudC5wcm9wcy5lcnJvci5lcnJvckNvZGUpO1xyXG4gICAgICAgICAgICBjb21wb25lbnRzLnZhbGlkYXRpb25CdG4udmlzaWJsZSA9IHRydWU7XHJcbiAgICAgICAgICAgIGNvbXBvbmVudHMudmFsaWRhdGlvbkJ0blRleHQudGV4dCA9IHF1aWNrLnBhcmVudC5wcm9wcy5hY3Rpb25CdXR0b25zWzBdLm5hbWU7XHJcbiAgICAgICAgfVxyXG4gICAgICAgIGlmIChxdWljay5wYXJlbnQucHJvcHMuZXJyb3IuZXJyb3JTb3VyY2UgPT0gJ05ldHdvcmsnKSB7XHJcbiAgICAgICAgICAgIC8vbmV0d29yayBlcnJvciBkaXNwbGF5XHJcbiAgICAgICAgICAgIGNvbXBvbmVudHMuYWxlcnRIZWFkZXIudHlwZSA9ICdlcnJvcic7XHJcbiAgICAgICAgICAgIGNvbXBvbmVudHMuYWxlcnRIZWFkZXJUZXh0LnRleHQgPSBxdWljay5wYXJlbnQucHJvcHMuZXJyb3IuZXJyb3JDb2RlO1xyXG4gICAgICAgICAgICBjb21wb25lbnRzLmFsZXJ0VGV4dC50ZXh0ID0gcXVpY2sucGFyZW50LnByb3BzLmVycm9yLmVycm9yTWVzc2FnZTtcclxuICAgICAgICB9XHJcbiAgICB9XHJcbiAgICBlbHNlIHtcclxuICAgICAgICAvL0NvbmZpcm0gZGlwbGF5XHJcbiAgICAgICAgY29tcG9uZW50cy5hbGVydEhlYWRlci50eXBlID0gcXVpY2sucGFyZW50LnByb3BzLmNhdGVnb3J5O1xyXG4gICAgICAgIGNvbXBvbmVudHMuYWxlcnRIZWFkZXJUZXh0LnRleHQgPSBxdWljay5wYXJlbnQucHJvcHMudGl0bGU7XHJcbiAgICAgICAgY29tcG9uZW50cy5hbGVydFRleHQudGV4dCA9IHF1aWNrLnBhcmVudC5wcm9wcy50ZXh0O1xyXG5cclxuICAgICAgICBsZXQgYWN0aW9uQnV0dG9uTGlzdCA9IFtdO1xyXG4gICAgICAgIGlmIChxdWljay5wYXJlbnQucHJvcHMuYWN0aW9uQnV0dG9ucyAhPSBudWxsKSB7XHJcbiAgICAgICAgICAgIGFjdGlvbkJ1dHRvbkxpc3QgPSBxdWljay5wYXJlbnQucHJvcHMuYWN0aW9uQnV0dG9ucztcclxuICAgICAgICB9XHJcblxyXG4gICAgICAgIGFjdGlvbkJ1dHRvbkxpc3QuZm9yRWFjaChhY3Rpb25CdXR0b24gPT4ge1xyXG4gICAgICAgICAgICBxdWljay5FTS50cmFjZSgnYWN0aW9uQnV0dG9ucycpO1xyXG4gICAgICAgICAgICBxdWljay5FTS50cmFjZShhY3Rpb25CdXR0b24pO1xyXG5cclxuICAgICAgICAgICAgaWYgKGFjdGlvbkJ1dHRvbi50eXBlID09ICdDb25maXJtJykge1xyXG4gICAgICAgICAgICAgICAgY29tcG9uZW50cy5jb25maXJtQnV0dG9uLnZpc2libGUgPSB0cnVlXHJcbiAgICAgICAgICAgICAgICBjb21wb25lbnRzLmNvbmZpbUJ1dHRvblRleHQudGV4dCA9IGFjdGlvbkJ1dHRvbi5uYW1lO1xyXG4gICAgICAgICAgICB9XHJcbiAgICAgICAgICAgIGlmIChhY3Rpb25CdXR0b24udHlwZSA9PSAnQ2FuY2VsJykge1xyXG4gICAgICAgICAgICAgICAgY29tcG9uZW50cy5jYW5jZWxCdXR0b24udmlzaWJsZSA9IHRydWU7XHJcbiAgICAgICAgICAgICAgICBjb21wb25lbnRzLmNhbmNlbEJ1dHRvblRleHQudGV4dCA9IGFjdGlvbkJ1dHRvbi5uYW1lO1xyXG4gICAgICAgICAgICB9XHJcbiAgICAgICAgfVxyXG4gICAgICAgICk7XHJcbiAgICB9XHJcblxyXG4gICAgY29tcG9uZW50cy5hbGVydFNhbXBsZURpYWxvZy5xVmFsdWUgPSB0cnVlO1xyXG5cclxuICAgIGRlYnVnZ2VyO1xyXG4gICAgaWYgKHF1aWNrLnBhcmVudC5wcm9wcy5hZGRpdGlvbmFscz8ucHJvcHM/LnRpbWVvdXQpIHtcclxuICAgICAgICBzZXRUaW1lb3V0KCgpID0+IHtcclxuICAgICAgICAgICAgY29tcG9uZW50cy5hbGVydFNhbXBsZURpYWxvZy5xVmFsdWUgPSBmYWxzZTtcclxuICAgICAgICB9LCBxdWljay5wYXJlbnQucHJvcHMuYWRkaXRpb25hbHM/LnByb3BzPy50aW1lb3V0KVxyXG4gICAgfVxyXG59XG4gZXhwb3J0e307XG4iXX0=",
+					"TO": 1,
+					"HL": "JS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			}
+		},
+		{
+			"T": "VRow",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_40",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'d-flex justify-center'╩╩",
+					"T": "class"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VDialog",
+							"P": {
+								"ID": {
+									"H": "alertSampleDialog",
+									"T": "prop"
+								},
+								"class": {
+									"H": "╬'col-4'╩╩",
+									"T": "class"
+								},
+								"eager": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"hideOverlay": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCard",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_65",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'col-xl-12 justify-space-around align-start'╩╩",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VAlert",
+															"P": {
+																"ID": {
+																	"H": "alertHeader",
+																	"T": "prop"
+																},
+																"type": {
+																	"H": "╬'warning'╩╩",
+																	"T": "prop"
+																},
+																"icon": {
+																	"H": "╬'mdi-alert'╩╩",
+																	"T": "prop"
+																},
+																"prominent": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"render": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"P": {
+																				"ID": {
+																					"H": "alertHeaderText",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'home'╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_6"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "q-label "
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_2"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-alert v-sheet theme--dark v-alert--prominent warning"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_65"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-card v-sheet theme--light col-xl-12 justify-space-around align-start"
+											}
+										},
+										{
+											"T": "VCard",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_70",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'col-xl-12 align-start'╩╩",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VContainer",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_74",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VRow",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_78",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"P": {
+																								"ID": {
+																									"H": "alertText",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_81"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"compDomClasses": "q-label "
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_78"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "row"
+																			}
+																		},
+																		{
+																			"T": "VRow",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_82",
+																					"T": "prop"
+																				},
+																				"class": {
+																					"H": "╬'justify-space-around'╩╩",
+																					"T": "class"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "confirmButton",
+																									"T": "prop"
+																								},
+																								"class": {
+																									"H": "╬'success'╩╩",
+																									"T": "class"
+																								}
+																							},
+																							"E": {
+																								"click": {
+																									"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.EM.trace('alert.qjson dialog Confirm type button clicked - onConfirmTask custom event on owner component will be triggered');\r\ncomponents.alertSampleDialog.qValue = false;\r\nquick.parent.events.onConfirm();\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29uZmlybUJ1dHRvbl9jbGlja19FLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiY29uZmlybUJ1dHRvbl9jbGlja19FLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQSxLQUFLLENBQUMsRUFBRSxDQUFDLEtBQUssQ0FBQyxrSEFBa0gsQ0FBQyxDQUFDO0FBRW5JLFVBQVUsQ0FBQyxpQkFBaUIsQ0FBQyxNQUFNLEdBQUcsS0FBSyxDQUFDO0FBQzVDLEtBQUssQ0FBQyxNQUFNLENBQUMsTUFBTSxDQUFDLFNBQVMsRUFBRSxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiZGVjbGFyZSB2YXIgbW91c2VFdmVudDp1bmtub3duIHwgdW5kZWZpbmVkXG5xdWljay5FTS50cmFjZSgnYWxlcnQucWpzb24gZGlhbG9nIENvbmZpcm0gdHlwZSBidXR0b24gY2xpY2tlZCAtIG9uQ29uZmlybVRhc2sgY3VzdG9tIGV2ZW50IG9uIG93bmVyIGNvbXBvbmVudCB3aWxsIGJlIHRyaWdnZXJlZCcpO1xyXG5cclxuY29tcG9uZW50cy5hbGVydFNhbXBsZURpYWxvZy5xVmFsdWUgPSBmYWxzZTtcclxucXVpY2sucGFyZW50LmV2ZW50cy5vbkNvbmZpcm0oKTtcbiBleHBvcnR7fTtcbiJdfQ==",
+																									"P": "mouseEvent:unknown | undefined",
+																									"HL": "JS"
+																								}
+																							},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"C": {},
+																											"E": {},
+																											"P": {
+																												"ID": {
+																													"H": "confimButtonText",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "╬'Evet'╩╩",
+																													"T": "prop"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_90"
+																											},
+																											"O": {
+																												"cType": "child",
+																												"compDomClasses": "q-label "
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_89"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "v-btn v-btn--contained theme--light v-size--default success"
+																							}
+																						},
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "validationBtn",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "╬'primary'╩╩",
+																									"T": "prop"
+																								},
+																								"regular": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"C": {},
+																											"E": {},
+																											"P": {
+																												"ID": {
+																													"H": "validationBtnText",
+																													"T": "prop"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_4"
+																											},
+																											"O": {
+																												"cType": "child",
+																												"compDomClasses": "q-label "
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_3"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary"
+																							}
+																						},
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "cancelButton",
+																									"T": "prop"
+																								},
+																								"class": {
+																									"H": "╬'error'╩╩",
+																									"T": "class"
+																								}
+																							},
+																							"E": {
+																								"click": {
+																									"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.EM.trace('alert.qjson dialog Cancel type button clicked - ononCancelTask custom event on owner component will be triggered');\r\ncomponents.alertSampleDialog.qValue = false;\r\nquick.parent.events.onCancel();\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY2FuY2VsQnV0dG9uX2NsaWNrX0UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJjYW5jZWxCdXR0b25fY2xpY2tfRS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQ0EsS0FBSyxDQUFDLEVBQUUsQ0FBQyxLQUFLLENBQUMsa0hBQWtILENBQUMsQ0FBQztBQUVuSSxVQUFVLENBQUMsaUJBQWlCLENBQUMsTUFBTSxHQUFHLEtBQUssQ0FBQztBQUM1QyxLQUFLLENBQUMsTUFBTSxDQUFDLE1BQU0sQ0FBQyxRQUFRLEVBQUUsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImRlY2xhcmUgdmFyIG1vdXNlRXZlbnQ6dW5rbm93biB8IHVuZGVmaW5lZFxucXVpY2suRU0udHJhY2UoJ2FsZXJ0LnFqc29uIGRpYWxvZyBDYW5jZWwgdHlwZSBidXR0b24gY2xpY2tlZCAtIG9ub25DYW5jZWxUYXNrIGN1c3RvbSBldmVudCBvbiBvd25lciBjb21wb25lbnQgd2lsbCBiZSB0cmlnZ2VyZWQnKTtcclxuXHJcbmNvbXBvbmVudHMuYWxlcnRTYW1wbGVEaWFsb2cucVZhbHVlID0gZmFsc2U7XHJcbnF1aWNrLnBhcmVudC5ldmVudHMub25DYW5jZWwoKTtcbiBleHBvcnR7fTtcbiJdfQ==",
+																									"P": "mouseEvent:unknown | undefined",
+																									"HL": "JS"
+																								}
+																							},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"C": {},
+																											"E": {},
+																											"P": {
+																												"ID": {
+																													"H": "cancelButtonText",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "╬'Hayır'╩╩",
+																													"T": "prop"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_88"
+																											},
+																											"O": {
+																												"cType": "child",
+																												"compDomClasses": "q-label "
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_87"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "v-btn v-btn--contained theme--light v-size--default error"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_82"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "row justify-space-around"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_74"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "container"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_70"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-card v-sheet theme--light col-xl-12 align-start"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_58"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "col-4 ╬'col-4'╩╩ newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_40"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "d-flex justify-center newDropBorder"
+			}
+		}
+	],
+	"lrids": {
+		"tr-TR": {
+			"notValidErrDefaultMessage": "'Zorunlu alanları giriniz'"
+		},
+		"en-US": {
+			"notValidErrDefaultMessage": "'Enter all required fields'"
+		}
+	},
+	"clrids": {
+		"tr-TR": {
+			"notValidErrDefaultMessage": "╬'Zorunlu alanları giriniz'╩╩"
+		},
+		"en-US": {
+			"notValidErrDefaultMessage": "╬'Enter all required fields'╩╩"
+		}
+	},
+	"description": {}
+};
+export default pjson

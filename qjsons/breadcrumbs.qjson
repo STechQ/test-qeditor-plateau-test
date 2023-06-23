@@ -1,0 +1,1187 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_705",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container container--fluid'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VBreadcrumbs",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_557",
+									"T": "prop"
+								},
+								"items": {
+									"H": "[{text = 'Dashboard', disabled = false, href = 'breadcrumbs_dashboard'},\n{text = 'Google', disabled = false, href = 'https://www.google.com', exact = true, target ='_blank'},\n{text = 'Link 1', disabled = true, href = 'breadcrumbs_link_1'}]",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "true",
+									"T": "prop"
+								},
+								"large": {
+									"H": "true",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"item": {
+									"c": [
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_2",
+													"T": "prop"
+												},
+												"tagType": {
+													"H": "'span'",
+													"T": "prop"
+												},
+												"text": {
+													"H": "item.text",
+													"T": "prop"
+												},
+												"visible": {
+													"H": "true",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'red--text'",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_2"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "scopedSlot"
+								},
+								"divider": {
+									"c": [
+										{
+											"T": "VIcon",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_571",
+													"T": "prop"
+												},
+												"text": {
+													"H": "'mdi-forward'",
+													"T": "text"
+												},
+												"visible": {
+													"H": "true",
+													"T": "prop"
+												},
+												"color": {
+													"H": "'warning'",
+													"T": "prop"
+												},
+												"large": {
+													"H": "true",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_571"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_557"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VDivider",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_4",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "true",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "slot",
+								"layout": {
+									"dOpt": {
+										"xs": [
+											"sp:mt-2",
+											"sp:mb-2"
+										]
+									},
+									"class": "mt-2 mb-2"
+								}
+							}
+						},
+						{
+							"T": "VBreadcrumbs",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_599",
+									"T": "prop"
+								},
+								"items": {
+									"H": "[{text = 'Dashboard', disabled = false, href = 'breadcrumbs_dashboard'},\n{text = 'Google', disabled = false, href = 'https://www.google.com', exact = true, target ='_blank'},\n{text = 'Link 1', disabled = true, href = 'breadcrumbs_link_1'}]",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "true",
+									"T": "prop"
+								},
+								"large": {
+									"H": "true",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"divider": {
+									"c": [
+										{
+											"T": "VIcon",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_594",
+													"T": "prop"
+												},
+												"text": {
+													"H": "'mdi-chevron-right'",
+													"T": "text"
+												},
+												"visible": {
+													"H": "true",
+													"T": "prop"
+												},
+												"color": {
+													"H": "'info'",
+													"T": "prop"
+												},
+												"large": {
+													"H": "true",
+													"T": "prop"
+												},
+												"dense": {
+													"H": "false",
+													"T": "prop"
+												},
+												"right": {
+													"H": "false",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_594"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_599"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VDivider",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_9",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "true",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_9"
+							},
+							"O": {
+								"cType": "slot",
+								"layout": {
+									"dOpt": {
+										"xs": [
+											"sp:mt-2",
+											"sp:mb-2"
+										]
+									},
+									"class": "mt-2 mb-2"
+								}
+							}
+						},
+						{
+							"T": "VBreadcrumbs",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_28",
+									"T": "prop"
+								},
+								"items": {
+									"H": "[{text = 'Dashboard', disabled = false, href = 'breadcrumbs_dashboard'},\n{text = 'Google', disabled = false, href = 'https://www.google.com', exact = true, target ='_blank'},\n{text = 'Link 1', disabled = true, href = 'breadcrumbs_link_1'}]",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "true",
+									"T": "prop"
+								},
+								"divider": {
+									"H": "'-'",
+									"T": "prop"
+								},
+								"large": {
+									"H": "true",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"item": {
+									"c": [
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_3",
+													"T": "prop"
+												},
+												"tagType": {
+													"H": "'span'",
+													"T": "prop"
+												},
+												"text": {
+													"H": "item.text",
+													"T": "prop"
+												},
+												"visible": {
+													"H": "true",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'purple--text'",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_3"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"te:font-weight-bold",
+															"tt:text-subtitle-1"
+														]
+													},
+													"class": "font-weight-bold text-subtitle-1"
+												}
+											}
+										}
+									],
+									"cType": "scopedSlot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_28"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VDivider",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_6",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "true",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_6"
+							},
+							"O": {
+								"cType": "slot",
+								"layout": {
+									"dOpt": {
+										"xs": [
+											"sp:mt-2",
+											"sp:mb-2"
+										]
+									},
+									"class": "mt-2 mb-2"
+								}
+							}
+						},
+						{
+							"T": "VBreadcrumbs",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_46",
+									"T": "prop"
+								},
+								"items": {
+									"H": "[{text = 'Dashboard', disabled = false, href = 'breadcrumbs_dashboard'},\n{text = 'Google', disabled = false, href = 'https://www.google.com', exact = true, target ='_blank'},\n{text = 'Link 1', disabled = true, href = 'breadcrumbs_link_1'}]",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "true",
+									"T": "prop"
+								},
+								"divider": {
+									"H": "'.'",
+									"T": "prop"
+								},
+								"large": {
+									"H": "true",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_46"
+							},
+							"O": {
+								"cType": "slot",
+								"layout": {
+									"dOpt": {
+										"xs": []
+									},
+									"class": ""
+								}
+							}
+						},
+						{
+							"T": "VDivider",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_11",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "true",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_11"
+							},
+							"O": {
+								"cType": "slot",
+								"layout": {
+									"dOpt": {
+										"xs": [
+											"sp:mt-2",
+											"sp:mb-2"
+										]
+									},
+									"class": "mt-2 mb-2"
+								}
+							}
+						},
+						{
+							"T": "VBreadcrumbs",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_5",
+									"T": "prop"
+								},
+								"items": {
+									"H": "[{text = 'Dashboard    ', disabled = false, href = 'breadcrumbs_dashboard', icon= 'mdi-home'},\n{text = 'Google', disabled = false, icon= 'mdi-folder', href = 'https://www.google.com', exact = true, target ='_blank'},\n{text = 'Link 1', disabled = true, icon ='mdi-folder-open',href = 'breadcrumbs_link_1'}]",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "true",
+									"T": "prop"
+								},
+								"divider": {
+									"H": "'   '",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"item": {
+									"c": [
+										{
+											"T": "VIcon",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_8",
+													"T": "prop"
+												},
+												"text": {
+													"H": "item.icon",
+													"T": "text"
+												},
+												"visible": {
+													"H": "true",
+													"T": "prop"
+												},
+												"left": {
+													"H": "true",
+													"T": "prop"
+												},
+												"color": {
+													"H": "'info'",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_8"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										},
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_7",
+													"T": "prop"
+												},
+												"tagType": {
+													"H": "'span'",
+													"T": "prop"
+												},
+												"text": {
+													"H": "item.text",
+													"T": "prop"
+												},
+												"visible": {
+													"H": "true",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_7"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "scopedSlot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_5"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VDivider",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_10",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "true",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_10"
+							},
+							"O": {
+								"cType": "slot",
+								"layout": {
+									"dOpt": {
+										"xs": [
+											"sp:mt-2",
+											"sp:mb-2"
+										]
+									},
+									"class": "mt-2 mb-2"
+								}
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_705"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_705",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container container--fluid'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VBreadcrumbs",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_557",
+									"T": "prop"
+								},
+								"items": {
+									"H": "╬[]╠{}╠=╣text╩╠'Dashboard'╩╩╠=╣disabled╩╠false╩╩╠=╣href╩╠'breadcrumbs_dashboard'╩╩╩╠{}╠=╣text╩╠'Google'╩╩╠=╣disabled╩╠false╩╩╠=╣href╩╠'https://www.google.com'╩╩╠=╣exact╩╠true╩╩╠=╣target╩╠'_blank'╩╩╩╠{}╠=╣text╩╠'Link 1'╩╩╠=╣disabled╩╠true╩╩╠=╣href╩╠'breadcrumbs_link_1'╩╩╩╩╩",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"large": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"item": {
+									"c": [
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_2",
+													"T": "prop"
+												},
+												"tagType": {
+													"H": "╬'span'╩╩",
+													"T": "prop"
+												},
+												"text": {
+													"H": "╬.╣item╩╠text╩╩╩",
+													"T": "prop"
+												},
+												"visible": {
+													"H": "╬true╩╩",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'red--text'╩╩",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_2"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "q-label red--text newDropBorder"
+											}
+										}
+									],
+									"cType": "scopedSlot"
+								},
+								"divider": {
+									"c": [
+										{
+											"T": "VIcon",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_571",
+													"T": "prop"
+												},
+												"text": {
+													"H": "╬'mdi-forward'╩╩",
+													"T": "text"
+												},
+												"visible": {
+													"H": "╬true╩╩",
+													"T": "prop"
+												},
+												"color": {
+													"H": "╬'warning'╩╩",
+													"T": "prop"
+												},
+												"large": {
+													"H": "╬true╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_571"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-icon notranslate mdi mdi-forward theme--light warning--text newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_557"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "v-breadcrumbs v-breadcrumbs--large theme--light newDropBorder"
+							}
+						},
+						{
+							"T": "VDivider",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_4",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "slot",
+								"layout": {
+									"dOpt": {
+										"xs": [
+											"sp:mt-2",
+											"sp:mb-2"
+										]
+									},
+									"class": "mt-2 mb-2"
+								},
+								"compDomClasses": "v-divider theme--light mt-2 mb-2 newDropBorder"
+							}
+						},
+						{
+							"T": "VBreadcrumbs",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_599",
+									"T": "prop"
+								},
+								"items": {
+									"H": "╬[]╠{}╠=╣text╩╠'Dashboard'╩╩╠=╣disabled╩╠false╩╩╠=╣href╩╠'breadcrumbs_dashboard'╩╩╩╠{}╠=╣text╩╠'Google'╩╩╠=╣disabled╩╠false╩╩╠=╣href╩╠'https://www.google.com'╩╩╠=╣exact╩╠true╩╩╠=╣target╩╠'_blank'╩╩╩╠{}╠=╣text╩╠'Link 1'╩╩╠=╣disabled╩╠true╩╩╠=╣href╩╠'breadcrumbs_link_1'╩╩╩╩╩",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"large": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"divider": {
+									"c": [
+										{
+											"T": "VIcon",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_594",
+													"T": "prop"
+												},
+												"text": {
+													"H": "╬'mdi-chevron-right'╩╩",
+													"T": "text"
+												},
+												"visible": {
+													"H": "╬true╩╩",
+													"T": "prop"
+												},
+												"color": {
+													"H": "╬'info'╩╩",
+													"T": "prop"
+												},
+												"large": {
+													"H": "╬true╩╩",
+													"T": "prop"
+												},
+												"dense": {
+													"H": "╬false╩╩",
+													"T": "prop"
+												},
+												"right": {
+													"H": "╬false╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_594"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-icon notranslate mdi mdi-chevron-right theme--light info--text newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_599"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "v-breadcrumbs v-breadcrumbs--large theme--light newDropBorder"
+							}
+						},
+						{
+							"T": "VDivider",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_9",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_9"
+							},
+							"O": {
+								"cType": "slot",
+								"layout": {
+									"dOpt": {
+										"xs": [
+											"sp:mt-2",
+											"sp:mb-2"
+										]
+									},
+									"class": "mt-2 mb-2"
+								},
+								"compDomClasses": "v-divider theme--light mt-2 mb-2 newDropBorder"
+							}
+						},
+						{
+							"T": "VBreadcrumbs",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_28",
+									"T": "prop"
+								},
+								"items": {
+									"H": "╬[]╠{}╠=╣text╩╠'Dashboard'╩╩╠=╣disabled╩╠false╩╩╠=╣href╩╠'breadcrumbs_dashboard'╩╩╩╠{}╠=╣text╩╠'Google'╩╩╠=╣disabled╩╠false╩╩╠=╣href╩╠'https://www.google.com'╩╩╠=╣exact╩╠true╩╩╠=╣target╩╠'_blank'╩╩╩╠{}╠=╣text╩╠'Link 1'╩╩╠=╣disabled╩╠true╩╩╠=╣href╩╠'breadcrumbs_link_1'╩╩╩╩╩",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"divider": {
+									"H": "╬'-'╩╩",
+									"T": "prop"
+								},
+								"large": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"item": {
+									"c": [
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_3",
+													"T": "prop"
+												},
+												"tagType": {
+													"H": "╬'span'╩╩",
+													"T": "prop"
+												},
+												"text": {
+													"H": "╬.╣item╩╠text╩╩╩",
+													"T": "prop"
+												},
+												"visible": {
+													"H": "╬true╩╩",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'purple--text'╩╩",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_3"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"te:font-weight-bold",
+															"tt:text-subtitle-1"
+														]
+													},
+													"class": "font-weight-bold text-subtitle-1"
+												},
+												"compDomClasses": "q-label purple--text font-weight-bold text-subtitle-1 newDropBorder"
+											}
+										}
+									],
+									"cType": "scopedSlot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_28"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "v-breadcrumbs v-breadcrumbs--large theme--light newDropBorder"
+							}
+						},
+						{
+							"T": "VDivider",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_6",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_6"
+							},
+							"O": {
+								"cType": "slot",
+								"layout": {
+									"dOpt": {
+										"xs": [
+											"sp:mt-2",
+											"sp:mb-2"
+										]
+									},
+									"class": "mt-2 mb-2"
+								},
+								"compDomClasses": "v-divider theme--light mt-2 mb-2 newDropBorder"
+							}
+						},
+						{
+							"T": "VBreadcrumbs",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_46",
+									"T": "prop"
+								},
+								"items": {
+									"H": "╬[]╠{}╠=╣text╩╠'Dashboard'╩╩╠=╣disabled╩╠false╩╩╠=╣href╩╠'breadcrumbs_dashboard'╩╩╩╠{}╠=╣text╩╠'Google'╩╩╠=╣disabled╩╠false╩╩╠=╣href╩╠'https://www.google.com'╩╩╠=╣exact╩╠true╩╩╠=╣target╩╠'_blank'╩╩╩╠{}╠=╣text╩╠'Link 1'╩╩╠=╣disabled╩╠true╩╩╠=╣href╩╠'breadcrumbs_link_1'╩╩╩╩╩",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"divider": {
+									"H": "╬'.'╩╩",
+									"T": "prop"
+								},
+								"large": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_46"
+							},
+							"O": {
+								"cType": "slot",
+								"layout": {
+									"dOpt": {
+										"xs": []
+									},
+									"class": ""
+								},
+								"compDomClasses": "v-breadcrumbs v-breadcrumbs--large theme--light newDropBorder"
+							}
+						},
+						{
+							"T": "VDivider",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_11",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_11"
+							},
+							"O": {
+								"cType": "slot",
+								"layout": {
+									"dOpt": {
+										"xs": [
+											"sp:mt-2",
+											"sp:mb-2"
+										]
+									},
+									"class": "mt-2 mb-2"
+								},
+								"compDomClasses": "v-divider theme--light mt-2 mb-2 newDropBorder"
+							}
+						},
+						{
+							"T": "VBreadcrumbs",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_5",
+									"T": "prop"
+								},
+								"items": {
+									"H": "╬[]╠{}╠=╣text╩╠'Dashboard    '╩╩╠=╣disabled╩╠false╩╩╠=╣href╩╠'breadcrumbs_dashboard'╩╩╠=╣icon╩╠'mdi-home'╩╩╩╠{}╠=╣text╩╠'Google'╩╩╠=╣disabled╩╠false╩╩╠=╣icon╩╠'mdi-folder'╩╩╠=╣href╩╠'https://www.google.com'╩╩╠=╣exact╩╠true╩╩╠=╣target╩╠'_blank'╩╩╩╠{}╠=╣text╩╠'Link 1'╩╩╠=╣disabled╩╠true╩╩╠=╣icon╩╠'mdi-folder-open'╩╩╠=╣href╩╠'breadcrumbs_link_1'╩╩╩╩╩",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"divider": {
+									"H": "╬'   '╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"item": {
+									"c": [
+										{
+											"T": "VIcon",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_8",
+													"T": "prop"
+												},
+												"text": {
+													"H": "╬.╣item╩╠icon╩╩╩",
+													"T": "text"
+												},
+												"visible": {
+													"H": "╬true╩╩",
+													"T": "prop"
+												},
+												"left": {
+													"H": "╬true╩╩",
+													"T": "prop"
+												},
+												"color": {
+													"H": "╬'info'╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_8"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-icon notranslate v-icon--left mdi mdi-folder-open theme--light info--text newDropBorder"
+											}
+										},
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_7",
+													"T": "prop"
+												},
+												"tagType": {
+													"H": "╬'span'╩╩",
+													"T": "prop"
+												},
+												"text": {
+													"H": "╬.╣item╩╠text╩╩╩",
+													"T": "prop"
+												},
+												"visible": {
+													"H": "╬true╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_7"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "q-label newDropBorder"
+											}
+										}
+									],
+									"cType": "scopedSlot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_5"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "v-breadcrumbs theme--light newDropBorder"
+							}
+						},
+						{
+							"T": "VDivider",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_10",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_10"
+							},
+							"O": {
+								"cType": "slot",
+								"layout": {
+									"dOpt": {
+										"xs": [
+											"sp:mt-2",
+											"sp:mb-2"
+										]
+									},
+									"class": "mt-2 mb-2"
+								},
+								"compDomClasses": "v-divider theme--light mt-2 mb-2 newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_705"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container container--fluid newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {}
+};
+export default pjson

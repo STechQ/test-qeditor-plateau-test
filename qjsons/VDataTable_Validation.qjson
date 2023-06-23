@@ -1,0 +1,478 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VDataTable",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				},
+				"footerProps": {
+					"H": "{showFirstLastPage = true,\nfirstIcon = 'mdi-arrow-collapse-left',\nlastIcon = 'mdi-arrow-collapse-right',\nprevIcon = 'mdi-minus',\nnextIcon = 'mdi-plus'}",
+					"T": "prop"
+				},
+				"headers": {
+					"H": "[{ text = 'Dessert (100g serving)', align= 'start', sortable= false, value= 'name'},\n{ text = 'Calories', value= 'calories', sortable = true },\n{ text = 'Fat (g)', value= 'fat' },\n{ text = 'Carbs (g)', value= 'carbs' },\n{ text = 'Protein (g)', value= 'protein' },\n{ text = 'Iron (%)', value= 'iron' }]",
+					"T": "prop"
+				},
+				"items": {
+					"H": "[{name = 'Frozens Yogurt', calories = 159, fat = '6.0', carbs = 24, protein = '4.0', iron = '1%'},\n{name = 'Ice cream sandwich', calories = 237, fat = '9.0', carbs = 37, protein = '4.3', iron = '1%'},\n{name = 'Eclair', calories = 262, fat = '16.0', carbs = 23, protein = '6.0', iron = '7%'},\n{name = 'Cupcake', calories = 305, fat = '3.7', carbs = 67, protein = '4.3', iron = '8%'},\n{name = 'Gingerbread',calories = 356, fat = '16.0', carbs = 49, protein = '3.9', iron = '16%'},\n{name = 'Jelly bean', calories = 375,  fat = '0.0', carbs = 94, protein = '0.0', iron = '0%'},\n{name = 'Lollipop', calories = 392, fat = '0.2', carbs = 98, protein = '0.0', iron = '2 %'},\n{name = 'Honeycomb', calories = 408, fat = '3.2', carbs = 87, protein = '6.5', iron = '45%'},\n{name = 'Donut', calories = 452, fat = '25.0', carbs = 51, protein = '4.9', iron = '22%'},\n{name = 'KitKat', calories = 518, fat = '26.0', carbs = 65, protein = '7', iron=  '6 %'}]",
+					"T": "prop"
+				},
+				"itemsPerPage": {
+					"H": "5",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				},
+				"uniqueSlots": {
+					"H": "true",
+					"T": "prop"
+				},
+				"itemKey": {
+					"H": "'carbs'",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"item.name": {
+					"c": [
+						{
+							"T": "VTextField",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_3",
+									"T": "prop"
+								},
+								"label": {
+									"H": "'Text field label'",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "true",
+									"T": "prop"
+								},
+								"rules": {
+									"H": "[Quick.validation.required()]",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_3"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "scopedSlot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "scopedSlot"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_2",
+					"T": "prop"
+				},
+				"color": {
+					"H": "'success'",
+					"T": "prop"
+				},
+				"depressed": {
+					"H": "true",
+					"T": "prop"
+				},
+				"elevation": {
+					"H": "0",
+					"T": "prop"
+				},
+				"height": {
+					"H": "'40px'",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "quick.Quick.validate(\"EdtrComp_3_q_24\", false, false);",
+					"P": "mouseEvent:unknown | undefined",
+					"HL": "TS"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_4",
+									"T": "prop"
+								},
+								"text": {
+									"H": "'Validate'",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "child"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_2"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_6",
+					"T": "prop"
+				},
+				"color": {
+					"H": "'error'",
+					"T": "prop"
+				},
+				"depressed": {
+					"H": "true",
+					"T": "prop"
+				},
+				"elevation": {
+					"H": "0",
+					"T": "prop"
+				},
+				"height": {
+					"H": "'40px'",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "quick.Quick.validate(\"EdtrComp_3_q_24\", false, false);\r\nquick.Quick.validate(\"EdtrComp_3_q_37\",false,false);\r\nquick.Quick.validate(\"EdtrComp_3_q_23\",false,false);\r\nquick.Quick.validate(\"EdtrComp_3_q_67\",false,false);\r\nquick.Quick.validate(\"EdtrComp_3_q_49\",false,false);\r\n\r\nquick.Quick.validateAll(true,true)\r\n\r\n",
+					"P": "mouseEvent:unknown | undefined",
+					"HL": "TS"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_7",
+									"T": "prop"
+								},
+								"text": {
+									"H": "'Validate All'",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_7"
+							},
+							"O": {
+								"cType": "child"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_6"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VDataTable",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				},
+				"footerProps": {
+					"H": "╬{}╠=╣showFirstLastPage╩╠true╩╩╠=╣firstIcon╩╠'mdi-arrow-collapse-left'╩╩╠=╣lastIcon╩╠'mdi-arrow-collapse-right'╩╩╠=╣prevIcon╩╠'mdi-minus'╩╩╠=╣nextIcon╩╠'mdi-plus'╩╩╩╩",
+					"T": "prop"
+				},
+				"headers": {
+					"H": "╬[]╠{}╠=╣text╩╠'Dessert (100g serving)'╩╩╠=╣align╩╠'start'╩╩╠=╣sortable╩╠false╩╩╠=╣value╩╠'name'╩╩╩╠{}╠=╣text╩╠'Calories'╩╩╠=╣value╩╠'calories'╩╩╠=╣sortable╩╠true╩╩╩╠{}╠=╣text╩╠'Fat (g)'╩╩╠=╣value╩╠'fat'╩╩╩╠{}╠=╣text╩╠'Carbs (g)'╩╩╠=╣value╩╠'carbs'╩╩╩╠{}╠=╣text╩╠'Protein (g)'╩╩╠=╣value╩╠'protein'╩╩╩╠{}╠=╣text╩╠'Iron (%)'╩╩╠=╣value╩╠'iron'╩╩╩╩╩",
+					"T": "prop"
+				},
+				"items": {
+					"H": "╬[]╠{}╠=╣name╩╠'Frozens Yogurt'╩╩╠=╣calories╩╠159╩╩╠=╣fat╩╠'6.0'╩╩╠=╣carbs╩╠24╩╩╠=╣protein╩╠'4.0'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Ice cream sandwich'╩╩╠=╣calories╩╠237╩╩╠=╣fat╩╠'9.0'╩╩╠=╣carbs╩╠37╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Eclair'╩╩╠=╣calories╩╠262╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠23╩╩╠=╣protein╩╠'6.0'╩╩╠=╣iron╩╠'7%'╩╩╩╠{}╠=╣name╩╠'Cupcake'╩╩╠=╣calories╩╠305╩╩╠=╣fat╩╠'3.7'╩╩╠=╣carbs╩╠67╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'8%'╩╩╩╠{}╠=╣name╩╠'Gingerbread'╩╩╠=╣calories╩╠356╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠49╩╩╠=╣protein╩╠'3.9'╩╩╠=╣iron╩╠'16%'╩╩╩╠{}╠=╣name╩╠'Jelly bean'╩╩╠=╣calories╩╠375╩╩╠=╣fat╩╠'0.0'╩╩╠=╣carbs╩╠94╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'0%'╩╩╩╠{}╠=╣name╩╠'Lollipop'╩╩╠=╣calories╩╠392╩╩╠=╣fat╩╠'0.2'╩╩╠=╣carbs╩╠98╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'2 %'╩╩╩╠{}╠=╣name╩╠'Honeycomb'╩╩╠=╣calories╩╠408╩╩╠=╣fat╩╠'3.2'╩╩╠=╣carbs╩╠87╩╩╠=╣protein╩╠'6.5'╩╩╠=╣iron╩╠'45%'╩╩╩╠{}╠=╣name╩╠'Donut'╩╩╠=╣calories╩╠452╩╩╠=╣fat╩╠'25.0'╩╩╠=╣carbs╩╠51╩╩╠=╣protein╩╠'4.9'╩╩╠=╣iron╩╠'22%'╩╩╩╠{}╠=╣name╩╠'KitKat'╩╩╠=╣calories╩╠518╩╩╠=╣fat╩╠'26.0'╩╩╠=╣carbs╩╠65╩╩╠=╣protein╩╠'7'╩╩╠=╣iron╩╠'6 %'╩╩╩╩╩",
+					"T": "prop"
+				},
+				"itemsPerPage": {
+					"H": "╬5╩╩",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"uniqueSlots": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"itemKey": {
+					"H": "╬'carbs'╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"item.name": {
+					"c": [
+						{
+							"T": "VTextField",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_3_q_49",
+									"T": "prop"
+								},
+								"label": {
+									"H": "╬'Text field label'╩╩",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"rules": {
+									"H": "╬[]╠()╣.╣.╣Quick╩╠validation╩╩╠required╩╩╩╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_3"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted undefined newDropBorder"
+							}
+						}
+					],
+					"cType": "scopedSlot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "scopedSlot",
+				"compDomClasses": "v-data-table v-data-table--has-bottom theme--light newDropBorder"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_2",
+					"T": "prop"
+				},
+				"color": {
+					"H": "╬'success'╩╩",
+					"T": "prop"
+				},
+				"depressed": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"elevation": {
+					"H": "╬0╩╩",
+					"T": "prop"
+				},
+				"height": {
+					"H": "╬'40px'╩╩",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.Quick.validate(\"EdtrComp_3_q_24\", false, false);\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfMl9jbGlja19FLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiRWR0ckNvbXBfMl9jbGlja19FLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQSxLQUFLLENBQUMsS0FBSyxDQUFDLFFBQVEsQ0FBQyxpQkFBaUIsRUFBRSxLQUFLLEVBQUUsS0FBSyxDQUFDLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJkZWNsYXJlIHZhciBtb3VzZUV2ZW50OnVua25vd24gfCB1bmRlZmluZWRcbnF1aWNrLlF1aWNrLnZhbGlkYXRlKFwiRWR0ckNvbXBfM19xXzI0XCIsIGZhbHNlLCBmYWxzZSk7XG4gZXhwb3J0e307XG4iXX0=",
+					"P": "mouseEvent:unknown | undefined",
+					"HL": "JS"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_4",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬'Validate'╩╩",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "q-label newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_2"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--depressed theme--light elevation-0 v-size--default success newDropBorder"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_6",
+					"T": "prop"
+				},
+				"color": {
+					"H": "╬'error'╩╩",
+					"T": "prop"
+				},
+				"depressed": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"elevation": {
+					"H": "╬0╩╩",
+					"T": "prop"
+				},
+				"height": {
+					"H": "╬'40px'╩╩",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.Quick.validate(\"EdtrComp_3_q_24\", false, false);\r\nquick.Quick.validate(\"EdtrComp_3_q_37\", false, false);\r\nquick.Quick.validate(\"EdtrComp_3_q_23\", false, false);\r\nquick.Quick.validate(\"EdtrComp_3_q_67\", false, false);\r\nquick.Quick.validate(\"EdtrComp_3_q_49\", false, false);\r\nquick.Quick.validateAll(true, true);\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfNl9jbGlja19FLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiRWR0ckNvbXBfNl9jbGlja19FLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQSxLQUFLLENBQUMsS0FBSyxDQUFDLFFBQVEsQ0FBQyxpQkFBaUIsRUFBRSxLQUFLLEVBQUUsS0FBSyxDQUFDLENBQUM7QUFDdEQsS0FBSyxDQUFDLEtBQUssQ0FBQyxRQUFRLENBQUMsaUJBQWlCLEVBQUMsS0FBSyxFQUFDLEtBQUssQ0FBQyxDQUFDO0FBQ3BELEtBQUssQ0FBQyxLQUFLLENBQUMsUUFBUSxDQUFDLGlCQUFpQixFQUFDLEtBQUssRUFBQyxLQUFLLENBQUMsQ0FBQztBQUNwRCxLQUFLLENBQUMsS0FBSyxDQUFDLFFBQVEsQ0FBQyxpQkFBaUIsRUFBQyxLQUFLLEVBQUMsS0FBSyxDQUFDLENBQUM7QUFDcEQsS0FBSyxDQUFDLEtBQUssQ0FBQyxRQUFRLENBQUMsaUJBQWlCLEVBQUMsS0FBSyxFQUFDLEtBQUssQ0FBQyxDQUFDO0FBRXBELEtBQUssQ0FBQyxLQUFLLENBQUMsV0FBVyxDQUFDLElBQUksRUFBQyxJQUFJLENBQUMsQ0FBQSIsInNvdXJjZXNDb250ZW50IjpbImRlY2xhcmUgdmFyIG1vdXNlRXZlbnQ6dW5rbm93biB8IHVuZGVmaW5lZFxucXVpY2suUXVpY2sudmFsaWRhdGUoXCJFZHRyQ29tcF8zX3FfMjRcIiwgZmFsc2UsIGZhbHNlKTtcclxucXVpY2suUXVpY2sudmFsaWRhdGUoXCJFZHRyQ29tcF8zX3FfMzdcIixmYWxzZSxmYWxzZSk7XHJcbnF1aWNrLlF1aWNrLnZhbGlkYXRlKFwiRWR0ckNvbXBfM19xXzIzXCIsZmFsc2UsZmFsc2UpO1xyXG5xdWljay5RdWljay52YWxpZGF0ZShcIkVkdHJDb21wXzNfcV82N1wiLGZhbHNlLGZhbHNlKTtcclxucXVpY2suUXVpY2sudmFsaWRhdGUoXCJFZHRyQ29tcF8zX3FfNDlcIixmYWxzZSxmYWxzZSk7XHJcblxyXG5xdWljay5RdWljay52YWxpZGF0ZUFsbCh0cnVlLHRydWUpXHJcblxyXG5cbiBleHBvcnR7fTtcbiJdfQ==",
+					"P": "mouseEvent:unknown | undefined",
+					"HL": "JS"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_7",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬'Validate All'╩╩",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_7"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "q-label newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_6"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--depressed theme--light elevation-0 v-size--default error newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {
+		"tr-TR": {
+			"label_group": "╬'Grup Adı'╩╩",
+			"label_contract_name": "╬'Sözleşme Adı'╩╩",
+			"label_version": "╬'Versiyon'╩╩",
+			"label_sign_date": "╬'İmzalanma Tarihi'╩╩",
+			"label_mandatory": "╬'Zorunlu'╩╩",
+			"label_document": "╬'Doküman'╩╩",
+			"label_show": "╬'Görüntüle'╩╩",
+			"label_pick_a_date": "╬'Tarih seç...'╩╩",
+			"label_upload_file": "╬'Doküman yükle...'╩╩"
+		},
+		"en-US": {
+			"label_group": "╬'Group Name'╩╩",
+			"label_contract_name": "╬'Contract Name'╩╩",
+			"label_version": "╬'Version'╩╩",
+			"label_sign_date": "╬'Sign Date'╩╩",
+			"label_mandatory": "╬'Mandatory'╩╩",
+			"label_document": "╬'Document'╩╩",
+			"label_show": "╬'Show'╩╩",
+			"label_pick_a_date": "╬'Pick a date...'╩╩",
+			"label_upload_file": "╬'Upload a file...'╩╩"
+		}
+	}
+};
+export default pjson

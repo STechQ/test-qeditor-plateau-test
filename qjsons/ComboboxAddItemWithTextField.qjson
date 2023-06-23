@@ -1,0 +1,369 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VCombobox",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_13",
+					"T": "prop"
+				},
+				"label": {
+					"H": "'My Combobox'",
+					"T": "prop"
+				},
+				"multiple": {
+					"H": "true",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'col-2 col-md-3'",
+					"T": "class"
+				}
+			},
+			"E": {},
+			"C": {
+				"append-item": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_6",
+									"T": "prop"
+								},
+								"class": {
+									"H": "'d-flex flex-row'",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VTextField",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_7",
+													"T": "prop"
+												},
+												"label": {
+													"H": "'Text field label'",
+													"T": "prop"
+												},
+												"regular": {
+													"H": "'true'",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'col-2'",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_7"
+											},
+											"O": {
+												"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted col-2 pt-0"
+											}
+										},
+										{
+											"T": "VBtn",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_15",
+													"T": "prop"
+												},
+												"color": {
+													"H": "'primary'",
+													"T": "prop"
+												},
+												"regular": {
+													"H": "true",
+													"T": "prop"
+												},
+												"text": {
+													"H": "true",
+													"T": "prop"
+												}
+											},
+											"E": {
+												"click": {
+													"H": "//EdtrComp_17.value=true\r\n\r\n\r\nEM.trace(EdtrComp_13.items)\r\nif(EdtrComp_7.internalValue){\r\nEdtrComp_13.items.push({text=EdtrComp_7.internalValue})\r\nEdtrComp_7.internalValue=[]\r\nEdtrComp_17.value=false\r\n}\r\nelse{\r\nEdtrComp_17.value=false\r\n}",
+													"P": "mouseEvent"
+												}
+											},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"C": {},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_16",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "'Add new category'",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_16"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "q-label "
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_15"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-btn v-btn--flat v-btn--text theme--light v-size--default primary--text"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_6"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row d-flex flex-row"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_13"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted v-select v-select--is-multi v-autocomplete"
+			}
+		},
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_18",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"PostRender": {
+					"H": " b=[{text = 'test1'},\r\n{ text = 'test2'}]\r\n\r\n\r\nEdtrComp_13.items=b\r\n\r\nEM.trace(EdtrComp_13.items)",
+					"TO": 1
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_18"
+			},
+			"O": {
+				"compDomClasses": "",
+				"cType": "child"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VCombobox",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_13",
+					"T": "prop"
+				},
+				"label": {
+					"H": "╬'My Combobox'╩╩",
+					"T": "prop"
+				},
+				"multiple": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'col-2 col-md-3'╩╩",
+					"T": "class"
+				}
+			},
+			"E": {},
+			"C": {
+				"append-item": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_6",
+									"T": "prop"
+								},
+								"class": {
+									"H": "╬'d-flex flex-row'╩╩",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VTextField",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_7",
+													"T": "prop"
+												},
+												"label": {
+													"H": "╬'Text field label'╩╩",
+													"T": "prop"
+												},
+												"regular": {
+													"H": "╬'true'╩╩",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'col-2'╩╩",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_7"
+											},
+											"O": {
+												"cType": "child",
+												"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted col-2 pt-0"
+											}
+										},
+										{
+											"T": "VBtn",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_15",
+													"T": "prop"
+												},
+												"color": {
+													"H": "╬'primary'╩╩",
+													"T": "prop"
+												},
+												"regular": {
+													"H": "╬true╩╩",
+													"T": "prop"
+												},
+												"text": {
+													"H": "╬true╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {
+												"click": {
+													"H": "╬()╣.╣EM╩╠trace╩╩╠.╣EdtrComp_13╩╠items╩╩╩╬if╣.╣EdtrComp_7╩╠internalValue╩╩╠╬()╣.╣.╣EdtrComp_13╩╠items╩╩╠push╩╩╠{}╠=╣text╩╠.╣EdtrComp_7╩╠internalValue╩╩╩╩╩╬=╣.╣EdtrComp_7╩╠internalValue╩╩╠[]╩╩╬=╣.╣EdtrComp_17╩╠value╩╩╠false╩╩╩╠╬=╣.╣EdtrComp_17╩╠value╩╩╠false╩╩╩╩╩",
+													"P": "mouseEvent"
+												}
+											},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"C": {},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_16",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬'Add new category'╩╩",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_16"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "q-label "
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_15"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-btn v-btn--flat v-btn--text theme--light v-size--default primary--text"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_6"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row d-flex flex-row"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_13"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted v-select v-select--is-multi v-autocomplete"
+			}
+		},
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_18",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"PostRender": {
+					"H": "╬=╣b╩╠[]╠{}╠=╣text╩╠'test1'╩╩╩╠{}╠=╣text╩╠'test2'╩╩╩╩╩╬=╣.╣EdtrComp_13╩╠items╩╩╠b╩╩╬()╣.╣EM╩╠trace╩╩╠.╣EdtrComp_13╩╠items╩╩╩╩",
+					"TO": 1
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_18"
+			},
+			"O": {
+				"compDomClasses": "",
+				"cType": "child"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {}
+};
+export default pjson

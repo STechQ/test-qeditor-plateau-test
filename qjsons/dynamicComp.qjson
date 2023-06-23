@@ -1,0 +1,314 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VList",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_3",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VListItemGroup",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_5",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VListItem",
+											"P": {
+												"ID": {
+													"H": "listItem",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_9",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "data",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_9"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "q-label "
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_7"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-list-item v-list-item--link theme--light"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_5"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "v-item-group theme--light v-list-item-group"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_3"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-list v-sheet v-sheet--tile theme--light"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_10",
+					"T": "prop"
+				},
+				"color": {
+					"H": "'primary'",
+					"T": "prop"
+				},
+				"regular": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "messages=[{message='Message'}, {message='Message'}]\r\nindex=store.get('index')\r\nif(!index) {\r\n    store.set('index', 1)\r\n    index = 1\r\n}\r\nforeach (item in messages) {\r\n    EM.trace(item)\r\n    Quick.createComponent({templateCompQID='listItem',newCompQID=index, dataSource=item.message + index, place='After' })\r\n    index = index + 1\r\n    store.set('index', index)\r\n}"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_11",
+									"T": "prop"
+								},
+								"text": {
+									"H": "'Test Button'",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_11"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "q-label "
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_10"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VList",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_3",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VListItemGroup",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_5",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VListItem",
+											"P": {
+												"ID": {
+													"H": "listItem",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_9",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬data╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_9"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "q-label "
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_7"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-list-item v-list-item--link theme--light"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_5"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "v-item-group theme--light v-list-item-group"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_3"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-list v-sheet v-sheet--tile theme--light"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_10",
+					"T": "prop"
+				},
+				"color": {
+					"H": "╬'primary'╩╩",
+					"T": "prop"
+				},
+				"regular": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "╬=╣messages╩╠[]╠{}╠=╣message╩╠'Message'╩╩╩╠{}╠=╣message╩╠'Message'╩╩╩╩╩╬=╣index╩╠()╣.╣store╩╠get╩╩╠'index'╩╩╩╬if╣!╠index╩╩╠╬()╣.╣store╩╠set╩╩╠'index'╩╠1╩╩╬=╣index╩╠1╩╩╩╠■╩╬foreach╣in╣item╩╠messages╩╩╠╬()╣.╣EM╩╠trace╩╩╠item╩╩╬()╣.╣Quick╩╠createComponent╩╩╠{}╠=╣templateCompQID╩╠'listItem'╩╩╠=╣newCompQID╩╠index╩╩╠=╣dataSource╩╠+╣.╣item╩╠message╩╩╠index╩╩╩╠=╣place╩╠'After'╩╩╩╩╬=╣index╩╠+╣index╩╠1╩╩╩╬()╣.╣store╩╠set╩╩╠'index'╩╠index╩╩╩╩╩"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_11",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬'Test Button'╩╩",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_11"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "q-label "
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_10"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {}
+};
+export default pjson

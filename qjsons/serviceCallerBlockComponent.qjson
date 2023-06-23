@@ -1,0 +1,121 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_37",
+					"T": "prop"
+				},
+				"externalEvents": {
+					"H": "[{name='onGetProductsServiceCallSuccess', params=['serviceResponse']}]",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"successResponseMethod": {
+					"H": "//Define event name and event parameter on block component messaging 'externalEvents' prop\r\n//Trigger parent page event (=send data to parent page), when service returned response successfully\r\n\r\nEM.trace('Block Component on success')\r\nEM.trace(response)\r\n\r\nparent.events.onGetProductsServiceCallSuccess({serviceResponse=response})",
+					"C": true,
+					"HL": "QS"
+				},
+				"GetProductsWithServiceCall": {
+					"H": "//To trigger this event from parent component, check 'Exetrnal Visible' checkbox \r\n//requestData, requestURL, httpType, responseField values sends from parent page in this example\r\n\r\ngetProductsRequestObject={}\r\ngetProductsRequestObject.headers={}\r\n\r\ngetProductsRequestObject.headers['x-rly-corr']='1'\r\ngetProductsRequestObject.headers['x-rly-ins-unit']='1'\r\ngetProductsRequestObject.headers['x-rly-session']='1'\r\ngetProductsRequestObject.headers['x-rly-tenant']='1'\r\ngetProductsRequestObject.headers['x-rly-user-id']='1'\r\ngetProductsRequestObject.headers['Content-Type']='application/json'\r\n\r\ngetProductsRequestObject.blockRender=true\r\n\r\ngetProductsRequestObject.data={}\r\ngetProductsRequestObject.data=requestData\r\ngetProductsRequestObject.url=requestURL\r\ngetProductsRequestObject.http=httpType\r\n\r\ngetProductsRequestObject.responseField=responseField\r\ngetProductsRequestObject.onSuccess='successResponseMethod'\r\nRequest.async(getProductsRequestObject)",
+					"C": true,
+					"EV": true
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_37"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": ""
+			}
+		},
+		{
+			"T": "QLabel",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_2",
+					"T": "prop"
+				},
+				"text": {
+					"H": "'This block component calls service request'",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_2"
+			},
+			"O": {
+				"compDomClasses": "q-label ",
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_37",
+					"T": "prop"
+				},
+				"externalEvents": {
+					"H": "╬[]╠{}╠=╣name╩╠'onGetProductsServiceCallSuccess'╩╩╠=╣params╩╠[]╠'serviceResponse'╩╩╩╩╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"successResponseMethod": {
+					"H": "╬()╣.╣EM╩╠trace╩╩╠'Block Component on success'╩╩╬()╣.╣EM╩╠trace╩╩╠response╩╩╬()╣.╣.╣parent╩╠events╩╩╠onGetProductsServiceCallSuccess╩╩╠{}╠=╣serviceResponse╩╠response╩╩╩╩╩",
+					"C": true,
+					"HL": "QS"
+				},
+				"GetProductsWithServiceCall": {
+					"H": "╬=╣getProductsRequestObject╩╠{}╩╩╬=╣.╣getProductsRequestObject╩╠headers╩╩╠{}╩╩╬=╣[]╣.╣getProductsRequestObject╩╠headers╩╩╠'x-rly-corr'╩╩╠'1'╩╩╬=╣[]╣.╣getProductsRequestObject╩╠headers╩╩╠'x-rly-ins-unit'╩╩╠'1'╩╩╬=╣[]╣.╣getProductsRequestObject╩╠headers╩╩╠'x-rly-session'╩╩╠'1'╩╩╬=╣[]╣.╣getProductsRequestObject╩╠headers╩╩╠'x-rly-tenant'╩╩╠'1'╩╩╬=╣[]╣.╣getProductsRequestObject╩╠headers╩╩╠'x-rly-user-id'╩╩╠'1'╩╩╬=╣[]╣.╣getProductsRequestObject╩╠headers╩╩╠'Content-Type'╩╩╠'application/json'╩╩╬=╣.╣getProductsRequestObject╩╠blockRender╩╩╠true╩╩╬=╣.╣getProductsRequestObject╩╠data╩╩╠{}╩╩╬=╣.╣getProductsRequestObject╩╠data╩╩╠requestData╩╩╬=╣.╣getProductsRequestObject╩╠url╩╩╠requestURL╩╩╬=╣.╣getProductsRequestObject╩╠http╩╩╠httpType╩╩╬=╣.╣getProductsRequestObject╩╠responseField╩╩╠responseField╩╩╬=╣.╣getProductsRequestObject╩╠onSuccess╩╩╠'successResponseMethod'╩╩╬()╣.╣Request╩╠async╩╩╠getProductsRequestObject╩╩╩",
+					"C": true,
+					"EV": true
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_37"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			}
+		},
+		{
+			"T": "QLabel",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_2",
+					"T": "prop"
+				},
+				"text": {
+					"H": "╬'This block component calls service request'╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_2"
+			},
+			"O": {
+				"compDomClasses": "q-label newDropBorder",
+				"cType": "slot"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {},
+	"opt": {}
+};
+export default pjson

@@ -1,0 +1,322 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_84",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"PostRender": {
+					"H": "var customRule1 = function (inputVal: string){\r\n    debugger;\r\n\r\n    if (components.updatedSalary.qValue <= 25) {\r\n        return 'Cannot be less than 25';\r\n    } \r\n}\r\n\r\n\r\nvar customRule2 = function (inputVal: string){\r\n        if (components.updatedSalary.qValue == 'red') {\r\n        return 'Cannot be red';\r\n    }\r\n}\r\n\r\n\r\n\r\ncomponents.updatedSalary.rules.push(()=>customRule1(components.updatedSalary.qValue));\r\ncomponents.updatedSalary.rules.push(()=>customRule2(components.updatedSalary.qValue));",
+					"TO": 1,
+					"HL": "TS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_84"
+			},
+			"O": {}
+		},
+		{
+			"T": "VRow",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_89",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VCol",
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCard",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_87",
+													"T": "prop"
+												},
+												"visible": {
+													"H": "true",
+													"T": "prop"
+												},
+												"width": {
+													"H": "'500'",
+													"T": "prop"
+												},
+												"height": {
+													"H": "'100'",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VTextField",
+															"P": {
+																"ID": {
+																	"H": "updatedSalary",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "'TextField'",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"format": {
+																	"H": "'number'",
+																	"T": "attr"
+																},
+																"rules": {
+																	"H": "[Quick.validation.required()]",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_86"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"sp:pl-4",
+																			"sp:pr-4"
+																		]
+																	},
+																	"class": "pl-4 pr-4"
+																}
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_87"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_92",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_92"
+							},
+							"O": {
+								"cType": "slot",
+								"layout": {
+									"dOpt": {
+										"xs": [
+											"d:d-flex",
+											"c:col-6"
+										]
+									},
+									"class": "d-flex col-6"
+								}
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_89"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_84",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"PostRender": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nvar customRule1 = function (inputVal) {\r\n    debugger;\r\n    if (components.updatedSalary.qValue <= 25) {\r\n        return 'Cannot be less than 25';\r\n    }\r\n};\r\nvar customRule2 = function (inputVal) {\r\n    if (components.updatedSalary.qValue == 'red') {\r\n        return 'Cannot be red';\r\n    }\r\n};\r\ncomponents.updatedSalary.rules.push(function () { return customRule1(components.updatedSalary.qValue); });\r\ncomponents.updatedSalary.rules.push(function () { return customRule2(components.updatedSalary.qValue); });\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfODRfUG9zdFJlbmRlcl9FLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiRWR0ckNvbXBfODRfUG9zdFJlbmRlcl9FLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQSxJQUFJLFdBQVcsR0FBRyxVQUFVLFFBQWdCO0lBQ3hDLFFBQVEsQ0FBQztJQUVULElBQUksVUFBVSxDQUFDLGFBQWEsQ0FBQyxNQUFNLElBQUksRUFBRSxFQUFFO1FBQ3ZDLE9BQU8sd0JBQXdCLENBQUM7S0FDbkM7QUFDTCxDQUFDLENBQUE7QUFHRCxJQUFJLFdBQVcsR0FBRyxVQUFVLFFBQWdCO0lBQ3BDLElBQUksVUFBVSxDQUFDLGFBQWEsQ0FBQyxNQUFNLElBQUksS0FBSyxFQUFFO1FBQzlDLE9BQU8sZUFBZSxDQUFDO0tBQzFCO0FBQ0wsQ0FBQyxDQUFBO0FBSUQsVUFBVSxDQUFDLGFBQWEsQ0FBQyxLQUFLLENBQUMsSUFBSSxDQUFDLGNBQUksT0FBQSxXQUFXLENBQUMsVUFBVSxDQUFDLGFBQWEsQ0FBQyxNQUFNLENBQUMsRUFBNUMsQ0FBNEMsQ0FBQyxDQUFDO0FBQ3RGLFVBQVUsQ0FBQyxhQUFhLENBQUMsS0FBSyxDQUFDLElBQUksQ0FBQyxjQUFJLE9BQUEsV0FBVyxDQUFDLFVBQVUsQ0FBQyxhQUFhLENBQUMsTUFBTSxDQUFDLEVBQTVDLENBQTRDLENBQUMsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIlxudmFyIGN1c3RvbVJ1bGUxID0gZnVuY3Rpb24gKGlucHV0VmFsOiBzdHJpbmcpe1xyXG4gICAgZGVidWdnZXI7XHJcblxyXG4gICAgaWYgKGNvbXBvbmVudHMudXBkYXRlZFNhbGFyeS5xVmFsdWUgPD0gMjUpIHtcclxuICAgICAgICByZXR1cm4gJ0Nhbm5vdCBiZSBsZXNzIHRoYW4gMjUnO1xyXG4gICAgfSBcclxufVxyXG5cclxuXHJcbnZhciBjdXN0b21SdWxlMiA9IGZ1bmN0aW9uIChpbnB1dFZhbDogc3RyaW5nKXtcclxuICAgICAgICBpZiAoY29tcG9uZW50cy51cGRhdGVkU2FsYXJ5LnFWYWx1ZSA9PSAncmVkJykge1xyXG4gICAgICAgIHJldHVybiAnQ2Fubm90IGJlIHJlZCc7XHJcbiAgICB9XHJcbn1cclxuXHJcblxyXG5cclxuY29tcG9uZW50cy51cGRhdGVkU2FsYXJ5LnJ1bGVzLnB1c2goKCk9PmN1c3RvbVJ1bGUxKGNvbXBvbmVudHMudXBkYXRlZFNhbGFyeS5xVmFsdWUpKTtcclxuY29tcG9uZW50cy51cGRhdGVkU2FsYXJ5LnJ1bGVzLnB1c2goKCk9PmN1c3RvbVJ1bGUyKGNvbXBvbmVudHMudXBkYXRlZFNhbGFyeS5xVmFsdWUpKTtcbiBleHBvcnR7fTtcbiJdfQ==",
+					"TO": 1,
+					"HL": "JS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_84"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			}
+		},
+		{
+			"T": "VRow",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_89",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VCol",
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCard",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_87",
+													"T": "prop"
+												},
+												"visible": {
+													"H": "╬true╩╩",
+													"T": "prop"
+												},
+												"width": {
+													"H": "╬'500'╩╩",
+													"T": "prop"
+												},
+												"height": {
+													"H": "╬'100'╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VTextField",
+															"P": {
+																"ID": {
+																	"H": "updatedSalary",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "╬'TextField'╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"format": {
+																	"H": "╬'number'╩╩",
+																	"T": "attr"
+																},
+																"rules": {
+																	"H": "╬[]╠()╣.╣.╣Quick╩╠validation╩╩╠required╩╩╩╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_86"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"sp:pl-4",
+																			"sp:pr-4"
+																		]
+																	},
+																	"class": "pl-4 pr-4"
+																},
+																"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted pl-4 pr-4 undefined newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_87"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-card v-sheet theme--light newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_92",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_92"
+							},
+							"O": {
+								"cType": "slot",
+								"layout": {
+									"dOpt": {
+										"xs": [
+											"d:d-flex",
+											"c:col-6"
+										]
+									},
+									"class": "d-flex col-6"
+								},
+								"compDomClasses": "col d-flex col-6 newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_89"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "row newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {}
+};
+export default pjson

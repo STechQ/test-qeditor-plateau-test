@@ -1,0 +1,689 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "MessagingComp",
+					"T": "prop"
+				},
+				"triggerOnRestored": {
+					"H": "false",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_21"
+			},
+			"S": {
+				"pageBackgroundColor": "#ffffff",
+				"statusBarColor": "#ffffff"
+			},
+			"O": {
+				"cType": "child"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container container--fluid'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "VRowComp",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Bar",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_3",
+																	"T": "prop"
+																},
+																"backgroundColor": {
+																	"H": "['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)']",
+																	"T": "prop"
+																},
+																"borderColor": {
+																	"H": "['rgba(255, 99, 132, 1)','rgba(54, 162, 235, 1)','rgba(255, 206, 86, 1)','rgba(75, 192, 192, 1)','rgba(153, 102, 255, 1)','rgba(255, 159, 64, 1)']",
+																	"T": "prop"
+																},
+																"borderWidth": {
+																	"H": "1",
+																	"T": "prop"
+																},
+																"data": {
+																	"H": "[1000,2000,3000,2500,4000,5000]",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "'# of Votes'",
+																	"T": "prop"
+																},
+																"indexAxis": {
+																	"H": "'x'",
+																	"T": "prop"
+																},
+																"labels": {
+																	"H": "['2019-08-09','2019-08-10','2019-08-11','2019-08-12','2019-08-13','2019-08-14']",
+																	"T": "prop"
+																},
+																"width": {
+																	"H": "'32vw'",
+																	"T": "prop"
+																},
+																"height": {
+																	"H": "'48vh'",
+																	"T": "prop"
+																},
+																"xDrawOnChartArea": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"yDrawOnChartArea": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"xDisplay": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"yDisplay": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"legendPosition": {
+																	"H": "'top'",
+																	"T": "prop"
+																},
+																"legendDisplay": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"legendFontSize": {
+																	"H": "12",
+																	"T": "prop"
+																},
+																"title": {
+																	"H": "'Sample Bar Chart'",
+																	"T": "prop"
+																},
+																"titleDisplay": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"titleFontSize": {
+																	"H": "12",
+																	"T": "prop"
+																},
+																"labelAlign": {
+																	"H": "'center'",
+																	"T": "prop"
+																},
+																"labelAnchor": {
+																	"H": "'center'",
+																	"T": "prop"
+																},
+																"labelBorderRadius": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"labelBorderWidth": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"labelClamp": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"labelClip": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"labelDisplay": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"labelFontWeight": {
+																	"H": "'normal'",
+																	"T": "prop"
+																},
+																"labelFontLineHeight": {
+																	"H": "'1.2'",
+																	"T": "prop"
+																},
+																"labelOffset": {
+																	"H": "'4'",
+																	"T": "prop"
+																},
+																"labelOpacity": {
+																	"H": "1",
+																	"T": "prop"
+																},
+																"labelPaddingTop": {
+																	"H": "4",
+																	"T": "prop"
+																},
+																"labelPaddingRight": {
+																	"H": "4",
+																	"T": "prop"
+																},
+																"labelPaddingBottom": {
+																	"H": "4",
+																	"T": "prop"
+																},
+																"labelPaddingLeft": {
+																	"H": "4",
+																	"T": "prop"
+																},
+																"labelRotation": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"labelTextAlign": {
+																	"H": "'start'",
+																	"T": "prop"
+																},
+																"labelTextStrokeWidth": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"labelTextShadowBlur": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"xType": {
+																	"H": "'time'",
+																	"T": "prop"
+																},
+																"xTimeUnit": {
+																	"H": "'day'",
+																	"T": "prop"
+																},
+																"xTimeDisplayFormatsDay": {
+																	"H": "'MMM d yyyy'",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_3"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "VColComp",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_27"
+											},
+											"O": {
+												"cType": "slot"
+											},
+											"S": {
+												"xs-xl": {
+													"col": "",
+													"flexDirection": "column",
+													"alignItems": "",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "",
+													"paddingBottom": "",
+													"paddingLeft": "",
+													"paddingRight": ""
+												},
+												"backgroundColor": "#ffffff",
+												"boxShadow": ""
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_24"
+							},
+							"S": {
+								"xs-xl": {
+									"marginLeft": "",
+									"marginRight": "",
+									"marginBottom": "",
+									"marginTop": "",
+									"paddingTop": "",
+									"paddingBottom": "",
+									"paddingLeft": "",
+									"paddingRight": ""
+								},
+								"width": "",
+								"height": "",
+								"backgroundColor": "#ffffff",
+								"boxShadow": ""
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_22"
+			},
+			"S": {
+				"xs-xl": {
+					"marginLeft": "",
+					"marginRight": "",
+					"marginBottom": "",
+					"marginTop": "",
+					"paddingTop": "",
+					"paddingBottom": "",
+					"paddingLeft": "",
+					"paddingRight": ""
+				},
+				"width": "",
+				"height": "",
+				"backgroundColor": "#ffffff",
+				"boxShadow": ""
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "MessagingComp",
+					"T": "prop"
+				},
+				"triggerOnRestored": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_21"
+			},
+			"S": {
+				"pageBackgroundColor": "#ffffff",
+				"statusBarColor": "#ffffff"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container container--fluid'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "VRowComp",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Bar",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_3",
+																	"T": "prop"
+																},
+																"backgroundColor": {
+																	"H": "╬[]╠'rgba(255, 99, 132, 0.2)'╩╠'rgba(54, 162, 235, 0.2)'╩╠'rgba(255, 206, 86, 0.2)'╩╠'rgba(75, 192, 192, 0.2)'╩╠'rgba(153, 102, 255, 0.2)'╩╠'rgba(255, 159, 64, 0.2)'╩╩╩",
+																	"T": "prop"
+																},
+																"borderColor": {
+																	"H": "╬[]╠'rgba(255, 99, 132, 1)'╩╠'rgba(54, 162, 235, 1)'╩╠'rgba(255, 206, 86, 1)'╩╠'rgba(75, 192, 192, 1)'╩╠'rgba(153, 102, 255, 1)'╩╠'rgba(255, 159, 64, 1)'╩╩╩",
+																	"T": "prop"
+																},
+																"borderWidth": {
+																	"H": "╬1╩╩",
+																	"T": "prop"
+																},
+																"data": {
+																	"H": "╬[]╠1000╩╠2000╩╠3000╩╠2500╩╠4000╩╠5000╩╩╩",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "╬'# of Votes'╩╩",
+																	"T": "prop"
+																},
+																"indexAxis": {
+																	"H": "╬'x'╩╩",
+																	"T": "prop"
+																},
+																"labels": {
+																	"H": "╬[]╠'2019-08-09'╩╠'2019-08-10'╩╠'2019-08-11'╩╠'2019-08-12'╩╠'2019-08-13'╩╠'2019-08-14'╩╩╩",
+																	"T": "prop"
+																},
+																"width": {
+																	"H": "╬'32vw'╩╩",
+																	"T": "prop"
+																},
+																"height": {
+																	"H": "╬'48vh'╩╩",
+																	"T": "prop"
+																},
+																"xDrawOnChartArea": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"yDrawOnChartArea": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"xDisplay": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"yDisplay": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"legendPosition": {
+																	"H": "╬'top'╩╩",
+																	"T": "prop"
+																},
+																"legendDisplay": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"legendFontSize": {
+																	"H": "╬12╩╩",
+																	"T": "prop"
+																},
+																"title": {
+																	"H": "╬'Sample Bar Chart'╩╩",
+																	"T": "prop"
+																},
+																"titleDisplay": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"titleFontSize": {
+																	"H": "╬12╩╩",
+																	"T": "prop"
+																},
+																"labelAlign": {
+																	"H": "╬'center'╩╩",
+																	"T": "prop"
+																},
+																"labelAnchor": {
+																	"H": "╬'center'╩╩",
+																	"T": "prop"
+																},
+																"labelBorderRadius": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"labelBorderWidth": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"labelClamp": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"labelClip": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"labelDisplay": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"labelFontWeight": {
+																	"H": "╬'normal'╩╩",
+																	"T": "prop"
+																},
+																"labelFontLineHeight": {
+																	"H": "╬'1.2'╩╩",
+																	"T": "prop"
+																},
+																"labelOffset": {
+																	"H": "╬'4'╩╩",
+																	"T": "prop"
+																},
+																"labelOpacity": {
+																	"H": "╬1╩╩",
+																	"T": "prop"
+																},
+																"labelPaddingTop": {
+																	"H": "╬4╩╩",
+																	"T": "prop"
+																},
+																"labelPaddingRight": {
+																	"H": "╬4╩╩",
+																	"T": "prop"
+																},
+																"labelPaddingBottom": {
+																	"H": "╬4╩╩",
+																	"T": "prop"
+																},
+																"labelPaddingLeft": {
+																	"H": "╬4╩╩",
+																	"T": "prop"
+																},
+																"labelRotation": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"labelTextAlign": {
+																	"H": "╬'start'╩╩",
+																	"T": "prop"
+																},
+																"labelTextStrokeWidth": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"labelTextShadowBlur": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"xType": {
+																	"H": "╬'time'╩╩",
+																	"T": "prop"
+																},
+																"xTimeUnit": {
+																	"H": "╬'day'╩╩",
+																	"T": "prop"
+																},
+																"xTimeDisplayFormatsDay": {
+																	"H": "╬'MMM d yyyy'╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_3"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "VColComp",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_27"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											},
+											"S": {
+												"xs-xl": {
+													"col": "",
+													"flexDirection": "column",
+													"alignItems": "",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "",
+													"paddingBottom": "",
+													"paddingLeft": "",
+													"paddingRight": ""
+												},
+												"backgroundColor": "#ffffff",
+												"boxShadow": ""
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_24"
+							},
+							"S": {
+								"xs-xl": {
+									"marginLeft": "",
+									"marginRight": "",
+									"marginBottom": "",
+									"marginTop": "",
+									"paddingTop": "",
+									"paddingBottom": "",
+									"paddingLeft": "",
+									"paddingRight": ""
+								},
+								"width": "",
+								"height": "",
+								"backgroundColor": "#ffffff",
+								"boxShadow": ""
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_22"
+			},
+			"S": {
+				"xs-xl": {
+					"marginLeft": "",
+					"marginRight": "",
+					"marginBottom": "",
+					"marginTop": "",
+					"paddingTop": "",
+					"paddingBottom": "",
+					"paddingLeft": "",
+					"paddingRight": ""
+				},
+				"width": "",
+				"height": "",
+				"backgroundColor": "#ffffff",
+				"boxShadow": ""
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container container--fluid newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"opt": {}
+};
+export default pjson

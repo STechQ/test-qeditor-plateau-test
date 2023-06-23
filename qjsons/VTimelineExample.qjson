@@ -1,0 +1,642 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VTimeline",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VTimelineItem",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_2",
+									"T": "prop"
+								},
+								"icon": {
+									"H": "'mdi-table'",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VDataTable",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_4",
+													"T": "prop"
+												},
+												"headers": {
+													"H": "[{ text = 'Dessert (100g serving)', align= 'start', sortable= false, value= 'name'},\n{ text = 'Calories', value= 'calories', sortable = true },\n{ text = 'Fat (g)', value= 'fat' },\n{ text = 'Carbs (g)', value= 'carbs' },\n{ text = 'Protein (g)', value= 'protein' },\n{ text = 'Iron (%)', value= 'iron' }]",
+													"T": "prop"
+												},
+												"items": {
+													"H": "[{name = 'Frozens Yogurt', calories = 159, fat = '6.0', carbs = 24, protein = '4.0', iron = '1%'},\n{name = 'Ice cream sandwich', calories = 237, fat = '9.0', carbs = 37, protein = '4.3', iron = '1%'},\n{name = 'Eclair', calories = 262, fat = '16.0', carbs = 23, protein = '6.0', iron = '7%'},\n{name = 'Cupcake', calories = 305, fat = '3.7', carbs = 67, protein = '4.3', iron = '8%'},\n{name = 'Gingerbread',calories = 356, fat = '16.0', carbs = 49, protein = '3.9', iron = '16%'},\n{name = 'Jelly bean', calories = 375,  fat = '0.0', carbs = 94, protein = '0.0', iron = '0%'},\n{name = 'Lollipop', calories = 392, fat = '0.2', carbs = 98, protein = '0.0', iron = '2 %'},\n{name = 'Honeycomb', calories = 408, fat = '3.2', carbs = 87, protein = '6.5', iron = '45%'},\n{name = 'Donut', calories = 452, fat = '25.0', carbs = 51, protein = '4.9', iron = '22%'},\n{name = 'KitKat', calories = 518, fat = '26.0', carbs = 65, protein = '7', iron=  '6 %'}]",
+													"T": "prop"
+												},
+												"itemsPerPage": {
+													"H": "5",
+													"T": "prop"
+												},
+												"hideDefaultFooter": {
+													"H": "true",
+													"T": "prop"
+												},
+												"hideDefaultHeader": {
+													"H": "true",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_4"
+											},
+											"O": {}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_2"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VTimelineItem",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_14",
+									"T": "prop"
+								},
+								"left": {
+									"H": "true",
+									"T": "prop"
+								},
+								"icon": {
+									"H": "'mdi-note-multiple-outline'",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VImg",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_16",
+													"T": "prop"
+												},
+												"src": {
+													"H": "'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/T%C3%BCrkiye_%C4%B0%C5%9F_Bankas%C4%B1_logo.svg/1200px-T%C3%BCrkiye_%C4%B0%C5%9F_Bankas%C4%B1_logo.svg.png'",
+													"T": "prop"
+												},
+												"height": {
+													"H": "'100px'",
+													"T": "prop"
+												},
+												"width": {
+													"H": "'400px'",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Ghost",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_17",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_17"
+															},
+															"O": {
+																"cType": "child"
+															}
+														}
+													],
+													"cType": "scopedSlot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_16"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_14"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VTimelineItem",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_3",
+									"T": "prop"
+								},
+								"right": {
+									"H": "true",
+									"T": "prop"
+								},
+								"hideDot": {
+									"H": "false",
+									"T": "prop"
+								},
+								"icon": {
+									"H": "'mdi-account-outline'",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_5",
+													"T": "prop"
+												},
+												"text": {
+													"H": "'Lorem Ipsum is simply dummy text of the printing and typesetting industry. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'font-weight-bold'",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_5"
+											},
+											"O": {
+												"cType": "child"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_3"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VTimelineItem",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_12",
+									"T": "prop"
+								},
+								"left": {
+									"H": "true",
+									"T": "prop"
+								},
+								"bottom": {
+									"H": "true",
+									"T": "prop"
+								},
+								"icon": {
+									"H": "'mdi-cloud-upload'",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VImg",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_18",
+													"T": "prop"
+												},
+												"src": {
+													"H": "'https://drdlnizplivxi.cloudfront.net/media/topic/logo/softtech_1554105274.jpg'",
+													"T": "prop"
+												},
+												"height": {
+													"H": "'300px'",
+													"T": "prop"
+												},
+												"width": {
+													"H": "'300px'",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Ghost",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_19",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_19"
+															},
+															"O": {
+																"cType": "child"
+															}
+														}
+													],
+													"cType": "scopedSlot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_18"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_12"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VTimeline",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VTimelineItem",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_2",
+									"T": "prop"
+								},
+								"icon": {
+									"H": "╬'mdi-table'╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VDataTable",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_4",
+													"T": "prop"
+												},
+												"headers": {
+													"H": "╬[]╠{}╠=╣text╩╠'Dessert (100g serving)'╩╩╠=╣align╩╠'start'╩╩╠=╣sortable╩╠false╩╩╠=╣value╩╠'name'╩╩╩╠{}╠=╣text╩╠'Calories'╩╩╠=╣value╩╠'calories'╩╩╠=╣sortable╩╠true╩╩╩╠{}╠=╣text╩╠'Fat (g)'╩╩╠=╣value╩╠'fat'╩╩╩╠{}╠=╣text╩╠'Carbs (g)'╩╩╠=╣value╩╠'carbs'╩╩╩╠{}╠=╣text╩╠'Protein (g)'╩╩╠=╣value╩╠'protein'╩╩╩╠{}╠=╣text╩╠'Iron (%)'╩╩╠=╣value╩╠'iron'╩╩╩╩╩",
+													"T": "prop"
+												},
+												"items": {
+													"H": "╬[]╠{}╠=╣name╩╠'Frozens Yogurt'╩╩╠=╣calories╩╠159╩╩╠=╣fat╩╠'6.0'╩╩╠=╣carbs╩╠24╩╩╠=╣protein╩╠'4.0'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Ice cream sandwich'╩╩╠=╣calories╩╠237╩╩╠=╣fat╩╠'9.0'╩╩╠=╣carbs╩╠37╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Eclair'╩╩╠=╣calories╩╠262╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠23╩╩╠=╣protein╩╠'6.0'╩╩╠=╣iron╩╠'7%'╩╩╩╠{}╠=╣name╩╠'Cupcake'╩╩╠=╣calories╩╠305╩╩╠=╣fat╩╠'3.7'╩╩╠=╣carbs╩╠67╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'8%'╩╩╩╠{}╠=╣name╩╠'Gingerbread'╩╩╠=╣calories╩╠356╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠49╩╩╠=╣protein╩╠'3.9'╩╩╠=╣iron╩╠'16%'╩╩╩╠{}╠=╣name╩╠'Jelly bean'╩╩╠=╣calories╩╠375╩╩╠=╣fat╩╠'0.0'╩╩╠=╣carbs╩╠94╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'0%'╩╩╩╠{}╠=╣name╩╠'Lollipop'╩╩╠=╣calories╩╠392╩╩╠=╣fat╩╠'0.2'╩╩╠=╣carbs╩╠98╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'2 %'╩╩╩╠{}╠=╣name╩╠'Honeycomb'╩╩╠=╣calories╩╠408╩╩╠=╣fat╩╠'3.2'╩╩╠=╣carbs╩╠87╩╩╠=╣protein╩╠'6.5'╩╩╠=╣iron╩╠'45%'╩╩╩╠{}╠=╣name╩╠'Donut'╩╩╠=╣calories╩╠452╩╩╠=╣fat╩╠'25.0'╩╩╠=╣carbs╩╠51╩╩╠=╣protein╩╠'4.9'╩╩╠=╣iron╩╠'22%'╩╩╩╠{}╠=╣name╩╠'KitKat'╩╩╠=╣calories╩╠518╩╩╠=╣fat╩╠'26.0'╩╩╠=╣carbs╩╠65╩╩╠=╣protein╩╠'7'╩╩╠=╣iron╩╠'6 %'╩╩╩╩╩",
+													"T": "prop"
+												},
+												"itemsPerPage": {
+													"H": "╬5╩╩",
+													"T": "prop"
+												},
+												"hideDefaultFooter": {
+													"H": "╬true╩╩",
+													"T": "prop"
+												},
+												"hideDefaultHeader": {
+													"H": "╬true╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_4"
+											},
+											"O": {
+												"cType": "child"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_2"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VTimelineItem",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_14",
+									"T": "prop"
+								},
+								"left": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"icon": {
+									"H": "╬'mdi-note-multiple-outline'╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VImg",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_16",
+													"T": "prop"
+												},
+												"src": {
+													"H": "╬'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/T%C3%BCrkiye_%C4%B0%C5%9F_Bankas%C4%B1_logo.svg/1200px-T%C3%BCrkiye_%C4%B0%C5%9F_Bankas%C4%B1_logo.svg.png'╩╩",
+													"T": "prop"
+												},
+												"height": {
+													"H": "╬'100px'╩╩",
+													"T": "prop"
+												},
+												"width": {
+													"H": "╬'400px'╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Ghost",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_17",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_17"
+															},
+															"O": {
+																"cType": "child"
+															}
+														}
+													],
+													"cType": "scopedSlot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_16"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_14"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VTimelineItem",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_3",
+									"T": "prop"
+								},
+								"right": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"hideDot": {
+									"H": "╬false╩╩",
+									"T": "prop"
+								},
+								"icon": {
+									"H": "╬'mdi-account-outline'╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_5",
+													"T": "prop"
+												},
+												"text": {
+													"H": "╬'Lorem Ipsum is simply dummy text of the printing and typesetting industry. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'╩╩",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'font-weight-bold'╩╩",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_5"
+											},
+											"O": {
+												"cType": "child"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_3"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VTimelineItem",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_12",
+									"T": "prop"
+								},
+								"left": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"bottom": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"icon": {
+									"H": "╬'mdi-cloud-upload'╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VImg",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_18",
+													"T": "prop"
+												},
+												"src": {
+													"H": "╬'https://drdlnizplivxi.cloudfront.net/media/topic/logo/softtech_1554105274.jpg'╩╩",
+													"T": "prop"
+												},
+												"height": {
+													"H": "╬'300px'╩╩",
+													"T": "prop"
+												},
+												"width": {
+													"H": "╬'300px'╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Ghost",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_19",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_19"
+															},
+															"O": {
+																"cType": "child"
+															}
+														}
+													],
+													"cType": "scopedSlot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_18"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_12"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {}
+};
+export default pjson

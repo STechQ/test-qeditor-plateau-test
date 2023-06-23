@@ -1,0 +1,957 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_35",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container container--fluid'",
+					"T": "class"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_34",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VMenu",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_37",
+																	"T": "prop"
+																},
+																"eager": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"attach": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"offsetY": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"left": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VCard",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_6",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "'blue lighten-5'",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VRow",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_8",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "VCol",
+																											"C": {
+																												"default": {
+																													"c": [
+																														{
+																															"T": "Ghost",
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_174",
+																																	"T": "prop"
+																																}
+																															},
+																															"E": {},
+																															"C": {},
+																															"_Editor": {
+																																"eID": "EdtrComp_174"
+																															}
+																														}
+																													],
+																													"cType": "slot"
+																												}
+																											},
+																											"E": {},
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_11",
+																													"T": "prop"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_11"
+																											},
+																											"O": {
+																												"cType": "slot"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_8"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						},
+																						{
+																							"T": "VRow",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_15",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "VCol",
+																											"C": {
+																												"default": {
+																													"c": [
+																														{
+																															"T": "VCheckbox",
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_94",
+																																	"T": "prop"
+																																},
+																																"color": {
+																																	"H": "'primary'",
+																																	"T": "prop"
+																																},
+																																"label": {
+																																	"H": "'My CheckBox'",
+																																	"T": "prop"
+																																},
+																																"visible": {
+																																	"H": "true",
+																																	"T": "prop"
+																																}
+																															},
+																															"E": {},
+																															"C": {},
+																															"_Editor": {
+																																"eID": "EdtrComp_94"
+																															},
+																															"O": {
+																																"cType": "slot"
+																															}
+																														},
+																														{
+																															"T": "VCheckbox",
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_140",
+																																	"T": "prop"
+																																},
+																																"color": {
+																																	"H": "'primary'",
+																																	"T": "prop"
+																																},
+																																"label": {
+																																	"H": "'My CheckBox'",
+																																	"T": "prop"
+																																},
+																																"visible": {
+																																	"H": "true",
+																																	"T": "prop"
+																																}
+																															},
+																															"E": {},
+																															"C": {},
+																															"_Editor": {
+																																"eID": "EdtrComp_140"
+																															},
+																															"O": {
+																																"cType": "slot"
+																															}
+																														},
+																														{
+																															"T": "VCheckbox",
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_133",
+																																	"T": "prop"
+																																},
+																																"color": {
+																																	"H": "'primary'",
+																																	"T": "prop"
+																																},
+																																"label": {
+																																	"H": "'My CheckBox'",
+																																	"T": "prop"
+																																},
+																																"visible": {
+																																	"H": "true",
+																																	"T": "prop"
+																																}
+																															},
+																															"E": {},
+																															"C": {},
+																															"_Editor": {
+																																"eID": "EdtrComp_133"
+																															},
+																															"O": {
+																																"cType": "slot"
+																															}
+																														}
+																													],
+																													"cType": "slot"
+																												}
+																											},
+																											"E": {},
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_16",
+																													"T": "prop"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_16"
+																											},
+																											"O": {
+																												"cType": "slot",
+																												"layout": {
+																													"dOpt": {
+																														"xs": [
+																															"d:d-flex",
+																															"fd:flex-row"
+																														]
+																													},
+																													"class": "d-flex flex-row"
+																												}
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_15"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_6"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																},
+																"activator": {
+																	"c": [
+																		{
+																			"T": "VBtn",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_43",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "'primary'",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"click": {
+																					"H": "on.click(mouseEvent)\r\nEdtrComp_37.qValue = true\r\n//Quick.createComponent({templateCompQID='EdtrComp_93', newCompQID='uniqueValue', place='default', placeQID='EdtrComp_11'})//question part",
+																					"P": "mouseEvent"
+																				}
+																			},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"C": {},
+																							"E": {},
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_44",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "'Test Button'",
+																									"T": "prop"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_44"
+																							},
+																							"O": {
+																								"cType": "child"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_43"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "scopedSlot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_37"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_47",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_47"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"a:align-end",
+															"j:justify-end"
+														]
+													},
+													"class": "d-flex align-end justify-end"
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_34"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_35"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		},
+		{
+			"T": "QLabel",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_93",
+					"T": "prop"
+				},
+				"tagType": {
+					"H": "'span'",
+					"T": "prop"
+				},
+				"text": {
+					"H": "'VMenu Created'",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "false",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_93"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		},
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_195",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"PostRender": {
+					"H": "Quick.createComponent({templateCompQID='EdtrComp_93', newCompQID='uniqueValue', place='default', placeQID='EdtrComp_11'})//question part",
+					"TO": 1
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_195"
+			},
+			"O": {
+				"cType": "child"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_35",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container container--fluid'╩╩",
+					"T": "class"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_34",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VMenu",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_37",
+																	"T": "prop"
+																},
+																"eager": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"attach": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"offsetY": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"left": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VCard",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_6",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "╬'blue lighten-5'╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VRow",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_8",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "VCol",
+																											"C": {
+																												"default": {
+																													"c": [
+																														{
+																															"T": "Ghost",
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_174",
+																																	"T": "prop"
+																																}
+																															},
+																															"E": {},
+																															"C": {},
+																															"_Editor": {
+																																"eID": "EdtrComp_174"
+																															},
+																															"O": {
+																																"cType": "child",
+																																"compDomClasses": "editor-ghost-comp"
+																															}
+																														}
+																													],
+																													"cType": "slot"
+																												}
+																											},
+																											"E": {},
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_11",
+																													"T": "prop"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_11"
+																											},
+																											"O": {
+																												"cType": "slot",
+																												"compDomClasses": "col"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_8"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "row"
+																							}
+																						},
+																						{
+																							"T": "VRow",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_15",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "VCol",
+																											"C": {
+																												"default": {
+																													"c": [
+																														{
+																															"T": "VCheckbox",
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_94",
+																																	"T": "prop"
+																																},
+																																"color": {
+																																	"H": "╬'primary'╩╩",
+																																	"T": "prop"
+																																},
+																																"label": {
+																																	"H": "╬'My CheckBox'╩╩",
+																																	"T": "prop"
+																																},
+																																"visible": {
+																																	"H": "╬true╩╩",
+																																	"T": "prop"
+																																}
+																															},
+																															"E": {},
+																															"C": {},
+																															"_Editor": {
+																																"eID": "EdtrComp_94"
+																															},
+																															"O": {
+																																"cType": "slot",
+																																"compDomClasses": "v-input theme--light v-input--selection-controls v-input--checkbox"
+																															}
+																														},
+																														{
+																															"T": "VCheckbox",
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_140",
+																																	"T": "prop"
+																																},
+																																"color": {
+																																	"H": "╬'primary'╩╩",
+																																	"T": "prop"
+																																},
+																																"label": {
+																																	"H": "╬'My CheckBox'╩╩",
+																																	"T": "prop"
+																																},
+																																"visible": {
+																																	"H": "╬true╩╩",
+																																	"T": "prop"
+																																}
+																															},
+																															"E": {},
+																															"C": {},
+																															"_Editor": {
+																																"eID": "EdtrComp_140"
+																															},
+																															"O": {
+																																"cType": "slot",
+																																"compDomClasses": "v-input theme--light v-input--selection-controls v-input--checkbox"
+																															}
+																														},
+																														{
+																															"T": "VCheckbox",
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_133",
+																																	"T": "prop"
+																																},
+																																"color": {
+																																	"H": "╬'primary'╩╩",
+																																	"T": "prop"
+																																},
+																																"label": {
+																																	"H": "╬'My CheckBox'╩╩",
+																																	"T": "prop"
+																																},
+																																"visible": {
+																																	"H": "╬true╩╩",
+																																	"T": "prop"
+																																}
+																															},
+																															"E": {},
+																															"C": {},
+																															"_Editor": {
+																																"eID": "EdtrComp_133"
+																															},
+																															"O": {
+																																"cType": "slot",
+																																"compDomClasses": "v-input theme--light v-input--selection-controls v-input--checkbox"
+																															}
+																														}
+																													],
+																													"cType": "slot"
+																												}
+																											},
+																											"E": {},
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_16",
+																													"T": "prop"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_16"
+																											},
+																											"O": {
+																												"cType": "slot",
+																												"layout": {
+																													"dOpt": {
+																														"xs": [
+																															"d:d-flex",
+																															"fd:flex-row"
+																														]
+																													},
+																													"class": "d-flex flex-row"
+																												},
+																												"compDomClasses": "col d-flex flex-row"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_15"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "row"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_6"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-card v-sheet theme--light blue lighten-5"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																},
+																"activator": {
+																	"c": [
+																		{
+																			"T": "VBtn",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_43",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "╬'primary'╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"click": {
+																					"H": "╬()╣.╣on╩╠click╩╩╠mouseEvent╩╩╬=╣.╣EdtrComp_37╩╠qValue╩╩╠true╩╩╩",
+																					"P": "mouseEvent"
+																				}
+																			},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"C": {},
+																							"E": {},
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_44",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "╬'Test Button'╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_44"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"compDomClasses": "q-label "
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_43"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary"
+																			}
+																		}
+																	],
+																	"cType": "scopedSlot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_37"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-menu v-menu--attached"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_47",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_47"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"a:align-end",
+															"j:justify-end"
+														]
+													},
+													"class": "d-flex align-end justify-end"
+												},
+												"compDomClasses": "col d-flex align-end justify-end"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_34"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_35"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container container--fluid"
+			}
+		},
+		{
+			"T": "QLabel",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_93",
+					"T": "prop"
+				},
+				"tagType": {
+					"H": "╬'span'╩╩",
+					"T": "prop"
+				},
+				"text": {
+					"H": "╬'VMenu Created'╩╩",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_93"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "q-label "
+			}
+		},
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_195",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"PostRender": {
+					"H": "╬()╣.╣Quick╩╠createComponent╩╩╠{}╠=╣templateCompQID╩╠'EdtrComp_93'╩╩╠=╣newCompQID╩╠'uniqueValue'╩╩╠=╣place╩╠'default'╩╩╠=╣placeQID╩╠'EdtrComp_11'╩╩╩╩╩",
+					"TO": 1
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_195"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": ""
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {}
+};
+export default pjson

@@ -1,0 +1,311 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VTreeview",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_3",
+					"T": "prop"
+				},
+				"color": {
+					"H": "'secondary'",
+					"T": "prop"
+				},
+				"selectedColor": {
+					"H": "'warning'",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				},
+				"items": {
+					"H": "[{name = 'Applications :', id = 1, disabled='locked', children=[{name='Calendar : app', id = 2}, {name='Chrome : app', id = 3}, {name='Webstorm : app', id = 4}]},{ name = 'Documents :', id = 5, children=[{name='vuetify :', id=6,children=[{name='src :', id = 7,children=[{name='index : ts', id = 8}, {name='bootstrap : ts', id = 9}]}]}, {name='material2 :', id=12,children=[{name='src :', id = 13,children=[{name='v-btn : ts', id = 14}, {name='v-card : ts', id = 15}, {name='v-window : ts', id = 16}]}]}]},{name='Download :', id = 17,children=[{name='October : pdf', id = 18}, {name='November : pdf', id = 19}, {name='Tutorial : html', id = 20}]},{name='Videos : ', id = 21,children=[{name='Tutorials :', id = 22,children=[{name='Basic layouts : mp4', id=23},{name='Advanced techniques : mp4', id=24},{name='All about app : dir', id=25}]}, {name='Intro : mov', id = 26}, {name='Conference introduction : avi', id = 27}]}]",
+					"T": "prop"
+				},
+				"activatable": {
+					"H": "true",
+					"T": "prop"
+				},
+				"hoverable": {
+					"H": "true",
+					"T": "prop"
+				},
+				"selectable": {
+					"H": "true",
+					"T": "prop"
+				},
+				"shaped": {
+					"H": "false",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_3"
+			},
+			"O": {
+				"cType": "slot",
+				"layout": {
+					"dOpt": {
+						"xs": []
+					},
+					"class": ""
+				}
+			}
+		},
+		{
+			"T": "VTreeview",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_4",
+					"T": "prop"
+				},
+				"color": {
+					"H": "'success'",
+					"T": "prop"
+				},
+				"selectedColor": {
+					"H": "'primary'",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				},
+				"items": {
+					"H": "[{name = 'Applications :', id = 1, children=[{name='Calendar : app', id = 2}, {name='Chrome : app', id = 3}, {name='Webstorm : app', id = 4}]},{ name = 'Documents :', id = 5, children=[{name='vuetify :', id=6,children=[{name='src :', id = 7,children=[{name='index : ts', id = 8}, {name='bootstrap : ts', id = 9}]}]}, {name='material2 :', id=12,children=[{name='src :', id = 13,children=[{name='v-btn : ts', id = 14}, {name='v-card : ts', id = 15}, {name='v-window : ts', id = 16}]}]}]},{name='Download :', id = 17,children=[{name='October : pdf', id = 18}, {name='November : pdf', id = 19}, {name='Tutorial : html', id = 20}]},{name='Videos : ', id = 21,children=[{name='Tutorials :', id = 22,children=[{name='Basic layouts : mp4', id=23},{name='Advanced techniques : mp4', id=24},{name='All about app : dir', id=25}]}, {name='Intro : mov', id = 26}, {name='Conference introduction : avi', id = 27}]}]",
+					"T": "prop"
+				},
+				"activatable": {
+					"H": "true",
+					"T": "prop"
+				},
+				"hoverable": {
+					"H": "false",
+					"T": "prop"
+				},
+				"openAll": {
+					"H": "false",
+					"T": "prop"
+				},
+				"shaped": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_4"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		},
+		{
+			"T": "VTreeview",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_5",
+					"T": "prop"
+				},
+				"color": {
+					"H": "'accent'",
+					"T": "prop"
+				},
+				"selectedColor": {
+					"H": "'primary'",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				},
+				"items": {
+					"H": "[{name = 'Applications :', id = 1, children=[{name='Calendar : app', id = 2}]},{ name = 'Documents :', id = 5, children=[{name='vuetify :', id=6,children=[{name='src :', id = 7,children=[{name='index : ts', id = 8}]}]}, {name='material2 :', id=12,children=[{name='src :', id = 13,children=[{name='v-btn : ts', id = 14}]}]}]}]",
+					"T": "prop"
+				},
+				"activatable": {
+					"H": "true",
+					"T": "prop"
+				},
+				"hoverable": {
+					"H": "false",
+					"T": "prop"
+				},
+				"openAll": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_5"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VTreeview",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_3",
+					"T": "prop"
+				},
+				"color": {
+					"H": "╬'secondary'╩╩",
+					"T": "prop"
+				},
+				"selectedColor": {
+					"H": "╬'warning'╩╩",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"items": {
+					"H": "╬[]╠{}╠=╣name╩╠'Applications :'╩╩╠=╣id╩╠1╩╩╠=╣disabled╩╠'locked'╩╩╠=╣children╩╠[]╠{}╠=╣name╩╠'Calendar : app'╩╩╠=╣id╩╠2╩╩╩╠{}╠=╣name╩╠'Chrome : app'╩╩╠=╣id╩╠3╩╩╩╠{}╠=╣name╩╠'Webstorm : app'╩╩╠=╣id╩╠4╩╩╩╩╩╩╠{}╠=╣name╩╠'Documents :'╩╩╠=╣id╩╠5╩╩╠=╣children╩╠[]╠{}╠=╣name╩╠'vuetify :'╩╩╠=╣id╩╠6╩╩╠=╣children╩╠[]╠{}╠=╣name╩╠'src :'╩╩╠=╣id╩╠7╩╩╠=╣children╩╠[]╠{}╠=╣name╩╠'index : ts'╩╩╠=╣id╩╠8╩╩╩╠{}╠=╣name╩╠'bootstrap : ts'╩╩╠=╣id╩╠9╩╩╩╩╩╩╩╩╩╠{}╠=╣name╩╠'material2 :'╩╩╠=╣id╩╠12╩╩╠=╣children╩╠[]╠{}╠=╣name╩╠'src :'╩╩╠=╣id╩╠13╩╩╠=╣children╩╠[]╠{}╠=╣name╩╠'v-btn : ts'╩╩╠=╣id╩╠14╩╩╩╠{}╠=╣name╩╠'v-card : ts'╩╩╠=╣id╩╠15╩╩╩╠{}╠=╣name╩╠'v-window : ts'╩╩╠=╣id╩╠16╩╩╩╩╩╩╩╩╩╩╩╩╠{}╠=╣name╩╠'Download :'╩╩╠=╣id╩╠17╩╩╠=╣children╩╠[]╠{}╠=╣name╩╠'October : pdf'╩╩╠=╣id╩╠18╩╩╩╠{}╠=╣name╩╠'November : pdf'╩╩╠=╣id╩╠19╩╩╩╠{}╠=╣name╩╠'Tutorial : html'╩╩╠=╣id╩╠20╩╩╩╩╩╩╠{}╠=╣name╩╠'Videos : '╩╩╠=╣id╩╠21╩╩╠=╣children╩╠[]╠{}╠=╣name╩╠'Tutorials :'╩╩╠=╣id╩╠22╩╩╠=╣children╩╠[]╠{}╠=╣name╩╠'Basic layouts : mp4'╩╩╠=╣id╩╠23╩╩╩╠{}╠=╣name╩╠'Advanced techniques : mp4'╩╩╠=╣id╩╠24╩╩╩╠{}╠=╣name╩╠'All about app : dir'╩╩╠=╣id╩╠25╩╩╩╩╩╩╠{}╠=╣name╩╠'Intro : mov'╩╩╠=╣id╩╠26╩╩╩╠{}╠=╣name╩╠'Conference introduction : avi'╩╩╠=╣id╩╠27╩╩╩╩╩╩╩╩",
+					"T": "prop"
+				},
+				"activatable": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"hoverable": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"selectable": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"shaped": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_3"
+			},
+			"O": {
+				"cType": "slot",
+				"layout": {
+					"dOpt": {
+						"xs": []
+					},
+					"class": ""
+				},
+				"compDomClasses": "v-treeview v-treeview--hoverable theme--light newDropBorder"
+			}
+		},
+		{
+			"T": "VTreeview",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_4",
+					"T": "prop"
+				},
+				"color": {
+					"H": "╬'success'╩╩",
+					"T": "prop"
+				},
+				"selectedColor": {
+					"H": "╬'primary'╩╩",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"items": {
+					"H": "╬[]╠{}╠=╣name╩╠'Applications :'╩╩╠=╣id╩╠1╩╩╠=╣children╩╠[]╠{}╠=╣name╩╠'Calendar : app'╩╩╠=╣id╩╠2╩╩╩╠{}╠=╣name╩╠'Chrome : app'╩╩╠=╣id╩╠3╩╩╩╠{}╠=╣name╩╠'Webstorm : app'╩╩╠=╣id╩╠4╩╩╩╩╩╩╠{}╠=╣name╩╠'Documents :'╩╩╠=╣id╩╠5╩╩╠=╣children╩╠[]╠{}╠=╣name╩╠'vuetify :'╩╩╠=╣id╩╠6╩╩╠=╣children╩╠[]╠{}╠=╣name╩╠'src :'╩╩╠=╣id╩╠7╩╩╠=╣children╩╠[]╠{}╠=╣name╩╠'index : ts'╩╩╠=╣id╩╠8╩╩╩╠{}╠=╣name╩╠'bootstrap : ts'╩╩╠=╣id╩╠9╩╩╩╩╩╩╩╩╩╠{}╠=╣name╩╠'material2 :'╩╩╠=╣id╩╠12╩╩╠=╣children╩╠[]╠{}╠=╣name╩╠'src :'╩╩╠=╣id╩╠13╩╩╠=╣children╩╠[]╠{}╠=╣name╩╠'v-btn : ts'╩╩╠=╣id╩╠14╩╩╩╠{}╠=╣name╩╠'v-card : ts'╩╩╠=╣id╩╠15╩╩╩╠{}╠=╣name╩╠'v-window : ts'╩╩╠=╣id╩╠16╩╩╩╩╩╩╩╩╩╩╩╩╠{}╠=╣name╩╠'Download :'╩╩╠=╣id╩╠17╩╩╠=╣children╩╠[]╠{}╠=╣name╩╠'October : pdf'╩╩╠=╣id╩╠18╩╩╩╠{}╠=╣name╩╠'November : pdf'╩╩╠=╣id╩╠19╩╩╩╠{}╠=╣name╩╠'Tutorial : html'╩╩╠=╣id╩╠20╩╩╩╩╩╩╠{}╠=╣name╩╠'Videos : '╩╩╠=╣id╩╠21╩╩╠=╣children╩╠[]╠{}╠=╣name╩╠'Tutorials :'╩╩╠=╣id╩╠22╩╩╠=╣children╩╠[]╠{}╠=╣name╩╠'Basic layouts : mp4'╩╩╠=╣id╩╠23╩╩╩╠{}╠=╣name╩╠'Advanced techniques : mp4'╩╩╠=╣id╩╠24╩╩╩╠{}╠=╣name╩╠'All about app : dir'╩╩╠=╣id╩╠25╩╩╩╩╩╩╠{}╠=╣name╩╠'Intro : mov'╩╩╠=╣id╩╠26╩╩╩╠{}╠=╣name╩╠'Conference introduction : avi'╩╩╠=╣id╩╠27╩╩╩╩╩╩╩╩",
+					"T": "prop"
+				},
+				"activatable": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"hoverable": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				},
+				"openAll": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				},
+				"shaped": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_4"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-treeview theme--light newDropBorder"
+			}
+		},
+		{
+			"T": "VTreeview",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_5",
+					"T": "prop"
+				},
+				"color": {
+					"H": "╬'accent'╩╩",
+					"T": "prop"
+				},
+				"selectedColor": {
+					"H": "╬'primary'╩╩",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"items": {
+					"H": "╬[]╠{}╠=╣name╩╠'Applications :'╩╩╠=╣id╩╠1╩╩╠=╣children╩╠[]╠{}╠=╣name╩╠'Calendar : app'╩╩╠=╣id╩╠2╩╩╩╩╩╩╠{}╠=╣name╩╠'Documents :'╩╩╠=╣id╩╠5╩╩╠=╣children╩╠[]╠{}╠=╣name╩╠'vuetify :'╩╩╠=╣id╩╠6╩╩╠=╣children╩╠[]╠{}╠=╣name╩╠'src :'╩╩╠=╣id╩╠7╩╩╠=╣children╩╠[]╠{}╠=╣name╩╠'index : ts'╩╩╠=╣id╩╠8╩╩╩╩╩╩╩╩╩╠{}╠=╣name╩╠'material2 :'╩╩╠=╣id╩╠12╩╩╠=╣children╩╠[]╠{}╠=╣name╩╠'src :'╩╩╠=╣id╩╠13╩╩╠=╣children╩╠[]╠{}╠=╣name╩╠'v-btn : ts'╩╩╠=╣id╩╠14╩╩╩╩╩╩╩╩╩╩╩╩╩╩",
+					"T": "prop"
+				},
+				"activatable": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"hoverable": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				},
+				"openAll": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_5"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-treeview theme--light newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {}
+};
+export default pjson

@@ -1,0 +1,667 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_10",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"PreRender": {
+					"H": "quick.Quick.bind({ bindedObject: \"store\", fields: [\"testField\"] });\r\nquick.store.set('testField', false);",
+					"I": true,
+					"HL": "TS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_10"
+			},
+			"O": {
+				"cType": "child"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container scroll-y'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VContainer",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_3",
+									"T": "prop"
+								},
+								"class": {
+									"H": "'layout align-center justify-center'",
+									"T": "class"
+								},
+								"visible": {
+									"H": "true",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VContainer",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_5",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'flex xs12'",
+													"T": "class"
+												},
+												"visible": {
+													"H": "true",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VToolbar",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_7",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "'cyan'",
+																	"T": "prop"
+																},
+																"dark": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_7"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														},
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_8",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "'primary'",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "store.get('testField')",
+																	"T": "prop"
+																},
+																"fab": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"dark": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"fixed": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"bottom": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"right": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "declare let document;\r\ndocument.body.scrollTop = 0;\r\ndocument.documentElement.scrollTop = 0;",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "TS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VIcon",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_15",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'mdi-arrow-up'",
+																					"T": "text"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_15"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_8"
+															},
+															"O": {
+																"cType": "slot"
+															},
+															"D": {
+																"scroll": {
+																	"handler": {
+																		"H": "declare let window;\r\nconst isWeb = quick.Quick.platform.isWeb();\r\nif (isWeb) {\r\n    if (typeof window === 'undefined') quick.return(undefined);\r\n    const top = window.pageYOffset || e.target.scrollTop || 0\r\n    quick.store.set(\"testField\", top > 20);\r\n}\r\n\r\n",
+																		"L": "handler",
+																		"HL": "TS",
+																		"P": "e:any"
+																	}
+																}
+															}
+														},
+														{
+															"T": "VCard",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_11",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "'white'",
+																	"T": "prop"
+																},
+																"elevation": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"outlined": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"height": {
+																	"H": "'2000px'",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_13",
+																					"T": "prop"
+																				},
+																				"tagType": {
+																					"H": "'span'",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'This example demonstrates how to create a \"scroll to top\" button that becomes visible when the user starts to scroll the page.'",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"class": {
+																					"H": "'v-card__title v-card__title--primary'",
+																					"T": "class"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_13"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_11"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_5"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_3"
+							},
+							"O": {
+								"cType": "slot",
+								"layout": {
+									"dOpt": {
+										"xs": [
+											"sp:pr-0",
+											"sp:pb-0",
+											"sp:pl-0",
+											"sp:pt-0"
+										]
+									},
+									"class": "pr-0 pb-0 pl-0 pt-0"
+								}
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_10",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"PreRender": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.Quick.bind({ bindedObject: \"store\", fields: [\"testField\"] });\r\nquick.store.set('testField', false);\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfMTBfUHJlUmVuZGVyX0UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJFZHRyQ29tcF8xMF9QcmVSZW5kZXJfRS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQ0EsS0FBSyxDQUFDLEtBQUssQ0FBQyxJQUFJLENBQUMsRUFBRSxZQUFZLEVBQUUsT0FBTyxFQUFFLE1BQU0sRUFBRSxDQUFDLFdBQVcsQ0FBQyxFQUFFLENBQUMsQ0FBQztBQUNuRSxLQUFLLENBQUMsS0FBSyxDQUFDLEdBQUcsQ0FBQyxXQUFXLEVBQUUsS0FBSyxDQUFDLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJcbnF1aWNrLlF1aWNrLmJpbmQoeyBiaW5kZWRPYmplY3Q6IFwic3RvcmVcIiwgZmllbGRzOiBbXCJ0ZXN0RmllbGRcIl0gfSk7XHJcbnF1aWNrLnN0b3JlLnNldCgndGVzdEZpZWxkJywgZmFsc2UpO1xuIGV4cG9ydHt9O1xuIl19",
+					"I": true,
+					"HL": "JS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_10"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container scroll-y'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VContainer",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_3",
+									"T": "prop"
+								},
+								"class": {
+									"H": "╬'layout align-center justify-center'╩╩",
+									"T": "class"
+								},
+								"visible": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VContainer",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_5",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'flex xs12'╩╩",
+													"T": "class"
+												},
+												"visible": {
+													"H": "╬true╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VToolbar",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_7",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "╬'cyan'╩╩",
+																	"T": "prop"
+																},
+																"dark": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_7"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-sheet theme--dark v-toolbar cyan newDropBorder"
+															}
+														},
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_8",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "╬'primary'╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬()╣.╣store╩╠get╩╩╠'testField'╩╩╩",
+																	"T": "prop"
+																},
+																"fab": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"dark": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"fixed": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"bottom": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"right": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ndocument.body.scrollTop = 0;\r\ndocument.documentElement.scrollTop = 0;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfOF9jbGlja19FLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiRWR0ckNvbXBfOF9jbGlja19FLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFFQSxRQUFRLENBQUMsSUFBSSxDQUFDLFNBQVMsR0FBRyxDQUFDLENBQUM7QUFDNUIsUUFBUSxDQUFDLGVBQWUsQ0FBQyxTQUFTLEdBQUcsQ0FBQyxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiZGVjbGFyZSB2YXIgbW91c2VFdmVudDp1bmtub3duIHwgdW5kZWZpbmVkXG5kZWNsYXJlIGxldCBkb2N1bWVudDtcclxuZG9jdW1lbnQuYm9keS5zY3JvbGxUb3AgPSAwO1xyXG5kb2N1bWVudC5kb2N1bWVudEVsZW1lbnQuc2Nyb2xsVG9wID0gMDtcbiBleHBvcnR7fTtcbiJdfQ==",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "JS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VIcon",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_15",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'mdi-arrow-up'╩╩",
+																					"T": "text"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_15"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-icon notranslate mdi mdi-arrow-up theme--dark newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_8"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-btn v-btn--bottom v-btn--contained v-btn--fab v-btn--fixed v-btn--right v-btn--round theme--dark v-size--default primary newDropBorder"
+															},
+															"D": {
+																"scroll": {
+																	"handler": {
+																		"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nvar isWeb = quick.Quick.platform.isWeb();\r\nif (isWeb) {\r\n    if (typeof window === 'undefined')\r\n        quick.return(undefined);\r\n    var top = window.pageYOffset || e.target.scrollTop || 0;\r\n    quick.store.set(\"testField\", top > 20);\r\n}\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfMTVfaGFuZGxlcl9ELmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiRWR0ckNvbXBfMTVfaGFuZGxlcl9ELnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFFQSxJQUFNLEtBQUssR0FBRyxLQUFLLENBQUMsS0FBSyxDQUFDLFFBQVEsQ0FBQyxLQUFLLEVBQUUsQ0FBQztBQUMzQyxJQUFJLEtBQUssRUFBRTtJQUNQLElBQUksT0FBTyxNQUFNLEtBQUssV0FBVztRQUFFLEtBQUssQ0FBQyxNQUFNLENBQUMsU0FBUyxDQUFDLENBQUM7SUFDM0QsSUFBTSxHQUFHLEdBQUcsTUFBTSxDQUFDLFdBQVcsSUFBSSxDQUFDLENBQUMsTUFBTSxDQUFDLFNBQVMsSUFBSSxDQUFDLENBQUE7SUFDekQsS0FBSyxDQUFDLEtBQUssQ0FBQyxHQUFHLENBQUMsV0FBVyxFQUFFLEdBQUcsR0FBRyxFQUFFLENBQUMsQ0FBQztDQUMxQyIsInNvdXJjZXNDb250ZW50IjpbImRlY2xhcmUgdmFyIGU6YW55XG5kZWNsYXJlIGxldCB3aW5kb3c7XHJcbmNvbnN0IGlzV2ViID0gcXVpY2suUXVpY2sucGxhdGZvcm0uaXNXZWIoKTtcclxuaWYgKGlzV2ViKSB7XHJcbiAgICBpZiAodHlwZW9mIHdpbmRvdyA9PT0gJ3VuZGVmaW5lZCcpIHF1aWNrLnJldHVybih1bmRlZmluZWQpO1xyXG4gICAgY29uc3QgdG9wID0gd2luZG93LnBhZ2VZT2Zmc2V0IHx8IGUudGFyZ2V0LnNjcm9sbFRvcCB8fCAwXHJcbiAgICBxdWljay5zdG9yZS5zZXQoXCJ0ZXN0RmllbGRcIiwgdG9wID4gMjApO1xyXG59XHJcblxyXG5cbiBleHBvcnR7fTtcbiJdfQ==",
+																		"L": "handler",
+																		"HL": "JS",
+																		"P": "e:any"
+																	}
+																}
+															}
+														},
+														{
+															"T": "VCard",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_11",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "╬'white'╩╩",
+																	"T": "prop"
+																},
+																"elevation": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"outlined": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"height": {
+																	"H": "╬'2000px'╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_13",
+																					"T": "prop"
+																				},
+																				"tagType": {
+																					"H": "╬'span'╩╩",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'This example demonstrates how to create a \"scroll to top\" button that becomes visible when the user starts to scroll the page.'╩╩",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"class": {
+																					"H": "╬'v-card__title v-card__title--primary'╩╩",
+																					"T": "class"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_13"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "q-label v-card__title v-card__title--primary newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_11"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-card v-sheet v-sheet--outlined theme--light elevation-0 white newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_5"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "container flex xs12 newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_3"
+							},
+							"O": {
+								"cType": "slot",
+								"layout": {
+									"dOpt": {
+										"xs": [
+											"sp:pr-0",
+											"sp:pb-0",
+											"sp:pl-0",
+											"sp:pt-0"
+										]
+									},
+									"class": "pr-0 pb-0 pl-0 pt-0"
+								},
+								"compDomClasses": "container layout align-center justify-center pr-0 pb-0 pl-0 pt-0 newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container scroll-y newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {}
+};
+export default pjson

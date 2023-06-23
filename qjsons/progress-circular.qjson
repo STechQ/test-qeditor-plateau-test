@@ -1,0 +1,2136 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_148",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container container--fluid'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VCard",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_155",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "true",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VRow",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_157",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VProgressCircular",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_146",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "'primary'",
+																					"T": "prop"
+																				},
+																				"qValue": {
+																					"H": "70",
+																					"T": "prop"
+																				},
+																				"indeterminate": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"button": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_146"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		},
+																		{
+																			"T": "VProgressCircular",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_177",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "'red'",
+																					"T": "prop"
+																				},
+																				"qValue": {
+																					"H": "70",
+																					"T": "prop"
+																				},
+																				"indeterminate": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"button": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_177"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"sp:ml-5",
+																							"sp:mr-5"
+																						]
+																					},
+																					"class": "ml-5 mr-5"
+																				}
+																			}
+																		},
+																		{
+																			"T": "VProgressCircular",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_174",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "'purple'",
+																					"T": "prop"
+																				},
+																				"qValue": {
+																					"H": "70",
+																					"T": "prop"
+																				},
+																				"indeterminate": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"button": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_174"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"sp:mr-5"
+																						]
+																					},
+																					"class": "mr-5"
+																				}
+																			}
+																		},
+																		{
+																			"T": "VProgressCircular",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_171",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "'green'",
+																					"T": "prop"
+																				},
+																				"qValue": {
+																					"H": "70",
+																					"T": "prop"
+																				},
+																				"indeterminate": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"button": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_171"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"sp:mr-5"
+																						]
+																					},
+																					"class": "mr-5"
+																				}
+																			}
+																		},
+																		{
+																			"T": "VProgressCircular",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_168",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "'amber'",
+																					"T": "prop"
+																				},
+																				"qValue": {
+																					"H": "70",
+																					"T": "prop"
+																				},
+																				"indeterminate": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"button": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_168"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_160",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_160"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"d:d-flex",
+																			"fd:flex-row",
+																			"a:align-center",
+																			"j:justify-center"
+																		]
+																	},
+																	"class": "d-flex flex-row align-center justify-center"
+																}
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_157"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_155"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_148"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_210",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container container--fluid'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VCard",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_211",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "true",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VRow",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_212",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VProgressCircular",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_214",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "'primary'",
+																					"T": "prop"
+																				},
+																				"qValue": {
+																					"H": "70",
+																					"T": "prop"
+																				},
+																				"indeterminate": {
+																					"H": "false",
+																					"T": "prop"
+																				},
+																				"button": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_214"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		},
+																		{
+																			"T": "VProgressCircular",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_215",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "'red'",
+																					"T": "prop"
+																				},
+																				"qValue": {
+																					"H": "80",
+																					"T": "prop"
+																				},
+																				"indeterminate": {
+																					"H": "false",
+																					"T": "prop"
+																				},
+																				"button": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_215"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"sp:ml-5",
+																							"sp:mr-5"
+																						]
+																					},
+																					"class": "ml-5 mr-5"
+																				}
+																			}
+																		},
+																		{
+																			"T": "VProgressCircular",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_216",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "'purple'",
+																					"T": "prop"
+																				},
+																				"qValue": {
+																					"H": "30",
+																					"T": "prop"
+																				},
+																				"indeterminate": {
+																					"H": "false",
+																					"T": "prop"
+																				},
+																				"button": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_216"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"sp:mr-5"
+																						]
+																					},
+																					"class": "mr-5"
+																				}
+																			}
+																		},
+																		{
+																			"T": "VProgressCircular",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_217",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "'green'",
+																					"T": "prop"
+																				},
+																				"qValue": {
+																					"H": "50",
+																					"T": "prop"
+																				},
+																				"indeterminate": {
+																					"H": "false",
+																					"T": "prop"
+																				},
+																				"button": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_217"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"sp:mr-5"
+																						]
+																					},
+																					"class": "mr-5"
+																				}
+																			}
+																		},
+																		{
+																			"T": "VProgressCircular",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_218",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "'amber'",
+																					"T": "prop"
+																				},
+																				"qValue": {
+																					"H": "90",
+																					"T": "prop"
+																				},
+																				"indeterminate": {
+																					"H": "false",
+																					"T": "prop"
+																				},
+																				"button": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_218"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_213",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_213"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"d:d-flex",
+																			"fd:flex-row",
+																			"a:align-center",
+																			"j:justify-center"
+																		]
+																	},
+																	"class": "d-flex flex-row align-center justify-center"
+																}
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_212"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_211"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_210"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_255",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container container--fluid'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VCard",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_256",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "true",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VRow",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_257",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VProgressCircular",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_259",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "'primary'",
+																					"T": "prop"
+																				},
+																				"qValue": {
+																					"H": "70",
+																					"T": "prop"
+																				},
+																				"indeterminate": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"button": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"size": {
+																					"H": "50",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_259"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		},
+																		{
+																			"T": "VProgressCircular",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_260",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "'red'",
+																					"T": "prop"
+																				},
+																				"qValue": {
+																					"H": "70",
+																					"T": "prop"
+																				},
+																				"indeterminate": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"button": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"width": {
+																					"H": "3",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_260"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"sp:ml-5",
+																							"sp:mr-5"
+																						]
+																					},
+																					"class": "ml-5 mr-5"
+																				}
+																			}
+																		},
+																		{
+																			"T": "VProgressCircular",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_261",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "'purple'",
+																					"T": "prop"
+																				},
+																				"qValue": {
+																					"H": "70",
+																					"T": "prop"
+																				},
+																				"indeterminate": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"button": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"width": {
+																					"H": "7",
+																					"T": "prop"
+																				},
+																				"size": {
+																					"H": "70",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_261"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"sp:mr-5"
+																						]
+																					},
+																					"class": "mr-5"
+																				}
+																			}
+																		},
+																		{
+																			"T": "VProgressCircular",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_262",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "'green'",
+																					"T": "prop"
+																				},
+																				"qValue": {
+																					"H": "70",
+																					"T": "prop"
+																				},
+																				"indeterminate": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"button": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"width": {
+																					"H": "3",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_262"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"sp:mr-5"
+																						]
+																					},
+																					"class": "mr-5"
+																				}
+																			}
+																		},
+																		{
+																			"T": "VProgressCircular",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_263",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "'amber'",
+																					"T": "prop"
+																				},
+																				"qValue": {
+																					"H": "70",
+																					"T": "prop"
+																				},
+																				"indeterminate": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"button": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"size": {
+																					"H": "50",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_263"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_258",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_258"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"d:d-flex",
+																			"fd:flex-row",
+																			"a:align-center",
+																			"j:justify-center"
+																		]
+																	},
+																	"class": "d-flex flex-row align-center justify-center"
+																}
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_257"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_256"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_255"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_148",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container container--fluid'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VCard",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_155",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VRow",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_157",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VProgressCircular",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_146",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "╬'primary'╩╩",
+																					"T": "prop"
+																				},
+																				"qValue": {
+																					"H": "╬70╩╩",
+																					"T": "prop"
+																				},
+																				"indeterminate": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"button": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_146"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-progress-circular v-progress-circular--indeterminate v-progress-circular--button primary--text newDropBorder"
+																			}
+																		},
+																		{
+																			"T": "VProgressCircular",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_177",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "╬'red'╩╩",
+																					"T": "prop"
+																				},
+																				"qValue": {
+																					"H": "╬70╩╩",
+																					"T": "prop"
+																				},
+																				"indeterminate": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"button": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_177"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"sp:ml-5",
+																							"sp:mr-5"
+																						]
+																					},
+																					"class": "ml-5 mr-5"
+																				},
+																				"compDomClasses": "v-progress-circular v-progress-circular--indeterminate v-progress-circular--button red--text ml-5 mr-5 newDropBorder"
+																			}
+																		},
+																		{
+																			"T": "VProgressCircular",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_174",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "╬'purple'╩╩",
+																					"T": "prop"
+																				},
+																				"qValue": {
+																					"H": "╬70╩╩",
+																					"T": "prop"
+																				},
+																				"indeterminate": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"button": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_174"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"sp:mr-5"
+																						]
+																					},
+																					"class": "mr-5"
+																				},
+																				"compDomClasses": "v-progress-circular v-progress-circular--indeterminate v-progress-circular--button purple--text mr-5 newDropBorder"
+																			}
+																		},
+																		{
+																			"T": "VProgressCircular",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_171",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "╬'green'╩╩",
+																					"T": "prop"
+																				},
+																				"qValue": {
+																					"H": "╬70╩╩",
+																					"T": "prop"
+																				},
+																				"indeterminate": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"button": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_171"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"sp:mr-5"
+																						]
+																					},
+																					"class": "mr-5"
+																				},
+																				"compDomClasses": "v-progress-circular v-progress-circular--indeterminate v-progress-circular--button green--text mr-5 newDropBorder"
+																			}
+																		},
+																		{
+																			"T": "VProgressCircular",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_168",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "╬'amber'╩╩",
+																					"T": "prop"
+																				},
+																				"qValue": {
+																					"H": "╬70╩╩",
+																					"T": "prop"
+																				},
+																				"indeterminate": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"button": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_168"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-progress-circular v-progress-circular--indeterminate v-progress-circular--button amber--text newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_160",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_160"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"d:d-flex",
+																			"fd:flex-row",
+																			"a:align-center",
+																			"j:justify-center"
+																		]
+																	},
+																	"class": "d-flex flex-row align-center justify-center"
+																},
+																"compDomClasses": "col d-flex flex-row align-center justify-center newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_157"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "row newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_155"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "v-card v-sheet theme--light newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_148"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container container--fluid newDropBorder"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_210",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container container--fluid'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VCard",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_211",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VRow",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_212",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VProgressCircular",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_214",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "╬'primary'╩╩",
+																					"T": "prop"
+																				},
+																				"qValue": {
+																					"H": "╬70╩╩",
+																					"T": "prop"
+																				},
+																				"indeterminate": {
+																					"H": "╬false╩╩",
+																					"T": "prop"
+																				},
+																				"button": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_214"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-progress-circular v-progress-circular--button primary--text newDropBorder"
+																			}
+																		},
+																		{
+																			"T": "VProgressCircular",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_215",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "╬'red'╩╩",
+																					"T": "prop"
+																				},
+																				"qValue": {
+																					"H": "╬80╩╩",
+																					"T": "prop"
+																				},
+																				"indeterminate": {
+																					"H": "╬false╩╩",
+																					"T": "prop"
+																				},
+																				"button": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_215"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"sp:ml-5",
+																							"sp:mr-5"
+																						]
+																					},
+																					"class": "ml-5 mr-5"
+																				},
+																				"compDomClasses": "v-progress-circular v-progress-circular--button red--text ml-5 mr-5 newDropBorder"
+																			}
+																		},
+																		{
+																			"T": "VProgressCircular",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_216",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "╬'purple'╩╩",
+																					"T": "prop"
+																				},
+																				"qValue": {
+																					"H": "╬30╩╩",
+																					"T": "prop"
+																				},
+																				"indeterminate": {
+																					"H": "╬false╩╩",
+																					"T": "prop"
+																				},
+																				"button": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_216"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"sp:mr-5"
+																						]
+																					},
+																					"class": "mr-5"
+																				},
+																				"compDomClasses": "v-progress-circular v-progress-circular--button purple--text mr-5 newDropBorder"
+																			}
+																		},
+																		{
+																			"T": "VProgressCircular",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_217",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "╬'green'╩╩",
+																					"T": "prop"
+																				},
+																				"qValue": {
+																					"H": "╬50╩╩",
+																					"T": "prop"
+																				},
+																				"indeterminate": {
+																					"H": "╬false╩╩",
+																					"T": "prop"
+																				},
+																				"button": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_217"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"sp:mr-5"
+																						]
+																					},
+																					"class": "mr-5"
+																				},
+																				"compDomClasses": "v-progress-circular v-progress-circular--button green--text mr-5 newDropBorder"
+																			}
+																		},
+																		{
+																			"T": "VProgressCircular",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_218",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "╬'amber'╩╩",
+																					"T": "prop"
+																				},
+																				"qValue": {
+																					"H": "╬90╩╩",
+																					"T": "prop"
+																				},
+																				"indeterminate": {
+																					"H": "╬false╩╩",
+																					"T": "prop"
+																				},
+																				"button": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_218"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-progress-circular v-progress-circular--button amber--text newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_213",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_213"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"d:d-flex",
+																			"fd:flex-row",
+																			"a:align-center",
+																			"j:justify-center"
+																		]
+																	},
+																	"class": "d-flex flex-row align-center justify-center"
+																},
+																"compDomClasses": "col d-flex flex-row align-center justify-center newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_212"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "row newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_211"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "v-card v-sheet theme--light newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_210"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container container--fluid newDropBorder"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_255",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container container--fluid'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VCard",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_256",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VRow",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_257",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VCol",
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VProgressCircular",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_259",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "╬'primary'╩╩",
+																					"T": "prop"
+																				},
+																				"qValue": {
+																					"H": "╬70╩╩",
+																					"T": "prop"
+																				},
+																				"indeterminate": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"button": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"size": {
+																					"H": "╬50╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_259"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-progress-circular v-progress-circular--indeterminate v-progress-circular--button primary--text newDropBorder"
+																			}
+																		},
+																		{
+																			"T": "VProgressCircular",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_260",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "╬'red'╩╩",
+																					"T": "prop"
+																				},
+																				"qValue": {
+																					"H": "╬70╩╩",
+																					"T": "prop"
+																				},
+																				"indeterminate": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"button": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"width": {
+																					"H": "╬3╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_260"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"sp:ml-5",
+																							"sp:mr-5"
+																						]
+																					},
+																					"class": "ml-5 mr-5"
+																				},
+																				"compDomClasses": "v-progress-circular v-progress-circular--indeterminate v-progress-circular--button red--text ml-5 mr-5 newDropBorder"
+																			}
+																		},
+																		{
+																			"T": "VProgressCircular",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_261",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "╬'purple'╩╩",
+																					"T": "prop"
+																				},
+																				"qValue": {
+																					"H": "╬70╩╩",
+																					"T": "prop"
+																				},
+																				"indeterminate": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"button": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"width": {
+																					"H": "╬7╩╩",
+																					"T": "prop"
+																				},
+																				"size": {
+																					"H": "╬70╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_261"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"sp:mr-5"
+																						]
+																					},
+																					"class": "mr-5"
+																				},
+																				"compDomClasses": "v-progress-circular v-progress-circular--indeterminate v-progress-circular--button purple--text mr-5 newDropBorder"
+																			}
+																		},
+																		{
+																			"T": "VProgressCircular",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_262",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "╬'green'╩╩",
+																					"T": "prop"
+																				},
+																				"qValue": {
+																					"H": "╬70╩╩",
+																					"T": "prop"
+																				},
+																				"indeterminate": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"button": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"width": {
+																					"H": "╬3╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_262"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"sp:mr-5"
+																						]
+																					},
+																					"class": "mr-5"
+																				},
+																				"compDomClasses": "v-progress-circular v-progress-circular--indeterminate v-progress-circular--button green--text mr-5 newDropBorder"
+																			}
+																		},
+																		{
+																			"T": "VProgressCircular",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_263",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "╬'amber'╩╩",
+																					"T": "prop"
+																				},
+																				"qValue": {
+																					"H": "╬70╩╩",
+																					"T": "prop"
+																				},
+																				"indeterminate": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"button": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"size": {
+																					"H": "╬50╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_263"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-progress-circular v-progress-circular--indeterminate v-progress-circular--button amber--text newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_258",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_258"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"d:d-flex",
+																			"fd:flex-row",
+																			"a:align-center",
+																			"j:justify-center"
+																		]
+																	},
+																	"class": "d-flex flex-row align-center justify-center"
+																},
+																"compDomClasses": "col d-flex flex-row align-center justify-center newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_257"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "row newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_256"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "v-card v-sheet theme--light newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_255"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container container--fluid newDropBorder"
+			}
+		}
+	],
+	"lrids": {
+		"tr-TR": {
+			"InDefault": "'Aktif'",
+			"DeclaredInvalid": "'Geçersiz-Döviz Kodu Değişikliği'",
+			"Replaced": "'Geçersiz-Dönüştürme'",
+			"true": "'Evet'",
+			"false": "'Hayır'",
+			"lbl_baslik": "'Döviz Tanım Ekranı'",
+			"lbl_currencyDesc": "'Döviz Kodu Açıklaması'",
+			"lbl_currencyCode": "'Döviz Kodu'",
+			"lbl_minUnitCode": "'Alt Birim Kodu'",
+			"lbl_convertable": "'Convertible Durumu'",
+			"lbl_status": "'Durum'",
+			"lbl_minUnitShName": "'Alt Birim Kodu Açıklaması'",
+			"lbl_minUnitamt": "'Alt Birim Büyüklüğü'",
+			"lbl_roundOffamt": "'Yuvarlama Adımı'",
+			"lbl_save": "'Kayıt işlemini onaylıyor musunuz ?'",
+			"lbl_close": "'Vazgeç'",
+			"lbl_yes": "'Evet'",
+			"lbl_no": "'Hayır'",
+			"lbl_kaydet": "'Kaydet'",
+			"label_Error_Title": "'Kayıt Başarısız'",
+			"CURRENCY_CODE_MUST_UNIQUE": "'Döviz kodu sistemde kayıtlıdır.'",
+			"lbl_clear": "'Temizle'",
+			"serviceResponse.data.fault.objectErrors[0].message": "'Döviz kodu sistemde kayıtlıdır.\t'"
+		},
+		"en-US": {
+			"InDefault": "'InDefault'",
+			"DeclaredInvalid": "'DeclaredInvalid'",
+			"Replaced": "'Replaced'",
+			"true": "'True'",
+			"false": "'False'",
+			"lbl_baslik": "'Create Currency'",
+			"lbl_currencyDesc": "'Description'",
+			"lbl_currencyCode": "'Currency Code'",
+			"lbl_minUnitCode": "'Minor Unit Short Name'",
+			"lbl_convertable": "'Convertable'",
+			"lbl_status": "'Status'",
+			"lbl_minUnitShName": "'Minor Unit Short Name'",
+			"lbl_minUnitamt": "'Minor Unit Amount'",
+			"lbl_roundOffamt": "'Round Off Amount'",
+			"lbl_save": "'Do you approve the registration?'",
+			"lbl_close": "'Close'",
+			"lbl_yes": "'Yes'",
+			"lbl_no": "'No'",
+			"lbl_kaydet": "'Save'",
+			"label_Error_Title": "'Error'",
+			"CURRENCY_CODE_MUST_UNIQUE": "'The currency code is registered in the system.'",
+			"lbl_clear": "'Clear'",
+			"serviceResponse.data.fault.objectErrors[0].message": "'The currency code is registered in the system.\t'"
+		}
+	},
+	"clrids": {
+		"tr-TR": {
+			"InDefault": "╬'Aktif'╩╩",
+			"DeclaredInvalid": "╬'Geçersiz-Döviz Kodu Değişikliği'╩╩",
+			"Replaced": "╬'Geçersiz-Dönüştürme'╩╩",
+			"true": "╬'Evet'╩╩",
+			"false": "╬'Hayır'╩╩",
+			"lbl_baslik": "╬'Döviz Tanım Ekranı'╩╩",
+			"lbl_currencyDesc": "╬'Döviz Kodu Açıklaması'╩╩",
+			"lbl_currencyCode": "╬'Döviz Kodu'╩╩",
+			"lbl_minUnitCode": "╬'Alt Birim Kodu'╩╩",
+			"lbl_convertable": "╬'Convertible Durumu'╩╩",
+			"lbl_status": "╬'Durum'╩╩",
+			"lbl_minUnitShName": "╬'Alt Birim Kodu Açıklaması'╩╩",
+			"lbl_minUnitamt": "╬'Alt Birim Büyüklüğü'╩╩",
+			"lbl_roundOffamt": "╬'Yuvarlama Adımı'╩╩",
+			"lbl_save": "╬'Kayıt işlemini onaylıyor musunuz ?'╩╩",
+			"lbl_close": "╬'Vazgeç'╩╩",
+			"lbl_yes": "╬'Evet'╩╩",
+			"lbl_no": "╬'Hayır'╩╩",
+			"lbl_kaydet": "╬'Kaydet'╩╩",
+			"label_Error_Title": "╬'Kayıt Başarısız'╩╩",
+			"CURRENCY_CODE_MUST_UNIQUE": "╬'Döviz kodu sistemde kayıtlıdır.'╩╩",
+			"lbl_clear": "╬'Temizle'╩╩",
+			"serviceResponse.data.fault.objectErrors[0].message": "╬'Döviz kodu sistemde kayıtlıdır.\t'╩╩"
+		},
+		"en-US": {
+			"InDefault": "╬'InDefault'╩╩",
+			"DeclaredInvalid": "╬'DeclaredInvalid'╩╩",
+			"Replaced": "╬'Replaced'╩╩",
+			"true": "╬'True'╩╩",
+			"false": "╬'False'╩╩",
+			"lbl_baslik": "╬'Create Currency'╩╩",
+			"lbl_currencyDesc": "╬'Description'╩╩",
+			"lbl_currencyCode": "╬'Currency Code'╩╩",
+			"lbl_minUnitCode": "╬'Minor Unit Short Name'╩╩",
+			"lbl_convertable": "╬'Convertable'╩╩",
+			"lbl_status": "╬'Status'╩╩",
+			"lbl_minUnitShName": "╬'Minor Unit Short Name'╩╩",
+			"lbl_minUnitamt": "╬'Minor Unit Amount'╩╩",
+			"lbl_roundOffamt": "╬'Round Off Amount'╩╩",
+			"lbl_save": "╬'Do you approve the registration?'╩╩",
+			"lbl_close": "╬'Close'╩╩",
+			"lbl_yes": "╬'Yes'╩╩",
+			"lbl_no": "╬'No'╩╩",
+			"lbl_kaydet": "╬'Save'╩╩",
+			"label_Error_Title": "╬'Error'╩╩",
+			"CURRENCY_CODE_MUST_UNIQUE": "╬'The currency code is registered in the system.'╩╩",
+			"lbl_clear": "╬'Clear'╩╩",
+			"serviceResponse.data.fault.objectErrors[0].message": "╬'The currency code is registered in the system.\t'╩╩"
+		}
+	}
+};
+export default pjson

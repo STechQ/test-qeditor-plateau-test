@@ -1,0 +1,619 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1211",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container container--fluid'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VCard",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_1213",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "true",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VContainer",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_1215",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'container container--fluid'",
+													"T": "class"
+												},
+												"visible": {
+													"H": "true",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_1315",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "'span'",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "'V-File Input İmage packer özelliği'",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_1315"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														},
+														{
+															"T": "VFileInput",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_19",
+																	"T": "prop"
+																},
+																"placeholder": {
+																	"H": "'Select a file(Placeholder)'",
+																	"T": "prop"
+																},
+																"accept": {
+																	"H": "'image/*'",
+																	"T": "attr"
+																}
+															},
+															"E": {
+																"change": {
+																	"H": "quick.EM.trace(components.EdtrComp_19.accept)\r\nvar reader = new FileReader();\r\n\r\ndebugger\r\nif(components.EdtrComp_19.qValue.type=='text/plain'){\r\n        reader.readAsText(value)\r\n}\r\nelse{\r\n        reader.readAsDataURL(value)\r\n}\r\n reader.onload = () => {\r\n         //(<any>components.EdtrComp_19).text=reader.result\r\n         (<any>components.EdtrComp_170).src=reader.result\r\n\r\n          }\r\n",
+																	"P": "value:{ lastModified: number; lastModifiedDate: Date; name: string; size: number; type: string; desc: string; }",
+																	"HL": "TS"
+																}
+															},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_19"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted v-text-field--placeholder v-file-input newDropBorder"
+															}
+														},
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_17",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "'white'",
+																	"T": "prop"
+																},
+																"depressed": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"fab": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"block": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"absolute": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"fixed": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"outlined": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"regular": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"large": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"tile": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"rounded": {
+																	"H": "false",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "//(<any>components.EdtrComp_19).$children[0].$el.click()\r\n//(<any>components.EdtrComp_19)['$refs'].input.click()\r\n(<any>components.EdtrComp_19).browse()",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "TS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VAvatar",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_168",
+																					"T": "prop"
+																				},
+																				"class": {
+																					"H": "'primary'",
+																					"T": "class"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VImg",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_170",
+																									"T": "prop"
+																								},
+																								"eager": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"height": {
+																									"H": "'50'",
+																									"T": "prop"
+																								},
+																								"src": {
+																									"H": "'https://cdn.pixabay.com/photo/2016/01/03/00/43/upload-1118929_1280.png'",
+																									"T": "prop"
+																								},
+																								"width": {
+																									"H": "'50'",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_170"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_168"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": []
+																					},
+																					"class": ""
+																				}
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_17"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-btn v-btn--contained v-btn--fab v-btn--round theme--light v-size--default primary newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_1215"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_1213"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_1211"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1211",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container container--fluid'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VCard",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_1213",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VContainer",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_1215",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'container container--fluid'╩╩",
+													"T": "class"
+												},
+												"visible": {
+													"H": "╬true╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_1315",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "╬'span'╩╩",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬'V-File Input İmage packer özelliği'╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_1315"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "q-label newDropBorder"
+															}
+														},
+														{
+															"T": "VFileInput",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_19",
+																	"T": "prop"
+																},
+																"placeholder": {
+																	"H": "╬'Select a file(Placeholder)'╩╩",
+																	"T": "prop"
+																},
+																"accept": {
+																	"H": "╬'image/*'╩╩",
+																	"T": "attr"
+																}
+															},
+															"E": {
+																"change": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.EM.trace(components.EdtrComp_19.accept);\r\nvar reader = new FileReader();\r\ndebugger;\r\nif (components.EdtrComp_19.qValue.type == 'text/plain') {\r\n    reader.readAsText(value);\r\n}\r\nelse {\r\n    reader.readAsDataURL(value);\r\n}\r\nreader.onload = function () {\r\n    //(<any>components.EdtrComp_19).text=reader.result\r\n    components.EdtrComp_170.src = reader.result;\r\n};\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfMTlfY2hhbmdlX0UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJFZHRyQ29tcF8xOV9jaGFuZ2VfRS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQ0EsS0FBSyxDQUFDLEVBQUUsQ0FBQyxLQUFLLENBQUMsVUFBVSxDQUFDLFdBQVcsQ0FBQyxNQUFNLENBQUMsQ0FBQTtBQUM3QyxJQUFJLE1BQU0sR0FBRyxJQUFJLFVBQVUsRUFBRSxDQUFDO0FBRTlCLFFBQVEsQ0FBQTtBQUNSLElBQUcsVUFBVSxDQUFDLFdBQVcsQ0FBQyxNQUFNLENBQUMsSUFBSSxJQUFFLFlBQVksRUFBQztJQUM1QyxNQUFNLENBQUMsVUFBVSxDQUFDLEtBQUssQ0FBQyxDQUFBO0NBQy9CO0tBQ0c7SUFDSSxNQUFNLENBQUMsYUFBYSxDQUFDLEtBQUssQ0FBQyxDQUFBO0NBQ2xDO0FBQ0EsTUFBTSxDQUFDLE1BQU0sR0FBRztJQUNSLGtEQUFrRDtJQUM1QyxVQUFVLENBQUMsWUFBYSxDQUFDLEdBQUcsR0FBQyxNQUFNLENBQUMsTUFBTSxDQUFBO0FBRS9DLENBQUMsQ0FBQSIsInNvdXJjZXNDb250ZW50IjpbImRlY2xhcmUgdmFyIHZhbHVlOnsgbGFzdE1vZGlmaWVkOiBudW1iZXI7IGxhc3RNb2RpZmllZERhdGU6IERhdGU7IG5hbWU6IHN0cmluZzsgc2l6ZTogbnVtYmVyOyB0eXBlOiBzdHJpbmc7IGRlc2M6IHN0cmluZzsgfVxucXVpY2suRU0udHJhY2UoY29tcG9uZW50cy5FZHRyQ29tcF8xOS5hY2NlcHQpXHJcbnZhciByZWFkZXIgPSBuZXcgRmlsZVJlYWRlcigpO1xyXG5cclxuZGVidWdnZXJcclxuaWYoY29tcG9uZW50cy5FZHRyQ29tcF8xOS5xVmFsdWUudHlwZT09J3RleHQvcGxhaW4nKXtcclxuICAgICAgICByZWFkZXIucmVhZEFzVGV4dCh2YWx1ZSlcclxufVxyXG5lbHNle1xyXG4gICAgICAgIHJlYWRlci5yZWFkQXNEYXRhVVJMKHZhbHVlKVxyXG59XHJcbiByZWFkZXIub25sb2FkID0gKCkgPT4ge1xyXG4gICAgICAgICAvLyg8YW55PmNvbXBvbmVudHMuRWR0ckNvbXBfMTkpLnRleHQ9cmVhZGVyLnJlc3VsdFxyXG4gICAgICAgICAoPGFueT5jb21wb25lbnRzLkVkdHJDb21wXzE3MCkuc3JjPXJlYWRlci5yZXN1bHRcclxuXHJcbiAgICAgICAgICB9XHJcblxuIGV4cG9ydHt9O1xuIl19",
+																	"P": "value:{ lastModified: number; lastModifiedDate: Date; name: string; size: number; type: string; desc: string; }",
+																	"HL": "JS"
+																}
+															},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_19"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted v-text-field--placeholder v-file-input undefined newDropBorder"
+															}
+														},
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_17",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "╬'white'╩╩",
+																	"T": "prop"
+																},
+																"depressed": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"fab": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"block": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"absolute": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"fixed": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"outlined": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"regular": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"large": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"tile": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"rounded": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\n//(<any>components.EdtrComp_19).$children[0].$el.click()\r\n//(<any>components.EdtrComp_19)['$refs'].input.click()\r\ncomponents.EdtrComp_19.browse();\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfMTdfY2xpY2tfRS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkVkdHJDb21wXzE3X2NsaWNrX0UudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUNBLHdEQUF3RDtBQUN4RCxzREFBc0Q7QUFDaEQsVUFBVSxDQUFDLFdBQVksQ0FBQyxNQUFNLEVBQUUsQ0FBQSIsInNvdXJjZXNDb250ZW50IjpbImRlY2xhcmUgdmFyIG1vdXNlRXZlbnQ6dW5rbm93biB8IHVuZGVmaW5lZFxuLy8oPGFueT5jb21wb25lbnRzLkVkdHJDb21wXzE5KS4kY2hpbGRyZW5bMF0uJGVsLmNsaWNrKClcclxuLy8oPGFueT5jb21wb25lbnRzLkVkdHJDb21wXzE5KVsnJHJlZnMnXS5pbnB1dC5jbGljaygpXHJcbig8YW55PmNvbXBvbmVudHMuRWR0ckNvbXBfMTkpLmJyb3dzZSgpXG4gZXhwb3J0e307XG4iXX0=",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "JS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VAvatar",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_168",
+																					"T": "prop"
+																				},
+																				"class": {
+																					"H": "╬'primary'╩╩",
+																					"T": "class"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VImg",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_170",
+																									"T": "prop"
+																								},
+																								"eager": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"height": {
+																									"H": "╬'50'╩╩",
+																									"T": "prop"
+																								},
+																								"src": {
+																									"H": "╬'https://cdn.pixabay.com/photo/2016/01/03/00/43/upload-1118929_1280.png'╩╩",
+																									"T": "prop"
+																								},
+																								"width": {
+																									"H": "╬'50'╩╩",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_170"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "v-image v-responsive theme--light newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_168"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": []
+																					},
+																					"class": ""
+																				},
+																				"compDomClasses": "v-avatar primary newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_17"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-btn v-btn--contained v-btn--fab v-btn--round theme--light v-size--default white newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_1215"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "container container--fluid newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_1213"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "v-card v-sheet theme--light newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_1211"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container container--fluid newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {}
+};
+export default pjson

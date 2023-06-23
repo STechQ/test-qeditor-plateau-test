@@ -1,0 +1,244 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "DxTreeList",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_3",
+					"T": "prop"
+				},
+				"dataSource": {
+					"H": "[{id= 1, hid= 0, Fullname= 'John Heart', Prefix= 'Mr.', Title= 'CEO', City= 'Los Angeles', State= 'California', Email= 'jheart@dx-email.com'},\n      {id= 2, hid= 0, Fullname= 'Samantha Bright', Prefix= 'Dr.', Title= 'COO', City= 'Los Angeles', State= 'California', Email= 'samanthab@dx-email.com'}, \n      {id= 3, hid= 0, Fullname= 'Arthur Miller', Prefix= 'Mr.', Title= 'CTO', City= 'Denver', State= 'Colorado', Email= 'arthurm@dx-email.com'}, \n      {id= 4, hid= 0, Fullname= 'Robert Reagan', Prefix= 'Mr.', Title= 'CMO', City= 'Bentonville', State= 'Arkansas', Email= 'robertr@dx-email.com' }, \n      {id= 5, hid= 1, Fullname= 'Greta Sims', Prefix= 'Ms.', Title= 'HR Manager', City= 'Atlanta', State= 'Georgia', Email= 'gretas@dx-email.com' }, \n      {id= 6, hid= 3, Fullname= 'Barb Banks', Prefix= 'Mrs.', Title= 'Support Manager', City= 'Phoenix', State= 'Arizona', Email= 'barbarab@dx-email.com' }, \n      {id= 7, hid= 2, Fullname= 'Kevin Carter', Prefix= 'Mr.', Title= 'Shipping Manager', City= 'San Diego', State= 'California', Email= 'kevinc@dx-email.com' }, \n      {id= 8, hid= 5, Fullname= 'Cindy Stanwick', Prefix= 'Ms.', Title= 'HR Assistant', City= 'Little Rock', State= 'Arkansas', Email= 'cindys@dx-email.com' }, \n      {id= 9, hid= 8, Fullname= 'Sammy Hill', Prefix= 'Mr.', Title= 'Sales Assistant', City= 'Pasadena', State= 'California', Email= 'sammyh@dx-email.com' }, \n      {id= 10, hid= 7, Fullname= 'Mary Stern', Prefix= 'Ms.', Title= 'Shipping Assistant', City= 'Beaver', State= 'Utah', Email= 'marys@dx-email.com' }, \n      {id= 11, hid= 7, Fullname= 'Robin Cosworth', Prefix= 'Mrs.', Title= 'Shipping Assistant', City= 'Los Angeles', State= 'California', Email= 'robinc@dx-email.com' },\n      {id= 12, hid= 6, Fullname= 'James Anderson', Prefix= 'Mr.', Title= 'Support Assistant', City= 'Atlanta', State= 'Georgia', Email= 'jamesa@dx-email.com' }, \n      {id= 13, hid= 6, Fullname= 'Antony Remmen', Prefix= 'Mr.', Title= 'Support Assistant', City= 'Boise', State= 'Idaho', Email= 'anthonyr@dx-email.com' }, \n      {id= 14, hid= 8, Fullname= 'Olivia Peyton', Prefix= 'Mrs.', Title= 'Sales Assistant', City= 'Atlanta', State= 'Georgia', Email= 'oliviap@dx-email.com' },  \n      {id= 17, hid= 5, Fullname= 'Sandy Bright', Prefix= 'Ms.', Title= 'Benefits Coordinator', City= 'Denver', State= 'Colorado', Email= 'sandrab@dx-email.com' },\n      {id= 18, hid= 0, Fullname= 'Ed Holmes', Prefix= 'Dr.', Title= 'Sales Manager', City= 'Malibu', State= 'California', Email= 'edwardh@dx-email.com'}]",
+					"T": "prop"
+				},
+				"columnAutoWidth": {
+					"H": "true",
+					"T": "prop"
+				},
+				"showColumnLines": {
+					"H": "true",
+					"T": "prop"
+				},
+				"showRowLines": {
+					"H": "true",
+					"T": "prop"
+				},
+				"rootValue": {
+					"H": "'0'",
+					"T": "prop"
+				},
+				"keyExpr": {
+					"H": "'id'",
+					"T": "prop"
+				},
+				"parentIdExpr": {
+					"H": "'hid'",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_3"
+			},
+			"O": {
+				"cType": "scopedSlot",
+				"forceUpdateAfterPropertySetting": true
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_4",
+					"T": "prop"
+				},
+				"color": {
+					"H": "'primary'",
+					"T": "prop"
+				},
+				"depressed": {
+					"H": "true",
+					"T": "prop"
+				},
+				"elevation": {
+					"H": "0",
+					"T": "prop"
+				},
+				"height": {
+					"H": "'40px'",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "(<any>components.EdtrComp_3).instance.filter([['State','=','California'],'or',['Prefix','=','Mr.']])",
+					"P": "mouseEvent:unknown | undefined",
+					"HL": "TS"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_5",
+									"T": "prop"
+								},
+								"text": {
+									"H": "'1 Kolonda 2 Filtre Uygulama'",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_5"
+							},
+							"O": {
+								"cType": "child"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_4"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "DxTreeList",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_3",
+					"T": "prop"
+				},
+				"dataSource": {
+					"H": "╬[]╠{}╠=╣id╩╠1╩╩╠=╣hid╩╠0╩╩╠=╣Fullname╩╠'John Heart'╩╩╠=╣Prefix╩╠'Mr.'╩╩╠=╣Title╩╠'CEO'╩╩╠=╣City╩╠'Los Angeles'╩╩╠=╣State╩╠'California'╩╩╠=╣Email╩╠'jheart@dx-email.com'╩╩╩╠{}╠=╣id╩╠2╩╩╠=╣hid╩╠0╩╩╠=╣Fullname╩╠'Samantha Bright'╩╩╠=╣Prefix╩╠'Dr.'╩╩╠=╣Title╩╠'COO'╩╩╠=╣City╩╠'Los Angeles'╩╩╠=╣State╩╠'California'╩╩╠=╣Email╩╠'samanthab@dx-email.com'╩╩╩╠{}╠=╣id╩╠3╩╩╠=╣hid╩╠0╩╩╠=╣Fullname╩╠'Arthur Miller'╩╩╠=╣Prefix╩╠'Mr.'╩╩╠=╣Title╩╠'CTO'╩╩╠=╣City╩╠'Denver'╩╩╠=╣State╩╠'Colorado'╩╩╠=╣Email╩╠'arthurm@dx-email.com'╩╩╩╠{}╠=╣id╩╠4╩╩╠=╣hid╩╠0╩╩╠=╣Fullname╩╠'Robert Reagan'╩╩╠=╣Prefix╩╠'Mr.'╩╩╠=╣Title╩╠'CMO'╩╩╠=╣City╩╠'Bentonville'╩╩╠=╣State╩╠'Arkansas'╩╩╠=╣Email╩╠'robertr@dx-email.com'╩╩╩╠{}╠=╣id╩╠5╩╩╠=╣hid╩╠1╩╩╠=╣Fullname╩╠'Greta Sims'╩╩╠=╣Prefix╩╠'Ms.'╩╩╠=╣Title╩╠'HR Manager'╩╩╠=╣City╩╠'Atlanta'╩╩╠=╣State╩╠'Georgia'╩╩╠=╣Email╩╠'gretas@dx-email.com'╩╩╩╠{}╠=╣id╩╠6╩╩╠=╣hid╩╠3╩╩╠=╣Fullname╩╠'Barb Banks'╩╩╠=╣Prefix╩╠'Mrs.'╩╩╠=╣Title╩╠'Support Manager'╩╩╠=╣City╩╠'Phoenix'╩╩╠=╣State╩╠'Arizona'╩╩╠=╣Email╩╠'barbarab@dx-email.com'╩╩╩╠{}╠=╣id╩╠7╩╩╠=╣hid╩╠2╩╩╠=╣Fullname╩╠'Kevin Carter'╩╩╠=╣Prefix╩╠'Mr.'╩╩╠=╣Title╩╠'Shipping Manager'╩╩╠=╣City╩╠'San Diego'╩╩╠=╣State╩╠'California'╩╩╠=╣Email╩╠'kevinc@dx-email.com'╩╩╩╠{}╠=╣id╩╠8╩╩╠=╣hid╩╠5╩╩╠=╣Fullname╩╠'Cindy Stanwick'╩╩╠=╣Prefix╩╠'Ms.'╩╩╠=╣Title╩╠'HR Assistant'╩╩╠=╣City╩╠'Little Rock'╩╩╠=╣State╩╠'Arkansas'╩╩╠=╣Email╩╠'cindys@dx-email.com'╩╩╩╠{}╠=╣id╩╠9╩╩╠=╣hid╩╠8╩╩╠=╣Fullname╩╠'Sammy Hill'╩╩╠=╣Prefix╩╠'Mr.'╩╩╠=╣Title╩╠'Sales Assistant'╩╩╠=╣City╩╠'Pasadena'╩╩╠=╣State╩╠'California'╩╩╠=╣Email╩╠'sammyh@dx-email.com'╩╩╩╠{}╠=╣id╩╠10╩╩╠=╣hid╩╠7╩╩╠=╣Fullname╩╠'Mary Stern'╩╩╠=╣Prefix╩╠'Ms.'╩╩╠=╣Title╩╠'Shipping Assistant'╩╩╠=╣City╩╠'Beaver'╩╩╠=╣State╩╠'Utah'╩╩╠=╣Email╩╠'marys@dx-email.com'╩╩╩╠{}╠=╣id╩╠11╩╩╠=╣hid╩╠7╩╩╠=╣Fullname╩╠'Robin Cosworth'╩╩╠=╣Prefix╩╠'Mrs.'╩╩╠=╣Title╩╠'Shipping Assistant'╩╩╠=╣City╩╠'Los Angeles'╩╩╠=╣State╩╠'California'╩╩╠=╣Email╩╠'robinc@dx-email.com'╩╩╩╠{}╠=╣id╩╠12╩╩╠=╣hid╩╠6╩╩╠=╣Fullname╩╠'James Anderson'╩╩╠=╣Prefix╩╠'Mr.'╩╩╠=╣Title╩╠'Support Assistant'╩╩╠=╣City╩╠'Atlanta'╩╩╠=╣State╩╠'Georgia'╩╩╠=╣Email╩╠'jamesa@dx-email.com'╩╩╩╠{}╠=╣id╩╠13╩╩╠=╣hid╩╠6╩╩╠=╣Fullname╩╠'Antony Remmen'╩╩╠=╣Prefix╩╠'Mr.'╩╩╠=╣Title╩╠'Support Assistant'╩╩╠=╣City╩╠'Boise'╩╩╠=╣State╩╠'Idaho'╩╩╠=╣Email╩╠'anthonyr@dx-email.com'╩╩╩╠{}╠=╣id╩╠14╩╩╠=╣hid╩╠8╩╩╠=╣Fullname╩╠'Olivia Peyton'╩╩╠=╣Prefix╩╠'Mrs.'╩╩╠=╣Title╩╠'Sales Assistant'╩╩╠=╣City╩╠'Atlanta'╩╩╠=╣State╩╠'Georgia'╩╩╠=╣Email╩╠'oliviap@dx-email.com'╩╩╩╠{}╠=╣id╩╠17╩╩╠=╣hid╩╠5╩╩╠=╣Fullname╩╠'Sandy Bright'╩╩╠=╣Prefix╩╠'Ms.'╩╩╠=╣Title╩╠'Benefits Coordinator'╩╩╠=╣City╩╠'Denver'╩╩╠=╣State╩╠'Colorado'╩╩╠=╣Email╩╠'sandrab@dx-email.com'╩╩╩╠{}╠=╣id╩╠18╩╩╠=╣hid╩╠0╩╩╠=╣Fullname╩╠'Ed Holmes'╩╩╠=╣Prefix╩╠'Dr.'╩╩╠=╣Title╩╠'Sales Manager'╩╩╠=╣City╩╠'Malibu'╩╩╠=╣State╩╠'California'╩╩╠=╣Email╩╠'edwardh@dx-email.com'╩╩╩╩╩",
+					"T": "prop"
+				},
+				"columnAutoWidth": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"showColumnLines": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"showRowLines": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"rootValue": {
+					"H": "╬'0'╩╩",
+					"T": "prop"
+				},
+				"keyExpr": {
+					"H": "╬'id'╩╩",
+					"T": "prop"
+				},
+				"parentIdExpr": {
+					"H": "╬'hid'╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_3"
+			},
+			"O": {
+				"cType": "scopedSlot",
+				"forceUpdateAfterPropertySetting": true,
+				"compDomClasses": "dx-widget dx-visibility-change-handler dx-treelist newDropBorder"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_4",
+					"T": "prop"
+				},
+				"color": {
+					"H": "╬'primary'╩╩",
+					"T": "prop"
+				},
+				"depressed": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"elevation": {
+					"H": "╬0╩╩",
+					"T": "prop"
+				},
+				"height": {
+					"H": "╬'40px'╩╩",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ncomponents.EdtrComp_3.instance.filter([['State', '=', 'California'], 'or', ['Prefix', '=', 'Mr.']]);\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfNF9jbGlja19FLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiRWR0ckNvbXBfNF9jbGlja19FLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDTSxVQUFVLENBQUMsVUFBVyxDQUFDLFFBQVEsQ0FBQyxNQUFNLENBQUMsQ0FBQyxDQUFDLE9BQU8sRUFBQyxHQUFHLEVBQUMsWUFBWSxDQUFDLEVBQUMsSUFBSSxFQUFDLENBQUMsUUFBUSxFQUFDLEdBQUcsRUFBQyxLQUFLLENBQUMsQ0FBQyxDQUFDLENBQUEiLCJzb3VyY2VzQ29udGVudCI6WyJkZWNsYXJlIHZhciBtb3VzZUV2ZW50OnVua25vd24gfCB1bmRlZmluZWRcbig8YW55PmNvbXBvbmVudHMuRWR0ckNvbXBfMykuaW5zdGFuY2UuZmlsdGVyKFtbJ1N0YXRlJywnPScsJ0NhbGlmb3JuaWEnXSwnb3InLFsnUHJlZml4JywnPScsJ01yLiddXSlcbiBleHBvcnR7fTtcbiJdfQ==",
+					"P": "mouseEvent:unknown | undefined",
+					"HL": "JS"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_5",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬'1 Kolonda 2 Filtre Uygulama'╩╩",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_5"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "q-label newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_4"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--depressed theme--light elevation-0 v-size--default primary newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {}
+};
+export default pjson

@@ -1,0 +1,418 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VCarouselItem",
+			"P": {
+				"ID": {
+					"H": "tmpCrsItemLatePayment",
+					"T": "prop"
+				},
+				"Render": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VBtn",
+							"P": {
+								"ID": {
+									"H": "btnDeleteItem",
+									"T": "prop"
+								},
+								"color": {
+									"H": "'primary'",
+									"T": "prop"
+								}
+							},
+							"E": {
+								"click": {
+									"H": "debugger;\r\nconst component = quick.Quick.findCreateComponentRelative(quick.this,\"tmpCrsItemLatePayment\")\r\nquick.Quick.deleteComponent(component);\r\n",
+									"P": "mouseEvent:unknown | undefined",
+									"HL": "TS"
+								}
+							},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "QLabel",
+											"C": {},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "lblDeleteItem",
+													"T": "prop"
+												},
+												"text": {
+													"H": "'Delete'",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_13"
+											},
+											"O": {
+												"cType": "child",
+												"compDomClasses": ""
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_12"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "VTextField",
+							"P": {
+								"ID": {
+									"H": "txtCarouselItem",
+									"T": "prop"
+								},
+								"label": {
+									"H": "data.carouselLabel",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_10"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": ""
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_7"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": ""
+			}
+		},
+		{
+			"T": "VCarousel",
+			"P": {
+				"ID": {
+					"H": "CrsLatePayments",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "Ghost",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_4",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "editor-ghost-comp newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_3"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-window v-item-group theme--dark v-carousel newDropBorder"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_6",
+					"T": "prop"
+				},
+				"color": {
+					"H": "'primary'",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "let index = quick.store.get('index') ?? 1\r\n\r\nquick.Quick.createComponent({\r\n    templateCompQID: 'tmpCrsItemLatePayment',\r\n    newCompQID: 'dynamicCarouselItem' + index,\r\n    dataSource: {carouselLabel: \"carousel_\" + index},\r\n    place: <any>'before',\r\n    placeQID: 'CrsLatePayments'\r\n});\r\n\r\nquick.store.set('index', index + 1)",
+					"P": "mouseEvent:unknown | undefined",
+					"HL": "TS"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_8",
+									"T": "prop"
+								},
+								"text": {
+									"H": "'Crate'",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_8"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "q-label newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_6"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary newDropBorder"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VCarouselItem",
+			"P": {
+				"ID": {
+					"H": "tmpCrsItemLatePayment",
+					"T": "prop"
+				},
+				"Render": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VBtn",
+							"P": {
+								"ID": {
+									"H": "btnDeleteItem",
+									"T": "prop"
+								},
+								"color": {
+									"H": "╬'primary'╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {
+								"click": {
+									"H": "\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\ndebugger;\r\nvar component = quick.Quick.findCreateComponentRelative(quick.this, \"tmpCrsItemLatePayment\");\r\nquick.Quick.deleteComponent(component);\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYnRuRGVsZXRlSXRlbV9jbGlja19FLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiYnRuRGVsZXRlSXRlbV9jbGlja19FLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQ0EsUUFBUSxDQUFDO0FBQ1QsSUFBTSxTQUFTLEdBQUcsS0FBSyxDQUFDLEtBQUssQ0FBQywyQkFBMkIsQ0FBQyxLQUFLLENBQUMsSUFBSSxFQUFDLHVCQUF1QixDQUFDLENBQUE7QUFDN0YsS0FBSyxDQUFDLEtBQUssQ0FBQyxlQUFlLENBQUMsU0FBUyxDQUFDLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJkZWNsYXJlIHZhciBtb3VzZUV2ZW50OnVua25vd24gfCB1bmRlZmluZWRcbmRlYnVnZ2VyO1xyXG5jb25zdCBjb21wb25lbnQgPSBxdWljay5RdWljay5maW5kQ3JlYXRlQ29tcG9uZW50UmVsYXRpdmUocXVpY2sudGhpcyxcInRtcENyc0l0ZW1MYXRlUGF5bWVudFwiKVxyXG5xdWljay5RdWljay5kZWxldGVDb21wb25lbnQoY29tcG9uZW50KTtcclxuXG4gZXhwb3J0e307XG4iXX0=",
+									"P": "mouseEvent:unknown | undefined",
+									"HL": "JS"
+								}
+							},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "QLabel",
+											"C": {},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "lblDeleteItem",
+													"T": "prop"
+												},
+												"text": {
+													"H": "╬'Delete'╩╩",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_13"
+											},
+											"O": {
+												"cType": "child",
+												"compDomClasses": ""
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_12"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "VTextField",
+							"P": {
+								"ID": {
+									"H": "txtCarouselItem",
+									"T": "prop"
+								},
+								"label": {
+									"H": "╬.╣data╩╠carouselLabel╩╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_10"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": ""
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_7"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": ""
+			}
+		},
+		{
+			"T": "VCarousel",
+			"P": {
+				"ID": {
+					"H": "CrsLatePayments",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "Ghost",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_4",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "editor-ghost-comp newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_3"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-window v-item-group theme--dark v-carousel newDropBorder"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_6",
+					"T": "prop"
+				},
+				"color": {
+					"H": "╬'primary'╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "\"use strict\";\r\nvar _a;\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nvar index = (_a = quick.store.get('index')) !== null && _a !== void 0 ? _a : 1;\r\nquick.Quick.createComponent({\r\n    templateCompQID: 'tmpCrsItemLatePayment',\r\n    newCompQID: 'dynamicCarouselItem' + index,\r\n    dataSource: { carouselLabel: \"carousel_\" + index },\r\n    place: 'before',\r\n    placeQID: 'CrsLatePayments'\r\n});\r\nquick.store.set('index', index + 1);\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfNl9jbGlja19FLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiRWR0ckNvbXBfNl9jbGlja19FLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7OztBQUNBLElBQUksS0FBSyxTQUFHLEtBQUssQ0FBQyxLQUFLLENBQUMsR0FBRyxDQUFDLE9BQU8sQ0FBQyxtQ0FBSSxDQUFDLENBQUE7QUFFekMsS0FBSyxDQUFDLEtBQUssQ0FBQyxlQUFlLENBQUM7SUFDeEIsZUFBZSxFQUFFLHVCQUF1QjtJQUN4QyxVQUFVLEVBQUUscUJBQXFCLEdBQUcsS0FBSztJQUN6QyxVQUFVLEVBQUUsRUFBQyxhQUFhLEVBQUUsV0FBVyxHQUFHLEtBQUssRUFBQztJQUNoRCxLQUFLLEVBQU8sUUFBUTtJQUNwQixRQUFRLEVBQUUsaUJBQWlCO0NBQzlCLENBQUMsQ0FBQztBQUVILEtBQUssQ0FBQyxLQUFLLENBQUMsR0FBRyxDQUFDLE9BQU8sRUFBRSxLQUFLLEdBQUcsQ0FBQyxDQUFDLENBQUEiLCJzb3VyY2VzQ29udGVudCI6WyJkZWNsYXJlIHZhciBtb3VzZUV2ZW50OnVua25vd24gfCB1bmRlZmluZWRcbmxldCBpbmRleCA9IHF1aWNrLnN0b3JlLmdldCgnaW5kZXgnKSA/PyAxXHJcblxyXG5xdWljay5RdWljay5jcmVhdGVDb21wb25lbnQoe1xyXG4gICAgdGVtcGxhdGVDb21wUUlEOiAndG1wQ3JzSXRlbUxhdGVQYXltZW50JyxcclxuICAgIG5ld0NvbXBRSUQ6ICdkeW5hbWljQ2Fyb3VzZWxJdGVtJyArIGluZGV4LFxyXG4gICAgZGF0YVNvdXJjZToge2Nhcm91c2VsTGFiZWw6IFwiY2Fyb3VzZWxfXCIgKyBpbmRleH0sXHJcbiAgICBwbGFjZTogPGFueT4nYmVmb3JlJyxcclxuICAgIHBsYWNlUUlEOiAnQ3JzTGF0ZVBheW1lbnRzJ1xyXG59KTtcclxuXHJcbnF1aWNrLnN0b3JlLnNldCgnaW5kZXgnLCBpbmRleCArIDEpXG4gZXhwb3J0e307XG4iXX0=",
+					"P": "mouseEvent:unknown | undefined",
+					"HL": "JS"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_8",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬'Crate'╩╩",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_8"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "q-label newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_6"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {}
+};
+export default pjson

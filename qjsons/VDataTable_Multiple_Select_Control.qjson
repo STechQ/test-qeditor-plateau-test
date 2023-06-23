@@ -1,0 +1,97 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VDataTable",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				},
+				"headers": {
+					"H": "[{ text = 'Dessert (100g serving)', align= 'start', sortable= false, value= 'name'},\n{ text = 'Calories', value= 'calories', sortable = true },\n{ text = 'Fat (g)', value= 'fat' },\n{ text = 'Protein (g)', value= 'protein' },\n{ text = 'Iron (%)', value= 'iron' }]",
+					"T": "prop"
+				},
+				"items": {
+					"H": "[{name = 'Frozens Yogurt', calories = 159, fat = '6.0', carbs = 24, protein = '4.0', iron = '1%'},\n{name = 'Ice cream sandwich', calories = 237, fat = '9.0', carbs = 37, protein = '4.3', iron = '1%'},\n{name = 'Eclair', calories = 262, fat = '16.0', carbs = 23, protein = '6.0', iron = '7%'},\n{name = 'Cupcake', calories = 375, fat = '3.7', carbs = 67, protein = '4.3', iron = '8%'},\n{name = 'Gingerbread',calories = 356, fat = '16.0', carbs = 49, protein = '3.9', iron = '16%'},\n{name = 'Jelly bean', calories = 375,  fat = '0.0', carbs = 94, protein = '0.0', iron = '0%'},\n{name = 'Lollipop', calories = 392, fat = '0.2', carbs = 98, protein = '0.0', iron = '2 %'},\n{name = 'Honeycomb', calories = 408, fat = '3.2', carbs = 87, protein = '6.5', iron = '45%'},\n{name = 'Lollipop', calories = 452, fat = '25.0', carbs = 51, protein = '4.9', iron = '22%'},\n{name = 'KitKat', calories = 518, fat = '26.0', carbs = 65, protein = '7', iron=  '6 %'}]",
+					"T": "prop"
+				},
+				"itemsPerPage": {
+					"H": "20",
+					"T": "prop"
+				},
+				"itemKey": {
+					"H": "'name'",
+					"T": "prop"
+				},
+				"showSelect": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"item-selected": {
+					"H": "\r\ndebugger;\r\n\r\nif (rowObj.value) {\r\n\r\n  let selections = (<any>components.EdtrComp_1).selection;\r\n\r\n  let items = <any[]>components.EdtrComp_1.items;\r\n  items?.forEach(item => {\r\n    if (item.name != rowObj.item.name && Object.keys(selections).indexOf(item.name) == -1 && item.calories == rowObj.item.calories) {\r\n      (<any>components.EdtrComp_1).select(item);\r\n    }\r\n  });\r\n}\r\n",
+					"P": "rowObj:IVDataTableItemSelect",
+					"HL": "TS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VDataTable",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				},
+				"headers": {
+					"H": "╬[]╠{}╠=╣text╩╠'Dessert (100g serving)'╩╩╠=╣align╩╠'start'╩╩╠=╣sortable╩╠false╩╩╠=╣value╩╠'name'╩╩╩╠{}╠=╣text╩╠'Calories'╩╩╠=╣value╩╠'calories'╩╩╠=╣sortable╩╠true╩╩╩╠{}╠=╣text╩╠'Fat (g)'╩╩╠=╣value╩╠'fat'╩╩╩╠{}╠=╣text╩╠'Protein (g)'╩╩╠=╣value╩╠'protein'╩╩╩╠{}╠=╣text╩╠'Iron (%)'╩╩╠=╣value╩╠'iron'╩╩╩╩╩",
+					"T": "prop"
+				},
+				"items": {
+					"H": "╬[]╠{}╠=╣name╩╠'Frozens Yogurt'╩╩╠=╣calories╩╠159╩╩╠=╣fat╩╠'6.0'╩╩╠=╣carbs╩╠24╩╩╠=╣protein╩╠'4.0'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Ice cream sandwich'╩╩╠=╣calories╩╠237╩╩╠=╣fat╩╠'9.0'╩╩╠=╣carbs╩╠37╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Eclair'╩╩╠=╣calories╩╠262╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠23╩╩╠=╣protein╩╠'6.0'╩╩╠=╣iron╩╠'7%'╩╩╩╠{}╠=╣name╩╠'Cupcake'╩╩╠=╣calories╩╠375╩╩╠=╣fat╩╠'3.7'╩╩╠=╣carbs╩╠67╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'8%'╩╩╩╠{}╠=╣name╩╠'Gingerbread'╩╩╠=╣calories╩╠356╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠49╩╩╠=╣protein╩╠'3.9'╩╩╠=╣iron╩╠'16%'╩╩╩╠{}╠=╣name╩╠'Jelly bean'╩╩╠=╣calories╩╠375╩╩╠=╣fat╩╠'0.0'╩╩╠=╣carbs╩╠94╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'0%'╩╩╩╠{}╠=╣name╩╠'Lollipop'╩╩╠=╣calories╩╠392╩╩╠=╣fat╩╠'0.2'╩╩╠=╣carbs╩╠98╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'2 %'╩╩╩╠{}╠=╣name╩╠'Honeycomb'╩╩╠=╣calories╩╠408╩╩╠=╣fat╩╠'3.2'╩╩╠=╣carbs╩╠87╩╩╠=╣protein╩╠'6.5'╩╩╠=╣iron╩╠'45%'╩╩╩╠{}╠=╣name╩╠'Lollipop'╩╩╠=╣calories╩╠452╩╩╠=╣fat╩╠'25.0'╩╩╠=╣carbs╩╠51╩╩╠=╣protein╩╠'4.9'╩╩╠=╣iron╩╠'22%'╩╩╩╠{}╠=╣name╩╠'KitKat'╩╩╠=╣calories╩╠518╩╩╠=╣fat╩╠'26.0'╩╩╠=╣carbs╩╠65╩╩╠=╣protein╩╠'7'╩╩╠=╣iron╩╠'6 %'╩╩╩╩╩",
+					"T": "prop"
+				},
+				"itemsPerPage": {
+					"H": "╬20╩╩",
+					"T": "prop"
+				},
+				"itemKey": {
+					"H": "╬'name'╩╩",
+					"T": "prop"
+				},
+				"showSelect": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"item-selected": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ndebugger;\r\nif (rowObj.value) {\r\n    var selections_1 = components.EdtrComp_1.selection;\r\n    var items = components.EdtrComp_1.items;\r\n    items === null || items === void 0 ? void 0 : items.forEach(function (item) {\r\n        if (item.name != rowObj.item.name && Object.keys(selections_1).indexOf(item.name) == -1 && item.calories == rowObj.item.calories) {\r\n            components.EdtrComp_1.select(item);\r\n        }\r\n    });\r\n}\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfMV9pdGVtLXNlbGVjdGVkX0UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJFZHRyQ29tcF8xX2l0ZW0tc2VsZWN0ZWRfRS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBRUEsUUFBUSxDQUFDO0FBRVQsSUFBSSxNQUFNLENBQUMsS0FBSyxFQUFFO0lBRWhCLElBQUksWUFBVSxHQUFTLFVBQVUsQ0FBQyxVQUFXLENBQUMsU0FBUyxDQUFDO0lBRXhELElBQUksS0FBSyxHQUFVLFVBQVUsQ0FBQyxVQUFVLENBQUMsS0FBSyxDQUFDO0lBQy9DLEtBQUssYUFBTCxLQUFLLHVCQUFMLEtBQUssQ0FBRSxPQUFPLENBQUMsVUFBQSxJQUFJO1FBQ2pCLElBQUksSUFBSSxDQUFDLElBQUksSUFBSSxNQUFNLENBQUMsSUFBSSxDQUFDLElBQUksSUFBSSxNQUFNLENBQUMsSUFBSSxDQUFDLFlBQVUsQ0FBQyxDQUFDLE9BQU8sQ0FBQyxJQUFJLENBQUMsSUFBSSxDQUFDLElBQUksQ0FBQyxDQUFDLElBQUksSUFBSSxDQUFDLFFBQVEsSUFBSSxNQUFNLENBQUMsSUFBSSxDQUFDLFFBQVEsRUFBRTtZQUN4SCxVQUFVLENBQUMsVUFBVyxDQUFDLE1BQU0sQ0FBQyxJQUFJLENBQUMsQ0FBQztTQUMzQztJQUNILENBQUMsRUFBRTtDQUNKIiwic291cmNlc0NvbnRlbnQiOlsiZGVjbGFyZSB2YXIgcm93T2JqOklWRGF0YVRhYmxlSXRlbVNlbGVjdFxuXHJcbmRlYnVnZ2VyO1xyXG5cclxuaWYgKHJvd09iai52YWx1ZSkge1xyXG5cclxuICBsZXQgc2VsZWN0aW9ucyA9ICg8YW55PmNvbXBvbmVudHMuRWR0ckNvbXBfMSkuc2VsZWN0aW9uO1xyXG5cclxuICBsZXQgaXRlbXMgPSA8YW55W10+Y29tcG9uZW50cy5FZHRyQ29tcF8xLml0ZW1zO1xyXG4gIGl0ZW1zPy5mb3JFYWNoKGl0ZW0gPT4ge1xyXG4gICAgaWYgKGl0ZW0ubmFtZSAhPSByb3dPYmouaXRlbS5uYW1lICYmIE9iamVjdC5rZXlzKHNlbGVjdGlvbnMpLmluZGV4T2YoaXRlbS5uYW1lKSA9PSAtMSAmJiBpdGVtLmNhbG9yaWVzID09IHJvd09iai5pdGVtLmNhbG9yaWVzKSB7XHJcbiAgICAgICg8YW55PmNvbXBvbmVudHMuRWR0ckNvbXBfMSkuc2VsZWN0KGl0ZW0pO1xyXG4gICAgfVxyXG4gIH0pO1xyXG59XHJcblxuIGV4cG9ydHt9O1xuIl19",
+					"P": "rowObj:IVDataTableItemSelect",
+					"HL": "JS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "v-data-table v-data-table--has-bottom theme--light newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {}
+};
+export default pjson

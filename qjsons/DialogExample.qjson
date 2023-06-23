@@ -1,0 +1,948 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VRow",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_59",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'d-flex justify-center'",
+					"T": "class"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VBtn",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_60",
+									"T": "prop"
+								},
+								"color": {
+									"H": "'info'",
+									"T": "prop"
+								},
+								"regular": {
+									"H": "true",
+									"T": "prop"
+								}
+							},
+							"E": {
+								"click": {
+									"H": "EdtrComp_63.value= !EdtrComp_63.value"
+								}
+							},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "QLabel",
+											"C": {},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_62",
+													"T": "prop"
+												},
+												"text": {
+													"H": "'Click me'",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_62"
+											},
+											"O": {
+												"cType": "child"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_60"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_59"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		},
+		{
+			"T": "VRow",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_65",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'d-flex justify-center'",
+					"T": "class"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VDialog",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_63",
+									"T": "prop"
+								},
+								"width": {
+									"H": "500",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCard",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_67",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_71",
+																	"T": "prop"
+																},
+																"class": {
+																	"H": "'d-flex justify-end'",
+																	"T": "class"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VBtn",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_80",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "'secondary'",
+																					"T": "prop"
+																				},
+																				"regular": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"click": {
+																					"H": "EdtrComp_63.value=false"
+																				}
+																			},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VIcon",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_389",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "'mdi-close'",
+																									"T": "text"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_389"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_80"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_71"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														},
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_215",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VCol",
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_234",
+																									"T": "prop"
+																								},
+																								"tagType": {
+																									"H": "'span'",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "'Title'",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"class": {
+																									"H": "'v-card__title'",
+																									"T": "class"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_234"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_224",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_224"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_215"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														},
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_293",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VCol",
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VDataTable",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_284",
+																									"T": "prop"
+																								},
+																								"footerProps": {
+																									"H": "{showFirstLastPage = true,\nfirstIcon = 'mdi-arrow-collapse-left',\nlastIcon = 'mdi-arrow-collapse-right',\nprevIcon = 'mdi-minus',\nnextIcon = 'mdi-plus'}",
+																									"T": "prop"
+																								},
+																								"headers": {
+																									"H": "[{ text = 'Dessert (100g serving)', align= 'start', sortable= false, value= 'name'},\n{ text = 'Calories', value= 'calories', sortable = true },\n{ text = 'Fat (g)', value= 'fat' },\n{ text = 'Carbs (g)', value= 'carbs' },\n{ text = 'Protein (g)', value= 'protein' },\n{ text = 'Iron (%)', value= 'iron' }]",
+																									"T": "prop"
+																								},
+																								"items": {
+																									"H": "[{name = 'Frozens Yogurt', calories = 159, fat = '6.0', carbs = 24, protein = '4.0', iron = '1%'},\n{name = 'Ice cream sandwich', calories = 237, fat = '9.0', carbs = 37, protein = '4.3', iron = '1%'},\n{name = 'Eclair', calories = 262, fat = '16.0', carbs = 23, protein = '6.0', iron = '7%'},\n{name = 'Cupcake', calories = 305, fat = '3.7', carbs = 67, protein = '4.3', iron = '8%'},\n{name = 'Gingerbread',calories = 356, fat = '16.0', carbs = 49, protein = '3.9', iron = '16%'},\n{name = 'Jelly bean', calories = 375,  fat = '0.0', carbs = 94, protein = '0.0', iron = '0%'},\n{name = 'Lollipop', calories = 392, fat = '0.2', carbs = 98, protein = '0.0', iron = '2 %'},\n{name = 'Honeycomb', calories = 408, fat = '3.2', carbs = 87, protein = '6.5', iron = '45%'},\n{name = 'Donut', calories = 452, fat = '25.0', carbs = 51, protein = '4.9', iron = '22%'},\n{name = 'KitKat', calories = 518, fat = '26.0', carbs = 65, protein = '7', iron=  '6 %'}]",
+																									"T": "prop"
+																								},
+																								"itemsPerPage": {
+																									"H": "5",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_284"
+																							},
+																							"O": {
+																								"cType": "scopedSlot"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_294",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_294"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_293"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_67"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_63"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_65"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VRow",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_59",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'d-flex justify-center'╩╩",
+					"T": "class"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VBtn",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_60",
+									"T": "prop"
+								},
+								"color": {
+									"H": "╬'info'╩╩",
+									"T": "prop"
+								},
+								"regular": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {
+								"click": {
+									"H": "╬=╣.╣EdtrComp_63╩╠value╩╩╠!╠.╣EdtrComp_63╩╠value╩╩╩╩╩"
+								}
+							},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "QLabel",
+											"C": {},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_62",
+													"T": "prop"
+												},
+												"text": {
+													"H": "╬'Click me'╩╩",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_62"
+											},
+											"O": {
+												"cType": "child",
+												"compDomClasses": "q-label "
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_60"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "v-btn v-btn--contained theme--light v-size--default info"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_59"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "d-flex justify-center"
+			}
+		},
+		{
+			"T": "VRow",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_65",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'d-flex justify-center'╩╩",
+					"T": "class"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VDialog",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_63",
+									"T": "prop"
+								},
+								"width": {
+									"H": "╬500╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCard",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_67",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_71",
+																	"T": "prop"
+																},
+																"class": {
+																	"H": "╬'d-flex justify-end'╩╩",
+																	"T": "class"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VBtn",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_80",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "╬'secondary'╩╩",
+																					"T": "prop"
+																				},
+																				"regular": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"click": {
+																					"H": "╬=╣.╣EdtrComp_63╩╠value╩╩╠false╩╩╩"
+																				}
+																			},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VIcon",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_389",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "╬'mdi-close'╩╩",
+																									"T": "text"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_389"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "v-icon notranslate mdi mdi-close theme--light"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_80"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-btn v-btn--flat v-btn--text theme--light v-size--default secondary--text"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_71"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "row d-flex justify-end"
+															}
+														},
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_215",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VCol",
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_234",
+																									"T": "prop"
+																								},
+																								"tagType": {
+																									"H": "╬'span'╩╩",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "╬'Title'╩╩",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"class": {
+																									"H": "╬'v-card__title'╩╩",
+																									"T": "class"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_234"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "q-label  v-card__title"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_224",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_224"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "col"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_215"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "row"
+															}
+														},
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_293",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VCol",
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VDataTable",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_284",
+																									"T": "prop"
+																								},
+																								"footerProps": {
+																									"H": "╬{}╠=╣showFirstLastPage╩╠true╩╩╠=╣firstIcon╩╠'mdi-arrow-collapse-left'╩╩╠=╣lastIcon╩╠'mdi-arrow-collapse-right'╩╩╠=╣prevIcon╩╠'mdi-minus'╩╩╠=╣nextIcon╩╠'mdi-plus'╩╩╩╩",
+																									"T": "prop"
+																								},
+																								"headers": {
+																									"H": "╬[]╠{}╠=╣text╩╠'Dessert (100g serving)'╩╩╠=╣align╩╠'start'╩╩╠=╣sortable╩╠false╩╩╠=╣value╩╠'name'╩╩╩╠{}╠=╣text╩╠'Calories'╩╩╠=╣value╩╠'calories'╩╩╠=╣sortable╩╠true╩╩╩╠{}╠=╣text╩╠'Fat (g)'╩╩╠=╣value╩╠'fat'╩╩╩╠{}╠=╣text╩╠'Carbs (g)'╩╩╠=╣value╩╠'carbs'╩╩╩╠{}╠=╣text╩╠'Protein (g)'╩╩╠=╣value╩╠'protein'╩╩╩╠{}╠=╣text╩╠'Iron (%)'╩╩╠=╣value╩╠'iron'╩╩╩╩╩",
+																									"T": "prop"
+																								},
+																								"items": {
+																									"H": "╬[]╠{}╠=╣name╩╠'Frozens Yogurt'╩╩╠=╣calories╩╠159╩╩╠=╣fat╩╠'6.0'╩╩╠=╣carbs╩╠24╩╩╠=╣protein╩╠'4.0'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Ice cream sandwich'╩╩╠=╣calories╩╠237╩╩╠=╣fat╩╠'9.0'╩╩╠=╣carbs╩╠37╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Eclair'╩╩╠=╣calories╩╠262╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠23╩╩╠=╣protein╩╠'6.0'╩╩╠=╣iron╩╠'7%'╩╩╩╠{}╠=╣name╩╠'Cupcake'╩╩╠=╣calories╩╠305╩╩╠=╣fat╩╠'3.7'╩╩╠=╣carbs╩╠67╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'8%'╩╩╩╠{}╠=╣name╩╠'Gingerbread'╩╩╠=╣calories╩╠356╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠49╩╩╠=╣protein╩╠'3.9'╩╩╠=╣iron╩╠'16%'╩╩╩╠{}╠=╣name╩╠'Jelly bean'╩╩╠=╣calories╩╠375╩╩╠=╣fat╩╠'0.0'╩╩╠=╣carbs╩╠94╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'0%'╩╩╩╠{}╠=╣name╩╠'Lollipop'╩╩╠=╣calories╩╠392╩╩╠=╣fat╩╠'0.2'╩╩╠=╣carbs╩╠98╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'2 %'╩╩╩╠{}╠=╣name╩╠'Honeycomb'╩╩╠=╣calories╩╠408╩╩╠=╣fat╩╠'3.2'╩╩╠=╣carbs╩╠87╩╩╠=╣protein╩╠'6.5'╩╩╠=╣iron╩╠'45%'╩╩╩╠{}╠=╣name╩╠'Donut'╩╩╠=╣calories╩╠452╩╩╠=╣fat╩╠'25.0'╩╩╠=╣carbs╩╠51╩╩╠=╣protein╩╠'4.9'╩╩╠=╣iron╩╠'22%'╩╩╩╠{}╠=╣name╩╠'KitKat'╩╩╠=╣calories╩╠518╩╩╠=╣fat╩╠'26.0'╩╩╠=╣carbs╩╠65╩╩╠=╣protein╩╠'7'╩╩╠=╣iron╩╠'6 %'╩╩╩╩╩",
+																									"T": "prop"
+																								},
+																								"itemsPerPage": {
+																									"H": "╬5╩╩",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_284"
+																							},
+																							"O": {
+																								"cType": "scopedSlot",
+																								"compDomClasses": "v-data-table v-data-table--has-bottom theme--light"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_294",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_294"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "col"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_293"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "row"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_67"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-card v-sheet theme--light"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_63"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": ""
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_65"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "d-flex justify-center"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {
+		"tr-TR": {
+			"label_product": "╬'Ürün'╩╩",
+			"ACTIVE": "╬'Aktif'╩╩",
+			"PASSIVE": "╬'Pasif'╩╩",
+			"SECTOR_OST": "╬'ÖST'╩╩",
+			"SECTOR_TREASURY": "╬'Hazine'╩╩",
+			"SECTOR_OTHER": "╬'Diğer'╩╩",
+			"SECTOR_BANK": "╬'Banka'╩╩",
+			"DOMESTIC": "╬'Yurt İçi'╩╩",
+			"ABROAD": "╬'Yurt Dışı'╩╩",
+			"FIRM_SALE": "╬'Kesin Satış'╩╩",
+			"CAPITAL_REPAYMENT": "╬'Anapara İtfa'╩╩",
+			"COUPON_REPAYMENT": "╬'Kupon İtfa'╩╩",
+			"REVERSE_REPO": "╬'Ters Repo'╩╩",
+			"label_product_required": "╬'Ürün Bilgisi Gereklidir'╩╩",
+			"label_exportCountriesList_required": "╬'İhraç Edilen Ülke Bilgisi Gereklidir'╩╩",
+			"label_issuerInstutionCounter_required": "╬'İhraçcı Kurum Ülke Bilgisi Gereklidir'╩╩",
+			"label_bsmvRate_required": "╬'Bsmv Oran Bilgisi Gereklidir'╩╩",
+			"label_operation_type": "╬'İşlem Tipi'╩╩",
+			"label_issuer_sector_list": "╬'İhraçcı Sektör'╩╩",
+			"label_export_countries_list": "╬'İhraç Edilen Ülke'╩╩",
+			"label_issuer_instution_counter": "╬'İhraçcı Kurum Ülke'╩╩",
+			"label_bsmv_rate": "╬'Bsmv Oranı %'╩╩",
+			"label_instrument_type": "╬'Menkul Kıymet Tipi'╩╩",
+			"label_instrumentList_required": "╬'Menkul Kıymet Tipi Gereklidir'╩╩",
+			"label_operationType_required": "╬'İşlem Tipi Gereklidir'╩╩",
+			"label_process_alert": "╬'Bu Bilgiler Daha Önce Kullanılmış'╩╩",
+			"label_alert": "╬'Kayıt Mevcut Lütfen Tekrar Doldurunuz'╩╩",
+			"label_al_title": "╬'Hata'╩╩",
+			"lbl_Alert": "╬'Lütfen alanları kontrol ediniz'╩╩",
+			"SGMK": "╬'SGMK BSMV Tanımlama'╩╩",
+			"FIXED_INCOME": "╬'SGMK BSMV Tanımlama'╩╩",
+			"REPO": "╬'REPO BSMV Tanımlama'╩╩",
+			"lbl_save": "╬'Kaydet'╩╩",
+			"lbl_back": "╬'Vazgeç'╩╩",
+			"GOVERMENT_BOND": "╬'Devlet Tahvili'╩╩",
+			"TREASURY_BOND": "╬'Hazine Bonosu'╩╩",
+			"EUROBOND": "╬'Eurobond'╩╩",
+			"COMMERCIAL_PAPERS_FI": "╬'Finansman Bonosu'╩╩",
+			"PUBLIC_LEASE_CERTIFICATES_FI": "╬'Kamu Kira Sertifikası'╩╩",
+			"PRIVATE_LEASE_CERTIFICATES_FI": "╬'Özel Kira Sertifikası'╩╩",
+			"PRIVATE_SECTOR_BONDS_FI": "╬'Özel Sektör Tahvili'╩╩",
+			"ASSET_BASED_SECURITIES_FI": "╬'Varlığa Dayalı Menkul Kıymetler'╩╩",
+			"STRUCTURED_DEBT_INSTRUMENTS_FI": "╬'Yapılandırılmış Borçlanma Aracı'╩╩",
+			"BANK_BOND": "╬'Banka Bonosu'╩╩",
+			"label_BSMV": "╬'BSMV Tanımlama'╩╩",
+			"lbl_AlertValid": "╬'BSMV tanımı mevcut, tanımları kontrol ediniz.'╩╩"
+		},
+		"en-US": {
+			"label_product": "╬'Product'╩╩",
+			"ACTIVE": "╬'Active'╩╩",
+			"PASSIVE": "╬'Passive'╩╩",
+			"SECTOR_OST": "╬'SECTOR OST'╩╩",
+			"SECTOR_TREASURY": "╬'SECTOR TREASURY'╩╩",
+			"SECTOR_OTHER": "╬'SECTOR OTHER'╩╩",
+			"SECTOR_BANK": "╬'SEKTOR BANK'╩╩",
+			"DOMESTIC": "╬'DOMESTIC'╩╩",
+			"ABROAD": "╬'ABROAD'╩╩",
+			"FIRM_SALE": "╬'FIRM SALE'╩╩",
+			"CAPITAL_REPAYMENT": "╬'CAPITAL_REPAYMENT'╩╩",
+			"COUPON_REPAYMENT": "╬'COUPON_REPAYMENT'╩╩",
+			"REVERSE_REPO": "╬'REVERSE_REPO'╩╩",
+			"label_product_required": "╬'Product Information Required'╩╩",
+			"label_exportCountriesList_required": "╬'export countries list required'╩╩",
+			"label_issuerInstutionCounter_required": "╬'issuer instution counter required'╩╩",
+			"label_bsmvRate_required": "╬'bsmv rate required'╩╩",
+			"label_operation_type": "╬'Operation Type'╩╩",
+			"label_issuer_sector_list": "╬'Issuer Sector List'╩╩",
+			"label_export_countries_list": "╬'Export Countries List'╩╩",
+			"label_issuer_instution_counter": "╬'Issuer Instution Counter'╩╩",
+			"label_bsmv_rate": "╬'Bsmv Rate %'╩╩",
+			"label_instrument_type": "╬'Instrument Type'╩╩",
+			"label_instrumentList_required": "╬'Instrument List Required'╩╩",
+			"label_operationType_required": "╬'Operation Type Required'╩╩",
+			"label_process_alert": "╬'This Informations Has Used Before'╩╩",
+			"label_alert": "╬'Same Record Found'╩╩",
+			"label_al_title": "╬'Error'╩╩",
+			"lbl_Alert": "╬'Please fill the blank fields'╩╩",
+			"SGMK": "╬'SGMK BSMV Definition'╩╩",
+			"FIXED_INCOME": "╬'SGMK BSMV Definition'╩╩",
+			"REPO": "╬'REPO BSMV Definition'╩╩",
+			"lbl_save": "╬'Save'╩╩",
+			"lbl_back": "╬'Quit'╩╩",
+			"GOVERMENT_BOND": "╬'Goverment Bond'╩╩",
+			"TREASURY_BOND": "╬'Treasury Bond'╩╩",
+			"EUROBOND": "╬'Eurobond'╩╩",
+			"COMMERCIAL_PAPERS_FI": "╬'Commercial Papers'╩╩",
+			"PUBLIC_LEASE_CERTIFICATES_FI": "╬'Public Lease Certificates'╩╩",
+			"PRIVATE_LEASE_CERTIFICATES_FI": "╬'Private Lease Certificates'╩╩",
+			"PRIVATE_SECTOR_BONDS_FI": "╬'Private Sector Bonds'╩╩",
+			"ASSET_BASED_SECURITIES_FI": "╬'Asset Based Securities FI'╩╩",
+			"STRUCTURED_DEBT_INSTRUMENTS_FI": "╬'STRUCTURED_DEBT_INSTRUMENTS'╩╩",
+			"BANK_BOND": "╬'Bank Bond'╩╩",
+			"label_BSMV": "╬'BSMV Definition'╩╩",
+			"lbl_AlertValid": "╬'BSMV definition is available, please check the definitions.'╩╩"
+		}
+	},
+	"description": {}
+};
+export default pjson

@@ -1,0 +1,491 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "MessagingComp",
+					"T": "prop"
+				},
+				"triggerOnRestored": {
+					"H": "false",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_21"
+			},
+			"O": {
+				"cType": "child"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container container--fluid'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "VRowComp",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QMenu",
+															"P": {
+																"ID": {
+																	"H": "qMenuIcon",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "'accent'",
+																	"T": "prop"
+																},
+																"menuData": {
+																	"H": "[{ menuItem = 'true', code = 'X-Large', imagePath = 'mdi-cellphone',options={iconOptions ={ xLarge=true, color='purple'}}, children = [{ menuItem = 'true', imagePath = 'mdi-desktop-classic',options={iconOptions ={ large= true }}, code = 'Large', children = [{ menuItem = 'true', imagePath = 'mdi-laptop',options={iconOptions ={ small= true }}, code = 'Small', children = [{ menuItem = 'true', code = 'X-Small',imagePath = 'mdi-laptop',options={iconOptions ={ xSmall= true }}}]} ]}] },\r\n{ menuItem = 'true', code = 'Size-40px', imagePath = 'mdi-cellphone',options={iconOptions ={ size= '40px', color='purple'}}, children = [{ menuItem = 'true', imagePath = 'mdi-desktop-classic',options={iconOptions ={size= '36px'}}, code = 'Size-36px', children = [{ menuItem = 'true', imagePath = 'mdi-laptop',options={iconOptions =size= '16px'}, code = 'Size-16px', children = [{ menuItem = 'true', code = 'Size-12px',imagePath = 'mdi-laptop',options={iconOptions ={ size= '12px' }}}]} ]}] }]",
+																	"T": "prop"
+																},
+																"title": {
+																	"H": "'IconSize'",
+																	"T": "prop"
+																},
+																"showOnlyIcon": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"collapseOnItemSelect": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"hideMenuTitle": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"expandOnHover": {
+																	"H": "false",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_7"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_141",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_141"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column",
+															"c:col-3",
+															"a:align-start"
+														]
+													},
+													"class": "d-flex flex-column col-3 align-start"
+												}
+											}
+										},
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QMenu",
+															"P": {
+																"ID": {
+																	"H": "qMenuImg",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "'accent'",
+																	"T": "prop"
+																},
+																"menuData": {
+																	"H": "[{ menuItem = 'true', code = '50x50', imagePath = Url.resolve({url='https://cdn.softtech.com.tr/ngsp-quick/nemo/dev/mdImages/QMenu/menu_imagePath.png'}), options={imageOptions={width='50px', height='50'}}, children = [{ menuItem = 'true', imagePath = Url.resolve({url='https://cdn.softtech.com.tr/ngsp-quick/nemo/dev/mdImages/QMenu/menu_imagePath.png'}), options={imageOptions={width='40px',height='40'}}, code = '40x40', children = [{ menuItem = 'true', imagePath = Url.resolve({url='https://cdn.softtech.com.tr/ngsp-quick/nemo/dev/mdImages/QMenu/menu_imagePath.png'}), options={imageOptions={width='30px', height='30'}}, code = '30x30', children = [{ menuItem = 'true', code = '20x20',imagePath = Url.resolve({url='https://cdn.softtech.com.tr/ngsp-quick/nemo/dev/mdImages/QMenu/menu_imagePath.png'}), options={imageOptions={width='20px', height='20'}}}]} ]}] }]",
+																	"T": "prop"
+																},
+																"title": {
+																	"H": "'Image_Width&Height'",
+																	"T": "prop"
+																},
+																"showOnlyIcon": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"collapseOnItemSelect": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"hideMenuTitle": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"expandOnHover": {
+																	"H": "false",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_16"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_151",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_151"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column",
+															"a:align-start",
+															"c:col-9"
+														]
+													},
+													"class": "d-flex flex-column align-start col-9"
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_24"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_22"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "MessagingComp",
+					"T": "prop"
+				},
+				"triggerOnRestored": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_21"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container container--fluid'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "VRowComp",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QMenu",
+															"P": {
+																"ID": {
+																	"H": "qMenuIcon",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "╬'accent'╩╩",
+																	"T": "prop"
+																},
+																"menuData": {
+																	"H": "╬[]╠{}╠=╣menuItem╩╠'true'╩╩╠=╣code╩╠'X-Large'╩╩╠=╣imagePath╩╠'mdi-cellphone'╩╩╠=╣options╩╠{}╠=╣iconOptions╩╠{}╠=╣xLarge╩╠true╩╩╠=╣color╩╠'purple'╩╩╩╩╩╩╠=╣children╩╠[]╠{}╠=╣menuItem╩╠'true'╩╩╠=╣imagePath╩╠'mdi-desktop-classic'╩╩╠=╣options╩╠{}╠=╣iconOptions╩╠{}╠=╣large╩╠true╩╩╩╩╩╩╠=╣code╩╠'Large'╩╩╠=╣children╩╠[]╠{}╠=╣menuItem╩╠'true'╩╩╠=╣imagePath╩╠'mdi-laptop'╩╩╠=╣options╩╠{}╠=╣iconOptions╩╠{}╠=╣small╩╠true╩╩╩╩╩╩╠=╣code╩╠'Small'╩╩╠=╣children╩╠[]╠{}╠=╣menuItem╩╠'true'╩╩╠=╣code╩╠'X-Small'╩╩╠=╣imagePath╩╠'mdi-laptop'╩╩╠=╣options╩╠{}╠=╣iconOptions╩╠{}╠=╣xSmall╩╠true╩╩╩╩╩╩╩╩╩╩╩╩╩╩╩╩╠{}╠=╣menuItem╩╠'true'╩╩╠=╣code╩╠'Size-40px'╩╩╠=╣imagePath╩╠'mdi-cellphone'╩╩╠=╣options╩╠{}╠=╣iconOptions╩╠{}╠=╣size╩╠'40px'╩╩╠=╣color╩╠'purple'╩╩╩╩╩╩╠=╣children╩╠[]╠{}╠=╣menuItem╩╠'true'╩╩╠=╣imagePath╩╠'mdi-desktop-classic'╩╩╠=╣options╩╠{}╠=╣iconOptions╩╠{}╠=╣size╩╠'36px'╩╩╩╩╩╩╠=╣code╩╠'Size-36px'╩╩╠=╣children╩╠[]╠{}╠=╣menuItem╩╠'true'╩╩╠=╣imagePath╩╠'mdi-laptop'╩╩╠=╣options╩╠{}╠=╣iconOptions╩╠=╣size╩╠'16px'╩╩╩╩╩╠=╣code╩╠'Size-16px'╩╩╠=╣children╩╠[]╠{}╠=╣menuItem╩╠'true'╩╩╠=╣code╩╠'Size-12px'╩╩╠=╣imagePath╩╠'mdi-laptop'╩╩╠=╣options╩╠{}╠=╣iconOptions╩╠{}╠=╣size╩╠'12px'╩╩╩╩╩╩╩╩╩╩╩╩╩╩╩╩╩╩",
+																	"T": "prop"
+																},
+																"title": {
+																	"H": "╬'IconSize'╩╩",
+																	"T": "prop"
+																},
+																"showOnlyIcon": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"collapseOnItemSelect": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"hideMenuTitle": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"expandOnHover": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_7"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-navigation-drawer v-navigation-drawer--mini-variant v-navigation-drawer--open theme--light accent newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_141",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_141"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column",
+															"c:col-3",
+															"a:align-start"
+														]
+													},
+													"class": "d-flex flex-column col-3 align-start"
+												},
+												"compDomClasses": "col d-flex flex-column col-3 align-start newDropBorder"
+											}
+										},
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QMenu",
+															"P": {
+																"ID": {
+																	"H": "qMenuImg",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "╬'accent'╩╩",
+																	"T": "prop"
+																},
+																"menuData": {
+																	"H": "╬[]╠{}╠=╣menuItem╩╠'true'╩╩╠=╣code╩╠'50x50'╩╩╠=╣imagePath╩╠()╣.╣Url╩╠resolve╩╩╠{}╠=╣url╩╠'https://cdn.softtech.com.tr/ngsp-quick/nemo/dev/mdImages/QMenu/menu_imagePath.png'╩╩╩╩╩╠=╣options╩╠{}╠=╣imageOptions╩╠{}╠=╣width╩╠'50px'╩╩╠=╣height╩╠'50'╩╩╩╩╩╩╠=╣children╩╠[]╠{}╠=╣menuItem╩╠'true'╩╩╠=╣imagePath╩╠()╣.╣Url╩╠resolve╩╩╠{}╠=╣url╩╠'https://cdn.softtech.com.tr/ngsp-quick/nemo/dev/mdImages/QMenu/menu_imagePath.png'╩╩╩╩╩╠=╣options╩╠{}╠=╣imageOptions╩╠{}╠=╣width╩╠'40px'╩╩╠=╣height╩╠'40'╩╩╩╩╩╩╠=╣code╩╠'40x40'╩╩╠=╣children╩╠[]╠{}╠=╣menuItem╩╠'true'╩╩╠=╣imagePath╩╠()╣.╣Url╩╠resolve╩╩╠{}╠=╣url╩╠'https://cdn.softtech.com.tr/ngsp-quick/nemo/dev/mdImages/QMenu/menu_imagePath.png'╩╩╩╩╩╠=╣options╩╠{}╠=╣imageOptions╩╠{}╠=╣width╩╠'30px'╩╩╠=╣height╩╠'30'╩╩╩╩╩╩╠=╣code╩╠'30x30'╩╩╠=╣children╩╠[]╠{}╠=╣menuItem╩╠'true'╩╩╠=╣code╩╠'20x20'╩╩╠=╣imagePath╩╠()╣.╣Url╩╠resolve╩╩╠{}╠=╣url╩╠'https://cdn.softtech.com.tr/ngsp-quick/nemo/dev/mdImages/QMenu/menu_imagePath.png'╩╩╩╩╩╠=╣options╩╠{}╠=╣imageOptions╩╠{}╠=╣width╩╠'20px'╩╩╠=╣height╩╠'20'╩╩╩╩╩╩╩╩╩╩╩╩╩╩╩╩╩╩",
+																	"T": "prop"
+																},
+																"title": {
+																	"H": "╬'Image_Width&Height'╩╩",
+																	"T": "prop"
+																},
+																"showOnlyIcon": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"collapseOnItemSelect": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"hideMenuTitle": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"expandOnHover": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_16"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-navigation-drawer v-navigation-drawer--mini-variant v-navigation-drawer--open theme--light accent newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_151",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_151"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column",
+															"a:align-start",
+															"c:col-9"
+														]
+													},
+													"class": "d-flex flex-column align-start col-9"
+												},
+												"compDomClasses": "col d-flex flex-column align-start col-9 newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_24"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_22"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container container--fluid newDropBorder"
+			}
+		}
+	],
+	"lrids": [],
+	"clrids": {},
+	"description": {}
+};
+export default pjson

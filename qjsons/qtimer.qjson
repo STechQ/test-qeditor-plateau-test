@@ -1,0 +1,667 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "QTimer",
+			"P": {
+				"ID": {
+					"H": "timer",
+					"T": "prop"
+				},
+				"time": {
+					"H": "1000",
+					"T": "prop"
+				},
+				"status": {
+					"H": "false",
+					"T": "prop"
+				},
+				"autostart": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"setInterval": {
+					"H": "timerCount.value=timerCount.value+1",
+					"I": true
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": ""
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "bstimer",
+					"T": "prop"
+				},
+				"color": {
+					"H": "'primary'",
+					"T": "prop"
+				},
+				"regular": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "timer.start()",
+					"P": "mouseEvent"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "stimer",
+									"T": "prop"
+								},
+								"text": {
+									"H": "'Start'",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_3"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "q-label "
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_2"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "bsttimer",
+					"T": "prop"
+				},
+				"color": {
+					"H": "'primary'",
+					"T": "prop"
+				},
+				"regular": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "timer.stop()",
+					"P": "mouseEvent"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "sttimer",
+									"T": "prop"
+								},
+								"text": {
+									"H": "'Stop'",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_5"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "q-label "
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_4"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "bretimer",
+					"T": "prop"
+				},
+				"color": {
+					"H": "'primary'",
+					"T": "prop"
+				},
+				"regular": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "timer.reStart()",
+					"P": "mouseEvent"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {
+								"click": {
+									"H": "timer.reStart()",
+									"C": true,
+									"P": "mouseEvent"
+								}
+							},
+							"P": {
+								"ID": {
+									"H": "retimer",
+									"T": "prop"
+								},
+								"text": {
+									"H": "'Restart'",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_7"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "q-label "
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_6"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "bstatusTimer",
+					"T": "prop"
+				},
+				"color": {
+					"H": "'primary'",
+					"T": "prop"
+				},
+				"regular": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "timerStatus.value=timer.getStatus",
+					"P": "mouseEvent"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "statusTimer",
+									"T": "prop"
+								},
+								"text": {
+									"H": "'Get status'",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_13"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "q-label "
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_11"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary"
+			}
+		},
+		{
+			"T": "VTextField",
+			"P": {
+				"ID": {
+					"H": "timerCount",
+					"T": "prop"
+				},
+				"label": {
+					"H": "'Count'",
+					"T": "prop"
+				},
+				"regular": {
+					"H": "'true'",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_10"
+			},
+			"O": {
+				"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted",
+				"cType": "child"
+			}
+		},
+		{
+			"T": "VTextField",
+			"P": {
+				"ID": {
+					"H": "timerStatus",
+					"T": "prop"
+				},
+				"label": {
+					"H": "'Status'",
+					"T": "prop"
+				},
+				"regular": {
+					"H": "'true'",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_8"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "QTimer",
+			"P": {
+				"ID": {
+					"H": "timer",
+					"T": "prop"
+				},
+				"time": {
+					"H": "╬1000╩╩",
+					"T": "prop"
+				},
+				"status": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				},
+				"autostart": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"setInterval": {
+					"H": "╬=╣.╣timerCount╩╠value╩╩╠+╣.╣timerCount╩╠value╩╩╠1╩╩╩╩",
+					"I": true
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": ""
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "bstimer",
+					"T": "prop"
+				},
+				"color": {
+					"H": "╬'primary'╩╩",
+					"T": "prop"
+				},
+				"regular": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "╬()╣.╣timer╩╠start╩╩╩╩",
+					"P": "mouseEvent"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "stimer",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬'Start'╩╩",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_3"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "q-label "
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_2"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "bsttimer",
+					"T": "prop"
+				},
+				"color": {
+					"H": "╬'primary'╩╩",
+					"T": "prop"
+				},
+				"regular": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "╬()╣.╣timer╩╠stop╩╩╩╩",
+					"P": "mouseEvent"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "sttimer",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬'Stop'╩╩",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_5"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "q-label "
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_4"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "bretimer",
+					"T": "prop"
+				},
+				"color": {
+					"H": "╬'primary'╩╩",
+					"T": "prop"
+				},
+				"regular": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "╬()╣.╣timer╩╠reStart╩╩╩╩",
+					"P": "mouseEvent"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {
+								"click": {
+									"H": "╬()╣.╣timer╩╠reStart╩╩╩╩",
+									"C": true,
+									"P": "mouseEvent"
+								}
+							},
+							"P": {
+								"ID": {
+									"H": "retimer",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬'Restart'╩╩",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_7"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "q-label "
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_6"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "bstatusTimer",
+					"T": "prop"
+				},
+				"color": {
+					"H": "╬'primary'╩╩",
+					"T": "prop"
+				},
+				"regular": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "╬=╣.╣timerStatus╩╠value╩╩╠.╣timer╩╠getStatus╩╩╩╩",
+					"P": "mouseEvent"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "statusTimer",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬'Get status'╩╩",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_13"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "q-label "
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_11"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary"
+			}
+		},
+		{
+			"T": "VTextField",
+			"P": {
+				"ID": {
+					"H": "timerCount",
+					"T": "prop"
+				},
+				"label": {
+					"H": "╬'Count'╩╩",
+					"T": "prop"
+				},
+				"regular": {
+					"H": "╬'true'╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_10"
+			},
+			"O": {
+				"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted",
+				"cType": "child"
+			}
+		},
+		{
+			"T": "VTextField",
+			"P": {
+				"ID": {
+					"H": "timerStatus",
+					"T": "prop"
+				},
+				"label": {
+					"H": "╬'Status'╩╩",
+					"T": "prop"
+				},
+				"regular": {
+					"H": "╬'true'╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_8"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {}
+};
+export default pjson

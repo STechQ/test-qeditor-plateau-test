@@ -1,0 +1,1418 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_37",
+					"T": "prop"
+				},
+				"externalProps": {
+					"H": "['prop1', 'prop2']",
+					"T": "prop"
+				},
+				"externalEvents": {
+					"H": "[{name='ParentEvent1', params=['param1', 'param2']}]",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"SubPageCustomEvent1": {
+					"H": "EdtrComp_28.text = param1\r\nEM.trace(param1)",
+					"C": true,
+					"EV": true
+				},
+				"SubPageCustomEvent2": {
+					"H": "EdtrComp_30.text = param2\r\nEM.trace(param2)",
+					"C": true,
+					"EV": true
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_37"
+			},
+			"O": {
+				"cType": "child"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_3",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_9",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'col-8'",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_23",
+																	"T": "prop"
+																},
+																"class": {
+																	"H": "'col-12'",
+																	"T": "class"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_24",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "parent.props.prop1",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_24"
+																			},
+																			"O": {
+																				"cType": "child"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_23"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_9"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										},
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_11",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'col-4'",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_25",
+																	"T": "prop"
+																},
+																"class": {
+																	"H": "'col-12'",
+																	"T": "class"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_26",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "parent.props.prop2",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_26"
+																			},
+																			"O": {
+																				"cType": "child"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_25"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_11"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_3"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_38",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_5",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_13",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'col-4'",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_27",
+																	"T": "prop"
+																},
+																"class": {
+																	"H": "'col-12'",
+																	"T": "class"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_28",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'Test Button'",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_28"
+																			},
+																			"O": {
+																				"cType": "child"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_27"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_13"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										},
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_15",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'col-4'",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_29",
+																	"T": "prop"
+																},
+																"class": {
+																	"H": "'col-12'",
+																	"T": "class"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_30",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'Test Button'",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_30"
+																			},
+																			"O": {
+																				"cType": "child"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_29"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_15"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										},
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_17",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'col-4'",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_31",
+																	"T": "prop"
+																},
+																"class": {
+																	"H": "'col-12'",
+																	"T": "class"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_32",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'Test Button'",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_32"
+																			},
+																			"O": {
+																				"cType": "child"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_31"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_17"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_5"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_38"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_40",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_7",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_19",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'col-6'",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_33",
+																	"T": "prop"
+																},
+																"class": {
+																	"H": "'col-12'",
+																	"T": "class"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "parent.events.ParentEvent1({param1='Test Param 1', param2= 'Param 2'})"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_34",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'Call Parent Event'",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_34"
+																			},
+																			"O": {
+																				"cType": "child"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_33"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_19"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										},
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_21",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'col-6'",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_35",
+																	"T": "prop"
+																},
+																"class": {
+																	"H": "'col-12'",
+																	"T": "class"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_36",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'Test Button'",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_36"
+																			},
+																			"O": {
+																				"cType": "child"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_35"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_21"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_7"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_40"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_37",
+					"T": "prop"
+				},
+				"externalProps": {
+					"H": "╬[]╠'prop1'╩╠'prop2'╩╩╩",
+					"T": "prop"
+				},
+				"externalEvents": {
+					"H": "╬[]╠{}╠=╣name╩╠'ParentEvent1'╩╩╠=╣params╩╠[]╠'param1'╩╠'param2'╩╩╩╩╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"SubPageCustomEvent1": {
+					"H": "╬=╣.╣EdtrComp_28╩╠text╩╩╠param1╩╩╬()╣.╣EM╩╠trace╩╩╠param1╩╩╩",
+					"C": true,
+					"EV": true
+				},
+				"SubPageCustomEvent2": {
+					"H": "╬=╣.╣EdtrComp_30╩╠text╩╩╠param2╩╩╬()╣.╣EM╩╠trace╩╩╠param2╩╩╩",
+					"C": true,
+					"EV": true
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_37"
+			},
+			"O": {
+				"cType": "child"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_3",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_9",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'col-8'╩╩",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_23",
+																	"T": "prop"
+																},
+																"class": {
+																	"H": "╬'col-12'╩╩",
+																	"T": "class"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_24",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬.╣.╣parent╩╠props╩╩╠prop1╩╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_24"
+																			},
+																			"O": {
+																				"cType": "child"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_23"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_9"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										},
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_11",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'col-4'╩╩",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_25",
+																	"T": "prop"
+																},
+																"class": {
+																	"H": "╬'col-12'╩╩",
+																	"T": "class"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_26",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬.╣.╣parent╩╠props╩╩╠prop2╩╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_26"
+																			},
+																			"O": {
+																				"cType": "child"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_25"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_11"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_3"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_38",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_5",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_13",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'col-4'╩╩",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_27",
+																	"T": "prop"
+																},
+																"class": {
+																	"H": "╬'col-12'╩╩",
+																	"T": "class"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_28",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'Test Button'╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_28"
+																			},
+																			"O": {
+																				"cType": "child"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_27"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_13"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										},
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_15",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'col-4'╩╩",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_29",
+																	"T": "prop"
+																},
+																"class": {
+																	"H": "╬'col-12'╩╩",
+																	"T": "class"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_30",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'Test Button'╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_30"
+																			},
+																			"O": {
+																				"cType": "child"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_29"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_15"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										},
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_17",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'col-4'╩╩",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_31",
+																	"T": "prop"
+																},
+																"class": {
+																	"H": "╬'col-12'╩╩",
+																	"T": "class"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_32",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'Test Button'╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_32"
+																			},
+																			"O": {
+																				"cType": "child"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_31"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_17"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_5"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_38"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_40",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_7",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_19",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'col-6'╩╩",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_33",
+																	"T": "prop"
+																},
+																"class": {
+																	"H": "╬'col-12'╩╩",
+																	"T": "class"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "╬()╣.╣.╣parent╩╠events╩╩╠ParentEvent1╩╩╠{}╠=╣param1╩╠'Test Param 1'╩╩╠=╣param2╩╠'Param 2'╩╩╩╩╩"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_34",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'Call Parent Event'╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_34"
+																			},
+																			"O": {
+																				"cType": "child"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_33"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_19"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										},
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_21",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'col-6'╩╩",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_35",
+																	"T": "prop"
+																},
+																"class": {
+																	"H": "╬'col-12'╩╩",
+																	"T": "class"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_36",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'Test Button'╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_36"
+																			},
+																			"O": {
+																				"cType": "child"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_35"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_21"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_7"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_40"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {
+		"tr-TR": {}
+	},
+	"description": {}
+};
+export default pjson

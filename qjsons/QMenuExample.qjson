@@ -1,0 +1,315 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "QMenu",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_2",
+					"T": "prop"
+				},
+				"menuData": {
+					"H": "[{ menuItem = 'true', code = 'Vasıta', imagePath = 'mdi-car', children = [{menuItem = 'true', imagePath = 'mdi-star', code = 'Otomobil', children = [{ menuItem = 'true', imagePath = 'mdi-star',code = 'BMW', children = [{ menuItem = 'true', imagePath = 'mdi-star', code = '5.20'}]}]}] },\n{ menuItem = 'true', code = 'Emlak', imagePath = 'mdi-home', children=[{ menuItem = 'true', imagePath = 'mdi-star', code = 'Konut',children=[{ menuItem = 'true', imagePath = 'mdi-star', code = 'Satılık',children=[{ menuItem = 'true', code = 'Daire'}]},{ menuItem = 'true', code = 'Kiralık', imagePath = 'mdi-star'}]}] },\n{ menuItem = 'true', code = 'Elektronik', imagePath = 'mdi-cellphone', children = [{ menuItem = 'true', imagePath = 'mdi-desktop-classic', code = 'Bilgisayar', children = [{ menuItem = 'true', imagePath = 'mdi-laptop-windows', code = 'Laptop', children = [{ menuItem = 'true', code = 'MacBook Air'}]} ]}, { menuItem = 'true', imagePath = 'mdi-cellphone-basic',code = 'Telefon'}] }]",
+					"T": "prop"
+				},
+				"title": {
+					"H": "'Menu'",
+					"T": "prop"
+				},
+				"showOnlyIcon": {
+					"H": "false",
+					"T": "prop"
+				},
+				"collapseOnItemSelect": {
+					"H": "false",
+					"T": "prop"
+				},
+				"hideMenuTitle": {
+					"H": "false",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_2"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-navigation-drawer v-navigation-drawer--open theme--light"
+			}
+		},
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_3",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"PostRender": {
+					"H": "EdtrComp_2.mini=false",
+					"TO": 1
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_3"
+			},
+			"O": {
+				"compDomClasses": "",
+				"cType": "child"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "QMenu",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_2",
+					"T": "prop"
+				},
+				"menuData": {
+					"H": "╬[]╠{}╠=╣menuItem╩╠'true'╩╩╠=╣code╩╠'Vasıta'╩╩╠=╣imagePath╩╠'mdi-car'╩╩╠=╣children╩╠[]╠{}╠=╣menuItem╩╠'true'╩╩╠=╣imagePath╩╠'mdi-star'╩╩╠=╣code╩╠'Otomobil'╩╩╠=╣children╩╠[]╠{}╠=╣menuItem╩╠'true'╩╩╠=╣imagePath╩╠'mdi-star'╩╩╠=╣code╩╠'BMW'╩╩╠=╣children╩╠[]╠{}╠=╣menuItem╩╠'true'╩╩╠=╣imagePath╩╠'mdi-star'╩╩╠=╣code╩╠'5.20'╩╩╩╩╩╩╩╩╩╩╩╩╠{}╠=╣menuItem╩╠'true'╩╩╠=╣code╩╠'Emlak'╩╩╠=╣imagePath╩╠'mdi-home'╩╩╠=╣children╩╠[]╠{}╠=╣menuItem╩╠'true'╩╩╠=╣imagePath╩╠'mdi-star'╩╩╠=╣code╩╠'Konut'╩╩╠=╣children╩╠[]╠{}╠=╣menuItem╩╠'true'╩╩╠=╣imagePath╩╠'mdi-star'╩╩╠=╣code╩╠'Satılık'╩╩╠=╣children╩╠[]╠{}╠=╣menuItem╩╠'true'╩╩╠=╣code╩╠'Daire'╩╩╩╩╩╩╠{}╠=╣menuItem╩╠'true'╩╩╠=╣code╩╠'Kiralık'╩╩╠=╣imagePath╩╠'mdi-star'╩╩╩╩╩╩╩╩╩╠{}╠=╣menuItem╩╠'true'╩╩╠=╣code╩╠'Elektronik'╩╩╠=╣imagePath╩╠'mdi-cellphone'╩╩╠=╣children╩╠[]╠{}╠=╣menuItem╩╠'true'╩╩╠=╣imagePath╩╠'mdi-desktop-classic'╩╩╠=╣code╩╠'Bilgisayar'╩╩╠=╣children╩╠[]╠{}╠=╣menuItem╩╠'true'╩╩╠=╣imagePath╩╠'mdi-laptop-windows'╩╩╠=╣code╩╠'Laptop'╩╩╠=╣children╩╠[]╠{}╠=╣menuItem╩╠'true'╩╩╠=╣code╩╠'MacBook Air'╩╩╩╩╩╩╩╩╩╠{}╠=╣menuItem╩╠'true'╩╩╠=╣imagePath╩╠'mdi-cellphone-basic'╩╩╠=╣code╩╠'Telefon'╩╩╩╩╩╩╩╩",
+					"T": "prop"
+				},
+				"title": {
+					"H": "╬'Menu'╩╩",
+					"T": "prop"
+				},
+				"showOnlyIcon": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				},
+				"collapseOnItemSelect": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				},
+				"hideMenuTitle": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_2"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-navigation-drawer v-navigation-drawer--open theme--light newDropBorder"
+			}
+		},
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_3",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"PostRender": {
+					"H": "╬=╣.╣EdtrComp_2╩╠mini╩╩╠false╩╩╩",
+					"TO": 1
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_3"
+			},
+			"O": {
+				"compDomClasses": "newDropBorder",
+				"cType": "child"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {
+		"tr-TR": {
+			"username": "╬'Kullanıcı Adı'╩╩",
+			"password": "╬'Şifre'╩╩",
+			"rememberMe": "╬'Beni Hatırla'╩╩",
+			"login": "╬'Giriş Yap'╩╩",
+			"currentAccountOpenPage": "╬'Hesap Açılış Sayfası'╩╩",
+			"customerNumber": "╬'Müşteri Numarası'╩╩",
+			"accountName": "╬'Hesap Adı'╩╩",
+			"description": "╬'Açıklama'╩╩",
+			"save": "╬'Kaydet'╩╩",
+			"accountType": "╬'Hesap Tipi'╩╩",
+			"currency": "╬'Döviz Cinsi'╩╩",
+			"alertWarning": "╬'Uyarı Mesajı'╩╩",
+			"alertInfo": "╬'Bilgi Mesajı'╩╩",
+			"alertError": "╬'Hata Mesajı'╩╩",
+			"alertGeneralError": "╬'Bilinmeyen bir hata oluştu!'╩╩",
+			"filterBTN": "╬'Filtrele'╩╩",
+			"accountNumber": "╬'Hesap Numarası'╩╩",
+			"chooseBTN": "╬'Seç'╩╩",
+			"searchBTN": "╬'Ara'╩╩",
+			"accountInputField": "╬'Hesap Numarası'╩╩",
+			"noDataText": "╬'Mevcut veri bulunmamaktadır'╩╩",
+			"noResultText": "╬'Sonuç bulunamadı'╩╩",
+			"alertOkBtn": "╬'Tamam'╩╩",
+			"alertCancelBtn": "╬'Vazgeç'╩╩",
+			"dealMaturityJournal": "╬'Anlaşma Vadesi Yevmiye Defteri'╩╩",
+			"internalAccountOpen": "╬'Dahili Hesap Aç'╩╩",
+			"releaseDormantAccount": "╬'Hareketsiz Hesabı Geri Aç'╩╩",
+			"currentAccountClose": "╬'Hesap Kapat'╩╩",
+			"currentAccountReopen": "╬'Kapatılan Hesabı Aç'╩╩",
+			"currentAccountOpen": "╬'Yeni Hesap Aç'╩╩",
+			"currentAccountUpdate": "╬'Hesap Detaylarını Güncelle'╩╩",
+			"nostroCashTransfer": "╬'Nostro Nakit Transferi'╩╩",
+			"tellerCashAdjustment": "╬'Vezne Nakit Düzeltme'╩╩",
+			"tellerCashTransfer": "╬'Vezne Nakit Transferi'╩╩",
+			"nostroAccountOpen": "╬'Yeni Nostro Ekle'╩╩",
+			"nostroAccountUpdate": "╬'Nostro Detaylarını Güncelle'╩╩",
+			"nostroAccountDelete": "╬'Nostro Sil'╩╩",
+			"nostroBasicEnquiry": "╬'Nostro Temel Sorgulama'╩╩",
+			"accountEnquiry": "╬'Hesap Sorgulama'╩╩",
+			"balanceEnquiry": "╬'Bakiye Sorgulama'╩╩",
+			"foreignExchangeJournal": "╬'Döviz Yevmiye Defteri'╩╩",
+			"accountTypes": "╬'Hesap Tipleri'╩╩",
+			"transactionCodes": "╬'İşlem Kodları'╩╩",
+			"systemManagement": "╬'Sistem Yönetimi'╩╩",
+			"accountBlockage": "╬'Hesaba Bloke Ekleme'╩╩",
+			"currentAccountParent": "╬'Hesap Yönetimi'╩╩",
+			"standingOrdersParent": "╬'İç Tüzük'╩╩",
+			"nostroAccountParent": "╬'Nostro Yönetimi'╩╩",
+			"cashierTellerManagementParent": "╬'Kasiyer (Vezne) Yönetimi'╩╩",
+			"accountEnquiriesParent": "╬'Hesap Sorguları'╩╩",
+			"systemChecks": "╬'Sistem Kontrolleri'╩╩",
+			"generalReportsParent": "╬'Genel Raporlar'╩╩",
+			"dealReportsParent": "╬'Anlaşma Raporları'╩╩",
+			"accountingParent": "╬'Muhasebe'╩╩",
+			"riskManagementParent": "╬'Risk Yönetimi'╩╩",
+			"decisionSupportSystemsParent": "╬'Karar Destek Sistemleri'╩╩",
+			"supportVariablesParent": "╬'Destek Değişkenleri'╩╩",
+			"businessVariablesParent": "╬'İş Değişkenleri'╩╩",
+			"customerMonetaryEnquiry": "╬'Müşteri Parasal İşlemler Sorgulama'╩╩",
+			"liquidityAnalysisReport": "╬'Likidite Analiz Raporu'╩╩",
+			"fundSummaryJournal": "╬'Fon Özeti Yevmiye Defteri'╩╩",
+			"postingEnquiry": "╬'Gönderme Sorgusu'╩╩",
+			"diaryNotesList": "╬'Hesap Günlüğü Notları Listesi'╩╩",
+			"diaryNotesAdd": "╬'Hesap Günlüğü Notları Ekle'╩╩",
+			"diaryNotesUpdate": "╬'Hesap Günlüğü Notlarını Güncelle'╩╩",
+			"diaryNotesDelete": "╬'Hesap Günlüğü Notlarını Sil'╩╩",
+			"cashTransferParent": "╬'Nakit Transfer'╩╩",
+			"mainTillEnquiry": "╬'Ana Kasa Sorgulama'╩╩",
+			"tellerCashReconciliation": "╬'Vezne Nakit Mutabakat'╩╩",
+			"accountHistory": "╬'Hesap geçmişi'╩╩",
+			"pmAlertCancelBtnText": "╬'Reddet'╩╩",
+			"pmAlertTitle": "╬'Emin misiniz?'╩╩",
+			"pmCheckText": "╬'Süreç Onaya Gönderilmeden Önce Kontrol Edilecektir. Onaylıyor musunuz?'╩╩",
+			"pmSendToApproveText": "╬'Süreç Onaya Gönderilecek. Onaylıyor musunuz?'╩╩",
+			"pmAlertConfirmBtnText": "╬'Onayla'╩╩",
+			"supervisorCashOperationsParent": "╬'Yönetici Nakit İşlemleri'╩╩",
+			"tellerCashOperationsParent": "╬'Vezne Nakit İşlemleri'╩╩",
+			"tellerCashPositionEnquiry": "╬'Vezne Nakit Pozisyon Sorgulama'╩╩",
+			"cashDeposit": "╬'Para Yatırma'╩╩",
+			"cashWithdraw": "╬'Para Çekme'╩╩",
+			"statementRequest": "╬'Ekstre Talebi'╩╩",
+			"cashExchange": "╬'Nakit Döviz Alım-Satım'╩╩",
+			"collateralsParent": "╬'Teminatlar'╩╩",
+			"commissionPayment": "╬'Komisyon Ödeme'╩╩",
+			"transactionJournal": "╬'İşlem Yevmiye Defteri'╩╩",
+			"nostroProjectionsJournal": "╬'Nostro Projeksiyon Yevmiye Defteri'╩╩",
+			"accountStatusJournal": "╬'Hesap Durumu Yevmiye Defteri'╩╩",
+			"dealStatusJournal": "╬'Anlaşma Durumu Yevmiye Defteri'╩╩",
+			"interestStatusReport": "╬'Faiz Durum Raporu'╩╩"
+		},
+		"en-US": {
+			"username": "╬'Username'╩╩",
+			"password": "╬'Password'╩╩",
+			"rememberMe": "╬'Remember Me'╩╩",
+			"login": "╬'Login'╩╩",
+			"currentAccountOpenPage": "╬'Account Opening Page'╩╩",
+			"customerNumber": "╬'Customer Number'╩╩",
+			"accountName": "╬'Account Name'╩╩",
+			"description": "╬'Description'╩╩",
+			"save": "╬'Save'╩╩",
+			"accountType": "╬'Account Type'╩╩",
+			"currency": "╬'Currency'╩╩",
+			"alertWarning": "╬'Warning'╩╩",
+			"alertInfo": "╬'Info'╩╩",
+			"alertError": "╬'Error'╩╩",
+			"alertGeneralError": "╬'An unknown error has occurred!'╩╩",
+			"filterBTN": "╬'Filter'╩╩",
+			"accountNumber": "╬'Account Number'╩╩",
+			"chooseBTN": "╬'Select'╩╩",
+			"searchBTN": "╬'Search'╩╩",
+			"accountInputField": "╬'Account Number'╩╩",
+			"noDataText": "╬'No data available'╩╩",
+			"noResultText": "╬'No results found'╩╩",
+			"alertOkBtn": "╬'Ok'╩╩",
+			"alertCancelBtn": "╬'Cancel'╩╩",
+			"dealMaturityJournal": "╬'Deal Maturity Journal'╩╩",
+			"internalAccountOpen": "╬'Open Internal Account'╩╩",
+			"releaseDormantAccount": "╬'Release Dormant Account'╩╩",
+			"currentAccountClose": "╬'Close Account'╩╩",
+			"currentAccountReopen": "╬'Reopen Account'╩╩",
+			"currentAccountOpen": "╬'Open New Account'╩╩",
+			"currentAccountUpdate": "╬'Maintain Account Details'╩╩",
+			"nostroCashTransfer": "╬'Nostro Cash Transfer'╩╩",
+			"tellerCashAdjustment": "╬'Teller Cash Adjustment'╩╩",
+			"tellerCashTransfer": "╬'Teller Cash Transfer'╩╩",
+			"nostroAccountOpen": "╬'Add New Nostro'╩╩",
+			"nostroAccountUpdate": "╬'Maintain Nostro Details'╩╩",
+			"nostroAccountDelete": "╬'Delete Nostro'╩╩",
+			"nostroBasicEnquiry": "╬'Nostro Basic Enquiry'╩╩",
+			"accountEnquiry": "╬'Account Enquiry'╩╩",
+			"balanceEnquiry": "╬'Balance Enquiry'╩╩",
+			"foreignExchangeJournal": "╬'Foreign Exchange Journal'╩╩",
+			"accountTypes": "╬'Account Types'╩╩",
+			"transactionCodes": "╬'Transaction Codes'╩╩",
+			"systemManagement": "╬'System Management'╩╩",
+			"accountBlockage": "╬'Block Account'╩╩",
+			"currentAccountParent": "╬'Account Management'╩╩",
+			"standingOrdersParent": "╬'Standing Orders'╩╩",
+			"nostroAccountParent": "╬'Nostro Management'╩╩",
+			"cashierTellerManagementParent": "╬'Cashier (Teller) Management'╩╩",
+			"accountEnquiriesParent": "╬'Account Enquiries'╩╩",
+			"systemChecks": "╬'System Checks'╩╩",
+			"generalReportsParent": "╬'General Reports'╩╩",
+			"dealReportsParent": "╬'Deal Reports'╩╩",
+			"accountingParent": "╬'Accounting'╩╩",
+			"riskManagementParent": "╬'Risk Management'╩╩",
+			"decisionSupportSystemsParent": "╬'Decision Support Systems'╩╩",
+			"supportVariablesParent": "╬'Support Variables'╩╩",
+			"businessVariablesParent": "╬'Business Variables'╩╩",
+			"customerMonetaryEnquiry": "╬'Customer Monetary Enquiry'╩╩",
+			"liquidityAnalysisReport": "╬'Liquidity Analysis Report'╩╩",
+			"fundSummaryJournal": "╬'Fund Summary Journal'╩╩",
+			"postingEnquiry": "╬'Posting Enquiry'╩╩",
+			"diaryNotesList": "╬'Account Diary Notes List'╩╩",
+			"diaryNotesAdd": "╬'Add Account Diary Notes'╩╩",
+			"diaryNotesUpdate": "╬'Update Account Diary Notes'╩╩",
+			"diaryNotesDelete": "╬'Delete Account Diary Notes'╩╩",
+			"cashTransferParent": "╬'Cash Transfer'╩╩",
+			"mainTillEnquiry": "╬'Main Till Enquiry'╩╩",
+			"tellerCashReconciliation": "╬'Teller Cash Reconciliation'╩╩",
+			"accountHistory": "╬'Account History'╩╩",
+			"pmAlertCancelBtnText": "╬'Cancel'╩╩",
+			"pmAlertTitle": "╬'Are you sure?'╩╩",
+			"pmCheckText": "╬'Request will be checked before sending to approval. Please confirm.'╩╩",
+			"pmSendToApproveText": "╬'Request will be sent to approval. Please confirm.'╩╩",
+			"pmAlertConfirmBtnText": "╬'Confirm'╩╩",
+			"supervisorCashOperationsParent": "╬'Supervisor Cash Operations'╩╩",
+			"tellerCashOperationsParent": "╬'Teller Cash Operations'╩╩",
+			"tellerCashPositionEnquiry": "╬'Teller Cash Position Enquiry'╩╩",
+			"cashDeposit": "╬'Cash Deposit'╩╩",
+			"cashWithdraw": "╬'Cash Withdrawal'╩╩",
+			"statementRequest": "╬'Statement Request'╩╩",
+			"cashExchange": "╬'Cash Exchange'╩╩",
+			"collateralsParent": "╬'Collaterals'╩╩",
+			"commissionPayment": "╬'Commission Payment'╩╩",
+			"transactionJournal": "╬'Transaction Journal'╩╩",
+			"nostroProjectionsJournal": "╬'Nostro Projections Journal'╩╩",
+			"accountStatusJournal": "╬'Account Status Journal'╩╩",
+			"dealStatusJournal": "╬'Deal Status Journal'╩╩",
+			"interestStatusReport": "╬'Interest Status Report'╩╩"
+		}
+	},
+	"description": {}
+};
+export default pjson

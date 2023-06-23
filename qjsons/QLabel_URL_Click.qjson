@@ -1,0 +1,267 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_39",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"PostRender": {
+					"H": "declare var myEvent: any;\r\nmyEvent = quick.MM.get(\"MyEvent\");\r\n",
+					"TO": 1,
+					"HL": "TS"
+				},
+				"MyEvent": {
+					"H": "quick.EM.trace(\"triggered\");",
+					"C": true,
+					"HL": "TS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_39"
+			},
+			"O": {
+				"cType": "child"
+			}
+		},
+		{
+			"T": "VRow",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_58",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VCol",
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_34",
+													"T": "prop"
+												},
+												"tagType": {
+													"H": "'paragraph'",
+													"T": "prop"
+												},
+												"text": {
+													"H": "'Google''da yeni bir sayfa açmak için bu <a onclick=\"myEvent()\">bağlantıya</a> tıklayın.'",
+													"T": "prop"
+												},
+												"visible": {
+													"H": "true",
+													"T": "prop"
+												},
+												"processHtml": {
+													"H": "true",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_34"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [],
+														"sm": [],
+														"md": [],
+														"lg": [],
+														"xl": []
+													},
+													"class": ""
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_61",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_61"
+							},
+							"O": {
+								"cType": "slot",
+								"layout": {
+									"dOpt": {
+										"xs": [
+											"d:d-flex",
+											"fd:flex-row",
+											"c:col-12"
+										]
+									},
+									"class": "d-flex flex-row col-12"
+								}
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_58"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_39",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"PostRender": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nmyEvent = quick.MM.get(\"MyEvent\");\r\n",
+					"TO": 1,
+					"HL": "JS"
+				},
+				"MyEvent": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.EM.trace(\"triggered\");\r\n",
+					"C": true,
+					"HL": "JS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_39"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			}
+		},
+		{
+			"T": "VRow",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_58",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VCol",
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_34",
+													"T": "prop"
+												},
+												"tagType": {
+													"H": "╬'paragraph'╩╩",
+													"T": "prop"
+												},
+												"text": {
+													"H": "╬'Google'da yeni bir sayfa açmak için bu <a onclick=\"myEvent()\">bağlantıya</a> tıklayın.'╩╩",
+													"T": "prop"
+												},
+												"visible": {
+													"H": "╬true╩╩",
+													"T": "prop"
+												},
+												"processHtml": {
+													"H": "╬true╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_34"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [],
+														"sm": [],
+														"md": [],
+														"lg": [],
+														"xl": []
+													},
+													"class": ""
+												},
+												"compDomClasses": "q-label newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_61",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_61"
+							},
+							"O": {
+								"cType": "slot",
+								"layout": {
+									"dOpt": {
+										"xs": [
+											"d:d-flex",
+											"fd:flex-row",
+											"c:col-12"
+										]
+									},
+									"class": "d-flex flex-row col-12"
+								},
+								"compDomClasses": "col d-flex flex-row col-12 newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_58"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "row newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {}
+};
+export default pjson

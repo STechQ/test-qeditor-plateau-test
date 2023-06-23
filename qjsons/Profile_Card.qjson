@@ -1,0 +1,686 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VCard",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_9",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'mx-auto'",
+					"T": "class"
+				},
+				"maxWidth": {
+					"H": "434",
+					"T": "prop"
+				},
+				"tile": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VImg",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_11",
+									"T": "prop"
+								},
+								"src": {
+									"H": "'https://cdn.vuetifyjs.com/images/cards/server-room.jpg'",
+									"T": "prop"
+								},
+								"height": {
+									"H": "'100%'",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VRow",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_13",
+													"T": "prop"
+												},
+												"align": {
+													"H": "'end'",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'fill-height'",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VCol",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_15",
+																	"T": "prop"
+																},
+																"alignSelf": {
+																	"H": "'start'",
+																	"T": "prop"
+																},
+																"class": {
+																	"H": "'col-12 pa-0'",
+																	"T": "class"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VAvatar",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_17",
+																					"T": "prop"
+																				},
+																				"class": {
+																					"H": "'profile'",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "'grey'",
+																					"T": "prop"
+																				},
+																				"size": {
+																					"H": "164",
+																					"T": "prop"
+																				},
+																				"tile": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VImg",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_19",
+																									"T": "prop"
+																								},
+																								"src": {
+																									"H": "'https://cdn.vuetifyjs.com/images/profiles/marcus.jpg'",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "Ghost",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_21",
+																													"T": "prop"
+																												}
+																											},
+																											"E": {},
+																											"C": {},
+																											"_Editor": {
+																												"eID": "EdtrComp_21"
+																											},
+																											"O": {
+																												"cType": "child"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_19"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_17"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_15"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														},
+														{
+															"T": "VCol",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_10",
+																	"T": "prop"
+																},
+																"class": {
+																	"H": "'py-0'",
+																	"T": "class"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VListItem",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_5",
+																					"T": "prop"
+																				},
+																				"dark": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VListItemContent",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_22",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_6",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "'Marcus Obrien'",
+																													"T": "prop"
+																												},
+																												"class": {
+																													"H": "'title white--text'",
+																													"T": "class"
+																												}
+																											},
+																											"E": {},
+																											"C": {},
+																											"_Editor": {
+																												"eID": "EdtrComp_6"
+																											},
+																											"O": {
+																												"cType": "child"
+																											}
+																										},
+																										{
+																											"T": "QLabel",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_14",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "'Network Engineer'",
+																													"T": "prop"
+																												},
+																												"class": {
+																													"H": "'v-list-item__subtitle white--text'",
+																													"T": "class"
+																												}
+																											},
+																											"E": {},
+																											"C": {},
+																											"_Editor": {
+																												"eID": "EdtrComp_14"
+																											},
+																											"O": {
+																												"cType": "child"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_22"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_5"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_10"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_13"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_11"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_9"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VCard",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_9",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'mx-auto'╩╩",
+					"T": "class"
+				},
+				"maxWidth": {
+					"H": "╬434╩╩",
+					"T": "prop"
+				},
+				"tile": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VImg",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_11",
+									"T": "prop"
+								},
+								"src": {
+									"H": "╬'https://cdn.vuetifyjs.com/images/cards/server-room.jpg'╩╩",
+									"T": "prop"
+								},
+								"height": {
+									"H": "╬'100%'╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VRow",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_13",
+													"T": "prop"
+												},
+												"align": {
+													"H": "╬'end'╩╩",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'fill-height'╩╩",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VCol",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_15",
+																	"T": "prop"
+																},
+																"alignSelf": {
+																	"H": "╬'start'╩╩",
+																	"T": "prop"
+																},
+																"class": {
+																	"H": "╬'col-12 pa-0'╩╩",
+																	"T": "class"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VAvatar",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_17",
+																					"T": "prop"
+																				},
+																				"class": {
+																					"H": "╬'profile'╩╩",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "╬'grey'╩╩",
+																					"T": "prop"
+																				},
+																				"size": {
+																					"H": "╬164╩╩",
+																					"T": "prop"
+																				},
+																				"tile": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VImg",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_19",
+																									"T": "prop"
+																								},
+																								"src": {
+																									"H": "╬'https://cdn.vuetifyjs.com/images/profiles/marcus.jpg'╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "Ghost",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_21",
+																													"T": "prop"
+																												}
+																											},
+																											"E": {},
+																											"C": {},
+																											"_Editor": {
+																												"eID": "EdtrComp_21"
+																											},
+																											"O": {
+																												"cType": "child"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_19"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_17"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_15"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														},
+														{
+															"T": "VCol",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_10",
+																	"T": "prop"
+																},
+																"class": {
+																	"H": "╬'py-0'╩╩",
+																	"T": "class"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VListItem",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_5",
+																					"T": "prop"
+																				},
+																				"dark": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VListItemContent",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_22",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_6",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "╬'Marcus Obrien'╩╩",
+																													"T": "prop"
+																												},
+																												"class": {
+																													"H": "╬'title white--text'╩╩",
+																													"T": "class"
+																												}
+																											},
+																											"E": {},
+																											"C": {},
+																											"_Editor": {
+																												"eID": "EdtrComp_6"
+																											},
+																											"O": {
+																												"cType": "child"
+																											}
+																										},
+																										{
+																											"T": "QLabel",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_14",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "╬'Network Engineer'╩╩",
+																													"T": "prop"
+																												},
+																												"class": {
+																													"H": "╬'v-list-item__subtitle white--text'╩╩",
+																													"T": "class"
+																												}
+																											},
+																											"E": {},
+																											"C": {},
+																											"_Editor": {
+																												"eID": "EdtrComp_14"
+																											},
+																											"O": {
+																												"cType": "child"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_22"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_5"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_10"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_13"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_11"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_9"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {}
+};
+export default pjson

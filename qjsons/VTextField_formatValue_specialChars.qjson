@@ -1,0 +1,77 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VTextField",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_2",
+					"T": "prop"
+				},
+				"label": {
+					"H": "'Text field label'",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				},
+				"formatValues": {
+					"H": "{'regex' = '[^a-zA-Z0-9\\d\\s:]*'}",
+					"T": "attr"
+				},
+				"format": {
+					"H": "'regex'",
+					"T": "attr"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_2"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VTextField",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_2",
+					"T": "prop"
+				},
+				"label": {
+					"H": "╬'Text field label'╩╩",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"formatValues": {
+					"H": "╬{}╠=╣'regex'╩╠'[^a-zA-Z0-9ds:]*'╩╩╩╩",
+					"T": "attr"
+				},
+				"format": {
+					"H": "╬'regex'╩╩",
+					"T": "attr"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_2"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-input v-input--is-label-active v-input--is-dirty theme--light v-text-field v-text-field--is-booted"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {}
+};
+export default pjson

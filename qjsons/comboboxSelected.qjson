@@ -1,0 +1,233 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VCombobox",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_4",
+					"T": "prop"
+				},
+				"label": {
+					"H": "'My Combobox'",
+					"T": "prop"
+				},
+				"items": {
+					"H": "[{text = 'test1', value = 1},\n{ text = 'test2', value = 2}]",
+					"T": "prop"
+				},
+				"multiple": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"change": {
+					"H": "EdtrComp_4.internalValue=EdtrComp_4.items",
+					"P": "value"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_4"
+			},
+			"O": {
+				"compDomClasses": "v-input v-input--is-label-active v-input--is-dirty v-input--is-focused theme--light v-text-field v-text-field--is-booted v-select v-select--is-menu-active v-select--is-multi v-autocomplete primary--text",
+				"cType": "child"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_5",
+					"T": "prop"
+				},
+				"color": {
+					"H": "'primary'",
+					"T": "prop"
+				},
+				"regular": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_6",
+									"T": "prop"
+								},
+								"text": {
+									"H": "'Test Button'",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_6"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "q-label "
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_5"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary"
+			}
+		},
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"PostRender": {
+					"H": "EdtrComp_4.internalValue=EdtrComp_4.items",
+					"TO": 1
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"compDomClasses": ""
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VCombobox",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_4",
+					"T": "prop"
+				},
+				"label": {
+					"H": "╬'My Combobox'╩╩",
+					"T": "prop"
+				},
+				"items": {
+					"H": "╬[]╠{}╠=╣text╩╠'test1'╩╩╠=╣value╩╠1╩╩╩╠{}╠=╣text╩╠'test2'╩╩╠=╣value╩╠2╩╩╩╩╩",
+					"T": "prop"
+				},
+				"multiple": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"change": {
+					"H": "╬=╣.╣EdtrComp_4╩╠internalValue╩╩╠.╣EdtrComp_4╩╠items╩╩╩╩",
+					"P": "value"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_4"
+			},
+			"O": {
+				"compDomClasses": "v-input v-input--is-label-active v-input--is-dirty v-input--is-focused theme--light v-text-field v-text-field--is-booted v-select v-select--is-menu-active v-select--is-multi v-autocomplete primary--text",
+				"cType": "child"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_5",
+					"T": "prop"
+				},
+				"color": {
+					"H": "╬'primary'╩╩",
+					"T": "prop"
+				},
+				"regular": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_6",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬'Test Button'╩╩",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_6"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "q-label "
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_5"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary"
+			}
+		},
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"PostRender": {
+					"H": "╬=╣.╣EdtrComp_4╩╠internalValue╩╩╠.╣EdtrComp_4╩╠items╩╩╩╩",
+					"TO": 1
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": ""
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {}
+};
+export default pjson

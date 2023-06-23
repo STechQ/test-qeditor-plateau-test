@@ -1,0 +1,302 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VDataTable",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_4",
+					"T": "prop"
+				},
+				"headers": {
+					"H": "[{ text = 'Dessert (100g serving)', align= 'start', sortable= false, value= 'name', filterable=false},\n{ text = 'Calories', value= 'calories', sortable = true },\n{ text = 'Fat (g)', value= 'fat' },\n{ text = 'Carbs (g)', value= 'carbs' },\n{ text = 'Protein (g)', value= 'protein' },\n{ text = 'Iron (%)', value= 'iron' }]",
+					"T": "prop"
+				},
+				"items": {
+					"H": "[{name = 'Frozens Yogurt', calories = 159, fat = '6.0', carbs = 24, protein = '4.0', iron = '1%'},\n{name = 'Ice cream sandwich', calories = 237, fat = '9.0', carbs = 37, protein = '4.3', iron = '1%'},\n{name = 'Eclair', calories = 262, fat = '16.0', carbs = 23, protein = '6.0', iron = '7%'},\n{name = 'Cupcake', calories = 305, fat = '3.7', carbs = 67, protein = '4.3', iron = '8%'},\n{name = 'Gingerbread',calories = 356, fat = '16.0', carbs = 49, protein = '3.9', iron = '16%'},\n{name = 'Jelly bean', calories = 375,  fat = '0.0', carbs = 94, protein = '0.0', iron = '0%'},\n{name = 'Lollipop', calories = 392, fat = '0.2', carbs = 98, protein = '0.0', iron = '2 %'},\n{name = 'Honeycomb', calories = 408, fat = '3.2', carbs = 87, protein = '6.5', iron = '45%'},\n{name = 'Donut', calories = 452, fat = '25.0', carbs = 51, protein = '4.9', iron = '22%'},\n{name = 'KitKat', calories = 518, fat = '26.0', carbs = 65, protein = '7', iron=  '6 %'}]",
+					"T": "prop"
+				},
+				"itemsPerPage": {
+					"H": "5",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"top": {
+					"c": [
+						{
+							"T": "VContainer",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_7",
+									"T": "prop"
+								},
+								"class": {
+									"H": "'d-flex justify-end'",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VTextField",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_9",
+													"T": "prop"
+												},
+												"label": {
+													"H": "'Search'",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'col-lg-4'",
+													"T": "class"
+												},
+												"appendIcon": {
+													"H": "'mdi-magnify'",
+													"T": "prop"
+												}
+											},
+											"E": {
+												"input": {
+													"H": "\r\n\r\nEdtrComp_4.search= EdtrComp_9.lazyValue",
+													"P": "value"
+												}
+											},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_9"
+											},
+											"O": {
+												"cType": "child"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_7"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_4"
+			},
+			"O": {
+				"cType": "child"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VDataTable",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_4",
+					"T": "prop"
+				},
+				"headers": {
+					"H": "╬[]╠{}╠=╣text╩╠'Dessert (100g serving)'╩╩╠=╣align╩╠'start'╩╩╠=╣sortable╩╠false╩╩╠=╣value╩╠'name'╩╩╠=╣filterable╩╠false╩╩╩╠{}╠=╣text╩╠'Calories'╩╩╠=╣value╩╠'calories'╩╩╠=╣sortable╩╠true╩╩╩╠{}╠=╣text╩╠'Fat (g)'╩╩╠=╣value╩╠'fat'╩╩╩╠{}╠=╣text╩╠'Carbs (g)'╩╩╠=╣value╩╠'carbs'╩╩╩╠{}╠=╣text╩╠'Protein (g)'╩╩╠=╣value╩╠'protein'╩╩╩╠{}╠=╣text╩╠'Iron (%)'╩╩╠=╣value╩╠'iron'╩╩╩╩╩",
+					"T": "prop"
+				},
+				"items": {
+					"H": "╬[]╠{}╠=╣name╩╠'Frozens Yogurt'╩╩╠=╣calories╩╠159╩╩╠=╣fat╩╠'6.0'╩╩╠=╣carbs╩╠24╩╩╠=╣protein╩╠'4.0'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Ice cream sandwich'╩╩╠=╣calories╩╠237╩╩╠=╣fat╩╠'9.0'╩╩╠=╣carbs╩╠37╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Eclair'╩╩╠=╣calories╩╠262╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠23╩╩╠=╣protein╩╠'6.0'╩╩╠=╣iron╩╠'7%'╩╩╩╠{}╠=╣name╩╠'Cupcake'╩╩╠=╣calories╩╠305╩╩╠=╣fat╩╠'3.7'╩╩╠=╣carbs╩╠67╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'8%'╩╩╩╠{}╠=╣name╩╠'Gingerbread'╩╩╠=╣calories╩╠356╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠49╩╩╠=╣protein╩╠'3.9'╩╩╠=╣iron╩╠'16%'╩╩╩╠{}╠=╣name╩╠'Jelly bean'╩╩╠=╣calories╩╠375╩╩╠=╣fat╩╠'0.0'╩╩╠=╣carbs╩╠94╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'0%'╩╩╩╠{}╠=╣name╩╠'Lollipop'╩╩╠=╣calories╩╠392╩╩╠=╣fat╩╠'0.2'╩╩╠=╣carbs╩╠98╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'2 %'╩╩╩╠{}╠=╣name╩╠'Honeycomb'╩╩╠=╣calories╩╠408╩╩╠=╣fat╩╠'3.2'╩╩╠=╣carbs╩╠87╩╩╠=╣protein╩╠'6.5'╩╩╠=╣iron╩╠'45%'╩╩╩╠{}╠=╣name╩╠'Donut'╩╩╠=╣calories╩╠452╩╩╠=╣fat╩╠'25.0'╩╩╠=╣carbs╩╠51╩╩╠=╣protein╩╠'4.9'╩╩╠=╣iron╩╠'22%'╩╩╩╠{}╠=╣name╩╠'KitKat'╩╩╠=╣calories╩╠518╩╩╠=╣fat╩╠'26.0'╩╩╠=╣carbs╩╠65╩╩╠=╣protein╩╠'7'╩╩╠=╣iron╩╠'6 %'╩╩╩╩╩",
+					"T": "prop"
+				},
+				"itemsPerPage": {
+					"H": "╬5╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"top": {
+					"c": [
+						{
+							"T": "VContainer",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_7",
+									"T": "prop"
+								},
+								"class": {
+									"H": "╬'d-flex justify-end'╩╩",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VTextField",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_9",
+													"T": "prop"
+												},
+												"label": {
+													"H": "╬'Search'╩╩",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'col-lg-4'╩╩",
+													"T": "class"
+												},
+												"appendIcon": {
+													"H": "╬'mdi-magnify'╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {
+												"input": {
+													"H": "╬=╣.╣EdtrComp_4╩╠search╩╩╠.╣EdtrComp_9╩╠lazyValue╩╩╩╩",
+													"P": "value"
+												}
+											},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_9"
+											},
+											"O": {
+												"cType": "child",
+												"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted col-lg-4 ╬'col-lg-4'╩╩ newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_7"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "container d-flex justify-end newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_4"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "v-data-table v-data-table--has-top v-data-table--has-bottom theme--light newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {
+		"tr-TR": {
+			"label_product": "╬'Ürün'╩╩",
+			"ACTIVE": "╬'Aktif'╩╩",
+			"PASSIVE": "╬'Pasif'╩╩",
+			"SECTOR_OST": "╬'ÖST'╩╩",
+			"SECTOR_TREASURY": "╬'Hazine'╩╩",
+			"SECTOR_OTHER": "╬'Diğer'╩╩",
+			"SECTOR_BANK": "╬'Banka'╩╩",
+			"DOMESTIC": "╬'Yurt İçi'╩╩",
+			"ABROAD": "╬'Yurt Dışı'╩╩",
+			"FIRM_SALE": "╬'Kesin Satış'╩╩",
+			"CAPITAL_REPAYMENT": "╬'Anapara İtfa'╩╩",
+			"COUPON_REPAYMENT": "╬'Kupon İtfa'╩╩",
+			"REVERSE_REPO": "╬'Ters Repo'╩╩",
+			"label_product_required": "╬'Ürün Bilgisi Gereklidir'╩╩",
+			"label_exportCountriesList_required": "╬'İhraç Edilen Ülke Bilgisi Gereklidir'╩╩",
+			"label_issuerInstutionCounter_required": "╬'İhraçcı Kurum Ülke Bilgisi Gereklidir'╩╩",
+			"label_bsmvRate_required": "╬'Bsmv Oran Bilgisi Gereklidir'╩╩",
+			"label_operation_type": "╬'İşlem Tipi'╩╩",
+			"label_issuer_sector_list": "╬'İhraçcı Sektör'╩╩",
+			"label_export_countries_list": "╬'İhraç Edilen Ülke'╩╩",
+			"label_issuer_instution_counter": "╬'İhraçcı Kurum Ülke'╩╩",
+			"label_bsmv_rate": "╬'Bsmv Oranı %'╩╩",
+			"label_instrument_type": "╬'Menkul Kıymet Tipi'╩╩",
+			"label_instrumentList_required": "╬'Menkul Kıymet Tipi Gereklidir'╩╩",
+			"label_operationType_required": "╬'İşlem Tipi Gereklidir'╩╩",
+			"label_process_alert": "╬'Bu Bilgiler Daha Önce Kullanılmış'╩╩",
+			"label_alert": "╬'Kayıt Mevcut Lütfen Tekrar Doldurunuz'╩╩",
+			"label_al_title": "╬'Hata'╩╩",
+			"lbl_Alert": "╬'Lütfen alanları kontrol ediniz'╩╩",
+			"SGMK": "╬'SGMK BSMV Tanımlama'╩╩",
+			"FIXED_INCOME": "╬'SGMK BSMV Tanımlama'╩╩",
+			"REPO": "╬'REPO BSMV Tanımlama'╩╩",
+			"lbl_save": "╬'Kaydet'╩╩",
+			"lbl_back": "╬'Vazgeç'╩╩",
+			"GOVERMENT_BOND": "╬'Devlet Tahvili'╩╩",
+			"TREASURY_BOND": "╬'Hazine Bonosu'╩╩",
+			"EUROBOND": "╬'Eurobond'╩╩",
+			"COMMERCIAL_PAPERS_FI": "╬'Finansman Bonosu'╩╩",
+			"PUBLIC_LEASE_CERTIFICATES_FI": "╬'Kamu Kira Sertifikası'╩╩",
+			"PRIVATE_LEASE_CERTIFICATES_FI": "╬'Özel Kira Sertifikası'╩╩",
+			"PRIVATE_SECTOR_BONDS_FI": "╬'Özel Sektör Tahvili'╩╩",
+			"ASSET_BASED_SECURITIES_FI": "╬'Varlığa Dayalı Menkul Kıymetler'╩╩",
+			"STRUCTURED_DEBT_INSTRUMENTS_FI": "╬'Yapılandırılmış Borçlanma Aracı'╩╩",
+			"BANK_BOND": "╬'Banka Bonosu'╩╩",
+			"label_BSMV": "╬'BSMV Tanımlama'╩╩",
+			"lbl_AlertValid": "╬'BSMV tanımı mevcut, tanımları kontrol ediniz.'╩╩"
+		},
+		"en-US": {
+			"label_product": "╬'Product'╩╩",
+			"ACTIVE": "╬'Active'╩╩",
+			"PASSIVE": "╬'Passive'╩╩",
+			"SECTOR_OST": "╬'SECTOR OST'╩╩",
+			"SECTOR_TREASURY": "╬'SECTOR TREASURY'╩╩",
+			"SECTOR_OTHER": "╬'SECTOR OTHER'╩╩",
+			"SECTOR_BANK": "╬'SEKTOR BANK'╩╩",
+			"DOMESTIC": "╬'DOMESTIC'╩╩",
+			"ABROAD": "╬'ABROAD'╩╩",
+			"FIRM_SALE": "╬'FIRM SALE'╩╩",
+			"CAPITAL_REPAYMENT": "╬'CAPITAL_REPAYMENT'╩╩",
+			"COUPON_REPAYMENT": "╬'COUPON_REPAYMENT'╩╩",
+			"REVERSE_REPO": "╬'REVERSE_REPO'╩╩",
+			"label_product_required": "╬'Product Information Required'╩╩",
+			"label_exportCountriesList_required": "╬'export countries list required'╩╩",
+			"label_issuerInstutionCounter_required": "╬'issuer instution counter required'╩╩",
+			"label_bsmvRate_required": "╬'bsmv rate required'╩╩",
+			"label_operation_type": "╬'Operation Type'╩╩",
+			"label_issuer_sector_list": "╬'Issuer Sector List'╩╩",
+			"label_export_countries_list": "╬'Export Countries List'╩╩",
+			"label_issuer_instution_counter": "╬'Issuer Instution Counter'╩╩",
+			"label_bsmv_rate": "╬'Bsmv Rate %'╩╩",
+			"label_instrument_type": "╬'Instrument Type'╩╩",
+			"label_instrumentList_required": "╬'Instrument List Required'╩╩",
+			"label_operationType_required": "╬'Operation Type Required'╩╩",
+			"label_process_alert": "╬'This Informations Has Used Before'╩╩",
+			"label_alert": "╬'Same Record Found'╩╩",
+			"label_al_title": "╬'Error'╩╩",
+			"lbl_Alert": "╬'Please fill the blank fields'╩╩",
+			"SGMK": "╬'SGMK BSMV Definition'╩╩",
+			"FIXED_INCOME": "╬'SGMK BSMV Definition'╩╩",
+			"REPO": "╬'REPO BSMV Definition'╩╩",
+			"lbl_save": "╬'Save'╩╩",
+			"lbl_back": "╬'Quit'╩╩",
+			"GOVERMENT_BOND": "╬'Goverment Bond'╩╩",
+			"TREASURY_BOND": "╬'Treasury Bond'╩╩",
+			"EUROBOND": "╬'Eurobond'╩╩",
+			"COMMERCIAL_PAPERS_FI": "╬'Commercial Papers'╩╩",
+			"PUBLIC_LEASE_CERTIFICATES_FI": "╬'Public Lease Certificates'╩╩",
+			"PRIVATE_LEASE_CERTIFICATES_FI": "╬'Private Lease Certificates'╩╩",
+			"PRIVATE_SECTOR_BONDS_FI": "╬'Private Sector Bonds'╩╩",
+			"ASSET_BASED_SECURITIES_FI": "╬'Asset Based Securities FI'╩╩",
+			"STRUCTURED_DEBT_INSTRUMENTS_FI": "╬'STRUCTURED_DEBT_INSTRUMENTS'╩╩",
+			"BANK_BOND": "╬'Bank Bond'╩╩",
+			"label_BSMV": "╬'BSMV Definition'╩╩",
+			"lbl_AlertValid": "╬'BSMV definition is available, please check the definitions.'╩╩"
+		}
+	},
+	"description": {}
+};
+export default pjson

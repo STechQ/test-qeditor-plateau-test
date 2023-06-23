@@ -1,0 +1,453 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container container--fluid'",
+					"T": "class"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_3",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VFileInput",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_10",
+																	"T": "prop"
+																},
+																"placeholder": {
+																	"H": "'Select a file(Placeholder)'",
+																	"T": "prop"
+																},
+																"outlined": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"clearable": {
+																	"H": "false",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_10"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted v-text-field--enclosed v-text-field--outlined v-text-field--placeholder v-file-input undefined newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_17",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_17"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											}
+										},
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VFileInput",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_32",
+																	"T": "prop"
+																},
+																"placeholder": {
+																	"H": "'Select a file(Placeholder)'",
+																	"T": "prop"
+																},
+																"accept": {
+																	"H": "'image/png'",
+																	"T": "attr"
+																},
+																"appendIcon": {
+																	"H": "'mdi-lock'",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_32"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted v-text-field--placeholder v-file-input undefined newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_31",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_31"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											}
+										},
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VFileInput",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_28",
+																	"T": "prop"
+																},
+																"placeholder": {
+																	"H": "'Select a file(Placeholder)'",
+																	"T": "prop"
+																},
+																"chips": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"clearable": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"counter": {
+																	"H": "3",
+																	"T": "prop"
+																},
+																"multiple": {
+																	"H": "true",
+																	"T": "attr"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_28"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted v-text-field--placeholder v-file-input undefined newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_27",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_27"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_3"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container container--fluid newDropBorder"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container container--fluid'╩╩",
+					"T": "class"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_3",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VFileInput",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_10",
+																	"T": "prop"
+																},
+																"placeholder": {
+																	"H": "╬'Select a file(Placeholder)'╩╩",
+																	"T": "prop"
+																},
+																"outlined": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"clearable": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_10"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted v-text-field--enclosed v-text-field--outlined v-text-field--placeholder v-file-input undefined newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_17",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_17"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											}
+										},
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VFileInput",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_32",
+																	"T": "prop"
+																},
+																"placeholder": {
+																	"H": "╬'Select a file(Placeholder)'╩╩",
+																	"T": "prop"
+																},
+																"accept": {
+																	"H": "╬'image/png'╩╩",
+																	"T": "attr"
+																},
+																"appendIcon": {
+																	"H": "╬'mdi-lock'╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_32"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted v-text-field--placeholder v-file-input undefined newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_31",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_31"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											}
+										},
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VFileInput",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_28",
+																	"T": "prop"
+																},
+																"placeholder": {
+																	"H": "╬'Select a file(Placeholder)'╩╩",
+																	"T": "prop"
+																},
+																"chips": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"clearable": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"counter": {
+																	"H": "╬3╩╩",
+																	"T": "prop"
+																},
+																"multiple": {
+																	"H": "╬true╩╩",
+																	"T": "attr"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_28"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted v-text-field--placeholder v-file-input undefined newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_27",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_27"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_3"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container container--fluid newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {}
+};
+export default pjson

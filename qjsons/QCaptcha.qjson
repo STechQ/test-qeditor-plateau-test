@@ -1,0 +1,634 @@
+import { IQJSon } from "@stechquick/shrimp/lib/interfaces/ComponentInterfaces/IQJson";
+let pjson : IQJSon = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_3",
+					"T": "prop"
+				},
+				"externalEvents": {
+					"H": "[{name='setUrl', params=['url']}, {name='setCodeValue', params=['codeValue']},{name='clickSubmit',params=['']},{name= 'onChangeGetCodeValue',params=['codeValue']}]",
+					"T": "prop"
+				},
+				"externalProps": {
+					"H": "['maxLength']",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"setUrl": {
+					"H": "imgCaptcha.src = url ",
+					"C": true,
+					"EV": true
+				},
+				"clickSubmit": {
+					"H": "parent.events.clickSubmit()",
+					"C": true
+				},
+				"setCodeValue": {
+					"H": "txtVerCode.internalValue = codeValue ",
+					"C": true,
+					"EV": true
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_3"
+			},
+			"O": {
+				"compDomClasses": "",
+				"cType": "child"
+			}
+		},
+		{
+			"T": "VRow",
+			"P": {
+				"ID": {
+					"H": "rowCaptcha",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'d-flex flex-row'",
+					"T": "class"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VTextField",
+							"P": {
+								"ID": {
+									"H": "txtVerCode",
+									"T": "prop"
+								},
+								"label": {
+									"H": "LR('lblDogrulamaKodu')",
+									"T": "prop"
+								},
+								"regular": {
+									"H": "'true'",
+									"T": "prop"
+								},
+								"class": {
+									"H": "'col-2 mt-1'",
+									"T": "class"
+								},
+								"solo": {
+									"H": "false",
+									"T": "prop"
+								},
+								"outlined": {
+									"H": "true",
+									"T": "prop"
+								},
+								"dense": {
+									"H": "true",
+									"T": "prop"
+								},
+								"maxlength": {
+									"H": "parent.props.maxLength",
+									"T": "attr"
+								}
+							},
+							"E": {
+								"change": {
+									"H": "parent.events.onChangeGetCodeValue({codeValue=value})",
+									"P": "value"
+								},
+								"input": {
+									"H": "parent.events.onChangeGetCodeValue({codeValue=value})",
+									"P": "value"
+								}
+							},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "Ghost",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_10",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_10"
+											},
+											"O": {
+												"cType": "child",
+												"compDomClasses": ""
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_5"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "v-input v-input--dense theme--light v-text-field v-text-field--is-booted v-text-field--enclosed v-text-field--outlined col-2 mt-1"
+							}
+						},
+						{
+							"T": "VImg",
+							"P": {
+								"ID": {
+									"H": "imgCaptcha",
+									"T": "prop"
+								},
+								"src": {
+									"H": "'https://www.tsohost.com/assets/uploads/blog/capcha.jpeg'",
+									"T": "prop"
+								},
+								"height": {
+									"H": "'50'",
+									"T": "prop"
+								},
+								"width": {
+									"H": "'50'",
+									"T": "prop"
+								},
+								"class": {
+									"H": "'col-1 ml-2'",
+									"T": "class"
+								},
+								"maxHeight": {
+									"H": "'80px'",
+									"T": "prop"
+								},
+								"maxWidth": {
+									"H": "'100px'",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "Ghost",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_11",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_11"
+											},
+											"O": {
+												"cType": "child",
+												"compDomClasses": "editor-ghost-comp"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_6"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "v-image v-responsive theme--light col-1 ml-2"
+							}
+						},
+						{
+							"T": "VBtn",
+							"P": {
+								"ID": {
+									"H": "btnSubmit",
+									"T": "prop"
+								},
+								"color": {
+									"H": "'primary'",
+									"T": "prop"
+								},
+								"regular": {
+									"H": "true",
+									"T": "prop"
+								},
+								"icon": {
+									"H": "true",
+									"T": "prop"
+								},
+								"class": {
+									"H": "'mt-1 ml-3'",
+									"T": "class"
+								}
+							},
+							"E": {
+								"click": {
+									"H": "MM.trigger('clickSubmit')",
+									"P": "mouseEvent"
+								}
+							},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VIcon",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_14",
+													"T": "prop"
+												},
+												"text": {
+													"H": "'mdi-refresh'",
+													"T": "text"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Ghost",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_13",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_13"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": ""
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_14"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-icon notranslate mdi mdi-refresh theme--light"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_12"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "v-btn v-btn--flat v-btn--icon v-btn--round theme--light v-size--default primary--text mt-1 ml-3"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_2"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "d-flex flex-row"
+			}
+		},
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_3",
+					"T": "prop"
+				},
+				"externalEvents": {
+					"H": "╬[]╠{}╠=╣name╩╠'setUrl'╩╩╠=╣params╩╠[]╠'url'╩╩╩╩╠{}╠=╣name╩╠'setCodeValue'╩╩╠=╣params╩╠[]╠'codeValue'╩╩╩╩╠{}╠=╣name╩╠'clickSubmit'╩╩╠=╣params╩╠[]╠''╩╩╩╩╠{}╠=╣name╩╠'onChangeGetCodeValue'╩╩╠=╣params╩╠[]╠'codeValue'╩╩╩╩╩╩",
+					"T": "prop"
+				},
+				"externalProps": {
+					"H": "╬[]╠'maxLength'╩╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"setUrl": {
+					"H": "╬=╣.╣imgCaptcha╩╠src╩╩╠url╩╩╩",
+					"C": true,
+					"EV": true
+				},
+				"clickSubmit": {
+					"H": "╬()╣.╣.╣parent╩╠events╩╩╠clickSubmit╩╩╩╩",
+					"C": true
+				},
+				"setCodeValue": {
+					"H": "╬=╣.╣txtVerCode╩╠internalValue╩╩╠codeValue╩╩╩",
+					"C": true,
+					"EV": true
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_3"
+			},
+			"O": {
+				"compDomClasses": "",
+				"cType": "child"
+			}
+		},
+		{
+			"T": "VRow",
+			"P": {
+				"ID": {
+					"H": "rowCaptcha",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'d-flex flex-row'╩╩",
+					"T": "class"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VTextField",
+							"P": {
+								"ID": {
+									"H": "txtVerCode",
+									"T": "prop"
+								},
+								"label": {
+									"H": "╬()╣LR╩╠'lblDogrulamaKodu'╩╩╩",
+									"T": "prop"
+								},
+								"regular": {
+									"H": "╬'true'╩╩",
+									"T": "prop"
+								},
+								"class": {
+									"H": "╬'col-2 mt-1'╩╩",
+									"T": "class"
+								},
+								"solo": {
+									"H": "╬false╩╩",
+									"T": "prop"
+								},
+								"outlined": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"dense": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"maxlength": {
+									"H": "╬.╣.╣parent╩╠props╩╩╠maxLength╩╩╩",
+									"T": "attr"
+								}
+							},
+							"E": {
+								"change": {
+									"H": "╬()╣.╣.╣parent╩╠events╩╩╠onChangeGetCodeValue╩╩╠{}╠=╣codeValue╩╠value╩╩╩╩╩",
+									"P": "value"
+								},
+								"input": {
+									"H": "╬()╣.╣.╣parent╩╠events╩╩╠onChangeGetCodeValue╩╩╠{}╠=╣codeValue╩╠value╩╩╩╩╩",
+									"P": "value"
+								}
+							},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "Ghost",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_10",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_10"
+											},
+											"O": {
+												"cType": "child",
+												"compDomClasses": ""
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_5"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "v-input v-input--dense theme--light v-text-field v-text-field--is-booted v-text-field--enclosed v-text-field--outlined col-2 mt-1"
+							}
+						},
+						{
+							"T": "VImg",
+							"P": {
+								"ID": {
+									"H": "imgCaptcha",
+									"T": "prop"
+								},
+								"src": {
+									"H": "╬'https://www.tsohost.com/assets/uploads/blog/capcha.jpeg'╩╩",
+									"T": "prop"
+								},
+								"height": {
+									"H": "╬'50'╩╩",
+									"T": "prop"
+								},
+								"width": {
+									"H": "╬'50'╩╩",
+									"T": "prop"
+								},
+								"class": {
+									"H": "╬'col-1 ml-2'╩╩",
+									"T": "class"
+								},
+								"maxHeight": {
+									"H": "╬'80px'╩╩",
+									"T": "prop"
+								},
+								"maxWidth": {
+									"H": "╬'100px'╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "Ghost",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_11",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_11"
+											},
+											"O": {
+												"cType": "child",
+												"compDomClasses": "editor-ghost-comp"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_6"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "v-image v-responsive theme--light col-1 ml-2"
+							}
+						},
+						{
+							"T": "VBtn",
+							"P": {
+								"ID": {
+									"H": "btnSubmit",
+									"T": "prop"
+								},
+								"color": {
+									"H": "╬'primary'╩╩",
+									"T": "prop"
+								},
+								"regular": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"icon": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"class": {
+									"H": "╬'mt-1 ml-3'╩╩",
+									"T": "class"
+								}
+							},
+							"E": {
+								"click": {
+									"H": "╬()╣.╣MM╩╠trigger╩╩╠'clickSubmit'╩╩╩",
+									"P": "mouseEvent"
+								}
+							},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VIcon",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_14",
+													"T": "prop"
+												},
+												"text": {
+													"H": "╬'mdi-refresh'╩╩",
+													"T": "text"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Ghost",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_13",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_13"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": ""
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_14"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-icon notranslate mdi mdi-refresh theme--light"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_12"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "v-btn v-btn--flat v-btn--icon v-btn--round theme--light v-size--default primary--text mt-1 ml-3"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_2"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "d-flex flex-row"
+			}
+		},
+	],
+	"lrids": {
+		"tr-TR": {
+			"lblDogrulamaKodu": "'Doğrulama Kodu'"
+		},
+		"en-US": {
+			"lblDogrulamaKodu": "'Verification Code'"
+		}
+	},
+	"clrids": {
+		"tr-TR": {
+			"lblDogrulamaKodu": "╬'Doğrulama Kodu'╩╩"
+		},
+		"en-US": {
+			"lblDogrulamaKodu": "╬'Verification Code'╩╩"
+		}
+	}
+};
+export default pjson

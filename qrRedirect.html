@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting..</title>
+</head>
+<body>
+
+    <h4>Redirecting...</h4>
+
+    <script>
+        function getMobileOS() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            if (/android/i.test(userAgent)) {
+                return "Android";
+            }
+            if (/iPhone/.test(userAgent) && !window.MSStream) {
+                return "IOS";
+            }
+            return "unknown device | browser";
+        }
+
+        function getQueryParamValue(){
+            let queryContent = window.location.search.substring(1);
+            let splitedQuery = queryContent.split('=');
+            let retVal = "";
+            splitedQuery.forEach(item => {
+                if(item !== "json"){
+                    retVal = item;
+                }
+            });
+            return retVal;
+        }
+
+        const retVal = getMobileOS();
+        const clientId = getQueryParamValue();
+
+        if (retVal === "Android") {
+
+        } else if (retVal === "IOS") {
+            window.location.replace("platuetest://" + clientId);
+            setTimeout(() => {
+                window.location.replace(
+                    "https://install.appcenter.ms/users/yusuf.yildiz/apps/plateau-simulator/distribution_groups/beta%20testers"
+                ); 
+            }, 8000);
+        } else {
+            setTimeout(() => {
+                window.location.replace(
+                    "https://install.appcenter.ms/users/yusuf.yildiz/apps/plateau-simulator/distribution_groups/beta%20testers"
+                );
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

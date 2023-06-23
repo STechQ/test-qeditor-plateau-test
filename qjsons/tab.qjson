@@ -1,0 +1,538 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VTabs",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_79",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VTab",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_80",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_81",
+													"T": "prop"
+												},
+												"text": {
+													"H": "'Tab 1'",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_81"
+											},
+											"O": {
+												"cType": "child",
+												"compDomClasses": ""
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_80"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "v-tab v-tab--active"
+							}
+						},
+						{
+							"T": "VTabItem",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_82",
+									"T": "prop"
+								},
+								"eager": {
+									"H": "true",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VBtn",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_83",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"C": {},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_84",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "'Tab 1 Button'",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_84"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": ""
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_83"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-btn v-btn--contained theme--light v-size--default"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_82"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "v-window-item v-window-item--active"
+							}
+						},
+						{
+							"T": "VTab",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_85",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_86",
+													"T": "prop"
+												},
+												"text": {
+													"H": "'Tab 2'",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_86"
+											},
+											"O": {
+												"cType": "child",
+												"compDomClasses": ""
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_85"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "v-tab"
+							}
+						},
+						{
+							"T": "VTabItem",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_87",
+									"T": "prop"
+								},
+								"eager": {
+									"H": "true",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VBtn",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_88",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"C": {},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_89",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "'Tab 2 Button'",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_89"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": ""
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_88"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-btn v-btn--contained theme--light v-size--default"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_87"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "v-window-item"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_79"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-tabs theme--light"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VTabs",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_79",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VTab",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_80",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_81",
+													"T": "prop"
+												},
+												"text": {
+													"H": "╬'Tab 1'╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_81"
+											},
+											"O": {
+												"cType": "child",
+												"compDomClasses": ""
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_80"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "v-tab v-tab--active"
+							}
+						},
+						{
+							"T": "VTabItem",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_82",
+									"T": "prop"
+								},
+								"eager": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VBtn",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_83",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"C": {},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_84",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬'Tab 1 Button'╩╩",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_84"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": ""
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_83"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-btn v-btn--contained theme--light v-size--default"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_82"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "v-window-item v-window-item--active"
+							}
+						},
+						{
+							"T": "VTab",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_85",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_86",
+													"T": "prop"
+												},
+												"text": {
+													"H": "╬'Tab 2'╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_86"
+											},
+											"O": {
+												"cType": "child",
+												"compDomClasses": ""
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_85"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "v-tab"
+							}
+						},
+						{
+							"T": "VTabItem",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_87",
+									"T": "prop"
+								},
+								"eager": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VBtn",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_88",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"C": {},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_89",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬'Tab 2 Button'╩╩",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_89"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": ""
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_88"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-btn v-btn--contained theme--light v-size--default"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_87"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "v-window-item"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_79"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-tabs theme--light"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {}
+};
+export default pjson

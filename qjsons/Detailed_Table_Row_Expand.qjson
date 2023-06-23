@@ -1,0 +1,807 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VDataTable",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_28",
+					"T": "prop"
+				},
+				"headers": {
+					"H": "[{ text = 'Group', align= 'start', sortable= false, value= 'name'},\n{ text = 'Calories', value= 'calories', sortable = true },\n{ text = 'Fat (g)', value= 'fat' },\n{ text = 'Carbs (g)', value= 'carbs' },\n{ text = 'Protein (g)', value= 'protein' }]",
+					"T": "prop"
+				},
+				"items": {
+					"H": "[{name= 'GROUP 1', child1=[{name= 'GROUP 1.1', child2= [{name= '',calories= '356',fat= '16.0',carbs= 49,protein= '3.9'}]},{name= 'GROUP 1.2', child2= [{name= 'GROUP 1.2.1',calories= 237,fat= '9.0',carbs= 37,protein= '4.3'},{name= 'GROUP 1.2.2',calories= 262,fat= '16.0',carbs= 23,protein= '6.0'}]}]},\n{name= 'GROUP 2', child1= [{name= 'GROUP 2.1',calories= '356',fat= '16.0',carbs= 49,protein= '3.9', child2= [{name= 'GROUP 2.1.1', child3= [{name= 'GROUP 2.1.1.1',calories= '356',fat= '16.0',carbs= 49,protein= '3.9', child4= [{name= '',calories= '356',fat= '16.0',carbs= 49,protein= '3.9'}]}]}]}]}]",
+					"T": "prop"
+				},
+				"itemsPerPage": {
+					"H": "5",
+					"T": "prop"
+				},
+				"singleExpand": {
+					"H": "false",
+					"T": "prop"
+				},
+				"showExpand": {
+					"H": "true",
+					"T": "prop"
+				},
+				"itemKey": {
+					"H": "'name'",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"expanded-item": {
+					"c": [
+						{
+							"T": "QTableCell",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_7",
+									"T": "prop"
+								},
+								"colspan": {
+									"H": "headers.length",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VDataTable",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_29",
+													"T": "prop"
+												},
+												"headers": {
+													"H": "[{ text = 'Group',  align= 'start', sortable= false, value= 'name'},\n{ text = 'Calories', value= 'calories', sortable = true },\n{ text = 'Fat (g)', value= 'fat' },\n{ text = 'Carbs (g)', value= 'carbs' },\n{ text = 'Protein (g)', value= 'protein' }]",
+													"T": "prop"
+												},
+												"itemsPerPage": {
+													"H": "5",
+													"T": "prop"
+												},
+												"hideDefaultFooter": {
+													"H": "true",
+													"T": "prop"
+												},
+												"items": {
+													"H": "item.child1",
+													"T": "prop"
+												},
+												"class": {
+													"H": "\r\nif (item.child1.length < 1) {\r\n    'd-none'\r\n}\r\n'grey lighten-5'",
+													"T": "class"
+												},
+												"showExpand": {
+													"H": "true",
+													"T": "prop"
+												},
+												"itemKey": {
+													"H": "'name'",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"expanded-item": {
+													"c": [
+														{
+															"T": "QTableCell",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_16",
+																	"T": "prop"
+																},
+																"colspan": {
+																	"H": "headers.length",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VDataTable",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_17",
+																					"T": "prop"
+																				},
+																				"headers": {
+																					"H": "[{ text = 'Group',  align= 'start', sortable= false, value= 'name'},\n{ text = 'Calories', value= 'calories', sortable = true },\n{ text = 'Fat (g)', value= 'fat' },\n{ text = 'Carbs (g)', value= 'carbs' },\n{ text = 'Protein (g)', value= 'protein' }]",
+																					"T": "prop"
+																				},
+																				"itemsPerPage": {
+																					"H": "5",
+																					"T": "prop"
+																				},
+																				"hideDefaultFooter": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"items": {
+																					"H": "item.child2",
+																					"T": "prop"
+																				},
+																				"class": {
+																					"H": "if (item.child2.length < 1) {\r\n    'd-none'\r\n}\r\n'grey lighten-3'",
+																					"T": "class"
+																				},
+																				"showExpand": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"itemKey": {
+																					"H": "'name'",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"expanded-item": {
+																					"c": [
+																						{
+																							"T": "QTableCell",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_19",
+																									"T": "prop"
+																								},
+																								"colspan": {
+																									"H": "headers.length",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "VDataTable",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_20",
+																													"T": "prop"
+																												},
+																												"headers": {
+																													"H": "[{ text = 'Group',  align= 'start', sortable= false, value= 'name'},\n{ text = 'Calories', value= 'calories', sortable = true },\n{ text = 'Fat (g)', value= 'fat' },\n{ text = 'Carbs (g)', value= 'carbs' },\n{ text = 'Protein (g)', value= 'protein' }]",
+																													"T": "prop"
+																												},
+																												"itemsPerPage": {
+																													"H": "5",
+																													"T": "prop"
+																												},
+																												"hideDefaultFooter": {
+																													"H": "true",
+																													"T": "prop"
+																												},
+																												"items": {
+																													"H": "item.child3",
+																													"T": "prop"
+																												},
+																												"class": {
+																													"H": "if (item.child3.length < 1) {\r\n    'd-none '\r\n}\r\n'grey lighten-1'",
+																													"T": "class"
+																												},
+																												"showExpand": {
+																													"H": "true",
+																													"T": "prop"
+																												},
+																												"itemKey": {
+																													"H": "'name'",
+																													"T": "prop"
+																												}
+																											},
+																											"E": {},
+																											"C": {
+																												"expanded-item": {
+																													"c": [
+																														{
+																															"T": "QTableCell",
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_21",
+																																	"T": "prop"
+																																},
+																																"colspan": {
+																																	"H": "headers.length",
+																																	"T": "prop"
+																																}
+																															},
+																															"E": {},
+																															"C": {
+																																"default": {
+																																	"c": [
+																																		{
+																																			"T": "VDataTable",
+																																			"P": {
+																																				"ID": {
+																																					"H": "EdtrComp_22",
+																																					"T": "prop"
+																																				},
+																																				"headers": {
+																																					"H": "[{ text = 'Group',  align= 'start', sortable= false, value= 'name'},\n{ text = 'Calories', value= 'calories', sortable = true },\n{ text = 'Fat (g)', value= 'fat' },\n{ text = 'Carbs (g)', value= 'carbs' },\n{ text = 'Protein (g)', value= 'protein' }]",
+																																					"T": "prop"
+																																				},
+																																				"itemsPerPage": {
+																																					"H": "5",
+																																					"T": "prop"
+																																				},
+																																				"hideDefaultFooter": {
+																																					"H": "true",
+																																					"T": "prop"
+																																				},
+																																				"items": {
+																																					"H": "item.child4",
+																																					"T": "prop"
+																																				},
+																																				"class": {
+																																					"H": "if (item.child4.length < 1) {    'd-none'}",
+																																					"T": "class"
+																																				}
+																																			},
+																																			"E": {},
+																																			"C": {},
+																																			"_Editor": {
+																																				"eID": "EdtrComp_22"
+																																			},
+																																			"O": {
+																																				"cType": "child",
+																																				"compDomClasses": "v-data-table theme--light"
+																																			}
+																																		}
+																																	],
+																																	"cType": "slot"
+																																}
+																															},
+																															"_Editor": {
+																																"eID": "EdtrComp_21"
+																															},
+																															"O": {
+																																"cType": "slot",
+																																"layout": {
+																																	"dOpt": {
+																																		"xs": [
+																																			"sp:pl-0",
+																																			"sp:pr-0"
+																																		]
+																																	},
+																																	"class": "pl-0 pr-0"
+																																},
+																																"compDomClasses": "pl-0 pr-0 undefined"
+																															}
+																														}
+																													],
+																													"cType": "scopedSlot"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_20"
+																											},
+																											"O": {
+																												"cType": "child",
+																												"compDomClasses": ""
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_19"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"layout": {
+																									"dOpt": {
+																										"xs": []
+																									},
+																									"class": ""
+																								},
+																								"compDomClasses": ""
+																							}
+																						}
+																					],
+																					"cType": "scopedSlot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_17"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": ""
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_16"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": []
+																	},
+																	"class": ""
+																},
+																"compDomClasses": ""
+															}
+														}
+													],
+													"cType": "scopedSlot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_29"
+											},
+											"O": {
+												"cType": "child",
+												"compDomClasses": "v-data-table theme--light grey lighten-5"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_7"
+							},
+							"O": {
+								"cType": "slot",
+								"layout": {
+									"dOpt": {
+										"xs": []
+									},
+									"class": ""
+								},
+								"compDomClasses": ""
+							}
+						}
+					],
+					"cType": "scopedSlot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_28"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "v-data-table v-data-table--has-bottom theme--light"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VDataTable",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_28",
+					"T": "prop"
+				},
+				"headers": {
+					"H": "╬[]╠{}╠=╣text╩╠'Group'╩╩╠=╣align╩╠'start'╩╩╠=╣sortable╩╠false╩╩╠=╣value╩╠'name'╩╩╩╠{}╠=╣text╩╠'Calories'╩╩╠=╣value╩╠'calories'╩╩╠=╣sortable╩╠true╩╩╩╠{}╠=╣text╩╠'Fat (g)'╩╩╠=╣value╩╠'fat'╩╩╩╠{}╠=╣text╩╠'Carbs (g)'╩╩╠=╣value╩╠'carbs'╩╩╩╠{}╠=╣text╩╠'Protein (g)'╩╩╠=╣value╩╠'protein'╩╩╩╩╩",
+					"T": "prop"
+				},
+				"items": {
+					"H": "╬[]╠{}╠=╣name╩╠'GROUP 1'╩╩╠=╣child1╩╠[]╠{}╠=╣name╩╠'GROUP 1.1'╩╩╠=╣child2╩╠[]╠{}╠=╣name╩╠''╩╩╠=╣calories╩╠'356'╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠49╩╩╠=╣protein╩╠'3.9'╩╩╩╩╩╩╠{}╠=╣name╩╠'GROUP 1.2'╩╩╠=╣child2╩╠[]╠{}╠=╣name╩╠'GROUP 1.2.1'╩╩╠=╣calories╩╠237╩╩╠=╣fat╩╠'9.0'╩╩╠=╣carbs╩╠37╩╩╠=╣protein╩╠'4.3'╩╩╩╠{}╠=╣name╩╠'GROUP 1.2.2'╩╩╠=╣calories╩╠262╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠23╩╩╠=╣protein╩╠'6.0'╩╩╩╩╩╩╩╩╩╠{}╠=╣name╩╠'GROUP 2'╩╩╠=╣child1╩╠[]╠{}╠=╣name╩╠'GROUP 2.1'╩╩╠=╣calories╩╠'356'╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠49╩╩╠=╣protein╩╠'3.9'╩╩╠=╣child2╩╠[]╠{}╠=╣name╩╠'GROUP 2.1.1'╩╩╠=╣child3╩╠[]╠{}╠=╣name╩╠'GROUP 2.1.1.1'╩╩╠=╣calories╩╠'356'╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠49╩╩╠=╣protein╩╠'3.9'╩╩╠=╣child4╩╠[]╠{}╠=╣name╩╠''╩╩╠=╣calories╩╠'356'╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠49╩╩╠=╣protein╩╠'3.9'╩╩╩╩╩╩╩╩╩╩╩╩╩╩╩╩╩",
+					"T": "prop"
+				},
+				"itemsPerPage": {
+					"H": "╬5╩╩",
+					"T": "prop"
+				},
+				"singleExpand": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				},
+				"showExpand": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"itemKey": {
+					"H": "╬'name'╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"expanded-item": {
+					"c": [
+						{
+							"T": "QTableCell",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_7",
+									"T": "prop"
+								},
+								"colspan": {
+									"H": "╬.╣headers╩╠length╩╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VDataTable",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_29",
+													"T": "prop"
+												},
+												"headers": {
+													"H": "╬[]╠{}╠=╣text╩╠'Group'╩╩╠=╣align╩╠'start'╩╩╠=╣sortable╩╠false╩╩╠=╣value╩╠'name'╩╩╩╠{}╠=╣text╩╠'Calories'╩╩╠=╣value╩╠'calories'╩╩╠=╣sortable╩╠true╩╩╩╠{}╠=╣text╩╠'Fat (g)'╩╩╠=╣value╩╠'fat'╩╩╩╠{}╠=╣text╩╠'Carbs (g)'╩╩╠=╣value╩╠'carbs'╩╩╩╠{}╠=╣text╩╠'Protein (g)'╩╩╠=╣value╩╠'protein'╩╩╩╩╩",
+													"T": "prop"
+												},
+												"itemsPerPage": {
+													"H": "╬5╩╩",
+													"T": "prop"
+												},
+												"hideDefaultFooter": {
+													"H": "╬true╩╩",
+													"T": "prop"
+												},
+												"items": {
+													"H": "╬.╣item╩╠child1╩╩╩",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬if╣<╣.╣.╣item╩╠child1╩╩╠length╩╩╠1╩╩╠╬'d-none'╩╩╠■╩╬'grey lighten-5'╩╩",
+													"T": "class"
+												},
+												"showExpand": {
+													"H": "╬true╩╩",
+													"T": "prop"
+												},
+												"itemKey": {
+													"H": "╬'name'╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"expanded-item": {
+													"c": [
+														{
+															"T": "QTableCell",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_16",
+																	"T": "prop"
+																},
+																"colspan": {
+																	"H": "╬.╣headers╩╠length╩╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VDataTable",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_17",
+																					"T": "prop"
+																				},
+																				"headers": {
+																					"H": "╬[]╠{}╠=╣text╩╠'Group'╩╩╠=╣align╩╠'start'╩╩╠=╣sortable╩╠false╩╩╠=╣value╩╠'name'╩╩╩╠{}╠=╣text╩╠'Calories'╩╩╠=╣value╩╠'calories'╩╩╠=╣sortable╩╠true╩╩╩╠{}╠=╣text╩╠'Fat (g)'╩╩╠=╣value╩╠'fat'╩╩╩╠{}╠=╣text╩╠'Carbs (g)'╩╩╠=╣value╩╠'carbs'╩╩╩╠{}╠=╣text╩╠'Protein (g)'╩╩╠=╣value╩╠'protein'╩╩╩╩╩",
+																					"T": "prop"
+																				},
+																				"itemsPerPage": {
+																					"H": "╬5╩╩",
+																					"T": "prop"
+																				},
+																				"hideDefaultFooter": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"items": {
+																					"H": "╬.╣item╩╠child2╩╩╩",
+																					"T": "prop"
+																				},
+																				"class": {
+																					"H": "╬if╣<╣.╣.╣item╩╠child2╩╩╠length╩╩╠1╩╩╠╬'d-none'╩╩╠■╩╬'grey lighten-3'╩╩",
+																					"T": "class"
+																				},
+																				"showExpand": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"itemKey": {
+																					"H": "╬'name'╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"expanded-item": {
+																					"c": [
+																						{
+																							"T": "QTableCell",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_19",
+																									"T": "prop"
+																								},
+																								"colspan": {
+																									"H": "╬.╣headers╩╠length╩╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "VDataTable",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_20",
+																													"T": "prop"
+																												},
+																												"headers": {
+																													"H": "╬[]╠{}╠=╣text╩╠'Group'╩╩╠=╣align╩╠'start'╩╩╠=╣sortable╩╠false╩╩╠=╣value╩╠'name'╩╩╩╠{}╠=╣text╩╠'Calories'╩╩╠=╣value╩╠'calories'╩╩╠=╣sortable╩╠true╩╩╩╠{}╠=╣text╩╠'Fat (g)'╩╩╠=╣value╩╠'fat'╩╩╩╠{}╠=╣text╩╠'Carbs (g)'╩╩╠=╣value╩╠'carbs'╩╩╩╠{}╠=╣text╩╠'Protein (g)'╩╩╠=╣value╩╠'protein'╩╩╩╩╩",
+																													"T": "prop"
+																												},
+																												"itemsPerPage": {
+																													"H": "╬5╩╩",
+																													"T": "prop"
+																												},
+																												"hideDefaultFooter": {
+																													"H": "╬true╩╩",
+																													"T": "prop"
+																												},
+																												"items": {
+																													"H": "╬.╣item╩╠child3╩╩╩",
+																													"T": "prop"
+																												},
+																												"class": {
+																													"H": "╬if╣<╣.╣.╣item╩╠child3╩╩╠length╩╩╠1╩╩╠╬'d-none '╩╩╠■╩╬'grey lighten-1'╩╩",
+																													"T": "class"
+																												},
+																												"showExpand": {
+																													"H": "╬true╩╩",
+																													"T": "prop"
+																												},
+																												"itemKey": {
+																													"H": "╬'name'╩╩",
+																													"T": "prop"
+																												}
+																											},
+																											"E": {},
+																											"C": {
+																												"expanded-item": {
+																													"c": [
+																														{
+																															"T": "QTableCell",
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_21",
+																																	"T": "prop"
+																																},
+																																"colspan": {
+																																	"H": "╬.╣headers╩╠length╩╩╩",
+																																	"T": "prop"
+																																}
+																															},
+																															"E": {},
+																															"C": {
+																																"default": {
+																																	"c": [
+																																		{
+																																			"T": "VDataTable",
+																																			"P": {
+																																				"ID": {
+																																					"H": "EdtrComp_22",
+																																					"T": "prop"
+																																				},
+																																				"headers": {
+																																					"H": "╬[]╠{}╠=╣text╩╠'Group'╩╩╠=╣align╩╠'start'╩╩╠=╣sortable╩╠false╩╩╠=╣value╩╠'name'╩╩╩╠{}╠=╣text╩╠'Calories'╩╩╠=╣value╩╠'calories'╩╩╠=╣sortable╩╠true╩╩╩╠{}╠=╣text╩╠'Fat (g)'╩╩╠=╣value╩╠'fat'╩╩╩╠{}╠=╣text╩╠'Carbs (g)'╩╩╠=╣value╩╠'carbs'╩╩╩╠{}╠=╣text╩╠'Protein (g)'╩╩╠=╣value╩╠'protein'╩╩╩╩╩",
+																																					"T": "prop"
+																																				},
+																																				"itemsPerPage": {
+																																					"H": "╬5╩╩",
+																																					"T": "prop"
+																																				},
+																																				"hideDefaultFooter": {
+																																					"H": "╬true╩╩",
+																																					"T": "prop"
+																																				},
+																																				"items": {
+																																					"H": "╬.╣item╩╠child4╩╩╩",
+																																					"T": "prop"
+																																				},
+																																				"class": {
+																																					"H": "╬if╣<╣.╣.╣item╩╠child4╩╩╠length╩╩╠1╩╩╠╬'d-none'╩╩╠■╩╩",
+																																					"T": "class"
+																																				}
+																																			},
+																																			"E": {},
+																																			"C": {},
+																																			"_Editor": {
+																																				"eID": "EdtrComp_22"
+																																			},
+																																			"O": {
+																																				"cType": "child",
+																																				"compDomClasses": "v-data-table theme--light"
+																																			}
+																																		}
+																																	],
+																																	"cType": "slot"
+																																}
+																															},
+																															"_Editor": {
+																																"eID": "EdtrComp_21"
+																															},
+																															"O": {
+																																"cType": "slot",
+																																"layout": {
+																																	"dOpt": {
+																																		"xs": [
+																																			"sp:pl-0",
+																																			"sp:pr-0"
+																																		]
+																																	},
+																																	"class": "pl-0 pr-0"
+																																},
+																																"compDomClasses": "pl-0 pr-0 undefined"
+																															}
+																														}
+																													],
+																													"cType": "scopedSlot"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_20"
+																											},
+																											"O": {
+																												"cType": "child",
+																												"compDomClasses": ""
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_19"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"layout": {
+																									"dOpt": {
+																										"xs": []
+																									},
+																									"class": ""
+																								},
+																								"compDomClasses": ""
+																							}
+																						}
+																					],
+																					"cType": "scopedSlot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_17"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": ""
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_16"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": []
+																	},
+																	"class": ""
+																},
+																"compDomClasses": ""
+															}
+														}
+													],
+													"cType": "scopedSlot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_29"
+											},
+											"O": {
+												"cType": "child",
+												"compDomClasses": "v-data-table theme--light grey lighten-5"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_7"
+							},
+							"O": {
+								"cType": "slot",
+								"layout": {
+									"dOpt": {
+										"xs": []
+									},
+									"class": ""
+								},
+								"compDomClasses": ""
+							}
+						}
+					],
+					"cType": "scopedSlot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_28"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "v-data-table v-data-table--has-bottom theme--light"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {
+		"tr-TR": {
+			"label_currency_code": "╬'Döviz Kodu'╩╩",
+			"label_transfer_provision_parameter": "╬'YP Havale Provizyon Parametre'╩╩",
+			"label_value_date": "╬'Valör Tarihi'╩╩",
+			"label_time": "╬'Saat'╩╩",
+			"label_corresponding_bank_BIC": "╬'Muhabir Banka BIC'╩╩",
+			"label_back_btn": "╬'Vazgeç'╩╩",
+			"label_amount": "╬'Tutar'╩╩",
+			"label_pickDate": "╬'Tarih Seçiniz'╩╩",
+			"label_pickTime": "╬'Saat Seçiniz'╩╩",
+			"label_successful": "╬'İşlem Başarılı'╩╩",
+			"label_okay": "╬'Tamam'╩╩",
+			"label_date": "╬'Tarih'╩╩",
+			"label_update_btn": "╬'Güncelle'╩╩",
+			"label_save_btn": "╬'Kaydet'╩╩",
+			"label_enter_value_date": "╬'Valör Gün Sayısı'╩╩"
+		},
+		"en-US": {
+			"label_currency_code": "╬'Currency Code'╩╩",
+			"label_transfer_provision_parameter": "╬'Transfer Provision Parameter'╩╩",
+			"label_value_date": "╬'Value Date'╩╩",
+			"label_time": "╬'Time'╩╩",
+			"label_corresponding_bank_BIC": "╬'Corresponding Bank'╩╩",
+			"label_back_btn": "╬'Cancel'╩╩",
+			"label_amount": "╬'Amount'╩╩",
+			"label_pickDate": "╬'Pick a Date'╩╩",
+			"label_pickTime": "╬'Pick a Time'╩╩",
+			"label_successful": "╬'Complated Successfully'╩╩",
+			"label_okay": "╬'Okay'╩╩",
+			"label_date": "╬'Date'╩╩",
+			"label_update_btn": "╬'Update'╩╩",
+			"label_save_btn": "╬'Save'╩╩",
+			"label_enter_value_date": "╬'Value Day'╩╩"
+		}
+	},
+	"description": {}
+};
+export default pjson

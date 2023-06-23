@@ -1,0 +1,150 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_7",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "isSecondState=store.get('isSecondState')\r\nEM.trace('isSecondState: ' + isSecondState)\r\nif (isSecondState && isSecondState != null) {\r\n    datagrid.dataSource=[{ezgi='first state'}]\r\n    store.set('isSecondState', false)\r\n} else {\r\n    datagrid.dataSource=[{ezgi='second state'}]\r\n    store.set('isSecondState', true)\r\n}\r\nQuick.updateComponent(datagrid)\r\nEM.trace('dataGrid dataSource: ' + datagrid.dataSource)"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_8",
+									"T": "prop"
+								},
+								"text": {
+									"H": "'Test Button'",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_8"
+							},
+							"O": {
+								"cType": "child"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_7"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		},
+		{
+			"T": "DxDataGrid",
+			"P": {
+				"ID": {
+					"H": "datagrid",
+					"T": "prop"
+				},
+				"dataSource": {
+					"H": "[{ezgi='first state'}]",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"forceUpdateAfterPropertySetting": true,
+				"cType": "child"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_7",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "╬=╣isSecondState╩╠()╣.╣store╩╠get╩╩╠'isSecondState'╩╩╩╬()╣.╣EM╩╠trace╩╩╠+╣'isSecondState: '╩╠isSecondState╩╩╩╬if╣&&╣isSecondState╩╠!=╣isSecondState╩╠null╩╩╩╠╬=╣.╣datagrid╩╠dataSource╩╩╠[]╠{}╠=╣ezgi╩╠'first state'╩╩╩╩╩╬()╣.╣store╩╠set╩╩╠'isSecondState'╩╠false╩╩╩╠╬=╣.╣datagrid╩╠dataSource╩╩╠[]╠{}╠=╣ezgi╩╠'second state'╩╩╩╩╩╬()╣.╣store╩╠set╩╩╠'isSecondState'╩╠true╩╩╩╩╬()╣.╣Quick╩╠updateComponent╩╩╠datagrid╩╩╬()╣.╣EM╩╠trace╩╩╠+╣'dataGrid dataSource: '╩╠.╣datagrid╩╠dataSource╩╩╩╩╩"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_8",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬'Test Button'╩╩",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_8"
+							},
+							"O": {
+								"cType": "child"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_7"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		},
+		{
+			"T": "DxDataGrid",
+			"P": {
+				"ID": {
+					"H": "datagrid",
+					"T": "prop"
+				},
+				"dataSource": {
+					"H": "╬[]╠{}╠=╣ezgi╩╠'first state'╩╩╩╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"forceUpdateAfterPropertySetting": true,
+				"cType": "child"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {}
+};
+export default pjson

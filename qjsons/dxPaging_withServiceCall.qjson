@@ -1,0 +1,321 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "DxDataGrid",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_27",
+					"T": "prop"
+				},
+				"dataSource": {
+					"H": "devex.createCustomStore({loadUrl='https://e0f0f7fd-71d9-48a2-b1c6-b67d4b8fd70e.mock.pstmn.io/api/Sales',key='Id'})",
+					"T": "prop"
+				},
+				"remoteOperations": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "DxColumn",
+							"P": {
+								"cellTemplate": {
+									"H": "",
+									"T": "prop"
+								},
+								"dataField": {
+									"H": "'StoreName'",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_1",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_1"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "DxColumn",
+							"P": {
+								"cellTemplate": {
+									"H": "",
+									"T": "prop"
+								},
+								"dataField": {
+									"H": "'ProductCategoryName'",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_2",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_2"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "DxColumn",
+							"P": {
+								"cellTemplate": {
+									"H": "ProductName",
+									"T": "prop"
+								},
+								"dataField": {
+									"H": "'ProductName'",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_12",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_12"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "DxPaging",
+							"P": {
+								"pageSize": {
+									"H": "10",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_3",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_3"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "DxScrolling",
+							"P": {
+								"mode": {
+									"H": "'virtual'",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_13",
+									"T": "prop"
+								},
+								"rowRenderingMode": {
+									"H": "'virtual'",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_13"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_27"
+			},
+			"O": {
+				"cType": "scopedSlot",
+				"forceUpdateAfterPropertySetting": true
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "DxDataGrid",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_27",
+					"T": "prop"
+				},
+				"dataSource": {
+					"H": "╬()╣.╣devex╩╠createCustomStore╩╩╠{}╠=╣loadUrl╩╠'https://e0f0f7fd-71d9-48a2-b1c6-b67d4b8fd70e.mock.pstmn.io/api/Sales'╩╩╠=╣key╩╠'Id'╩╩╩╩╩",
+					"T": "prop"
+				},
+				"remoteOperations": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "DxColumn",
+							"P": {
+								"cellTemplate": {
+									"H": "╩",
+									"T": "prop"
+								},
+								"dataField": {
+									"H": "╬'StoreName'╩╩",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_1",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_1"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "DxColumn",
+							"P": {
+								"cellTemplate": {
+									"H": "╩",
+									"T": "prop"
+								},
+								"dataField": {
+									"H": "╬'ProductCategoryName'╩╩",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_2",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_2"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "DxColumn",
+							"P": {
+								"cellTemplate": {
+									"H": "╬ProductName╩╩",
+									"T": "prop"
+								},
+								"dataField": {
+									"H": "╬'ProductName'╩╩",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_12",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_12"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "DxPaging",
+							"P": {
+								"pageSize": {
+									"H": "╬10╩╩",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_3",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_3"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "DxScrolling",
+							"P": {
+								"mode": {
+									"H": "╬'virtual'╩╩",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_13",
+									"T": "prop"
+								},
+								"rowRenderingMode": {
+									"H": "╬'virtual'╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_13"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": ""
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_27"
+			},
+			"O": {
+				"cType": "scopedSlot",
+				"forceUpdateAfterPropertySetting": true,
+				"compDomClasses": "dx-widget dx-visibility-change-handler newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {}
+};
+export default pjson

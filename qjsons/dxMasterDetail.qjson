@@ -1,0 +1,378 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "DxDataGrid",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_19",
+					"T": "prop"
+				},
+				"dataSource": {
+					"H": "[{name = 'Frozens Yogurt', calories = 159, fat = '6.0', carbs = 24, protein = '4.0', iron = '1%'},\n{name = 'Ice cream sandwich', calories = 237, fat = '9.0', carbs = 37, protein = '4.3', iron = '1%'},\n{name = 'Eclair', calories = 262, fat = '16.0', carbs = 23, protein = '6.0', iron = '7%'},\n{name = 'Cupcake', calories = 305, fat = '3.7', carbs = 67, protein = '4.3', iron = '8%'},\n{name = 'Gingerbread',calories = 356, fat = '16.0', carbs = 49, protein = '3.9', iron = '16%'},\n{name = 'Jelly bean', calories = 375,  fat = '0.0', carbs = 94, protein = '0.0', iron = '0%'},\n{name = 'Lollipop', calories = 392, fat = '0.2', carbs = 98, protein = '0.0', iron = '2 %'},\n{name = 'Honeycomb', calories = 408, fat = '3.2', carbs = 87, protein = '6.5', iron = '45%'},\n{name = 'Donut', calories = 452, fat = '25.0', carbs = 51, protein = '4.9', iron = '22%'},\n{name = 'KitKat', calories = 518, fat = '26.0', carbs = 65, protein = '7', iron=  '6 %'}]",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "DxMasterDetail",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_20",
+									"T": "prop"
+								},
+								"template": {
+									"H": "'test2'",
+									"T": "prop"
+								},
+								"enabled": {
+									"H": "true",
+									"T": "prop"
+								},
+								"autoExpandAll": {
+									"H": "true",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "false",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_20"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "DxColumn",
+							"P": {
+								"cellTemplate": {
+									"H": "'test'",
+									"T": "prop"
+								},
+								"dataField": {
+									"H": "'test'",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_21",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_21"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "DxColumn",
+							"P": {
+								"cellTemplate": {
+									"H": "'test2'",
+									"T": "prop"
+								},
+								"dataField": {
+									"H": "'test2'",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_23",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "false",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_23"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": ""
+							}
+						}
+					],
+					"cType": "slot"
+				},
+				"test": {
+					"c": [
+						{
+							"T": "VTextField",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_25",
+									"T": "prop"
+								},
+								"label": {
+									"H": "'Text field label'",
+									"T": "prop"
+								},
+								"regular": {
+									"H": "'true'",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_25"
+							},
+							"O": {
+								"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted undefined pt-0"
+							}
+						}
+					],
+					"cType": "scopedSlot"
+				},
+				"test2": {
+					"c": [
+						{
+							"T": "VProgressLinear",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_26",
+									"T": "prop"
+								},
+								"value": {
+									"H": "15",
+									"T": "prop"
+								},
+								"backgroundColor": {
+									"H": "'purple'",
+									"T": "prop"
+								},
+								"color": {
+									"H": "'primary'",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_26"
+							},
+							"O": {
+								"compDomClasses": "v-progress-linear theme--light dx-template-wrapper"
+							}
+						}
+					],
+					"cType": "scopedSlot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_19"
+			},
+			"O": {
+				"forceUpdateAfterPropertySetting": true,
+				"cType": "child",
+				"compDomClasses": "dx-widget dx-visibility-change-handler"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "DxDataGrid",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_19",
+					"T": "prop"
+				},
+				"dataSource": {
+					"H": "╬[]╠{}╠=╣name╩╠'Frozens Yogurt'╩╩╠=╣calories╩╠159╩╩╠=╣fat╩╠'6.0'╩╩╠=╣carbs╩╠24╩╩╠=╣protein╩╠'4.0'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Ice cream sandwich'╩╩╠=╣calories╩╠237╩╩╠=╣fat╩╠'9.0'╩╩╠=╣carbs╩╠37╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Eclair'╩╩╠=╣calories╩╠262╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠23╩╩╠=╣protein╩╠'6.0'╩╩╠=╣iron╩╠'7%'╩╩╩╠{}╠=╣name╩╠'Cupcake'╩╩╠=╣calories╩╠305╩╩╠=╣fat╩╠'3.7'╩╩╠=╣carbs╩╠67╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'8%'╩╩╩╠{}╠=╣name╩╠'Gingerbread'╩╩╠=╣calories╩╠356╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠49╩╩╠=╣protein╩╠'3.9'╩╩╠=╣iron╩╠'16%'╩╩╩╠{}╠=╣name╩╠'Jelly bean'╩╩╠=╣calories╩╠375╩╩╠=╣fat╩╠'0.0'╩╩╠=╣carbs╩╠94╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'0%'╩╩╩╠{}╠=╣name╩╠'Lollipop'╩╩╠=╣calories╩╠392╩╩╠=╣fat╩╠'0.2'╩╩╠=╣carbs╩╠98╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'2 %'╩╩╩╠{}╠=╣name╩╠'Honeycomb'╩╩╠=╣calories╩╠408╩╩╠=╣fat╩╠'3.2'╩╩╠=╣carbs╩╠87╩╩╠=╣protein╩╠'6.5'╩╩╠=╣iron╩╠'45%'╩╩╩╠{}╠=╣name╩╠'Donut'╩╩╠=╣calories╩╠452╩╩╠=╣fat╩╠'25.0'╩╩╠=╣carbs╩╠51╩╩╠=╣protein╩╠'4.9'╩╩╠=╣iron╩╠'22%'╩╩╩╠{}╠=╣name╩╠'KitKat'╩╩╠=╣calories╩╠518╩╩╠=╣fat╩╠'26.0'╩╩╠=╣carbs╩╠65╩╩╠=╣protein╩╠'7'╩╩╠=╣iron╩╠'6 %'╩╩╩╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "DxMasterDetail",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_20",
+									"T": "prop"
+								},
+								"template": {
+									"H": "╬'test2'╩╩",
+									"T": "prop"
+								},
+								"enabled": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"autoExpandAll": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "╬false╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_20"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "DxColumn",
+							"P": {
+								"cellTemplate": {
+									"H": "╬'test'╩╩",
+									"T": "prop"
+								},
+								"dataField": {
+									"H": "╬'test'╩╩",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_21",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_21"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "DxColumn",
+							"P": {
+								"cellTemplate": {
+									"H": "╬'test2'╩╩",
+									"T": "prop"
+								},
+								"dataField": {
+									"H": "╬'test2'╩╩",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_23",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "╬false╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_23"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": ""
+							}
+						}
+					],
+					"cType": "slot"
+				},
+				"test": {
+					"c": [
+						{
+							"T": "VTextField",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_25",
+									"T": "prop"
+								},
+								"label": {
+									"H": "╬'Text field label'╩╩",
+									"T": "prop"
+								},
+								"regular": {
+									"H": "╬'true'╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_25"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted undefined pt-0"
+							}
+						}
+					],
+					"cType": "scopedSlot"
+				},
+				"test2": {
+					"c": [
+						{
+							"T": "VProgressLinear",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_26",
+									"T": "prop"
+								},
+								"value": {
+									"H": "╬15╩╩",
+									"T": "prop"
+								},
+								"backgroundColor": {
+									"H": "╬'purple'╩╩",
+									"T": "prop"
+								},
+								"color": {
+									"H": "╬'primary'╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_26"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "v-progress-linear theme--light dx-template-wrapper"
+							}
+						}
+					],
+					"cType": "scopedSlot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_19"
+			},
+			"O": {
+				"forceUpdateAfterPropertySetting": true,
+				"cType": "child",
+				"compDomClasses": "dx-widget dx-visibility-change-handler"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {}
+};
+export default pjson

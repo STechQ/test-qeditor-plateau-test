@@ -1,0 +1,2111 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container container--fluid'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_12",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Line",
+															"P": {
+																"ID": {
+																	"H": "lineChart",
+																	"T": "prop"
+																},
+																"backgroundColor": {
+																	"H": "'rgb(50,205,50)'",
+																	"T": "prop"
+																},
+																"data": {
+																	"H": "[99, 70, 31, 93, 91]",
+																	"T": "prop"
+																},
+																"fill": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "'# of Votes'",
+																	"T": "prop"
+																},
+																"labels": {
+																	"H": "['Red', 'Orange', 'Yellow', 'Green','Blue']",
+																	"T": "prop"
+																},
+																"xDrawOnChartArea": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"yDrawOnChartArea": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"xDisplay": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"yDisplay": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"labelAlign": {
+																	"H": "'start'",
+																	"T": "prop"
+																},
+																"labelAnchor": {
+																	"H": "'end'",
+																	"T": "prop"
+																},
+																"labelBorderRadius": {
+																	"H": "10",
+																	"T": "prop"
+																},
+																"labelBorderWidth": {
+																	"H": "1",
+																	"T": "prop"
+																},
+																"labelClamp": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"labelClip": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"labelDisplay": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"labelFontWeight": {
+																	"H": "'normal'",
+																	"T": "prop"
+																},
+																"labelFontLineHeight": {
+																	"H": "'1.2'",
+																	"T": "prop"
+																},
+																"labelOffset": {
+																	"H": "'-30'",
+																	"T": "prop"
+																},
+																"labelOpacity": {
+																	"H": "1",
+																	"T": "prop"
+																},
+																"labelPaddingTop": {
+																	"H": "4",
+																	"T": "prop"
+																},
+																"labelPaddingRight": {
+																	"H": "4",
+																	"T": "prop"
+																},
+																"labelPaddingBottom": {
+																	"H": "4",
+																	"T": "prop"
+																},
+																"labelPaddingLeft": {
+																	"H": "4",
+																	"T": "prop"
+																},
+																"labelRotation": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"labelTextAlign": {
+																	"H": "'start'",
+																	"T": "prop"
+																},
+																"labelTextStrokeWidth": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"labelTextShadowBlur": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"labelColor": {
+																	"H": "'red'",
+																	"T": "prop"
+																},
+																"labelBorderColor": {
+																	"H": "'red'",
+																	"T": "prop"
+																},
+																"width": {
+																	"H": "'39vw'",
+																	"T": "prop"
+																},
+																"height": {
+																	"H": "'48vh'",
+																	"T": "prop"
+																},
+																"borderColor": {
+																	"H": "'rgb(50,205,50)'",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"labelFormatter": {
+																	"H": "//context : contextual information see-> https://master--chartjs-plugin-datalabels.netlify.app/guide/options.html#option-context\r\n//value : the current data value\r\nquick.return(value + '%');",
+																	"PE": true,
+																	"P": "value:any,context:{ active: boolean; dataIndex: number; chart : any; dataset: any; datasetIndex:number; }",
+																	"HL": "TS"
+																}
+															},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_57"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_15",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_15"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_12"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_25",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_3",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "quick.EM.trace(components.lineChart);\r\n\r\nlet lineData: any = components.lineChart.data;\r\n(<any[]>lineData.labels).push('data #' + (<any[]>lineData.labels).length);\r\n\r\n(<any[]>lineData.datasets).forEach(item => {\r\n    let randomInt = getRandomInt(1, 99);\r\n    (<any[]>item.data).push(randomInt);\r\n});\r\n\r\n(<any>components.lineChart).update();\r\n\r\nfunction getRandomInt(min, max) {\r\n    min = Math.ceil(min);\r\n    max = Math.floor(max);\r\n    return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive\r\n}",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "TS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_4",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'Add Data'",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_4"
+																			},
+																			"O": {
+																				"cType": "child"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_3"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														},
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_9",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "quick.EM.trace(components.lineChart);\r\n\r\nlet lineData: any = components.lineChart.data;\r\n(<any[]>lineData.labels).splice(-1,1); // array'in en sondaki itemı silinir.\r\n\r\n(<any[]>lineData.datasets).forEach(item => {\r\n    quick.EM.trace(item);\r\n    (<any[]>item.data).pop(); // array'in en sondaki itemı silinir.\r\n});\r\n\r\n(<any>components.lineChart).update();\r\n",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "TS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_10",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'Remove Data'",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_10"
+																			},
+																			"O": {
+																				"cType": "child"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_9"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														},
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_6",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "\r\nquick.EM.trace(components.lineChart);\r\n\r\nlet backgroundColor = 'rgba(75, 192, 192, 1)';\r\nlet borderColor = 'rgba(75, 192, 192, 1)';\r\n\r\nlet lineData: any = components.lineChart.data;\r\n\r\nlet newDataSet: any = {};\r\nnewDataSet.label = 'Dataset ' + ((<any[]>lineData.datasets).length + 1);\r\nnewDataSet.backgroundColor = backgroundColor;\r\nnewDataSet.borderColor = borderColor;\r\nnewDataSet.borderWidth = 1;\r\nnewDataSet.fill = false;\r\nnewDataSet.data = [];\r\n\r\n(<any[]>lineData.labels).forEach(item => {\r\n    let randomInt = getRandomInt(1, 99);\r\n    (<any[]>newDataSet.data).push(randomInt);\r\n});\r\n\r\n(<any[]>lineData.datasets).push(newDataSet);\r\n(<any>components.lineChart).update();\r\n\r\nfunction getRandomInt(min, max) {\r\n    min = Math.ceil(min);\r\n    max = Math.floor(max);\r\n    return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive\r\n}",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "TS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_5",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'Add Dataset'",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_5"
+																			},
+																			"O": {
+																				"cType": "child"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_6"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														},
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_7",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "quick.EM.trace(components.lineChart);\r\n\r\nlet lineData: any = components.lineChart.data;\r\n(<any[]>lineData.datasets).splice(-1); // array'in en sondaki itemı silinir.\r\n(<any>components.lineChart).update();\r\n",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "TS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_8",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'Remove Dataset'",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_8"
+																			},
+																			"O": {
+																				"cType": "child"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_7"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_30",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_30"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_25"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_145",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Line",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_154",
+																	"T": "prop"
+																},
+																"backgroundColor": {
+																	"H": "'rgb(50,205,50)'",
+																	"T": "prop"
+																},
+																"borderColor": {
+																	"H": "'rgb(50,205,50)'",
+																	"T": "prop"
+																},
+																"data": {
+																	"H": "[99, 70, 31, 93, 91]",
+																	"T": "prop"
+																},
+																"fill": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "'# of Votes'",
+																	"T": "prop"
+																},
+																"labels": {
+																	"H": "['Red', 'Orange', 'Yellow', 'Green','Blue']",
+																	"T": "prop"
+																},
+																"xDrawOnChartArea": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"yDrawOnChartArea": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"xDisplay": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"yDisplay": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"labelAlign": {
+																	"H": "'center'",
+																	"T": "prop"
+																},
+																"labelAnchor": {
+																	"H": "'center'",
+																	"T": "prop"
+																},
+																"labelBorderRadius": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"labelBorderWidth": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"labelClamp": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"labelClip": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"labelDisplay": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"labelFontWeight": {
+																	"H": "'normal'",
+																	"T": "prop"
+																},
+																"labelFontLineHeight": {
+																	"H": "'1.2'",
+																	"T": "prop"
+																},
+																"labelOffset": {
+																	"H": "'4'",
+																	"T": "prop"
+																},
+																"labelOpacity": {
+																	"H": "1",
+																	"T": "prop"
+																},
+																"labelPaddingTop": {
+																	"H": "4",
+																	"T": "prop"
+																},
+																"labelPaddingRight": {
+																	"H": "4",
+																	"T": "prop"
+																},
+																"labelPaddingBottom": {
+																	"H": "4",
+																	"T": "prop"
+																},
+																"labelPaddingLeft": {
+																	"H": "4",
+																	"T": "prop"
+																},
+																"labelRotation": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"labelTextAlign": {
+																	"H": "'start'",
+																	"T": "prop"
+																},
+																"labelTextStrokeWidth": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"labelTextShadowBlur": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"width": {
+																	"H": "'39vw'",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_154"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_152",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_152"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_145"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_190",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Line",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_192",
+																	"T": "prop"
+																},
+																"backgroundColor": {
+																	"H": "'rgb(50,205,50)'",
+																	"T": "prop"
+																},
+																"borderColor": {
+																	"H": "'rgb(50,205,50)'",
+																	"T": "prop"
+																},
+																"data": {
+																	"H": "[99, 70, 31, 93, 91]",
+																	"T": "prop"
+																},
+																"fill": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "'# of Votes'",
+																	"T": "prop"
+																},
+																"labels": {
+																	"H": "['Red', 'Orange', 'Yellow', 'Green','Blue']",
+																	"T": "prop"
+																},
+																"xDrawOnChartArea": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"yDrawOnChartArea": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"xDisplay": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"yDisplay": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"labelAlign": {
+																	"H": "'center'",
+																	"T": "prop"
+																},
+																"labelAnchor": {
+																	"H": "'center'",
+																	"T": "prop"
+																},
+																"labelBorderRadius": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"labelBorderWidth": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"labelClamp": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"labelClip": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"labelDisplay": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"labelFontWeight": {
+																	"H": "'normal'",
+																	"T": "prop"
+																},
+																"labelFontLineHeight": {
+																	"H": "'1.2'",
+																	"T": "prop"
+																},
+																"labelOffset": {
+																	"H": "'4'",
+																	"T": "prop"
+																},
+																"labelOpacity": {
+																	"H": "1",
+																	"T": "prop"
+																},
+																"labelPaddingTop": {
+																	"H": "4",
+																	"T": "prop"
+																},
+																"labelPaddingRight": {
+																	"H": "4",
+																	"T": "prop"
+																},
+																"labelPaddingBottom": {
+																	"H": "4",
+																	"T": "prop"
+																},
+																"labelPaddingLeft": {
+																	"H": "4",
+																	"T": "prop"
+																},
+																"labelRotation": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"labelTextAlign": {
+																	"H": "'start'",
+																	"T": "prop"
+																},
+																"labelTextStrokeWidth": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"labelTextShadowBlur": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"width": {
+																	"H": "'39vw'",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"labelFormatter": {
+																	"H": "//context : contextual information see-> https://master--chartjs-plugin-datalabels.netlify.app/guide/options.html#option-context\r\n//value : the current data value\r\nquick.return(value + '%');",
+																	"PE": true,
+																	"P": "value:any,context:{ active: boolean; dataIndex: number; chart : any; dataset: any; datasetIndex:number; }",
+																	"HL": "TS"
+																}
+															},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_192"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_191",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_191"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_190"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_179",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Line",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_181",
+																	"T": "prop"
+																},
+																"backgroundColor": {
+																	"H": "'rgb(50,205,50)'",
+																	"T": "prop"
+																},
+																"borderColor": {
+																	"H": "'rgb(50,205,50)'",
+																	"T": "prop"
+																},
+																"data": {
+																	"H": "[99, 70, 31, 93, 91]",
+																	"T": "prop"
+																},
+																"fill": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "'# of Votes'",
+																	"T": "prop"
+																},
+																"labels": {
+																	"H": "['Red', 'Orange', 'Yellow', 'Green','Blue']",
+																	"T": "prop"
+																},
+																"xDrawOnChartArea": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"yDrawOnChartArea": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"xDisplay": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"yDisplay": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"labelAlign": {
+																	"H": "'center'",
+																	"T": "prop"
+																},
+																"labelAnchor": {
+																	"H": "'center'",
+																	"T": "prop"
+																},
+																"labelBorderRadius": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"labelBorderWidth": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"labelClamp": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"labelClip": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"labelDisplay": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"labelFontWeight": {
+																	"H": "'normal'",
+																	"T": "prop"
+																},
+																"labelFontLineHeight": {
+																	"H": "'1.2'",
+																	"T": "prop"
+																},
+																"labelOffset": {
+																	"H": "'4'",
+																	"T": "prop"
+																},
+																"labelOpacity": {
+																	"H": "1",
+																	"T": "prop"
+																},
+																"labelPaddingTop": {
+																	"H": "4",
+																	"T": "prop"
+																},
+																"labelPaddingRight": {
+																	"H": "4",
+																	"T": "prop"
+																},
+																"labelPaddingBottom": {
+																	"H": "4",
+																	"T": "prop"
+																},
+																"labelPaddingLeft": {
+																	"H": "4",
+																	"T": "prop"
+																},
+																"labelRotation": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"labelTextAlign": {
+																	"H": "'start'",
+																	"T": "prop"
+																},
+																"labelTextStrokeWidth": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"labelTextShadowBlur": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"width": {
+																	"H": "'39vw'",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_181"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_180",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_180"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_179"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container container--fluid'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_12",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Line",
+															"P": {
+																"ID": {
+																	"H": "lineChart",
+																	"T": "prop"
+																},
+																"backgroundColor": {
+																	"H": "╬'rgb(50,205,50)'╩╩",
+																	"T": "prop"
+																},
+																"data": {
+																	"H": "╬[]╠99╩╠70╩╠31╩╠93╩╠91╩╩╩",
+																	"T": "prop"
+																},
+																"fill": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "╬'# of Votes'╩╩",
+																	"T": "prop"
+																},
+																"labels": {
+																	"H": "╬[]╠'Red'╩╠'Orange'╩╠'Yellow'╩╠'Green'╩╠'Blue'╩╩╩",
+																	"T": "prop"
+																},
+																"xDrawOnChartArea": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"yDrawOnChartArea": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"xDisplay": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"yDisplay": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"labelAlign": {
+																	"H": "╬'start'╩╩",
+																	"T": "prop"
+																},
+																"labelAnchor": {
+																	"H": "╬'end'╩╩",
+																	"T": "prop"
+																},
+																"labelBorderRadius": {
+																	"H": "╬10╩╩",
+																	"T": "prop"
+																},
+																"labelBorderWidth": {
+																	"H": "╬1╩╩",
+																	"T": "prop"
+																},
+																"labelClamp": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"labelClip": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"labelDisplay": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"labelFontWeight": {
+																	"H": "╬'normal'╩╩",
+																	"T": "prop"
+																},
+																"labelFontLineHeight": {
+																	"H": "╬'1.2'╩╩",
+																	"T": "prop"
+																},
+																"labelOffset": {
+																	"H": "╬'-30'╩╩",
+																	"T": "prop"
+																},
+																"labelOpacity": {
+																	"H": "╬1╩╩",
+																	"T": "prop"
+																},
+																"labelPaddingTop": {
+																	"H": "╬4╩╩",
+																	"T": "prop"
+																},
+																"labelPaddingRight": {
+																	"H": "╬4╩╩",
+																	"T": "prop"
+																},
+																"labelPaddingBottom": {
+																	"H": "╬4╩╩",
+																	"T": "prop"
+																},
+																"labelPaddingLeft": {
+																	"H": "╬4╩╩",
+																	"T": "prop"
+																},
+																"labelRotation": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"labelTextAlign": {
+																	"H": "╬'start'╩╩",
+																	"T": "prop"
+																},
+																"labelTextStrokeWidth": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"labelTextShadowBlur": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"labelColor": {
+																	"H": "╬'red'╩╩",
+																	"T": "prop"
+																},
+																"labelBorderColor": {
+																	"H": "╬'red'╩╩",
+																	"T": "prop"
+																},
+																"width": {
+																	"H": "╬'39vw'╩╩",
+																	"T": "prop"
+																},
+																"height": {
+																	"H": "╬'48vh'╩╩",
+																	"T": "prop"
+																},
+																"borderColor": {
+																	"H": "╬'rgb(50,205,50)'╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"labelFormatter": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\n//context : contextual information see-> https://master--chartjs-plugin-datalabels.netlify.app/guide/options.html#option-context\r\n//value : the current data value\r\nquick.return(value + '%');\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibGluZUNoYXJ0X2xhYmVsRm9ybWF0dGVyX0UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJsaW5lQ2hhcnRfbGFiZWxGb3JtYXR0ZXJfRS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBRUEsZ0lBQWdJO0FBQ2hJLGdDQUFnQztBQUNoQyxLQUFLLENBQUMsTUFBTSxDQUFDLEtBQUssR0FBRyxHQUFHLENBQUMsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImRlY2xhcmUgdmFyIHZhbHVlOmFueTtcbmRlY2xhcmUgdmFyIGNvbnRleHQ6eyBhY3RpdmU6IGJvb2xlYW47IGRhdGFJbmRleDogbnVtYmVyOyBjaGFydCA6IGFueTsgZGF0YXNldDogYW55OyBkYXRhc2V0SW5kZXg6bnVtYmVyOyB9XG4vL2NvbnRleHQgOiBjb250ZXh0dWFsIGluZm9ybWF0aW9uIHNlZS0+IGh0dHBzOi8vbWFzdGVyLS1jaGFydGpzLXBsdWdpbi1kYXRhbGFiZWxzLm5ldGxpZnkuYXBwL2d1aWRlL29wdGlvbnMuaHRtbCNvcHRpb24tY29udGV4dFxyXG4vL3ZhbHVlIDogdGhlIGN1cnJlbnQgZGF0YSB2YWx1ZVxyXG5xdWljay5yZXR1cm4odmFsdWUgKyAnJScpO1xuIGV4cG9ydHt9O1xuIl19",
+																	"PE": true,
+																	"P": "value:any,context:{ active: boolean; dataIndex: number; chart : any; dataset: any; datasetIndex:number; }",
+																	"HL": "JS"
+																}
+															},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_57"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_15",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_15"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_12"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_25",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_3",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.EM.trace(components.lineChart);\r\nvar lineData = components.lineChart.data;\r\nlineData.labels.push('data #' + lineData.labels.length);\r\nlineData.datasets.forEach(function (item) {\r\n    var randomInt = getRandomInt(1, 99);\r\n    item.data.push(randomInt);\r\n});\r\ncomponents.lineChart.update();\r\nfunction getRandomInt(min, max) {\r\n    min = Math.ceil(min);\r\n    max = Math.floor(max);\r\n    return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive\r\n}\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfM19jbGlja19FLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiRWR0ckNvbXBfM19jbGlja19FLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQSxLQUFLLENBQUMsRUFBRSxDQUFDLEtBQUssQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLENBQUM7QUFFckMsSUFBSSxRQUFRLEdBQVEsVUFBVSxDQUFDLFNBQVMsQ0FBQyxJQUFJLENBQUM7QUFDdEMsUUFBUSxDQUFDLE1BQU8sQ0FBQyxJQUFJLENBQUMsUUFBUSxHQUFXLFFBQVEsQ0FBQyxNQUFPLENBQUMsTUFBTSxDQUFDLENBQUM7QUFFbEUsUUFBUSxDQUFDLFFBQVMsQ0FBQyxPQUFPLENBQUMsVUFBQSxJQUFJO0lBQ25DLElBQUksU0FBUyxHQUFHLFlBQVksQ0FBQyxDQUFDLEVBQUUsRUFBRSxDQUFDLENBQUM7SUFDNUIsSUFBSSxDQUFDLElBQUssQ0FBQyxJQUFJLENBQUMsU0FBUyxDQUFDLENBQUM7QUFDdkMsQ0FBQyxDQUFDLENBQUM7QUFFRyxVQUFVLENBQUMsU0FBVSxDQUFDLE1BQU0sRUFBRSxDQUFDO0FBRXJDLFNBQVMsWUFBWSxDQUFDLEdBQUcsRUFBRSxHQUFHO0lBQzFCLEdBQUcsR0FBRyxJQUFJLENBQUMsSUFBSSxDQUFDLEdBQUcsQ0FBQyxDQUFDO0lBQ3JCLEdBQUcsR0FBRyxJQUFJLENBQUMsS0FBSyxDQUFDLEdBQUcsQ0FBQyxDQUFDO0lBQ3RCLE9BQU8sSUFBSSxDQUFDLEtBQUssQ0FBQyxJQUFJLENBQUMsTUFBTSxFQUFFLEdBQUcsQ0FBQyxHQUFHLEdBQUcsR0FBRyxDQUFDLEdBQUcsR0FBRyxDQUFDLENBQUMsQ0FBQyx1REFBdUQ7QUFDakgsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImRlY2xhcmUgdmFyIG1vdXNlRXZlbnQ6dW5rbm93biB8IHVuZGVmaW5lZFxucXVpY2suRU0udHJhY2UoY29tcG9uZW50cy5saW5lQ2hhcnQpO1xyXG5cclxubGV0IGxpbmVEYXRhOiBhbnkgPSBjb21wb25lbnRzLmxpbmVDaGFydC5kYXRhO1xyXG4oPGFueVtdPmxpbmVEYXRhLmxhYmVscykucHVzaCgnZGF0YSAjJyArICg8YW55W10+bGluZURhdGEubGFiZWxzKS5sZW5ndGgpO1xyXG5cclxuKDxhbnlbXT5saW5lRGF0YS5kYXRhc2V0cykuZm9yRWFjaChpdGVtID0+IHtcclxuICAgIGxldCByYW5kb21JbnQgPSBnZXRSYW5kb21JbnQoMSwgOTkpO1xyXG4gICAgKDxhbnlbXT5pdGVtLmRhdGEpLnB1c2gocmFuZG9tSW50KTtcclxufSk7XHJcblxyXG4oPGFueT5jb21wb25lbnRzLmxpbmVDaGFydCkudXBkYXRlKCk7XHJcblxyXG5mdW5jdGlvbiBnZXRSYW5kb21JbnQobWluLCBtYXgpIHtcclxuICAgIG1pbiA9IE1hdGguY2VpbChtaW4pO1xyXG4gICAgbWF4ID0gTWF0aC5mbG9vcihtYXgpO1xyXG4gICAgcmV0dXJuIE1hdGguZmxvb3IoTWF0aC5yYW5kb20oKSAqIChtYXggLSBtaW4pICsgbWluKTsgLy9UaGUgbWF4aW11bSBpcyBleGNsdXNpdmUgYW5kIHRoZSBtaW5pbXVtIGlzIGluY2x1c2l2ZVxyXG59XG4gZXhwb3J0e307XG4iXX0=",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "JS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_4",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'Add Data'╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_4"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "q-label newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_3"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-btn v-btn--contained theme--light v-size--default newDropBorder"
+															}
+														},
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_9",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.EM.trace(components.lineChart);\r\nvar lineData = components.lineChart.data;\r\nlineData.labels.splice(-1, 1); // array'in en sondaki itemı silinir.\r\nlineData.datasets.forEach(function (item) {\r\n    quick.EM.trace(item);\r\n    item.data.pop(); // array'in en sondaki itemı silinir.\r\n});\r\ncomponents.lineChart.update();\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfOV9jbGlja19FLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiRWR0ckNvbXBfOV9jbGlja19FLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQSxLQUFLLENBQUMsRUFBRSxDQUFDLEtBQUssQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLENBQUM7QUFFckMsSUFBSSxRQUFRLEdBQVEsVUFBVSxDQUFDLFNBQVMsQ0FBQyxJQUFJLENBQUM7QUFDdEMsUUFBUSxDQUFDLE1BQU8sQ0FBQyxNQUFNLENBQUMsQ0FBQyxDQUFDLEVBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxxQ0FBcUM7QUFFcEUsUUFBUSxDQUFDLFFBQVMsQ0FBQyxPQUFPLENBQUMsVUFBQSxJQUFJO0lBQ25DLEtBQUssQ0FBQyxFQUFFLENBQUMsS0FBSyxDQUFDLElBQUksQ0FBQyxDQUFDO0lBQ2IsSUFBSSxDQUFDLElBQUssQ0FBQyxHQUFHLEVBQUUsQ0FBQyxDQUFDLHFDQUFxQztBQUNuRSxDQUFDLENBQUMsQ0FBQztBQUVHLFVBQVUsQ0FBQyxTQUFVLENBQUMsTUFBTSxFQUFFLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJkZWNsYXJlIHZhciBtb3VzZUV2ZW50OnVua25vd24gfCB1bmRlZmluZWRcbnF1aWNrLkVNLnRyYWNlKGNvbXBvbmVudHMubGluZUNoYXJ0KTtcclxuXHJcbmxldCBsaW5lRGF0YTogYW55ID0gY29tcG9uZW50cy5saW5lQ2hhcnQuZGF0YTtcclxuKDxhbnlbXT5saW5lRGF0YS5sYWJlbHMpLnNwbGljZSgtMSwxKTsgLy8gYXJyYXknaW4gZW4gc29uZGFraSBpdGVtxLEgc2lsaW5pci5cclxuXHJcbig8YW55W10+bGluZURhdGEuZGF0YXNldHMpLmZvckVhY2goaXRlbSA9PiB7XHJcbiAgICBxdWljay5FTS50cmFjZShpdGVtKTtcclxuICAgICg8YW55W10+aXRlbS5kYXRhKS5wb3AoKTsgLy8gYXJyYXknaW4gZW4gc29uZGFraSBpdGVtxLEgc2lsaW5pci5cclxufSk7XHJcblxyXG4oPGFueT5jb21wb25lbnRzLmxpbmVDaGFydCkudXBkYXRlKCk7XHJcblxuIGV4cG9ydHt9O1xuIl19",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "JS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_10",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'Remove Data'╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_10"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "q-label newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_9"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-btn v-btn--contained theme--light v-size--default newDropBorder"
+															}
+														},
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_6",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.EM.trace(components.lineChart);\r\nvar backgroundColor = 'rgba(75, 192, 192, 1)';\r\nvar borderColor = 'rgba(75, 192, 192, 1)';\r\nvar lineData = components.lineChart.data;\r\nvar newDataSet = {};\r\nnewDataSet.label = 'Dataset ' + (lineData.datasets.length + 1);\r\nnewDataSet.backgroundColor = backgroundColor;\r\nnewDataSet.borderColor = borderColor;\r\nnewDataSet.borderWidth = 1;\r\nnewDataSet.fill = false;\r\nnewDataSet.data = [];\r\nlineData.labels.forEach(function (item) {\r\n    var randomInt = getRandomInt(1, 99);\r\n    newDataSet.data.push(randomInt);\r\n});\r\nlineData.datasets.push(newDataSet);\r\ncomponents.lineChart.update();\r\nfunction getRandomInt(min, max) {\r\n    min = Math.ceil(min);\r\n    max = Math.floor(max);\r\n    return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive\r\n}\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfNl9jbGlja19FLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiRWR0ckNvbXBfNl9jbGlja19FLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFFQSxLQUFLLENBQUMsRUFBRSxDQUFDLEtBQUssQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLENBQUM7QUFFckMsSUFBSSxlQUFlLEdBQUcsdUJBQXVCLENBQUM7QUFDOUMsSUFBSSxXQUFXLEdBQUcsdUJBQXVCLENBQUM7QUFFMUMsSUFBSSxRQUFRLEdBQVEsVUFBVSxDQUFDLFNBQVMsQ0FBQyxJQUFJLENBQUM7QUFFOUMsSUFBSSxVQUFVLEdBQVEsRUFBRSxDQUFDO0FBQ3pCLFVBQVUsQ0FBQyxLQUFLLEdBQUcsVUFBVSxHQUFHLENBQVMsUUFBUSxDQUFDLFFBQVMsQ0FBQyxNQUFNLEdBQUcsQ0FBQyxDQUFDLENBQUM7QUFDeEUsVUFBVSxDQUFDLGVBQWUsR0FBRyxlQUFlLENBQUM7QUFDN0MsVUFBVSxDQUFDLFdBQVcsR0FBRyxXQUFXLENBQUM7QUFDckMsVUFBVSxDQUFDLFdBQVcsR0FBRyxDQUFDLENBQUM7QUFDM0IsVUFBVSxDQUFDLElBQUksR0FBRyxLQUFLLENBQUM7QUFDeEIsVUFBVSxDQUFDLElBQUksR0FBRyxFQUFFLENBQUM7QUFFYixRQUFRLENBQUMsTUFBTyxDQUFDLE9BQU8sQ0FBQyxVQUFBLElBQUk7SUFDakMsSUFBSSxTQUFTLEdBQUcsWUFBWSxDQUFDLENBQUMsRUFBRSxFQUFFLENBQUMsQ0FBQztJQUM1QixVQUFVLENBQUMsSUFBSyxDQUFDLElBQUksQ0FBQyxTQUFTLENBQUMsQ0FBQztBQUM3QyxDQUFDLENBQUMsQ0FBQztBQUVLLFFBQVEsQ0FBQyxRQUFTLENBQUMsSUFBSSxDQUFDLFVBQVUsQ0FBQyxDQUFDO0FBQ3RDLFVBQVUsQ0FBQyxTQUFVLENBQUMsTUFBTSxFQUFFLENBQUM7QUFFckMsU0FBUyxZQUFZLENBQUMsR0FBRyxFQUFFLEdBQUc7SUFDMUIsR0FBRyxHQUFHLElBQUksQ0FBQyxJQUFJLENBQUMsR0FBRyxDQUFDLENBQUM7SUFDckIsR0FBRyxHQUFHLElBQUksQ0FBQyxLQUFLLENBQUMsR0FBRyxDQUFDLENBQUM7SUFDdEIsT0FBTyxJQUFJLENBQUMsS0FBSyxDQUFDLElBQUksQ0FBQyxNQUFNLEVBQUUsR0FBRyxDQUFDLEdBQUcsR0FBRyxHQUFHLENBQUMsR0FBRyxHQUFHLENBQUMsQ0FBQyxDQUFDLHVEQUF1RDtBQUNqSCxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiZGVjbGFyZSB2YXIgbW91c2VFdmVudDp1bmtub3duIHwgdW5kZWZpbmVkXG5cclxucXVpY2suRU0udHJhY2UoY29tcG9uZW50cy5saW5lQ2hhcnQpO1xyXG5cclxubGV0IGJhY2tncm91bmRDb2xvciA9ICdyZ2JhKDc1LCAxOTIsIDE5MiwgMSknO1xyXG5sZXQgYm9yZGVyQ29sb3IgPSAncmdiYSg3NSwgMTkyLCAxOTIsIDEpJztcclxuXHJcbmxldCBsaW5lRGF0YTogYW55ID0gY29tcG9uZW50cy5saW5lQ2hhcnQuZGF0YTtcclxuXHJcbmxldCBuZXdEYXRhU2V0OiBhbnkgPSB7fTtcclxubmV3RGF0YVNldC5sYWJlbCA9ICdEYXRhc2V0ICcgKyAoKDxhbnlbXT5saW5lRGF0YS5kYXRhc2V0cykubGVuZ3RoICsgMSk7XHJcbm5ld0RhdGFTZXQuYmFja2dyb3VuZENvbG9yID0gYmFja2dyb3VuZENvbG9yO1xyXG5uZXdEYXRhU2V0LmJvcmRlckNvbG9yID0gYm9yZGVyQ29sb3I7XHJcbm5ld0RhdGFTZXQuYm9yZGVyV2lkdGggPSAxO1xyXG5uZXdEYXRhU2V0LmZpbGwgPSBmYWxzZTtcclxubmV3RGF0YVNldC5kYXRhID0gW107XHJcblxyXG4oPGFueVtdPmxpbmVEYXRhLmxhYmVscykuZm9yRWFjaChpdGVtID0+IHtcclxuICAgIGxldCByYW5kb21JbnQgPSBnZXRSYW5kb21JbnQoMSwgOTkpO1xyXG4gICAgKDxhbnlbXT5uZXdEYXRhU2V0LmRhdGEpLnB1c2gocmFuZG9tSW50KTtcclxufSk7XHJcblxyXG4oPGFueVtdPmxpbmVEYXRhLmRhdGFzZXRzKS5wdXNoKG5ld0RhdGFTZXQpO1xyXG4oPGFueT5jb21wb25lbnRzLmxpbmVDaGFydCkudXBkYXRlKCk7XHJcblxyXG5mdW5jdGlvbiBnZXRSYW5kb21JbnQobWluLCBtYXgpIHtcclxuICAgIG1pbiA9IE1hdGguY2VpbChtaW4pO1xyXG4gICAgbWF4ID0gTWF0aC5mbG9vcihtYXgpO1xyXG4gICAgcmV0dXJuIE1hdGguZmxvb3IoTWF0aC5yYW5kb20oKSAqIChtYXggLSBtaW4pICsgbWluKTsgLy9UaGUgbWF4aW11bSBpcyBleGNsdXNpdmUgYW5kIHRoZSBtaW5pbXVtIGlzIGluY2x1c2l2ZVxyXG59XG4gZXhwb3J0e307XG4iXX0=",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "JS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_5",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'Add Dataset'╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_5"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "q-label newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_6"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-btn v-btn--contained theme--light v-size--default newDropBorder"
+															}
+														},
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_7",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.EM.trace(components.lineChart);\r\nvar lineData = components.lineChart.data;\r\nlineData.datasets.splice(-1); // array'in en sondaki itemı silinir.\r\ncomponents.lineChart.update();\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfN19jbGlja19FLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiRWR0ckNvbXBfN19jbGlja19FLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQSxLQUFLLENBQUMsRUFBRSxDQUFDLEtBQUssQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLENBQUM7QUFFckMsSUFBSSxRQUFRLEdBQVEsVUFBVSxDQUFDLFNBQVMsQ0FBQyxJQUFJLENBQUM7QUFDdEMsUUFBUSxDQUFDLFFBQVMsQ0FBQyxNQUFNLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLHFDQUFxQztBQUN0RSxVQUFVLENBQUMsU0FBVSxDQUFDLE1BQU0sRUFBRSxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiZGVjbGFyZSB2YXIgbW91c2VFdmVudDp1bmtub3duIHwgdW5kZWZpbmVkXG5xdWljay5FTS50cmFjZShjb21wb25lbnRzLmxpbmVDaGFydCk7XHJcblxyXG5sZXQgbGluZURhdGE6IGFueSA9IGNvbXBvbmVudHMubGluZUNoYXJ0LmRhdGE7XHJcbig8YW55W10+bGluZURhdGEuZGF0YXNldHMpLnNwbGljZSgtMSk7IC8vIGFycmF5J2luIGVuIHNvbmRha2kgaXRlbcSxIHNpbGluaXIuXHJcbig8YW55PmNvbXBvbmVudHMubGluZUNoYXJ0KS51cGRhdGUoKTtcclxuXG4gZXhwb3J0e307XG4iXX0=",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "JS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_8",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'Remove Dataset'╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_8"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "q-label newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_7"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-btn v-btn--contained theme--light v-size--default newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_30",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_30"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_25"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_145",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Line",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_154",
+																	"T": "prop"
+																},
+																"backgroundColor": {
+																	"H": "╬'rgb(50,205,50)'╩╩",
+																	"T": "prop"
+																},
+																"borderColor": {
+																	"H": "╬'rgb(50,205,50)'╩╩",
+																	"T": "prop"
+																},
+																"data": {
+																	"H": "╬[]╠99╩╠70╩╠31╩╠93╩╠91╩╩╩",
+																	"T": "prop"
+																},
+																"fill": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "╬'# of Votes'╩╩",
+																	"T": "prop"
+																},
+																"labels": {
+																	"H": "╬[]╠'Red'╩╠'Orange'╩╠'Yellow'╩╠'Green'╩╠'Blue'╩╩╩",
+																	"T": "prop"
+																},
+																"xDrawOnChartArea": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"yDrawOnChartArea": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"xDisplay": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"yDisplay": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"labelAlign": {
+																	"H": "╬'center'╩╩",
+																	"T": "prop"
+																},
+																"labelAnchor": {
+																	"H": "╬'center'╩╩",
+																	"T": "prop"
+																},
+																"labelBorderRadius": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"labelBorderWidth": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"labelClamp": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"labelClip": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"labelDisplay": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"labelFontWeight": {
+																	"H": "╬'normal'╩╩",
+																	"T": "prop"
+																},
+																"labelFontLineHeight": {
+																	"H": "╬'1.2'╩╩",
+																	"T": "prop"
+																},
+																"labelOffset": {
+																	"H": "╬'4'╩╩",
+																	"T": "prop"
+																},
+																"labelOpacity": {
+																	"H": "╬1╩╩",
+																	"T": "prop"
+																},
+																"labelPaddingTop": {
+																	"H": "╬4╩╩",
+																	"T": "prop"
+																},
+																"labelPaddingRight": {
+																	"H": "╬4╩╩",
+																	"T": "prop"
+																},
+																"labelPaddingBottom": {
+																	"H": "╬4╩╩",
+																	"T": "prop"
+																},
+																"labelPaddingLeft": {
+																	"H": "╬4╩╩",
+																	"T": "prop"
+																},
+																"labelRotation": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"labelTextAlign": {
+																	"H": "╬'start'╩╩",
+																	"T": "prop"
+																},
+																"labelTextStrokeWidth": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"labelTextShadowBlur": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"width": {
+																	"H": "╬'39vw'╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_154"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_152",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_152"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_145"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_190",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Line",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_192",
+																	"T": "prop"
+																},
+																"backgroundColor": {
+																	"H": "╬'rgb(50,205,50)'╩╩",
+																	"T": "prop"
+																},
+																"borderColor": {
+																	"H": "╬'rgb(50,205,50)'╩╩",
+																	"T": "prop"
+																},
+																"data": {
+																	"H": "╬[]╠99╩╠70╩╠31╩╠93╩╠91╩╩╩",
+																	"T": "prop"
+																},
+																"fill": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "╬'# of Votes'╩╩",
+																	"T": "prop"
+																},
+																"labels": {
+																	"H": "╬[]╠'Red'╩╠'Orange'╩╠'Yellow'╩╠'Green'╩╠'Blue'╩╩╩",
+																	"T": "prop"
+																},
+																"xDrawOnChartArea": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"yDrawOnChartArea": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"xDisplay": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"yDisplay": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"labelAlign": {
+																	"H": "╬'center'╩╩",
+																	"T": "prop"
+																},
+																"labelAnchor": {
+																	"H": "╬'center'╩╩",
+																	"T": "prop"
+																},
+																"labelBorderRadius": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"labelBorderWidth": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"labelClamp": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"labelClip": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"labelDisplay": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"labelFontWeight": {
+																	"H": "╬'normal'╩╩",
+																	"T": "prop"
+																},
+																"labelFontLineHeight": {
+																	"H": "╬'1.2'╩╩",
+																	"T": "prop"
+																},
+																"labelOffset": {
+																	"H": "╬'4'╩╩",
+																	"T": "prop"
+																},
+																"labelOpacity": {
+																	"H": "╬1╩╩",
+																	"T": "prop"
+																},
+																"labelPaddingTop": {
+																	"H": "╬4╩╩",
+																	"T": "prop"
+																},
+																"labelPaddingRight": {
+																	"H": "╬4╩╩",
+																	"T": "prop"
+																},
+																"labelPaddingBottom": {
+																	"H": "╬4╩╩",
+																	"T": "prop"
+																},
+																"labelPaddingLeft": {
+																	"H": "╬4╩╩",
+																	"T": "prop"
+																},
+																"labelRotation": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"labelTextAlign": {
+																	"H": "╬'start'╩╩",
+																	"T": "prop"
+																},
+																"labelTextStrokeWidth": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"labelTextShadowBlur": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"width": {
+																	"H": "╬'39vw'╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"labelFormatter": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\n//context : contextual information see-> https://master--chartjs-plugin-datalabels.netlify.app/guide/options.html#option-context\r\n//value : the current data value\r\nquick.return(value + '%');\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfMTkyX2xhYmVsRm9ybWF0dGVyX0UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJFZHRyQ29tcF8xOTJfbGFiZWxGb3JtYXR0ZXJfRS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBRUEsZ0lBQWdJO0FBQ2hJLGdDQUFnQztBQUNoQyxLQUFLLENBQUMsTUFBTSxDQUFDLEtBQUssR0FBRyxHQUFHLENBQUMsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImRlY2xhcmUgdmFyIHZhbHVlOmFueTtcbmRlY2xhcmUgdmFyIGNvbnRleHQ6eyBhY3RpdmU6IGJvb2xlYW47IGRhdGFJbmRleDogbnVtYmVyOyBjaGFydCA6IGFueTsgZGF0YXNldDogYW55OyBkYXRhc2V0SW5kZXg6bnVtYmVyOyB9XG4vL2NvbnRleHQgOiBjb250ZXh0dWFsIGluZm9ybWF0aW9uIHNlZS0+IGh0dHBzOi8vbWFzdGVyLS1jaGFydGpzLXBsdWdpbi1kYXRhbGFiZWxzLm5ldGxpZnkuYXBwL2d1aWRlL29wdGlvbnMuaHRtbCNvcHRpb24tY29udGV4dFxyXG4vL3ZhbHVlIDogdGhlIGN1cnJlbnQgZGF0YSB2YWx1ZVxyXG5xdWljay5yZXR1cm4odmFsdWUgKyAnJScpO1xuIGV4cG9ydHt9O1xuIl19",
+																	"PE": true,
+																	"P": "value:any,context:{ active: boolean; dataIndex: number; chart : any; dataset: any; datasetIndex:number; }",
+																	"HL": "JS"
+																}
+															},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_192"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_191",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_191"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_190"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_179",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Line",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_181",
+																	"T": "prop"
+																},
+																"backgroundColor": {
+																	"H": "╬'rgb(50,205,50)'╩╩",
+																	"T": "prop"
+																},
+																"borderColor": {
+																	"H": "╬'rgb(50,205,50)'╩╩",
+																	"T": "prop"
+																},
+																"data": {
+																	"H": "╬[]╠99╩╠70╩╠31╩╠93╩╠91╩╩╩",
+																	"T": "prop"
+																},
+																"fill": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "╬'# of Votes'╩╩",
+																	"T": "prop"
+																},
+																"labels": {
+																	"H": "╬[]╠'Red'╩╠'Orange'╩╠'Yellow'╩╠'Green'╩╠'Blue'╩╩╩",
+																	"T": "prop"
+																},
+																"xDrawOnChartArea": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"yDrawOnChartArea": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"xDisplay": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"yDisplay": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"labelAlign": {
+																	"H": "╬'center'╩╩",
+																	"T": "prop"
+																},
+																"labelAnchor": {
+																	"H": "╬'center'╩╩",
+																	"T": "prop"
+																},
+																"labelBorderRadius": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"labelBorderWidth": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"labelClamp": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"labelClip": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"labelDisplay": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"labelFontWeight": {
+																	"H": "╬'normal'╩╩",
+																	"T": "prop"
+																},
+																"labelFontLineHeight": {
+																	"H": "╬'1.2'╩╩",
+																	"T": "prop"
+																},
+																"labelOffset": {
+																	"H": "╬'4'╩╩",
+																	"T": "prop"
+																},
+																"labelOpacity": {
+																	"H": "╬1╩╩",
+																	"T": "prop"
+																},
+																"labelPaddingTop": {
+																	"H": "╬4╩╩",
+																	"T": "prop"
+																},
+																"labelPaddingRight": {
+																	"H": "╬4╩╩",
+																	"T": "prop"
+																},
+																"labelPaddingBottom": {
+																	"H": "╬4╩╩",
+																	"T": "prop"
+																},
+																"labelPaddingLeft": {
+																	"H": "╬4╩╩",
+																	"T": "prop"
+																},
+																"labelRotation": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"labelTextAlign": {
+																	"H": "╬'start'╩╩",
+																	"T": "prop"
+																},
+																"labelTextStrokeWidth": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"labelTextShadowBlur": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"width": {
+																	"H": "╬'39vw'╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_181"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": ""
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_180",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_180"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_179"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container container--fluid newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {}
+};
+export default pjson

@@ -1,0 +1,316 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VDataTable",
+			"P": {
+				"ID": {
+					"H": "dataTable",
+					"T": "prop"
+				},
+				"headers": {
+					"H": "[{ text = 'Formatted Date', value= 'date'},\n{ text = 'Formatted Date(UI)', value= 'dateUI' },\n{ text = 'Formatted Time(UI)', value= 'shortTime' },\n{ text = 'Formatted Money(UI)', value= 'money' }]",
+					"T": "prop"
+				},
+				"footerProps": {
+					"H": "{showFirstLastPage = true,\nfirstIcon = 'mdi-arrow-collapse-left',\nlastIcon = 'mdi-arrow-collapse-right',\nprevIcon = 'mdi-minus',\nnextIcon = 'mdi-plus'}",
+					"T": "prop"
+				},
+				"itemsPerPage": {
+					"H": "5",
+					"T": "prop"
+				},
+				"items": {
+					"H": "[{date = Date.now(), dateUI = '04011989', shortTime = Date.now(), money = 2400},\r\n{date = Date.now(), dateUI = '04011989', shortTime = Date.now(), money = 370000}]",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "\r\nserviceDate = '04011989'\r\ndateObj = Quick.parseToDate(serviceDate,'DDMMYYYY')\r\nEM.trace(dateObj)\r\nshortDate = Quick.toShortDate(dateObj)\r\nEM.trace(shortDate)",
+					"C": true
+				}
+			},
+			"C": {
+				"item.date": {
+					"c": [
+						{
+							"T": "QLabel",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_8",
+									"T": "prop"
+								},
+								"text": {
+									"H": "Quick.toShortDate(item.date, 'DD/MM/YYYY')\r\n\r\n",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_8"
+							},
+							"O": {
+								"compDomClasses": "q-label ",
+								"cType": "child"
+							}
+						}
+					],
+					"cType": "scopedSlot"
+				},
+				"item.dateUI": {
+					"c": [
+						{
+							"T": "QLabel",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_10",
+									"T": "prop"
+								},
+								"text": {
+									"H": "//dateObj = Quick.toDate(item.date,'DDMMYYYY')\r\ndateObj = Quick.toDate(item.date) // Gets format type from ui settings.yaml (settings-proxy.js for editor) \"serviceDateFormat\" field\r\nQuick.toShortDate(dateObj) // Gets format type from ui settings.yaml (settings-proxy.js for editor) \"shortDateFormat\" field\r\n\r\n\r\n\r\n",
+									"T": "prop"
+								}
+							},
+							"E": {
+								"EndRender": {
+									"H": "\r\nserviceDate = '04011989'\r\n\r\ntableData = [{date = Date.now(), dateUI = shortDate, shortTime = Date.now(), money = 2400},\r\n{date = Date.now(), dateUI = shortDate, shortTime = Date.now(), money = 370000}]\r\n\r\ndataTable.items = tableData",
+									"C": true
+								}
+							},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_10"
+							},
+							"O": {
+								"compDomClasses": "q-label ",
+								"cType": "child"
+							}
+						}
+					],
+					"cType": "scopedSlot"
+				},
+				"item.money": {
+					"c": [
+						{
+							"T": "QLabel",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_7",
+									"T": "prop"
+								},
+								"text": {
+									"H": "Quick.toMoney(item.money)",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_7"
+							},
+							"O": {
+								"compDomClasses": "q-label ",
+								"cType": "child"
+							}
+						}
+					],
+					"cType": "scopedSlot"
+				},
+				"item.shortTime": {
+					"c": [
+						{
+							"T": "QLabel",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_6",
+									"T": "prop"
+								},
+								"text": {
+									"H": "Quick.toShortTime(item.shortTime)",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_6"
+							},
+							"O": {
+								"compDomClasses": "q-label ",
+								"cType": "child"
+							}
+						}
+					],
+					"cType": "scopedSlot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "v-data-table theme--light"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VDataTable",
+			"P": {
+				"ID": {
+					"H": "dataTable",
+					"T": "prop"
+				},
+				"headers": {
+					"H": "╬[]╠{}╠=╣text╩╠'Formatted Date'╩╩╠=╣value╩╠'date'╩╩╩╠{}╠=╣text╩╠'Formatted Date(UI)'╩╩╠=╣value╩╠'dateUI'╩╩╩╠{}╠=╣text╩╠'Formatted Time(UI)'╩╩╠=╣value╩╠'shortTime'╩╩╩╠{}╠=╣text╩╠'Formatted Money(UI)'╩╩╠=╣value╩╠'money'╩╩╩╩╩",
+					"T": "prop"
+				},
+				"footerProps": {
+					"H": "╬{}╠=╣showFirstLastPage╩╠true╩╩╠=╣firstIcon╩╠'mdi-arrow-collapse-left'╩╩╠=╣lastIcon╩╠'mdi-arrow-collapse-right'╩╩╠=╣prevIcon╩╠'mdi-minus'╩╩╠=╣nextIcon╩╠'mdi-plus'╩╩╩╩",
+					"T": "prop"
+				},
+				"itemsPerPage": {
+					"H": "╬5╩╩",
+					"T": "prop"
+				},
+				"items": {
+					"H": "╬[]╠{}╠=╣date╩╠()╣.╣Date╩╠now╩╩╩╩╠=╣dateUI╩╠'04011989'╩╩╠=╣shortTime╩╠()╣.╣Date╩╠now╩╩╩╩╠=╣money╩╠2400╩╩╩╠{}╠=╣date╩╠()╣.╣Date╩╠now╩╩╩╩╠=╣dateUI╩╠'04011989'╩╩╠=╣shortTime╩╠()╣.╣Date╩╠now╩╩╩╩╠=╣money╩╠370000╩╩╩╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "╬=╣serviceDate╩╠'04011989'╩╩╬=╣dateObj╩╠()╣.╣Quick╩╠parseToDate╩╩╠serviceDate╩╠'DDMMYYYY'╩╩╩╬()╣.╣EM╩╠trace╩╩╠dateObj╩╩╬=╣shortDate╩╠()╣.╣Quick╩╠toShortDate╩╩╠dateObj╩╩╩╬()╣.╣EM╩╠trace╩╩╠shortDate╩╩╩",
+					"C": true
+				}
+			},
+			"C": {
+				"item.date": {
+					"c": [
+						{
+							"T": "QLabel",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_8",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬()╣.╣Quick╩╠toShortDate╩╩╠.╣item╩╠date╩╩╠'DD/MM/YYYY'╩╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_8"
+							},
+							"O": {
+								"compDomClasses": "q-label ",
+								"cType": "child"
+							}
+						}
+					],
+					"cType": "scopedSlot"
+				},
+				"item.dateUI": {
+					"c": [
+						{
+							"T": "QLabel",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_10",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬=╣dateObj╩╠()╣.╣Quick╩╠toDate╩╩╠.╣item╩╠date╩╩╩╩╬()╣.╣Quick╩╠toShortDate╩╩╠dateObj╩╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {
+								"EndRender": {
+									"H": "╬=╣serviceDate╩╠'04011989'╩╩╬=╣tableData╩╠[]╠{}╠=╣date╩╠()╣.╣Date╩╠now╩╩╩╩╠=╣dateUI╩╠shortDate╩╩╠=╣shortTime╩╠()╣.╣Date╩╠now╩╩╩╩╠=╣money╩╠2400╩╩╩╠{}╠=╣date╩╠()╣.╣Date╩╠now╩╩╩╩╠=╣dateUI╩╠shortDate╩╩╠=╣shortTime╩╠()╣.╣Date╩╠now╩╩╩╩╠=╣money╩╠370000╩╩╩╩╩╬=╣.╣dataTable╩╠items╩╩╠tableData╩╩╩",
+									"C": true
+								}
+							},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_10"
+							},
+							"O": {
+								"compDomClasses": "q-label ",
+								"cType": "child"
+							}
+						}
+					],
+					"cType": "scopedSlot"
+				},
+				"item.money": {
+					"c": [
+						{
+							"T": "QLabel",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_7",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬()╣.╣Quick╩╠toMoney╩╩╠.╣item╩╠money╩╩╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_7"
+							},
+							"O": {
+								"compDomClasses": "q-label ",
+								"cType": "child"
+							}
+						}
+					],
+					"cType": "scopedSlot"
+				},
+				"item.shortTime": {
+					"c": [
+						{
+							"T": "QLabel",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_6",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬()╣.╣Quick╩╠toShortTime╩╩╠.╣item╩╠shortTime╩╩╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_6"
+							},
+							"O": {
+								"compDomClasses": "q-label ",
+								"cType": "child"
+							}
+						}
+					],
+					"cType": "scopedSlot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "v-data-table theme--light"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {}
+};
+export default pjson

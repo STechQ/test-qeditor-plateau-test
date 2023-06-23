@@ -1,0 +1,1655 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrCompare",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"PreRender": {
+					"H": "\r\nlet requestObject: IRequest = {\r\n    http: 'get',\r\n    url: 'https://reqres.in/api/users?page=2',\r\n    responseField: 'resp1',\r\n    onSuccess: 'successEvent',\r\n    blockRender: false,\r\n    data: null,\r\n    onFail: null\r\n}\r\nquick.Request.async(requestObject);\r\nlet resp2 = 'old';\r\n//response = {resp1 = 'qwewe'}\r\nquick.store.set('resp1', 'qwewe');\r\nquick.Quick.dm['resp1'] = resp2;",
+					"I": true,
+					"HL": "TS"
+				},
+				"successEvent": {
+					"H": "quick.EM.trace(response.resp1);\r\n\r\n//components.EdtrComp_1.qValue = response.resp1.name('Component Screen Name') // Ekranda gösterilecek veri\r\n//components.EdtrComp_1.comparedValue = dm.resp1.name('Compared Name') // Tooltipte gösterilecek veri",
+					"C": true,
+					"HL": "TS"
+				},
+				"EndRender": {
+					"H": "components.myTextField.qValue = undefined;\r\ncomponents.myTextField.compareValue = 'qwe';\r\n\r\ncomponents.mySelect.qValue = 2;\r\ncomponents.mySelect.compareValue = null;\r\n\r\ncomponents.myAutocomplete.qValue = 2;\r\ncomponents.myAutocomplete.compareValue = 1;\r\ncomponents.myAutocomplete.compareText = components.myAutocomplete.items.filter(item => item.value == components.myAutocomplete.compareValue)[0].text;\r\n\r\ncomponents.EdtrComp_3.items = [{ID : 1, name : 'Frozens Yogurt New', calories : 159, fat : '6.0', carbs : 24, protein : '4.0', iron : ''},\r\n{ID : 2, name : 'Ice cream sandwich', calories : 237, fat : '10.0', carbs : 37, protein : '', iron : ''},\r\n{ID : 3, name : 'Eclair', calories : 270, fat : '16.0', carbs : 23, protein : '6.0', iron : '7%'},\r\n{ID : 4, name : 'Cupcake', calories : 305, fat : '3.7', carbs : 67, protein : '4.2', iron : '10%'},\r\n{ID : 5, name : 'Gingerbread',calories : 356, fat : '16.0', carbs : 49, protein : '3.9', iron : '16%'},\r\n{ID : 6, name : 'Jelly bean', calories : '',  fat : '0.0', carbs : 94, protein : '0.0', iron : '0%'},\r\n{ID : 7, name : 'Lollipop', calories : 392, fat : '0.2', carbs : 98, protein : '0.0', iron : '2 %'},\r\n{ID : 8, name : 'Honeycomb', calories : 408, fat : '3.2', carbs : 87, protein : '6.5', iron : '45%'},\r\n{ID : 9, name : 'Donut', calories : 452, fat : '25.0', carbs : 51, protein : '4.9', iron : '22%'},\r\n{ID : 10, name : '', calories : 518, fat : '26.0', carbs : 65, protein : '7', iron:  '6 %'}];\r\n\r\n\r\ncomponents.EdtrComp_3.compareValue = [{ID : 1, name : 'Frozens Yogurt', fat : '6.0', carbs : 24, protein : '4.0', iron : '1%'},\r\n{ID : 2, name : 'Ice cream sandwich', calories : 237, fat : '9.0', carbs : 37, protein : '4.3', iron : '1%'},\r\n{ID : 3, name : 'Eclair', calories : 262, fat : '16.0', carbs : 23, protein : '6.0', iron : '7%'},\r\n{ID : 4, name : 'Cupcake', calories : 305, fat : '3.7', carbs : 67, protein : '10.3', iron : '8%'},\r\n{ID : 5, fat : '16.0', carbs : 49, protein : '3.9'},\r\n{ID : 6, name : 'Jelly bean', calories : 375,  fat : '0.0', carbs : 94, protein : '0.0', iron : '0%'},\r\n{ID : 7, name : 'Lollipop', fat : '0.2', carbs : 98, protein : '0.0', iron : '2 %'},\r\n{ID : 8, name : 'Honeycomb', calories : 408, fat : '3.2', carbs : 87, protein : '6.5', iron : '45%'},\r\n{ID : 9, name : 'Donut', calories : 452, fat : '25.0', carbs : 51, protein : '4.9', iron : '22%'},\r\n{ID : 10, name : 'KitKat', calories : 518, fat : '26.0', carbs : 50, iron:  '5 %'}];",
+					"HL": "TS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_3"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": ""
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_8",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_10",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_12",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLegend",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_1",
+																	"T": "prop"
+																},
+																"QJsonPath": {
+																	"H": "'qjson://QLegend'",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_1"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": ""
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_12"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												},
+												"compDomClasses": "col d-flex flex-column"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_10"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_17",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_18",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VDataTable",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_3",
+																	"T": "prop"
+																},
+																"headers": {
+																	"H": "[{ text = 'Dessert (100g serving)', align= 'start', sortable= false, value= 'name'},\n{ text = 'Calories', value= 'calories', sortable = true },\n{ text = 'Fat (g)', value= 'fat' },\n{ text = 'Carbs (g)', value= 'carbs' },\n{ text = 'Protein (g)', value= 'protein' },\n{ text = 'Iron (%)', value= 'iron' }]",
+																	"T": "prop"
+																},
+																"items": {
+																	"H": "[{name = 'Frozens Yogurt', calories = 159, fat = '6.0', carbs = 24, protein = '4.0', iron = '1%'},\n{name = 'Ice cream sandwich', calories = 237, fat = '9.0', carbs = 37, protein = '4.3', iron = '1%'},\n{name = 'Eclair', calories = 262, fat = '16.0', carbs = 23, protein = '6.0', iron = '7%'},\n{name = 'Cupcake', calories = 305, fat = '3.7', carbs = 67, protein = '4.3', iron = '8%'},\n{name = 'Gingerbread',calories = 356, fat = '16.0', carbs = 49, protein = '3.9', iron = '16%'},\n{name = 'Jelly bean', calories = 375,  fat = '0.0', carbs = 94, protein = '0.0', iron = '0%'},\n{name = 'Lollipop', calories = 392, fat = '0.2', carbs = 98, protein = '0.0', iron = '2 %'},\n{name = 'Honeycomb', calories = 408, fat = '3.2', carbs = 87, protein = '6.5', iron = '45%'},\n{name = 'Donut', calories = 452, fat = '25.0', carbs = 51, protein = '4.9', iron = '22%'},\n{name = 'KitKat', calories = 518, fat = '26.0', carbs = 65, protein = '7', iron=  '6 %'}]",
+																	"T": "prop"
+																},
+																"footerProps": {
+																	"H": "{showFirstLastPage = true,\nfirstIcon = 'mdi-arrow-collapse-left',\nlastIcon = 'mdi-arrow-collapse-right',\nprevIcon = 'mdi-minus',\nnextIcon = 'mdi-plus'}",
+																	"T": "prop"
+																},
+																"itemsPerPage": {
+																	"H": "5",
+																	"T": "prop"
+																},
+																"CompareDataField": {
+																	"H": "'ID'",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_7"
+															},
+															"O": {
+																"cType": "scopedSlot",
+																"compDomClasses": "v-data-table v-data-table--has-bottom theme--light"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_18"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												},
+												"compDomClasses": "col d-flex flex-column"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_17"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_14",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_15",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VTextField",
+															"P": {
+																"ID": {
+																	"H": "myTextField",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "'Text field label'",
+																	"T": "prop"
+																},
+																"regular": {
+																	"H": "'true'",
+																	"T": "prop"
+																},
+																"outlined": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_4"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "v-input theme--light v-text-field v-text-field--enclosed v-text-field--outlined sftt-value-removed sftt-value-removed sftt-value-removed"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_15"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												},
+												"compDomClasses": "col d-flex flex-column"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_14"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_99",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VSelect",
+															"P": {
+																"ID": {
+																	"H": "mySelect",
+																	"T": "prop"
+																},
+																"eager": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"items": {
+																	"H": "[{text = 'test1', value = 1}, { text = 'test2', value = 2}]",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "'My Select'",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_25"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_108",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_108"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_99"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_126",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VAutocomplete",
+															"P": {
+																"ID": {
+																	"H": "myAutocomplete",
+																	"T": "prop"
+																},
+																"eager": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"items": {
+																	"H": "[{text = 'test1', value = 1},\n{ text = 'test2', value = 2}]",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "'My Autocomplete'",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_32"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_127",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_127"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_126"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_8"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrCompare",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"PreRender": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nvar requestObject = {\r\n    http: 'get',\r\n    url: 'https://reqres.in/api/users?page=2',\r\n    responseField: 'resp1',\r\n    onSuccess: 'successEvent',\r\n    blockRender: false,\r\n    data: null,\r\n    onFail: null\r\n};\r\nquick.Request.async(requestObject);\r\nvar resp2 = 'old';\r\n//response = {resp1 = 'qwewe'}\r\nquick.store.set('resp1', 'qwewe');\r\nquick.Quick.dm['resp1'] = resp2;\r\n",
+					"I": true,
+					"HL": "JS"
+				},
+				"successEvent": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.EM.trace(response.resp1);\r\n",
+					"C": true,
+					"HL": "JS"
+				},
+				"EndRender": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ncomponents.myTextField.qValue = undefined;\r\ncomponents.myTextField.compareValue = 'qwe';\r\ncomponents.mySelect.qValue = 2;\r\ncomponents.mySelect.compareValue = null;\r\ncomponents.myAutocomplete.qValue = 2;\r\ncomponents.myAutocomplete.compareValue = 1;\r\ncomponents.myAutocomplete.compareText = components.myAutocomplete.items.filter(function (item) { return item.value == components.myAutocomplete.compareValue; })[0].text;\r\ncomponents.EdtrComp_3.items = [{ ID: 1, name: 'Frozens Yogurt New', calories: 159, fat: '6.0', carbs: 24, protein: '4.0', iron: '' },\r\n    { ID: 2, name: 'Ice cream sandwich', calories: 237, fat: '10.0', carbs: 37, protein: '', iron: '' },\r\n    { ID: 3, name: 'Eclair', calories: 270, fat: '16.0', carbs: 23, protein: '6.0', iron: '7%' },\r\n    { ID: 4, name: 'Cupcake', calories: 305, fat: '3.7', carbs: 67, protein: '4.2', iron: '10%' },\r\n    { ID: 5, name: 'Gingerbread', calories: 356, fat: '16.0', carbs: 49, protein: '3.9', iron: '16%' },\r\n    { ID: 6, name: 'Jelly bean', calories: '', fat: '0.0', carbs: 94, protein: '0.0', iron: '0%' },\r\n    { ID: 7, name: 'Lollipop', calories: 392, fat: '0.2', carbs: 98, protein: '0.0', iron: '2 %' },\r\n    { ID: 8, name: 'Honeycomb', calories: 408, fat: '3.2', carbs: 87, protein: '6.5', iron: '45%' },\r\n    { ID: 9, name: 'Donut', calories: 452, fat: '25.0', carbs: 51, protein: '4.9', iron: '22%' },\r\n    { ID: 10, name: '', calories: 518, fat: '26.0', carbs: 65, protein: '7', iron: '6 %' }];\r\ncomponents.EdtrComp_3.compareValue = [{ ID: 1, name: 'Frozens Yogurt', fat: '6.0', carbs: 24, protein: '4.0', iron: '1%' },\r\n    { ID: 2, name: 'Ice cream sandwich', calories: 237, fat: '9.0', carbs: 37, protein: '4.3', iron: '1%' },\r\n    { ID: 3, name: 'Eclair', calories: 262, fat: '16.0', carbs: 23, protein: '6.0', iron: '7%' },\r\n    { ID: 4, name: 'Cupcake', calories: 305, fat: '3.7', carbs: 67, protein: '10.3', iron: '8%' },\r\n    { ID: 5, fat: '16.0', carbs: 49, protein: '3.9' },\r\n    { ID: 6, name: 'Jelly bean', calories: 375, fat: '0.0', carbs: 94, protein: '0.0', iron: '0%' },\r\n    { ID: 7, name: 'Lollipop', fat: '0.2', carbs: 98, protein: '0.0', iron: '2 %' },\r\n    { ID: 8, name: 'Honeycomb', calories: 408, fat: '3.2', carbs: 87, protein: '6.5', iron: '45%' },\r\n    { ID: 9, name: 'Donut', calories: 452, fat: '25.0', carbs: 51, protein: '4.9', iron: '22%' },\r\n    { ID: 10, name: 'KitKat', calories: 518, fat: '26.0', carbs: 50, iron: '5 %' }];\r\n",
+					"HL": "JS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_3"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_8",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_10",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_12",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLegend",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_1",
+																	"T": "prop"
+																},
+																"QJsonPath": {
+																	"H": "╬'qjson://QLegend'╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_1"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_12"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												},
+												"compDomClasses": "col d-flex flex-column newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_10"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_17",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_18",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VDataTable",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_3",
+																	"T": "prop"
+																},
+																"headers": {
+																	"H": "╬[]╠{}╠=╣text╩╠'Dessert (100g serving)'╩╩╠=╣align╩╠'start'╩╩╠=╣sortable╩╠false╩╩╠=╣value╩╠'name'╩╩╩╠{}╠=╣text╩╠'Calories'╩╩╠=╣value╩╠'calories'╩╩╠=╣sortable╩╠true╩╩╩╠{}╠=╣text╩╠'Fat (g)'╩╩╠=╣value╩╠'fat'╩╩╩╠{}╠=╣text╩╠'Carbs (g)'╩╩╠=╣value╩╠'carbs'╩╩╩╠{}╠=╣text╩╠'Protein (g)'╩╩╠=╣value╩╠'protein'╩╩╩╠{}╠=╣text╩╠'Iron (%)'╩╩╠=╣value╩╠'iron'╩╩╩╩╩",
+																	"T": "prop"
+																},
+																"items": {
+																	"H": "╬[]╠{}╠=╣name╩╠'Frozens Yogurt'╩╩╠=╣calories╩╠159╩╩╠=╣fat╩╠'6.0'╩╩╠=╣carbs╩╠24╩╩╠=╣protein╩╠'4.0'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Ice cream sandwich'╩╩╠=╣calories╩╠237╩╩╠=╣fat╩╠'9.0'╩╩╠=╣carbs╩╠37╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Eclair'╩╩╠=╣calories╩╠262╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠23╩╩╠=╣protein╩╠'6.0'╩╩╠=╣iron╩╠'7%'╩╩╩╠{}╠=╣name╩╠'Cupcake'╩╩╠=╣calories╩╠305╩╩╠=╣fat╩╠'3.7'╩╩╠=╣carbs╩╠67╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'8%'╩╩╩╠{}╠=╣name╩╠'Gingerbread'╩╩╠=╣calories╩╠356╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠49╩╩╠=╣protein╩╠'3.9'╩╩╠=╣iron╩╠'16%'╩╩╩╠{}╠=╣name╩╠'Jelly bean'╩╩╠=╣calories╩╠375╩╩╠=╣fat╩╠'0.0'╩╩╠=╣carbs╩╠94╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'0%'╩╩╩╠{}╠=╣name╩╠'Lollipop'╩╩╠=╣calories╩╠392╩╩╠=╣fat╩╠'0.2'╩╩╠=╣carbs╩╠98╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'2 %'╩╩╩╠{}╠=╣name╩╠'Honeycomb'╩╩╠=╣calories╩╠408╩╩╠=╣fat╩╠'3.2'╩╩╠=╣carbs╩╠87╩╩╠=╣protein╩╠'6.5'╩╩╠=╣iron╩╠'45%'╩╩╩╠{}╠=╣name╩╠'Donut'╩╩╠=╣calories╩╠452╩╩╠=╣fat╩╠'25.0'╩╩╠=╣carbs╩╠51╩╩╠=╣protein╩╠'4.9'╩╩╠=╣iron╩╠'22%'╩╩╩╠{}╠=╣name╩╠'KitKat'╩╩╠=╣calories╩╠518╩╩╠=╣fat╩╠'26.0'╩╩╠=╣carbs╩╠65╩╩╠=╣protein╩╠'7'╩╩╠=╣iron╩╠'6 %'╩╩╩╩╩",
+																	"T": "prop"
+																},
+																"footerProps": {
+																	"H": "╬{}╠=╣showFirstLastPage╩╠true╩╩╠=╣firstIcon╩╠'mdi-arrow-collapse-left'╩╩╠=╣lastIcon╩╠'mdi-arrow-collapse-right'╩╩╠=╣prevIcon╩╠'mdi-minus'╩╩╠=╣nextIcon╩╠'mdi-plus'╩╩╩╩",
+																	"T": "prop"
+																},
+																"itemsPerPage": {
+																	"H": "╬5╩╩",
+																	"T": "prop"
+																},
+																"CompareDataField": {
+																	"H": "╬'ID'╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"item.name": {
+																	"c": [
+																		{
+																			"T": "Tooltip",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_3_compareTooltip",
+																					"T": "prop"
+																				},
+																				"toolTipContent": {
+																					"T": "prop",
+																					"DE": true
+																				},
+																				"position": {
+																					"H": "╬'top'╩╩",
+																					"T": "prop",
+																					"DE": true
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VChip",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_3_compareChip",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "sftt-value-saved",
+																									"T": "prop",
+																									"DE": true
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_3_compareLabel",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "Gingerbread",
+																													"T": "prop",
+																													"DE": true
+																												}
+																											},
+																											"C": {},
+																											"E": {},
+																											"_Editor": {
+																												"eID": "EdtrComp_3_compareLabel"
+																											},
+																											"O": {
+																												"cType": "child",
+																												"compDomClasses": "q-label newDropBorder"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_3_compareChip"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"compDomClasses": "v-chip theme--light v-size--default sftt-value-saved undefined newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_3_compareTooltip"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "tooltip-div-class newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "scopedSlot"
+																},
+																"item.calories": {
+																	"c": [
+																		{
+																			"T": "Tooltip",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_3_compareTooltip",
+																					"T": "prop"
+																				},
+																				"toolTipContent": {
+																					"T": "prop",
+																					"DE": true
+																				},
+																				"position": {
+																					"H": "╬'top'╩╩",
+																					"T": "prop",
+																					"DE": true
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VChip",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_3_compareChip",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "sftt-value-saved",
+																									"T": "prop",
+																									"DE": true
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_3_compareLabel",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": 356,
+																													"T": "prop",
+																													"DE": true
+																												}
+																											},
+																											"C": {},
+																											"E": {},
+																											"_Editor": {
+																												"eID": "EdtrComp_3_compareLabel"
+																											},
+																											"O": {
+																												"cType": "child",
+																												"compDomClasses": "q-label newDropBorder"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_3_compareChip"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"compDomClasses": "v-chip theme--light v-size--default sftt-value-saved undefined newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_3_compareTooltip"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "tooltip-div-class newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "scopedSlot"
+																},
+																"item.fat": {
+																	"c": [
+																		{
+																			"T": "Tooltip",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_3_compareTooltip",
+																					"T": "prop"
+																				},
+																				"toolTipContent": {
+																					"H": "16.0",
+																					"T": "prop",
+																					"DE": true
+																				},
+																				"position": {
+																					"H": "╬'top'╩╩",
+																					"T": "prop",
+																					"DE": true
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VChip",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_3_compareChip",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "",
+																									"T": "prop",
+																									"DE": true
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_3_compareLabel",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "16.0",
+																													"T": "prop",
+																													"DE": true
+																												}
+																											},
+																											"C": {},
+																											"E": {},
+																											"_Editor": {
+																												"eID": "EdtrComp_3_compareLabel"
+																											},
+																											"O": {
+																												"cType": "child",
+																												"compDomClasses": "q-label newDropBorder"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_3_compareChip"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"compDomClasses": "v-chip theme--light v-size--default sftt-value-saved undefined newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_3_compareTooltip"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "tooltip-div-class newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "scopedSlot"
+																},
+																"item.carbs": {
+																	"c": [
+																		{
+																			"T": "Tooltip",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_3_compareTooltip",
+																					"T": "prop"
+																				},
+																				"toolTipContent": {
+																					"H": 49,
+																					"T": "prop",
+																					"DE": true
+																				},
+																				"position": {
+																					"H": "╬'top'╩╩",
+																					"T": "prop",
+																					"DE": true
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VChip",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_3_compareChip",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "",
+																									"T": "prop",
+																									"DE": true
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_3_compareLabel",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": 49,
+																													"T": "prop",
+																													"DE": true
+																												}
+																											},
+																											"C": {},
+																											"E": {},
+																											"_Editor": {
+																												"eID": "EdtrComp_3_compareLabel"
+																											},
+																											"O": {
+																												"cType": "child",
+																												"compDomClasses": "q-label newDropBorder"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_3_compareChip"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"compDomClasses": "v-chip theme--light v-size--default sftt-value-saved undefined newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_3_compareTooltip"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "tooltip-div-class newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "scopedSlot"
+																},
+																"item.protein": {
+																	"c": [
+																		{
+																			"T": "Tooltip",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_3_compareTooltip",
+																					"T": "prop"
+																				},
+																				"toolTipContent": {
+																					"H": "3.9",
+																					"T": "prop",
+																					"DE": true
+																				},
+																				"position": {
+																					"H": "╬'top'╩╩",
+																					"T": "prop",
+																					"DE": true
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VChip",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_3_compareChip",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "",
+																									"T": "prop",
+																									"DE": true
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_3_compareLabel",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "3.9",
+																													"T": "prop",
+																													"DE": true
+																												}
+																											},
+																											"C": {},
+																											"E": {},
+																											"_Editor": {
+																												"eID": "EdtrComp_3_compareLabel"
+																											},
+																											"O": {
+																												"cType": "child",
+																												"compDomClasses": "q-label newDropBorder"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_3_compareChip"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"compDomClasses": "v-chip theme--light v-size--default sftt-value-saved undefined newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_3_compareTooltip"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "tooltip-div-class newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "scopedSlot"
+																},
+																"item.iron": {
+																	"c": [
+																		{
+																			"T": "Tooltip",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_3_compareTooltip",
+																					"T": "prop"
+																				},
+																				"toolTipContent": {
+																					"T": "prop",
+																					"DE": true
+																				},
+																				"position": {
+																					"H": "╬'top'╩╩",
+																					"T": "prop",
+																					"DE": true
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VChip",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_3_compareChip",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "sftt-value-saved",
+																									"T": "prop",
+																									"DE": true
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_3_compareLabel",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "16%",
+																													"T": "prop",
+																													"DE": true
+																												}
+																											},
+																											"C": {},
+																											"E": {},
+																											"_Editor": {
+																												"eID": "EdtrComp_3_compareLabel"
+																											},
+																											"O": {
+																												"cType": "child",
+																												"compDomClasses": "q-label newDropBorder"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_3_compareChip"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"compDomClasses": "v-chip theme--light v-size--default sftt-value-saved undefined newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_3_compareTooltip"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "tooltip-div-class newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "scopedSlot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_7"
+															},
+															"O": {
+																"cType": "scopedSlot",
+																"compDomClasses": "v-data-table v-data-table--has-bottom theme--light newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_18"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												},
+												"compDomClasses": "col d-flex flex-column newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_17"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_14",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_15",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Tooltip",
+															"P": {
+																"ID": {
+																	"H": "myTextField_tooltip",
+																	"T": "prop"
+																},
+																"disabled": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"position": {
+																	"H": "╬'top'╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VTextField",
+																			"P": {
+																				"ID": {
+																					"H": "myTextField",
+																					"T": "prop"
+																				},
+																				"label": {
+																					"H": "╬'Text field label'╩╩",
+																					"T": "prop"
+																				},
+																				"regular": {
+																					"H": "╬'true'╩╩",
+																					"T": "prop"
+																				},
+																				"outlined": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_4"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted v-text-field--enclosed v-text-field--outlined sftt-value-removed"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_4_tooltip"
+															},
+															"O": {
+																"layout": {
+																	"class": "sftt-compare-value-tooltip",
+																	"dOpt": {}
+																},
+																"cType": "child",
+																"compDomClasses": "tooltip-div-class sftt-compare-value-tooltip newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_15"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												},
+												"compDomClasses": "col d-flex flex-column newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_14"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_99",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Tooltip",
+															"P": {
+																"ID": {
+																	"H": "mySelect_tooltip",
+																	"T": "prop"
+																},
+																"disabled": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"position": {
+																	"H": "╬'top'╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VSelect",
+																			"P": {
+																				"ID": {
+																					"H": "mySelect",
+																					"T": "prop"
+																				},
+																				"eager": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"items": {
+																					"H": "╬[]╠{}╠=╣text╩╠'test1'╩╩╠=╣value╩╠1╩╩╩╠{}╠=╣text╩╠'test2'╩╩╠=╣value╩╠2╩╩╩╩╩",
+																					"T": "prop"
+																				},
+																				"label": {
+																					"H": "╬'My Select'╩╩",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_25"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-input v-input--is-label-active v-input--is-dirty theme--light v-text-field v-text-field--is-booted v-select sftt-value-saved"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_25_tooltip"
+															},
+															"O": {
+																"layout": {
+																	"class": "sftt-compare-value-tooltip",
+																	"dOpt": {}
+																},
+																"cType": "child",
+																"compDomClasses": "tooltip-div-class sftt-compare-value-tooltip newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_108",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_108"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												},
+												"compDomClasses": "col d-flex flex-column newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_99"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_126",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Tooltip",
+															"P": {
+																"ID": {
+																	"H": "myAutocomplete_tooltip",
+																	"T": "prop"
+																},
+																"disabled": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"position": {
+																	"H": "╬'top'╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VAutocomplete",
+																			"P": {
+																				"ID": {
+																					"H": "myAutocomplete",
+																					"T": "prop"
+																				},
+																				"eager": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"items": {
+																					"H": "╬[]╠{}╠=╣text╩╠'test1'╩╩╠=╣value╩╠1╩╩╩╠{}╠=╣text╩╠'test2'╩╩╠=╣value╩╠2╩╩╩╩╩",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"label": {
+																					"H": "╬'My Autocomplete'╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_32"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-input v-input--is-label-active v-input--is-dirty theme--light v-text-field v-text-field--is-booted v-select v-autocomplete sftt-value-updated"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_32_tooltip"
+															},
+															"O": {
+																"layout": {
+																	"class": "sftt-compare-value-tooltip",
+																	"dOpt": {}
+																},
+																"cType": "child",
+																"compDomClasses": "tooltip-div-class sftt-compare-value-tooltip"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_127",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_127"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												},
+												"compDomClasses": "col d-flex flex-column"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_126"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_8"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {}
+};
+export default pjson

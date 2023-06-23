@@ -1,0 +1,345 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"PreRender": {
+					"H": "quick.Quick.bind({ bindedObject: \"store\", fields: [\"testField\"] });\r\nquick.store.set('testField', \"Field 1 \");",
+					"I": true,
+					"HL": "TS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child"
+			}
+		},
+		{
+			"T": "VTextField",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_2",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				},
+				"qValue": {
+					"H": "store.testField",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"change": {
+					"H": "quick.store.set(\"testField\", value)",
+					"P": "value:any",
+					"HL": "TS"
+				},
+				"input": {
+					"H": "quick.store.set(\"testField\", value)",
+					"P": "value:any",
+					"HL": "TS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_2"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		},
+		{
+			"T": "VTextField",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_7",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				},
+				"qValue": {
+					"H": "store.testField",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"change": {
+					"H": "quick.store.set(\"testField\", value)",
+					"P": "value:any",
+					"HL": "TS"
+				},
+				"input": {
+					"H": "quick.store.set(\"testField\", value)",
+					"P": "value:any",
+					"HL": "TS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_7"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_3",
+					"T": "prop"
+				},
+				"color": {
+					"H": "'primary'",
+					"T": "prop"
+				},
+				"depressed": {
+					"H": "true",
+					"T": "prop"
+				},
+				"elevation": {
+					"H": "0",
+					"T": "prop"
+				},
+				"height": {
+					"H": "'40px'",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "quick.store.set('testField', \"Field 2 \");",
+					"P": "mouseEvent:unknown | undefined",
+					"HL": "TS"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_4",
+									"T": "prop"
+								},
+								"text": {
+									"H": "'Change Value'",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "child"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_3"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"PreRender": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.Quick.bind({ bindedObject: \"store\", fields: [\"testField\"] });\r\nquick.store.set('testField', \"Field 1 \");\r\n",
+					"I": true,
+					"HL": "JS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			}
+		},
+		{
+			"T": "VTextField",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_2",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"qValue": {
+					"H": "╬.╣store╩╠testField╩╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"change": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.store.set(\"testField\", value);\r\n",
+					"P": "value:any",
+					"HL": "JS"
+				},
+				"input": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.store.set(\"testField\", value);\r\n",
+					"P": "value:any",
+					"HL": "JS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_2"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-input v-input--is-label-active v-input--is-dirty theme--light v-text-field v-text-field--is-booted newDropBorder"
+			}
+		},
+		{
+			"T": "VTextField",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_7",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"qValue": {
+					"H": "╬.╣store╩╠testField╩╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"change": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.store.set(\"testField\", value);\r\n",
+					"P": "value:any",
+					"HL": "JS"
+				},
+				"input": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.store.set(\"testField\", value);\r\n",
+					"P": "value:any",
+					"HL": "JS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_7"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-input v-input--is-label-active v-input--is-dirty theme--light v-text-field v-text-field--is-booted newDropBorder"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_3",
+					"T": "prop"
+				},
+				"color": {
+					"H": "╬'primary'╩╩",
+					"T": "prop"
+				},
+				"depressed": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"elevation": {
+					"H": "╬0╩╩",
+					"T": "prop"
+				},
+				"height": {
+					"H": "╬'40px'╩╩",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.store.set('testField', \"Field 2 \");\r\n",
+					"P": "mouseEvent:unknown | undefined",
+					"HL": "JS"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_4",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬'Change Value'╩╩",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "q-label newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_3"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--depressed theme--light elevation-0 v-size--default primary newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"opt": {}
+};
+export default pjson

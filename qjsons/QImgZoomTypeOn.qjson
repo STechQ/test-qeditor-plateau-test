@@ -1,0 +1,375 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "MessagingComp",
+					"T": "prop"
+				},
+				"triggerOnRestored": {
+					"H": "false",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_21"
+			},
+			"O": {
+				"cType": "child"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container container--fluid'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "VRowComp",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QImgZoom",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_5",
+																	"T": "prop"
+																},
+																"src": {
+																	"H": "'https://cdn.softtech.com.tr/ngsp-quick/nemo/dev/mdImages/QImgZoom/defaultPhoto.jpg'",
+																	"T": "prop"
+																},
+																"height": {
+																	"H": "400",
+																	"T": "prop"
+																},
+																"width": {
+																	"H": "400",
+																	"T": "prop"
+																},
+																"marginLeft": {
+																	"H": "5",
+																	"T": "prop"
+																},
+																"imageFit": {
+																	"H": "'cover'",
+																	"T": "prop"
+																},
+																"zoomType": {
+																	"H": "'On'",
+																	"T": "prop"
+																},
+																"zoomRate": {
+																	"H": "2",
+																	"T": "prop"
+																},
+																"zoomedAreaHeight": {
+																	"H": "100",
+																	"T": "prop"
+																},
+																"zoomedAreaWidth": {
+																	"H": "100",
+																	"T": "prop"
+																},
+																"zoomedImageHeight": {
+																	"H": "500",
+																	"T": "prop"
+																},
+																"zoomedImageWidth": {
+																	"H": "500",
+																	"T": "prop"
+																},
+																"zoomedAreaOpacity": {
+																	"H": "'0.2'",
+																	"T": "prop"
+																},
+																"zoomedAreaColor": {
+																	"H": "'#000'",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_5"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "VColComp",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_27"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_24"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_22"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "MessagingComp",
+					"T": "prop"
+				},
+				"triggerOnRestored": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_21"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container container--fluid'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "VRowComp",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QImgZoom",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_5",
+																	"T": "prop"
+																},
+																"src": {
+																	"H": "╬'https://cdn.softtech.com.tr/ngsp-quick/nemo/dev/mdImages/QImgZoom/defaultPhoto.jpg'╩╩",
+																	"T": "prop"
+																},
+																"height": {
+																	"H": "╬400╩╩",
+																	"T": "prop"
+																},
+																"width": {
+																	"H": "╬400╩╩",
+																	"T": "prop"
+																},
+																"marginLeft": {
+																	"H": "╬5╩╩",
+																	"T": "prop"
+																},
+																"imageFit": {
+																	"H": "╬'cover'╩╩",
+																	"T": "prop"
+																},
+																"zoomType": {
+																	"H": "╬'On'╩╩",
+																	"T": "prop"
+																},
+																"zoomRate": {
+																	"H": "╬2╩╩",
+																	"T": "prop"
+																},
+																"zoomedAreaHeight": {
+																	"H": "╬100╩╩",
+																	"T": "prop"
+																},
+																"zoomedAreaWidth": {
+																	"H": "╬100╩╩",
+																	"T": "prop"
+																},
+																"zoomedImageHeight": {
+																	"H": "╬500╩╩",
+																	"T": "prop"
+																},
+																"zoomedImageWidth": {
+																	"H": "╬500╩╩",
+																	"T": "prop"
+																},
+																"zoomedAreaOpacity": {
+																	"H": "╬'0.2'╩╩",
+																	"T": "prop"
+																},
+																"zoomedAreaColor": {
+																	"H": "╬'#000'╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_5"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "img-zoom-div newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "VColComp",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_27"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												},
+												"compDomClasses": "col d-flex flex-column newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_24"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_22"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container container--fluid newDropBorder"
+			}
+		}
+	],
+	"lrids": [],
+	"clrids": {},
+	"description": {}
+};
+export default pjson

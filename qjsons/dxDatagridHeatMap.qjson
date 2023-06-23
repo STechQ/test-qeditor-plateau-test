@@ -1,0 +1,675 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_2",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"setArrayStore": {
+					"H": "var dxDataGridArray: Array<{ product_id, trade_id, price, size }> = [];\r\nvar dxDataGridArrayStore: any = null;\r\n\r\nif (!quick.store.get('dxDataGridArray')) {\r\n  dxDataGridArray = [\r\n    {\r\n      product_id: 'BTC-USD',\r\n      trade_id: 0,      \r\n      price: 0,\r\n      size: 0\r\n    },\r\n    {\r\n      product_id: 'ETH-USD',\r\n      trade_id: 0,      \r\n      price: 0,\r\n      size: 0\r\n    },\r\n    {\r\n      product_id: 'ETH-EUR',\r\n      trade_id: 0,      \r\n      price: 0,\r\n      size: 0\r\n    },\r\n  ];\r\n  quick.store.set('dxDataGridArray', dxDataGridArray);\r\n}\r\nelse {\r\n  dxDataGridArray = quick.store.get('dxDataGridArray');\r\n}\r\n\r\nif (!quick.store.get('dxDataGridArrayStore')) {\r\n  dxDataGridArrayStore = quick.devex.createArrayStore({\r\n    key: \"product_id\",\r\n    data: dxDataGridArray\r\n  });\r\n  quick.store.set('dxDataGridArrayStore', dxDataGridArrayStore);\r\n}\r\nelse {\r\n  dxDataGridArrayStore = quick.store.get('dxDataGridArrayStore');\r\n}\r\n\r\nquick.return({ dxDataGridArrayStore, dxDataGridArray });\r\n",
+					"C": true,
+					"HL": "TS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_2"
+			},
+			"O": {
+				"cType": "child"
+			}
+		},
+		{
+			"T": "LiveConnection",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				},
+				"autoConnect": {
+					"H": "false",
+					"T": "prop"
+				},
+				"enableIamAuth": {
+					"H": "false",
+					"T": "prop"
+				},
+				"reconnect": {
+					"H": "false",
+					"T": "prop"
+				},
+				"reconnectInterval": {
+					"H": "60",
+					"T": "prop"
+				},
+				"reconnectBackOff": {
+					"H": "false",
+					"T": "prop"
+				},
+				"url": {
+					"H": "'/ws-feed.pro.coinbase.com'",
+					"T": "prop"
+				},
+				"secure": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"onMessageReceived": {
+					"H": "var retVal: { dxDataGridArrayStore, dxDataGridArray } = quick.MM.trigger('setArrayStore');\r\nlet aStore = retVal.dxDataGridArrayStore;\r\nlet arr = retVal.dxDataGridArray;\r\n\r\ncomponents.EdtrComp_63.dataSource = aStore;\r\n\r\nif ((message as any).product_id == 'BTC-USD') {\r\n  aStore.push([{\r\n    type: 'update',\r\n    key: arr[0].product_id,\r\n    data: {\r\n      product_id: arr[0].product_id,\r\n      trade_id: (message as any).trade_id,\r\n      price: (message as any).price,\r\n      size: (message as any).size,\r\n      random_number: Math.floor(Math.random()*101)\r\n    },\r\n  }]);\r\n}\r\n\r\nif ((message as any).product_id == 'ETH-USD') {\r\n  aStore.push([{\r\n    type: 'update',\r\n    key: arr[1].product_id,\r\n    data: {\r\n      product_id: arr[1].product_id,\r\n      trade_id: (message as any).trade_id,      \r\n      price: (message as any).price,\r\n      size: (message as any).size,\r\n      random_number: Math.floor(Math.random()*101)\r\n\r\n\r\n    },\r\n  }]);\r\n}\r\n\r\nif ((message as any).product_id == 'ETH-EUR') {\r\n  aStore.push([{\r\n    type: 'update',\r\n    key: arr[2].product_id,\r\n    data: {\r\n      product_id: arr[2].product_id,\r\n      trade_id: (message as any).trade_id,      \r\n      price: (message as any).price,\r\n      size: (message as any).size,\r\n      random_number: Math.floor(Math.random()*101)\r\n\r\n    },\r\n  }]);\r\n}\r\n\r\nquick.Quick.updateComponent(components.EdtrComp_63);\r\n(components.EdtrComp_63 as any).loadPanel = false;",
+					"P": "message:string",
+					"HL": "TS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		},
+		{
+			"T": "DxDataGrid",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_63",
+					"T": "prop"
+				},
+				"columnAutoWidth": {
+					"H": "true",
+					"T": "prop"
+				},
+				"repaintChangesOnly": {
+					"H": "true",
+					"T": "prop"
+				},
+				"showBorders": {
+					"H": "true",
+					"T": "prop"
+				},
+				"rowAlternationEnabled": {
+					"H": "false",
+					"T": "prop"
+				},
+				"highlightChanges": {
+					"H": "true",
+					"T": "prop"
+				},
+				"showColumnLines": {
+					"H": "false",
+					"T": "prop"
+				},
+				"showRowLines": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"onRowPrepared": {
+					"H": "let columnQuantity = 2;\r\nif(event.rowType === \"data\") {\r\n    event.cells.forEach((item: any) => {\r\n        let rate1 = 100;\r\n        let rate2 = 0;\r\n        if(item.column.dataField === \"trade_id\") {\r\n            if(item.data.random_number >= (100/columnQuantity)) {\r\n                rate1 = 0;\r\n            } else {\r\n                rate1 = 100 - (item.data.random_number * columnQuantity);\r\n            }\r\n            item.cellElement.style.background = \"linear-gradient(90deg, rgba(255,255,255,1) \" + rate1 + \"%, rgba(232,53,53,0.6) \"+ rate1 +\"%)\";\r\n        }\r\n        else if(item.column.dataField === \"product_id\") {\r\n            if(item.data.random_number >= (100/columnQuantity)) {\r\n                rate1 = 100 - ((item.data.random_number *columnQuantity) - 100)\r\n            } else {\r\n                rate1 = 100;\r\n            }\r\n            item.cellElement.style.background = \"linear-gradient(90deg, rgba(255,255,255,1) \" + rate1 + \"%, rgba(232,53,53,0.6) \"+ rate1 +\"%)\";\r\n        }\r\n        else if(item.column.dataField === \"price\") {\r\n            if(item.data.random_number >= (100/columnQuantity)) {\r\n                rate2 = 100;\r\n            }\r\n            else {\r\n                rate2 = item.data.random_number * columnQuantity;\r\n            }\r\n            item.cellElement.style.background =  \"linear-gradient(90deg, rgba(66,232,53,0.6) \" + rate2 + \"%, rgba(255,255,255,1) \"+ rate2 +\"%)\";\r\n        }\r\n        else if(item.column.dataField === \"size\") {\r\n            if(item.data.random_number >= (100/columnQuantity)) {\r\n                rate2 = (item.data.random_number *columnQuantity) - 100\r\n            }\r\n            item.cellElement.style.background =  \"linear-gradient(90deg, rgba(66,232,53,0.6) \" + rate2 + \"%, rgba(255,255,255,1) \"+ rate2 +\"%)\";\r\n        }\r\n    })\r\n   \r\n}",
+					"PE": true,
+					"P": "event:any",
+					"HL": "TS"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "DxColumn",
+							"P": {
+								"cellTemplate": {
+									"H": "product_id",
+									"T": "prop"
+								},
+								"dataField": {
+									"H": "'product_id'",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_3",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_3"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "DxColumn",
+							"P": {
+								"cellTemplate": {
+									"H": "trade_id",
+									"T": "prop"
+								},
+								"dataField": {
+									"H": "'trade_id'",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_4",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "DxColumn",
+							"P": {
+								"cellTemplate": {
+									"H": "price",
+									"T": "prop"
+								},
+								"dataField": {
+									"H": "'price'",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_5",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_5"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "DxColumn",
+							"P": {
+								"cellTemplate": {
+									"H": "size",
+									"T": "prop"
+								},
+								"dataField": {
+									"H": "'size'",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_6",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_6"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "DxColumn",
+							"P": {
+								"cellTemplate": {
+									"H": "random_number",
+									"T": "prop"
+								},
+								"dataField": {
+									"H": "'random_number'",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_7",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_7"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_63"
+			},
+			"O": {
+				"cType": "scopedSlot",
+				"forceUpdateAfterPropertySetting": true
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_18",
+					"T": "prop"
+				},
+				"color": {
+					"H": "'primary'",
+					"T": "prop"
+				},
+				"depressed": {
+					"H": "true",
+					"T": "prop"
+				},
+				"elevation": {
+					"H": "0",
+					"T": "prop"
+				},
+				"height": {
+					"H": "'40px'",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "//Send socket subscription message on button clicked\r\n//Send() method opens connection if closed and enqueues data to be transmitted.\r\n\r\nlet tradeSubscription = {};\r\n(tradeSubscription as any).type = 'subscribe';\r\n(tradeSubscription as any).product_ids = ['BTC-USD','ETH-USD','ETH-EUR'];\r\n\r\n(tradeSubscription as any).channels = ['matches'];\r\n\r\nlet tickerChannel = {};\r\n(tickerChannel as any).name = 'ticker';\r\n(tickerChannel as any).product_ids = ['BTC-USD','ETH-USD','ETH-EUR'];\r\n\r\ncomponents.EdtrComp_1.message = tradeSubscription;\r\n(components.EdtrComp_1 as any).Send();",
+					"P": "mouseEvent:unknown | undefined",
+					"HL": "TS"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_19",
+									"T": "prop"
+								},
+								"text": {
+									"H": "'Connect'",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_19"
+							},
+							"O": {
+								"cType": "child"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_18"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_2",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"setArrayStore": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nvar dxDataGridArray = [];\r\nvar dxDataGridArrayStore = null;\r\nif (!quick.store.get('dxDataGridArray')) {\r\n    dxDataGridArray = [\r\n        {\r\n            product_id: 'BTC-USD',\r\n            trade_id: 0,\r\n            price: 0,\r\n            size: 0\r\n        },\r\n        {\r\n            product_id: 'ETH-USD',\r\n            trade_id: 0,\r\n            price: 0,\r\n            size: 0\r\n        },\r\n        {\r\n            product_id: 'ETH-EUR',\r\n            trade_id: 0,\r\n            price: 0,\r\n            size: 0\r\n        },\r\n    ];\r\n    quick.store.set('dxDataGridArray', dxDataGridArray);\r\n}\r\nelse {\r\n    dxDataGridArray = quick.store.get('dxDataGridArray');\r\n}\r\nif (!quick.store.get('dxDataGridArrayStore')) {\r\n    dxDataGridArrayStore = quick.devex.createArrayStore({\r\n        key: \"product_id\",\r\n        data: dxDataGridArray\r\n    });\r\n    quick.store.set('dxDataGridArrayStore', dxDataGridArrayStore);\r\n}\r\nelse {\r\n    dxDataGridArrayStore = quick.store.get('dxDataGridArrayStore');\r\n}\r\nquick.return({ dxDataGridArrayStore: dxDataGridArrayStore, dxDataGridArray: dxDataGridArray });\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfMl9zZXRBcnJheVN0b3JlX0UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJFZHRyQ29tcF8yX3NldEFycmF5U3RvcmVfRS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQ0EsSUFBSSxlQUFlLEdBQWlELEVBQUUsQ0FBQztBQUN2RSxJQUFJLG9CQUFvQixHQUFRLElBQUksQ0FBQztBQUVyQyxJQUFJLENBQUMsS0FBSyxDQUFDLEtBQUssQ0FBQyxHQUFHLENBQUMsaUJBQWlCLENBQUMsRUFBRTtJQUN2QyxlQUFlLEdBQUc7UUFDaEI7WUFDRSxVQUFVLEVBQUUsU0FBUztZQUNyQixRQUFRLEVBQUUsQ0FBQztZQUNYLEtBQUssRUFBRSxDQUFDO1lBQ1IsSUFBSSxFQUFFLENBQUM7U0FDUjtRQUNEO1lBQ0UsVUFBVSxFQUFFLFNBQVM7WUFDckIsUUFBUSxFQUFFLENBQUM7WUFDWCxLQUFLLEVBQUUsQ0FBQztZQUNSLElBQUksRUFBRSxDQUFDO1NBQ1I7UUFDRDtZQUNFLFVBQVUsRUFBRSxTQUFTO1lBQ3JCLFFBQVEsRUFBRSxDQUFDO1lBQ1gsS0FBSyxFQUFFLENBQUM7WUFDUixJQUFJLEVBQUUsQ0FBQztTQUNSO0tBQ0YsQ0FBQztJQUNGLEtBQUssQ0FBQyxLQUFLLENBQUMsR0FBRyxDQUFDLGlCQUFpQixFQUFFLGVBQWUsQ0FBQyxDQUFDO0NBQ3JEO0tBQ0k7SUFDSCxlQUFlLEdBQUcsS0FBSyxDQUFDLEtBQUssQ0FBQyxHQUFHLENBQUMsaUJBQWlCLENBQUMsQ0FBQztDQUN0RDtBQUVELElBQUksQ0FBQyxLQUFLLENBQUMsS0FBSyxDQUFDLEdBQUcsQ0FBQyxzQkFBc0IsQ0FBQyxFQUFFO0lBQzVDLG9CQUFvQixHQUFHLEtBQUssQ0FBQyxLQUFLLENBQUMsZ0JBQWdCLENBQUM7UUFDbEQsR0FBRyxFQUFFLFlBQVk7UUFDakIsSUFBSSxFQUFFLGVBQWU7S0FDdEIsQ0FBQyxDQUFDO0lBQ0gsS0FBSyxDQUFDLEtBQUssQ0FBQyxHQUFHLENBQUMsc0JBQXNCLEVBQUUsb0JBQW9CLENBQUMsQ0FBQztDQUMvRDtLQUNJO0lBQ0gsb0JBQW9CLEdBQUcsS0FBSyxDQUFDLEtBQUssQ0FBQyxHQUFHLENBQUMsc0JBQXNCLENBQUMsQ0FBQztDQUNoRTtBQUVELEtBQUssQ0FBQyxNQUFNLENBQUMsRUFBRSxvQkFBb0Isc0JBQUEsRUFBRSxlQUFlLGlCQUFBLEVBQUUsQ0FBQyxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiXG52YXIgZHhEYXRhR3JpZEFycmF5OiBBcnJheTx7IHByb2R1Y3RfaWQsIHRyYWRlX2lkLCBwcmljZSwgc2l6ZSB9PiA9IFtdO1xyXG52YXIgZHhEYXRhR3JpZEFycmF5U3RvcmU6IGFueSA9IG51bGw7XHJcblxyXG5pZiAoIXF1aWNrLnN0b3JlLmdldCgnZHhEYXRhR3JpZEFycmF5JykpIHtcclxuICBkeERhdGFHcmlkQXJyYXkgPSBbXHJcbiAgICB7XHJcbiAgICAgIHByb2R1Y3RfaWQ6ICdCVEMtVVNEJyxcclxuICAgICAgdHJhZGVfaWQ6IDAsICAgICAgXHJcbiAgICAgIHByaWNlOiAwLFxyXG4gICAgICBzaXplOiAwXHJcbiAgICB9LFxyXG4gICAge1xyXG4gICAgICBwcm9kdWN0X2lkOiAnRVRILVVTRCcsXHJcbiAgICAgIHRyYWRlX2lkOiAwLCAgICAgIFxyXG4gICAgICBwcmljZTogMCxcclxuICAgICAgc2l6ZTogMFxyXG4gICAgfSxcclxuICAgIHtcclxuICAgICAgcHJvZHVjdF9pZDogJ0VUSC1FVVInLFxyXG4gICAgICB0cmFkZV9pZDogMCwgICAgICBcclxuICAgICAgcHJpY2U6IDAsXHJcbiAgICAgIHNpemU6IDBcclxuICAgIH0sXHJcbiAgXTtcclxuICBxdWljay5zdG9yZS5zZXQoJ2R4RGF0YUdyaWRBcnJheScsIGR4RGF0YUdyaWRBcnJheSk7XHJcbn1cclxuZWxzZSB7XHJcbiAgZHhEYXRhR3JpZEFycmF5ID0gcXVpY2suc3RvcmUuZ2V0KCdkeERhdGFHcmlkQXJyYXknKTtcclxufVxyXG5cclxuaWYgKCFxdWljay5zdG9yZS5nZXQoJ2R4RGF0YUdyaWRBcnJheVN0b3JlJykpIHtcclxuICBkeERhdGFHcmlkQXJyYXlTdG9yZSA9IHF1aWNrLmRldmV4LmNyZWF0ZUFycmF5U3RvcmUoe1xyXG4gICAga2V5OiBcInByb2R1Y3RfaWRcIixcclxuICAgIGRhdGE6IGR4RGF0YUdyaWRBcnJheVxyXG4gIH0pO1xyXG4gIHF1aWNrLnN0b3JlLnNldCgnZHhEYXRhR3JpZEFycmF5U3RvcmUnLCBkeERhdGFHcmlkQXJyYXlTdG9yZSk7XHJcbn1cclxuZWxzZSB7XHJcbiAgZHhEYXRhR3JpZEFycmF5U3RvcmUgPSBxdWljay5zdG9yZS5nZXQoJ2R4RGF0YUdyaWRBcnJheVN0b3JlJyk7XHJcbn1cclxuXHJcbnF1aWNrLnJldHVybih7IGR4RGF0YUdyaWRBcnJheVN0b3JlLCBkeERhdGFHcmlkQXJyYXkgfSk7XHJcblxuIGV4cG9ydHt9O1xuIl19",
+					"C": true,
+					"HL": "JS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_2"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			}
+		},
+		{
+			"T": "LiveConnection",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				},
+				"autoConnect": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				},
+				"enableIamAuth": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				},
+				"reconnect": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				},
+				"reconnectInterval": {
+					"H": "╬60╩╩",
+					"T": "prop"
+				},
+				"reconnectBackOff": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				},
+				"url": {
+					"H": "╬'/ws-feed.pro.coinbase.com'╩╩",
+					"T": "prop"
+				},
+				"secure": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"onMessageReceived": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nvar retVal = quick.MM.trigger('setArrayStore');\r\nvar aStore = retVal.dxDataGridArrayStore;\r\nvar arr = retVal.dxDataGridArray;\r\ncomponents.EdtrComp_63.dataSource = aStore;\r\nif (message.product_id == 'BTC-USD') {\r\n    aStore.push([{\r\n            type: 'update',\r\n            key: arr[0].product_id,\r\n            data: {\r\n                product_id: arr[0].product_id,\r\n                trade_id: message.trade_id,\r\n                price: message.price,\r\n                size: message.size,\r\n                random_number: Math.floor(Math.random() * 101)\r\n            },\r\n        }]);\r\n}\r\nif (message.product_id == 'ETH-USD') {\r\n    aStore.push([{\r\n            type: 'update',\r\n            key: arr[1].product_id,\r\n            data: {\r\n                product_id: arr[1].product_id,\r\n                trade_id: message.trade_id,\r\n                price: message.price,\r\n                size: message.size,\r\n                random_number: Math.floor(Math.random() * 101)\r\n            },\r\n        }]);\r\n}\r\nif (message.product_id == 'ETH-EUR') {\r\n    aStore.push([{\r\n            type: 'update',\r\n            key: arr[2].product_id,\r\n            data: {\r\n                product_id: arr[2].product_id,\r\n                trade_id: message.trade_id,\r\n                price: message.price,\r\n                size: message.size,\r\n                random_number: Math.floor(Math.random() * 101)\r\n            },\r\n        }]);\r\n}\r\nquick.Quick.updateComponent(components.EdtrComp_63);\r\ncomponents.EdtrComp_63.loadPanel = false;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfMV9vbk1lc3NhZ2VSZWNlaXZlZF9FLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiRWR0ckNvbXBfMV9vbk1lc3NhZ2VSZWNlaXZlZF9FLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQSxJQUFJLE1BQU0sR0FBOEMsS0FBSyxDQUFDLEVBQUUsQ0FBQyxPQUFPLENBQUMsZUFBZSxDQUFDLENBQUM7QUFDMUYsSUFBSSxNQUFNLEdBQUcsTUFBTSxDQUFDLG9CQUFvQixDQUFDO0FBQ3pDLElBQUksR0FBRyxHQUFHLE1BQU0sQ0FBQyxlQUFlLENBQUM7QUFFakMsVUFBVSxDQUFDLFdBQVcsQ0FBQyxVQUFVLEdBQUcsTUFBTSxDQUFDO0FBRTNDLElBQUssT0FBZSxDQUFDLFVBQVUsSUFBSSxTQUFTLEVBQUU7SUFDNUMsTUFBTSxDQUFDLElBQUksQ0FBQyxDQUFDO1lBQ1gsSUFBSSxFQUFFLFFBQVE7WUFDZCxHQUFHLEVBQUUsR0FBRyxDQUFDLENBQUMsQ0FBQyxDQUFDLFVBQVU7WUFDdEIsSUFBSSxFQUFFO2dCQUNKLFVBQVUsRUFBRSxHQUFHLENBQUMsQ0FBQyxDQUFDLENBQUMsVUFBVTtnQkFDN0IsUUFBUSxFQUFHLE9BQWUsQ0FBQyxRQUFRO2dCQUNuQyxLQUFLLEVBQUcsT0FBZSxDQUFDLEtBQUs7Z0JBQzdCLElBQUksRUFBRyxPQUFlLENBQUMsSUFBSTtnQkFDM0IsYUFBYSxFQUFFLElBQUksQ0FBQyxLQUFLLENBQUMsSUFBSSxDQUFDLE1BQU0sRUFBRSxHQUFDLEdBQUcsQ0FBQzthQUM3QztTQUNGLENBQUMsQ0FBQyxDQUFDO0NBQ0w7QUFFRCxJQUFLLE9BQWUsQ0FBQyxVQUFVLElBQUksU0FBUyxFQUFFO0lBQzVDLE1BQU0sQ0FBQyxJQUFJLENBQUMsQ0FBQztZQUNYLElBQUksRUFBRSxRQUFRO1lBQ2QsR0FBRyxFQUFFLEdBQUcsQ0FBQyxDQUFDLENBQUMsQ0FBQyxVQUFVO1lBQ3RCLElBQUksRUFBRTtnQkFDSixVQUFVLEVBQUUsR0FBRyxDQUFDLENBQUMsQ0FBQyxDQUFDLFVBQVU7Z0JBQzdCLFFBQVEsRUFBRyxPQUFlLENBQUMsUUFBUTtnQkFDbkMsS0FBSyxFQUFHLE9BQWUsQ0FBQyxLQUFLO2dCQUM3QixJQUFJLEVBQUcsT0FBZSxDQUFDLElBQUk7Z0JBQzNCLGFBQWEsRUFBRSxJQUFJLENBQUMsS0FBSyxDQUFDLElBQUksQ0FBQyxNQUFNLEVBQUUsR0FBQyxHQUFHLENBQUM7YUFHN0M7U0FDRixDQUFDLENBQUMsQ0FBQztDQUNMO0FBRUQsSUFBSyxPQUFlLENBQUMsVUFBVSxJQUFJLFNBQVMsRUFBRTtJQUM1QyxNQUFNLENBQUMsSUFBSSxDQUFDLENBQUM7WUFDWCxJQUFJLEVBQUUsUUFBUTtZQUNkLEdBQUcsRUFBRSxHQUFHLENBQUMsQ0FBQyxDQUFDLENBQUMsVUFBVTtZQUN0QixJQUFJLEVBQUU7Z0JBQ0osVUFBVSxFQUFFLEdBQUcsQ0FBQyxDQUFDLENBQUMsQ0FBQyxVQUFVO2dCQUM3QixRQUFRLEVBQUcsT0FBZSxDQUFDLFFBQVE7Z0JBQ25DLEtBQUssRUFBRyxPQUFlLENBQUMsS0FBSztnQkFDN0IsSUFBSSxFQUFHLE9BQWUsQ0FBQyxJQUFJO2dCQUMzQixhQUFhLEVBQUUsSUFBSSxDQUFDLEtBQUssQ0FBQyxJQUFJLENBQUMsTUFBTSxFQUFFLEdBQUMsR0FBRyxDQUFDO2FBRTdDO1NBQ0YsQ0FBQyxDQUFDLENBQUM7Q0FDTDtBQUVELEtBQUssQ0FBQyxLQUFLLENBQUMsZUFBZSxDQUFDLFVBQVUsQ0FBQyxXQUFXLENBQUMsQ0FBQztBQUNuRCxVQUFVLENBQUMsV0FBbUIsQ0FBQyxTQUFTLEdBQUcsS0FBSyxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiZGVjbGFyZSB2YXIgbWVzc2FnZTpzdHJpbmdcbnZhciByZXRWYWw6IHsgZHhEYXRhR3JpZEFycmF5U3RvcmUsIGR4RGF0YUdyaWRBcnJheSB9ID0gcXVpY2suTU0udHJpZ2dlcignc2V0QXJyYXlTdG9yZScpO1xyXG5sZXQgYVN0b3JlID0gcmV0VmFsLmR4RGF0YUdyaWRBcnJheVN0b3JlO1xyXG5sZXQgYXJyID0gcmV0VmFsLmR4RGF0YUdyaWRBcnJheTtcclxuXHJcbmNvbXBvbmVudHMuRWR0ckNvbXBfNjMuZGF0YVNvdXJjZSA9IGFTdG9yZTtcclxuXHJcbmlmICgobWVzc2FnZSBhcyBhbnkpLnByb2R1Y3RfaWQgPT0gJ0JUQy1VU0QnKSB7XHJcbiAgYVN0b3JlLnB1c2goW3tcclxuICAgIHR5cGU6ICd1cGRhdGUnLFxyXG4gICAga2V5OiBhcnJbMF0ucHJvZHVjdF9pZCxcclxuICAgIGRhdGE6IHtcclxuICAgICAgcHJvZHVjdF9pZDogYXJyWzBdLnByb2R1Y3RfaWQsXHJcbiAgICAgIHRyYWRlX2lkOiAobWVzc2FnZSBhcyBhbnkpLnRyYWRlX2lkLFxyXG4gICAgICBwcmljZTogKG1lc3NhZ2UgYXMgYW55KS5wcmljZSxcclxuICAgICAgc2l6ZTogKG1lc3NhZ2UgYXMgYW55KS5zaXplLFxyXG4gICAgICByYW5kb21fbnVtYmVyOiBNYXRoLmZsb29yKE1hdGgucmFuZG9tKCkqMTAxKVxyXG4gICAgfSxcclxuICB9XSk7XHJcbn1cclxuXHJcbmlmICgobWVzc2FnZSBhcyBhbnkpLnByb2R1Y3RfaWQgPT0gJ0VUSC1VU0QnKSB7XHJcbiAgYVN0b3JlLnB1c2goW3tcclxuICAgIHR5cGU6ICd1cGRhdGUnLFxyXG4gICAga2V5OiBhcnJbMV0ucHJvZHVjdF9pZCxcclxuICAgIGRhdGE6IHtcclxuICAgICAgcHJvZHVjdF9pZDogYXJyWzFdLnByb2R1Y3RfaWQsXHJcbiAgICAgIHRyYWRlX2lkOiAobWVzc2FnZSBhcyBhbnkpLnRyYWRlX2lkLCAgICAgIFxyXG4gICAgICBwcmljZTogKG1lc3NhZ2UgYXMgYW55KS5wcmljZSxcclxuICAgICAgc2l6ZTogKG1lc3NhZ2UgYXMgYW55KS5zaXplLFxyXG4gICAgICByYW5kb21fbnVtYmVyOiBNYXRoLmZsb29yKE1hdGgucmFuZG9tKCkqMTAxKVxyXG5cclxuXHJcbiAgICB9LFxyXG4gIH1dKTtcclxufVxyXG5cclxuaWYgKChtZXNzYWdlIGFzIGFueSkucHJvZHVjdF9pZCA9PSAnRVRILUVVUicpIHtcclxuICBhU3RvcmUucHVzaChbe1xyXG4gICAgdHlwZTogJ3VwZGF0ZScsXHJcbiAgICBrZXk6IGFyclsyXS5wcm9kdWN0X2lkLFxyXG4gICAgZGF0YToge1xyXG4gICAgICBwcm9kdWN0X2lkOiBhcnJbMl0ucHJvZHVjdF9pZCxcclxuICAgICAgdHJhZGVfaWQ6IChtZXNzYWdlIGFzIGFueSkudHJhZGVfaWQsICAgICAgXHJcbiAgICAgIHByaWNlOiAobWVzc2FnZSBhcyBhbnkpLnByaWNlLFxyXG4gICAgICBzaXplOiAobWVzc2FnZSBhcyBhbnkpLnNpemUsXHJcbiAgICAgIHJhbmRvbV9udW1iZXI6IE1hdGguZmxvb3IoTWF0aC5yYW5kb20oKSoxMDEpXHJcblxyXG4gICAgfSxcclxuICB9XSk7XHJcbn1cclxuXHJcbnF1aWNrLlF1aWNrLnVwZGF0ZUNvbXBvbmVudChjb21wb25lbnRzLkVkdHJDb21wXzYzKTtcclxuKGNvbXBvbmVudHMuRWR0ckNvbXBfNjMgYXMgYW55KS5sb2FkUGFuZWwgPSBmYWxzZTtcbiBleHBvcnR7fTtcbiJdfQ==",
+					"P": "message:string",
+					"HL": "JS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "newDropBorder"
+			}
+		},
+		{
+			"T": "DxDataGrid",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_63",
+					"T": "prop"
+				},
+				"columnAutoWidth": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"repaintChangesOnly": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"showBorders": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"rowAlternationEnabled": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				},
+				"highlightChanges": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"showColumnLines": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				},
+				"showRowLines": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"onRowPrepared": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nvar columnQuantity = 2;\r\nif (event.rowType === \"data\") {\r\n    event.cells.forEach(function (item) {\r\n        var rate1 = 100;\r\n        var rate2 = 0;\r\n        if (item.column.dataField === \"trade_id\") {\r\n            if (item.data.random_number >= (100 / columnQuantity)) {\r\n                rate1 = 0;\r\n            }\r\n            else {\r\n                rate1 = 100 - (item.data.random_number * columnQuantity);\r\n            }\r\n            item.cellElement.style.background = \"linear-gradient(90deg, rgba(255,255,255,1) \" + rate1 + \"%, rgba(232,53,53,0.6) \" + rate1 + \"%)\";\r\n        }\r\n        else if (item.column.dataField === \"product_id\") {\r\n            if (item.data.random_number >= (100 / columnQuantity)) {\r\n                rate1 = 100 - ((item.data.random_number * columnQuantity) - 100);\r\n            }\r\n            else {\r\n                rate1 = 100;\r\n            }\r\n            item.cellElement.style.background = \"linear-gradient(90deg, rgba(255,255,255,1) \" + rate1 + \"%, rgba(232,53,53,0.6) \" + rate1 + \"%)\";\r\n        }\r\n        else if (item.column.dataField === \"price\") {\r\n            if (item.data.random_number >= (100 / columnQuantity)) {\r\n                rate2 = 100;\r\n            }\r\n            else {\r\n                rate2 = item.data.random_number * columnQuantity;\r\n            }\r\n            item.cellElement.style.background = \"linear-gradient(90deg, rgba(66,232,53,0.6) \" + rate2 + \"%, rgba(255,255,255,1) \" + rate2 + \"%)\";\r\n        }\r\n        else if (item.column.dataField === \"size\") {\r\n            if (item.data.random_number >= (100 / columnQuantity)) {\r\n                rate2 = (item.data.random_number * columnQuantity) - 100;\r\n            }\r\n            item.cellElement.style.background = \"linear-gradient(90deg, rgba(66,232,53,0.6) \" + rate2 + \"%, rgba(255,255,255,1) \" + rate2 + \"%)\";\r\n        }\r\n    });\r\n}\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfNjNfb25Sb3dQcmVwYXJlZF9FLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiRWR0ckNvbXBfNjNfb25Sb3dQcmVwYXJlZF9FLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQSxJQUFJLGNBQWMsR0FBRyxDQUFDLENBQUM7QUFDdkIsSUFBRyxLQUFLLENBQUMsT0FBTyxLQUFLLE1BQU0sRUFBRTtJQUN6QixLQUFLLENBQUMsS0FBSyxDQUFDLE9BQU8sQ0FBQyxVQUFDLElBQVM7UUFDMUIsSUFBSSxLQUFLLEdBQUcsR0FBRyxDQUFDO1FBQ2hCLElBQUksS0FBSyxHQUFHLENBQUMsQ0FBQztRQUNkLElBQUcsSUFBSSxDQUFDLE1BQU0sQ0FBQyxTQUFTLEtBQUssVUFBVSxFQUFFO1lBQ3JDLElBQUcsSUFBSSxDQUFDLElBQUksQ0FBQyxhQUFhLElBQUksQ0FBQyxHQUFHLEdBQUMsY0FBYyxDQUFDLEVBQUU7Z0JBQ2hELEtBQUssR0FBRyxDQUFDLENBQUM7YUFDYjtpQkFBTTtnQkFDSCxLQUFLLEdBQUcsR0FBRyxHQUFHLENBQUMsSUFBSSxDQUFDLElBQUksQ0FBQyxhQUFhLEdBQUcsY0FBYyxDQUFDLENBQUM7YUFDNUQ7WUFDRCxJQUFJLENBQUMsV0FBVyxDQUFDLEtBQUssQ0FBQyxVQUFVLEdBQUcsNkNBQTZDLEdBQUcsS0FBSyxHQUFHLHlCQUF5QixHQUFFLEtBQUssR0FBRSxJQUFJLENBQUM7U0FDdEk7YUFDSSxJQUFHLElBQUksQ0FBQyxNQUFNLENBQUMsU0FBUyxLQUFLLFlBQVksRUFBRTtZQUM1QyxJQUFHLElBQUksQ0FBQyxJQUFJLENBQUMsYUFBYSxJQUFJLENBQUMsR0FBRyxHQUFDLGNBQWMsQ0FBQyxFQUFFO2dCQUNoRCxLQUFLLEdBQUcsR0FBRyxHQUFHLENBQUMsQ0FBQyxJQUFJLENBQUMsSUFBSSxDQUFDLGFBQWEsR0FBRSxjQUFjLENBQUMsR0FBRyxHQUFHLENBQUMsQ0FBQTthQUNsRTtpQkFBTTtnQkFDSCxLQUFLLEdBQUcsR0FBRyxDQUFDO2FBQ2Y7WUFDRCxJQUFJLENBQUMsV0FBVyxDQUFDLEtBQUssQ0FBQyxVQUFVLEdBQUcsNkNBQTZDLEdBQUcsS0FBSyxHQUFHLHlCQUF5QixHQUFFLEtBQUssR0FBRSxJQUFJLENBQUM7U0FDdEk7YUFDSSxJQUFHLElBQUksQ0FBQyxNQUFNLENBQUMsU0FBUyxLQUFLLE9BQU8sRUFBRTtZQUN2QyxJQUFHLElBQUksQ0FBQyxJQUFJLENBQUMsYUFBYSxJQUFJLENBQUMsR0FBRyxHQUFDLGNBQWMsQ0FBQyxFQUFFO2dCQUNoRCxLQUFLLEdBQUcsR0FBRyxDQUFDO2FBQ2Y7aUJBQ0k7Z0JBQ0QsS0FBSyxHQUFHLElBQUksQ0FBQyxJQUFJLENBQUMsYUFBYSxHQUFHLGNBQWMsQ0FBQzthQUNwRDtZQUNELElBQUksQ0FBQyxXQUFXLENBQUMsS0FBSyxDQUFDLFVBQVUsR0FBSSw2Q0FBNkMsR0FBRyxLQUFLLEdBQUcseUJBQXlCLEdBQUUsS0FBSyxHQUFFLElBQUksQ0FBQztTQUN2STthQUNJLElBQUcsSUFBSSxDQUFDLE1BQU0sQ0FBQyxTQUFTLEtBQUssTUFBTSxFQUFFO1lBQ3RDLElBQUcsSUFBSSxDQUFDLElBQUksQ0FBQyxhQUFhLElBQUksQ0FBQyxHQUFHLEdBQUMsY0FBYyxDQUFDLEVBQUU7Z0JBQ2hELEtBQUssR0FBRyxDQUFDLElBQUksQ0FBQyxJQUFJLENBQUMsYUFBYSxHQUFFLGNBQWMsQ0FBQyxHQUFHLEdBQUcsQ0FBQTthQUMxRDtZQUNELElBQUksQ0FBQyxXQUFXLENBQUMsS0FBSyxDQUFDLFVBQVUsR0FBSSw2Q0FBNkMsR0FBRyxLQUFLLEdBQUcseUJBQXlCLEdBQUUsS0FBSyxHQUFFLElBQUksQ0FBQztTQUN2STtJQUNMLENBQUMsQ0FBQyxDQUFBO0NBRUwiLCJzb3VyY2VzQ29udGVudCI6WyJkZWNsYXJlIHZhciBldmVudDphbnlcbmxldCBjb2x1bW5RdWFudGl0eSA9IDI7XHJcbmlmKGV2ZW50LnJvd1R5cGUgPT09IFwiZGF0YVwiKSB7XHJcbiAgICBldmVudC5jZWxscy5mb3JFYWNoKChpdGVtOiBhbnkpID0+IHtcclxuICAgICAgICBsZXQgcmF0ZTEgPSAxMDA7XHJcbiAgICAgICAgbGV0IHJhdGUyID0gMDtcclxuICAgICAgICBpZihpdGVtLmNvbHVtbi5kYXRhRmllbGQgPT09IFwidHJhZGVfaWRcIikge1xyXG4gICAgICAgICAgICBpZihpdGVtLmRhdGEucmFuZG9tX251bWJlciA+PSAoMTAwL2NvbHVtblF1YW50aXR5KSkge1xyXG4gICAgICAgICAgICAgICAgcmF0ZTEgPSAwO1xyXG4gICAgICAgICAgICB9IGVsc2Uge1xyXG4gICAgICAgICAgICAgICAgcmF0ZTEgPSAxMDAgLSAoaXRlbS5kYXRhLnJhbmRvbV9udW1iZXIgKiBjb2x1bW5RdWFudGl0eSk7XHJcbiAgICAgICAgICAgIH1cclxuICAgICAgICAgICAgaXRlbS5jZWxsRWxlbWVudC5zdHlsZS5iYWNrZ3JvdW5kID0gXCJsaW5lYXItZ3JhZGllbnQoOTBkZWcsIHJnYmEoMjU1LDI1NSwyNTUsMSkgXCIgKyByYXRlMSArIFwiJSwgcmdiYSgyMzIsNTMsNTMsMC42KSBcIisgcmF0ZTEgK1wiJSlcIjtcclxuICAgICAgICB9XHJcbiAgICAgICAgZWxzZSBpZihpdGVtLmNvbHVtbi5kYXRhRmllbGQgPT09IFwicHJvZHVjdF9pZFwiKSB7XHJcbiAgICAgICAgICAgIGlmKGl0ZW0uZGF0YS5yYW5kb21fbnVtYmVyID49ICgxMDAvY29sdW1uUXVhbnRpdHkpKSB7XHJcbiAgICAgICAgICAgICAgICByYXRlMSA9IDEwMCAtICgoaXRlbS5kYXRhLnJhbmRvbV9udW1iZXIgKmNvbHVtblF1YW50aXR5KSAtIDEwMClcclxuICAgICAgICAgICAgfSBlbHNlIHtcclxuICAgICAgICAgICAgICAgIHJhdGUxID0gMTAwO1xyXG4gICAgICAgICAgICB9XHJcbiAgICAgICAgICAgIGl0ZW0uY2VsbEVsZW1lbnQuc3R5bGUuYmFja2dyb3VuZCA9IFwibGluZWFyLWdyYWRpZW50KDkwZGVnLCByZ2JhKDI1NSwyNTUsMjU1LDEpIFwiICsgcmF0ZTEgKyBcIiUsIHJnYmEoMjMyLDUzLDUzLDAuNikgXCIrIHJhdGUxICtcIiUpXCI7XHJcbiAgICAgICAgfVxyXG4gICAgICAgIGVsc2UgaWYoaXRlbS5jb2x1bW4uZGF0YUZpZWxkID09PSBcInByaWNlXCIpIHtcclxuICAgICAgICAgICAgaWYoaXRlbS5kYXRhLnJhbmRvbV9udW1iZXIgPj0gKDEwMC9jb2x1bW5RdWFudGl0eSkpIHtcclxuICAgICAgICAgICAgICAgIHJhdGUyID0gMTAwO1xyXG4gICAgICAgICAgICB9XHJcbiAgICAgICAgICAgIGVsc2Uge1xyXG4gICAgICAgICAgICAgICAgcmF0ZTIgPSBpdGVtLmRhdGEucmFuZG9tX251bWJlciAqIGNvbHVtblF1YW50aXR5O1xyXG4gICAgICAgICAgICB9XHJcbiAgICAgICAgICAgIGl0ZW0uY2VsbEVsZW1lbnQuc3R5bGUuYmFja2dyb3VuZCA9ICBcImxpbmVhci1ncmFkaWVudCg5MGRlZywgcmdiYSg2NiwyMzIsNTMsMC42KSBcIiArIHJhdGUyICsgXCIlLCByZ2JhKDI1NSwyNTUsMjU1LDEpIFwiKyByYXRlMiArXCIlKVwiO1xyXG4gICAgICAgIH1cclxuICAgICAgICBlbHNlIGlmKGl0ZW0uY29sdW1uLmRhdGFGaWVsZCA9PT0gXCJzaXplXCIpIHtcclxuICAgICAgICAgICAgaWYoaXRlbS5kYXRhLnJhbmRvbV9udW1iZXIgPj0gKDEwMC9jb2x1bW5RdWFudGl0eSkpIHtcclxuICAgICAgICAgICAgICAgIHJhdGUyID0gKGl0ZW0uZGF0YS5yYW5kb21fbnVtYmVyICpjb2x1bW5RdWFudGl0eSkgLSAxMDBcclxuICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICBpdGVtLmNlbGxFbGVtZW50LnN0eWxlLmJhY2tncm91bmQgPSAgXCJsaW5lYXItZ3JhZGllbnQoOTBkZWcsIHJnYmEoNjYsMjMyLDUzLDAuNikgXCIgKyByYXRlMiArIFwiJSwgcmdiYSgyNTUsMjU1LDI1NSwxKSBcIisgcmF0ZTIgK1wiJSlcIjtcclxuICAgICAgICB9XHJcbiAgICB9KVxyXG4gICBcclxufVxuIGV4cG9ydHt9O1xuIl19",
+					"PE": true,
+					"P": "event:any",
+					"HL": "JS"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "DxColumn",
+							"P": {
+								"cellTemplate": {
+									"H": "╬product_id╩╩",
+									"T": "prop"
+								},
+								"dataField": {
+									"H": "╬'product_id'╩╩",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_3",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_3"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "DxColumn",
+							"P": {
+								"cellTemplate": {
+									"H": "╬trade_id╩╩",
+									"T": "prop"
+								},
+								"dataField": {
+									"H": "╬'trade_id'╩╩",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_4",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "DxColumn",
+							"P": {
+								"cellTemplate": {
+									"H": "╬price╩╩",
+									"T": "prop"
+								},
+								"dataField": {
+									"H": "╬'price'╩╩",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_5",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_5"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "DxColumn",
+							"P": {
+								"cellTemplate": {
+									"H": "╬size╩╩",
+									"T": "prop"
+								},
+								"dataField": {
+									"H": "╬'size'╩╩",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_6",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_6"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "DxColumn",
+							"P": {
+								"cellTemplate": {
+									"H": "╬random_number╩╩",
+									"T": "prop"
+								},
+								"dataField": {
+									"H": "╬'random_number'╩╩",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_7",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_7"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": ""
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_63"
+			},
+			"O": {
+				"cType": "scopedSlot",
+				"forceUpdateAfterPropertySetting": true,
+				"compDomClasses": "dx-widget dx-visibility-change-handler newDropBorder"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_18",
+					"T": "prop"
+				},
+				"color": {
+					"H": "╬'primary'╩╩",
+					"T": "prop"
+				},
+				"depressed": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"elevation": {
+					"H": "╬0╩╩",
+					"T": "prop"
+				},
+				"height": {
+					"H": "╬'40px'╩╩",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\n//Send socket subscription message on button clicked\r\n//Send() method opens connection if closed and enqueues data to be transmitted.\r\nvar tradeSubscription = {};\r\ntradeSubscription.type = 'subscribe';\r\ntradeSubscription.product_ids = ['BTC-USD', 'ETH-USD', 'ETH-EUR'];\r\ntradeSubscription.channels = ['matches'];\r\nvar tickerChannel = {};\r\ntickerChannel.name = 'ticker';\r\ntickerChannel.product_ids = ['BTC-USD', 'ETH-USD', 'ETH-EUR'];\r\ncomponents.EdtrComp_1.message = tradeSubscription;\r\ncomponents.EdtrComp_1.Send();\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfMThfY2xpY2tfRS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkVkdHJDb21wXzE4X2NsaWNrX0UudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUNBLG9EQUFvRDtBQUNwRCwrRUFBK0U7QUFFL0UsSUFBSSxpQkFBaUIsR0FBRyxFQUFFLENBQUM7QUFDMUIsaUJBQXlCLENBQUMsSUFBSSxHQUFHLFdBQVcsQ0FBQztBQUM3QyxpQkFBeUIsQ0FBQyxXQUFXLEdBQUcsQ0FBQyxTQUFTLEVBQUMsU0FBUyxFQUFDLFNBQVMsQ0FBQyxDQUFDO0FBRXhFLGlCQUF5QixDQUFDLFFBQVEsR0FBRyxDQUFDLFNBQVMsQ0FBQyxDQUFDO0FBRWxELElBQUksYUFBYSxHQUFHLEVBQUUsQ0FBQztBQUN0QixhQUFxQixDQUFDLElBQUksR0FBRyxRQUFRLENBQUM7QUFDdEMsYUFBcUIsQ0FBQyxXQUFXLEdBQUcsQ0FBQyxTQUFTLEVBQUMsU0FBUyxFQUFDLFNBQVMsQ0FBQyxDQUFDO0FBRXJFLFVBQVUsQ0FBQyxVQUFVLENBQUMsT0FBTyxHQUFHLGlCQUFpQixDQUFDO0FBQ2pELFVBQVUsQ0FBQyxVQUFrQixDQUFDLElBQUksRUFBRSxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiZGVjbGFyZSB2YXIgbW91c2VFdmVudDp1bmtub3duIHwgdW5kZWZpbmVkXG4vL1NlbmQgc29ja2V0IHN1YnNjcmlwdGlvbiBtZXNzYWdlIG9uIGJ1dHRvbiBjbGlja2VkXHJcbi8vU2VuZCgpIG1ldGhvZCBvcGVucyBjb25uZWN0aW9uIGlmIGNsb3NlZCBhbmQgZW5xdWV1ZXMgZGF0YSB0byBiZSB0cmFuc21pdHRlZC5cclxuXHJcbmxldCB0cmFkZVN1YnNjcmlwdGlvbiA9IHt9O1xyXG4odHJhZGVTdWJzY3JpcHRpb24gYXMgYW55KS50eXBlID0gJ3N1YnNjcmliZSc7XHJcbih0cmFkZVN1YnNjcmlwdGlvbiBhcyBhbnkpLnByb2R1Y3RfaWRzID0gWydCVEMtVVNEJywnRVRILVVTRCcsJ0VUSC1FVVInXTtcclxuXHJcbih0cmFkZVN1YnNjcmlwdGlvbiBhcyBhbnkpLmNoYW5uZWxzID0gWydtYXRjaGVzJ107XHJcblxyXG5sZXQgdGlja2VyQ2hhbm5lbCA9IHt9O1xyXG4odGlja2VyQ2hhbm5lbCBhcyBhbnkpLm5hbWUgPSAndGlja2VyJztcclxuKHRpY2tlckNoYW5uZWwgYXMgYW55KS5wcm9kdWN0X2lkcyA9IFsnQlRDLVVTRCcsJ0VUSC1VU0QnLCdFVEgtRVVSJ107XHJcblxyXG5jb21wb25lbnRzLkVkdHJDb21wXzEubWVzc2FnZSA9IHRyYWRlU3Vic2NyaXB0aW9uO1xyXG4oY29tcG9uZW50cy5FZHRyQ29tcF8xIGFzIGFueSkuU2VuZCgpO1xuIGV4cG9ydHt9O1xuIl19",
+					"P": "mouseEvent:unknown | undefined",
+					"HL": "JS"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_19",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬'Connect'╩╩",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_19"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "q-label newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_18"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--depressed theme--light elevation-0 v-size--default primary newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {}
+};
+export default pjson

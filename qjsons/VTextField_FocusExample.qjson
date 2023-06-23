@@ -1,0 +1,654 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VRow",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_18",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VCol",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_20",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VRow",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_7",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VCol",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_9",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VTextField",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_11",
+																					"T": "prop"
+																				},
+																				"outlined": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"input": {
+																					"H": "if (EdtrComp_11.internalValue.length==1) {\r\n    EdtrComp_17.focus()\r\n} else {\r\n    EM.trace('else')\r\n}",
+																					"P": "value"
+																				}
+																			},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_11"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted v-text-field--enclosed v-text-field--outlined undefined"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_9"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"d:d-flex",
+																			"fd:flex-column"
+																		]
+																	},
+																	"class": "d-flex flex-column"
+																},
+																"compDomClasses": "col d-flex flex-column"
+															}
+														},
+														{
+															"T": "VCol",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_16",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VTextField",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_17",
+																					"T": "prop"
+																				},
+																				"outlined": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"input": {
+																					"H": "if (EdtrComp_17.internalValue.length==1) {\r\n    EdtrComp_15.focus()\r\n} else {\r\n    EM.trace('else')\r\n}",
+																					"P": "value"
+																				}
+																			},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_17"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted v-text-field--enclosed v-text-field--outlined undefined"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_16"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"d:d-flex",
+																			"fd:flex-column"
+																		]
+																	},
+																	"class": "d-flex flex-column"
+																},
+																"compDomClasses": "col d-flex flex-column"
+															}
+														},
+														{
+															"T": "VCol",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_14",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VTextField",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_15",
+																					"T": "prop"
+																				},
+																				"outlined": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"input": {
+																					"H": "if (EdtrComp_15.internalValue.length==1) \r\n{    EdtrComp_13.focus()\r\n} \r\nelse {    \r\nEM.trace('else')\r\n}",
+																					"P": "value"
+																				}
+																			},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_15"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted v-text-field--enclosed v-text-field--outlined undefined"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_14"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"d:d-flex",
+																			"fd:flex-column"
+																		]
+																	},
+																	"class": "d-flex flex-column"
+																},
+																"compDomClasses": "col d-flex flex-column"
+															}
+														},
+														{
+															"T": "VCol",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_12",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VTextField",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_13",
+																					"T": "prop"
+																				},
+																				"outlined": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"blur": {
+																					"H": "if (EdtrComp_13.internalValue==0) {\r\n    EdtrComp_23.value=true\r\n} else {\r\n    EM.trace('else')\r\n}",
+																					"P": "focusEvent"
+																				}
+																			},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_13"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted v-text-field--enclosed v-text-field--outlined undefined"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_12"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"d:d-flex",
+																			"fd:flex-column"
+																		]
+																	},
+																	"class": "d-flex flex-column"
+																},
+																"compDomClasses": "col d-flex flex-column"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_7"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "row"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_20"
+							},
+							"O": {
+								"cType": "slot",
+								"layout": {
+									"dOpt": {
+										"xs": [
+											"d:d-flex",
+											"fd:flex-column",
+											"c:col-4"
+										]
+									},
+									"class": "d-flex flex-column col-4"
+								},
+								"compDomClasses": "col d-flex flex-column col-4"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_18"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "row"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VRow",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_18",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VCol",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_20",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VRow",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_7",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VCol",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_9",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VTextField",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_11",
+																					"T": "prop"
+																				},
+																				"outlined": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"input": {
+																					"H": "╬if╣==╣.╣.╣EdtrComp_11╩╠internalValue╩╩╠length╩╩╠1╩╩╠╬()╣.╣EdtrComp_17╩╠focus╩╩╩╩╠╬()╣.╣EM╩╠trace╩╩╠'else'╩╩╩╩╩",
+																					"P": "value"
+																				}
+																			},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_11"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted v-text-field--enclosed v-text-field--outlined undefined"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_9"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"d:d-flex",
+																			"fd:flex-column"
+																		]
+																	},
+																	"class": "d-flex flex-column"
+																},
+																"compDomClasses": "col d-flex flex-column"
+															}
+														},
+														{
+															"T": "VCol",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_16",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VTextField",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_17",
+																					"T": "prop"
+																				},
+																				"outlined": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"input": {
+																					"H": "╬if╣==╣.╣.╣EdtrComp_17╩╠internalValue╩╩╠length╩╩╠1╩╩╠╬()╣.╣EdtrComp_15╩╠focus╩╩╩╩╠╬()╣.╣EM╩╠trace╩╩╠'else'╩╩╩╩╩",
+																					"P": "value"
+																				}
+																			},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_17"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted v-text-field--enclosed v-text-field--outlined undefined"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_16"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"d:d-flex",
+																			"fd:flex-column"
+																		]
+																	},
+																	"class": "d-flex flex-column"
+																},
+																"compDomClasses": "col d-flex flex-column"
+															}
+														},
+														{
+															"T": "VCol",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_14",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VTextField",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_15",
+																					"T": "prop"
+																				},
+																				"outlined": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"input": {
+																					"H": "╬if╣==╣.╣.╣EdtrComp_15╩╠internalValue╩╩╠length╩╩╠1╩╩╠╬()╣.╣EdtrComp_13╩╠focus╩╩╩╩╠╬()╣.╣EM╩╠trace╩╩╠'else'╩╩╩╩╩",
+																					"P": "value"
+																				}
+																			},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_15"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted v-text-field--enclosed v-text-field--outlined undefined"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_14"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"d:d-flex",
+																			"fd:flex-column"
+																		]
+																	},
+																	"class": "d-flex flex-column"
+																},
+																"compDomClasses": "col d-flex flex-column"
+															}
+														},
+														{
+															"T": "VCol",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_12",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VTextField",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_13",
+																					"T": "prop"
+																				},
+																				"outlined": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"blur": {
+																					"H": "╬if╣==╣.╣EdtrComp_13╩╠internalValue╩╩╠0╩╩╠╬=╣.╣EdtrComp_23╩╠value╩╩╠true╩╩╩╠╬()╣.╣EM╩╠trace╩╩╠'else'╩╩╩╩╩",
+																					"P": "focusEvent"
+																				}
+																			},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_13"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted v-text-field--enclosed v-text-field--outlined undefined"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_12"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"d:d-flex",
+																			"fd:flex-column"
+																		]
+																	},
+																	"class": "d-flex flex-column"
+																},
+																"compDomClasses": "col d-flex flex-column"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_7"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "row"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_20"
+							},
+							"O": {
+								"cType": "slot",
+								"layout": {
+									"dOpt": {
+										"xs": [
+											"d:d-flex",
+											"fd:flex-column",
+											"c:col-4"
+										]
+									},
+									"class": "d-flex flex-column col-4"
+								},
+								"compDomClasses": "col d-flex flex-column col-4"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_18"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "row"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {}
+};
+export default pjson

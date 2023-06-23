@@ -1,0 +1,1379 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container container--fluid'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_3",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VCard",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_276",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_289",
+																					"T": "prop"
+																				},
+																				"tagType": {
+																					"H": "'span'",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'TypeScript'",
+																					"T": "prop"
+																				},
+																				"class": {
+																					"H": "'v-card__title'",
+																					"T": "class"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_289"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		},
+																		{
+																			"T": "VCol",
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_8",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "'primary'",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"click": {
+																									"H": "const req: IRequest = {\r\n  url: \"https://httpbin.org/get\", \r\n  data: null, \r\n  blockRender: false, \r\n  http: \"get\",\r\n  onFail: null, \r\n  onSuccess: null,\r\n  responseField: \"respo\"\r\n};\r\n\r\nquick.EM.trace(quick.Request.async(req));",
+																									"P": "mouseEvent:unknown | undefined",
+																									"HL": "TS"
+																								}
+																							},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"C": {},
+																											"E": {},
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_11",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "'Get Request'",
+																													"T": "prop"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_11"
+																											},
+																											"O": {
+																												"cType": "child"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_8"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						},
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_32",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "'success'",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"click": {
+																									"H": "const reqData = {\r\n  oldPassword: \"newPassword\",\r\n  newPassword: \"oldPassword\"\r\n};\r\n\r\nconst reqHeaders = {\r\n  accept: \"application/json\"\r\n};\r\n\r\nconst req: IRequest = {\r\n  url: \"https://httpbin.org/put\", \r\n  data: reqData, \r\n  headers: reqHeaders,\r\n  blockRender: false, \r\n  http: \"put\",\r\n  onFail: null, \r\n  onSuccess: null,\r\n  responseField: \"respo\"\r\n};\r\n\r\nquick.EM.trace(quick.Request.async(req));",
+																									"P": "mouseEvent:unknown | undefined",
+																									"HL": "TS"
+																								}
+																							},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"C": {},
+																											"E": {},
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_33",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "'Put/Update Request'",
+																													"T": "prop"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_33"
+																											},
+																											"O": {
+																												"cType": "child"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_32"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"layout": {
+																									"dOpt": {
+																										"xs": [
+																											"sp:mr-5",
+																											"sp:ml-5"
+																										],
+																										"xl": []
+																									},
+																									"class": "mr-5 ml-5"
+																								}
+																							}
+																						},
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_28",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "'warning'",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"click": {
+																									"H": "const req: IRequest = {\r\n    url: \"https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf\",\r\n    data: null, \r\n    blockRender: false, \r\n    http: \"get\",\r\n    onFail: null, \r\n    onSuccess: null,\r\n    responseField: \"respo\"\r\n};\r\n\r\nquick.Request.download(req);",
+																									"P": "mouseEvent:unknown | undefined",
+																									"HL": "TS"
+																								}
+																							},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"C": {},
+																											"E": {},
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_29",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "'Download Request'",
+																													"T": "prop"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_29"
+																											},
+																											"O": {
+																												"cType": "child"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_28"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_6",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_6"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"d:d-flex",
+																							"c:col-12",
+																							"fd:flex-row",
+																							"j:justify-center"
+																						],
+																						"xl": [
+																							"d:d-flex"
+																						]
+																					},
+																					"class": "d-flex col-12 flex-row justify-center d-xl-flex"
+																				}
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_276"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_260",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_260"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"c:col-12",
+															"fd:flex-row",
+															"j:justify-center"
+														],
+														"xl": [
+															"d:d-flex"
+														]
+													},
+													"class": "d-flex col-12 flex-row justify-center d-xl-flex"
+												}
+											}
+										},
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VCard",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_313",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_314",
+																					"T": "prop"
+																				},
+																				"tagType": {
+																					"H": "'span'",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'QScript'",
+																					"T": "prop"
+																				},
+																				"class": {
+																					"H": "'v-card__title'",
+																					"T": "class"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_314"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		},
+																		{
+																			"T": "VCol",
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_316",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "'primary'",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"click": {
+																									"H": "requestObject={}\r\nrequestObject.url='https://httpbin.org/get'\r\nrequestObject.http='get'\r\nrequestObject.responseField='firstResponse'\r\nrequestObject.blockRender=true\r\nrequestObject.onSuccess='onSuccess'\r\nRequest.async(requestObject)",
+																									"P": "mouseEvent",
+																									"HL": "QS"
+																								}
+																							},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"C": {},
+																											"E": {},
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_317",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "'Get Request'",
+																													"T": "prop"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_317"
+																											},
+																											"O": {
+																												"cType": "child"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_316"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						},
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_318",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "'success'",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"click": {
+																									"H": "requestObject={}\r\nrequestObject.url='https://httpbin.org/put'\r\nrequestObject.http='put'\r\nrequestObject.headers={}\r\nrequestObject.headers.accept='application/json'\r\nrequestObject.data = {}\r\nrequestObject.data.oldPassword= 'oldPassword'\r\nrequestObject.data.newPassword= 'newPassword'\r\nrequestObject.data['dashed-key-name']='myDashedDataValue'\r\nrequestObject.onSuccess='OnSuccess'\r\nRequest.async(requestObject)",
+																									"P": "mouseEvent",
+																									"HL": "QS"
+																								}
+																							},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"C": {},
+																											"E": {},
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_319",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "'Put/Update Request'",
+																													"T": "prop"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_319"
+																											},
+																											"O": {
+																												"cType": "child"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_318"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"layout": {
+																									"dOpt": {
+																										"xs": [
+																											"sp:mr-5",
+																											"sp:ml-5"
+																										],
+																										"xl": []
+																									},
+																									"class": "mr-5 ml-5"
+																								}
+																							}
+																						},
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_320",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "'warning'",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"click": {
+																									"H": "requestObject={}\r\nrequestObject.url='https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf'\r\nrequestObject.http='get'\r\nRequest.download(requestObject)",
+																									"P": "mouseEvent",
+																									"HL": "QS"
+																								}
+																							},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"C": {},
+																											"E": {},
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_321",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "'Download Request'",
+																													"T": "prop"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_321"
+																											},
+																											"O": {
+																												"cType": "child"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_320"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_315",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_315"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"d:d-flex",
+																							"c:col-12",
+																							"fd:flex-row",
+																							"j:justify-center"
+																						],
+																						"xl": [
+																							"d:d-flex"
+																						]
+																					},
+																					"class": "d-flex col-12 flex-row justify-center d-xl-flex"
+																				}
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_313"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_312",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_312"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"c:col-12",
+															"fd:flex-row",
+															"j:justify-center"
+														],
+														"xl": [
+															"d:d-flex"
+														]
+													},
+													"class": "d-flex col-12 flex-row justify-center d-xl-flex"
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_3"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container container--fluid'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_3",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VCard",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_276",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_289",
+																					"T": "prop"
+																				},
+																				"tagType": {
+																					"H": "╬'span'╩╩",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'TypeScript'╩╩",
+																					"T": "prop"
+																				},
+																				"class": {
+																					"H": "╬'v-card__title'╩╩",
+																					"T": "class"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_289"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "q-label v-card__title newDropBorder"
+																			}
+																		},
+																		{
+																			"T": "VCol",
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_8",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "╬'primary'╩╩",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"click": {
+																									"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nvar req = {\r\n    url: \"https://httpbin.org/get\",\r\n    data: null,\r\n    blockRender: false,\r\n    http: \"get\",\r\n    onFail: null,\r\n    onSuccess: null,\r\n    responseField: \"respo\"\r\n};\r\nquick.EM.trace(quick.Request.async(req));\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfOF9jbGlja19FLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiRWR0ckNvbXBfOF9jbGlja19FLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQSxJQUFNLEdBQUcsR0FBYTtJQUNwQixHQUFHLEVBQUUseUJBQXlCO0lBQzlCLElBQUksRUFBRSxJQUFJO0lBQ1YsV0FBVyxFQUFFLEtBQUs7SUFDbEIsSUFBSSxFQUFFLEtBQUs7SUFDWCxNQUFNLEVBQUUsSUFBSTtJQUNaLFNBQVMsRUFBRSxJQUFJO0lBQ2YsYUFBYSxFQUFFLE9BQU87Q0FDdkIsQ0FBQztBQUVGLEtBQUssQ0FBQyxFQUFFLENBQUMsS0FBSyxDQUFDLEtBQUssQ0FBQyxPQUFPLENBQUMsS0FBSyxDQUFDLEdBQUcsQ0FBQyxDQUFDLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJkZWNsYXJlIHZhciBtb3VzZUV2ZW50OnVua25vd24gfCB1bmRlZmluZWRcbmNvbnN0IHJlcTogSVJlcXVlc3QgPSB7XHJcbiAgdXJsOiBcImh0dHBzOi8vaHR0cGJpbi5vcmcvZ2V0XCIsIFxyXG4gIGRhdGE6IG51bGwsIFxyXG4gIGJsb2NrUmVuZGVyOiBmYWxzZSwgXHJcbiAgaHR0cDogXCJnZXRcIixcclxuICBvbkZhaWw6IG51bGwsIFxyXG4gIG9uU3VjY2VzczogbnVsbCxcclxuICByZXNwb25zZUZpZWxkOiBcInJlc3BvXCJcclxufTtcclxuXHJcbnF1aWNrLkVNLnRyYWNlKHF1aWNrLlJlcXVlc3QuYXN5bmMocmVxKSk7XG4gZXhwb3J0e307XG4iXX0=",
+																									"P": "mouseEvent:unknown | undefined",
+																									"HL": "JS"
+																								}
+																							},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"C": {},
+																											"E": {},
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_11",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "╬'Get Request'╩╩",
+																													"T": "prop"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_11"
+																											},
+																											"O": {
+																												"cType": "child",
+																												"compDomClasses": "q-label newDropBorder"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_8"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary newDropBorder"
+																							}
+																						},
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_32",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "╬'success'╩╩",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"click": {
+																									"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nvar reqData = {\r\n    oldPassword: \"newPassword\",\r\n    newPassword: \"oldPassword\"\r\n};\r\nvar reqHeaders = {\r\n    accept: \"application/json\"\r\n};\r\nvar req = {\r\n    url: \"https://httpbin.org/put\",\r\n    data: reqData,\r\n    headers: reqHeaders,\r\n    blockRender: false,\r\n    http: \"put\",\r\n    onFail: null,\r\n    onSuccess: null,\r\n    responseField: \"respo\"\r\n};\r\nquick.EM.trace(quick.Request.async(req));\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfMzJfY2xpY2tfRS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkVkdHJDb21wXzMyX2NsaWNrX0UudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUNBLElBQU0sT0FBTyxHQUFHO0lBQ2QsV0FBVyxFQUFFLGFBQWE7SUFDMUIsV0FBVyxFQUFFLGFBQWE7Q0FDM0IsQ0FBQztBQUVGLElBQU0sVUFBVSxHQUFHO0lBQ2pCLE1BQU0sRUFBRSxrQkFBa0I7Q0FDM0IsQ0FBQztBQUVGLElBQU0sR0FBRyxHQUFhO0lBQ3BCLEdBQUcsRUFBRSx5QkFBeUI7SUFDOUIsSUFBSSxFQUFFLE9BQU87SUFDYixPQUFPLEVBQUUsVUFBVTtJQUNuQixXQUFXLEVBQUUsS0FBSztJQUNsQixJQUFJLEVBQUUsS0FBSztJQUNYLE1BQU0sRUFBRSxJQUFJO0lBQ1osU0FBUyxFQUFFLElBQUk7SUFDZixhQUFhLEVBQUUsT0FBTztDQUN2QixDQUFDO0FBRUYsS0FBSyxDQUFDLEVBQUUsQ0FBQyxLQUFLLENBQUMsS0FBSyxDQUFDLE9BQU8sQ0FBQyxLQUFLLENBQUMsR0FBRyxDQUFDLENBQUMsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImRlY2xhcmUgdmFyIG1vdXNlRXZlbnQ6dW5rbm93biB8IHVuZGVmaW5lZFxuY29uc3QgcmVxRGF0YSA9IHtcclxuICBvbGRQYXNzd29yZDogXCJuZXdQYXNzd29yZFwiLFxyXG4gIG5ld1Bhc3N3b3JkOiBcIm9sZFBhc3N3b3JkXCJcclxufTtcclxuXHJcbmNvbnN0IHJlcUhlYWRlcnMgPSB7XHJcbiAgYWNjZXB0OiBcImFwcGxpY2F0aW9uL2pzb25cIlxyXG59O1xyXG5cclxuY29uc3QgcmVxOiBJUmVxdWVzdCA9IHtcclxuICB1cmw6IFwiaHR0cHM6Ly9odHRwYmluLm9yZy9wdXRcIiwgXHJcbiAgZGF0YTogcmVxRGF0YSwgXHJcbiAgaGVhZGVyczogcmVxSGVhZGVycyxcclxuICBibG9ja1JlbmRlcjogZmFsc2UsIFxyXG4gIGh0dHA6IFwicHV0XCIsXHJcbiAgb25GYWlsOiBudWxsLCBcclxuICBvblN1Y2Nlc3M6IG51bGwsXHJcbiAgcmVzcG9uc2VGaWVsZDogXCJyZXNwb1wiXHJcbn07XHJcblxyXG5xdWljay5FTS50cmFjZShxdWljay5SZXF1ZXN0LmFzeW5jKHJlcSkpO1xuIGV4cG9ydHt9O1xuIl19",
+																									"P": "mouseEvent:unknown | undefined",
+																									"HL": "JS"
+																								}
+																							},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"C": {},
+																											"E": {},
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_33",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "╬'Put/Update Request'╩╩",
+																													"T": "prop"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_33"
+																											},
+																											"O": {
+																												"cType": "child",
+																												"compDomClasses": "q-label newDropBorder"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_32"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"layout": {
+																									"dOpt": {
+																										"xs": [
+																											"sp:mr-5",
+																											"sp:ml-5"
+																										],
+																										"xl": []
+																									},
+																									"class": "mr-5 ml-5"
+																								},
+																								"compDomClasses": "v-btn v-btn--contained theme--light v-size--default success mr-5 ml-5 newDropBorder"
+																							}
+																						},
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_28",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "╬'warning'╩╩",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"click": {
+																									"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nvar req = {\r\n    url: \"https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf\",\r\n    data: null,\r\n    blockRender: false,\r\n    http: \"get\",\r\n    onFail: null,\r\n    onSuccess: null,\r\n    responseField: \"respo\"\r\n};\r\nquick.Request.download(req);\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfMjhfY2xpY2tfRS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkVkdHJDb21wXzI4X2NsaWNrX0UudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUNBLElBQU0sR0FBRyxHQUFhO0lBQ2xCLEdBQUcsRUFBRSx5RUFBeUU7SUFDOUUsSUFBSSxFQUFFLElBQUk7SUFDVixXQUFXLEVBQUUsS0FBSztJQUNsQixJQUFJLEVBQUUsS0FBSztJQUNYLE1BQU0sRUFBRSxJQUFJO0lBQ1osU0FBUyxFQUFFLElBQUk7SUFDZixhQUFhLEVBQUUsT0FBTztDQUN6QixDQUFDO0FBRUYsS0FBSyxDQUFDLE9BQU8sQ0FBQyxRQUFRLENBQUMsR0FBRyxDQUFDLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJkZWNsYXJlIHZhciBtb3VzZUV2ZW50OnVua25vd24gfCB1bmRlZmluZWRcbmNvbnN0IHJlcTogSVJlcXVlc3QgPSB7XHJcbiAgICB1cmw6IFwiaHR0cHM6Ly93d3cudzMub3JnL1dBSS9FUi90ZXN0cy94aHRtbC90ZXN0ZmlsZXMvcmVzb3VyY2VzL3BkZi9kdW1teS5wZGZcIixcclxuICAgIGRhdGE6IG51bGwsIFxyXG4gICAgYmxvY2tSZW5kZXI6IGZhbHNlLCBcclxuICAgIGh0dHA6IFwiZ2V0XCIsXHJcbiAgICBvbkZhaWw6IG51bGwsIFxyXG4gICAgb25TdWNjZXNzOiBudWxsLFxyXG4gICAgcmVzcG9uc2VGaWVsZDogXCJyZXNwb1wiXHJcbn07XHJcblxyXG5xdWljay5SZXF1ZXN0LmRvd25sb2FkKHJlcSk7XG4gZXhwb3J0e307XG4iXX0=",
+																									"P": "mouseEvent:unknown | undefined",
+																									"HL": "JS"
+																								}
+																							},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"C": {},
+																											"E": {},
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_29",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "╬'Download Request'╩╩",
+																													"T": "prop"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_29"
+																											},
+																											"O": {
+																												"cType": "child",
+																												"compDomClasses": "q-label newDropBorder"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_28"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "v-btn v-btn--contained theme--light v-size--default warning newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_6",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_6"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"d:d-flex",
+																							"c:col-12",
+																							"fd:flex-row",
+																							"j:justify-center"
+																						],
+																						"xl": [
+																							"d:d-flex"
+																						]
+																					},
+																					"class": "d-flex col-12 flex-row justify-center d-xl-flex"
+																				},
+																				"compDomClasses": "col d-flex col-12 flex-row justify-center d-xl-flex newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_276"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-card v-sheet theme--light newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_260",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_260"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"c:col-12",
+															"fd:flex-row",
+															"j:justify-center"
+														],
+														"xl": [
+															"d:d-flex"
+														]
+													},
+													"class": "d-flex col-12 flex-row justify-center d-xl-flex"
+												},
+												"compDomClasses": "col d-flex col-12 flex-row justify-center d-xl-flex newDropBorder"
+											}
+										},
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VCard",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_313",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_314",
+																					"T": "prop"
+																				},
+																				"tagType": {
+																					"H": "╬'span'╩╩",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'QScript'╩╩",
+																					"T": "prop"
+																				},
+																				"class": {
+																					"H": "╬'v-card__title'╩╩",
+																					"T": "class"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_314"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "q-label v-card__title newDropBorder"
+																			}
+																		},
+																		{
+																			"T": "VCol",
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_316",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "╬'primary'╩╩",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"click": {
+																									"H": "╬=╣requestObject╩╠{}╩╩╬=╣.╣requestObject╩╠url╩╩╠'https://httpbin.org/get'╩╩╬=╣.╣requestObject╩╠http╩╩╠'get'╩╩╬=╣.╣requestObject╩╠responseField╩╩╠'firstResponse'╩╩╬=╣.╣requestObject╩╠blockRender╩╩╠true╩╩╬=╣.╣requestObject╩╠onSuccess╩╩╠'onSuccess'╩╩╬()╣.╣Request╩╠async╩╩╠requestObject╩╩╩",
+																									"P": "mouseEvent",
+																									"HL": "QS"
+																								}
+																							},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"C": {},
+																											"E": {},
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_317",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "╬'Get Request'╩╩",
+																													"T": "prop"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_317"
+																											},
+																											"O": {
+																												"cType": "child",
+																												"compDomClasses": "q-label newDropBorder"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_316"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary newDropBorder"
+																							}
+																						},
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_318",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "╬'success'╩╩",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"click": {
+																									"H": "╬=╣requestObject╩╠{}╩╩╬=╣.╣requestObject╩╠url╩╩╠'https://httpbin.org/put'╩╩╬=╣.╣requestObject╩╠http╩╩╠'put'╩╩╬=╣.╣requestObject╩╠headers╩╩╠{}╩╩╬=╣.╣.╣requestObject╩╠headers╩╩╠accept╩╩╠'application/json'╩╩╬=╣.╣requestObject╩╠data╩╩╠{}╩╩╬=╣.╣.╣requestObject╩╠data╩╩╠oldPassword╩╩╠'oldPassword'╩╩╬=╣.╣.╣requestObject╩╠data╩╩╠newPassword╩╩╠'newPassword'╩╩╬=╣[]╣.╣requestObject╩╠data╩╩╠'dashed-key-name'╩╩╠'myDashedDataValue'╩╩╬=╣.╣requestObject╩╠onSuccess╩╩╠'OnSuccess'╩╩╬()╣.╣Request╩╠async╩╩╠requestObject╩╩╩",
+																									"P": "mouseEvent",
+																									"HL": "QS"
+																								}
+																							},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"C": {},
+																											"E": {},
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_319",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "╬'Put/Update Request'╩╩",
+																													"T": "prop"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_319"
+																											},
+																											"O": {
+																												"cType": "child",
+																												"compDomClasses": "q-label newDropBorder"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_318"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"layout": {
+																									"dOpt": {
+																										"xs": [
+																											"sp:mr-5",
+																											"sp:ml-5"
+																										],
+																										"xl": []
+																									},
+																									"class": "mr-5 ml-5"
+																								},
+																								"compDomClasses": "v-btn v-btn--contained theme--light v-size--default success mr-5 ml-5 newDropBorder"
+																							}
+																						},
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_320",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "╬'warning'╩╩",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"click": {
+																									"H": "╬=╣requestObject╩╠{}╩╩╬=╣.╣requestObject╩╠url╩╩╠'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf'╩╩╬=╣.╣requestObject╩╠http╩╩╠'get'╩╩╬()╣.╣Request╩╠download╩╩╠requestObject╩╩╩",
+																									"P": "mouseEvent",
+																									"HL": "QS"
+																								}
+																							},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"C": {},
+																											"E": {},
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_321",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "╬'Download Request'╩╩",
+																													"T": "prop"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_321"
+																											},
+																											"O": {
+																												"cType": "child",
+																												"compDomClasses": "q-label newDropBorder"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_320"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "v-btn v-btn--contained theme--light v-size--default warning newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_315",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_315"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"d:d-flex",
+																							"c:col-12",
+																							"fd:flex-row",
+																							"j:justify-center"
+																						],
+																						"xl": [
+																							"d:d-flex"
+																						]
+																					},
+																					"class": "d-flex col-12 flex-row justify-center d-xl-flex"
+																				},
+																				"compDomClasses": "col d-flex col-12 flex-row justify-center d-xl-flex newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_313"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-card v-sheet theme--light newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_312",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_312"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"c:col-12",
+															"fd:flex-row",
+															"j:justify-center"
+														],
+														"xl": [
+															"d:d-flex"
+														]
+													},
+													"class": "d-flex col-12 flex-row justify-center d-xl-flex"
+												},
+												"compDomClasses": "col d-flex col-12 flex-row justify-center d-xl-flex newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_3"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container container--fluid newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {}
+};
+export default pjson

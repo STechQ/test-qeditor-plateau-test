@@ -1,0 +1,562 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_3",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"parseData": {
+					"H": "declare let data;\n\ndata = data.paymentPlan;\nlet parsedData = [];\n\nfor (let mainGroup = 0; mainGroup < data.length; mainGroup++) {\n\n    let children = data[mainGroup].debtDetailItemDTOList;\n    let child1 = [{}];\n    quick.EM.trace(children);\n    let mainGroup1 = {};\n\n    for (let i = 0; i < children.length; i++) {\n        child1[i][\"installmentNumber\"] = children[i].debtText;\n        child1[i][\"principal\"] = children[i].debt;\n        child1[i][\"date\"] = formatDate(children[i].paymentDate);\n        child1[i][\"installmentAmount\"] = children[i].interestAmount;\n        child1[i][\"taxFundAmount\"] = children[i].taxFundAmount;\n        child1[i][\"remainingAmount\"] = children[i].remainingAmount;\n        child1[i][\"type\"] = data[mainGroup].type;\n\n    }\n\n    mainGroup1[\"installmentNumber\"] = data[mainGroup].installmentNumber;\n    mainGroup1[\"date\"] = data[mainGroup].date;\n    mainGroup1[\"installmentAmount\"] = data[mainGroup].installmentAmount;\n    mainGroup1[\"taxFundAmount\"] = data[mainGroup].taxFundAmount;\n    mainGroup1[\"principal\"] = data[mainGroup].principal;\n    mainGroup1[\"remainingAmount\"] = data[mainGroup].remainingAmount;\n    mainGroup1[\"type\"] = data[mainGroup].type;\n    mainGroup1[\"child1\"] = child1;\n\n    parsedData.push(mainGroup1);\n\n}\n(<any>components).tblOdemePlani.items = parsedData;\n\n\n/*\n[{ text = 'Taksit', align= 'start', sortable= false, value= 'installmentNumber'},\n{ text = 'Taksit Tarihi', value= 'date', sortable = true },\n{ text = 'Taksit Tutarı', value= 'installmentAmount', sortable = true  },\n{ text = 'Anapara', value= 'principal' },\n{ text = 'Faiz+Fon+Vergi', value= 'taxFundAmount' },\n{ text = 'Kalan Tutar', value= 'remainingAmount' },\n{ text = 'Ödeme Durumu', value= 'type' }]\n*/\n\n\nfunction formatDate(date) {\n    var d = new Date(date),\n        month = '' + (d.getMonth() + 1),\n        day = '' + d.getDate(),\n        year = d.getFullYear();\n\n    if (month.length < 2)\n        month = '0' + month;\n    if (day.length < 2)\n        day = '0' + day;\n\n    return [year, month, day].join('/');\n}\n",
+					"C": true,
+					"HL": "TS"
+				},
+				"onServiceSuccess": {
+					"H": "if (response.getTableData != null) {\r\n    quick.MM.trigger('parseData', [{data: response.getTableData}]);\r\n}\r\n",
+					"C": true,
+					"HL": "TS"
+				},
+				"PostRender": {
+					"H": "let requestObj: IRequest = {\r\n    data: null,\r\n    http: \"GET\",\r\n    url: 'https://mocki.io/v1/3d8d3960-9223-4357-908d-99bd4910fe94',\r\n    blockRender: false,\r\n    onFail: \"\",\r\n    onSuccess: \"onServiceSuccess\",\r\n    responseField: \"getTableData\"\r\n};\r\n\r\nquick.Request.async(requestObj);\r\n",
+					"TO": 1,
+					"HL": "TS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_3"
+			},
+			"O": {
+				"cType": "child"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_71",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "true",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container container--fluid'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_73",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VDataTable",
+															"P": {
+																"ID": {
+																	"H": "tblOdemePlani",
+																	"T": "prop"
+																},
+																"headers": {
+																	"H": "[{ text = 'Taksit', align= 'start', sortable= false, value= 'installmentNumber'},\n{ text = 'Taksit Tarihi', value= 'date', sortable = true },\n{ text = 'Taksit Tutarı', value= 'installmentAmount', sortable = true  },\n{ text = 'Anapara', value= 'principal' },\n{ text = 'Faiz+Fon+Vergi', value= 'taxFundAmount' },\n{ text = 'Kalan Tutar', value= 'remainingAmount' },\n{ text = 'Ödeme Durumu', value= 'type' },\n{ text = '', value= 'data-table-expand' }]",
+																	"T": "prop"
+																},
+																"itemsPerPage": {
+																	"H": "5",
+																	"T": "prop"
+																},
+																"singleExpand": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"showExpand": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"itemKey": {
+																	"H": "'installmentNumber'",
+																	"T": "prop"
+																},
+																"hideDefaultHeader": {
+																	"H": "false",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"expanded-item": {
+																	"c": [
+																		{
+																			"T": "QTableCell",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_7",
+																					"T": "prop"
+																				},
+																				"colspan": {
+																					"H": "headers.length",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VDataTable",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_29",
+																									"T": "prop"
+																								},
+																								"headers": {
+																									"H": "[{ text = 'Taksit', align= 'start', sortable= false, value= 'installmentNumber'},\n{ text = 'Taksit Tarihi', value= 'date', sortable = true },\n{ text = 'Taksit Tutarı', value= 'installmentAmount', sortable = true  },\n{ text = 'Anapara', value= 'principal' },\n{ text = 'Faiz+Fon+Vergi', value= 'taxFundAmount' },\n{ text = 'Kalan Tutar', value= 'remainingAmount' },\n{ text = 'Ödeme Durumu', value= 'type' }]",
+																									"T": "prop"
+																								},
+																								"itemsPerPage": {
+																									"H": "5",
+																									"T": "prop"
+																								},
+																								"hideDefaultFooter": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"items": {
+																									"H": "item.child1",
+																									"T": "prop"
+																								},
+																								"class": {
+																									"H": "\r\nif (item.child1.length < 1) {\r\n    'd-none'\r\n}\r\n'grey lighten-5 pl-0 pr-0 pt-0 pb-0'\r\n",
+																									"T": "class"
+																								},
+																								"showExpand": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"itemKey": {
+																									"H": "'installmentNumber'",
+																									"T": "prop"
+																								},
+																								"hideDefaultHeader": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"dense": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"calculateWidths": {
+																									"H": "false",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_29"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"compDomClasses": "v-data-table theme--light grey lighten-5"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_7"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": []
+																					},
+																					"class": ""
+																				},
+																				"compDomClasses": ""
+																			}
+																		}
+																	],
+																	"cType": "scopedSlot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_28"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "v-data-table v-data-table--has-bottom theme--light",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"sp:pl-0",
+																			"sp:pr-0",
+																			"sp:pt-0",
+																			"sp:pb-0"
+																		]
+																	},
+																	"class": "pl-0 pr-0 pt-0 pb-0"
+																}
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_76",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_76"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_73"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_71"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_3",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"parseData": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ndata = data.paymentPlan;\r\nvar parsedData = [];\r\nfor (var mainGroup = 0; mainGroup < data.length; mainGroup++) {\r\n    var children = data[mainGroup].debtDetailItemDTOList;\r\n    var child1 = [{}];\r\n    quick.EM.trace(children);\r\n    var mainGroup1 = {};\r\n    for (var i = 0; i < children.length; i++) {\r\n        child1[i][\"installmentNumber\"] = children[i].debtText;\r\n        child1[i][\"principal\"] = children[i].debt;\r\n        child1[i][\"date\"] = formatDate(children[i].paymentDate);\r\n        child1[i][\"installmentAmount\"] = children[i].interestAmount;\r\n        child1[i][\"taxFundAmount\"] = children[i].taxFundAmount;\r\n        child1[i][\"remainingAmount\"] = children[i].remainingAmount;\r\n        child1[i][\"type\"] = data[mainGroup].type;\r\n    }\r\n    mainGroup1[\"installmentNumber\"] = data[mainGroup].installmentNumber;\r\n    mainGroup1[\"date\"] = data[mainGroup].date;\r\n    mainGroup1[\"installmentAmount\"] = data[mainGroup].installmentAmount;\r\n    mainGroup1[\"taxFundAmount\"] = data[mainGroup].taxFundAmount;\r\n    mainGroup1[\"principal\"] = data[mainGroup].principal;\r\n    mainGroup1[\"remainingAmount\"] = data[mainGroup].remainingAmount;\r\n    mainGroup1[\"type\"] = data[mainGroup].type;\r\n    mainGroup1[\"child1\"] = child1;\r\n    parsedData.push(mainGroup1);\r\n}\r\ncomponents.tblOdemePlani.items = parsedData;\r\n/*\r\n[{ text = 'Taksit', align= 'start', sortable= false, value= 'installmentNumber'},\r\n{ text = 'Taksit Tarihi', value= 'date', sortable = true },\r\n{ text = 'Taksit Tutarı', value= 'installmentAmount', sortable = true  },\r\n{ text = 'Anapara', value= 'principal' },\r\n{ text = 'Faiz+Fon+Vergi', value= 'taxFundAmount' },\r\n{ text = 'Kalan Tutar', value= 'remainingAmount' },\r\n{ text = 'Ödeme Durumu', value= 'type' }]\r\n*/\r\nfunction formatDate(date) {\r\n    var d = new Date(date), month = '' + (d.getMonth() + 1), day = '' + d.getDate(), year = d.getFullYear();\r\n    if (month.length < 2)\r\n        month = '0' + month;\r\n    if (day.length < 2)\r\n        day = '0' + day;\r\n    return [year, month, day].join('/');\r\n}\r\n",
+					"C": true,
+					"HL": "JS"
+				},
+				"onServiceSuccess": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nif (response.getTableData != null) {\r\n    quick.MM.trigger('parseData', [{ data: response.getTableData }]);\r\n}\r\n",
+					"C": true,
+					"HL": "JS"
+				},
+				"PostRender": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nvar requestObj = {\r\n    data: null,\r\n    http: \"GET\",\r\n    url: 'https://mocki.io/v1/3d8d3960-9223-4357-908d-99bd4910fe94',\r\n    blockRender: false,\r\n    onFail: \"\",\r\n    onSuccess: \"onServiceSuccess\",\r\n    responseField: \"getTableData\"\r\n};\r\nquick.Request.async(requestObj);\r\n",
+					"TO": 1,
+					"HL": "JS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_3"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_71",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container container--fluid'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_73",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VDataTable",
+															"P": {
+																"ID": {
+																	"H": "tblOdemePlani",
+																	"T": "prop"
+																},
+																"headers": {
+																	"H": "╬[]╠{}╠=╣text╩╠'Taksit'╩╩╠=╣align╩╠'start'╩╩╠=╣sortable╩╠false╩╩╠=╣value╩╠'installmentNumber'╩╩╩╠{}╠=╣text╩╠'Taksit Tarihi'╩╩╠=╣value╩╠'date'╩╩╠=╣sortable╩╠true╩╩╩╠{}╠=╣text╩╠'Taksit Tutarı'╩╩╠=╣value╩╠'installmentAmount'╩╩╠=╣sortable╩╠true╩╩╩╠{}╠=╣text╩╠'Anapara'╩╩╠=╣value╩╠'principal'╩╩╩╠{}╠=╣text╩╠'Faiz+Fon+Vergi'╩╩╠=╣value╩╠'taxFundAmount'╩╩╩╠{}╠=╣text╩╠'Kalan Tutar'╩╩╠=╣value╩╠'remainingAmount'╩╩╩╠{}╠=╣text╩╠'Ödeme Durumu'╩╩╠=╣value╩╠'type'╩╩╩╠{}╠=╣text╩╠''╩╩╠=╣value╩╠'data-table-expand'╩╩╩╩╩",
+																	"T": "prop"
+																},
+																"itemsPerPage": {
+																	"H": "╬5╩╩",
+																	"T": "prop"
+																},
+																"singleExpand": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"showExpand": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"itemKey": {
+																	"H": "╬'installmentNumber'╩╩",
+																	"T": "prop"
+																},
+																"hideDefaultHeader": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"expanded-item": {
+																	"c": [
+																		{
+																			"T": "QTableCell",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_7",
+																					"T": "prop"
+																				},
+																				"colspan": {
+																					"H": "╬.╣headers╩╠length╩╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VDataTable",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_29",
+																									"T": "prop"
+																								},
+																								"headers": {
+																									"H": "╬[]╠{}╠=╣text╩╠'Taksit'╩╩╠=╣align╩╠'start'╩╩╠=╣sortable╩╠false╩╩╠=╣value╩╠'installmentNumber'╩╩╩╠{}╠=╣text╩╠'Taksit Tarihi'╩╩╠=╣value╩╠'date'╩╩╠=╣sortable╩╠true╩╩╩╠{}╠=╣text╩╠'Taksit Tutarı'╩╩╠=╣value╩╠'installmentAmount'╩╩╠=╣sortable╩╠true╩╩╩╠{}╠=╣text╩╠'Anapara'╩╩╠=╣value╩╠'principal'╩╩╩╠{}╠=╣text╩╠'Faiz+Fon+Vergi'╩╩╠=╣value╩╠'taxFundAmount'╩╩╩╠{}╠=╣text╩╠'Kalan Tutar'╩╩╠=╣value╩╠'remainingAmount'╩╩╩╠{}╠=╣text╩╠'Ödeme Durumu'╩╩╠=╣value╩╠'type'╩╩╩╩╩",
+																									"T": "prop"
+																								},
+																								"itemsPerPage": {
+																									"H": "╬5╩╩",
+																									"T": "prop"
+																								},
+																								"hideDefaultFooter": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"items": {
+																									"H": "╬.╣item╩╠child1╩╩╩",
+																									"T": "prop"
+																								},
+																								"class": {
+																									"H": "╬if╣<╣.╣.╣item╩╠child1╩╩╠length╩╩╠1╩╩╠╬'d-none'╩╩╠■╩╬'grey lighten-5 pl-0 pr-0 pt-0 pb-0'╩╩",
+																									"T": "class"
+																								},
+																								"showExpand": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"itemKey": {
+																									"H": "╬'installmentNumber'╩╩",
+																									"T": "prop"
+																								},
+																								"hideDefaultHeader": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"dense": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"calculateWidths": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_29"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"compDomClasses": "v-data-table theme--light grey lighten-5"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_7"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": []
+																					},
+																					"class": ""
+																				},
+																				"compDomClasses": ""
+																			}
+																		}
+																	],
+																	"cType": "scopedSlot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_28"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "v-data-table v-data-table--has-bottom theme--light pl-0 pr-0 pt-0 pb-0 newDropBorder",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"sp:pl-0",
+																			"sp:pr-0",
+																			"sp:pt-0",
+																			"sp:pb-0"
+																		]
+																	},
+																	"class": "pl-0 pr-0 pt-0 pb-0"
+																}
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_76",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_76"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												},
+												"compDomClasses": "col d-flex flex-column newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_73"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_71"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container container--fluid newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {}
+};
+export default pjson

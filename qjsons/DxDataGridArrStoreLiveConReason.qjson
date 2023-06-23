@@ -1,0 +1,584 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_2",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"setArrayStore": {
+					"H": "var dxDataGridArray: Array<{ product_id, trade_id, price, size }> = [];\r\nvar dxDataGridArrayStore: any = null;\r\n\r\nif (!quick.store.get('dxDataGridArray')) {\r\n  dxDataGridArray = [\r\n    {\r\n      product_id: 'BTC-USD',\r\n      trade_id: 0,      \r\n      price: 0,\r\n      size: 0\r\n    },\r\n    {\r\n      product_id: 'ETH-USD',\r\n      trade_id: 0,      \r\n      price: 0,\r\n      size: 0\r\n    },\r\n    {\r\n      product_id: 'ETH-EUR',\r\n      trade_id: 0,      \r\n      price: 0,\r\n      size: 0\r\n    },\r\n  ];\r\n  quick.store.set('dxDataGridArray', dxDataGridArray);\r\n}\r\nelse {\r\n  dxDataGridArray = quick.store.get('dxDataGridArray');\r\n}\r\n\r\nif (!quick.store.get('dxDataGridArrayStore')) {\r\n  dxDataGridArrayStore = quick.devex.createArrayStore({\r\n    key: \"product_id\",\r\n    data: dxDataGridArray\r\n  });\r\n  quick.store.set('dxDataGridArrayStore', dxDataGridArrayStore);\r\n}\r\nelse {\r\n  dxDataGridArrayStore = quick.store.get('dxDataGridArrayStore');\r\n}\r\n\r\nquick.return({ dxDataGridArrayStore, dxDataGridArray });\r\n",
+					"C": true,
+					"HL": "TS"
+				},
+				"EndRender": {
+					"H": "quick.store.set(\"$connectionReason\", \"Bağlantı Başarıyla Gerçekleşti!\")\r\n",
+					"HL": "TS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_2"
+			},
+			"O": {
+				"cType": "child"
+			}
+		},
+		{
+			"T": "LiveConnection",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				},
+				"autoConnect": {
+					"H": "false",
+					"T": "prop"
+				},
+				"enableIamAuth": {
+					"H": "false",
+					"T": "prop"
+				},
+				"reconnect": {
+					"H": "true",
+					"T": "prop"
+				},
+				"reconnectInterval": {
+					"H": "4",
+					"T": "prop"
+				},
+				"reconnectBackOff": {
+					"H": "false",
+					"T": "prop"
+				},
+				"url": {
+					"H": "'/ws-feed.pro.coinbase.com'",
+					"T": "prop"
+				},
+				"secure": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"onMessageReceived": {
+					"H": "var retVal: { dxDataGridArrayStore, dxDataGridArray } = quick.MM.trigger('setArrayStore');\r\nlet aStore = retVal.dxDataGridArrayStore;\r\nlet arr = retVal.dxDataGridArray;\r\n\r\ncomponents.EdtrComp_63.dataSource = aStore;\r\n\r\nif ((message as any).product_id == 'BTC-USD') {\r\n  aStore.push([{\r\n    type: 'update',\r\n    key: arr[0].product_id,\r\n    data: {\r\n      product_id: arr[0].product_id,\r\n      trade_id: (message as any).trade_id,\r\n      price: (message as any).price,\r\n      size: (message as any).size\r\n    },\r\n  }]);\r\n}\r\n\r\nif ((message as any).product_id == 'ETH-USD') {\r\n  aStore.push([{\r\n    type: 'update',\r\n    key: arr[1].product_id,\r\n    data: {\r\n      product_id: arr[1].product_id,\r\n      trade_id: (message as any).trade_id,      \r\n      price: (message as any).price,\r\n      size: (message as any).size\r\n    },\r\n  }]);\r\n}\r\n\r\nif ((message as any).product_id == 'ETH-EUR') {\r\n  aStore.push([{\r\n    type: 'update',\r\n    key: arr[2].product_id,\r\n    data: {\r\n      product_id: arr[2].product_id,\r\n      trade_id: (message as any).trade_id,      \r\n      price: (message as any).price,\r\n      size: (message as any).size\r\n    },\r\n  }]);\r\n}\r\n\r\nquick.Quick.updateComponent(components.EdtrComp_63);\r\n(components.EdtrComp_63 as any).loadPanel = false;",
+					"P": "message:string",
+					"HL": "TS"
+				},
+				"onConnectionOpen": {
+					"H": "quick.EM.trace(\"connectionOpenReason\");\r\nquick.EM.trace(reason);",
+					"P": "reason:string",
+					"HL": "TS"
+				},
+				"onError": {
+					"H": "debugger;\r\nlet errorEvent = error;\r\nlet errorCountValue = errorCount;\r\n\r\n",
+					"P": "error:string,errorCount:string",
+					"HL": "TS"
+				},
+				"onClose": {
+					"H": "debugger;\r\nlet closeEvent = e;",
+					"P": "e:string",
+					"HL": "TS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		},
+		{
+			"T": "DxDataGrid",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_63",
+					"T": "prop"
+				},
+				"columnAutoWidth": {
+					"H": "true",
+					"T": "prop"
+				},
+				"repaintChangesOnly": {
+					"H": "true",
+					"T": "prop"
+				},
+				"showBorders": {
+					"H": "true",
+					"T": "prop"
+				},
+				"rowAlternationEnabled": {
+					"H": "false",
+					"T": "prop"
+				},
+				"highlightChanges": {
+					"H": "true",
+					"T": "prop"
+				},
+				"showColumnLines": {
+					"H": "true",
+					"T": "prop"
+				},
+				"showRowLines": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_63"
+			},
+			"O": {
+				"cType": "scopedSlot",
+				"forceUpdateAfterPropertySetting": true
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_18",
+					"T": "prop"
+				},
+				"color": {
+					"H": "'primary'",
+					"T": "prop"
+				},
+				"depressed": {
+					"H": "true",
+					"T": "prop"
+				},
+				"elevation": {
+					"H": "0",
+					"T": "prop"
+				},
+				"height": {
+					"H": "'40px'",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "//Send socket subscription message on button clicked\r\n//Send() method opens connection if closed and enqueues data to be transmitted.\r\n\r\nlet tradeSubscription = {};\r\n(tradeSubscription as any).type = 'subscribe';\r\n(tradeSubscription as any).product_ids = ['BTC-USD','ETH-USD','ETH-EUR'];\r\n\r\n(tradeSubscription as any).channels = ['matches'];\r\n\r\nlet tickerChannel = {};\r\n(tickerChannel as any).name = 'ticker';\r\n(tickerChannel as any).product_ids = ['BTC-USD','ETH-USD','ETH-EUR'];\r\n\r\ncomponents.EdtrComp_1.message = tradeSubscription;\r\ncomponents.EdtrComp_1.Send();",
+					"P": "mouseEvent:unknown | undefined",
+					"HL": "TS"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_19",
+									"T": "prop"
+								},
+								"text": {
+									"H": "'Connect'",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_19"
+							},
+							"O": {
+								"cType": "child"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_18"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_3",
+					"T": "prop"
+				},
+				"color": {
+					"H": "'primary'",
+					"T": "prop"
+				},
+				"depressed": {
+					"H": "true",
+					"T": "prop"
+				},
+				"elevation": {
+					"H": "0",
+					"T": "prop"
+				},
+				"height": {
+					"H": "'40px'",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "components.EdtrComp_1.Close();",
+					"P": "mouseEvent:unknown | undefined",
+					"HL": "TS"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_4",
+									"T": "prop"
+								},
+								"text": {
+									"H": "'Close'",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "child"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_3"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_2",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"setArrayStore": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nvar dxDataGridArray = [];\r\nvar dxDataGridArrayStore = null;\r\nif (!quick.store.get('dxDataGridArray')) {\r\n    dxDataGridArray = [\r\n        {\r\n            product_id: 'BTC-USD',\r\n            trade_id: 0,\r\n            price: 0,\r\n            size: 0\r\n        },\r\n        {\r\n            product_id: 'ETH-USD',\r\n            trade_id: 0,\r\n            price: 0,\r\n            size: 0\r\n        },\r\n        {\r\n            product_id: 'ETH-EUR',\r\n            trade_id: 0,\r\n            price: 0,\r\n            size: 0\r\n        },\r\n    ];\r\n    quick.store.set('dxDataGridArray', dxDataGridArray);\r\n}\r\nelse {\r\n    dxDataGridArray = quick.store.get('dxDataGridArray');\r\n}\r\nif (!quick.store.get('dxDataGridArrayStore')) {\r\n    dxDataGridArrayStore = quick.devex.createArrayStore({\r\n        key: \"product_id\",\r\n        data: dxDataGridArray\r\n    });\r\n    quick.store.set('dxDataGridArrayStore', dxDataGridArrayStore);\r\n}\r\nelse {\r\n    dxDataGridArrayStore = quick.store.get('dxDataGridArrayStore');\r\n}\r\nquick.return({ dxDataGridArrayStore: dxDataGridArrayStore, dxDataGridArray: dxDataGridArray });\r\n",
+					"C": true,
+					"HL": "JS"
+				},
+				"EndRender": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.store.set(\"$connectionReason\", \"Bağlantı Başarıyla Gerçekleşti!\");\r\n",
+					"HL": "JS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_2"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			}
+		},
+		{
+			"T": "LiveConnection",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				},
+				"autoConnect": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				},
+				"enableIamAuth": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				},
+				"reconnect": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"reconnectInterval": {
+					"H": "╬4╩╩",
+					"T": "prop"
+				},
+				"reconnectBackOff": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				},
+				"url": {
+					"H": "╬'/ws-feed.pro.coinbase.com'╩╩",
+					"T": "prop"
+				},
+				"secure": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"onMessageReceived": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nvar retVal = quick.MM.trigger('setArrayStore');\r\nvar aStore = retVal.dxDataGridArrayStore;\r\nvar arr = retVal.dxDataGridArray;\r\ncomponents.EdtrComp_63.dataSource = aStore;\r\nif (message.product_id == 'BTC-USD') {\r\n    aStore.push([{\r\n            type: 'update',\r\n            key: arr[0].product_id,\r\n            data: {\r\n                product_id: arr[0].product_id,\r\n                trade_id: message.trade_id,\r\n                price: message.price,\r\n                size: message.size\r\n            },\r\n        }]);\r\n}\r\nif (message.product_id == 'ETH-USD') {\r\n    aStore.push([{\r\n            type: 'update',\r\n            key: arr[1].product_id,\r\n            data: {\r\n                product_id: arr[1].product_id,\r\n                trade_id: message.trade_id,\r\n                price: message.price,\r\n                size: message.size\r\n            },\r\n        }]);\r\n}\r\nif (message.product_id == 'ETH-EUR') {\r\n    aStore.push([{\r\n            type: 'update',\r\n            key: arr[2].product_id,\r\n            data: {\r\n                product_id: arr[2].product_id,\r\n                trade_id: message.trade_id,\r\n                price: message.price,\r\n                size: message.size\r\n            },\r\n        }]);\r\n}\r\nquick.Quick.updateComponent(components.EdtrComp_63);\r\ncomponents.EdtrComp_63.loadPanel = false;\r\n",
+					"P": "message:string",
+					"HL": "JS"
+				},
+				"onConnectionOpen": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.EM.trace(\"connectionOpenReason\");\r\nquick.EM.trace(reason);\r\n",
+					"P": "reason:string",
+					"HL": "JS"
+				},
+				"onError": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ndebugger;\r\nvar errorEvent = error;\r\nvar errorCountValue = errorCount;\r\n",
+					"P": "error:string,errorCount:string",
+					"HL": "JS"
+				},
+				"onClose": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ndebugger;\r\nvar closeEvent = e;\r\n",
+					"P": "e:string",
+					"HL": "JS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "newDropBorder"
+			}
+		},
+		{
+			"T": "DxDataGrid",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_63",
+					"T": "prop"
+				},
+				"columnAutoWidth": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"repaintChangesOnly": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"showBorders": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"rowAlternationEnabled": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				},
+				"highlightChanges": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"showColumnLines": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"showRowLines": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_63"
+			},
+			"O": {
+				"cType": "scopedSlot",
+				"forceUpdateAfterPropertySetting": true,
+				"compDomClasses": "dx-widget dx-visibility-change-handler newDropBorder"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_18",
+					"T": "prop"
+				},
+				"color": {
+					"H": "╬'primary'╩╩",
+					"T": "prop"
+				},
+				"depressed": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"elevation": {
+					"H": "╬0╩╩",
+					"T": "prop"
+				},
+				"height": {
+					"H": "╬'40px'╩╩",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\n//Send socket subscription message on button clicked\r\n//Send() method opens connection if closed and enqueues data to be transmitted.\r\nvar tradeSubscription = {};\r\ntradeSubscription.type = 'subscribe';\r\ntradeSubscription.product_ids = ['BTC-USD', 'ETH-USD', 'ETH-EUR'];\r\ntradeSubscription.channels = ['matches'];\r\nvar tickerChannel = {};\r\ntickerChannel.name = 'ticker';\r\ntickerChannel.product_ids = ['BTC-USD', 'ETH-USD', 'ETH-EUR'];\r\ncomponents.EdtrComp_1.message = tradeSubscription;\r\ncomponents.EdtrComp_1.Send();\r\n",
+					"P": "mouseEvent:unknown | undefined",
+					"HL": "JS"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_19",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬'Connect'╩╩",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_19"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "q-label newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_18"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--depressed theme--light elevation-0 v-size--default primary newDropBorder"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_3",
+					"T": "prop"
+				},
+				"color": {
+					"H": "╬'primary'╩╩",
+					"T": "prop"
+				},
+				"depressed": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"elevation": {
+					"H": "╬0╩╩",
+					"T": "prop"
+				},
+				"height": {
+					"H": "╬'40px'╩╩",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ncomponents.EdtrComp_1.Close();\r\n",
+					"P": "mouseEvent:unknown | undefined",
+					"HL": "JS"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_4",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬'Close'╩╩",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "q-label newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_3"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--depressed theme--light elevation-0 v-size--default primary newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {}
+};
+export default pjson

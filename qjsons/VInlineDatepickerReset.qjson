@@ -1,0 +1,269 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VInlineDatepicker",
+			"P": {
+				"ID": {
+					"H": "datepicker",
+					"T": "prop"
+				},
+				"label": {
+					"H": "'Pick a date'",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_2"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": ""
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				},
+				"color": {
+					"H": "'primary'",
+					"T": "prop"
+				},
+				"regular": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "Quick.reset('datepicker')",
+					"P": "mouseEvent"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_5",
+									"T": "prop"
+								},
+								"text": {
+									"H": "'Reset'",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_5"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "q-label "
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VInlineDatepicker",
+			"P": {
+				"ID": {
+					"H": "datepicker",
+					"T": "prop"
+				},
+				"label": {
+					"H": "╬'Pick a date'╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_2"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "v-inline-date-picker-div-class newDropBorder"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				},
+				"color": {
+					"H": "╬'primary'╩╩",
+					"T": "prop"
+				},
+				"regular": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "╬()╣.╣Quick╩╠reset╩╩╠'datepicker'╩╩╩",
+					"P": "mouseEvent"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_5",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬'Reset'╩╩",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_5"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "q-label newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {
+		"tr-TR": {
+			"label_product": "╬'Ürün'╩╩",
+			"ACTIVE": "╬'Aktif'╩╩",
+			"PASSIVE": "╬'Pasif'╩╩",
+			"SECTOR_OST": "╬'ÖST'╩╩",
+			"SECTOR_TREASURY": "╬'Hazine'╩╩",
+			"SECTOR_OTHER": "╬'Diğer'╩╩",
+			"SECTOR_BANK": "╬'Banka'╩╩",
+			"DOMESTIC": "╬'Yurt İçi'╩╩",
+			"ABROAD": "╬'Yurt Dışı'╩╩",
+			"FIRM_SALE": "╬'Kesin Satış'╩╩",
+			"CAPITAL_REPAYMENT": "╬'Anapara İtfa'╩╩",
+			"COUPON_REPAYMENT": "╬'Kupon İtfa'╩╩",
+			"REVERSE_REPO": "╬'Ters Repo'╩╩",
+			"label_product_required": "╬'Ürün Bilgisi Gereklidir'╩╩",
+			"label_exportCountriesList_required": "╬'İhraç Edilen Ülke Bilgisi Gereklidir'╩╩",
+			"label_issuerInstutionCounter_required": "╬'İhraçcı Kurum Ülke Bilgisi Gereklidir'╩╩",
+			"label_bsmvRate_required": "╬'Bsmv Oran Bilgisi Gereklidir'╩╩",
+			"label_operation_type": "╬'İşlem Tipi'╩╩",
+			"label_issuer_sector_list": "╬'İhraçcı Sektör'╩╩",
+			"label_export_countries_list": "╬'İhraç Edilen Ülke'╩╩",
+			"label_issuer_instution_counter": "╬'İhraçcı Kurum Ülke'╩╩",
+			"label_bsmv_rate": "╬'Bsmv Oranı %'╩╩",
+			"label_instrument_type": "╬'Menkul Kıymet Tipi'╩╩",
+			"label_instrumentList_required": "╬'Menkul Kıymet Tipi Gereklidir'╩╩",
+			"label_operationType_required": "╬'İşlem Tipi Gereklidir'╩╩",
+			"label_process_alert": "╬'Bu Bilgiler Daha Önce Kullanılmış'╩╩",
+			"label_alert": "╬'Kayıt Mevcut Lütfen Tekrar Doldurunuz'╩╩",
+			"label_al_title": "╬'Hata'╩╩",
+			"lbl_Alert": "╬'Lütfen alanları kontrol ediniz'╩╩",
+			"SGMK": "╬'SGMK BSMV Tanımlama'╩╩",
+			"FIXED_INCOME": "╬'SGMK BSMV Tanımlama'╩╩",
+			"REPO": "╬'REPO BSMV Tanımlama'╩╩",
+			"lbl_save": "╬'Kaydet'╩╩",
+			"lbl_back": "╬'Vazgeç'╩╩",
+			"GOVERMENT_BOND": "╬'Devlet Tahvili'╩╩",
+			"TREASURY_BOND": "╬'Hazine Bonosu'╩╩",
+			"EUROBOND": "╬'Eurobond'╩╩",
+			"COMMERCIAL_PAPERS_FI": "╬'Finansman Bonosu'╩╩",
+			"PUBLIC_LEASE_CERTIFICATES_FI": "╬'Kamu Kira Sertifikası'╩╩",
+			"PRIVATE_LEASE_CERTIFICATES_FI": "╬'Özel Kira Sertifikası'╩╩",
+			"PRIVATE_SECTOR_BONDS_FI": "╬'Özel Sektör Tahvili'╩╩",
+			"ASSET_BASED_SECURITIES_FI": "╬'Varlığa Dayalı Menkul Kıymetler'╩╩",
+			"STRUCTURED_DEBT_INSTRUMENTS_FI": "╬'Yapılandırılmış Borçlanma Aracı'╩╩",
+			"BANK_BOND": "╬'Banka Bonosu'╩╩",
+			"label_BSMV": "╬'BSMV Tanımlama'╩╩",
+			"lbl_AlertValid": "╬'BSMV tanımı mevcut, tanımları kontrol ediniz.'╩╩"
+		},
+		"en-US": {
+			"label_product": "╬'Product'╩╩",
+			"ACTIVE": "╬'Active'╩╩",
+			"PASSIVE": "╬'Passive'╩╩",
+			"SECTOR_OST": "╬'SECTOR OST'╩╩",
+			"SECTOR_TREASURY": "╬'SECTOR TREASURY'╩╩",
+			"SECTOR_OTHER": "╬'SECTOR OTHER'╩╩",
+			"SECTOR_BANK": "╬'SEKTOR BANK'╩╩",
+			"DOMESTIC": "╬'DOMESTIC'╩╩",
+			"ABROAD": "╬'ABROAD'╩╩",
+			"FIRM_SALE": "╬'FIRM SALE'╩╩",
+			"CAPITAL_REPAYMENT": "╬'CAPITAL_REPAYMENT'╩╩",
+			"COUPON_REPAYMENT": "╬'COUPON_REPAYMENT'╩╩",
+			"REVERSE_REPO": "╬'REVERSE_REPO'╩╩",
+			"label_product_required": "╬'Product Information Required'╩╩",
+			"label_exportCountriesList_required": "╬'export countries list required'╩╩",
+			"label_issuerInstutionCounter_required": "╬'issuer instution counter required'╩╩",
+			"label_bsmvRate_required": "╬'bsmv rate required'╩╩",
+			"label_operation_type": "╬'Operation Type'╩╩",
+			"label_issuer_sector_list": "╬'Issuer Sector List'╩╩",
+			"label_export_countries_list": "╬'Export Countries List'╩╩",
+			"label_issuer_instution_counter": "╬'Issuer Instution Counter'╩╩",
+			"label_bsmv_rate": "╬'Bsmv Rate %'╩╩",
+			"label_instrument_type": "╬'Instrument Type'╩╩",
+			"label_instrumentList_required": "╬'Instrument List Required'╩╩",
+			"label_operationType_required": "╬'Operation Type Required'╩╩",
+			"label_process_alert": "╬'This Informations Has Used Before'╩╩",
+			"label_alert": "╬'Same Record Found'╩╩",
+			"label_al_title": "╬'Error'╩╩",
+			"lbl_Alert": "╬'Please fill the blank fields'╩╩",
+			"SGMK": "╬'SGMK BSMV Definition'╩╩",
+			"FIXED_INCOME": "╬'SGMK BSMV Definition'╩╩",
+			"REPO": "╬'REPO BSMV Definition'╩╩",
+			"lbl_save": "╬'Save'╩╩",
+			"lbl_back": "╬'Quit'╩╩",
+			"GOVERMENT_BOND": "╬'Goverment Bond'╩╩",
+			"TREASURY_BOND": "╬'Treasury Bond'╩╩",
+			"EUROBOND": "╬'Eurobond'╩╩",
+			"COMMERCIAL_PAPERS_FI": "╬'Commercial Papers'╩╩",
+			"PUBLIC_LEASE_CERTIFICATES_FI": "╬'Public Lease Certificates'╩╩",
+			"PRIVATE_LEASE_CERTIFICATES_FI": "╬'Private Lease Certificates'╩╩",
+			"PRIVATE_SECTOR_BONDS_FI": "╬'Private Sector Bonds'╩╩",
+			"ASSET_BASED_SECURITIES_FI": "╬'Asset Based Securities FI'╩╩",
+			"STRUCTURED_DEBT_INSTRUMENTS_FI": "╬'STRUCTURED_DEBT_INSTRUMENTS'╩╩",
+			"BANK_BOND": "╬'Bank Bond'╩╩",
+			"label_BSMV": "╬'BSMV Definition'╩╩",
+			"lbl_AlertValid": "╬'BSMV definition is available, please check the definitions.'╩╩"
+		}
+	},
+	"description": {}
+};
+export default pjson

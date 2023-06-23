@@ -1,0 +1,2029 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_3",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container container--fluid'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_13",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Doughnut",
+															"P": {
+																"ID": {
+																	"H": "doughnutChart",
+																	"T": "prop"
+																},
+																"backgroundColor": {
+																	"H": "['rgb(255, 99, 132)', 'rgb(255, 159, 64)', 'rgb(255, 205, 86)', 'rgb(75, 192, 192)', 'rgb(54, 162, 235)']",
+																	"T": "prop"
+																},
+																"data": {
+																	"H": "[99, 70, 31, 93, 91]",
+																	"T": "prop"
+																},
+																"labels": {
+																	"H": "['Red', 'Orange', 'Yellow', 'Green','Blue']",
+																	"T": "prop"
+																},
+																"title": {
+																	"H": "'Sample Doughnut Chart'",
+																	"T": "prop"
+																},
+																"cutoutPercentage": {
+																	"H": "50",
+																	"T": "prop"
+																},
+																"width": {
+																	"H": "'40vw'",
+																	"T": "prop"
+																},
+																"labelAlign": {
+																	"H": "'center'",
+																	"T": "prop"
+																},
+																"labelAnchor": {
+																	"H": "'center'",
+																	"T": "prop"
+																},
+																"labelBorderRadius": {
+																	"H": "25",
+																	"T": "prop"
+																},
+																"labelBorderWidth": {
+																	"H": "2",
+																	"T": "prop"
+																},
+																"labelClamp": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"labelClip": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"labelDisplay": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"labelFontWeight": {
+																	"H": "'bold'",
+																	"T": "prop"
+																},
+																"labelFontLineHeight": {
+																	"H": "'1.2'",
+																	"T": "prop"
+																},
+																"labelOffset": {
+																	"H": "'4'",
+																	"T": "prop"
+																},
+																"labelOpacity": {
+																	"H": "1",
+																	"T": "prop"
+																},
+																"labelPaddingTop": {
+																	"H": "6",
+																	"T": "prop"
+																},
+																"labelPaddingRight": {
+																	"H": "6",
+																	"T": "prop"
+																},
+																"labelPaddingBottom": {
+																	"H": "6",
+																	"T": "prop"
+																},
+																"labelPaddingLeft": {
+																	"H": "6",
+																	"T": "prop"
+																},
+																"labelRotation": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"labelTextAlign": {
+																	"H": "'start'",
+																	"T": "prop"
+																},
+																"labelTextStrokeWidth": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"labelTextShadowBlur": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"labelBorderColor": {
+																	"H": "'white'",
+																	"T": "prop"
+																},
+																"labelColor": {
+																	"H": "'white'",
+																	"T": "prop"
+																},
+																"borderColor": {
+																	"H": "['rgb(255, 99, 132)', 'rgb(255, 159, 64)', 'rgb(255, 205, 86)', 'rgb(75, 192, 192)', 'rgb(54, 162, 235)']",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"labelFormatter": {
+																	"H": "//context : contextual information see-> https://master--chartjs-plugin-datalabels.netlify.app/guide/options.html#option-context\r\n//value : the current data value\r\nquick.return(\"val\\n\"+ value);",
+																	"PE": true,
+																	"P": "value:any,context:{ active: boolean; dataIndex: number; chart : any; dataset: any; datasetIndex:number; }",
+																	"HL": "TS"
+																}
+															},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_77"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_16",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_16"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_13"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_37",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_4",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "quick.EM.trace(components.doughnutChart);\r\n\r\nlet doughnutData: any = components.doughnutChart.data;\r\n(<any[]>doughnutData.labels).push('data #' + (<any[]>doughnutData.labels).length);\r\n\r\n(<any[]>doughnutData.datasets).forEach(item => {\r\n    let randomInt = getRandomInt(1, 99);\r\n    (<any[]>item.data).push(randomInt);\r\n    (<any[]>item.backgroundColor).push('rgba(153, 102, 255, 0.2)');\r\n    (<any[]>item.borderColor).push('rgba(153, 102, 255, 1)');\r\n});\r\n\r\n(<any>components.doughnutChart).update();\r\n\r\nfunction getRandomInt(min, max) {\r\n    min = Math.ceil(min);\r\n    max = Math.floor(max);\r\n    return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive\r\n}",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "TS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_11",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'Add Data'",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_11"
+																			},
+																			"O": {
+																				"cType": "child"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_4"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														},
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_9",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "quick.EM.trace(components.doughnutChart);\r\n\r\nlet doughnutData: any = components.doughnutChart.data;\r\n(<any[]>doughnutData.labels).splice(-1,1); // array'in en sondaki itemı silinir.\r\n\r\n(<any[]>doughnutData.datasets).forEach(item => {\r\n    quick.EM.trace(item);\r\n    (<any[]>item.data).pop(); // array'in en sondaki itemı silinir.\r\n});\r\n\r\n(<any>components.doughnutChart).update();\r\n",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "TS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_10",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'Remove Data'",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_10"
+																			},
+																			"O": {
+																				"cType": "child"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_9"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														},
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_6",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "\r\nquick.EM.trace(components.doughnutChart);\r\n\r\nlet backgroundColors = ['rgba(1, 217, 66, 0.2)', 'rgba(72, 26, 46,0.2)', 'rgba(34, 101, 157, 0.2)', 'rgba(176, 196, 238, 0.2)', 'rgba(11, 177, 187, 0.2)', 'rgba(88, 225, 98,0.2)', 'rgba(162, 247, 200, 0.2)'];\r\nlet borderColors = ['rgba(1, 217, 66, 1)', 'rgba(72, 26, 46,1)', 'rgba(34, 101, 157, 1)', 'rgba(176, 196, 238, 1)', 'rgba(11, 177, 187, 1)', 'rgba(88, 225, 98,1)', 'rgba(162, 247, 200,1)'];\r\n\r\nlet doughnutData: any = components.doughnutChart.data;\r\n\r\nlet newDataSet: any = {};\r\nnewDataSet.label = 'Dataset ' + ((<any[]>doughnutData.datasets).length + 1);\r\nnewDataSet.backgroundColor = backgroundColors;\r\nnewDataSet.borderColor = borderColors;\r\nnewDataSet.borderWidth = 1;\r\nnewDataSet.data = [];\r\n\r\n(<any[]>doughnutData.labels).forEach(item => {\r\n    let randomInt = getRandomInt(1, 20);\r\n    (<any[]>newDataSet.data).push(randomInt);\r\n});\r\n\r\n(<any[]>doughnutData.datasets).push(newDataSet);\r\n(<any>components.doughnutChart).update();\r\n\r\nfunction getRandomInt(min, max) {\r\n    min = Math.ceil(min);\r\n    max = Math.floor(max);\r\n    return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive\r\n}",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "TS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_5",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'Add Dataset'",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_5"
+																			},
+																			"O": {
+																				"cType": "child"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_6"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														},
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_7",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "\r\nquick.EM.trace(components.doughnutChart);\r\n\r\nlet doughnutData: any = components.doughnutChart.data;\r\n(<any[]>doughnutData.datasets).splice(-1); // array'in en sondaki itemı silinir.\r\n(<any>components.doughnutChart).update();\r\n",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "TS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_8",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'Remove Dataset'",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_8"
+																			},
+																			"O": {
+																				"cType": "child"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_7"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_42",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_42"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"sp:mb-5"
+														]
+													},
+													"class": "d-flex mb-5"
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_37"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_95",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Doughnut",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_104",
+																	"T": "prop"
+																},
+																"backgroundColor": {
+																	"H": "['rgb(255, 99, 132)', 'rgb(255, 159, 64)', 'rgb(255, 205, 86)', 'rgb(75, 192, 192)', 'rgb(54, 162, 235)']",
+																	"T": "prop"
+																},
+																"data": {
+																	"H": "[99, 70, 31, 93, 91]",
+																	"T": "prop"
+																},
+																"labels": {
+																	"H": "['Red', 'Orange', 'Yellow', 'Green','Blue']",
+																	"T": "prop"
+																},
+																"title": {
+																	"H": "'Sample Doughnut Chart'",
+																	"T": "prop"
+																},
+																"cutoutPercentage": {
+																	"H": "50",
+																	"T": "prop"
+																},
+																"width": {
+																	"H": "'40vw'",
+																	"T": "prop"
+																},
+																"labelAlign": {
+																	"H": "'center'",
+																	"T": "prop"
+																},
+																"labelAnchor": {
+																	"H": "'center'",
+																	"T": "prop"
+																},
+																"labelBorderRadius": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"labelBorderWidth": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"labelClamp": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"labelClip": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"labelDisplay": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"labelFontWeight": {
+																	"H": "'normal'",
+																	"T": "prop"
+																},
+																"labelFontLineHeight": {
+																	"H": "'1.2'",
+																	"T": "prop"
+																},
+																"labelOffset": {
+																	"H": "'4'",
+																	"T": "prop"
+																},
+																"labelOpacity": {
+																	"H": "1",
+																	"T": "prop"
+																},
+																"labelPaddingTop": {
+																	"H": "4",
+																	"T": "prop"
+																},
+																"labelPaddingRight": {
+																	"H": "4",
+																	"T": "prop"
+																},
+																"labelPaddingBottom": {
+																	"H": "4",
+																	"T": "prop"
+																},
+																"labelPaddingLeft": {
+																	"H": "4",
+																	"T": "prop"
+																},
+																"labelRotation": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"labelTextAlign": {
+																	"H": "'start'",
+																	"T": "prop"
+																},
+																"labelTextStrokeWidth": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"labelTextShadowBlur": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"borderColor": {
+																	"H": "['rgb(255, 99, 132)', 'rgb(255, 159, 64)', 'rgb(255, 205, 86)', 'rgb(75, 192, 192)', 'rgb(54, 162, 235)']",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_104"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_102",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_102"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"sp:mb-5"
+														]
+													},
+													"class": "d-flex mb-5"
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_95"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_117",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Doughnut",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_119",
+																	"T": "prop"
+																},
+																"backgroundColor": {
+																	"H": "['rgb(255, 99, 132)', 'rgb(255, 159, 64)', 'rgb(255, 205, 86)', 'rgb(75, 192, 192)', 'rgb(54, 162, 235)']",
+																	"T": "prop"
+																},
+																"data": {
+																	"H": "[99, 70, 31, 93, 91]",
+																	"T": "prop"
+																},
+																"labels": {
+																	"H": "['Red', 'Orange', 'Yellow', 'Green','Blue']",
+																	"T": "prop"
+																},
+																"title": {
+																	"H": "'Sample Doughnut Chart'",
+																	"T": "prop"
+																},
+																"cutoutPercentage": {
+																	"H": "50",
+																	"T": "prop"
+																},
+																"width": {
+																	"H": "'40vw'",
+																	"T": "prop"
+																},
+																"labelAlign": {
+																	"H": "'center'",
+																	"T": "prop"
+																},
+																"labelAnchor": {
+																	"H": "'center'",
+																	"T": "prop"
+																},
+																"labelBorderRadius": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"labelBorderWidth": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"labelClamp": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"labelClip": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"labelDisplay": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"labelFontWeight": {
+																	"H": "'normal'",
+																	"T": "prop"
+																},
+																"labelFontLineHeight": {
+																	"H": "'1.2'",
+																	"T": "prop"
+																},
+																"labelOffset": {
+																	"H": "'4'",
+																	"T": "prop"
+																},
+																"labelOpacity": {
+																	"H": "1",
+																	"T": "prop"
+																},
+																"labelPaddingTop": {
+																	"H": "4",
+																	"T": "prop"
+																},
+																"labelPaddingRight": {
+																	"H": "4",
+																	"T": "prop"
+																},
+																"labelPaddingBottom": {
+																	"H": "4",
+																	"T": "prop"
+																},
+																"labelPaddingLeft": {
+																	"H": "4",
+																	"T": "prop"
+																},
+																"labelRotation": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"labelTextAlign": {
+																	"H": "'start'",
+																	"T": "prop"
+																},
+																"labelTextStrokeWidth": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"labelTextShadowBlur": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"borderColor": {
+																	"H": "['rgb(255, 99, 132)', 'rgb(255, 159, 64)', 'rgb(255, 205, 86)', 'rgb(75, 192, 192)', 'rgb(54, 162, 235)']",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_119"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_118",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_118"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"sp:mb-5"
+														]
+													},
+													"class": "d-flex mb-5"
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_117"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_136",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Doughnut",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_138",
+																	"T": "prop"
+																},
+																"backgroundColor": {
+																	"H": "['rgb(255, 99, 132)', 'rgb(255, 159, 64)', 'rgb(255, 205, 86)', 'rgb(75, 192, 192)', 'rgb(54, 162, 235)']",
+																	"T": "prop"
+																},
+																"data": {
+																	"H": "[99, 70, 31, 93, 91]",
+																	"T": "prop"
+																},
+																"labels": {
+																	"H": "['Red', 'Orange', 'Yellow', 'Green','Blue']",
+																	"T": "prop"
+																},
+																"title": {
+																	"H": "'Sample Doughnut Chart'",
+																	"T": "prop"
+																},
+																"cutoutPercentage": {
+																	"H": "50",
+																	"T": "prop"
+																},
+																"width": {
+																	"H": "'40vw'",
+																	"T": "prop"
+																},
+																"labelAlign": {
+																	"H": "'center'",
+																	"T": "prop"
+																},
+																"labelAnchor": {
+																	"H": "'center'",
+																	"T": "prop"
+																},
+																"labelBorderRadius": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"labelBorderWidth": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"labelClamp": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"labelClip": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"labelDisplay": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"labelFontWeight": {
+																	"H": "'normal'",
+																	"T": "prop"
+																},
+																"labelFontLineHeight": {
+																	"H": "'1.2'",
+																	"T": "prop"
+																},
+																"labelOffset": {
+																	"H": "'4'",
+																	"T": "prop"
+																},
+																"labelOpacity": {
+																	"H": "1",
+																	"T": "prop"
+																},
+																"labelPaddingTop": {
+																	"H": "4",
+																	"T": "prop"
+																},
+																"labelPaddingRight": {
+																	"H": "4",
+																	"T": "prop"
+																},
+																"labelPaddingBottom": {
+																	"H": "4",
+																	"T": "prop"
+																},
+																"labelPaddingLeft": {
+																	"H": "4",
+																	"T": "prop"
+																},
+																"labelRotation": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"labelTextAlign": {
+																	"H": "'start'",
+																	"T": "prop"
+																},
+																"labelTextStrokeWidth": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"labelTextShadowBlur": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"borderColor": {
+																	"H": "['rgb(255, 99, 132)', 'rgb(255, 159, 64)', 'rgb(255, 205, 86)', 'rgb(75, 192, 192)', 'rgb(54, 162, 235)']",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"labelFormatter": {
+																	"H": "//context : contextual information see-> https://master--chartjs-plugin-datalabels.netlify.app/guide/options.html#option-context\r\n//value : the current data value\r\nquick.return(value + '%');",
+																	"PE": true,
+																	"P": "value:any,context:{ active: boolean; dataIndex: number; chart : any; dataset: any; datasetIndex:number; }",
+																	"HL": "TS"
+																}
+															},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_138"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_137",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_137"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_136"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_3"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_3",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container container--fluid'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_13",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Doughnut",
+															"P": {
+																"ID": {
+																	"H": "doughnutChart",
+																	"T": "prop"
+																},
+																"backgroundColor": {
+																	"H": "╬[]╠'rgb(255, 99, 132)'╩╠'rgb(255, 159, 64)'╩╠'rgb(255, 205, 86)'╩╠'rgb(75, 192, 192)'╩╠'rgb(54, 162, 235)'╩╩╩",
+																	"T": "prop"
+																},
+																"data": {
+																	"H": "╬[]╠99╩╠70╩╠31╩╠93╩╠91╩╩╩",
+																	"T": "prop"
+																},
+																"labels": {
+																	"H": "╬[]╠'Red'╩╠'Orange'╩╠'Yellow'╩╠'Green'╩╠'Blue'╩╩╩",
+																	"T": "prop"
+																},
+																"title": {
+																	"H": "╬'Sample Doughnut Chart'╩╩",
+																	"T": "prop"
+																},
+																"cutoutPercentage": {
+																	"H": "╬50╩╩",
+																	"T": "prop"
+																},
+																"width": {
+																	"H": "╬'40vw'╩╩",
+																	"T": "prop"
+																},
+																"labelAlign": {
+																	"H": "╬'center'╩╩",
+																	"T": "prop"
+																},
+																"labelAnchor": {
+																	"H": "╬'center'╩╩",
+																	"T": "prop"
+																},
+																"labelBorderRadius": {
+																	"H": "╬25╩╩",
+																	"T": "prop"
+																},
+																"labelBorderWidth": {
+																	"H": "╬2╩╩",
+																	"T": "prop"
+																},
+																"labelClamp": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"labelClip": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"labelDisplay": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"labelFontWeight": {
+																	"H": "╬'bold'╩╩",
+																	"T": "prop"
+																},
+																"labelFontLineHeight": {
+																	"H": "╬'1.2'╩╩",
+																	"T": "prop"
+																},
+																"labelOffset": {
+																	"H": "╬'4'╩╩",
+																	"T": "prop"
+																},
+																"labelOpacity": {
+																	"H": "╬1╩╩",
+																	"T": "prop"
+																},
+																"labelPaddingTop": {
+																	"H": "╬6╩╩",
+																	"T": "prop"
+																},
+																"labelPaddingRight": {
+																	"H": "╬6╩╩",
+																	"T": "prop"
+																},
+																"labelPaddingBottom": {
+																	"H": "╬6╩╩",
+																	"T": "prop"
+																},
+																"labelPaddingLeft": {
+																	"H": "╬6╩╩",
+																	"T": "prop"
+																},
+																"labelRotation": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"labelTextAlign": {
+																	"H": "╬'start'╩╩",
+																	"T": "prop"
+																},
+																"labelTextStrokeWidth": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"labelTextShadowBlur": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"labelBorderColor": {
+																	"H": "╬'white'╩╩",
+																	"T": "prop"
+																},
+																"labelColor": {
+																	"H": "╬'white'╩╩",
+																	"T": "prop"
+																},
+																"borderColor": {
+																	"H": "╬[]╠'rgb(255, 99, 132)'╩╠'rgb(255, 159, 64)'╩╠'rgb(255, 205, 86)'╩╠'rgb(75, 192, 192)'╩╠'rgb(54, 162, 235)'╩╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"labelFormatter": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\n//context : contextual information see-> https://master--chartjs-plugin-datalabels.netlify.app/guide/options.html#option-context\r\n//value : the current data value\r\nquick.return(\"val\\n\" + value);\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZG91Z2hudXRDaGFydF9sYWJlbEZvcm1hdHRlcl9FLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiZG91Z2hudXRDaGFydF9sYWJlbEZvcm1hdHRlcl9FLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFFQSxnSUFBZ0k7QUFDaEksZ0NBQWdDO0FBQ2hDLEtBQUssQ0FBQyxNQUFNLENBQUMsT0FBTyxHQUFFLEtBQUssQ0FBQyxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiZGVjbGFyZSB2YXIgdmFsdWU6YW55O1xuZGVjbGFyZSB2YXIgY29udGV4dDp7IGFjdGl2ZTogYm9vbGVhbjsgZGF0YUluZGV4OiBudW1iZXI7IGNoYXJ0IDogYW55OyBkYXRhc2V0OiBhbnk7IGRhdGFzZXRJbmRleDpudW1iZXI7IH1cbi8vY29udGV4dCA6IGNvbnRleHR1YWwgaW5mb3JtYXRpb24gc2VlLT4gaHR0cHM6Ly9tYXN0ZXItLWNoYXJ0anMtcGx1Z2luLWRhdGFsYWJlbHMubmV0bGlmeS5hcHAvZ3VpZGUvb3B0aW9ucy5odG1sI29wdGlvbi1jb250ZXh0XHJcbi8vdmFsdWUgOiB0aGUgY3VycmVudCBkYXRhIHZhbHVlXHJcbnF1aWNrLnJldHVybihcInZhbFxcblwiKyB2YWx1ZSk7XG4gZXhwb3J0e307XG4iXX0=",
+																	"PE": true,
+																	"P": "value:any,context:{ active: boolean; dataIndex: number; chart : any; dataset: any; datasetIndex:number; }",
+																	"HL": "JS"
+																}
+															},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_77"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_16",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_16"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_13"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_37",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_4",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.EM.trace(components.doughnutChart);\r\nvar doughnutData = components.doughnutChart.data;\r\ndoughnutData.labels.push('data #' + doughnutData.labels.length);\r\ndoughnutData.datasets.forEach(function (item) {\r\n    var randomInt = getRandomInt(1, 99);\r\n    item.data.push(randomInt);\r\n    item.backgroundColor.push('rgba(153, 102, 255, 0.2)');\r\n    item.borderColor.push('rgba(153, 102, 255, 1)');\r\n});\r\ncomponents.doughnutChart.update();\r\nfunction getRandomInt(min, max) {\r\n    min = Math.ceil(min);\r\n    max = Math.floor(max);\r\n    return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive\r\n}\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfNF9jbGlja19FLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiRWR0ckNvbXBfNF9jbGlja19FLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQSxLQUFLLENBQUMsRUFBRSxDQUFDLEtBQUssQ0FBQyxVQUFVLENBQUMsYUFBYSxDQUFDLENBQUM7QUFFekMsSUFBSSxZQUFZLEdBQVEsVUFBVSxDQUFDLGFBQWEsQ0FBQyxJQUFJLENBQUM7QUFDOUMsWUFBWSxDQUFDLE1BQU8sQ0FBQyxJQUFJLENBQUMsUUFBUSxHQUFXLFlBQVksQ0FBQyxNQUFPLENBQUMsTUFBTSxDQUFDLENBQUM7QUFFMUUsWUFBWSxDQUFDLFFBQVMsQ0FBQyxPQUFPLENBQUMsVUFBQSxJQUFJO0lBQ3ZDLElBQUksU0FBUyxHQUFHLFlBQVksQ0FBQyxDQUFDLEVBQUUsRUFBRSxDQUFDLENBQUM7SUFDNUIsSUFBSSxDQUFDLElBQUssQ0FBQyxJQUFJLENBQUMsU0FBUyxDQUFDLENBQUM7SUFDM0IsSUFBSSxDQUFDLGVBQWdCLENBQUMsSUFBSSxDQUFDLDBCQUEwQixDQUFDLENBQUM7SUFDdkQsSUFBSSxDQUFDLFdBQVksQ0FBQyxJQUFJLENBQUMsd0JBQXdCLENBQUMsQ0FBQztBQUM3RCxDQUFDLENBQUMsQ0FBQztBQUVHLFVBQVUsQ0FBQyxhQUFjLENBQUMsTUFBTSxFQUFFLENBQUM7QUFFekMsU0FBUyxZQUFZLENBQUMsR0FBRyxFQUFFLEdBQUc7SUFDMUIsR0FBRyxHQUFHLElBQUksQ0FBQyxJQUFJLENBQUMsR0FBRyxDQUFDLENBQUM7SUFDckIsR0FBRyxHQUFHLElBQUksQ0FBQyxLQUFLLENBQUMsR0FBRyxDQUFDLENBQUM7SUFDdEIsT0FBTyxJQUFJLENBQUMsS0FBSyxDQUFDLElBQUksQ0FBQyxNQUFNLEVBQUUsR0FBRyxDQUFDLEdBQUcsR0FBRyxHQUFHLENBQUMsR0FBRyxHQUFHLENBQUMsQ0FBQyxDQUFDLHVEQUF1RDtBQUNqSCxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiZGVjbGFyZSB2YXIgbW91c2VFdmVudDp1bmtub3duIHwgdW5kZWZpbmVkXG5xdWljay5FTS50cmFjZShjb21wb25lbnRzLmRvdWdobnV0Q2hhcnQpO1xyXG5cclxubGV0IGRvdWdobnV0RGF0YTogYW55ID0gY29tcG9uZW50cy5kb3VnaG51dENoYXJ0LmRhdGE7XHJcbig8YW55W10+ZG91Z2hudXREYXRhLmxhYmVscykucHVzaCgnZGF0YSAjJyArICg8YW55W10+ZG91Z2hudXREYXRhLmxhYmVscykubGVuZ3RoKTtcclxuXHJcbig8YW55W10+ZG91Z2hudXREYXRhLmRhdGFzZXRzKS5mb3JFYWNoKGl0ZW0gPT4ge1xyXG4gICAgbGV0IHJhbmRvbUludCA9IGdldFJhbmRvbUludCgxLCA5OSk7XHJcbiAgICAoPGFueVtdPml0ZW0uZGF0YSkucHVzaChyYW5kb21JbnQpO1xyXG4gICAgKDxhbnlbXT5pdGVtLmJhY2tncm91bmRDb2xvcikucHVzaCgncmdiYSgxNTMsIDEwMiwgMjU1LCAwLjIpJyk7XHJcbiAgICAoPGFueVtdPml0ZW0uYm9yZGVyQ29sb3IpLnB1c2goJ3JnYmEoMTUzLCAxMDIsIDI1NSwgMSknKTtcclxufSk7XHJcblxyXG4oPGFueT5jb21wb25lbnRzLmRvdWdobnV0Q2hhcnQpLnVwZGF0ZSgpO1xyXG5cclxuZnVuY3Rpb24gZ2V0UmFuZG9tSW50KG1pbiwgbWF4KSB7XHJcbiAgICBtaW4gPSBNYXRoLmNlaWwobWluKTtcclxuICAgIG1heCA9IE1hdGguZmxvb3IobWF4KTtcclxuICAgIHJldHVybiBNYXRoLmZsb29yKE1hdGgucmFuZG9tKCkgKiAobWF4IC0gbWluKSArIG1pbik7IC8vVGhlIG1heGltdW0gaXMgZXhjbHVzaXZlIGFuZCB0aGUgbWluaW11bSBpcyBpbmNsdXNpdmVcclxufVxuIGV4cG9ydHt9O1xuIl19",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "JS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_11",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'Add Data'╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_11"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "q-label newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_4"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-btn v-btn--contained theme--light v-size--default newDropBorder"
+															}
+														},
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_9",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.EM.trace(components.doughnutChart);\r\nvar doughnutData = components.doughnutChart.data;\r\ndoughnutData.labels.splice(-1, 1); // array'in en sondaki itemı silinir.\r\ndoughnutData.datasets.forEach(function (item) {\r\n    quick.EM.trace(item);\r\n    item.data.pop(); // array'in en sondaki itemı silinir.\r\n});\r\ncomponents.doughnutChart.update();\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfOV9jbGlja19FLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiRWR0ckNvbXBfOV9jbGlja19FLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQSxLQUFLLENBQUMsRUFBRSxDQUFDLEtBQUssQ0FBQyxVQUFVLENBQUMsYUFBYSxDQUFDLENBQUM7QUFFekMsSUFBSSxZQUFZLEdBQVEsVUFBVSxDQUFDLGFBQWEsQ0FBQyxJQUFJLENBQUM7QUFDOUMsWUFBWSxDQUFDLE1BQU8sQ0FBQyxNQUFNLENBQUMsQ0FBQyxDQUFDLEVBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxxQ0FBcUM7QUFFeEUsWUFBWSxDQUFDLFFBQVMsQ0FBQyxPQUFPLENBQUMsVUFBQSxJQUFJO0lBQ3ZDLEtBQUssQ0FBQyxFQUFFLENBQUMsS0FBSyxDQUFDLElBQUksQ0FBQyxDQUFDO0lBQ2IsSUFBSSxDQUFDLElBQUssQ0FBQyxHQUFHLEVBQUUsQ0FBQyxDQUFDLHFDQUFxQztBQUNuRSxDQUFDLENBQUMsQ0FBQztBQUVHLFVBQVUsQ0FBQyxhQUFjLENBQUMsTUFBTSxFQUFFLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJkZWNsYXJlIHZhciBtb3VzZUV2ZW50OnVua25vd24gfCB1bmRlZmluZWRcbnF1aWNrLkVNLnRyYWNlKGNvbXBvbmVudHMuZG91Z2hudXRDaGFydCk7XHJcblxyXG5sZXQgZG91Z2hudXREYXRhOiBhbnkgPSBjb21wb25lbnRzLmRvdWdobnV0Q2hhcnQuZGF0YTtcclxuKDxhbnlbXT5kb3VnaG51dERhdGEubGFiZWxzKS5zcGxpY2UoLTEsMSk7IC8vIGFycmF5J2luIGVuIHNvbmRha2kgaXRlbcSxIHNpbGluaXIuXHJcblxyXG4oPGFueVtdPmRvdWdobnV0RGF0YS5kYXRhc2V0cykuZm9yRWFjaChpdGVtID0+IHtcclxuICAgIHF1aWNrLkVNLnRyYWNlKGl0ZW0pO1xyXG4gICAgKDxhbnlbXT5pdGVtLmRhdGEpLnBvcCgpOyAvLyBhcnJheSdpbiBlbiBzb25kYWtpIGl0ZW3EsSBzaWxpbmlyLlxyXG59KTtcclxuXHJcbig8YW55PmNvbXBvbmVudHMuZG91Z2hudXRDaGFydCkudXBkYXRlKCk7XHJcblxuIGV4cG9ydHt9O1xuIl19",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "JS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_10",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'Remove Data'╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_10"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "q-label newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_9"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-btn v-btn--contained theme--light v-size--default newDropBorder"
+															}
+														},
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_6",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.EM.trace(components.doughnutChart);\r\nvar backgroundColors = ['rgba(1, 217, 66, 0.2)', 'rgba(72, 26, 46,0.2)', 'rgba(34, 101, 157, 0.2)', 'rgba(176, 196, 238, 0.2)', 'rgba(11, 177, 187, 0.2)', 'rgba(88, 225, 98,0.2)', 'rgba(162, 247, 200, 0.2)'];\r\nvar borderColors = ['rgba(1, 217, 66, 1)', 'rgba(72, 26, 46,1)', 'rgba(34, 101, 157, 1)', 'rgba(176, 196, 238, 1)', 'rgba(11, 177, 187, 1)', 'rgba(88, 225, 98,1)', 'rgba(162, 247, 200,1)'];\r\nvar doughnutData = components.doughnutChart.data;\r\nvar newDataSet = {};\r\nnewDataSet.label = 'Dataset ' + (doughnutData.datasets.length + 1);\r\nnewDataSet.backgroundColor = backgroundColors;\r\nnewDataSet.borderColor = borderColors;\r\nnewDataSet.borderWidth = 1;\r\nnewDataSet.data = [];\r\ndoughnutData.labels.forEach(function (item) {\r\n    var randomInt = getRandomInt(1, 20);\r\n    newDataSet.data.push(randomInt);\r\n});\r\ndoughnutData.datasets.push(newDataSet);\r\ncomponents.doughnutChart.update();\r\nfunction getRandomInt(min, max) {\r\n    min = Math.ceil(min);\r\n    max = Math.floor(max);\r\n    return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive\r\n}\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfNl9jbGlja19FLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiRWR0ckNvbXBfNl9jbGlja19FLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFFQSxLQUFLLENBQUMsRUFBRSxDQUFDLEtBQUssQ0FBQyxVQUFVLENBQUMsYUFBYSxDQUFDLENBQUM7QUFFekMsSUFBSSxnQkFBZ0IsR0FBRyxDQUFDLHVCQUF1QixFQUFFLHNCQUFzQixFQUFFLHlCQUF5QixFQUFFLDBCQUEwQixFQUFFLHlCQUF5QixFQUFFLHVCQUF1QixFQUFFLDBCQUEwQixDQUFDLENBQUM7QUFDaE4sSUFBSSxZQUFZLEdBQUcsQ0FBQyxxQkFBcUIsRUFBRSxvQkFBb0IsRUFBRSx1QkFBdUIsRUFBRSx3QkFBd0IsRUFBRSx1QkFBdUIsRUFBRSxxQkFBcUIsRUFBRSx1QkFBdUIsQ0FBQyxDQUFDO0FBRTdMLElBQUksWUFBWSxHQUFRLFVBQVUsQ0FBQyxhQUFhLENBQUMsSUFBSSxDQUFDO0FBRXRELElBQUksVUFBVSxHQUFRLEVBQUUsQ0FBQztBQUN6QixVQUFVLENBQUMsS0FBSyxHQUFHLFVBQVUsR0FBRyxDQUFTLFlBQVksQ0FBQyxRQUFTLENBQUMsTUFBTSxHQUFHLENBQUMsQ0FBQyxDQUFDO0FBQzVFLFVBQVUsQ0FBQyxlQUFlLEdBQUcsZ0JBQWdCLENBQUM7QUFDOUMsVUFBVSxDQUFDLFdBQVcsR0FBRyxZQUFZLENBQUM7QUFDdEMsVUFBVSxDQUFDLFdBQVcsR0FBRyxDQUFDLENBQUM7QUFDM0IsVUFBVSxDQUFDLElBQUksR0FBRyxFQUFFLENBQUM7QUFFYixZQUFZLENBQUMsTUFBTyxDQUFDLE9BQU8sQ0FBQyxVQUFBLElBQUk7SUFDckMsSUFBSSxTQUFTLEdBQUcsWUFBWSxDQUFDLENBQUMsRUFBRSxFQUFFLENBQUMsQ0FBQztJQUM1QixVQUFVLENBQUMsSUFBSyxDQUFDLElBQUksQ0FBQyxTQUFTLENBQUMsQ0FBQztBQUM3QyxDQUFDLENBQUMsQ0FBQztBQUVLLFlBQVksQ0FBQyxRQUFTLENBQUMsSUFBSSxDQUFDLFVBQVUsQ0FBQyxDQUFDO0FBQzFDLFVBQVUsQ0FBQyxhQUFjLENBQUMsTUFBTSxFQUFFLENBQUM7QUFFekMsU0FBUyxZQUFZLENBQUMsR0FBRyxFQUFFLEdBQUc7SUFDMUIsR0FBRyxHQUFHLElBQUksQ0FBQyxJQUFJLENBQUMsR0FBRyxDQUFDLENBQUM7SUFDckIsR0FBRyxHQUFHLElBQUksQ0FBQyxLQUFLLENBQUMsR0FBRyxDQUFDLENBQUM7SUFDdEIsT0FBTyxJQUFJLENBQUMsS0FBSyxDQUFDLElBQUksQ0FBQyxNQUFNLEVBQUUsR0FBRyxDQUFDLEdBQUcsR0FBRyxHQUFHLENBQUMsR0FBRyxHQUFHLENBQUMsQ0FBQyxDQUFDLHVEQUF1RDtBQUNqSCxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiZGVjbGFyZSB2YXIgbW91c2VFdmVudDp1bmtub3duIHwgdW5kZWZpbmVkXG5cclxucXVpY2suRU0udHJhY2UoY29tcG9uZW50cy5kb3VnaG51dENoYXJ0KTtcclxuXHJcbmxldCBiYWNrZ3JvdW5kQ29sb3JzID0gWydyZ2JhKDEsIDIxNywgNjYsIDAuMiknLCAncmdiYSg3MiwgMjYsIDQ2LDAuMiknLCAncmdiYSgzNCwgMTAxLCAxNTcsIDAuMiknLCAncmdiYSgxNzYsIDE5NiwgMjM4LCAwLjIpJywgJ3JnYmEoMTEsIDE3NywgMTg3LCAwLjIpJywgJ3JnYmEoODgsIDIyNSwgOTgsMC4yKScsICdyZ2JhKDE2MiwgMjQ3LCAyMDAsIDAuMiknXTtcclxubGV0IGJvcmRlckNvbG9ycyA9IFsncmdiYSgxLCAyMTcsIDY2LCAxKScsICdyZ2JhKDcyLCAyNiwgNDYsMSknLCAncmdiYSgzNCwgMTAxLCAxNTcsIDEpJywgJ3JnYmEoMTc2LCAxOTYsIDIzOCwgMSknLCAncmdiYSgxMSwgMTc3LCAxODcsIDEpJywgJ3JnYmEoODgsIDIyNSwgOTgsMSknLCAncmdiYSgxNjIsIDI0NywgMjAwLDEpJ107XHJcblxyXG5sZXQgZG91Z2hudXREYXRhOiBhbnkgPSBjb21wb25lbnRzLmRvdWdobnV0Q2hhcnQuZGF0YTtcclxuXHJcbmxldCBuZXdEYXRhU2V0OiBhbnkgPSB7fTtcclxubmV3RGF0YVNldC5sYWJlbCA9ICdEYXRhc2V0ICcgKyAoKDxhbnlbXT5kb3VnaG51dERhdGEuZGF0YXNldHMpLmxlbmd0aCArIDEpO1xyXG5uZXdEYXRhU2V0LmJhY2tncm91bmRDb2xvciA9IGJhY2tncm91bmRDb2xvcnM7XHJcbm5ld0RhdGFTZXQuYm9yZGVyQ29sb3IgPSBib3JkZXJDb2xvcnM7XHJcbm5ld0RhdGFTZXQuYm9yZGVyV2lkdGggPSAxO1xyXG5uZXdEYXRhU2V0LmRhdGEgPSBbXTtcclxuXHJcbig8YW55W10+ZG91Z2hudXREYXRhLmxhYmVscykuZm9yRWFjaChpdGVtID0+IHtcclxuICAgIGxldCByYW5kb21JbnQgPSBnZXRSYW5kb21JbnQoMSwgMjApO1xyXG4gICAgKDxhbnlbXT5uZXdEYXRhU2V0LmRhdGEpLnB1c2gocmFuZG9tSW50KTtcclxufSk7XHJcblxyXG4oPGFueVtdPmRvdWdobnV0RGF0YS5kYXRhc2V0cykucHVzaChuZXdEYXRhU2V0KTtcclxuKDxhbnk+Y29tcG9uZW50cy5kb3VnaG51dENoYXJ0KS51cGRhdGUoKTtcclxuXHJcbmZ1bmN0aW9uIGdldFJhbmRvbUludChtaW4sIG1heCkge1xyXG4gICAgbWluID0gTWF0aC5jZWlsKG1pbik7XHJcbiAgICBtYXggPSBNYXRoLmZsb29yKG1heCk7XHJcbiAgICByZXR1cm4gTWF0aC5mbG9vcihNYXRoLnJhbmRvbSgpICogKG1heCAtIG1pbikgKyBtaW4pOyAvL1RoZSBtYXhpbXVtIGlzIGV4Y2x1c2l2ZSBhbmQgdGhlIG1pbmltdW0gaXMgaW5jbHVzaXZlXHJcbn1cbiBleHBvcnR7fTtcbiJdfQ==",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "JS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_5",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'Add Dataset'╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_5"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "q-label newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_6"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-btn v-btn--contained theme--light v-size--default newDropBorder"
+															}
+														},
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_7",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.EM.trace(components.doughnutChart);\r\nvar doughnutData = components.doughnutChart.data;\r\ndoughnutData.datasets.splice(-1); // array'in en sondaki itemı silinir.\r\ncomponents.doughnutChart.update();\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfN19jbGlja19FLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiRWR0ckNvbXBfN19jbGlja19FLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFFQSxLQUFLLENBQUMsRUFBRSxDQUFDLEtBQUssQ0FBQyxVQUFVLENBQUMsYUFBYSxDQUFDLENBQUM7QUFFekMsSUFBSSxZQUFZLEdBQVEsVUFBVSxDQUFDLGFBQWEsQ0FBQyxJQUFJLENBQUM7QUFDOUMsWUFBWSxDQUFDLFFBQVMsQ0FBQyxNQUFNLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLHFDQUFxQztBQUMxRSxVQUFVLENBQUMsYUFBYyxDQUFDLE1BQU0sRUFBRSxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiZGVjbGFyZSB2YXIgbW91c2VFdmVudDp1bmtub3duIHwgdW5kZWZpbmVkXG5cclxucXVpY2suRU0udHJhY2UoY29tcG9uZW50cy5kb3VnaG51dENoYXJ0KTtcclxuXHJcbmxldCBkb3VnaG51dERhdGE6IGFueSA9IGNvbXBvbmVudHMuZG91Z2hudXRDaGFydC5kYXRhO1xyXG4oPGFueVtdPmRvdWdobnV0RGF0YS5kYXRhc2V0cykuc3BsaWNlKC0xKTsgLy8gYXJyYXknaW4gZW4gc29uZGFraSBpdGVtxLEgc2lsaW5pci5cclxuKDxhbnk+Y29tcG9uZW50cy5kb3VnaG51dENoYXJ0KS51cGRhdGUoKTtcclxuXG4gZXhwb3J0e307XG4iXX0=",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "JS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_8",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'Remove Dataset'╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_8"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "q-label newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_7"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-btn v-btn--contained theme--light v-size--default newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_42",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_42"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"sp:mb-5"
+														]
+													},
+													"class": "d-flex mb-5"
+												},
+												"compDomClasses": "col d-flex mb-5 newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_37"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_95",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Doughnut",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_104",
+																	"T": "prop"
+																},
+																"backgroundColor": {
+																	"H": "╬[]╠'rgb(255, 99, 132)'╩╠'rgb(255, 159, 64)'╩╠'rgb(255, 205, 86)'╩╠'rgb(75, 192, 192)'╩╠'rgb(54, 162, 235)'╩╩╩",
+																	"T": "prop"
+																},
+																"data": {
+																	"H": "╬[]╠99╩╠70╩╠31╩╠93╩╠91╩╩╩",
+																	"T": "prop"
+																},
+																"labels": {
+																	"H": "╬[]╠'Red'╩╠'Orange'╩╠'Yellow'╩╠'Green'╩╠'Blue'╩╩╩",
+																	"T": "prop"
+																},
+																"title": {
+																	"H": "╬'Sample Doughnut Chart'╩╩",
+																	"T": "prop"
+																},
+																"cutoutPercentage": {
+																	"H": "╬50╩╩",
+																	"T": "prop"
+																},
+																"width": {
+																	"H": "╬'40vw'╩╩",
+																	"T": "prop"
+																},
+																"labelAlign": {
+																	"H": "╬'center'╩╩",
+																	"T": "prop"
+																},
+																"labelAnchor": {
+																	"H": "╬'center'╩╩",
+																	"T": "prop"
+																},
+																"labelBorderRadius": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"labelBorderWidth": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"labelClamp": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"labelClip": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"labelDisplay": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"labelFontWeight": {
+																	"H": "╬'normal'╩╩",
+																	"T": "prop"
+																},
+																"labelFontLineHeight": {
+																	"H": "╬'1.2'╩╩",
+																	"T": "prop"
+																},
+																"labelOffset": {
+																	"H": "╬'4'╩╩",
+																	"T": "prop"
+																},
+																"labelOpacity": {
+																	"H": "╬1╩╩",
+																	"T": "prop"
+																},
+																"labelPaddingTop": {
+																	"H": "╬4╩╩",
+																	"T": "prop"
+																},
+																"labelPaddingRight": {
+																	"H": "╬4╩╩",
+																	"T": "prop"
+																},
+																"labelPaddingBottom": {
+																	"H": "╬4╩╩",
+																	"T": "prop"
+																},
+																"labelPaddingLeft": {
+																	"H": "╬4╩╩",
+																	"T": "prop"
+																},
+																"labelRotation": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"labelTextAlign": {
+																	"H": "╬'start'╩╩",
+																	"T": "prop"
+																},
+																"labelTextStrokeWidth": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"labelTextShadowBlur": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"borderColor": {
+																	"H": "╬[]╠'rgb(255, 99, 132)'╩╠'rgb(255, 159, 64)'╩╠'rgb(255, 205, 86)'╩╠'rgb(75, 192, 192)'╩╠'rgb(54, 162, 235)'╩╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_104"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_102",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_102"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"sp:mb-5"
+														]
+													},
+													"class": "d-flex mb-5"
+												},
+												"compDomClasses": "col d-flex mb-5 newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_95"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_117",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Doughnut",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_119",
+																	"T": "prop"
+																},
+																"backgroundColor": {
+																	"H": "╬[]╠'rgb(255, 99, 132)'╩╠'rgb(255, 159, 64)'╩╠'rgb(255, 205, 86)'╩╠'rgb(75, 192, 192)'╩╠'rgb(54, 162, 235)'╩╩╩",
+																	"T": "prop"
+																},
+																"data": {
+																	"H": "╬[]╠99╩╠70╩╠31╩╠93╩╠91╩╩╩",
+																	"T": "prop"
+																},
+																"labels": {
+																	"H": "╬[]╠'Red'╩╠'Orange'╩╠'Yellow'╩╠'Green'╩╠'Blue'╩╩╩",
+																	"T": "prop"
+																},
+																"title": {
+																	"H": "╬'Sample Doughnut Chart'╩╩",
+																	"T": "prop"
+																},
+																"cutoutPercentage": {
+																	"H": "╬50╩╩",
+																	"T": "prop"
+																},
+																"width": {
+																	"H": "╬'40vw'╩╩",
+																	"T": "prop"
+																},
+																"labelAlign": {
+																	"H": "╬'center'╩╩",
+																	"T": "prop"
+																},
+																"labelAnchor": {
+																	"H": "╬'center'╩╩",
+																	"T": "prop"
+																},
+																"labelBorderRadius": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"labelBorderWidth": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"labelClamp": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"labelClip": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"labelDisplay": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"labelFontWeight": {
+																	"H": "╬'normal'╩╩",
+																	"T": "prop"
+																},
+																"labelFontLineHeight": {
+																	"H": "╬'1.2'╩╩",
+																	"T": "prop"
+																},
+																"labelOffset": {
+																	"H": "╬'4'╩╩",
+																	"T": "prop"
+																},
+																"labelOpacity": {
+																	"H": "╬1╩╩",
+																	"T": "prop"
+																},
+																"labelPaddingTop": {
+																	"H": "╬4╩╩",
+																	"T": "prop"
+																},
+																"labelPaddingRight": {
+																	"H": "╬4╩╩",
+																	"T": "prop"
+																},
+																"labelPaddingBottom": {
+																	"H": "╬4╩╩",
+																	"T": "prop"
+																},
+																"labelPaddingLeft": {
+																	"H": "╬4╩╩",
+																	"T": "prop"
+																},
+																"labelRotation": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"labelTextAlign": {
+																	"H": "╬'start'╩╩",
+																	"T": "prop"
+																},
+																"labelTextStrokeWidth": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"labelTextShadowBlur": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"borderColor": {
+																	"H": "╬[]╠'rgb(255, 99, 132)'╩╠'rgb(255, 159, 64)'╩╠'rgb(255, 205, 86)'╩╠'rgb(75, 192, 192)'╩╠'rgb(54, 162, 235)'╩╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_119"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": ""
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_118",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_118"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"sp:mb-5"
+														]
+													},
+													"class": "d-flex mb-5"
+												},
+												"compDomClasses": "col d-flex mb-5 newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_117"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_136",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Doughnut",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_138",
+																	"T": "prop"
+																},
+																"backgroundColor": {
+																	"H": "╬[]╠'rgb(255, 99, 132)'╩╠'rgb(255, 159, 64)'╩╠'rgb(255, 205, 86)'╩╠'rgb(75, 192, 192)'╩╠'rgb(54, 162, 235)'╩╩╩",
+																	"T": "prop"
+																},
+																"data": {
+																	"H": "╬[]╠99╩╠70╩╠31╩╠93╩╠91╩╩╩",
+																	"T": "prop"
+																},
+																"labels": {
+																	"H": "╬[]╠'Red'╩╠'Orange'╩╠'Yellow'╩╠'Green'╩╠'Blue'╩╩╩",
+																	"T": "prop"
+																},
+																"title": {
+																	"H": "╬'Sample Doughnut Chart'╩╩",
+																	"T": "prop"
+																},
+																"cutoutPercentage": {
+																	"H": "╬50╩╩",
+																	"T": "prop"
+																},
+																"width": {
+																	"H": "╬'40vw'╩╩",
+																	"T": "prop"
+																},
+																"labelAlign": {
+																	"H": "╬'center'╩╩",
+																	"T": "prop"
+																},
+																"labelAnchor": {
+																	"H": "╬'center'╩╩",
+																	"T": "prop"
+																},
+																"labelBorderRadius": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"labelBorderWidth": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"labelClamp": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"labelClip": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"labelDisplay": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"labelFontWeight": {
+																	"H": "╬'normal'╩╩",
+																	"T": "prop"
+																},
+																"labelFontLineHeight": {
+																	"H": "╬'1.2'╩╩",
+																	"T": "prop"
+																},
+																"labelOffset": {
+																	"H": "╬'4'╩╩",
+																	"T": "prop"
+																},
+																"labelOpacity": {
+																	"H": "╬1╩╩",
+																	"T": "prop"
+																},
+																"labelPaddingTop": {
+																	"H": "╬4╩╩",
+																	"T": "prop"
+																},
+																"labelPaddingRight": {
+																	"H": "╬4╩╩",
+																	"T": "prop"
+																},
+																"labelPaddingBottom": {
+																	"H": "╬4╩╩",
+																	"T": "prop"
+																},
+																"labelPaddingLeft": {
+																	"H": "╬4╩╩",
+																	"T": "prop"
+																},
+																"labelRotation": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"labelTextAlign": {
+																	"H": "╬'start'╩╩",
+																	"T": "prop"
+																},
+																"labelTextStrokeWidth": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"labelTextShadowBlur": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"borderColor": {
+																	"H": "╬[]╠'rgb(255, 99, 132)'╩╠'rgb(255, 159, 64)'╩╠'rgb(255, 205, 86)'╩╠'rgb(75, 192, 192)'╩╠'rgb(54, 162, 235)'╩╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"labelFormatter": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\n//context : contextual information see-> https://master--chartjs-plugin-datalabels.netlify.app/guide/options.html#option-context\r\n//value : the current data value\r\nquick.return(value + '%');\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfMTM4X2xhYmVsRm9ybWF0dGVyX0UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJFZHRyQ29tcF8xMzhfbGFiZWxGb3JtYXR0ZXJfRS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBRUEsZ0lBQWdJO0FBQ2hJLGdDQUFnQztBQUNoQyxLQUFLLENBQUMsTUFBTSxDQUFDLEtBQUssR0FBRyxHQUFHLENBQUMsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImRlY2xhcmUgdmFyIHZhbHVlOmFueTtcbmRlY2xhcmUgdmFyIGNvbnRleHQ6eyBhY3RpdmU6IGJvb2xlYW47IGRhdGFJbmRleDogbnVtYmVyOyBjaGFydCA6IGFueTsgZGF0YXNldDogYW55OyBkYXRhc2V0SW5kZXg6bnVtYmVyOyB9XG4vL2NvbnRleHQgOiBjb250ZXh0dWFsIGluZm9ybWF0aW9uIHNlZS0+IGh0dHBzOi8vbWFzdGVyLS1jaGFydGpzLXBsdWdpbi1kYXRhbGFiZWxzLm5ldGxpZnkuYXBwL2d1aWRlL29wdGlvbnMuaHRtbCNvcHRpb24tY29udGV4dFxyXG4vL3ZhbHVlIDogdGhlIGN1cnJlbnQgZGF0YSB2YWx1ZVxyXG5xdWljay5yZXR1cm4odmFsdWUgKyAnJScpO1xuIGV4cG9ydHt9O1xuIl19",
+																	"PE": true,
+																	"P": "value:any,context:{ active: boolean; dataIndex: number; chart : any; dataset: any; datasetIndex:number; }",
+																	"HL": "JS"
+																}
+															},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_138"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": ""
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_137",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_137"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_136"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_3"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container container--fluid newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {}
+};
+export default pjson

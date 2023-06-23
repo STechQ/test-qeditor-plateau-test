@@ -1,0 +1,1679 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container container--fluid'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_3",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VCard",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_55",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_73",
+																					"T": "prop"
+																				},
+																				"tagType": {
+																					"H": "'span'",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'TypeScript'",
+																					"T": "prop"
+																				},
+																				"class": {
+																					"H": "'v-card__title'",
+																					"T": "class"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_73"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		},
+																		{
+																			"T": "VCol",
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_7",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "'primary'",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"click": {
+																									"H": "quick.cookie.set('test', { value : 'testValue', expire : '2022-11-01T20:09:39.780Z'});\r\nquick.cookie.set('test2', { value : 'testValue2', expire : '2023-12-01T20:09:39.780Z'});",
+																									"P": "mouseEvent:unknown | undefined",
+																									"HL": "TS"
+																								}
+																							},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"C": {},
+																											"E": {},
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_9",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "'Set Cookie'",
+																													"T": "prop"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_9"
+																											},
+																											"O": {
+																												"cType": "child"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_7"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						},
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_10",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "'success'",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"click": {
+																									"H": "quick.EM.trace(quick.cookie.get('test'));",
+																									"P": "mouseEvent:unknown | undefined",
+																									"HL": "TS"
+																								}
+																							},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"C": {},
+																											"E": {},
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_12",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "'Get Cookie'",
+																													"T": "prop"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_12"
+																											},
+																											"O": {
+																												"cType": "child"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_10"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"layout": {
+																									"dOpt": {
+																										"xs": [
+																											"sp:mr-5",
+																											"sp:ml-5"
+																										],
+																										"xl": []
+																									},
+																									"class": "mr-5 ml-5"
+																								}
+																							}
+																						},
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_13",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "'success'",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"click": {
+																									"H": "quick.EM.trace(quick.cookie.getAll('test'));",
+																									"P": "mouseEvent:unknown | undefined",
+																									"HL": "TS"
+																								}
+																							},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"C": {},
+																											"E": {},
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_14",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "'Get All Cookie'",
+																													"T": "prop"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_14"
+																											},
+																											"O": {
+																												"cType": "child"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_13"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"layout": {
+																									"dOpt": {
+																										"xs": [
+																											"sp:mr-5"
+																										],
+																										"xl": []
+																									},
+																									"class": "mr-5"
+																								}
+																							}
+																						},
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_15",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "'warning'",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"click": {
+																									"H": "quick.cookie.delete('test');\r\nquick.cookie.delete('test2');",
+																									"P": "mouseEvent:unknown | undefined",
+																									"HL": "TS"
+																								}
+																							},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"C": {},
+																											"E": {},
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_16",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "'Delete Cookie'",
+																													"T": "prop"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_16"
+																											},
+																											"O": {
+																												"cType": "child"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_15"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_5",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_5"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"d:d-flex",
+																							"c:col-12",
+																							"fd:flex-row",
+																							"j:justify-center"
+																						],
+																						"xl": [
+																							"d:d-flex"
+																						]
+																					},
+																					"class": "d-flex col-12 flex-row justify-center d-xl-flex"
+																				}
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_55"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [],
+																		"lg": []
+																	},
+																	"class": ""
+																}
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_35",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_35"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"c:col-12",
+															"fd:flex-row",
+															"j:justify-center"
+														],
+														"xl": [
+															"d:d-flex"
+														]
+													},
+													"class": "d-flex col-12 flex-row justify-center d-xl-flex"
+												}
+											}
+										},
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VCard",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_81",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_82",
+																					"T": "prop"
+																				},
+																				"tagType": {
+																					"H": "'span'",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'QScript'",
+																					"T": "prop"
+																				},
+																				"class": {
+																					"H": "'v-card__title'",
+																					"T": "class"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_82"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		},
+																		{
+																			"T": "VCol",
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_84",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "'primary'",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"click": {
+																									"H": "cookie.set('test', { value = 'testValue', expire = '2022-11-01T20:09:39.780Z'})\r\ncookie.set('test2', { value = 'testValue2', expire = '2023-12-01T20:09:39.780Z'})",
+																									"P": "mouseEvent",
+																									"HL": "QS"
+																								}
+																							},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"C": {},
+																											"E": {},
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_85",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "'Set Cookie'",
+																													"T": "prop"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_85"
+																											},
+																											"O": {
+																												"cType": "child"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_84"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						},
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_86",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "'success'",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"click": {
+																									"H": "cookie.get('test')",
+																									"P": "mouseEvent",
+																									"HL": "QS"
+																								}
+																							},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"C": {},
+																											"E": {},
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_87",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "'Get Cookie'",
+																													"T": "prop"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_87"
+																											},
+																											"O": {
+																												"cType": "child"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_86"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"layout": {
+																									"dOpt": {
+																										"xs": [
+																											"sp:mr-5",
+																											"sp:ml-5"
+																										],
+																										"xl": []
+																									},
+																									"class": "mr-5 ml-5"
+																								}
+																							}
+																						},
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_88",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "'success'",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"click": {
+																									"H": "cookie.getAll()",
+																									"P": "mouseEvent",
+																									"HL": "QS"
+																								}
+																							},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"C": {},
+																											"E": {},
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_89",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "'Get All Cookie'",
+																													"T": "prop"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_89"
+																											},
+																											"O": {
+																												"cType": "child"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_88"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"layout": {
+																									"dOpt": {
+																										"xs": [
+																											"sp:mr-5"
+																										],
+																										"xl": []
+																									},
+																									"class": "mr-5"
+																								}
+																							}
+																						},
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_90",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "'warning'",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"click": {
+																									"H": "cookie.delete('test')\r\ncookie.delete('test2')",
+																									"P": "mouseEvent",
+																									"HL": "QS"
+																								}
+																							},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"C": {},
+																											"E": {},
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_91",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "'Delete Cookie'",
+																													"T": "prop"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_91"
+																											},
+																											"O": {
+																												"cType": "child"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_90"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_83",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_83"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"d:d-flex",
+																							"c:col-12",
+																							"fd:flex-row",
+																							"j:justify-center"
+																						],
+																						"xl": [
+																							"d:d-flex"
+																						]
+																					},
+																					"class": "d-flex col-12 flex-row justify-center d-xl-flex"
+																				}
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_81"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [],
+																		"lg": []
+																	},
+																	"class": ""
+																}
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_80",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_80"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"c:col-12",
+															"fd:flex-row",
+															"j:justify-center"
+														],
+														"xl": [
+															"d:d-flex"
+														]
+													},
+													"class": "d-flex col-12 flex-row justify-center d-xl-flex"
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_3"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container container--fluid'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_3",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VCard",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_55",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_73",
+																					"T": "prop"
+																				},
+																				"tagType": {
+																					"H": "╬'span'╩╩",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'TypeScript'╩╩",
+																					"T": "prop"
+																				},
+																				"class": {
+																					"H": "╬'v-card__title'╩╩",
+																					"T": "class"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_73"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "q-label v-card__title newDropBorder"
+																			}
+																		},
+																		{
+																			"T": "VCol",
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_7",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "╬'primary'╩╩",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"click": {
+																									"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.cookie.set('test', { value: 'testValue', expire: '2022-11-01T20:09:39.780Z' });\r\nquick.cookie.set('test2', { value: 'testValue2', expire: '2023-12-01T20:09:39.780Z' });\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfN19jbGlja19FLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiRWR0ckNvbXBfN19jbGlja19FLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQSxLQUFLLENBQUMsTUFBTSxDQUFDLEdBQUcsQ0FBQyxNQUFNLEVBQUUsRUFBRSxLQUFLLEVBQUcsV0FBVyxFQUFFLE1BQU0sRUFBRywwQkFBMEIsRUFBQyxDQUFDLENBQUM7QUFDdEYsS0FBSyxDQUFDLE1BQU0sQ0FBQyxHQUFHLENBQUMsT0FBTyxFQUFFLEVBQUUsS0FBSyxFQUFHLFlBQVksRUFBRSxNQUFNLEVBQUcsMEJBQTBCLEVBQUMsQ0FBQyxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiZGVjbGFyZSB2YXIgbW91c2VFdmVudDp1bmtub3duIHwgdW5kZWZpbmVkXG5xdWljay5jb29raWUuc2V0KCd0ZXN0JywgeyB2YWx1ZSA6ICd0ZXN0VmFsdWUnLCBleHBpcmUgOiAnMjAyMi0xMS0wMVQyMDowOTozOS43ODBaJ30pO1xyXG5xdWljay5jb29raWUuc2V0KCd0ZXN0MicsIHsgdmFsdWUgOiAndGVzdFZhbHVlMicsIGV4cGlyZSA6ICcyMDIzLTEyLTAxVDIwOjA5OjM5Ljc4MFonfSk7XG4gZXhwb3J0e307XG4iXX0=",
+																									"P": "mouseEvent:unknown | undefined",
+																									"HL": "JS"
+																								}
+																							},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"C": {},
+																											"E": {},
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_9",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "╬'Set Cookie'╩╩",
+																													"T": "prop"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_9"
+																											},
+																											"O": {
+																												"cType": "child",
+																												"compDomClasses": "q-label newDropBorder"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_7"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary newDropBorder"
+																							}
+																						},
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_10",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "╬'success'╩╩",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"click": {
+																									"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.EM.trace(quick.cookie.get('test'));\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfMTBfY2xpY2tfRS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkVkdHJDb21wXzEwX2NsaWNrX0UudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUNBLEtBQUssQ0FBQyxFQUFFLENBQUMsS0FBSyxDQUFDLEtBQUssQ0FBQyxNQUFNLENBQUMsR0FBRyxDQUFDLE1BQU0sQ0FBQyxDQUFDLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJkZWNsYXJlIHZhciBtb3VzZUV2ZW50OnVua25vd24gfCB1bmRlZmluZWRcbnF1aWNrLkVNLnRyYWNlKHF1aWNrLmNvb2tpZS5nZXQoJ3Rlc3QnKSk7XG4gZXhwb3J0e307XG4iXX0=",
+																									"P": "mouseEvent:unknown | undefined",
+																									"HL": "JS"
+																								}
+																							},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"C": {},
+																											"E": {},
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_12",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "╬'Get Cookie'╩╩",
+																													"T": "prop"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_12"
+																											},
+																											"O": {
+																												"cType": "child",
+																												"compDomClasses": "q-label newDropBorder"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_10"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"layout": {
+																									"dOpt": {
+																										"xs": [
+																											"sp:mr-5",
+																											"sp:ml-5"
+																										],
+																										"xl": []
+																									},
+																									"class": "mr-5 ml-5"
+																								},
+																								"compDomClasses": "v-btn v-btn--contained theme--light v-size--default success mr-5 ml-5 newDropBorder"
+																							}
+																						},
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_13",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "╬'success'╩╩",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"click": {
+																									"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.EM.trace(quick.cookie.getAll('test'));\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfMTNfY2xpY2tfRS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkVkdHJDb21wXzEzX2NsaWNrX0UudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUNBLEtBQUssQ0FBQyxFQUFFLENBQUMsS0FBSyxDQUFDLEtBQUssQ0FBQyxNQUFNLENBQUMsTUFBTSxDQUFDLE1BQU0sQ0FBQyxDQUFDLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJkZWNsYXJlIHZhciBtb3VzZUV2ZW50OnVua25vd24gfCB1bmRlZmluZWRcbnF1aWNrLkVNLnRyYWNlKHF1aWNrLmNvb2tpZS5nZXRBbGwoJ3Rlc3QnKSk7XG4gZXhwb3J0e307XG4iXX0=",
+																									"P": "mouseEvent:unknown | undefined",
+																									"HL": "JS"
+																								}
+																							},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"C": {},
+																											"E": {},
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_14",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "╬'Get All Cookie'╩╩",
+																													"T": "prop"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_14"
+																											},
+																											"O": {
+																												"cType": "child",
+																												"compDomClasses": "q-label newDropBorder"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_13"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"layout": {
+																									"dOpt": {
+																										"xs": [
+																											"sp:mr-5"
+																										],
+																										"xl": []
+																									},
+																									"class": "mr-5"
+																								},
+																								"compDomClasses": "v-btn v-btn--contained theme--light v-size--default success mr-5 newDropBorder"
+																							}
+																						},
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_15",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "╬'warning'╩╩",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"click": {
+																									"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.cookie.delete('test');\r\nquick.cookie.delete('test2');\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfMTVfY2xpY2tfRS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkVkdHJDb21wXzE1X2NsaWNrX0UudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUNBLEtBQUssQ0FBQyxNQUFNLENBQUMsTUFBTSxDQUFDLE1BQU0sQ0FBQyxDQUFDO0FBQzVCLEtBQUssQ0FBQyxNQUFNLENBQUMsTUFBTSxDQUFDLE9BQU8sQ0FBQyxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiZGVjbGFyZSB2YXIgbW91c2VFdmVudDp1bmtub3duIHwgdW5kZWZpbmVkXG5xdWljay5jb29raWUuZGVsZXRlKCd0ZXN0Jyk7XHJcbnF1aWNrLmNvb2tpZS5kZWxldGUoJ3Rlc3QyJyk7XG4gZXhwb3J0e307XG4iXX0=",
+																									"P": "mouseEvent:unknown | undefined",
+																									"HL": "JS"
+																								}
+																							},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"C": {},
+																											"E": {},
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_16",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "╬'Delete Cookie'╩╩",
+																													"T": "prop"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_16"
+																											},
+																											"O": {
+																												"cType": "child",
+																												"compDomClasses": "q-label newDropBorder"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_15"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "v-btn v-btn--contained theme--light v-size--default warning newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_5",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_5"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"d:d-flex",
+																							"c:col-12",
+																							"fd:flex-row",
+																							"j:justify-center"
+																						],
+																						"xl": [
+																							"d:d-flex"
+																						]
+																					},
+																					"class": "d-flex col-12 flex-row justify-center d-xl-flex"
+																				},
+																				"compDomClasses": "col d-flex col-12 flex-row justify-center d-xl-flex newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_55"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [],
+																		"lg": []
+																	},
+																	"class": ""
+																},
+																"compDomClasses": "v-card v-sheet theme--light newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_35",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_35"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"c:col-12",
+															"fd:flex-row",
+															"j:justify-center"
+														],
+														"xl": [
+															"d:d-flex"
+														]
+													},
+													"class": "d-flex col-12 flex-row justify-center d-xl-flex"
+												},
+												"compDomClasses": "col d-flex col-12 flex-row justify-center d-xl-flex newDropBorder"
+											}
+										},
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VCard",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_81",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_82",
+																					"T": "prop"
+																				},
+																				"tagType": {
+																					"H": "╬'span'╩╩",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'QScript'╩╩",
+																					"T": "prop"
+																				},
+																				"class": {
+																					"H": "╬'v-card__title'╩╩",
+																					"T": "class"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_82"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "q-label v-card__title newDropBorder"
+																			}
+																		},
+																		{
+																			"T": "VCol",
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_84",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "╬'primary'╩╩",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"click": {
+																									"H": "╬()╣.╣cookie╩╠set╩╩╠'test'╩╠{}╠=╣value╩╠'testValue'╩╩╠=╣expire╩╠'2022-11-01T20:09:39.780Z'╩╩╩╩╬()╣.╣cookie╩╠set╩╩╠'test2'╩╠{}╠=╣value╩╠'testValue2'╩╩╠=╣expire╩╠'2023-12-01T20:09:39.780Z'╩╩╩╩╩",
+																									"P": "mouseEvent",
+																									"HL": "QS"
+																								}
+																							},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"C": {},
+																											"E": {},
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_85",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "╬'Set Cookie'╩╩",
+																													"T": "prop"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_85"
+																											},
+																											"O": {
+																												"cType": "child",
+																												"compDomClasses": "q-label newDropBorder"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_84"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary newDropBorder"
+																							}
+																						},
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_86",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "╬'success'╩╩",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"click": {
+																									"H": "╬()╣.╣cookie╩╠get╩╩╠'test'╩╩╩",
+																									"P": "mouseEvent",
+																									"HL": "QS"
+																								}
+																							},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"C": {},
+																											"E": {},
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_87",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "╬'Get Cookie'╩╩",
+																													"T": "prop"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_87"
+																											},
+																											"O": {
+																												"cType": "child",
+																												"compDomClasses": "q-label newDropBorder"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_86"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"layout": {
+																									"dOpt": {
+																										"xs": [
+																											"sp:mr-5",
+																											"sp:ml-5"
+																										],
+																										"xl": []
+																									},
+																									"class": "mr-5 ml-5"
+																								},
+																								"compDomClasses": "v-btn v-btn--contained theme--light v-size--default success mr-5 ml-5 newDropBorder"
+																							}
+																						},
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_88",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "╬'success'╩╩",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"click": {
+																									"H": "╬()╣.╣cookie╩╠getAll╩╩╩╩",
+																									"P": "mouseEvent",
+																									"HL": "QS"
+																								}
+																							},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"C": {},
+																											"E": {},
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_89",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "╬'Get All Cookie'╩╩",
+																													"T": "prop"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_89"
+																											},
+																											"O": {
+																												"cType": "child",
+																												"compDomClasses": "q-label newDropBorder"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_88"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"layout": {
+																									"dOpt": {
+																										"xs": [
+																											"sp:mr-5"
+																										],
+																										"xl": []
+																									},
+																									"class": "mr-5"
+																								},
+																								"compDomClasses": "v-btn v-btn--contained theme--light v-size--default success mr-5 newDropBorder"
+																							}
+																						},
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_90",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "╬'warning'╩╩",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"click": {
+																									"H": "╬()╣.╣cookie╩╠delete╩╩╠'test'╩╩╬()╣.╣cookie╩╠delete╩╩╠'test2'╩╩╩",
+																									"P": "mouseEvent",
+																									"HL": "QS"
+																								}
+																							},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"C": {},
+																											"E": {},
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_91",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "╬'Delete Cookie'╩╩",
+																													"T": "prop"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_91"
+																											},
+																											"O": {
+																												"cType": "child",
+																												"compDomClasses": "q-label newDropBorder"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_90"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "v-btn v-btn--contained theme--light v-size--default warning newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_83",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_83"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"d:d-flex",
+																							"c:col-12",
+																							"fd:flex-row",
+																							"j:justify-center"
+																						],
+																						"xl": [
+																							"d:d-flex"
+																						]
+																					},
+																					"class": "d-flex col-12 flex-row justify-center d-xl-flex"
+																				},
+																				"compDomClasses": "col d-flex col-12 flex-row justify-center d-xl-flex newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_81"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [],
+																		"lg": []
+																	},
+																	"class": ""
+																},
+																"compDomClasses": "v-card v-sheet theme--light newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_80",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_80"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"c:col-12",
+															"fd:flex-row",
+															"j:justify-center"
+														],
+														"xl": [
+															"d:d-flex"
+														]
+													},
+													"class": "d-flex col-12 flex-row justify-center d-xl-flex"
+												},
+												"compDomClasses": "col d-flex col-12 flex-row justify-center d-xl-flex newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_3"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container container--fluid newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {}
+};
+export default pjson

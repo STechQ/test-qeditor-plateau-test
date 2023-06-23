@@ -1,0 +1,121 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"EndRender": {
+					"H": "(<any>components.EdtrComp_2).allowedDates = (val: string) => {\r\n\r\n    const rep = val.split(\"-\");\r\n    let isHoliday: boolean;\r\n\r\n    if(rep[2] == \"29\" && rep[1] == \"10\") {\r\n        isHoliday = true;\r\n    } \r\n    else if (rep[2] == \"30\" && rep[1] == \"08\") {\r\n        isHoliday = true;\r\n    }\r\n\r\n    const weekend= new Date(val).getDay();\r\n\r\n    return weekend  !== 6 && weekend  !== 0 && !isHoliday;\r\n} ",
+					"HL": "TS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child"
+			}
+		},
+		{
+			"T": "VInlineDatepicker",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_2",
+					"T": "prop"
+				},
+				"label": {
+					"H": "'Pick a date'",
+					"T": "prop"
+				},
+				"locale": {
+					"H": "'tr'",
+					"T": "prop"
+				},
+				"willAttach": {
+					"H": "'true'",
+					"T": "prop"
+				},
+				"firstDayOfWeek": {
+					"H": "1",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_2"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"EndRender": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ncomponents.EdtrComp_2.allowedDates = function (val) {\r\n    var rep = val.split(\"-\");\r\n    var isHoliday;\r\n    if (rep[2] == \"29\" && rep[1] == \"10\") {\r\n        isHoliday = true;\r\n    }\r\n    else if (rep[2] == \"30\" && rep[1] == \"08\") {\r\n        isHoliday = true;\r\n    }\r\n    var weekend = new Date(val).getDay();\r\n    return weekend !== 6 && weekend !== 0 && !isHoliday;\r\n};\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfMV9FbmRSZW5kZXJfRS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkVkdHJDb21wXzFfRW5kUmVuZGVyX0UudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUNNLFVBQVUsQ0FBQyxVQUFXLENBQUMsWUFBWSxHQUFHLFVBQUMsR0FBVztJQUVwRCxJQUFNLEdBQUcsR0FBRyxHQUFHLENBQUMsS0FBSyxDQUFDLEdBQUcsQ0FBQyxDQUFDO0lBQzNCLElBQUksU0FBa0IsQ0FBQztJQUV2QixJQUFHLEdBQUcsQ0FBQyxDQUFDLENBQUMsSUFBSSxJQUFJLElBQUksR0FBRyxDQUFDLENBQUMsQ0FBQyxJQUFJLElBQUksRUFBRTtRQUNqQyxTQUFTLEdBQUcsSUFBSSxDQUFDO0tBQ3BCO1NBQ0ksSUFBSSxHQUFHLENBQUMsQ0FBQyxDQUFDLElBQUksSUFBSSxJQUFJLEdBQUcsQ0FBQyxDQUFDLENBQUMsSUFBSSxJQUFJLEVBQUU7UUFDdkMsU0FBUyxHQUFHLElBQUksQ0FBQztLQUNwQjtJQUVELElBQU0sT0FBTyxHQUFFLElBQUksSUFBSSxDQUFDLEdBQUcsQ0FBQyxDQUFDLE1BQU0sRUFBRSxDQUFDO0lBRXRDLE9BQU8sT0FBTyxLQUFNLENBQUMsSUFBSSxPQUFPLEtBQU0sQ0FBQyxJQUFJLENBQUMsU0FBUyxDQUFDO0FBQzFELENBQUMsQ0FBQSIsInNvdXJjZXNDb250ZW50IjpbIlxuKDxhbnk+Y29tcG9uZW50cy5FZHRyQ29tcF8yKS5hbGxvd2VkRGF0ZXMgPSAodmFsOiBzdHJpbmcpID0+IHtcclxuXHJcbiAgICBjb25zdCByZXAgPSB2YWwuc3BsaXQoXCItXCIpO1xyXG4gICAgbGV0IGlzSG9saWRheTogYm9vbGVhbjtcclxuXHJcbiAgICBpZihyZXBbMl0gPT0gXCIyOVwiICYmIHJlcFsxXSA9PSBcIjEwXCIpIHtcclxuICAgICAgICBpc0hvbGlkYXkgPSB0cnVlO1xyXG4gICAgfSBcclxuICAgIGVsc2UgaWYgKHJlcFsyXSA9PSBcIjMwXCIgJiYgcmVwWzFdID09IFwiMDhcIikge1xyXG4gICAgICAgIGlzSG9saWRheSA9IHRydWU7XHJcbiAgICB9XHJcblxyXG4gICAgY29uc3Qgd2Vla2VuZD0gbmV3IERhdGUodmFsKS5nZXREYXkoKTtcclxuXHJcbiAgICByZXR1cm4gd2Vla2VuZCAgIT09IDYgJiYgd2Vla2VuZCAgIT09IDAgJiYgIWlzSG9saWRheTtcclxufSBcbiBleHBvcnR7fTtcbiJdfQ==",
+					"HL": "JS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			}
+		},
+		{
+			"T": "VInlineDatepicker",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_2",
+					"T": "prop"
+				},
+				"label": {
+					"H": "╬'Pick a date'╩╩",
+					"T": "prop"
+				},
+				"locale": {
+					"H": "╬'tr'╩╩",
+					"T": "prop"
+				},
+				"willAttach": {
+					"H": "╬'true'╩╩",
+					"T": "prop"
+				},
+				"firstDayOfWeek": {
+					"H": "╬1╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_2"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-inline-date-picker-div-class newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {}
+};
+export default pjson

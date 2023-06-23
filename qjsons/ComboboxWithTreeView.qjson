@@ -1,0 +1,219 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VCombobox",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_2",
+					"T": "prop"
+				},
+				"label": {
+					"H": "'My Combobox'",
+					"T": "prop"
+				},
+				"multiple": {
+					"H": "true",
+					"T": "prop"
+				},
+				"items": {
+					"H": "[{text = 'Select All', value = 1}]",
+					"T": "prop"
+				},
+				"attach": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"change": {
+					"H": "if (value.length == EdtrComp_2.items.length){\r\n    EdtrComp_1.internalValue = true\r\n}else{\r\n    EdtrComp_1.internalValue = false\r\n}",
+					"P": "value"
+				}
+			},
+			"C": {
+				"append-item": {
+					"c": [
+						{
+							"T": "VTreeview",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_27",
+									"T": "prop"
+								},
+								"items": {
+									"H": "[{name = 'test1', id = 1, children=[{name='test1 Child', id = 2}, {name='test2 Child', id = 3}]},{ name = 'test3', id = 4, children=[{name='test4 Child', id=5}]}]",
+									"T": "prop"
+								},
+								"color": {
+									"H": "'primary'",
+									"T": "prop"
+								},
+								"selectedColor": {
+									"H": "'primary'",
+									"T": "prop"
+								},
+								"multipleActive": {
+									"H": "true",
+									"T": "prop"
+								},
+								"selectable": {
+									"H": "true",
+									"T": "prop"
+								},
+								"openAll": {
+									"H": "true",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_27"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": ""
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_2"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted v-select v-select--is-multi v-autocomplete"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VCombobox",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_2",
+					"T": "prop"
+				},
+				"label": {
+					"H": "╬'My Combobox'╩╩",
+					"T": "prop"
+				},
+				"multiple": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"items": {
+					"H": "╬[]╠{}╠=╣text╩╠'Select All'╩╩╠=╣value╩╠1╩╩╩╩╩",
+					"T": "prop"
+				},
+				"attach": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"change": {
+					"H": "╬if╣==╣.╣value╩╠length╩╩╠.╣.╣EdtrComp_2╩╠items╩╩╠length╩╩╩╠╬=╣.╣EdtrComp_1╩╠internalValue╩╩╠true╩╩╩╠╬=╣.╣EdtrComp_1╩╠internalValue╩╩╠false╩╩╩╩╩",
+					"P": "value"
+				}
+			},
+			"C": {
+				"append-item": {
+					"c": [
+						{
+							"T": "VTreeview",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_27",
+									"T": "prop"
+								},
+								"items": {
+									"H": "╬[]╠{}╠=╣name╩╠'test1'╩╩╠=╣id╩╠1╩╩╠=╣children╩╠[]╠{}╠=╣name╩╠'test1 Child'╩╩╠=╣id╩╠2╩╩╩╠{}╠=╣name╩╠'test2 Child'╩╩╠=╣id╩╠3╩╩╩╩╩╩╠{}╠=╣name╩╠'test3'╩╩╠=╣id╩╠4╩╩╠=╣children╩╠[]╠{}╠=╣name╩╠'test4 Child'╩╩╠=╣id╩╠5╩╩╩╩╩╩╩╩",
+									"T": "prop"
+								},
+								"color": {
+									"H": "╬'primary'╩╩",
+									"T": "prop"
+								},
+								"selectedColor": {
+									"H": "╬'primary'╩╩",
+									"T": "prop"
+								},
+								"multipleActive": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"selectable": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"openAll": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_27"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "v-treeview theme--light"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_2"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "v-input v-input--is-focused theme--light v-text-field v-text-field--is-booted v-select v-select--is-menu-active v-select--is-multi v-autocomplete primary--text"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {
+		"tr-TR": {
+			"committeeInfo": "╬'Komite Bilgileri'╩╩",
+			"addCommittee": "╬'Komite Ekle'╩╩",
+			"committee": "╬'Komite/Grup'╩╩",
+			"startDate": "╬'Başlangıç Tarihi'╩╩",
+			"endDate": "╬'Bitiş Tarihi'╩╩",
+			"description": "╬'Açıklama'╩╩",
+			"close": "╬'Kapat'╩╩",
+			"committeeTitleId": "╬'Komite Unvanı'╩╩",
+			"yes": "╬'Evet'╩╩",
+			"no": "╬'Hayır'╩╩",
+			"update": "╬'Güncelle'╩╩",
+			"validationLbl": "╬'Sistemde tanımlı olan bir değer girdiniz. Lütfen kontrol ediniz'╩╩",
+			"committee_dialog_addTitleLbl": "╬'Komite Ekleme'╩╩",
+			"committee_dialog_updateTitleLbl": "╬'Komite Güncelleme'╩╩",
+			"committee_deleteDialog_lbl": "╬'Silme işleminiz gerçekleştirilecektir, onaylıyor musunuz?'╩╩"
+		},
+		"en-US": {
+			"committeeInfo": "╬'Committee Info'╩╩",
+			"addCommittee": "╬'Add Committee'╩╩",
+			"committee": "╬'Committee/Group'╩╩",
+			"startDate": "╬'startDate'╩╩",
+			"endDate": "╬'endDate'╩╩",
+			"description": "╬'description'╩╩",
+			"close": "╬'Close'╩╩",
+			"committeeTitleId": "╬'Committee Title'╩╩",
+			"yes": "╬'Yes'╩╩",
+			"no": "╬'No'╩╩",
+			"update": "╬'Update'╩╩",
+			"validationLbl": "╬'Please check your input '╩╩",
+			"committee_dialog_addTitleLbl": "╬'Committee Add'╩╩",
+			"committee_dialog_updateTitleLbl": "╬'Update Committee'╩╩",
+			"committee_deleteDialog_lbl": "╬'Are you sure you want to delete?'╩╩"
+		}
+	},
+	"description": {}
+};
+export default pjson

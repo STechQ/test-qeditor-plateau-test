@@ -1,0 +1,2203 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VCol",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_9",
+					"T": "prop"
+				},
+				"class": {
+					"H": "''",
+					"T": "class"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_15",
+									"T": "prop"
+								},
+								"class": {
+									"H": "'justify-space-around'",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VAvatar",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_21",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'primary'",
+													"T": "class"
+												},
+												"color": {
+													"H": "'#f9f0e0'",
+													"T": "prop"
+												},
+												"icon": {
+													"H": "'mdi-account'",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VIcon",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_23",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "'mdi-wallet-membership'",
+																	"T": "text"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_23"
+															},
+															"O": {
+																"cType": "child"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_21"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										},
+										{
+											"T": "VAvatar",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_19",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'primary'",
+													"T": "class"
+												},
+												"color": {
+													"H": "'#9e8a66'",
+													"T": "prop"
+												},
+												"icon": {
+													"H": "'mdi-account'",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VIcon",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_24",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "'mdi-arrow-left-right-bold '",
+																	"T": "text"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_24"
+															},
+															"O": {
+																"cType": "child"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_19"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"sp:ml-4"
+														]
+													},
+													"class": "ml-4"
+												}
+											}
+										},
+										{
+											"T": "VAvatar",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_17",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'primary'",
+													"T": "class"
+												},
+												"color": {
+													"H": "'#f2bae8'",
+													"T": "prop"
+												},
+												"icon": {
+													"H": "'mdi-account'",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VIcon",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_25",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "'mdi-account-multiple '",
+																	"T": "text"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_25"
+															},
+															"O": {
+																"cType": "child"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_17"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_15"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_57",
+									"T": "prop"
+								},
+								"class": {
+									"H": "'justify-space-around'",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_56",
+													"T": "prop"
+												},
+												"text": {
+													"H": "'Accounts'",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_56"
+											},
+											"O": {
+												"cType": "child"
+											}
+										},
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_55",
+													"T": "prop"
+												},
+												"text": {
+													"H": "'Payment'",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_55"
+											},
+											"O": {
+												"cType": "child"
+											}
+										},
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_54",
+													"T": "prop"
+												},
+												"text": {
+													"H": "'Contractor'",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_54"
+											},
+											"O": {
+												"cType": "child"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_57"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_13",
+									"T": "prop"
+								},
+								"class": {
+									"H": "'justify-space-around'",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VAvatar",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_28",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'primary'",
+													"T": "class"
+												},
+												"color": {
+													"H": "'#beadbb'",
+													"T": "prop"
+												},
+												"icon": {
+													"H": "'mdi-account'",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VIcon",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_34",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "'mdi-file-document '",
+																	"T": "text"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_34"
+															},
+															"O": {
+																"cType": "child"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_28"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										},
+										{
+											"T": "VAvatar",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_32",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'primary'",
+													"T": "class"
+												},
+												"color": {
+													"H": "'#67d456'",
+													"T": "prop"
+												},
+												"icon": {
+													"H": "'mdi-account'",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VIcon",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_35",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "'mdi-account-box-multiple '",
+																	"T": "text"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_35"
+															},
+															"O": {
+																"cType": "child"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_32"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										},
+										{
+											"T": "VAvatar",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_26",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'primary'",
+													"T": "class"
+												},
+												"color": {
+													"H": "'#56d0d4'",
+													"T": "prop"
+												},
+												"icon": {
+													"H": "'mdi-account'",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VIcon",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_36",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "'mdi-circle-outline '",
+																	"T": "text"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_36"
+															},
+															"O": {
+																"cType": "child"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_26"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_13"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_68",
+									"T": "prop"
+								},
+								"class": {
+									"H": "'justify-space-around'",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_70",
+													"T": "prop"
+												},
+												"text": {
+													"H": "'E-invoices'",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_70"
+											},
+											"O": {
+												"cType": "child"
+											}
+										},
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_71",
+													"T": "prop"
+												},
+												"text": {
+													"H": "'Team'",
+													"T": "prop"
+												},
+												"class": {
+													"H": "''",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_71"
+											},
+											"O": {
+												"cType": "child",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"sp:mr-4"
+														]
+													},
+													"class": "mr-4"
+												}
+											}
+										},
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_72",
+													"T": "prop"
+												},
+												"text": {
+													"H": "'Payroll'",
+													"T": "prop"
+												},
+												"class": {
+													"H": "''",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_72"
+											},
+											"O": {
+												"cType": "child",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"sp:mr-2"
+														]
+													},
+													"class": "mr-2"
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_68"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_11",
+									"T": "prop"
+								},
+								"class": {
+									"H": "'justify-space-around'",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VAvatar",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_39",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'primary'",
+													"T": "class"
+												},
+												"color": {
+													"H": "'#67d456'",
+													"T": "prop"
+												},
+												"icon": {
+													"H": "'mdi-account'",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VIcon",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_41",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "'mdi-clipboard-file-outline'",
+																	"T": "text"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_41"
+															},
+															"O": {
+																"cType": "child"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_39"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										},
+										{
+											"T": "VAvatar",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_37",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'primary'",
+													"T": "class"
+												},
+												"color": {
+													"H": "'#d38ce0'",
+													"T": "prop"
+												},
+												"icon": {
+													"H": "'mdi-account'",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VIcon",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_42",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "'mdi-circle-outline'",
+																	"T": "text"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_42"
+															},
+															"O": {
+																"cType": "child"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_37"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										},
+										{
+											"T": "VAvatar",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_30",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'primary'",
+													"T": "class"
+												},
+												"color": {
+													"H": "'#ced8b1'",
+													"T": "prop"
+												},
+												"icon": {
+													"H": "'mdi-account'",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VIcon",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_43",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "'mdi-android-messages '",
+																	"T": "text"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_43"
+															},
+															"O": {
+																"cType": "child"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_30"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_11"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_46",
+									"T": "prop"
+								},
+								"class": {
+									"H": "'justify-space-around'",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_48",
+													"T": "prop"
+												},
+												"text": {
+													"H": "'Reports'",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_48"
+											},
+											"O": {
+												"cType": "child"
+											}
+										},
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_50",
+													"T": "prop"
+												},
+												"text": {
+													"H": "'Loans'",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_50"
+											},
+											"O": {
+												"cType": "child"
+											}
+										},
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_49",
+													"T": "prop"
+												},
+												"text": {
+													"H": "'Messages'",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_49"
+											},
+											"O": {
+												"cType": "child"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_46"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_73",
+									"T": "prop"
+								},
+								"class": {
+									"H": "'justify-start'",
+									"T": "class"
+								},
+								"customCompClass": {
+									"H": "'ml-0'",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VAvatar",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_75",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'primary'",
+													"T": "class"
+												},
+												"color": {
+													"H": "'primary'",
+													"T": "prop"
+												},
+												"icon": {
+													"H": "'mdi-account'",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VIcon",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_76",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "'mdi-circle-outline'",
+																	"T": "text"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_76"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_75"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"sp:mt-4"
+														]
+													},
+													"class": "mt-4"
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_73"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_9"
+			},
+			"O": {
+				"cType": "slot",
+				"layout": {
+					"dOpt": {
+						"md": [
+							"c:col-2"
+						]
+					},
+					"class": "col-md-2"
+				}
+			}
+		},
+		{
+			"T": "VRow",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_78",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'justify-space-between'",
+					"T": "class"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_80",
+									"T": "prop"
+								},
+								"text": {
+									"H": "'Rate'",
+									"T": "prop"
+								},
+								"class": {
+									"H": "''",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_80"
+							},
+							"O": {
+								"cType": "slot",
+								"layout": {
+									"dOpt": {
+										"xs": [
+											"sp:ml-4"
+										]
+									},
+									"class": "ml-4"
+								}
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_78"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VCol",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_9",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬''╩╩",
+					"T": "class"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_15",
+									"T": "prop"
+								},
+								"class": {
+									"H": "╬'justify-space-around'╩╩",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VAvatar",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_21",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'primary'╩╩",
+													"T": "class"
+												},
+												"color": {
+													"H": "╬'#f9f0e0'╩╩",
+													"T": "prop"
+												},
+												"icon": {
+													"H": "╬'mdi-account'╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VIcon",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_23",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬'mdi-wallet-membership'╩╩",
+																	"T": "text"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_23"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "v-icon notranslate mdi mdi-wallet-membership theme--light newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_21"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-avatar primary newDropBorder"
+											}
+										},
+										{
+											"T": "VAvatar",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_19",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'primary'╩╩",
+													"T": "class"
+												},
+												"color": {
+													"H": "╬'#9e8a66'╩╩",
+													"T": "prop"
+												},
+												"icon": {
+													"H": "╬'mdi-account'╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VIcon",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_24",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬'mdi-arrow-left-right-bold '╩╩",
+																	"T": "text"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_24"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "v-icon notranslate mdi mdi-arrow-left-right-bold theme--light newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_19"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"sp:ml-4"
+														]
+													},
+													"class": "ml-4"
+												},
+												"compDomClasses": "v-avatar primary ml-4 newDropBorder"
+											}
+										},
+										{
+											"T": "VAvatar",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_17",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'primary'╩╩",
+													"T": "class"
+												},
+												"color": {
+													"H": "╬'#f2bae8'╩╩",
+													"T": "prop"
+												},
+												"icon": {
+													"H": "╬'mdi-account'╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VIcon",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_25",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬'mdi-account-multiple '╩╩",
+																	"T": "text"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_25"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "v-icon notranslate mdi mdi-account-multiple theme--light newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_17"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-avatar primary newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_15"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row justify-space-around newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_57",
+									"T": "prop"
+								},
+								"class": {
+									"H": "╬'justify-space-around'╩╩",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_56",
+													"T": "prop"
+												},
+												"text": {
+													"H": "╬'Accounts'╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_56"
+											},
+											"O": {
+												"cType": "child",
+												"compDomClasses": "q-label newDropBorder"
+											}
+										},
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_55",
+													"T": "prop"
+												},
+												"text": {
+													"H": "╬'Payment'╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_55"
+											},
+											"O": {
+												"cType": "child",
+												"compDomClasses": "q-label newDropBorder"
+											}
+										},
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_54",
+													"T": "prop"
+												},
+												"text": {
+													"H": "╬'Contractor'╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_54"
+											},
+											"O": {
+												"cType": "child",
+												"compDomClasses": "q-label newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_57"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row justify-space-around newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_13",
+									"T": "prop"
+								},
+								"class": {
+									"H": "╬'justify-space-around'╩╩",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VAvatar",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_28",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'primary'╩╩",
+													"T": "class"
+												},
+												"color": {
+													"H": "╬'#beadbb'╩╩",
+													"T": "prop"
+												},
+												"icon": {
+													"H": "╬'mdi-account'╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VIcon",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_34",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬'mdi-file-document '╩╩",
+																	"T": "text"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_34"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "v-icon notranslate mdi mdi-file-document theme--light newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_28"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-avatar primary newDropBorder"
+											}
+										},
+										{
+											"T": "VAvatar",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_32",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'primary'╩╩",
+													"T": "class"
+												},
+												"color": {
+													"H": "╬'#67d456'╩╩",
+													"T": "prop"
+												},
+												"icon": {
+													"H": "╬'mdi-account'╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VIcon",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_35",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬'mdi-account-box-multiple '╩╩",
+																	"T": "text"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_35"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "v-icon notranslate mdi mdi-account-box-multiple theme--light newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_32"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-avatar primary newDropBorder"
+											}
+										},
+										{
+											"T": "VAvatar",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_26",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'primary'╩╩",
+													"T": "class"
+												},
+												"color": {
+													"H": "╬'#56d0d4'╩╩",
+													"T": "prop"
+												},
+												"icon": {
+													"H": "╬'mdi-account'╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VIcon",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_36",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬'mdi-circle-outline '╩╩",
+																	"T": "text"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_36"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "v-icon notranslate mdi mdi-circle-outline theme--light newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_26"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-avatar primary newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_13"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row justify-space-around newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_68",
+									"T": "prop"
+								},
+								"class": {
+									"H": "╬'justify-space-around'╩╩",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_70",
+													"T": "prop"
+												},
+												"text": {
+													"H": "╬'E-invoices'╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_70"
+											},
+											"O": {
+												"cType": "child",
+												"compDomClasses": "q-label newDropBorder"
+											}
+										},
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_71",
+													"T": "prop"
+												},
+												"text": {
+													"H": "╬'Team'╩╩",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬''╩╩",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_71"
+											},
+											"O": {
+												"cType": "child",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"sp:mr-4"
+														]
+													},
+													"class": "mr-4"
+												},
+												"compDomClasses": "q-label mr-4 newDropBorder"
+											}
+										},
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_72",
+													"T": "prop"
+												},
+												"text": {
+													"H": "╬'Payroll'╩╩",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬''╩╩",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_72"
+											},
+											"O": {
+												"cType": "child",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"sp:mr-2"
+														]
+													},
+													"class": "mr-2"
+												},
+												"compDomClasses": "q-label mr-2 newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_68"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row justify-space-around newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_11",
+									"T": "prop"
+								},
+								"class": {
+									"H": "╬'justify-space-around'╩╩",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VAvatar",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_39",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'primary'╩╩",
+													"T": "class"
+												},
+												"color": {
+													"H": "╬'#67d456'╩╩",
+													"T": "prop"
+												},
+												"icon": {
+													"H": "╬'mdi-account'╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VIcon",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_41",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬'mdi-clipboard-file-outline'╩╩",
+																	"T": "text"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_41"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "v-icon notranslate mdi mdi-clipboard-file-outline theme--light newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_39"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-avatar primary newDropBorder"
+											}
+										},
+										{
+											"T": "VAvatar",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_37",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'primary'╩╩",
+													"T": "class"
+												},
+												"color": {
+													"H": "╬'#d38ce0'╩╩",
+													"T": "prop"
+												},
+												"icon": {
+													"H": "╬'mdi-account'╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VIcon",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_42",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬'mdi-circle-outline'╩╩",
+																	"T": "text"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_42"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "v-icon notranslate mdi mdi-circle-outline theme--light newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_37"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-avatar primary newDropBorder"
+											}
+										},
+										{
+											"T": "VAvatar",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_30",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'primary'╩╩",
+													"T": "class"
+												},
+												"color": {
+													"H": "╬'#ced8b1'╩╩",
+													"T": "prop"
+												},
+												"icon": {
+													"H": "╬'mdi-account'╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VIcon",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_43",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬'mdi-android-messages '╩╩",
+																	"T": "text"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_43"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "v-icon notranslate mdi mdi-android-messages theme--light newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_30"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-avatar primary newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_11"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row justify-space-around newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_46",
+									"T": "prop"
+								},
+								"class": {
+									"H": "╬'justify-space-around'╩╩",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_48",
+													"T": "prop"
+												},
+												"text": {
+													"H": "╬'Reports'╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_48"
+											},
+											"O": {
+												"cType": "child",
+												"compDomClasses": "q-label newDropBorder"
+											}
+										},
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_50",
+													"T": "prop"
+												},
+												"text": {
+													"H": "╬'Loans'╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_50"
+											},
+											"O": {
+												"cType": "child",
+												"compDomClasses": "q-label newDropBorder"
+											}
+										},
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_49",
+													"T": "prop"
+												},
+												"text": {
+													"H": "╬'Messages'╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_49"
+											},
+											"O": {
+												"cType": "child",
+												"compDomClasses": "q-label newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_46"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row justify-space-around newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_73",
+									"T": "prop"
+								},
+								"class": {
+									"H": "╬'justify-start'╩╩",
+									"T": "class"
+								},
+								"customCompClass": {
+									"H": "╬'ml-0'╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VAvatar",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_75",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'primary'╩╩",
+													"T": "class"
+												},
+												"color": {
+													"H": "╬'primary'╩╩",
+													"T": "prop"
+												},
+												"icon": {
+													"H": "╬'mdi-account'╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VIcon",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_76",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬'mdi-circle-outline'╩╩",
+																	"T": "text"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_76"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-icon notranslate mdi mdi-circle-outline theme--light newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_75"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"sp:mt-4"
+														]
+													},
+													"class": "mt-4"
+												},
+												"compDomClasses": "v-avatar primary mt-4 newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_73"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "ml-0 justify-start newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_9"
+			},
+			"O": {
+				"cType": "slot",
+				"layout": {
+					"dOpt": {
+						"md": [
+							"c:col-2"
+						]
+					},
+					"class": "col-md-2"
+				},
+				"compDomClasses": "col-md-2 newDropBorder"
+			}
+		},
+		{
+			"T": "VRow",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_78",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'justify-space-between'╩╩",
+					"T": "class"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_80",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬'Rate'╩╩",
+									"T": "prop"
+								},
+								"class": {
+									"H": "╬''╩╩",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_80"
+							},
+							"O": {
+								"cType": "slot",
+								"layout": {
+									"dOpt": {
+										"xs": [
+											"sp:ml-4"
+										]
+									},
+									"class": "ml-4"
+								},
+								"compDomClasses": "q-label ml-4 newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_78"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "justify-space-between newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {}
+};
+export default pjson

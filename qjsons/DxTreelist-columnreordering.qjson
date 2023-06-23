@@ -1,0 +1,487 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "DxTreeList",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_86",
+					"T": "prop"
+				},
+				"dataSource": {
+					"H": "[{id= 1, hid= 0, Fullname= 'John Heart', Prefix= 'Mr.', Title= 'CEO', City= 'Los Angeles', State= 'California', Email= 'jheart@dx-email.com'},\n      {id= 2, hid= 0, Fullname= 'Samantha Bright', Prefix= 'Dr.', Title= 'COO', City= 'Los Angeles', State= 'California', Email= 'samanthab@dx-email.com'}, \n      {id= 3, hid= 0, Fullname= 'Arthur Miller', Prefix= 'Mr.', Title= 'CTO', City= 'Denver', State= 'Colorado', Email= 'arthurm@dx-email.com'}, \n      {id= 4, hid= 1, Fullname= 'Robert Reagan', Prefix= 'Mr.', Title= 'CMO', City= 'Bentonville', State= 'Arkansas', Email= 'robertr@dx-email.com' }, \n      {id= 5, hid= 1, Fullname= 'Greta Sims', Prefix= 'Ms.', Title= 'HR Manager', City= 'Atlanta', State= 'Georgia', Email= 'gretas@dx-email.com' }, \n      {id= 6, hid= 3, Fullname= 'Barb Banks', Prefix= 'Mrs.', Title= 'Support Manager', City= 'Phoenix', State= 'Arizona', Email= 'barbarab@dx-email.com' }, \n      {id= 7, hid= 2, Fullname= 'Kevin Carter', Prefix= 'Mr.', Title= 'Shipping Manager', City= 'San Diego', State= 'California', Email= 'kevinc@dx-email.com' }, \n      {id= 8, hid= 5, Fullname= 'Cindy Stanwick', Prefix= 'Ms.', Title= 'HR Assistant', City= 'Little Rock', State= 'Arkansas', Email= 'cindys@dx-email.com' }, \n      {id= 9, hid= 8, Fullname= 'Sammy Hill', Prefix= 'Mr.', Title= 'Sales Assistant', City= 'Pasadena', State= 'California', Email= 'sammyh@dx-email.com' }, \n      {id= 10, hid= 7, Fullname= 'Mary Stern', Prefix= 'Ms.', Title= 'Shipping Assistant', City= 'Beaver', State= 'Utah', Email= 'marys@dx-email.com' }, \n      {id= 11, hid= 7, Fullname= 'Robin Cosworth', Prefix= 'Mrs.', Title= 'Shipping Assistant', City= 'Los Angeles', State= 'California', Email= 'robinc@dx-email.com' },\n      {id= 12, hid= 6, Fullname= 'James Anderson', Prefix= 'Mr.', Title= 'Support Assistant', City= 'Atlanta', State= 'Georgia', Email= 'jamesa@dx-email.com' }, \n      {id= 13, hid= 6, Fullname= 'Antony Remmen', Prefix= 'Mr.', Title= 'Support Assistant', City= 'Boise', State= 'Idaho', Email= 'anthonyr@dx-email.com' }, \n      {id= 14, hid= 8, Fullname= 'Olivia Peyton', Prefix= 'Mrs.', Title= 'Sales Assistant', City= 'Atlanta', State= 'Georgia', Email= 'oliviap@dx-email.com' },  \n      {id= 17, hid= 5, Fullname= 'Sandy Bright', Prefix= 'Ms.', Title= 'Benefits Coordinator', City= 'Denver', State= 'Colorado', Email= 'sandrab@dx-email.com' },\n      {id= 18, hid= 0, Fullname= 'Ed Holmes', Prefix= 'Dr.', Title= 'Sales Manager', City= 'Malibu', State= 'California', Email= 'edwardh@dx-email.com'}]",
+					"T": "prop"
+				},
+				"columnAutoWidth": {
+					"H": "true",
+					"T": "prop"
+				},
+				"showColumnLines": {
+					"H": "true",
+					"T": "prop"
+				},
+				"showRowLines": {
+					"H": "true",
+					"T": "prop"
+				},
+				"rootValue": {
+					"H": "'0'",
+					"T": "prop"
+				},
+				"keyExpr": {
+					"H": "'id'",
+					"T": "prop"
+				},
+				"parentIdExpr": {
+					"H": "'hid'",
+					"T": "prop"
+				},
+				"allowColumnReordering": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "DxColumn",
+							"P": {
+								"cellTemplate": {
+									"H": "Id",
+									"T": "prop"
+								},
+								"dataField": {
+									"H": "'Id'",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_87",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_87"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "DxColumn",
+							"P": {
+								"cellTemplate": {
+									"H": "Hid",
+									"T": "prop"
+								},
+								"dataField": {
+									"H": "'Hid'",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_88",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_88"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "DxColumn",
+							"P": {
+								"cellTemplate": {
+									"H": "Fullname",
+									"T": "prop"
+								},
+								"dataField": {
+									"H": "'Fullname'",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_89",
+									"T": "prop"
+								},
+								"cssClass": {
+									"H": "'yellow'",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_89"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "DxColumn",
+							"P": {
+								"cellTemplate": {
+									"H": "Prefix",
+									"T": "prop"
+								},
+								"dataField": {
+									"H": "'Prefix'",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_90",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_90"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "DxColumn",
+							"P": {
+								"cellTemplate": {
+									"H": "Title",
+									"T": "prop"
+								},
+								"dataField": {
+									"H": "'Title'",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_91",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_91"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "DxColumn",
+							"P": {
+								"cellTemplate": {
+									"H": "City",
+									"T": "prop"
+								},
+								"dataField": {
+									"H": "'City'",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_92",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_92"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "DxColumn",
+							"P": {
+								"cellTemplate": {
+									"H": "State",
+									"T": "prop"
+								},
+								"dataField": {
+									"H": "'State'",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_93",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_93"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_86"
+			},
+			"O": {
+				"cType": "scopedSlot",
+				"forceUpdateAfterPropertySetting": true
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "DxTreeList",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_86",
+					"T": "prop"
+				},
+				"dataSource": {
+					"H": "╬[]╠{}╠=╣id╩╠1╩╩╠=╣hid╩╠0╩╩╠=╣Fullname╩╠'John Heart'╩╩╠=╣Prefix╩╠'Mr.'╩╩╠=╣Title╩╠'CEO'╩╩╠=╣City╩╠'Los Angeles'╩╩╠=╣State╩╠'California'╩╩╠=╣Email╩╠'jheart@dx-email.com'╩╩╩╠{}╠=╣id╩╠2╩╩╠=╣hid╩╠0╩╩╠=╣Fullname╩╠'Samantha Bright'╩╩╠=╣Prefix╩╠'Dr.'╩╩╠=╣Title╩╠'COO'╩╩╠=╣City╩╠'Los Angeles'╩╩╠=╣State╩╠'California'╩╩╠=╣Email╩╠'samanthab@dx-email.com'╩╩╩╠{}╠=╣id╩╠3╩╩╠=╣hid╩╠0╩╩╠=╣Fullname╩╠'Arthur Miller'╩╩╠=╣Prefix╩╠'Mr.'╩╩╠=╣Title╩╠'CTO'╩╩╠=╣City╩╠'Denver'╩╩╠=╣State╩╠'Colorado'╩╩╠=╣Email╩╠'arthurm@dx-email.com'╩╩╩╠{}╠=╣id╩╠4╩╩╠=╣hid╩╠1╩╩╠=╣Fullname╩╠'Robert Reagan'╩╩╠=╣Prefix╩╠'Mr.'╩╩╠=╣Title╩╠'CMO'╩╩╠=╣City╩╠'Bentonville'╩╩╠=╣State╩╠'Arkansas'╩╩╠=╣Email╩╠'robertr@dx-email.com'╩╩╩╠{}╠=╣id╩╠5╩╩╠=╣hid╩╠1╩╩╠=╣Fullname╩╠'Greta Sims'╩╩╠=╣Prefix╩╠'Ms.'╩╩╠=╣Title╩╠'HR Manager'╩╩╠=╣City╩╠'Atlanta'╩╩╠=╣State╩╠'Georgia'╩╩╠=╣Email╩╠'gretas@dx-email.com'╩╩╩╠{}╠=╣id╩╠6╩╩╠=╣hid╩╠3╩╩╠=╣Fullname╩╠'Barb Banks'╩╩╠=╣Prefix╩╠'Mrs.'╩╩╠=╣Title╩╠'Support Manager'╩╩╠=╣City╩╠'Phoenix'╩╩╠=╣State╩╠'Arizona'╩╩╠=╣Email╩╠'barbarab@dx-email.com'╩╩╩╠{}╠=╣id╩╠7╩╩╠=╣hid╩╠2╩╩╠=╣Fullname╩╠'Kevin Carter'╩╩╠=╣Prefix╩╠'Mr.'╩╩╠=╣Title╩╠'Shipping Manager'╩╩╠=╣City╩╠'San Diego'╩╩╠=╣State╩╠'California'╩╩╠=╣Email╩╠'kevinc@dx-email.com'╩╩╩╠{}╠=╣id╩╠8╩╩╠=╣hid╩╠5╩╩╠=╣Fullname╩╠'Cindy Stanwick'╩╩╠=╣Prefix╩╠'Ms.'╩╩╠=╣Title╩╠'HR Assistant'╩╩╠=╣City╩╠'Little Rock'╩╩╠=╣State╩╠'Arkansas'╩╩╠=╣Email╩╠'cindys@dx-email.com'╩╩╩╠{}╠=╣id╩╠9╩╩╠=╣hid╩╠8╩╩╠=╣Fullname╩╠'Sammy Hill'╩╩╠=╣Prefix╩╠'Mr.'╩╩╠=╣Title╩╠'Sales Assistant'╩╩╠=╣City╩╠'Pasadena'╩╩╠=╣State╩╠'California'╩╩╠=╣Email╩╠'sammyh@dx-email.com'╩╩╩╠{}╠=╣id╩╠10╩╩╠=╣hid╩╠7╩╩╠=╣Fullname╩╠'Mary Stern'╩╩╠=╣Prefix╩╠'Ms.'╩╩╠=╣Title╩╠'Shipping Assistant'╩╩╠=╣City╩╠'Beaver'╩╩╠=╣State╩╠'Utah'╩╩╠=╣Email╩╠'marys@dx-email.com'╩╩╩╠{}╠=╣id╩╠11╩╩╠=╣hid╩╠7╩╩╠=╣Fullname╩╠'Robin Cosworth'╩╩╠=╣Prefix╩╠'Mrs.'╩╩╠=╣Title╩╠'Shipping Assistant'╩╩╠=╣City╩╠'Los Angeles'╩╩╠=╣State╩╠'California'╩╩╠=╣Email╩╠'robinc@dx-email.com'╩╩╩╠{}╠=╣id╩╠12╩╩╠=╣hid╩╠6╩╩╠=╣Fullname╩╠'James Anderson'╩╩╠=╣Prefix╩╠'Mr.'╩╩╠=╣Title╩╠'Support Assistant'╩╩╠=╣City╩╠'Atlanta'╩╩╠=╣State╩╠'Georgia'╩╩╠=╣Email╩╠'jamesa@dx-email.com'╩╩╩╠{}╠=╣id╩╠13╩╩╠=╣hid╩╠6╩╩╠=╣Fullname╩╠'Antony Remmen'╩╩╠=╣Prefix╩╠'Mr.'╩╩╠=╣Title╩╠'Support Assistant'╩╩╠=╣City╩╠'Boise'╩╩╠=╣State╩╠'Idaho'╩╩╠=╣Email╩╠'anthonyr@dx-email.com'╩╩╩╠{}╠=╣id╩╠14╩╩╠=╣hid╩╠8╩╩╠=╣Fullname╩╠'Olivia Peyton'╩╩╠=╣Prefix╩╠'Mrs.'╩╩╠=╣Title╩╠'Sales Assistant'╩╩╠=╣City╩╠'Atlanta'╩╩╠=╣State╩╠'Georgia'╩╩╠=╣Email╩╠'oliviap@dx-email.com'╩╩╩╠{}╠=╣id╩╠17╩╩╠=╣hid╩╠5╩╩╠=╣Fullname╩╠'Sandy Bright'╩╩╠=╣Prefix╩╠'Ms.'╩╩╠=╣Title╩╠'Benefits Coordinator'╩╩╠=╣City╩╠'Denver'╩╩╠=╣State╩╠'Colorado'╩╩╠=╣Email╩╠'sandrab@dx-email.com'╩╩╩╠{}╠=╣id╩╠18╩╩╠=╣hid╩╠0╩╩╠=╣Fullname╩╠'Ed Holmes'╩╩╠=╣Prefix╩╠'Dr.'╩╩╠=╣Title╩╠'Sales Manager'╩╩╠=╣City╩╠'Malibu'╩╩╠=╣State╩╠'California'╩╩╠=╣Email╩╠'edwardh@dx-email.com'╩╩╩╩╩",
+					"T": "prop"
+				},
+				"columnAutoWidth": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"showColumnLines": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"showRowLines": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"rootValue": {
+					"H": "╬'0'╩╩",
+					"T": "prop"
+				},
+				"keyExpr": {
+					"H": "╬'id'╩╩",
+					"T": "prop"
+				},
+				"parentIdExpr": {
+					"H": "╬'hid'╩╩",
+					"T": "prop"
+				},
+				"allowColumnReordering": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "DxColumn",
+							"P": {
+								"cellTemplate": {
+									"H": "╬Id╩╩",
+									"T": "prop"
+								},
+								"dataField": {
+									"H": "╬'Id'╩╩",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_87",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_87"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "DxColumn",
+							"P": {
+								"cellTemplate": {
+									"H": "╬Hid╩╩",
+									"T": "prop"
+								},
+								"dataField": {
+									"H": "╬'Hid'╩╩",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_88",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_88"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "DxColumn",
+							"P": {
+								"cellTemplate": {
+									"H": "╬Fullname╩╩",
+									"T": "prop"
+								},
+								"dataField": {
+									"H": "╬'Fullname'╩╩",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_89",
+									"T": "prop"
+								},
+								"cssClass": {
+									"H": "╬'yellow'╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_89"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "DxColumn",
+							"P": {
+								"cellTemplate": {
+									"H": "╬Prefix╩╩",
+									"T": "prop"
+								},
+								"dataField": {
+									"H": "╬'Prefix'╩╩",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_90",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_90"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "DxColumn",
+							"P": {
+								"cellTemplate": {
+									"H": "╬Title╩╩",
+									"T": "prop"
+								},
+								"dataField": {
+									"H": "╬'Title'╩╩",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_91",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_91"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "DxColumn",
+							"P": {
+								"cellTemplate": {
+									"H": "╬City╩╩",
+									"T": "prop"
+								},
+								"dataField": {
+									"H": "╬'City'╩╩",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_92",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_92"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "DxColumn",
+							"P": {
+								"cellTemplate": {
+									"H": "╬State╩╩",
+									"T": "prop"
+								},
+								"dataField": {
+									"H": "╬'State'╩╩",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_93",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_93"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": ""
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_86"
+			},
+			"O": {
+				"cType": "scopedSlot",
+				"forceUpdateAfterPropertySetting": true,
+				"compDomClasses": "dx-widget dx-visibility-change-handler dx-treelist newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {}
+};
+export default pjson

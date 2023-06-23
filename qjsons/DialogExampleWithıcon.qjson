@@ -1,0 +1,690 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VDialog",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				},
+				"width": {
+					"H": "500",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click:outside": {
+					"H": "EdtrComp_1.value=false"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VCard",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_5",
+									"T": "prop"
+								},
+								"class": {
+									"H": "'white--text'",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VRow",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_12",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'d-flex flex-row justify-end white--text mr-4'",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_15",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "'primary'",
+																	"T": "prop"
+																},
+																"regular": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"icon": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "EdtrComp_1.value=false",
+																	"P": "mouseEvent"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VIcon",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_14",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'mdi-close'",
+																					"T": "text"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_14"
+																			},
+																			"O": {
+																				"compDomClasses": "v-icon notranslate mdi mdi-close theme--light"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_15"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-btn v-btn--flat v-btn--icon v-btn--round theme--light v-size--default primary--text"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_12"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "row d-flex flex-row justify-end white--text mr-4"
+											}
+										},
+										{
+											"T": "VTextField",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_7",
+													"T": "prop"
+												},
+												"label": {
+													"H": "'Text field label'",
+													"T": "prop"
+												},
+												"regular": {
+													"H": "'true'",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_7"
+											},
+											"O": {
+												"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted"
+											}
+										},
+										{
+											"T": "VTextField",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_8",
+													"T": "prop"
+												},
+												"label": {
+													"H": "'Text field label'",
+													"T": "prop"
+												},
+												"regular": {
+													"H": "'true'",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_8"
+											},
+											"O": {
+												"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted"
+											}
+										},
+										{
+											"T": "VTextField",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_9",
+													"T": "prop"
+												},
+												"label": {
+													"H": "'Text field label'",
+													"T": "prop"
+												},
+												"regular": {
+													"H": "'true'",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_9"
+											},
+											"O": {
+												"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted"
+											}
+										},
+										{
+											"T": "VBtn",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_10",
+													"T": "prop"
+												},
+												"color": {
+													"H": "'primary'",
+													"T": "prop"
+												},
+												"regular": {
+													"H": "true",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"C": {},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_11",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "'Test Button'",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_11"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "q-label "
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_10"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_5"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "v-card v-sheet theme--light white--text"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": ""
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_3",
+					"T": "prop"
+				},
+				"color": {
+					"H": "'primary'",
+					"T": "prop"
+				},
+				"regular": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "EdtrComp_1.value=true",
+					"P": "mouseEvent"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_4",
+									"T": "prop"
+								},
+								"text": {
+									"H": "'Test Button'",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "q-label "
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_3"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VDialog",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				},
+				"width": {
+					"H": "╬500╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click:outside": {
+					"H": "╬=╣.╣EdtrComp_1╩╠value╩╩╠false╩╩╩"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VCard",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_5",
+									"T": "prop"
+								},
+								"class": {
+									"H": "╬'white--text'╩╩",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VRow",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_12",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'d-flex flex-row justify-end white--text mr-4'╩╩",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_15",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "╬'primary'╩╩",
+																	"T": "prop"
+																},
+																"regular": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"icon": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "╬=╣.╣EdtrComp_1╩╠value╩╩╠false╩╩╩",
+																	"P": "mouseEvent"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VIcon",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_14",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'mdi-close'╩╩",
+																					"T": "text"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_14"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "v-icon notranslate mdi mdi-close theme--light"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_15"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-btn v-btn--flat v-btn--icon v-btn--round theme--light v-size--default primary--text"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_12"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "row d-flex flex-row justify-end white--text mr-4"
+											}
+										},
+										{
+											"T": "VTextField",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_7",
+													"T": "prop"
+												},
+												"label": {
+													"H": "╬'Text field label'╩╩",
+													"T": "prop"
+												},
+												"regular": {
+													"H": "╬'true'╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_7"
+											},
+											"O": {
+												"cType": "child",
+												"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted"
+											}
+										},
+										{
+											"T": "VTextField",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_8",
+													"T": "prop"
+												},
+												"label": {
+													"H": "╬'Text field label'╩╩",
+													"T": "prop"
+												},
+												"regular": {
+													"H": "╬'true'╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_8"
+											},
+											"O": {
+												"cType": "child",
+												"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted"
+											}
+										},
+										{
+											"T": "VTextField",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_9",
+													"T": "prop"
+												},
+												"label": {
+													"H": "╬'Text field label'╩╩",
+													"T": "prop"
+												},
+												"regular": {
+													"H": "╬'true'╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_9"
+											},
+											"O": {
+												"cType": "child",
+												"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted"
+											}
+										},
+										{
+											"T": "VBtn",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_10",
+													"T": "prop"
+												},
+												"color": {
+													"H": "╬'primary'╩╩",
+													"T": "prop"
+												},
+												"regular": {
+													"H": "╬true╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"C": {},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_11",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬'Test Button'╩╩",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_11"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "q-label "
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_10"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_5"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "v-card v-sheet theme--light white--text"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": ""
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_3",
+					"T": "prop"
+				},
+				"color": {
+					"H": "╬'primary'╩╩",
+					"T": "prop"
+				},
+				"regular": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "╬=╣.╣EdtrComp_1╩╠value╩╩╠true╩╩╩",
+					"P": "mouseEvent"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_4",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬'Test Button'╩╩",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "q-label "
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_3"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {}
+};
+export default pjson

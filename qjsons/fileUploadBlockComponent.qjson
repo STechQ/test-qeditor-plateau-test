@@ -1,0 +1,132 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_7",
+					"T": "prop"
+				},
+				"externalEvents": {
+					"H": "[{name='onUploadFail', params=['errorInfo']}]",
+					"T": "prop"
+				},
+				"externalProps": {
+					"H": "['uploadPlaceHolder']",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"EndRender": {
+					"H": "if(parent.props.uploadPlaceHolder){\r\n    fileInputComp.placeholder = parent.props.uploadPlaceHolder\r\n}else{\r\n    fileInputComp.placeholder = 'Dosya yükle'\r\n}\r\n "
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_7"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": ""
+			}
+		},
+		{
+			"T": "VFileInput",
+			"P": {
+				"ID": {
+					"H": "fileInputComp",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"change": {
+					"H": "EM.trace(value)\r\n\r\nif(value.name){\r\n inputType=value.name.substring(value.name.length()-4,value.name.length())\r\n if(inputType=='xlsx'){\r\n\r\n requestObject={}\r\n requestObject.url='/services/authorization/api/v1/supplierinvoice/invoices/upload'\r\n requestObject.http='multipart'\r\n requestObject.data={}\r\n requestObject.data.file={}\r\n requestObject.data.file= value\r\n requestObject.data.identityId='8160477411'\r\n\r\nrequestObject.headers={}\r\nrequestObject.headers['x-rly-corr']='1'\r\nrequestObject.headers['x-rly-ins-unit']='1'\r\nrequestObject.headers['x-rly-session']='1'\r\nrequestObject.headers['x-rly-tenant']='5'\r\nrequestObject.headers['x-rly-user-id']='1'\r\n\r\nrequestObject.responseField='uploadedInvoices'\r\nrequestObject.onSuccess='onSuccessUploadedInvoices'\r\nrequestObject.onFail= 'onFailUploadedInvoices'\r\nRequest.async(requestObject)\r\n\r\n\r\n  }else{\r\n    EM.trace('Dosya Uzantısı Hatalı')\r\n  }\r\n}",
+					"P": "value"
+				},
+				"onSuccessUploadedInvoices": {
+					"H": "EM.trace('File uploaded successfully')\r\nEM.trace(response)\r\n\r\n",
+					"C": true
+				},
+				"onFailUploadedInvoices": {
+					"H": "EM.trace('onFail')\r\n//Quick.alert({ error= { errorMessage= 'Excel yükleme başarısız oldu.', errorCode= 'EXCEL_IMPORT_EXCEPTION' , errorSource= 'Network' }})\r\n\r\n\r\nparent.events.onUploadFail({errorInfo=error})\r\n",
+					"C": true
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted v-text-field--placeholder v-file-input"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_7",
+					"T": "prop"
+				},
+				"externalEvents": {
+					"H": "╬[]╠{}╠=╣name╩╠'onUploadFail'╩╩╠=╣params╩╠[]╠'errorInfo'╩╩╩╩╩╩",
+					"T": "prop"
+				},
+				"externalProps": {
+					"H": "╬[]╠'uploadPlaceHolder'╩╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"EndRender": {
+					"H": "╬if╣.╣.╣parent╩╠props╩╩╠uploadPlaceHolder╩╩╠╬=╣.╣fileInputComp╩╠placeholder╩╩╠.╣.╣parent╩╠props╩╩╠uploadPlaceHolder╩╩╩╩╠╬=╣.╣fileInputComp╩╠placeholder╩╩╠'Dosya yükle'╩╩╩╩╩"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_7"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": ""
+			}
+		},
+		{
+			"T": "VFileInput",
+			"P": {
+				"ID": {
+					"H": "fileInputComp",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"change": {
+					"H": "╬()╣.╣EM╩╠trace╩╩╠value╩╩╬if╣.╣value╩╠name╩╩╠╬=╣inputType╩╠()╣.╣.╣value╩╠name╩╩╠substring╩╩╠-╣()╣.╣.╣value╩╠name╩╩╠length╩╩╩╠4╩╩╠()╣.╣.╣value╩╠name╩╩╠length╩╩╩╩╩╬if╣==╣inputType╩╠'xlsx'╩╩╠╬=╣requestObject╩╠{}╩╩╬=╣.╣requestObject╩╠url╩╩╠'/services/authorization/api/v1/supplierinvoice/invoices/upload'╩╩╬=╣.╣requestObject╩╠http╩╩╠'multipart'╩╩╬=╣.╣requestObject╩╠data╩╩╠{}╩╩╬=╣.╣.╣requestObject╩╠data╩╩╠file╩╩╠{}╩╩╬=╣.╣.╣requestObject╩╠data╩╩╠file╩╩╠value╩╩╬=╣.╣.╣requestObject╩╠data╩╩╠identityId╩╩╠'8160477411'╩╩╬=╣.╣requestObject╩╠headers╩╩╠{}╩╩╬=╣[]╣.╣requestObject╩╠headers╩╩╠'x-rly-corr'╩╩╠'1'╩╩╬=╣[]╣.╣requestObject╩╠headers╩╩╠'x-rly-ins-unit'╩╩╠'1'╩╩╬=╣[]╣.╣requestObject╩╠headers╩╩╠'x-rly-session'╩╩╠'1'╩╩╬=╣[]╣.╣requestObject╩╠headers╩╩╠'x-rly-tenant'╩╩╠'5'╩╩╬=╣[]╣.╣requestObject╩╠headers╩╩╠'x-rly-user-id'╩╩╠'1'╩╩╬=╣.╣requestObject╩╠responseField╩╩╠'uploadedInvoices'╩╩╬=╣.╣requestObject╩╠onSuccess╩╩╠'onSuccessUploadedInvoices'╩╩╬=╣.╣requestObject╩╠onFail╩╩╠'onFailUploadedInvoices'╩╩╬()╣.╣Request╩╠async╩╩╠requestObject╩╩╩╠╬()╣.╣EM╩╠trace╩╩╠'Dosya Uzantısı Hatalı'╩╩╩╩╩╠■╩╩",
+					"P": "value"
+				},
+				"onSuccessUploadedInvoices": {
+					"H": "╬()╣.╣EM╩╠trace╩╩╠'File uploaded successfully'╩╩╬()╣.╣EM╩╠trace╩╩╠response╩╩╩",
+					"C": true
+				},
+				"onFailUploadedInvoices": {
+					"H": "╬()╣.╣EM╩╠trace╩╩╠'onFail'╩╩╬()╣.╣.╣parent╩╠events╩╩╠onUploadFail╩╩╠{}╠=╣errorInfo╩╠error╩╩╩╩╩",
+					"C": true
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted v-text-field--placeholder v-file-input"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {}
+};
+export default pjson

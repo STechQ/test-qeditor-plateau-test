@@ -1,0 +1,1014 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VSheet",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_10",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VContainer",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_12",
+									"T": "prop"
+								},
+								"class": {
+									"H": "'container container--fluid'",
+									"T": "class"
+								},
+								"visible": {
+									"H": "true",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCard",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_14",
+													"T": "prop"
+												},
+												"visible": {
+													"H": "true",
+													"T": "prop"
+												},
+												"tile": {
+													"H": "true",
+													"T": "prop"
+												},
+												"exact": {
+													"H": "false",
+													"T": "prop"
+												},
+												"flat": {
+													"H": "false",
+													"T": "prop"
+												},
+												"hover": {
+													"H": "false",
+													"T": "prop"
+												},
+												"outlined": {
+													"H": "true",
+													"T": "prop"
+												},
+												"color": {
+													"H": "'#90CAF9'",
+													"T": "prop"
+												},
+												"nuxt": {
+													"H": "false",
+													"T": "prop"
+												},
+												"replace": {
+													"H": "false",
+													"T": "prop"
+												},
+												"append": {
+													"H": "false",
+													"T": "prop"
+												},
+												"raised": {
+													"H": "false",
+													"T": "prop"
+												},
+												"shaped": {
+													"H": "false",
+													"T": "prop"
+												},
+												"elevation": {
+													"H": "0",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_44",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VCol",
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VTextField",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_5",
+																									"T": "prop"
+																								},
+																								"label": {
+																									"H": "'Search Company Directory'",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"solo": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"clearIcon": {
+																									"H": "'mdi-close-circle-outline'",
+																									"T": "prop"
+																								},
+																								"clearable": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"hideDetails": {
+																									"H": "auto",
+																									"T": "prop"
+																								},
+																								"outlined": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"autofocus": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"success": {
+																									"H": "false",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_5"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						},
+																						{
+																							"T": "VCheckbox",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_6",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "'success'",
+																									"T": "prop"
+																								},
+																								"label": {
+																									"H": "'Case sensitive search'",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"hideDetails": {
+																									"H": "auto",
+																									"T": "prop"
+																								},
+																								"error": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"readonly": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"success": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"validateOnBlur": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"disabled": {
+																									"H": "false",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_6"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_47",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_47"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": []
+																					},
+																					"class": ""
+																				}
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_44"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_14"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										},
+										{
+											"T": "VCard",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_16",
+													"T": "prop"
+												},
+												"visible": {
+													"H": "true",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VContainer",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_18",
+																	"T": "prop"
+																},
+																"class": {
+																	"H": "'container container--fluid'",
+																	"T": "class"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VTreeview",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_7",
+																					"T": "prop"
+																				},
+																				"items": {
+																					"H": "[{name = 'Applications :', id = 1, children=[{name='Calendar : app',  id = 2}, {name='Chrome : app', id = 3}, {name='Webstorm : app', id = 4}]},{ name = 'vue.config.js', icon= 'mdi-nodejs', id = 5, children=[{name='babel.config.js', icon='mdi-nodejs' ,id=6,children=[{name='favicon.ico', icon = 'mdi-file-image', id = 7,children=[{name='index.html', id = 8}, {name='bootstrap : ts', id = 9}]}]}, {name='material2 :', id=12,children=[{name='src :', id = 13,children=[{name='v-btn : ts', id = 14}, {name='v-card : ts', id = 15}, {name='v-window : ts', id = 16}]}]}]},{name='README.md', icon='mdi-language-markdown', id = 17,children=[{name='October : pdf', id = 18}, {name='November : pdf', id = 19}, {name='Tutorial : html', id = 20}]},{name='package.json ',icon= 'mdi-code-json', id = 21,children=[{name='yarn.lock', icon= 'mdi-file-document-outline', id = 22,children=[{name='Basic layouts : mp4', id=23},{name='Advanced techniques : mp4', id=24},{name='All about app : dir', id=25}]}, {name='Intro : mov', id = 26}, {name='Conference introduction : avi', id = 27}]}]",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "'secondary'",
+																					"T": "prop"
+																				},
+																				"selectedColor": {
+																					"H": "'secondary'",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"open": {
+																					"H": "[1, 2]",
+																					"T": "prop"
+																				},
+																				"search": {
+																					"H": "null",
+																					"T": "prop"
+																				},
+																				"activatable": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"selectionType": {
+																					"H": "'leaf'",
+																					"T": "prop"
+																				},
+																				"selectable": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"onIcon": {
+																					"H": "'mdi-folder-open'",
+																					"T": "prop"
+																				},
+																				"offIcon": {
+																					"H": "'mdi-folder'",
+																					"T": "prop"
+																				},
+																				"multipleActive": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"openOnClick": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"shaped": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"transition": {
+																					"H": "'fab-transition'",
+																					"T": "prop"
+																				},
+																				"expandIcon": {
+																					"H": "'mdi-chevron-right'",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"prepend": {
+																					"c": [
+																						{
+																							"T": "VIcon",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_9",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "item.icon",
+																									"T": "text"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"large": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"small": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"size": {
+																									"H": "20",
+																									"T": "prop"
+																								},
+																								"disabled": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"right": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"left": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"dense": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"xSmall": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "'secondary'",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_9"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						}
+																					],
+																					"cType": "scopedSlot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_7"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_18"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_16"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_12"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_10"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VSheet",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_10",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VContainer",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_12",
+									"T": "prop"
+								},
+								"class": {
+									"H": "╬'container container--fluid'╩╩",
+									"T": "class"
+								},
+								"visible": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCard",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_14",
+													"T": "prop"
+												},
+												"visible": {
+													"H": "╬true╩╩",
+													"T": "prop"
+												},
+												"tile": {
+													"H": "╬true╩╩",
+													"T": "prop"
+												},
+												"exact": {
+													"H": "╬false╩╩",
+													"T": "prop"
+												},
+												"flat": {
+													"H": "╬false╩╩",
+													"T": "prop"
+												},
+												"hover": {
+													"H": "╬false╩╩",
+													"T": "prop"
+												},
+												"outlined": {
+													"H": "╬true╩╩",
+													"T": "prop"
+												},
+												"color": {
+													"H": "╬'#90CAF9'╩╩",
+													"T": "prop"
+												},
+												"nuxt": {
+													"H": "╬false╩╩",
+													"T": "prop"
+												},
+												"replace": {
+													"H": "╬false╩╩",
+													"T": "prop"
+												},
+												"append": {
+													"H": "╬false╩╩",
+													"T": "prop"
+												},
+												"raised": {
+													"H": "╬false╩╩",
+													"T": "prop"
+												},
+												"shaped": {
+													"H": "╬false╩╩",
+													"T": "prop"
+												},
+												"elevation": {
+													"H": "╬0╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_44",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VCol",
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VTextField",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_5",
+																									"T": "prop"
+																								},
+																								"label": {
+																									"H": "╬'Search Company Directory'╩╩",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"solo": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"clearIcon": {
+																									"H": "╬'mdi-close-circle-outline'╩╩",
+																									"T": "prop"
+																								},
+																								"clearable": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"hideDetails": {
+																									"H": "╬auto╩╩",
+																									"T": "prop"
+																								},
+																								"outlined": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"autofocus": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"success": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_5"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "v-input v-input--hide-details theme--light v-text-field v-text-field--is-booted undefined"
+																							}
+																						},
+																						{
+																							"T": "VCheckbox",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_6",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "╬'success'╩╩",
+																									"T": "prop"
+																								},
+																								"label": {
+																									"H": "╬'Case sensitive search'╩╩",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"hideDetails": {
+																									"H": "╬auto╩╩",
+																									"T": "prop"
+																								},
+																								"error": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"readonly": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"success": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"validateOnBlur": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"disabled": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_6"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "v-input v-input--hide-details theme--light v-input--selection-controls v-input--checkbox newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_47",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_47"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": []
+																					},
+																					"class": ""
+																				},
+																				"compDomClasses": "col newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_44"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "row newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_14"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-card v-sheet v-sheet--outlined theme--light elevation-0 rounded-0 newDropBorder"
+											}
+										},
+										{
+											"T": "VCard",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_16",
+													"T": "prop"
+												},
+												"visible": {
+													"H": "╬true╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VContainer",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_18",
+																	"T": "prop"
+																},
+																"class": {
+																	"H": "╬'container container--fluid'╩╩",
+																	"T": "class"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VTreeview",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_7",
+																					"T": "prop"
+																				},
+																				"items": {
+																					"H": "╬[]╠{}╠=╣name╩╠'Applications :'╩╩╠=╣id╩╠1╩╩╠=╣children╩╠[]╠{}╠=╣name╩╠'Calendar : app'╩╩╠=╣id╩╠2╩╩╩╠{}╠=╣name╩╠'Chrome : app'╩╩╠=╣id╩╠3╩╩╩╠{}╠=╣name╩╠'Webstorm : app'╩╩╠=╣id╩╠4╩╩╩╩╩╩╠{}╠=╣name╩╠'vue.config.js'╩╩╠=╣icon╩╠'mdi-nodejs'╩╩╠=╣id╩╠5╩╩╠=╣children╩╠[]╠{}╠=╣name╩╠'babel.config.js'╩╩╠=╣icon╩╠'mdi-nodejs'╩╩╠=╣id╩╠6╩╩╠=╣children╩╠[]╠{}╠=╣name╩╠'favicon.ico'╩╩╠=╣icon╩╠'mdi-file-image'╩╩╠=╣id╩╠7╩╩╠=╣children╩╠[]╠{}╠=╣name╩╠'index.html'╩╩╠=╣id╩╠8╩╩╩╠{}╠=╣name╩╠'bootstrap : ts'╩╩╠=╣id╩╠9╩╩╩╩╩╩╩╩╩╠{}╠=╣name╩╠'material2 :'╩╩╠=╣id╩╠12╩╩╠=╣children╩╠[]╠{}╠=╣name╩╠'src :'╩╩╠=╣id╩╠13╩╩╠=╣children╩╠[]╠{}╠=╣name╩╠'v-btn : ts'╩╩╠=╣id╩╠14╩╩╩╠{}╠=╣name╩╠'v-card : ts'╩╩╠=╣id╩╠15╩╩╩╠{}╠=╣name╩╠'v-window : ts'╩╩╠=╣id╩╠16╩╩╩╩╩╩╩╩╩╩╩╩╠{}╠=╣name╩╠'README.md'╩╩╠=╣icon╩╠'mdi-language-markdown'╩╩╠=╣id╩╠17╩╩╠=╣children╩╠[]╠{}╠=╣name╩╠'October : pdf'╩╩╠=╣id╩╠18╩╩╩╠{}╠=╣name╩╠'November : pdf'╩╩╠=╣id╩╠19╩╩╩╠{}╠=╣name╩╠'Tutorial : html'╩╩╠=╣id╩╠20╩╩╩╩╩╩╠{}╠=╣name╩╠'package.json '╩╩╠=╣icon╩╠'mdi-code-json'╩╩╠=╣id╩╠21╩╩╠=╣children╩╠[]╠{}╠=╣name╩╠'yarn.lock'╩╩╠=╣icon╩╠'mdi-file-document-outline'╩╩╠=╣id╩╠22╩╩╠=╣children╩╠[]╠{}╠=╣name╩╠'Basic layouts : mp4'╩╩╠=╣id╩╠23╩╩╩╠{}╠=╣name╩╠'Advanced techniques : mp4'╩╩╠=╣id╩╠24╩╩╩╠{}╠=╣name╩╠'All about app : dir'╩╩╠=╣id╩╠25╩╩╩╩╩╩╠{}╠=╣name╩╠'Intro : mov'╩╩╠=╣id╩╠26╩╩╩╠{}╠=╣name╩╠'Conference introduction : avi'╩╩╠=╣id╩╠27╩╩╩╩╩╩╩╩",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "╬'secondary'╩╩",
+																					"T": "prop"
+																				},
+																				"selectedColor": {
+																					"H": "╬'secondary'╩╩",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"open": {
+																					"H": "╬[]╠1╩╠2╩╩╩",
+																					"T": "prop"
+																				},
+																				"search": {
+																					"H": "╬null╩╩",
+																					"T": "prop"
+																				},
+																				"activatable": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"selectionType": {
+																					"H": "╬'leaf'╩╩",
+																					"T": "prop"
+																				},
+																				"selectable": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"onIcon": {
+																					"H": "╬'mdi-folder-open'╩╩",
+																					"T": "prop"
+																				},
+																				"offIcon": {
+																					"H": "╬'mdi-folder'╩╩",
+																					"T": "prop"
+																				},
+																				"multipleActive": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"openOnClick": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"shaped": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"transition": {
+																					"H": "╬'fab-transition'╩╩",
+																					"T": "prop"
+																				},
+																				"expandIcon": {
+																					"H": "╬'mdi-chevron-right'╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"prepend": {
+																					"c": [
+																						{
+																							"T": "VIcon",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_9",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "╬.╣item╩╠icon╩╩╩",
+																									"T": "text"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"large": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"small": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"size": {
+																									"H": "╬20╩╩",
+																									"T": "prop"
+																								},
+																								"disabled": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"right": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"left": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"dense": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"xSmall": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "╬'secondary'╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_9"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "v-icon notranslate v-icon--left mdi mdi-code-json theme--light secondary--text newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "scopedSlot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_7"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-treeview theme--light newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_18"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "container container--fluid newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_16"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-card v-sheet theme--light newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_12"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "container container--fluid newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_10"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-sheet theme--light newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {}
+};
+export default pjson

@@ -1,0 +1,323 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VDialog",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_48",
+					"T": "prop"
+				},
+				"width": {
+					"H": "500",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click:outside": {
+					"H": "EdtrComp_48.value=false"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VTextField",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_50",
+									"T": "prop"
+								},
+								"label": {
+									"H": "'Text field label'",
+									"T": "prop"
+								},
+								"regular": {
+									"H": "'true'",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_50"
+							},
+							"O": {
+								"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted",
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_48"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": ""
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_51",
+					"T": "prop"
+				},
+				"color": {
+					"H": "'primary'",
+					"T": "prop"
+				},
+				"regular": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "EdtrComp_48.qValue=true\r\nEdtrComp_50.qValue='dsadsa'\r\n",
+					"P": "mouseEvent",
+					"HL": "QS"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_52",
+									"T": "prop"
+								},
+								"text": {
+									"H": "'Test Button'",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_52"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "q-label "
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_51"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VDialog",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_48",
+					"T": "prop"
+				},
+				"width": {
+					"H": "╬500╩╩",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click:outside": {
+					"H": "╬=╣.╣EdtrComp_48╩╠value╩╩╠false╩╩╩"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VTextField",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_50",
+									"T": "prop"
+								},
+								"label": {
+									"H": "╬'Text field label'╩╩",
+									"T": "prop"
+								},
+								"regular": {
+									"H": "╬'true'╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_50"
+							},
+							"O": {
+								"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted undefined",
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_48"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "newDropBorder"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_51",
+					"T": "prop"
+				},
+				"color": {
+					"H": "╬'primary'╩╩",
+					"T": "prop"
+				},
+				"regular": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "╬=╣.╣EdtrComp_48╩╠qValue╩╩╠true╩╩╬=╣.╣EdtrComp_50╩╠qValue╩╩╠'dsadsa'╩╩╩",
+					"P": "mouseEvent",
+					"HL": "QS"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_52",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬'Test Button'╩╩",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_52"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "q-label newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_51"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {
+		"tr-TR": {
+			"calendar": "╬'Takvim'╩╩",
+			"permissionRequests": "╬'İzin Taleplerim'╩╩",
+			"annualEarned": "╬'Haklarım'╩╩",
+			"newPermissionRequest": "╬'Yeni İzin Talebi'╩╩",
+			"category": "╬'İzin Kategorisi'╩╩",
+			"type": "╬'İzin Tipi'╩╩",
+			"startDate": "╬'Başlangıç Tarihi'╩╩",
+			"endDate": "╬'Bitiş Tarihi'╩╩",
+			"time": "╬'Saat'╩╩",
+			"balanceLabel": "╬'Kalan İzin :'╩╩",
+			"description": "╬'İzin Açıklaması'╩╩",
+			"cancel": "╬'İptal'╩╩",
+			"save": "╬'Kaydet'╩╩",
+			"select": "╬'Seç'╩╩",
+			"totalMinuteLabel": "╬'Dakika :'╩╩",
+			"clean": "╬'Temizle'╩╩",
+			"search": "╬'Sorgula'╩╩",
+			"day": "╬'Gün'╩╩",
+			"minute": "╬'Dakika'╩╩",
+			"hour": "╬'Saat'╩╩",
+			"startEndTime": "╬'Öğlenden Önce / Sonra'╩╩",
+			"update": "╬'Güncelle'╩╩",
+			"deleteMsg": "╬'İzin kaydı silinecektir, onaylıyor musunuz?'╩╩",
+			"updateMsg": "╬'İzin kaydı güncellenecektir, onaylıyor musunuz?'╩╩",
+			"yes": "╬'Evet'╩╩",
+			"no": "╬'Hayır'╩╩",
+			"year": "╬'Yıl'╩╩",
+			"date": "╬'Tarih'╩╩",
+			"earnedAmount": "╬'Hakedilen Miktar'╩╩",
+			"approver": "╬'Onaylayıcı'╩╩",
+			"totalDayLabel": "╬'Seçilen Toplam Gün :'╩╩",
+			"totalHourLabel": "╬'Seçilen Toplam Saat :'╩╩"
+		},
+		"en-US": {
+			"calendar": "╬'Calendar'╩╩",
+			"permissionRequests": "╬'My Permission Requests'╩╩",
+			"annualEarned": "╬'Annual Earned'╩╩",
+			"newPermissionRequest": "╬'New Permission Request'╩╩",
+			"category": "╬'Permission Category'╩╩",
+			"type": "╬'Permission Type'╩╩",
+			"startDate": "╬'Start Date'╩╩",
+			"endDate": "╬'End Date'╩╩",
+			"time": "╬'Time'╩╩",
+			"balanceLabel": "╬'Balance :'╩╩",
+			"description": "╬'Comment'╩╩",
+			"cancel": "╬'Cancel'╩╩",
+			"save": "╬'Save'╩╩",
+			"select": "╬'Select'╩╩",
+			"totalMinuteLabel": "╬'Minute :'╩╩",
+			"clean": "╬'Clean'╩╩",
+			"search": "╬'Search'╩╩",
+			"day": "╬'Day'╩╩",
+			"minute": "╬'Minute'╩╩",
+			"hour": "╬'Hour'╩╩",
+			"startEndTime": "╬'Before / After Midday'╩╩",
+			"update": "╬'Update'╩╩",
+			"deleteMsg": "╬'Permission record will be deleted, do you confirm?'╩╩",
+			"updateMsg": "╬'Permission record will be updated, do you confirm?'╩╩",
+			"yes": "╬'Yes'╩╩",
+			"no": "╬'No'╩╩",
+			"year": "╬'Year'╩╩",
+			"date": "╬'Date'╩╩",
+			"earnedAmount": "╬'Earned Amount'╩╩",
+			"approver": "╬'Approver'╩╩",
+			"totalDayLabel": "╬'Total Day Selected :'╩╩",
+			"totalHourLabel": "╬'Total Hour Selected :'╩╩"
+		}
+	},
+	"description": {}
+};
+export default pjson

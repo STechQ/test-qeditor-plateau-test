@@ -1,0 +1,624 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "VRowComp",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_101",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "'span'",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vulputate neque sed laoreet suscipit. Nam pulvinar venenatis justo, in rutrum mi tempor interdum. Nullam volutpat nibh vitae eros luctus lobortis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.'",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"processHtml": {
+																	"H": "false",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_101"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginTop": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginLeft": "",
+																	"paddingTop": "",
+																	"paddingRight": "",
+																	"paddingBottom": "",
+																	"paddingLeft": ""
+																},
+																"fontColor": "#000000",
+																"fontFamily": "Roboto",
+																"fontSize": "16px",
+																"fontStyle": "normal",
+																"fontWeight": "400",
+																"lineHeight": "20px"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_74",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_74"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												}
+											},
+											"S": {
+												"xs-xl": {
+													"col": "6",
+													"flexDirection": "column",
+													"alignItems": "center",
+													"justifyContent": "center",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "12px",
+													"paddingBottom": "12px",
+													"paddingLeft": "12px",
+													"paddingRight": "12px"
+												},
+												"backgroundColor": "",
+												"boxShadow": "",
+												"boxSizing": "",
+												"borderTopStyle": "",
+												"borderRightStyle": "",
+												"borderBottomStyle": "",
+												"borderLeftStyle": "",
+												"borderTopLeftRadius": "",
+												"borderTopRightRadius": "",
+												"borderBottomLeftRadius": "",
+												"borderBottomRightRadius": "",
+												"borderTopWidth": "",
+												"borderRightWidth": "",
+												"borderBottomWidth": "",
+												"borderLeftWidth": "",
+												"defaultBorderColor": "",
+												"sides": ""
+											}
+										},
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VImg",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_80",
+																	"T": "prop"
+																},
+																"eager": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"src": {
+																	"H": "'https://picsum.photos/510/300?random'",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"contain": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_80"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginLeft": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginTop": "",
+																	"paddingTop": "",
+																	"paddingBottom": "",
+																	"paddingLeft": "",
+																	"paddingRight": "",
+																	"width": "",
+																	"height": "",
+																	"unlink": "false"
+																},
+																"boxShadow": "",
+																"boxSizing": "",
+																"borderTopStyle": "",
+																"borderRightStyle": "",
+																"borderBottomStyle": "",
+																"borderLeftStyle": "",
+																"borderTopLeftRadius": "",
+																"borderTopRightRadius": "",
+																"borderBottomLeftRadius": "",
+																"borderBottomRightRadius": "",
+																"borderTopWidth": "",
+																"borderRightWidth": "",
+																"borderBottomWidth": "",
+																"borderLeftWidth": "",
+																"defaultBorderColor": "",
+																"sides": ""
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_76",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_76"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												}
+											},
+											"S": {
+												"xs-xl": {
+													"col": "6",
+													"flexDirection": "unset",
+													"alignItems": "",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "12px",
+													"paddingBottom": "12px",
+													"paddingLeft": "12px",
+													"paddingRight": "12px"
+												},
+												"backgroundColor": "",
+												"boxShadow": "",
+												"boxSizing": "",
+												"borderTopStyle": "",
+												"borderRightStyle": "",
+												"borderBottomStyle": "",
+												"borderLeftStyle": "",
+												"borderTopLeftRadius": "",
+												"borderTopRightRadius": "",
+												"borderBottomLeftRadius": "",
+												"borderBottomRightRadius": "",
+												"borderTopWidth": "",
+												"borderRightWidth": "",
+												"borderBottomWidth": "",
+												"borderLeftWidth": "",
+												"defaultBorderColor": "",
+												"sides": ""
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_5"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "VRowComp",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_101",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "╬'span'╩╩",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vulputate neque sed laoreet suscipit. Nam pulvinar venenatis justo, in rutrum mi tempor interdum. Nullam volutpat nibh vitae eros luctus lobortis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.'╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"processHtml": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_101"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginTop": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginLeft": "",
+																	"paddingTop": "",
+																	"paddingRight": "",
+																	"paddingBottom": "",
+																	"paddingLeft": ""
+																},
+																"fontColor": "#000000",
+																"fontFamily": "Roboto",
+																"fontSize": "16px",
+																"fontStyle": "normal",
+																"fontWeight": "400",
+																"lineHeight": "20px"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "q-label "
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_74",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_74"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												},
+												"compDomClasses": "col d-flex flex-column"
+											},
+											"S": {
+												"xs-xl": {
+													"col": "6",
+													"flexDirection": "column",
+													"alignItems": "center",
+													"justifyContent": "center",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "12px",
+													"paddingBottom": "12px",
+													"paddingLeft": "12px",
+													"paddingRight": "12px"
+												},
+												"backgroundColor": "",
+												"boxShadow": "",
+												"boxSizing": "",
+												"borderTopStyle": "",
+												"borderRightStyle": "",
+												"borderBottomStyle": "",
+												"borderLeftStyle": "",
+												"borderTopLeftRadius": "",
+												"borderTopRightRadius": "",
+												"borderBottomLeftRadius": "",
+												"borderBottomRightRadius": "",
+												"borderTopWidth": "",
+												"borderRightWidth": "",
+												"borderBottomWidth": "",
+												"borderLeftWidth": "",
+												"defaultBorderColor": "",
+												"sides": ""
+											}
+										},
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VImg",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_80",
+																	"T": "prop"
+																},
+																"eager": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"src": {
+																	"H": "╬'https://picsum.photos/510/300?random'╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"contain": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_80"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginLeft": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginTop": "",
+																	"paddingTop": "",
+																	"paddingBottom": "",
+																	"paddingLeft": "",
+																	"paddingRight": "",
+																	"width": "",
+																	"height": "",
+																	"unlink": "false"
+																},
+																"boxShadow": "",
+																"boxSizing": "",
+																"borderTopStyle": "",
+																"borderRightStyle": "",
+																"borderBottomStyle": "",
+																"borderLeftStyle": "",
+																"borderTopLeftRadius": "",
+																"borderTopRightRadius": "",
+																"borderBottomLeftRadius": "",
+																"borderBottomRightRadius": "",
+																"borderTopWidth": "",
+																"borderRightWidth": "",
+																"borderBottomWidth": "",
+																"borderLeftWidth": "",
+																"defaultBorderColor": "",
+																"sides": ""
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-image v-responsive theme--light"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_76",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_76"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												},
+												"compDomClasses": "col d-flex flex-column"
+											},
+											"S": {
+												"xs-xl": {
+													"col": "6",
+													"flexDirection": "unset",
+													"alignItems": "",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "12px",
+													"paddingBottom": "12px",
+													"paddingLeft": "12px",
+													"paddingRight": "12px"
+												},
+												"backgroundColor": "",
+												"boxShadow": "",
+												"boxSizing": "",
+												"borderTopStyle": "",
+												"borderRightStyle": "",
+												"borderBottomStyle": "",
+												"borderLeftStyle": "",
+												"borderTopLeftRadius": "",
+												"borderTopRightRadius": "",
+												"borderBottomLeftRadius": "",
+												"borderBottomRightRadius": "",
+												"borderTopWidth": "",
+												"borderRightWidth": "",
+												"borderBottomWidth": "",
+												"borderLeftWidth": "",
+												"defaultBorderColor": "",
+												"sides": ""
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_5"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"opt": {
+		"V": 2.1
+	}
+};
+export default pjson

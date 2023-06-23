@@ -1,0 +1,817 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"setQjsonPath": {
+					"H": "let compName;\r\nlet qjsonPath;\r\n(<any>components[compName]).QJsonPath=qjsonPath;",
+					"C": true,
+					"HL": "TS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {}
+		},
+		{
+			"T": "VCombobox",
+			"P": {
+				"ID": {
+					"H": "closedPanes",
+					"T": "prop"
+				},
+				"attach": {
+					"H": "true",
+					"T": "prop"
+				},
+				"label": {
+					"H": "'ReCreate Pane'",
+					"T": "prop"
+				},
+				"dense": {
+					"H": "'true'",
+					"T": "prop"
+				},
+				"clearable": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"change": {
+					"H": "\r\nif (value) {\r\n    quick.EM.trace(value)\r\n    quick.Quick.createChildren({ parentCompQId: 'GL', templateChildName: value })\r\n}\r\n\r\nlet items: any = components.GL.getClosedPanes();\r\ncomponents.closedPanes.items = []\r\nquick.EM.trace(items);\r\nif (items.length > 0) {\r\n    items.forEach(item => {\r\n        components.closedPanes.items.push(item)\r\n    });\r\n}\r\n",
+					"P": "value:any",
+					"HL": "TS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_4"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-input v-input--dense theme--light v-text-field v-text-field--is-booted v-select v-autocomplete newDropBorder"
+			}
+		},
+		{
+			"T": "GoldenLayout",
+			"P": {
+				"ID": {
+					"H": "GL",
+					"T": "prop"
+				},
+				"childNames": {
+					"H": "['pane1','pane2','templateChild']",
+					"T": "prop"
+				},
+				"glConfig": {
+					"H": {
+						"settings": {
+							"hasHeaders": true,
+							"constrainDragToContainer": true,
+							"reorderEnabled": true,
+							"selectionEnabled": false,
+							"popoutWholeStack": false,
+							"blockedPopoutsThrowError": true,
+							"closePopoutsOnUnload": true,
+							"showPopoutIcon": false,
+							"showMaximiseIcon": true,
+							"showCloseIcon": true,
+							"responsiveMode": "onload",
+							"tabOverlapAllowance": 0,
+							"reorderOnTabMenuClick": true,
+							"tabControlOffset": 10
+						},
+						"dimensions": {
+							"borderWidth": 5,
+							"borderGrabWidth": 15,
+							"minItemHeight": 10,
+							"minItemWidth": 10,
+							"headerHeight": 20,
+							"dragProxyWidth": 300,
+							"dragProxyHeight": 200
+						},
+						"labels": {
+							"close": "close",
+							"maximise": "maximise",
+							"minimise": "minimise",
+							"popout": "open in new window",
+							"popin": "pop in",
+							"tabDropdown": "additional tabs"
+						},
+						"content": [
+							{
+								"type": "row",
+								"isClosable": true,
+								"reorderEnabled": true,
+								"title": "",
+								"content": [
+									{
+										"type": "stack",
+										"isClosable": true,
+										"reorderEnabled": true,
+										"title": "",
+										"activeItemIndex": 0,
+										"width": 33.333333333333336,
+										"content": [
+											{
+												"type": "component",
+												"componentName": "component",
+												"title": "pane1",
+												"componentState": {
+													"id": "pane1",
+													"text": "pane1",
+													"class": "pane192738"
+												},
+												"isClosable": true,
+												"reorderEnabled": true
+											}
+										]
+									},
+									{
+										"type": "stack",
+										"header": {},
+										"isClosable": true,
+										"reorderEnabled": true,
+										"title": "",
+										"activeItemIndex": 0,
+										"width": 33.333333333333336,
+										"content": [
+											{
+												"type": "component",
+												"componentName": "component",
+												"title": "pane2",
+												"componentState": {
+													"id": "pane2",
+													"text": "pane2",
+													"class": "pane287818"
+												},
+												"isClosable": true,
+												"reorderEnabled": true
+											}
+										]
+									},
+									{
+										"type": "row",
+										"isClosable": true,
+										"reorderEnabled": true,
+										"title": "",
+										"width": 33.33333333333333,
+										"content": [
+											{
+												"type": "stack",
+												"width": 100,
+												"isClosable": true,
+												"reorderEnabled": true,
+												"title": "",
+												"activeItemIndex": 0,
+												"content": [
+													{
+														"type": "component",
+														"componentName": "component",
+														"title": "templateChild",
+														"componentState": {
+															"id": "templateChild",
+															"text": "templateChild",
+															"class": "templateChild17521"
+														},
+														"isClosable": true,
+														"reorderEnabled": true
+													}
+												]
+											}
+										]
+									}
+								]
+							}
+						],
+						"isClosable": true,
+						"reorderEnabled": true,
+						"title": "",
+						"openPopouts": [],
+						"maximisedItemId": null
+					},
+					"T": "prop"
+				}
+			},
+			"E": {
+				"paneClosed": {
+					"H": "let items: any= components.GL.getClosedPanes();\r\ncomponents.closedPanes.items = []\r\nquick.EM.trace(items);\r\nif (items.length > 0) {\r\n    items.forEach(item => {\r\n        components.closedPanes.items.push(item)\r\n    });\r\n}\r\n",
+					"P": "childName:string",
+					"HL": "TS"
+				}
+			},
+			"C": {
+				"pane1": {
+					"c": [
+						{
+							"T": "DxDataGrid",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_5",
+									"T": "prop"
+								},
+								"dataSource": {
+									"H": "[{name = 'Frozens Yogurt', calories = 159, fat = '6.0', carbs = 24, protein = '4.0', iron = '1%'},\n{name = 'Ice cream sandwich', calories = 237, fat = '9.0', carbs = 37, protein = '4.3', iron = '1%'},\n{name = 'Eclair', calories = 262, fat = '16.0', carbs = 23, protein = '6.0', iron = '7%'},\n{name = 'Cupcake', calories = 305, fat = '3.7', carbs = 67, protein = '4.3', iron = '8%'},\n{name = 'Gingerbread',calories = 356, fat = '16.0', carbs = 49, protein = '3.9', iron = '16%'},\n{name = 'Jelly bean', calories = 375,  fat = '0.0', carbs = 94, protein = '0.0', iron = '0%'},\n{name = 'Lollipop', calories = 392, fat = '0.2', carbs = 98, protein = '0.0', iron = '2 %'},\n{name = 'Honeycomb', calories = 408, fat = '3.2', carbs = 87, protein = '6.5', iron = '45%'},\n{name = 'Donut', calories = 452, fat = '25.0', carbs = 51, protein = '4.9', iron = '22%'},\n{name = 'KitKat', calories = 518, fat = '26.0', carbs = 65, protein = '7', iron=  '6 %'}]",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_5"
+							},
+							"O": {
+								"cType": "scopedSlot",
+								"forceUpdateAfterPropertySetting": true
+							}
+						}
+					],
+					"cType": "child"
+				},
+				"pane2": {
+					"c": [
+						{
+							"T": "VDataTable",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_6",
+									"T": "prop"
+								},
+								"footerProps": {
+									"H": "{showFirstLastPage = true,\nfirstIcon = 'mdi-arrow-collapse-left',\nlastIcon = 'mdi-arrow-collapse-right',\nprevIcon = 'mdi-minus',\nnextIcon = 'mdi-plus'}",
+									"T": "prop"
+								},
+								"headers": {
+									"H": "[{ text = 'Dessert (100g serving)', align= 'start', sortable= false, value= 'name'},\n{ text = 'Calories', value= 'calories', sortable = true },\n{ text = 'Fat (g)', value= 'fat' },\n{ text = 'Carbs (g)', value= 'carbs' },\n{ text = 'Protein (g)', value= 'protein' },\n{ text = 'Iron (%)', value= 'iron' }]",
+									"T": "prop"
+								},
+								"items": {
+									"H": "[{name = 'Frozens Yogurt', calories = 159, fat = '6.0', carbs = 24, protein = '4.0', iron = '1%'},\n{name = 'Ice cream sandwich', calories = 237, fat = '9.0', carbs = 37, protein = '4.3', iron = '1%'},\n{name = 'Eclair', calories = 262, fat = '16.0', carbs = 23, protein = '6.0', iron = '7%'},\n{name = 'Cupcake', calories = 305, fat = '3.7', carbs = 67, protein = '4.3', iron = '8%'},\n{name = 'Gingerbread',calories = 356, fat = '16.0', carbs = 49, protein = '3.9', iron = '16%'},\n{name = 'Jelly bean', calories = 375,  fat = '0.0', carbs = 94, protein = '0.0', iron = '0%'},\n{name = 'Lollipop', calories = 392, fat = '0.2', carbs = 98, protein = '0.0', iron = '2 %'},\n{name = 'Honeycomb', calories = 408, fat = '3.2', carbs = 87, protein = '6.5', iron = '45%'},\n{name = 'Donut', calories = 452, fat = '25.0', carbs = 51, protein = '4.9', iron = '22%'},\n{name = 'KitKat', calories = 518, fat = '26.0', carbs = 65, protein = '7', iron=  '6 %'}]",
+									"T": "prop"
+								},
+								"itemsPerPage": {
+									"H": "5",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "true",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_6"
+							},
+							"O": {
+								"cType": "scopedSlot"
+							}
+						}
+					],
+					"cType": "child"
+				},
+				"templateChild": {
+					"c": [
+						{
+							"T": "CustomComponent",
+							"P": {
+								"ID": {
+									"H": "customComp",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "true",
+									"T": "prop"
+								},
+								"QJsonPath": {
+									"H": "'/static/pages/TestCustomComp1.qjson'",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "Ghost",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_11",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_11"
+											},
+											"O": {
+												"cType": "child"
+											}
+										}
+									],
+									"cType": "child"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_8"
+							},
+							"O": {
+								"cType": "child",
+								"dynProps": true
+							}
+						}
+					],
+					"cType": "child"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_3"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_9",
+					"T": "prop"
+				},
+				"color": {
+					"H": "'primary'",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "let newChildCount = quick.store.get(\"newChildCount\") || 1;\r\nlet newChildName=\"newPane\"+newChildCount;\r\nlet createdChild = quick.Quick.createChildren({ parentCompQId: \"GL\", templateChildName: \"templateChild\", newChildName: newChildName });\r\nlet newCustomCompName = \"customComp_\" + newChildName;\r\nlet newQjsonPath = \"/static/pages/TestCustomComp\" + newChildCount + \".qjson\";\r\nquick.MM.trigger(\"setQjsonPath\",[{compName:newCustomCompName,qjsonPath:newQjsonPath}])\r\nnewChildCount = ++newChildCount;\r\nquick.store.set(\"newChildCount\", newChildCount);\r\n",
+					"P": "mouseEvent:unknown | undefined",
+					"HL": "TS"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_10",
+									"T": "prop"
+								},
+								"text": {
+									"H": "'CreateNewPane'",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_10"
+							},
+							"O": {
+								"cType": "child"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_9"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"setQjsonPath": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nvar compName;\r\nvar qjsonPath;\r\ncomponents[compName].QJsonPath = qjsonPath;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfMV9zZXRRanNvblBhdGhfRS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkVkdHJDb21wXzFfc2V0UWpzb25QYXRoX0UudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUNBLElBQUksUUFBUSxDQUFDO0FBQ2IsSUFBSSxTQUFTLENBQUM7QUFDUixVQUFVLENBQUMsUUFBUSxDQUFFLENBQUMsU0FBUyxHQUFDLFNBQVMsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIlxubGV0IGNvbXBOYW1lO1xyXG5sZXQgcWpzb25QYXRoO1xyXG4oPGFueT5jb21wb25lbnRzW2NvbXBOYW1lXSkuUUpzb25QYXRoPXFqc29uUGF0aDtcbiBleHBvcnR7fTtcbiJdfQ==",
+					"C": true,
+					"HL": "JS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"compDomClasses": ""
+			}
+		},
+		{
+			"T": "VCombobox",
+			"P": {
+				"ID": {
+					"H": "closedPanes",
+					"T": "prop"
+				},
+				"attach": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"label": {
+					"H": "╬'ReCreate Pane'╩╩",
+					"T": "prop"
+				},
+				"dense": {
+					"H": "╬'true'╩╩",
+					"T": "prop"
+				},
+				"clearable": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"change": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nif (value) {\r\n    quick.EM.trace(value);\r\n    quick.Quick.createChildren({ parentCompQId: 'GL', templateChildName: value });\r\n}\r\nvar items = components.GL.getClosedPanes();\r\ncomponents.closedPanes.items = [];\r\nquick.EM.trace(items);\r\nif (items.length > 0) {\r\n    items.forEach(function (item) {\r\n        components.closedPanes.items.push(item);\r\n    });\r\n}\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY2xvc2VkUGFuZXNfY2hhbmdlX0UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJjbG9zZWRQYW5lc19jaGFuZ2VfRS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBRUEsSUFBSSxLQUFLLEVBQUU7SUFDUCxLQUFLLENBQUMsRUFBRSxDQUFDLEtBQUssQ0FBQyxLQUFLLENBQUMsQ0FBQTtJQUNyQixLQUFLLENBQUMsS0FBSyxDQUFDLGNBQWMsQ0FBQyxFQUFFLGFBQWEsRUFBRSxJQUFJLEVBQUUsaUJBQWlCLEVBQUUsS0FBSyxFQUFFLENBQUMsQ0FBQTtDQUNoRjtBQUVELElBQUksS0FBSyxHQUFRLFVBQVUsQ0FBQyxFQUFFLENBQUMsY0FBYyxFQUFFLENBQUM7QUFDaEQsVUFBVSxDQUFDLFdBQVcsQ0FBQyxLQUFLLEdBQUcsRUFBRSxDQUFBO0FBQ2pDLEtBQUssQ0FBQyxFQUFFLENBQUMsS0FBSyxDQUFDLEtBQUssQ0FBQyxDQUFDO0FBQ3RCLElBQUksS0FBSyxDQUFDLE1BQU0sR0FBRyxDQUFDLEVBQUU7SUFDbEIsS0FBSyxDQUFDLE9BQU8sQ0FBQyxVQUFBLElBQUk7UUFDZCxVQUFVLENBQUMsV0FBVyxDQUFDLEtBQUssQ0FBQyxJQUFJLENBQUMsSUFBSSxDQUFDLENBQUE7SUFDM0MsQ0FBQyxDQUFDLENBQUM7Q0FDTiIsInNvdXJjZXNDb250ZW50IjpbImRlY2xhcmUgdmFyIHZhbHVlOmFueVxuXHJcbmlmICh2YWx1ZSkge1xyXG4gICAgcXVpY2suRU0udHJhY2UodmFsdWUpXHJcbiAgICBxdWljay5RdWljay5jcmVhdGVDaGlsZHJlbih7IHBhcmVudENvbXBRSWQ6ICdHTCcsIHRlbXBsYXRlQ2hpbGROYW1lOiB2YWx1ZSB9KVxyXG59XHJcblxyXG5sZXQgaXRlbXM6IGFueSA9IGNvbXBvbmVudHMuR0wuZ2V0Q2xvc2VkUGFuZXMoKTtcclxuY29tcG9uZW50cy5jbG9zZWRQYW5lcy5pdGVtcyA9IFtdXHJcbnF1aWNrLkVNLnRyYWNlKGl0ZW1zKTtcclxuaWYgKGl0ZW1zLmxlbmd0aCA+IDApIHtcclxuICAgIGl0ZW1zLmZvckVhY2goaXRlbSA9PiB7XHJcbiAgICAgICAgY29tcG9uZW50cy5jbG9zZWRQYW5lcy5pdGVtcy5wdXNoKGl0ZW0pXHJcbiAgICB9KTtcclxufVxyXG5cbiBleHBvcnR7fTtcbiJdfQ==",
+					"P": "value:any",
+					"HL": "JS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_4"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-input v-input--dense theme--light v-text-field v-text-field--is-booted v-select v-autocomplete newDropBorder"
+			}
+		},
+		{
+			"T": "GoldenLayout",
+			"P": {
+				"ID": {
+					"H": "GL",
+					"T": "prop"
+				},
+				"childNames": {
+					"H": "╬[]╠'pane1'╩╠'pane2'╩╠'templateChild'╩╩╩",
+					"T": "prop"
+				},
+				"glConfig": {
+					"H": {
+						"settings": {
+							"hasHeaders": true,
+							"constrainDragToContainer": true,
+							"reorderEnabled": true,
+							"selectionEnabled": false,
+							"popoutWholeStack": false,
+							"blockedPopoutsThrowError": true,
+							"closePopoutsOnUnload": true,
+							"showPopoutIcon": false,
+							"showMaximiseIcon": true,
+							"showCloseIcon": true,
+							"responsiveMode": "onload",
+							"tabOverlapAllowance": 0,
+							"reorderOnTabMenuClick": true,
+							"tabControlOffset": 10
+						},
+						"dimensions": {
+							"borderWidth": 5,
+							"borderGrabWidth": 15,
+							"minItemHeight": 10,
+							"minItemWidth": 10,
+							"headerHeight": 20,
+							"dragProxyWidth": 300,
+							"dragProxyHeight": 200
+						},
+						"labels": {
+							"close": "close",
+							"maximise": "maximise",
+							"minimise": "minimise",
+							"popout": "open in new window",
+							"popin": "pop in",
+							"tabDropdown": "additional tabs"
+						},
+						"content": [
+							{
+								"type": "row",
+								"isClosable": true,
+								"reorderEnabled": true,
+								"title": "",
+								"content": [
+									{
+										"type": "stack",
+										"isClosable": true,
+										"reorderEnabled": true,
+										"title": "",
+										"activeItemIndex": 0,
+										"width": 33.333333333333336,
+										"content": [
+											{
+												"type": "component",
+												"componentName": "component",
+												"title": "pane1",
+												"componentState": {
+													"id": "pane1",
+													"text": "pane1",
+													"class": "pane192738"
+												},
+												"isClosable": true,
+												"reorderEnabled": true
+											}
+										]
+									},
+									{
+										"type": "stack",
+										"header": {},
+										"isClosable": true,
+										"reorderEnabled": true,
+										"title": "",
+										"activeItemIndex": 0,
+										"width": 33.333333333333336,
+										"content": [
+											{
+												"type": "component",
+												"componentName": "component",
+												"title": "pane2",
+												"componentState": {
+													"id": "pane2",
+													"text": "pane2",
+													"class": "pane287818"
+												},
+												"isClosable": true,
+												"reorderEnabled": true
+											}
+										]
+									},
+									{
+										"type": "row",
+										"isClosable": true,
+										"reorderEnabled": true,
+										"title": "",
+										"width": 33.33333333333333,
+										"content": [
+											{
+												"type": "stack",
+												"width": 100,
+												"isClosable": true,
+												"reorderEnabled": true,
+												"title": "",
+												"activeItemIndex": 0,
+												"content": [
+													{
+														"type": "component",
+														"componentName": "component",
+														"title": "templateChild",
+														"componentState": {
+															"id": "templateChild",
+															"text": "templateChild",
+															"class": "templateChild17521"
+														},
+														"isClosable": true,
+														"reorderEnabled": true
+													}
+												]
+											}
+										]
+									}
+								]
+							}
+						],
+						"isClosable": true,
+						"reorderEnabled": true,
+						"title": "",
+						"openPopouts": [],
+						"maximisedItemId": null
+					},
+					"T": "prop"
+				}
+			},
+			"E": {
+				"paneClosed": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nvar items = components.GL.getClosedPanes();\r\ncomponents.closedPanes.items = [];\r\nquick.EM.trace(items);\r\nif (items.length > 0) {\r\n    items.forEach(function (item) {\r\n        components.closedPanes.items.push(item);\r\n    });\r\n}\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiR0xfcGFuZUNsb3NlZF9FLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiR0xfcGFuZUNsb3NlZF9FLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQSxJQUFJLEtBQUssR0FBTyxVQUFVLENBQUMsRUFBRSxDQUFDLGNBQWMsRUFBRSxDQUFDO0FBQy9DLFVBQVUsQ0FBQyxXQUFXLENBQUMsS0FBSyxHQUFHLEVBQUUsQ0FBQTtBQUNqQyxLQUFLLENBQUMsRUFBRSxDQUFDLEtBQUssQ0FBQyxLQUFLLENBQUMsQ0FBQztBQUN0QixJQUFJLEtBQUssQ0FBQyxNQUFNLEdBQUcsQ0FBQyxFQUFFO0lBQ2xCLEtBQUssQ0FBQyxPQUFPLENBQUMsVUFBQSxJQUFJO1FBQ2QsVUFBVSxDQUFDLFdBQVcsQ0FBQyxLQUFLLENBQUMsSUFBSSxDQUFDLElBQUksQ0FBQyxDQUFBO0lBQzNDLENBQUMsQ0FBQyxDQUFDO0NBQ04iLCJzb3VyY2VzQ29udGVudCI6WyJkZWNsYXJlIHZhciBjaGlsZE5hbWU6c3RyaW5nXG5sZXQgaXRlbXM6IGFueT0gY29tcG9uZW50cy5HTC5nZXRDbG9zZWRQYW5lcygpO1xyXG5jb21wb25lbnRzLmNsb3NlZFBhbmVzLml0ZW1zID0gW11cclxucXVpY2suRU0udHJhY2UoaXRlbXMpO1xyXG5pZiAoaXRlbXMubGVuZ3RoID4gMCkge1xyXG4gICAgaXRlbXMuZm9yRWFjaChpdGVtID0+IHtcclxuICAgICAgICBjb21wb25lbnRzLmNsb3NlZFBhbmVzLml0ZW1zLnB1c2goaXRlbSlcclxuICAgIH0pO1xyXG59XHJcblxuIGV4cG9ydHt9O1xuIl19",
+					"P": "childName:string",
+					"HL": "JS"
+				}
+			},
+			"C": {
+				"pane1": {
+					"c": [
+						{
+							"T": "DxDataGrid",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_5",
+									"T": "prop"
+								},
+								"dataSource": {
+									"H": "╬[]╠{}╠=╣name╩╠'Frozens Yogurt'╩╩╠=╣calories╩╠159╩╩╠=╣fat╩╠'6.0'╩╩╠=╣carbs╩╠24╩╩╠=╣protein╩╠'4.0'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Ice cream sandwich'╩╩╠=╣calories╩╠237╩╩╠=╣fat╩╠'9.0'╩╩╠=╣carbs╩╠37╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Eclair'╩╩╠=╣calories╩╠262╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠23╩╩╠=╣protein╩╠'6.0'╩╩╠=╣iron╩╠'7%'╩╩╩╠{}╠=╣name╩╠'Cupcake'╩╩╠=╣calories╩╠305╩╩╠=╣fat╩╠'3.7'╩╩╠=╣carbs╩╠67╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'8%'╩╩╩╠{}╠=╣name╩╠'Gingerbread'╩╩╠=╣calories╩╠356╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠49╩╩╠=╣protein╩╠'3.9'╩╩╠=╣iron╩╠'16%'╩╩╩╠{}╠=╣name╩╠'Jelly bean'╩╩╠=╣calories╩╠375╩╩╠=╣fat╩╠'0.0'╩╩╠=╣carbs╩╠94╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'0%'╩╩╩╠{}╠=╣name╩╠'Lollipop'╩╩╠=╣calories╩╠392╩╩╠=╣fat╩╠'0.2'╩╩╠=╣carbs╩╠98╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'2 %'╩╩╩╠{}╠=╣name╩╠'Honeycomb'╩╩╠=╣calories╩╠408╩╩╠=╣fat╩╠'3.2'╩╩╠=╣carbs╩╠87╩╩╠=╣protein╩╠'6.5'╩╩╠=╣iron╩╠'45%'╩╩╩╠{}╠=╣name╩╠'Donut'╩╩╠=╣calories╩╠452╩╩╠=╣fat╩╠'25.0'╩╩╠=╣carbs╩╠51╩╩╠=╣protein╩╠'4.9'╩╩╠=╣iron╩╠'22%'╩╩╩╠{}╠=╣name╩╠'KitKat'╩╩╠=╣calories╩╠518╩╩╠=╣fat╩╠'26.0'╩╩╠=╣carbs╩╠65╩╩╠=╣protein╩╠'7'╩╩╠=╣iron╩╠'6 %'╩╩╩╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_5"
+							},
+							"O": {
+								"cType": "scopedSlot",
+								"forceUpdateAfterPropertySetting": true,
+								"compDomClasses": "dx-widget dx-visibility-change-handler newDropBorder"
+							}
+						}
+					],
+					"cType": "child"
+				},
+				"pane2": {
+					"c": [
+						{
+							"T": "VDataTable",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_6",
+									"T": "prop"
+								},
+								"footerProps": {
+									"H": "╬{}╠=╣showFirstLastPage╩╠true╩╩╠=╣firstIcon╩╠'mdi-arrow-collapse-left'╩╩╠=╣lastIcon╩╠'mdi-arrow-collapse-right'╩╩╠=╣prevIcon╩╠'mdi-minus'╩╩╠=╣nextIcon╩╠'mdi-plus'╩╩╩╩",
+									"T": "prop"
+								},
+								"headers": {
+									"H": "╬[]╠{}╠=╣text╩╠'Dessert (100g serving)'╩╩╠=╣align╩╠'start'╩╩╠=╣sortable╩╠false╩╩╠=╣value╩╠'name'╩╩╩╠{}╠=╣text╩╠'Calories'╩╩╠=╣value╩╠'calories'╩╩╠=╣sortable╩╠true╩╩╩╠{}╠=╣text╩╠'Fat (g)'╩╩╠=╣value╩╠'fat'╩╩╩╠{}╠=╣text╩╠'Carbs (g)'╩╩╠=╣value╩╠'carbs'╩╩╩╠{}╠=╣text╩╠'Protein (g)'╩╩╠=╣value╩╠'protein'╩╩╩╠{}╠=╣text╩╠'Iron (%)'╩╩╠=╣value╩╠'iron'╩╩╩╩╩",
+									"T": "prop"
+								},
+								"items": {
+									"H": "╬[]╠{}╠=╣name╩╠'Frozens Yogurt'╩╩╠=╣calories╩╠159╩╩╠=╣fat╩╠'6.0'╩╩╠=╣carbs╩╠24╩╩╠=╣protein╩╠'4.0'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Ice cream sandwich'╩╩╠=╣calories╩╠237╩╩╠=╣fat╩╠'9.0'╩╩╠=╣carbs╩╠37╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Eclair'╩╩╠=╣calories╩╠262╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠23╩╩╠=╣protein╩╠'6.0'╩╩╠=╣iron╩╠'7%'╩╩╩╠{}╠=╣name╩╠'Cupcake'╩╩╠=╣calories╩╠305╩╩╠=╣fat╩╠'3.7'╩╩╠=╣carbs╩╠67╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'8%'╩╩╩╠{}╠=╣name╩╠'Gingerbread'╩╩╠=╣calories╩╠356╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠49╩╩╠=╣protein╩╠'3.9'╩╩╠=╣iron╩╠'16%'╩╩╩╠{}╠=╣name╩╠'Jelly bean'╩╩╠=╣calories╩╠375╩╩╠=╣fat╩╠'0.0'╩╩╠=╣carbs╩╠94╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'0%'╩╩╩╠{}╠=╣name╩╠'Lollipop'╩╩╠=╣calories╩╠392╩╩╠=╣fat╩╠'0.2'╩╩╠=╣carbs╩╠98╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'2 %'╩╩╩╠{}╠=╣name╩╠'Honeycomb'╩╩╠=╣calories╩╠408╩╩╠=╣fat╩╠'3.2'╩╩╠=╣carbs╩╠87╩╩╠=╣protein╩╠'6.5'╩╩╠=╣iron╩╠'45%'╩╩╩╠{}╠=╣name╩╠'Donut'╩╩╠=╣calories╩╠452╩╩╠=╣fat╩╠'25.0'╩╩╠=╣carbs╩╠51╩╩╠=╣protein╩╠'4.9'╩╩╠=╣iron╩╠'22%'╩╩╩╠{}╠=╣name╩╠'KitKat'╩╩╠=╣calories╩╠518╩╩╠=╣fat╩╠'26.0'╩╩╠=╣carbs╩╠65╩╩╠=╣protein╩╠'7'╩╩╠=╣iron╩╠'6 %'╩╩╩╩╩",
+									"T": "prop"
+								},
+								"itemsPerPage": {
+									"H": "╬5╩╩",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_6"
+							},
+							"O": {
+								"cType": "scopedSlot",
+								"compDomClasses": "v-data-table v-data-table--has-bottom theme--light newDropBorder"
+							}
+						}
+					],
+					"cType": "child"
+				},
+				"templateChild": {
+					"c": [
+						{
+							"T": "CustomComponent",
+							"P": {
+								"ID": {
+									"H": "customComp",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"QJsonPath": {
+									"H": "╬'/static/pages/TestCustomComp1.qjson'╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "Ghost",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_11",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_11"
+											},
+											"O": {
+												"cType": "child",
+												"compDomClasses": "editor-ghost-comp"
+											}
+										}
+									],
+									"cType": "child"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_8"
+							},
+							"O": {
+								"cType": "child",
+								"dynProps": true,
+								"compDomClasses": "newDropBorder"
+							}
+						}
+					],
+					"cType": "child"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_3"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_9",
+					"T": "prop"
+				},
+				"color": {
+					"H": "╬'primary'╩╩",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nvar newChildCount = quick.store.get(\"newChildCount\") || 1;\r\nvar newChildName = \"newPane\" + newChildCount;\r\nvar createdChild = quick.Quick.createChildren({ parentCompQId: \"GL\", templateChildName: \"templateChild\", newChildName: newChildName });\r\nvar newCustomCompName = \"customComp_\" + newChildName;\r\nvar newQjsonPath = \"/static/pages/TestCustomComp\" + newChildCount + \".qjson\";\r\nquick.MM.trigger(\"setQjsonPath\", [{ compName: newCustomCompName, qjsonPath: newQjsonPath }]);\r\nnewChildCount = ++newChildCount;\r\nquick.store.set(\"newChildCount\", newChildCount);\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfOV9jbGlja19FLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiRWR0ckNvbXBfOV9jbGlja19FLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQSxJQUFJLGFBQWEsR0FBRyxLQUFLLENBQUMsS0FBSyxDQUFDLEdBQUcsQ0FBQyxlQUFlLENBQUMsSUFBSSxDQUFDLENBQUM7QUFDMUQsSUFBSSxZQUFZLEdBQUMsU0FBUyxHQUFDLGFBQWEsQ0FBQztBQUN6QyxJQUFJLFlBQVksR0FBRyxLQUFLLENBQUMsS0FBSyxDQUFDLGNBQWMsQ0FBQyxFQUFFLGFBQWEsRUFBRSxJQUFJLEVBQUUsaUJBQWlCLEVBQUUsZUFBZSxFQUFFLFlBQVksRUFBRSxZQUFZLEVBQUUsQ0FBQyxDQUFDO0FBQ3ZJLElBQUksaUJBQWlCLEdBQUcsYUFBYSxHQUFHLFlBQVksQ0FBQztBQUNyRCxJQUFJLFlBQVksR0FBRyw4QkFBOEIsR0FBRyxhQUFhLEdBQUcsUUFBUSxDQUFDO0FBQzdFLEtBQUssQ0FBQyxFQUFFLENBQUMsT0FBTyxDQUFDLGNBQWMsRUFBQyxDQUFDLEVBQUMsUUFBUSxFQUFDLGlCQUFpQixFQUFDLFNBQVMsRUFBQyxZQUFZLEVBQUMsQ0FBQyxDQUFDLENBQUE7QUFDdEYsYUFBYSxHQUFHLEVBQUUsYUFBYSxDQUFDO0FBQ2hDLEtBQUssQ0FBQyxLQUFLLENBQUMsR0FBRyxDQUFDLGVBQWUsRUFBRSxhQUFhLENBQUMsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImRlY2xhcmUgdmFyIG1vdXNlRXZlbnQ6dW5rbm93biB8IHVuZGVmaW5lZFxubGV0IG5ld0NoaWxkQ291bnQgPSBxdWljay5zdG9yZS5nZXQoXCJuZXdDaGlsZENvdW50XCIpIHx8IDE7XHJcbmxldCBuZXdDaGlsZE5hbWU9XCJuZXdQYW5lXCIrbmV3Q2hpbGRDb3VudDtcclxubGV0IGNyZWF0ZWRDaGlsZCA9IHF1aWNrLlF1aWNrLmNyZWF0ZUNoaWxkcmVuKHsgcGFyZW50Q29tcFFJZDogXCJHTFwiLCB0ZW1wbGF0ZUNoaWxkTmFtZTogXCJ0ZW1wbGF0ZUNoaWxkXCIsIG5ld0NoaWxkTmFtZTogbmV3Q2hpbGROYW1lIH0pO1xyXG5sZXQgbmV3Q3VzdG9tQ29tcE5hbWUgPSBcImN1c3RvbUNvbXBfXCIgKyBuZXdDaGlsZE5hbWU7XHJcbmxldCBuZXdRanNvblBhdGggPSBcIi9zdGF0aWMvcGFnZXMvVGVzdEN1c3RvbUNvbXBcIiArIG5ld0NoaWxkQ291bnQgKyBcIi5xanNvblwiO1xyXG5xdWljay5NTS50cmlnZ2VyKFwic2V0UWpzb25QYXRoXCIsW3tjb21wTmFtZTpuZXdDdXN0b21Db21wTmFtZSxxanNvblBhdGg6bmV3UWpzb25QYXRofV0pXHJcbm5ld0NoaWxkQ291bnQgPSArK25ld0NoaWxkQ291bnQ7XHJcbnF1aWNrLnN0b3JlLnNldChcIm5ld0NoaWxkQ291bnRcIiwgbmV3Q2hpbGRDb3VudCk7XHJcblxuIGV4cG9ydHt9O1xuIl19",
+					"P": "mouseEvent:unknown | undefined",
+					"HL": "JS"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_10",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬'CreateNewPane'╩╩",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_10"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "q-label newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_9"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {}
+};
+export default pjson

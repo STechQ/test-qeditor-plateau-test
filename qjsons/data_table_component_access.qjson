@@ -1,0 +1,358 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "EdtrComp_3.items[1].selected = !EdtrComp_3.items[1].selected"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_2",
+									"T": "prop"
+								},
+								"text": {
+									"H": "'Readonly Disable Selected Rows'",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_2"
+							},
+							"O": {
+								"cType": "child"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		},
+		{
+			"T": "VDataTable",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_3",
+					"T": "prop"
+				},
+				"headers": {
+					"H": "[{ text = 'Dessert (100g serving)', align= 'start', sortable= false, value= 'name'},\n{ text = 'Calories', value= 'calories', sortable = true },\n{ text = 'Fat (g)', value= 'fat' },\n{ text = 'Carbs (g)', value= 'carbs' },\n{ text = 'Protein (g)', value= 'protein' },\n{ text = 'Iron (%)', value= 'iron' }]",
+					"T": "prop"
+				},
+				"items": {
+					"H": "tableItems = [{name = 'Frozens Yogurt', calories = 159, fat = '6.0', carbs = 24, protein = '4.0', iron = '1%'},\n{name = 'Ice cream sandwich', calories = 237, fat = '9.0', carbs = 37, protein = '4.3', iron = '1%'}]\n\nforeach (item in tableItems) {\n    item.selected= false\n}\ntableItems",
+					"T": "prop"
+				},
+				"itemsPerPage": {
+					"H": "5",
+					"T": "prop"
+				},
+				"showSelect": {
+					"H": "true",
+					"T": "prop"
+				},
+				"itemKey": {
+					"H": "'name'",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"item-selected": {
+					"H": "EM.trace(rowObj)\r\nrowObj.item.selected = rowObj.value\r\n",
+					"P": "rowObj"
+				}
+			},
+			"C": {
+				"items.protein": {
+					"c": [
+						{
+							"T": "Ghost",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_4",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "child"
+							}
+						}
+					],
+					"cType": "scopedSlot"
+				},
+				"item.protein": {
+					"c": [
+						{
+							"T": "QLabel",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_6",
+									"T": "prop"
+								},
+								"text": {
+									"H": "'template -> '+item.protein",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_6"
+							},
+							"O": {
+								"cType": "child"
+							}
+						}
+					],
+					"cType": "scopedSlot"
+				},
+				"item.fat": {
+					"c": [
+						{
+							"T": "VTextField",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_8",
+									"T": "prop"
+								},
+								"readonly": {
+									"H": "!item.selected",
+									"T": "prop"
+								},
+								"value": {
+									"H": "item.fat",
+									"T": "prop"
+								}
+							},
+							"E": {
+								"input": {
+									"H": "item.fat = value\r\nEM.trace(value)\r\n",
+									"P": "value"
+								}
+							},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_8"
+							},
+							"O": {
+								"cType": "child"
+							}
+						}
+					],
+					"cType": "scopedSlot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_3"
+			},
+			"O": {
+				"cType": "child"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "╬=╣.╣[]╣.╣EdtrComp_3╩╠items╩╩╠1╩╩╠selected╩╩╠!╠.╣[]╣.╣EdtrComp_3╩╠items╩╩╠1╩╩╠selected╩╩╩╩╩"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_2",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬'Readonly Disable Selected Rows'╩╩",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_2"
+							},
+							"O": {
+								"cType": "child"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		},
+		{
+			"T": "VDataTable",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_3",
+					"T": "prop"
+				},
+				"headers": {
+					"H": "╬[]╠{}╠=╣text╩╠'Dessert (100g serving)'╩╩╠=╣align╩╠'start'╩╩╠=╣sortable╩╠false╩╩╠=╣value╩╠'name'╩╩╩╠{}╠=╣text╩╠'Calories'╩╩╠=╣value╩╠'calories'╩╩╠=╣sortable╩╠true╩╩╩╠{}╠=╣text╩╠'Fat (g)'╩╩╠=╣value╩╠'fat'╩╩╩╠{}╠=╣text╩╠'Carbs (g)'╩╩╠=╣value╩╠'carbs'╩╩╩╠{}╠=╣text╩╠'Protein (g)'╩╩╠=╣value╩╠'protein'╩╩╩╠{}╠=╣text╩╠'Iron (%)'╩╩╠=╣value╩╠'iron'╩╩╩╩╩",
+					"T": "prop"
+				},
+				"items": {
+					"H": "╬=╣tableItems╩╠[]╠{}╠=╣name╩╠'Frozens Yogurt'╩╩╠=╣calories╩╠159╩╩╠=╣fat╩╠'6.0'╩╩╠=╣carbs╩╠24╩╩╠=╣protein╩╠'4.0'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Ice cream sandwich'╩╩╠=╣calories╩╠237╩╩╠=╣fat╩╠'9.0'╩╩╠=╣carbs╩╠37╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'1%'╩╩╩╩╩╬foreach╣in╣item╩╠tableItems╩╩╠╬=╣.╣item╩╠selected╩╩╠false╩╩╩╩╬tableItems╩╩",
+					"T": "prop"
+				},
+				"itemsPerPage": {
+					"H": "╬5╩╩",
+					"T": "prop"
+				},
+				"showSelect": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"itemKey": {
+					"H": "╬'name'╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"item-selected": {
+					"H": "╬()╣.╣EM╩╠trace╩╩╠rowObj╩╩╬=╣.╣.╣rowObj╩╠item╩╩╠selected╩╩╠.╣rowObj╩╠value╩╩╩╩",
+					"P": "rowObj"
+				}
+			},
+			"C": {
+				"items.protein": {
+					"c": [
+						{
+							"T": "Ghost",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_4",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "child"
+							}
+						}
+					],
+					"cType": "scopedSlot"
+				},
+				"item.protein": {
+					"c": [
+						{
+							"T": "QLabel",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_6",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬+╣'template -> '╩╠.╣item╩╠protein╩╩╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_6"
+							},
+							"O": {
+								"cType": "child"
+							}
+						}
+					],
+					"cType": "scopedSlot"
+				},
+				"item.fat": {
+					"c": [
+						{
+							"T": "VTextField",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_8",
+									"T": "prop"
+								},
+								"readonly": {
+									"H": "╬!╠.╣item╩╠selected╩╩╩╩",
+									"T": "prop"
+								},
+								"value": {
+									"H": "╬.╣item╩╠fat╩╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {
+								"input": {
+									"H": "╬=╣.╣item╩╠fat╩╩╠value╩╩╬()╣.╣EM╩╠trace╩╩╠value╩╩╩",
+									"P": "value"
+								}
+							},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_8"
+							},
+							"O": {
+								"cType": "child"
+							}
+						}
+					],
+					"cType": "scopedSlot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_3"
+			},
+			"O": {
+				"cType": "child"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {}
+};
+export default pjson

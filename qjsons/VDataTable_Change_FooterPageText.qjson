@@ -1,0 +1,287 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "QLabel",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_144",
+					"T": "prop"
+				},
+				"tagType": {
+					"H": "'span'",
+					"T": "prop"
+				},
+				"text": {
+					"H": "'1.Children tabından aşağıdaki özelliklerde bir chid eklenir. \\n\tCustom Child Name: footer.page-text \\n\tCustom Child Type: scopedSlot \\n   2.footer pageText alanına QLabel konur. \\n   3.QLabel text propuna istenen ifade yazılır. Örnek -->   pageStart + ''-'' + pageStop + ''/'' + itemsLength'",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_144"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		},
+		{
+			"T": "VDataTable",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_463",
+					"T": "prop"
+				},
+				"footerProps": {
+					"H": "{showFirstLastPage = true,\nfirstIcon = 'mdi-arrow-collapse-left',\nlastIcon = 'mdi-arrow-collapse-right',\nprevIcon = 'mdi-minus',\nnextIcon = 'mdi-plus'}",
+					"T": "prop"
+				},
+				"headers": {
+					"H": "[{ text = 'Dessert (100g serving)', align= 'start', sortable= false, value= 'name'},\n{ text = 'Calories', value= 'calories', sortable = true },\n{ text = 'Fat (g)', value= 'fat' },\n{ text = 'Carbs (g)', value= 'carbs' },\n{ text = 'Protein (g)', value= 'protein' },\n{ text = 'Iron (%)', value= 'iron' }]",
+					"T": "prop"
+				},
+				"items": {
+					"H": "[{name = 'Frozens Yogurt', calories = 159, fat = '6.0', carbs = 24, protein = '4.0', iron = '1%'},\n{name = 'Ice cream sandwich', calories = 237, fat = '9.0', carbs = 37, protein = '4.3', iron = '1%'},\n{name = 'Eclair', calories = 262, fat = '16.0', carbs = 23, protein = '6.0', iron = '7%'},\n{name = 'Cupcake', calories = 305, fat = '3.7', carbs = 67, protein = '4.3', iron = '8%'},\n{name = 'Gingerbread',calories = 356, fat = '16.0', carbs = 49, protein = '3.9', iron = '16%'},\n{name = 'Jelly bean', calories = 375,  fat = '0.0', carbs = 94, protein = '0.0', iron = '0%'},\n{name = 'Lollipop', calories = 392, fat = '0.2', carbs = 98, protein = '0.0', iron = '2 %'},\n{name = 'Honeycomb', calories = 408, fat = '3.2', carbs = 87, protein = '6.5', iron = '45%'},\n{name = 'Donut', calories = 452, fat = '25.0', carbs = 51, protein = '4.9', iron = '22%'},\n{name = 'KitKat', calories = 518, fat = '26.0', carbs = 65, protein = '7', iron=  '6 %'}]",
+					"T": "prop"
+				},
+				"itemsPerPage": {
+					"H": "5",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"footer.page-text": {
+					"c": [
+						{
+							"T": "QLabel",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_466",
+									"T": "prop"
+								},
+								"tagType": {
+									"H": "'span'",
+									"T": "prop"
+								},
+								"text": {
+									"H": " pageStart + '-' + pageStop + '/' + itemsLength",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "true",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_466"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "scopedSlot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_463"
+			},
+			"O": {
+				"cType": "scopedSlot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "QLabel",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_144",
+					"T": "prop"
+				},
+				"tagType": {
+					"H": "╬'span'╩╩",
+					"T": "prop"
+				},
+				"text": {
+					"H": "╬'1.Children tabından aşağıdaki özelliklerde bir chid eklenir. \n\tCustom Child Name: footer.page-text \n\tCustom Child Type: scopedSlot \n   2.footer pageText alanına QLabel konur. \n   3.QLabel text propuna istenen ifade yazılır. Örnek -->   pageStart + '-' + pageStop + '/' + itemsLength'╩╩",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_144"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "q-label newDropBorder"
+			}
+		},
+		{
+			"T": "VDataTable",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_463",
+					"T": "prop"
+				},
+				"footerProps": {
+					"H": "╬{}╠=╣showFirstLastPage╩╠true╩╩╠=╣firstIcon╩╠'mdi-arrow-collapse-left'╩╩╠=╣lastIcon╩╠'mdi-arrow-collapse-right'╩╩╠=╣prevIcon╩╠'mdi-minus'╩╩╠=╣nextIcon╩╠'mdi-plus'╩╩╩╩",
+					"T": "prop"
+				},
+				"headers": {
+					"H": "╬[]╠{}╠=╣text╩╠'Dessert (100g serving)'╩╩╠=╣align╩╠'start'╩╩╠=╣sortable╩╠false╩╩╠=╣value╩╠'name'╩╩╩╠{}╠=╣text╩╠'Calories'╩╩╠=╣value╩╠'calories'╩╩╠=╣sortable╩╠true╩╩╩╠{}╠=╣text╩╠'Fat (g)'╩╩╠=╣value╩╠'fat'╩╩╩╠{}╠=╣text╩╠'Carbs (g)'╩╩╠=╣value╩╠'carbs'╩╩╩╠{}╠=╣text╩╠'Protein (g)'╩╩╠=╣value╩╠'protein'╩╩╩╠{}╠=╣text╩╠'Iron (%)'╩╩╠=╣value╩╠'iron'╩╩╩╩╩",
+					"T": "prop"
+				},
+				"items": {
+					"H": "╬[]╠{}╠=╣name╩╠'Frozens Yogurt'╩╩╠=╣calories╩╠159╩╩╠=╣fat╩╠'6.0'╩╩╠=╣carbs╩╠24╩╩╠=╣protein╩╠'4.0'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Ice cream sandwich'╩╩╠=╣calories╩╠237╩╩╠=╣fat╩╠'9.0'╩╩╠=╣carbs╩╠37╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Eclair'╩╩╠=╣calories╩╠262╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠23╩╩╠=╣protein╩╠'6.0'╩╩╠=╣iron╩╠'7%'╩╩╩╠{}╠=╣name╩╠'Cupcake'╩╩╠=╣calories╩╠305╩╩╠=╣fat╩╠'3.7'╩╩╠=╣carbs╩╠67╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'8%'╩╩╩╠{}╠=╣name╩╠'Gingerbread'╩╩╠=╣calories╩╠356╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠49╩╩╠=╣protein╩╠'3.9'╩╩╠=╣iron╩╠'16%'╩╩╩╠{}╠=╣name╩╠'Jelly bean'╩╩╠=╣calories╩╠375╩╩╠=╣fat╩╠'0.0'╩╩╠=╣carbs╩╠94╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'0%'╩╩╩╠{}╠=╣name╩╠'Lollipop'╩╩╠=╣calories╩╠392╩╩╠=╣fat╩╠'0.2'╩╩╠=╣carbs╩╠98╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'2 %'╩╩╩╠{}╠=╣name╩╠'Honeycomb'╩╩╠=╣calories╩╠408╩╩╠=╣fat╩╠'3.2'╩╩╠=╣carbs╩╠87╩╩╠=╣protein╩╠'6.5'╩╩╠=╣iron╩╠'45%'╩╩╩╠{}╠=╣name╩╠'Donut'╩╩╠=╣calories╩╠452╩╩╠=╣fat╩╠'25.0'╩╩╠=╣carbs╩╠51╩╩╠=╣protein╩╠'4.9'╩╩╠=╣iron╩╠'22%'╩╩╩╠{}╠=╣name╩╠'KitKat'╩╩╠=╣calories╩╠518╩╩╠=╣fat╩╠'26.0'╩╩╠=╣carbs╩╠65╩╩╠=╣protein╩╠'7'╩╩╠=╣iron╩╠'6 %'╩╩╩╩╩",
+					"T": "prop"
+				},
+				"itemsPerPage": {
+					"H": "╬5╩╩",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"footer.page-text": {
+					"c": [
+						{
+							"T": "QLabel",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_466",
+									"T": "prop"
+								},
+								"tagType": {
+									"H": "╬'span'╩╩",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬+╣+╣+╣+╣pageStart╩╠'-'╩╩╠pageStop╩╩╠'/'╩╩╠itemsLength╩╩╩",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_466"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "q-label newDropBorder"
+							}
+						}
+					],
+					"cType": "scopedSlot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_463"
+			},
+			"O": {
+				"cType": "scopedSlot",
+				"compDomClasses": "v-data-table v-data-table--has-bottom theme--light newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {
+		"tr-TR": {
+			"requestOfferPersonalInformation": "╬'Kişisel Bilgiler'╩╩",
+			"requestOfferNameSurname": "╬'Ad Soyad'╩╩",
+			"requestOfferPhoneNo": "╬'Telefon No'╩╩",
+			"requestOfferEmail": "╬'E-Posta'╩╩",
+			"Yes": "╬'Evet'╩╩",
+			"No": "╬'Hayır'╩╩",
+			"requestOfferBranch": "╬'Şube'╩╩",
+			"requestOfferCity": "╬'İl'╩╩",
+			"requestOfferTown": "╬'İlçe'╩╩",
+			"requestOfferAgreementText": "╬'Kişisel Verilerin Korunması Kanunu hakkındaki Form’u okudum. Kişisel Verilerimin Form’da belirtilen  kapsamda işlenmesini kabul ediyorum.'╩╩",
+			"requestOfferIsIsbankCustomer": "╬'İş Bankası müşterisi misiniz?'╩╩",
+			"enterAtLeast5Characters": "╬'En az 5 karakter giriniz'╩╩",
+			"enterValidEmail": "╬'Geçerli e-posta giriniz'╩╩",
+			"requestOfferCancel": "╬'Vazgeç'╩╩",
+			"pageTitle": "╬'Hemen Başvur'╩╩",
+			"requetOfferTCKNVKNNo": "╬'TCKN/VKN'╩╩",
+			"enterAtLeast10Characters": "╬'10 karakter giriniz'╩╩",
+			"requestOfferNext": "╬'İleri'╩╩",
+			"requestOfferProductInformation": "╬'Ürün Bilgileri'╩╩",
+			"type": "╬'Malın Cinsi'╩╩",
+			"price": "╬'Malın Bedeli'╩╩",
+			"month": "╬'Vade Ay'╩╩",
+			"payment": "╬'Peşinat Tutarı'╩╩",
+			"currencyType": "╬'Döviz Cinsi'╩╩",
+			"incentiveSupported": "╬'Teşvikli - Faiz Destekli'╩╩",
+			"incentive": "╬'Teşvikli'╩╩",
+			"2ndHand": "╬'2. El Ürün'╩╩",
+			"contributionMargin": "╬'Katkı Payı'╩╩",
+			"amount": "╬'Tutar'╩╩",
+			"SellLeaseBack": "╬'Sat - Geri Kirala'╩╩",
+			"rentCurrencyType": "╬'Kira Döviz Cinsi'╩╩",
+			"requestOfferUploadFile": "╬'Dosya Yükle'╩╩",
+			"requestOfferExpensWantedInRequest": "╬'Teklifte masrafları görmek istiyorum.'╩╩",
+			"requestOfferInsuranceRequestWanted": "╬'Sigorta Teklifi de almak istiyorum.'╩╩"
+		},
+		"en-US": {
+			"requestOfferPersonalInformation": "╬'Personal Information'╩╩",
+			"requestOfferNameSurname": "╬'Name Surname'╩╩",
+			"requestOfferPhoneNo": "╬'Phone No'╩╩",
+			"requestOfferEmail": "╬'E-mail'╩╩",
+			"Yes": "╬'Yes'╩╩",
+			"No": "╬'No'╩╩",
+			"requestOfferBranch": "╬'Branch'╩╩",
+			"requestOfferCity": "╬'City'╩╩",
+			"requestOfferTown": "╬'Town'╩╩",
+			"requestOfferAgreementText": "╬'Agreement Text'╩╩",
+			"requestOfferIsIsbankCustomer": "╬'Are you İş Bank Customer?'╩╩",
+			"enterAtLeast5Characters": "╬'Enter at least 5 characters'╩╩",
+			"enterValidEmail": "╬'Enter valid email'╩╩",
+			"requestOfferCancel": "╬'Cancel'╩╩",
+			"pageTitle": "╬'Apply Now'╩╩",
+			"requetOfferTCKNVKNNo": "╬'TCKN/VKN'╩╩",
+			"enterAtLeast10Characters": "╬'Enter 10 characters'╩╩",
+			"requestOfferNext": "╬'Next'╩╩",
+			"requestOfferProductInformation": "╬'Product Information'╩╩",
+			"type": "╬'Product Type'╩╩",
+			"price": "╬'Price of Product'╩╩",
+			"month": "╬'Maturity'╩╩",
+			"payment": "╬'Advance Payment Amount'╩╩",
+			"currencyType": "╬'Currency Type'╩╩",
+			"incentiveSupported": "╬'Incentive - Interest'╩╩",
+			"incentive": "╬'Incentive'╩╩",
+			"2ndHand": "╬'Used Product'╩╩",
+			"contributionMargin": "╬'Contribution Margin'╩╩",
+			"amount": "╬'Amount'╩╩",
+			"SellLeaseBack": "╬'Sell - Lease back'╩╩",
+			"rentCurrencyType": "╬'Rent Currency Type'╩╩",
+			"requestOfferUploadFile": "╬'Upload File'╩╩",
+			"requestOfferExpensWantedInRequest": "╬'I want to see the costs in the offer.'╩╩",
+			"requestOfferInsuranceRequestWanted": "╬'I also want to get an Insurance Quote.'╩╩"
+		}
+	}
+};
+export default pjson

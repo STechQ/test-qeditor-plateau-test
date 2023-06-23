@@ -1,0 +1,2138 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Oswald:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+  scrollbar-color: #BDBDBD #FAFAFA;
+  scrollbar-width: thin;
+}
+
+.resizer-right {
+  background-color: #EEEEEE;
+  width: 12px;
+  z-index: 19;
+  position: relative;
+  right: 6px;
+  top: 47%;
+  cursor: col-resize;
+  height: 68px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.div1,
+.div2 {
+  width: 2px;
+  height: 52px;
+  background-color: #BCBCBC;
+}
+
+.div1 {
+  margin-right: 2px;
+}
+
+.width-box {
+  background-color: #EEEEEE;
+  min-width: 70px;
+  z-index: 2;
+  position: relative;
+  left: 60px;
+  top: -8px;
+  height: 20px;
+  font-size: 12px;
+  color: #757575;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  font-family: "Roboto";
+}
+
+.notificationIcon {
+  font-size: 28px;
+  vertical-align: middle;
+  margin: 3px 19px 0px 0px;
+  float: left;
+  color: #000000;
+}
+
+.Vue-Toastification__toast {
+  min-width: 295px !important;
+  width: 295px;
+  box-shadow: 2px 2px 15px #00000066;
+  border-radius: 4px;
+  opacity: 0.9;
+}
+
+.Vue-Toastification__close-button {
+  color: #000000;
+}
+
+.Vue-Toastification__toast--warning {
+  background: #f3ca40 0% 0% no-repeat padding-box;
+}
+
+.Vue-Toastification__toast--success {
+  background: #29c660 0% 0% no-repeat padding-box;
+}
+
+.Vue-Toastification__toast--error {
+  background: #ff6b6b 0% 0% no-repeat padding-box;
+}
+
+.quickEditor {
+  font-family: 'Roboto' !important;
+  font: normal normal normal 16px/21px Roboto;
+  color: #212121;
+}
+
+.quickEditor {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  background: #EEEEEE;
+  display: block;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.quickEditor ul {
+  margin: 0;
+  padding: 6px 0;
+}
+
+.quickEditor ul li {
+  margin: 0;
+  list-style: none;
+}
+
+.quickEditor ::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+.quickEditor ::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+.quickEditor hr :not(.renderpagearea) {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.quickEditor .v-divider--vertical {
+  align-self: stretch;
+  border: solid 1px #ccc !important;
+  border-width: 0 thin 0 0 !important;
+  display: inline-flex !important;
+  height: inherit;
+  min-height: 100%;
+  max-height: 100%;
+  max-width: 0;
+  width: 0;
+  vertical-align: text-bottom;
+}
+
+.quickEditor audio,
+.quickEditor canvas,
+.quickEditor iframe,
+.quickEditor img,
+.quickEditor svg,
+.quickEditor video {
+  vertical-align: middle;
+}
+
+.quickEditor fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+.quickEditor textarea.quickEditor-textarea {
+  resize: none;
+}
+
+.quickEditor .browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.quickEditor .hidden {
+  display: none !important;
+}
+
+.quickEditor .sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+.quickEditor .sr-only.focusable:active,
+.quickEditor .sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+.quickEditor .invisible {
+  visibility: hidden;
+}
+
+.quickEditor .inputWrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  padding: 5px 0;
+  position: relative;
+}
+
+.quickEditor .inputWrapper label {
+  width: 100%;
+  display: block;
+}
+
+.quickEditor .editorWrapper .quickButton {
+  display: inline-block;
+  margin-right: 10px;
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+.quickEditor .editorWrapper .quickButton.active {
+  display: inline-block;
+  margin-right: 10px;
+  width: 40px;
+  background: #fafbfc;
+  color: #4e5983;
+  border: 0;
+}
+
+.quickEditor .tableEditMode {
+  display: inline-block;
+  opacity: 0.15;
+}
+
+.quickEditor .tableEditMode.active {
+  display: inline-block;
+  opacity: 1;
+}
+
+.quickEditor .tableEditMode li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.quickEditor .searchComponentArea,
+.quickEditor .propSearchInputArea {
+  background: #ffffff 0% 0% no-repeat padding-box !important;
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 4px !important;
+  height: 32px;
+}
+
+.quickEditor .leftBlock .inputSmall,
+.quickEditor .rightBlock .inputSmall {
+  border: 1px solid #BDBDBD;
+  border-radius: 5px;
+  padding-left: 7px;
+}
+
+.quickEditor .edit-buttons input {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  opacity: 1;
+}
+
+.quickEditor .leftBlock .searchComponentArea i,
+.quickEditor .rightBlock .propSearchInputArea i {
+  color: #9e9e9e;
+  font-size: 24px;
+  padding: 0px 4px;
+}
+
+.quickEditor .leftBlock .inputWrapper i,
+.quickEditor .rightBlock .inputWrapper i {
+  font-size: 20px;
+}
+
+.quickEditor .edit-buttons input[type="text"] {
+  /* padding: 8px 12px; */
+  width: 100%;
+  height: 32px;
+  flex-grow: 1;
+}
+
+.quickEditor .leftBlock input[type="text"],
+.quickEditor .rightBlock input[type="text"] {
+  width: 100%;
+  flex-grow: 1;
+}
+
+.quickEditor .leftBlock input[type="text"]:focus-visible,
+.quickEditor .rightBlock input[type="text"]:focus-visible {
+  outline: none;
+}
+
+.quickEditor .leftBlock .inputSmall[type="text"],
+.quickEditor .edit-buttons .inputSmall[type="text"],
+.quickEditor .rightBlock .inputSmall[type="text"] {
+  height: 28px;
+  font-size: 80%;
+}
+
+.quickEditor .leftBlock input::placeholder,
+.quickEditor .edit-buttons input::placeholder,
+.quickEditor .rightBlock input::placeholder {
+  color: #9e9e9e;
+  font-size: 14px;
+  height: 19px;
+  font-family: Roboto;
+}
+
+
+.quickEditor .leftBlock label,
+.quickEditor .rightBlock label,
+.quickEditor .topMenu label,
+.quickEditor .edit-buttons label {
+  font-size: 80%;
+  padding: 0 8px;
+}
+
+/* .quickEditor .leftBlock input:focus,
+  .quickEditor .edit-buttons input:focus,
+  .quickEditor .rightBlock input:focus {
+    outline: 0;
+    border-color: #00c3b3;
+  } */
+
+/* select */
+.quickEditor select {
+  background: #fafbfc;
+  border: 1px solid #A1A1A1;
+  border-radius: 4px;
+  font-size: 80%;
+  appearance: auto;
+}
+
+/* .quickEditor select:focus {
+    outline: 0;
+    border-color: #00c3b3;
+  } */
+
+.quickEditor .quickButton {
+  border-radius: 5px;
+  width: 100%;
+  height: 32px;
+}
+
+.quickEditor .filters .quickButton {
+  border-radius: 5px !important;
+  width: 100% !important;
+  height: 36px !important;
+  text-align: left;
+}
+
+.quickEditor .quickButton:focus {
+  outline: 0;
+}
+
+.quickEditor .buttonMini {
+  border-radius: 5px;
+  padding: 2px 6px;
+  height: 18px;
+  font-size: 50%;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.quickEditor .props .buttonMini {
+  position: absolute;
+  opacity: 0.4;
+  right: 0;
+  top: 5px;
+}
+
+.quickEditor .buttonMini.active {
+  opacity: 1;
+}
+
+.quickEditor .buttonSmall {
+  height: 30px;
+  font-size: 14px;
+  padding: 6px 8px;
+  font-family: Roboto;
+}
+
+/* .quickEditor .greenBtn {
+    background: #00c3b3;
+    border: 1px solid #00c3b3;
+    color: #fff;
+  }
+  
+  .quickEditor .redBtn {
+    background: #ff6f79;
+    border: 1px solid #ff6f79;
+    color: #fff;
+  }
+  
+  .quickEditor .blueBtn {
+    background: #0492f2;
+    border: 1px solid #0492f2;
+    color: #fff;
+  } */
+.quickEditor .greenBtn {
+  background: #FFFFFF;
+  border: 1px solid #6B6F90;
+  color: #4F537B;
+}
+
+.quickEditor .redBtn {
+  background: #FFFFFF;
+  border: 1px solid #E96767;
+  color: #E96767;
+}
+
+
+.quickEditor .contentBlock header i.errorCounter {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 99px;
+  background: #00c3b3;
+  color: #fff;
+  font-weight: bold;
+  padding: 4px;
+  font-style: normal;
+  font-size: 16px;
+}
+
+.quickEditor .checkWrapper {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 80%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.quickEditor .checkWrapper input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.quickEditor .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #fafbfc;
+  border-radius: 99px;
+  border: 1px solid #c1dced;
+}
+
+.quickEditor .checkWrapper:hover input~.checkmark {
+  filter: contrast(0.9);
+}
+
+.quickEditor .checkWrapper input:checked~.checkmark {
+  background-color: #2196f3;
+  border-color: #2196f3;
+}
+
+.quickEditor .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.quickEditor .checkWrapper input:checked~.checkmark:after {
+  display: block;
+}
+
+.quickEditor .checkWrapper .checkmark:after {
+  left: 6px;
+  top: 3px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.quickEditor .miniPopUp {
+  position: absolute;
+  top: 50px;
+  width: 300px;
+  padding: 15px;
+  background: #fff;
+  z-index: 11;
+}
+
+.quickEditor .miniPopUp .checkList li {
+  border-top: 1px solid #e1eef6;
+  padding: 10px 8px 0 8px !important;
+}
+
+.quickEditor .miniPopUp .checkList li i {
+  position: absolute;
+  top: 12px;
+  right: 4px;
+}
+
+.quickEditor .bigPopUp {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.quickEditor .bigPopUp .content {
+  width: calc(100% - 200px);
+  margin: 0 100px;
+}
+
+.quickEditor .bigPopUp header {
+  width: calc(100% - 200px);
+  margin: 20px 100px 0;
+}
+
+.quickEditor .bigPopUp .content {
+  background: #ffffff;
+  overflow: auto;
+  min-height: 500px;
+  max-height: calc(100vh - 100px);
+}
+
+.quickEditor .bigPopUp .content>ul {
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid #e1eef6;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.quickEditor .bigPopUp .content ul.sub {
+  padding: 0 0 0 20px;
+  margin: 0;
+}
+
+.quickEditor .bigPopUp .content li {
+  padding: 5px 0;
+}
+
+.quickEditor .bigPopUp .content ul.sub li {
+  border-bottom: 1px solid #e1eef6;
+}
+
+.quickEditor .bigPopUp .content ul.sub li:last-child {
+  border-bottom: 0;
+}
+
+.quickEditor .bigPopUp .content table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: separate;
+  font-size: 80%;
+}
+
+.quickEditor .bigPopUp .content table th {
+  padding: 10px;
+  border-right: 1px solid #fff;
+  background: #e1eef6;
+}
+
+.quickEditor .bigPopUp .content table th:last-child {
+  border-right: 0;
+}
+
+.quickEditor .bigPopUp .content table td {
+  padding: 10px;
+  border: 1px solid #e1eef6;
+  border-left: 0;
+}
+
+.quickEditor .bigPopUp .content table td:first-child {
+  border-left: 1px solid #e1eef6;
+}
+
+.quickEditor .bigPopUp .content table tr {
+  border: 1px solid #e1eef6;
+}
+
+.quickEditor .bigPopUp .content li.tip {
+  background: #e1eef6;
+  padding: 5px 15px;
+}
+
+.quickEditor .bigPopUp .content h4 {
+  margin: 5px 0;
+}
+
+.quickEditor .bigPopUp .content .sub h4 {
+  font-size: 80%;
+  display: inline-block;
+  width: 30%;
+  margin: 0;
+}
+
+.quickEditor .bigPopUp .content p {
+  margin: 5px 0;
+  font-size: 80%;
+}
+
+.quickEditor .bigPopUp .content .sub p {
+  display: inline-block;
+  width: 65%;
+  margin: 0;
+}
+
+.quickEditor .bigPopUp header {
+  background: #ffffff;
+  color: #212121;
+  font-weight: 600;
+  height: auto;
+  padding: 10px 15px 8px 15px;
+  border-bottom: 1px solid #E3E3E3;
+  border-radius: 4px 4px 0 0;
+}
+
+.quickEditor .bigPopUp header span {
+  line-height: 30px;
+  font-size: 20px;
+}
+
+.quickEditor .bigPopUp header i {
+  font-size: 14px;
+  text-align: center;
+}
+
+.quickEditor .rightBlock .prop-collapsible i:nth-child(2) {
+  display: none;
+}
+
+.quickEditor .rightBlock .prop-collapsible.active i:nth-child(1) {
+  display: none;
+}
+
+.quickEditor .rightBlock .prop-collapsible.active i:nth-child(2) {
+  display: unset;
+}
+
+.quickEditor .bigPopUp header i:before {
+  vertical-align: -webkit-baseline-middle;
+}
+
+.quickEditor .bigPopUp header ul {
+  padding: 0;
+  float: right;
+}
+
+.quickEditor .bigPopUp header ul li {
+  display: inline-block;
+  margin: 0 5px;
+  float: left;
+}
+
+.quickEditor .deleteBtnModal {
+  width: 95px;
+  height: 40px !important;
+  background: #151233;
+  color: #FFFFFF;
+  font-family: Roboto;
+}
+
+.quickEditor .deleteOutline {
+  margin-left: 10px;
+}
+
+.quickEditor .blueBtn {
+  background: #151233;
+  /* border: 1px solid #151233; */
+  color: #fff;
+}
+
+.quickEditor .whiteBtn {
+  background: #fff;
+  font-family: Roboto;
+  font-size: 14px;
+  color: #757575;
+}
+
+.quickEditor .grayBtn {
+  background: #9E9E9E;
+  color: #FFFFFF;
+  font-family: Roboto;
+  font-size: 14px;
+}
+
+.quickEditor .blackBtn {
+  background: #151233;
+  color: #FFFFFF;
+  font-family: Roboto;
+  font-size: 14px;
+}
+
+.quickEditor .infoIcn {
+  cursor: hand;
+  cursor: pointer;
+  vertical-align: middle;
+  margin-left: 4px;
+}
+
+
+.quickEditor .section-menu-wrapper i {
+  display: inline-block;
+  width: 30px;
+}
+
+.quickEditor .vue-notification.success {
+  background: #29C660 !important;
+  border-left: none;
+  color: #000000;
+  font-size: 12px;
+}
+
+.quickEditor .vue-notification.warn {
+  background: #F3CA40 !important;
+  border-left: none;
+  color: #000000;
+  font-size: 12px;
+
+}
+
+.quickEditor .vue-notification.error {
+  background: #FF6B6B !important;
+  border-left: none;
+  color: #000000;
+  font-size: 12px;
+
+}
+
+.quickEditor .contentBlock header i.errorCounter {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 99px;
+  background: #00c3b3;
+  color: #fff;
+  font-weight: bold;
+  padding: 4px;
+  font-style: normal;
+  font-size: 16px;
+}
+
+.quickEditor .checkWrapper {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 80%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.quickEditor .checkWrapper input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.quickEditor .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #fafbfc;
+  border-radius: 99px;
+  border: 1px solid #c1dced;
+}
+
+.quickEditor .checkWrapper:hover input~.checkmark {
+  filter: contrast(0.9);
+}
+
+.quickEditor .checkWrapper input:checked~.checkmark {
+  background-color: #2196f3;
+  border-color: #2196f3;
+}
+
+.quickEditor .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.quickEditor .checkWrapper input:checked~.checkmark:after {
+  display: block;
+}
+
+.quickEditor .checkWrapper .checkmark:after {
+  left: 6px;
+  top: 3px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.quickEditor .miniPopUp {
+  position: absolute;
+  top: 50px;
+  width: 300px;
+  padding: 15px;
+  background: #fff;
+  z-index: 11;
+}
+
+.quickEditor .miniPopUp .checkList li {
+  border-top: 1px solid #e1eef6;
+  padding: 10px 8px 0 8px !important;
+}
+
+.quickEditor .miniPopUp .checkList li i {
+  position: absolute;
+  top: 12px;
+  right: 4px;
+}
+
+
+.quickEditor .bigPopUp .content {
+  width: calc(100% - 200px);
+  margin: 0 100px;
+}
+
+.quickEditor .bigPopUp header {
+  width: calc(100% - 200px);
+  margin: 20px 100px 0;
+}
+
+.quickEditor .bigPopUp .content {
+  background: #ffffff;
+  overflow: auto;
+  min-height: 500px;
+  max-height: calc(100vh - 100px);
+}
+
+.quickEditor .bigPopUp .content>ul {
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid #e1eef6;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.quickEditor .bigPopUp .content ul.sub {
+  padding: 0 0 0 20px;
+  margin: 0;
+}
+
+.quickEditor .bigPopUp .content li {
+  padding: 5px 0;
+}
+
+.quickEditor .bigPopUp .content ul.sub li {
+  border-bottom: 1px solid #e1eef6;
+}
+
+.quickEditor .bigPopUp .content ul.sub li:last-child {
+  border-bottom: 0;
+}
+
+.quickEditor .bigPopUp .content table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: separate;
+  font-size: 80%;
+}
+
+.quickEditor .bigPopUp .content table th {
+  padding: 10px;
+  border-right: 1px solid #fff;
+  background: #e1eef6;
+}
+
+.quickEditor .bigPopUp .content table th:last-child {
+  border-right: 0;
+}
+
+.quickEditor .bigPopUp .content table td {
+  padding: 10px;
+  border: 1px solid #e1eef6;
+  border-left: 0;
+}
+
+.quickEditor .bigPopUp .content table td:first-child {
+  border-left: 1px solid #e1eef6;
+}
+
+.quickEditor .bigPopUp .content table tr {
+  border: 1px solid #e1eef6;
+}
+
+.quickEditor .bigPopUp .content li.tip {
+  background: #e1eef6;
+  padding: 5px 15px;
+}
+
+.quickEditor .bigPopUp .content h4 {
+  margin: 5px 0;
+}
+
+.quickEditor .bigPopUp .content .sub h4 {
+  font-size: 80%;
+  display: inline-block;
+  width: 30%;
+  margin: 0;
+}
+
+.quickEditor .bigPopUp .content p {
+  margin: 5px 0;
+  font-size: 80%;
+}
+
+.quickEditor .bigPopUp .content .sub p {
+  display: inline-block;
+  width: 65%;
+  margin: 0;
+}
+
+.quickEditor .bigPopUp header {
+  background: #ffffff;
+  color: #212121;
+  font-weight: 600;
+  height: auto;
+  padding: 10px 15px 8px 15px;
+  border-bottom: 1px solid #E3E3E3;
+  border-radius: 4px 4px 0 0;
+}
+
+.quickEditor .bigPopUp header span {
+  line-height: 30px;
+  font-size: 20px;
+}
+
+.quickEditor .bigPopUp header i {
+  font-size: 14px;
+  text-align: center;
+}
+
+.quickEditor .rightBlock .prop-collapsible i:nth-child(2) {
+  display: none;
+}
+
+.quickEditor .rightBlock .prop-collapsible.active i:nth-child(1) {
+  display: none;
+}
+
+.quickEditor .rightBlock .prop-collapsible.active i:nth-child(2) {
+  display: unset;
+}
+
+.quickEditor .bigPopUp header i:before {
+  vertical-align: -webkit-baseline-middle;
+}
+
+.quickEditor .bigPopUp header ul {
+  padding: 0;
+  float: right;
+}
+
+.quickEditor .bigPopUp header ul li {
+  display: inline-block;
+  margin: 0 5px;
+  float: left;
+}
+
+.quickEditor .bigPopUp section ul,
+.quickEditor .bigPopUp .eventButtons ul {
+  padding: 0;
+  float: right;
+  width: 100%;
+}
+
+.quickEditor .bigPopUp section ul li,
+.quickEditor .bigPopUp .eventButtons ul li {
+  display: inline-block;
+  margin: 0 5px;
+  float: right;
+}
+
+.quickEditor .bigPopUp .content ul li.eventName {
+  float: left;
+  color: #212121;
+  margin: 4px 3px 3px 12px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.quickEditor .bigPopUp section input {
+  background: #F5F5F5;
+  margin: 10px 0;
+  padding: 8px;
+  border-radius: 3px;
+}
+
+.quickEditor .rightBlock .prop-collapsible i:nth-child(2) {
+  display: none;
+}
+
+.quickEditor .rightBlock .prop-collapsible.active i:nth-child(1) {
+  display: none;
+}
+
+.quickEditor .rightBlock .prop-collapsible.active i:nth-child(2) {
+  display: unset;
+}
+
+.quickEditor .leftBlock {
+  width: 300px;
+  display: inline-block;
+  float: left;
+  background: #fafafa;
+  border-right: 1px solid #e0e0e0;
+  height: 100%;
+}
+
+.quickEditor .leftBlock.hide {
+  width: 40px !important;
+  border-right: none;
+  position: relative !important;
+}
+
+.quickEditor .leftBlock.hide .toggleBlock {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+.quickEditor .leftBlock.hide section,
+.quickEditor .leftBlock.hide .section-menu-wrapper,
+.quickEditor .leftBlock.hide .section-menu-wrapper i {
+  display: none;
+}
+
+.quickEditor .leftBlock.hide .section-menu-wrapper i:last-child {
+  display: inline-block;
+}
+
+.quickEditor .leftBlock .section-menu-wrapper {
+  background: #fafafa;
+}
+
+.quickEditor .leftBlock.hide .section-menu-wrapper {
+  background: #fafafa;
+  padding: 0px;
+  border: 1px solid #E0E0E0;
+  border-top: none;
+}
+
+.quickEditor .leftBlock .header-section {
+  justify-content: space-between;
+  display: flex;
+}
+
+.quickEditor .leftBlock.hide .header-section {
+  border: none;
+}
+
+.quickEditor .leftBlock.hide .section-toggle {
+  margin: 8px 0 8px 11px;
+}
+
+.quickEditor .leftBlock .section-toggle i {
+  font-size: 24px;
+  text-align: center;
+  color: #c1dced;
+}
+
+.quickEditor .leftBlock .section-toggle i:hover {
+  filter: contrast(0.9);
+}
+
+.quickEditor .leftBlock .section-toggle i:before {
+  vertical-align: middle;
+}
+
+.quickEditor .leftBlock .section-toggle i.active {
+  color: #2196f3;
+}
+
+.quickEditor .contentBlock .section-toggle i:hover {
+  color: #c1dced;
+}
+
+.quickEditor .leftBlock .section-toggle i.toggleBlock {
+  float: right;
+  transition: transform 0.3s ease;
+  color: #BDBDBD;
+  cursor: pointer;
+  z-index: 3;
+  position: relative;
+}
+
+.quickEditor .leftBlock .section-toggle {
+  display: grid;
+  align-items: center;
+}
+
+.quickEditor .leftBlock.hide .section-toggle i.toggleBlock {
+  color: #2C5A86;
+  margin-right: 5px;
+  margin-top: 4px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.quickEditor .leftBlock .filters {
+  margin: 12px 0 12px 0;
+}
+
+.quickEditor .filters {
+  padding: 0px 12px;
+}
+
+.quickEditor .quickButton.filter {
+  width: 40px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.quickEditor .quickButton.filter i:before {
+  font-size: 12px;
+}
+
+.quickEditor .filterInput {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.quickEditor .cardList,
+.quickEditor .tableList {
+  padding: 0 12px;
+}
+
+.quickEditor .leftBlock h4 {
+  padding-top: 6px;
+}
+
+.quickEditor .rightBlock h4 {
+  padding: 12px 0 0 0;
+}
+
+.quickEditor .leftBlock h4,
+.quickEditor .rightBlock h4 {
+  font-size: 14px;
+  color: #212121;
+  font-weight: 500;
+}
+
+.quickEditor .rightBlock h4#current-component-id {
+  padding: 12px 0;
+  vertical-align: middle;
+  display: flex;
+}
+
+
+.quickEditor .cardList ul,
+.quickEditor .tableList ul {
+  padding: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.quickEditor .tableList ul li {
+  background: #ffffff;
+  padding: 10px;
+  margin: 5px 1px;
+  width: 100%;
+  font-size: 80%;
+  text-align: left;
+  border-radius: 4px;
+  vertical-align: top;
+  cursor: hand;
+  cursor: pointer;
+  position: relative;
+}
+
+.quickEditor .cardList ul li {
+  background: #fafbfc;
+  padding: 15px 10px 10px 10px;
+  margin: 5px;
+  height: 110px;
+  width: calc(50% - 13px);
+  font-size: 80%;
+  text-align: center;
+  border-radius: 5px;
+  vertical-align: top;
+  cursor: hand;
+  cursor: pointer;
+  position: relative;
+}
+
+.quickEditor .tableList ul li i.infoIcn {
+  color: #424242;
+  font-size: 100%;
+  width: auto;
+  height: auto;
+  margin: 0;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  display: none;
+}
+
+
+.quickEditor .cardList ul li i.infoIcn {
+  color: #fafbfc;
+  font-size: 125%;
+  width: auto;
+  height: auto;
+  margin: 0;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+}
+
+.quickEditor .cardList ul li:hover i.infoIcn {
+  color: #fff !important;
+}
+
+.quickEditor .tableList ul li span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 30px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: calc(100% - 84px);
+}
+
+.quickEditor .cardList ul li span {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.quickEditor .tableList ul li i {
+  display: inline-block;
+  height: 48px;
+  width: 48px;
+  font-size: 30px;
+  margin: 0 10px;
+  vertical-align: middle;
+}
+
+.quickEditor .cardList ul li i {
+  display: block;
+  height: 56px;
+  width: 56px;
+  font-size: 46px;
+  margin: 0 auto 10px auto;
+}
+
+.quickEditor .cardList ul li i:before {
+  vertical-align: middle;
+}
+
+.quickEditor .cardList ul li:hover i,
+.quickEditor .tableList ul li:hover i {
+  color: #fff;
+}
+
+.quickEditor .cardList ul li:hover,
+.quickEditor .tableList ul li:hover {
+  background: #E3E3E3;
+  color: #212121;
+}
+
+.quickEditor .tableList ul li:hover i {
+  display: inline-flex;
+  color: #424242;
+}
+
+.quickEditor .itemsScroll {
+  overflow: auto;
+}
+
+.quickEditor .contentBlock {
+  width: calc(100% - 600px);
+  display: inline-block;
+  float: left;
+  background: #EEEEEE;
+}
+
+.quickEditor .contentBlock.wider {
+  width: calc(100% - 340px);
+  display: inline-block;
+  float: left;
+  left: 0 !important;
+}
+
+.quickEditor .contentBlock header i {
+  font-size: 20px;
+  text-align: center;
+}
+
+.quickEditor .contentBlock header i:before {
+  vertical-align: middle;
+}
+
+.quickEditor .contentBlock header i:hover {
+  color: #c1dced;
+}
+
+.quickEditor .contentBlock header span {
+  line-height: 30px;
+}
+
+.quickEditor .contentBlock header ul {
+  padding: 0;
+  float: right;
+}
+
+.quickEditor .contentBlock header ul li {
+  display: inline-block;
+  float: left;
+  margin: 0 5px;
+}
+
+.quickEditor .content section .editorWrapper {
+  padding: 15px;
+  border: 1px solid #c1dced;
+  margin-bottom: 10px;
+  position: relative;
+  cursor: hand;
+  cursor: pointer;
+  width: 100%;
+  height: fit-content;
+  text-transform: none !important;
+  color: #4e5983 !important;
+  font-family: "open sans", "sans serif" !important;
+}
+
+.quickEditor .content section .editorWrapper .fieldName {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 3px 12px;
+  font-size: 65%;
+  background: #c1dced;
+  color: rgba(0, 0, 0, 0.87) !important;
+  font-family: "open sans", "sans serif" !important;
+}
+
+.quickEditor .content section .editorWrapper:hover .fieldName {
+  background: #00c3b3;
+  color: #fff;
+}
+
+.quickEditor .content section .editorWrapper:hover,
+.quickEditor .content section .editorWrapper.ative {
+  border: 1px solid #00c3b3;
+}
+
+.quickEditor .rightBlock {
+  width: 300px;
+  float: right;
+  background: #fafafa;
+  border-left: 1px solid #e0e0e0;
+  height: calc(100vh - 40px);
+  position: relative;
+  z-index: 19;
+}
+
+.quickEditor .section-menu-wrapper {
+  color: #4F537B;
+  padding-top: 5px;
+  position: relative;
+  height: 45px;
+  width: 100%;
+  font-size: 80%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  max-width: inherit;
+}
+
+.quickEditor .section-menu-wrapper .sections i {
+  font-size: 16px;
+  text-align: center;
+}
+
+.quickEditor .section-menu-wrapper .sections i:before {
+  vertical-align: middle;
+}
+
+.quickEditor .section-menu-wrapper .sections i:hover {
+  color: #c1dced;
+}
+
+.quickEditor .section-menu-wrapper .sections span {
+  line-height: 30px;
+}
+
+.quickEditor .section-menu-wrapper ul.sections {
+  padding: 0;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.quickEditor .section-menu-wrapper>ul.sections li {
+  display: inline-block;
+  line-height: 30px;
+  padding: 0 5px;
+}
+
+.quickEditor .section-menu-wrapper>ul.sections li span,
+.quickEditor .section-menu-wrapper>ul.sections li i {
+  padding: 0 10px;
+  line-height: 35px;
+  cursor: pointer;
+
+}
+
+.quickEditor .section-menu-wrapper>ul.sections li i {
+  padding: 0 5px !important;
+}
+
+.quickEditor .section-menu-wrapper>ul.sections li.active {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.quickEditor .section-menu-wrapper>ul.sections li.active,
+.quickEditor .section-menu-wrapper>ul.sections li.active i:before {
+  color: #151233;
+  font-weight: 600;
+}
+
+.quickEditor .rightBlock section {
+  padding: 0 12px;
+}
+
+.quickEditor .rightBlock .itemsScroll ul li {
+  padding: 2px 0;
+  position: relative;
+}
+
+.quickEditor .rightBlock section i:before {
+  font-size: 18px;
+}
+
+.quickEditor .buttonsGroup {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.quickEditor .buttonsGroupModal {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  float: right;
+  margin-top: 30%;
+  -webkit-flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.quickEditor .buttonsGroup li.single {
+  width: 40px;
+  margin: 1.5%;
+}
+
+.quickEditor .buttonsGroup li.double {
+  width: 47%;
+  margin: 1.5%;
+}
+
+.quickEditor .buttonsGroup li.triple {
+  width: 72%;
+  margin: 1.5%;
+}
+
+.quickEditor .buttonsGroup li.full {
+  width: 97%;
+  margin: 1.5%;
+}
+
+.quickEditor .overlayPopup {
+  height: 100%;
+}
+
+.quicktcl {
+  width: 100%;
+}
+
+.quickEditor .rightBlock .comp-bar-manager-row label {
+  padding: 0 4px !important;
+}
+
+.quickEditor .rightBlock .itemsScroll .editModeWrapper .bar-manager-div {
+  margin: 15px 0;
+}
+
+.quickEditor .rightBlock .buttonsGroup {
+  padding: 0;
+}
+
+.quickEditor .content {
+  padding: 10px;
+}
+
+.quickEditor .section-menu-wrapper i {
+  height: 24px !important;
+}
+
+.quickEditor .rightBlock section .quick-modal .qButtonClass {
+  width: 100% !important;
+}
+
+.quickEditor .rightBlock section .qButtonClass {
+  width: 28px !important;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quickEditor .rightBlock section .script-type,
+.quickEditor .rightBlock section .script-type i {
+  font-size: 14px !important;
+}
+
+
+.quickEditor .rightBlock .comp-bar-manager-row label {
+  padding: 0 4px !important;
+}
+
+.inspireTreeOverlay {
+  display: flow-root;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  transition: 0.3s;
+  background-color: #fafafa;
+}
+
+.quickEditor .leftBlock .tree-view-header {
+  background: #fafafa;
+  color: #4F537B;
+  width: 100%;
+  padding-left: 20px;
+  max-width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  border-top: 0.2px solid #BDBDBD;
+}
+
+.quickEditor .leftBlock .tree-view-header td {
+  float: right;
+  font-size: 20px;
+  margin: 0px 2px;
+}
+
+.quickEditor .leftBlock .tree-view-header .hovarable:hover {
+  color: rgb(123, 131, 133);
+}
+
+.inspire-tree .title {
+  padding-left: 25px !important;
+  padding-left: 25px !important;
+}
+
+.inspire-tree .title.icon-file-empty {
+  padding-left: 42px !important;
+  padding-left: 42px !important;
+}
+
+.quickEditor .rightBlock ul.inline-switch li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quickEditor .rightBlock .inputWrapper button .icn-code::before {
+  font-size: 16px;
+}
+
+.quickEditor .rightBlock .inputWrapper button .icn-code {
+  vertical-align: revert;
+}
+
+.quickEditor .rightBlock ul.inline-switch li .inputWrapper {
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.quickEditor .rightBlock .prop-content .prop-switch-slider.round::before,
+.quickEditor .menu_right.directMenuItem .edit-mode-switch.round::after {
+  left: -5px;
+  border-radius: 50%;
+}
+
+.prop-switch-slider::before,
+.edit-mode-switch::after {
+  -webkit-transform: translateX(9px);
+  -ms-transform: translateX(9px);
+  transform: translateX(9px);
+}
+
+.quickEditor .rightBlock .prop-content .prop-switch-slider.round {
+  width: 40px;
+  height: 24px;
+  border-radius: 34px;
+}
+
+.quickEditor .menu_right.directMenuItem .edit-mode-switch.round {
+  width: 44px;
+  height: 24px;
+  border-radius: 34px;
+}
+
+.quickEditor .footerAbsolute {
+  left: unset !important;
+  right: 0px !important;
+  bottom: 0px !important;
+}
+
+.quickEditor .expansionHeaderOrder {
+  order: 1
+}
+
+@media only screen and (max-width: 480px) {
+  .quickEditor .responsiveNavigation {
+    display: none !important
+  }
+
+  .quickEditor .responsiveFooter {
+    width: 100% !important;
+
+  }
+}
+
+.quickEditor .editor-ghost-comp {
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #757575
+}
+
+.quickEditor .leftBlock .quick-tooltip .quick-tooltip-content {
+  margin-top: 20px;
+}
+
+.quickEditor .leftBlock.non-edit-mode {
+  display: none;
+}
+
+.quickEditor .rightBlock.non-edit-mode {
+  display: none;
+}
+
+.quickEditor .contentBlock.non-edit-mode {
+  width: 100% !important;
+  left: 0 !important;
+}
+
+.non-edit-mode .renderpagearea {
+  padding: 0;
+}
+
+.non-edit-mode .renderPageFooterOuterDiv {
+  display: none;
+}
+
+.quickEditor .contentBlock header {
+  /* background: #FFFFFF; */
+  border-radius: 4px;
+}
+
+.quickEditor .quickButton .createCompIcn {
+  font-size: 20px !important;
+  margin-left: 5px;
+  font: normal normal normal 15px/20px Roboto
+}
+
+.quickEditor .rightBlock .prop-content .prop-switch-slider.round {
+  width: 40px;
+  height: 24px;
+  border-radius: 34px;
+}
+
+.quickEditor .menu_right.directMenuItem .edit-mode-switch.round {
+  width: 44px;
+  height: 24px;
+  border-radius: 34px;
+}
+
+.quickEditor .footerAbsolute {
+  left: unset !important;
+  right: 0px !important;
+  bottom: 0px !important;
+}
+
+.quickEditor .expansionHeaderOrder {
+  order: 1
+}
+
+@media only screen and (max-width: 480px) {
+  .quickEditor .responsiveNavigation {
+    display: none !important
+  }
+
+  .quickEditor .responsiveFooter {
+    width: 100% !important;
+
+  }
+}
+
+.quickEditor .editor-ghost-comp {
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #757575
+}
+
+.quickEditor .leftBlock .quick-tooltip .quick-tooltip-content {
+  margin-top: 20px;
+}
+
+.quickEditor .leftBlock.non-edit-mode {
+  display: none;
+}
+
+.quickEditor .rightBlock.non-edit-mode {
+  display: none;
+}
+
+.quickEditor .contentBlock.non-edit-mode {
+  width: 100% !important;
+  left: 0 !important;
+}
+
+/* .quickEditor .contentBlock.non-edit-mode .content #dropArea {
+  padding: 0 !important;
+  background-color: transparent !important;
+} */
+
+.non-edit-mode .renderpagearea {
+  padding: 0;
+}
+
+.non-edit-mode .renderPageFooterOuterDiv {
+  display: none;
+}
+
+/* .buttonsGroup .prop-content input:checked+.prop-switch-slider::before {
+  left: 3px !important;
+} */
+
+.quickEditor .contentBlock header {
+  /* background: #FFFFFF; */
+  border-radius: 4px;
+}
+
+.quickEditor .quickButton .createCompIcn {
+  font-size: 20px !important;
+  margin-left: 5px;
+  font: normal normal normal 15px/20px Roboto
+}
+
+.quickEditor .createComponentArea {
+  margin-left: 0;
+  padding: 0px;
+  font-size: 15px;
+  display: flex;
+  color: #424242;
+  opacity: 0.8;
+}
+
+.quickEditor .createComponentArea {
+  margin-left: 0;
+  padding: 0px;
+  font-size: 15px;
+  display: flex;
+  color: #424242;
+  opacity: 0.8;
+}
+
+.quickEditor-modal-content header {
+  height: auto;
+  padding: 15px 15px 13px 15px;
+  border-bottom: 1px solid #E3E3E3
+}
+
+.quickEditor-modal-content header .contentTitle {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.quickEditor-modal-content {
+  width: 500px !important;
+  border-radius: 4px;
+}
+
+.margin-view-overlays {
+  background-color: #F5F5F5;
+}
+
+.monaco-editor-background {
+  background-color: #F5F5F5 !important;
+}
+
+.monaco-editor .line-numbers {
+  color: #0C77FF !important
+}
+
+.monaco-action-bar .action-item {
+  margin: 0 !important;
+  float: none !important;
+  background-color: #FFFFFF;
+}
+
+.monaco-action-bar .action-menu-item {
+  background-color: transparent !important;
+  margin: -1px;
+}
+
+.action-label.codicon.separator.disabled {
+  margin-inline: auto !important;
+  background: transparent !important;
+}
+
+
+.monaco-scrollable-element .actions-container {
+  padding: 10px 0 !important;
+  width: 260px !important;
+  background: #FFFFFF;
+}
+
+.actions-container .action-label {
+  color: #212121;
+  font-size: 14px !important;
+}
+
+.actions-container .keybinding {
+  color: #757575;
+  font-size: 12px !important;
+}
+
+.monaco-menu {
+  font-family: 'Roboto';
+}
+
+.monaco-menu .monaco-action-bar.vertical .keybinding:hover {
+  color: #757575 !important;
+  background-color: #E3E3E3 !important;
+}
+
+.monaco-menu .monaco-action-bar.vertical .action-label:hover {
+  color: #212121 !important;
+}
+
+.monaco-menu .monaco-action-bar.vertical .submenu-indicator.codicon:before {
+  margin-right: -8px !important;
+  color: #212121 !important;
+}
+
+.monaco-menu .monaco-action-bar.vertical .action-menu-item:hover {
+  background-color: #E3E3E3 !important;
+  margin: -1px;
+}
+
+.monaco-tree-row .content.actions {
+  padding: 0 10px !important;
+}
+
+.quickEditor-modal-content header {
+  height: auto;
+  padding: 15px 15px 13px 15px;
+  border-bottom: 1px solid #E3E3E3
+}
+
+.quickEditor-modal-content header .contentTitle {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.quickEditor-modal-content {
+  width: 500px !important;
+  border-radius: 4px;
+}
+
+.margin-view-overlays {
+  background-color: #F5F5F5;
+}
+
+.monaco-editor-background {
+  background-color: #F5F5F5 !important;
+}
+
+.monaco-editor .line-numbers {
+  color: #0C77FF !important
+}
+
+.monaco-action-bar .action-item {
+  margin: 0 !important;
+  float: none !important;
+  background-color: #FFFFFF;
+}
+
+.monaco-action-bar .action-menu-item {
+  background-color: transparent !important;
+  margin: -1px;
+}
+
+.action-label.codicon.separator.disabled {
+  margin-inline: auto !important;
+  background: transparent !important;
+}
+
+
+.monaco-scrollable-element .actions-container {
+  padding: 10px 0 !important;
+  width: 260px !important;
+  background: #FFFFFF;
+}
+
+.actions-container .action-label {
+  color: #212121;
+  font-size: 14px !important;
+}
+
+.actions-container .keybinding {
+  color: #757575;
+  font-size: 12px !important;
+}
+
+.monaco-menu {
+  font-family: 'Roboto';
+}
+
+.monaco-menu .monaco-action-bar.vertical .keybinding:hover {
+  color: #757575 !important;
+  background-color: #E3E3E3 !important;
+}
+
+.monaco-menu .monaco-action-bar.vertical .action-label:hover {
+  color: #212121 !important;
+}
+
+.monaco-menu .monaco-action-bar.vertical .submenu-indicator.codicon:before {
+  margin-right: -8px !important;
+  color: #212121 !important;
+}
+
+.monaco-menu .monaco-action-bar.vertical .action-menu-item:hover {
+  background-color: #E3E3E3 !important;
+  margin: -1px;
+}
+
+.monaco-tree-row .content.actions {
+  padding: 0 10px !important;
+}
+
+input[type="checkbox"] {
+  accent-color: #151233;
+}
+
+.theme--light.v-application {
+  background: #EEEEEE !important;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fafafa;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #BDBDBD;
+  border-radius: 8px;
+  border: 4px solid #FAFAFA;
+  background-clip: padding-box;
+}
+
+.frameDiv-preview {
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: calc(100vh - 80px);
+  top: 50px;
+  position: absolute;
+  padding: 0 20px;
+}
+
+.frameDiv-edit {
+  left: 220px;
+  display: flex;
+  justify-content: center;
+  width: calc(100% - 500px);
+  height: calc(100vh - 80px);
+  top: 50px;
+  position: absolute;
+  padding: 0 20px;
+  /* max-width: calc(100% - 500px); */
+}
+
+.frameDiv-edit.wider {
+  left: -20px;
+  max-width: calc(100% - 270px);
+  width: calc(100% - 240px);
+  padding-left: 0;
+}
+
+.frameDiv-edit.rightWider {
+  left: -20px;
+  max-width: 100%;
+  width: 100%;
+  padding-left: 0;
+}
+
+.iframe {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #BCBCBC;
+  min-width: 360px;
+  padding: 15px 4px 15px 12px;
+}
+
+.quickEditor .leftBlock .searchComponentArea {
+  width: 100%;
+}
+
+.quickEditor .leftBlock .paddle,
+.quickEditor .rightBlock .paddle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 3em;
+  background-color: #FAFAFA;
+  margin-bottom: 3px;
+}
+
+.quickEditor .leftBlock .left-paddle {
+  left: 0;
+}
+
+.quickEditor .rightBlock .right-paddle {
+  right: 0;
+}
+
+.quickEditor .leftBlock .header-section {
+  display: inline-flex;
+  width: inherit;
+}
+
+.quickEditor .rightBlock .rightarea {
+  border-top: 1px solid #E0E0E0;
+}
+
+.quickEditor .rightBlock .styles {
+  padding: 0 !important;
+}
+
+.quickEditor .style-value-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px 0;
+}
+
+.quickEditor .quick-style-prop-font {
+  font-size: 12px;
+  color: #A1A1A1;
+}
+
+.quickEditor .rightBlock .filters {
+  position: sticky;
+  z-index: 3;
+  top: 0;
+  background-color: #fafafa;
+}
+
+.quickEditor .rightBlock select,
+.quickEditor .rightBlock input {
+  margin-right: 10px;
+}
+
+@media only screen and (min-width: 35em) {}

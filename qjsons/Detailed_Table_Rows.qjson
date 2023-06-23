@@ -1,0 +1,227 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VDataTable",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_28",
+					"T": "prop"
+				},
+				"headers": {
+					"H": "[{ text = 'Dessert (100g serving)', align= 'start', sortable= false, value= 'name'},\n{ text = 'Calories', value= 'calories', sortable = true },\n{ text = 'Fat (g)', value= 'fat' },\n{ text = 'Carbs (g)', value= 'carbs' },\n{ text = 'Protein (g)', value= 'protein' }]",
+					"T": "prop"
+				},
+				"items": {
+					"H": "[{name= 'Frozen Yogurt',calories= 159,fat= '6.0',carbs= 24,protein= '4.0',iron= [{name= 'Ice cream sandwich',calories= 237,fat= '9.0',carbs= 37,protein= '4.3', iron= '1%'},{name= 'Eclair',calories= 262,fat= '16.0',carbs= 23,protein= '6.0', iron= '7%'}]},\n{name= 'Cupcake',calories= 305,fat= '6.7',carbs= 67,protein= '4.3', iron= [{name= 'Gingerbread',calories= '356',fat= '16.0',carbs= 49,protein= '3.9', iron='16%'},{name= 'Jelly bean',calories= 375,fat= '0.0',carbs= 94,protein= '0.0', iron= '0%'}]}]",
+					"T": "prop"
+				},
+				"itemsPerPage": {
+					"H": "5",
+					"T": "prop"
+				},
+				"singleExpand": {
+					"H": "false",
+					"T": "prop"
+				},
+				"showExpand": {
+					"H": "true",
+					"T": "prop"
+				},
+				"itemKey": {
+					"H": "'name'",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"expanded-item": {
+					"c": [
+						{
+							"T": "QTableCell",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_30",
+									"T": "prop"
+								},
+								"colspan": {
+									"H": "12",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VDataTable",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_29",
+													"T": "prop"
+												},
+												"headers": {
+													"H": "[{ text = 'Dessert (100g serving)', align= 'start', sortable= false, value= 'name'},\n{ text = 'Calories', value= 'calories', sortable = true },\n{ text = 'Fat (g)', value= 'fat' },\n{ text = 'Carbs (g)', value= 'carbs' },\n{ text = 'Protein (g)', value= 'protein' },\n{ text= 'Iron (%)', value= 'iron' }]",
+													"T": "prop"
+												},
+												"itemsPerPage": {
+													"H": "5",
+													"T": "prop"
+												},
+												"hideDefaultFooter": {
+													"H": "true",
+													"T": "prop"
+												},
+												"items": {
+													"H": "item.iron",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_29"
+											},
+											"O": {
+												"cType": "child"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_30"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "scopedSlot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_28"
+			},
+			"O": {
+				"cType": "child"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VDataTable",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_28",
+					"T": "prop"
+				},
+				"headers": {
+					"H": "╬[]╠{}╠=╣text╩╠'Dessert (100g serving)'╩╩╠=╣align╩╠'start'╩╩╠=╣sortable╩╠false╩╩╠=╣value╩╠'name'╩╩╩╠{}╠=╣text╩╠'Calories'╩╩╠=╣value╩╠'calories'╩╩╠=╣sortable╩╠true╩╩╩╠{}╠=╣text╩╠'Fat (g)'╩╩╠=╣value╩╠'fat'╩╩╩╠{}╠=╣text╩╠'Carbs (g)'╩╩╠=╣value╩╠'carbs'╩╩╩╠{}╠=╣text╩╠'Protein (g)'╩╩╠=╣value╩╠'protein'╩╩╩╩╩",
+					"T": "prop"
+				},
+				"items": {
+					"H": "╬[]╠{}╠=╣name╩╠'Frozen Yogurt'╩╩╠=╣calories╩╠159╩╩╠=╣fat╩╠'6.0'╩╩╠=╣carbs╩╠24╩╩╠=╣protein╩╠'4.0'╩╩╠=╣iron╩╠[]╠{}╠=╣name╩╠'Ice cream sandwich'╩╩╠=╣calories╩╠237╩╩╠=╣fat╩╠'9.0'╩╩╠=╣carbs╩╠37╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Eclair'╩╩╠=╣calories╩╠262╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠23╩╩╠=╣protein╩╠'6.0'╩╩╠=╣iron╩╠'7%'╩╩╩╩╩╩╠{}╠=╣name╩╠'Cupcake'╩╩╠=╣calories╩╠305╩╩╠=╣fat╩╠'6.7'╩╩╠=╣carbs╩╠67╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠[]╠{}╠=╣name╩╠'Gingerbread'╩╩╠=╣calories╩╠'356'╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠49╩╩╠=╣protein╩╠'3.9'╩╩╠=╣iron╩╠'16%'╩╩╩╠{}╠=╣name╩╠'Jelly bean'╩╩╠=╣calories╩╠375╩╩╠=╣fat╩╠'0.0'╩╩╠=╣carbs╩╠94╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'0%'╩╩╩╩╩╩╩╩",
+					"T": "prop"
+				},
+				"itemsPerPage": {
+					"H": "╬5╩╩",
+					"T": "prop"
+				},
+				"singleExpand": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				},
+				"showExpand": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"itemKey": {
+					"H": "╬'name'╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"expanded-item": {
+					"c": [
+						{
+							"T": "QTableCell",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_30",
+									"T": "prop"
+								},
+								"colspan": {
+									"H": "╬12╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VDataTable",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_29",
+													"T": "prop"
+												},
+												"headers": {
+													"H": "╬[]╠{}╠=╣text╩╠'Dessert (100g serving)'╩╩╠=╣align╩╠'start'╩╩╠=╣sortable╩╠false╩╩╠=╣value╩╠'name'╩╩╩╠{}╠=╣text╩╠'Calories'╩╩╠=╣value╩╠'calories'╩╩╠=╣sortable╩╠true╩╩╩╠{}╠=╣text╩╠'Fat (g)'╩╩╠=╣value╩╠'fat'╩╩╩╠{}╠=╣text╩╠'Carbs (g)'╩╩╠=╣value╩╠'carbs'╩╩╩╠{}╠=╣text╩╠'Protein (g)'╩╩╠=╣value╩╠'protein'╩╩╩╠{}╠=╣text╩╠'Iron (%)'╩╩╠=╣value╩╠'iron'╩╩╩╩╩",
+													"T": "prop"
+												},
+												"itemsPerPage": {
+													"H": "╬5╩╩",
+													"T": "prop"
+												},
+												"hideDefaultFooter": {
+													"H": "╬true╩╩",
+													"T": "prop"
+												},
+												"items": {
+													"H": "╬.╣item╩╠iron╩╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_29"
+											},
+											"O": {
+												"cType": "child",
+												"compDomClasses": ""
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_30"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": ""
+							}
+						}
+					],
+					"cType": "scopedSlot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_28"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "v-data-table v-data-table--has-bottom theme--light newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {}
+};
+export default pjson

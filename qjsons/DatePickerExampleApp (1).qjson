@@ -1,0 +1,1536 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VRow",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_4",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'d-flex flex-row amber darken-4'",
+					"T": "class"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VCol",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_8",
+									"T": "prop"
+								},
+								"class": {
+									"H": "'d-flex flex-column '",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VForm",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_13",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'d-flex flex-column justify-center'",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_19",
+																	"T": "prop"
+																},
+																"class": {
+																	"H": "'d-flex flex-row'",
+																	"T": "class"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VImg",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_17",
+																					"T": "prop"
+																				},
+																				"src": {
+																					"H": "'https://softtech.com.tr/wp-content/uploads/2017/12/standart-logo.png'",
+																					"T": "prop"
+																				},
+																				"height": {
+																					"H": "'150px'",
+																					"T": "prop"
+																				},
+																				"width": {
+																					"H": "'150px'",
+																					"T": "prop"
+																				},
+																				"maxWidth": {
+																					"H": "'500px'",
+																					"T": "prop"
+																				},
+																				"maxHeight": {
+																					"H": "'600px'",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "Ghost",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_18",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_18"
+																							},
+																							"O": {
+																								"cType": "child"
+																							}
+																						}
+																					],
+																					"cType": "scopedSlot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_17"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-image v-responsive theme--light"
+																			}
+																		},
+																		{
+																			"T": "VInlineDatepicker",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_23",
+																					"T": "prop"
+																				},
+																				"textLabel": {
+																					"H": "'Departure'",
+																					"T": "prop"
+																				},
+																				"min": {
+																					"H": "'2020-10-17'",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"change": {
+																					"H": "EdtrComp_38.dateFormatted = EdtrComp_23.dateFormatted\r\n"
+																				}
+																			},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_23"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "container"
+																			}
+																		},
+																		{
+																			"T": "VInlineDatepicker",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_24",
+																					"T": "prop"
+																				},
+																				"textLabel": {
+																					"H": "'Return'",
+																					"T": "prop"
+																				},
+																				"max": {
+																					"H": "'2020-10-29'",
+																					"T": "prop"
+																				},
+																				"min": {
+																					"H": "'2020-10-17'",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"change": {
+																					"H": "EdtrComp_37.dateFormatted = EdtrComp_24.dateFormatted"
+																				}
+																			},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_24"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "container"
+																			}
+																		},
+																		{
+																			"T": "VRow",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_1",
+																					"T": "prop"
+																				},
+																				"class": {
+																					"H": "'d-flex flex-row justify-center'",
+																					"T": "class"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_31",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "'warning'",
+																									"T": "prop"
+																								},
+																								"regular": {
+																									"H": "true",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"click": {
+																									"H": "EdtrComp_29.value=true"
+																								}
+																							},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"C": {},
+																											"E": {},
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_32",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "'OK'",
+																													"T": "prop"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_32"
+																											},
+																											"O": {
+																												"cType": "child",
+																												"compDomClasses": "q-label "
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_31"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "v-btn v-btn--contained theme--light v-size--default warning"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_1"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "row d-flex flex-row justify-center"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_19"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "row d-flex flex-row"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_13"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-form d-flex flex-column justify-center"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_8"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "col d-flex flex-column "
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_4"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "d-flex flex-row amber darken-4"
+			}
+		},
+		{
+			"T": "VDialog",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_29",
+					"T": "prop"
+				},
+				"width": {
+					"H": "900",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click:outside": {
+					"H": "EdtrComp_29.value=false"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VCard",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_6",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_12",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'v-card__title'",
+													"T": "class"
+												},
+												"text": {
+													"H": "'Check-in Information'",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_12"
+											},
+											"O": {
+												"cType": "child",
+												"compDomClasses": "q-label  v-card__title"
+											}
+										},
+										{
+											"T": "VInlineDatepicker",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_38",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_38"
+											},
+											"O": {
+												"compDomClasses": "container",
+												"cType": "child"
+											}
+										},
+										{
+											"T": "VInlineDatepicker",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_37",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_37"
+											},
+											"O": {
+												"compDomClasses": "container",
+												"cType": "child"
+											}
+										},
+										{
+											"T": "VRow",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_35",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'d-flex flex-row justify-center'",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_33",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "'success'",
+																	"T": "prop"
+																},
+																"regular": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "EdtrComp_10.value=EdtrComp_38.dateFormatted \r\nEdtrComp_11.value=EdtrComp_37.dateFormatted \r\nEdtrComp_29.value=false\r\nEdtrComp_3.value=true"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_34",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'Complete'",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_34"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "q-label "
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_33"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-btn v-btn--contained theme--light v-size--default success"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_35"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "row d-flex flex-row justify-center"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_6"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "v-card v-sheet theme--light"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_29"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-dialog__container"
+			}
+		},
+		{
+			"T": "VDialog",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_3",
+					"T": "prop"
+				},
+				"width": {
+					"H": "900",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click:outside": {
+					"H": "EdtrComp_3.value=false"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VCard",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_5",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_15",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'v-card__title'",
+													"T": "class"
+												},
+												"text": {
+													"H": "'Information Card'",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_15"
+											},
+											"O": {
+												"cType": "child",
+												"compDomClasses": "q-label  v-card__title"
+											}
+										},
+										{
+											"T": "VTextField",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_10",
+													"T": "prop"
+												},
+												"label": {
+													"H": "'Departure Date'",
+													"T": "prop"
+												},
+												"regular": {
+													"H": "'true'",
+													"T": "prop"
+												},
+												"disabled": {
+													"H": "true",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_10"
+											},
+											"O": {
+												"cType": "child",
+												"compDomClasses": "v-input v-input--is-label-active v-input--is-dirty v-input--is-disabled theme--light v-text-field v-text-field--is-booted"
+											}
+										},
+										{
+											"T": "VTextField",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_11",
+													"T": "prop"
+												},
+												"label": {
+													"H": "'Return Date'",
+													"T": "prop"
+												},
+												"regular": {
+													"H": "'true'",
+													"T": "prop"
+												},
+												"disabled": {
+													"H": "true",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_11"
+											},
+											"O": {
+												"cType": "child",
+												"compDomClasses": "v-input v-input--is-label-active v-input--is-dirty v-input--is-disabled theme--light v-text-field v-text-field--is-booted"
+											}
+										},
+										{
+											"T": "VRow",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_20",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'d-flex flex-row justify-center'",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_16",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "'success'",
+																	"T": "prop"
+																},
+																"regular": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "EdtrComp_3.value=false"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_22",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'Thank you for choosing us'",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_22"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "q-label "
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_16"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-btn v-btn--contained theme--light v-size--default success"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_20"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "row d-flex flex-row justify-center"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_5"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "v-card v-sheet theme--light"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_3"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-dialog__container"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VRow",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_4",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'d-flex flex-row amber darken-4'╩╩",
+					"T": "class"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VCol",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_8",
+									"T": "prop"
+								},
+								"class": {
+									"H": "╬'d-flex flex-column '╩╩",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VForm",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_13",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'d-flex flex-column justify-center'╩╩",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_19",
+																	"T": "prop"
+																},
+																"class": {
+																	"H": "╬'d-flex flex-row'╩╩",
+																	"T": "class"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VImg",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_17",
+																					"T": "prop"
+																				},
+																				"src": {
+																					"H": "╬'https://softtech.com.tr/wp-content/uploads/2017/12/standart-logo.png'╩╩",
+																					"T": "prop"
+																				},
+																				"height": {
+																					"H": "╬'150px'╩╩",
+																					"T": "prop"
+																				},
+																				"width": {
+																					"H": "╬'150px'╩╩",
+																					"T": "prop"
+																				},
+																				"maxWidth": {
+																					"H": "╬'500px'╩╩",
+																					"T": "prop"
+																				},
+																				"maxHeight": {
+																					"H": "╬'600px'╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "Ghost",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_18",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_18"
+																							},
+																							"O": {
+																								"cType": "child"
+																							}
+																						}
+																					],
+																					"cType": "scopedSlot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_17"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-image v-responsive theme--light"
+																			}
+																		},
+																		{
+																			"T": "VInlineDatepicker",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_23",
+																					"T": "prop"
+																				},
+																				"textLabel": {
+																					"H": "╬'Departure'╩╩",
+																					"T": "prop"
+																				},
+																				"min": {
+																					"H": "╬'2020-10-17'╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"change": {
+																					"H": "╬=╣.╣EdtrComp_38╩╠dateFormatted╩╩╠.╣EdtrComp_23╩╠dateFormatted╩╩╩╩"
+																				}
+																			},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_23"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "container"
+																			}
+																		},
+																		{
+																			"T": "VInlineDatepicker",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_24",
+																					"T": "prop"
+																				},
+																				"textLabel": {
+																					"H": "╬'Return'╩╩",
+																					"T": "prop"
+																				},
+																				"max": {
+																					"H": "╬'2020-10-29'╩╩",
+																					"T": "prop"
+																				},
+																				"min": {
+																					"H": "╬'2020-10-17'╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"change": {
+																					"H": "╬=╣.╣EdtrComp_37╩╠dateFormatted╩╩╠.╣EdtrComp_24╩╠dateFormatted╩╩╩╩"
+																				}
+																			},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_24"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "container"
+																			}
+																		},
+																		{
+																			"T": "VRow",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_1",
+																					"T": "prop"
+																				},
+																				"class": {
+																					"H": "╬'d-flex flex-row justify-center'╩╩",
+																					"T": "class"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_31",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "╬'warning'╩╩",
+																									"T": "prop"
+																								},
+																								"regular": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"click": {
+																									"H": "╬=╣.╣EdtrComp_29╩╠value╩╩╠true╩╩╩"
+																								}
+																							},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"C": {},
+																											"E": {},
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_32",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "╬'OK'╩╩",
+																													"T": "prop"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_32"
+																											},
+																											"O": {
+																												"cType": "child",
+																												"compDomClasses": "q-label "
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_31"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "v-btn v-btn--contained theme--light v-size--default warning"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_1"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "row d-flex flex-row justify-center"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_19"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "row d-flex flex-row"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_13"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-form d-flex flex-column justify-center"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_8"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "col d-flex flex-column "
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_4"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "d-flex flex-row amber darken-4"
+			}
+		},
+		{
+			"T": "VDialog",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_29",
+					"T": "prop"
+				},
+				"width": {
+					"H": "╬900╩╩",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click:outside": {
+					"H": "╬=╣.╣EdtrComp_29╩╠value╩╩╠false╩╩╩"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VCard",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_6",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_12",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'v-card__title'╩╩",
+													"T": "class"
+												},
+												"text": {
+													"H": "╬'Check-in Information'╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_12"
+											},
+											"O": {
+												"cType": "child",
+												"compDomClasses": "q-label  v-card__title"
+											}
+										},
+										{
+											"T": "VInlineDatepicker",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_38",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_38"
+											},
+											"O": {
+												"compDomClasses": "container",
+												"cType": "child"
+											}
+										},
+										{
+											"T": "VInlineDatepicker",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_37",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_37"
+											},
+											"O": {
+												"compDomClasses": "container",
+												"cType": "child"
+											}
+										},
+										{
+											"T": "VRow",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_35",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'d-flex flex-row justify-center'╩╩",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_33",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "╬'success'╩╩",
+																	"T": "prop"
+																},
+																"regular": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "╬=╣.╣EdtrComp_10╩╠value╩╩╠.╣EdtrComp_38╩╠dateFormatted╩╩╩╬=╣.╣EdtrComp_11╩╠value╩╩╠.╣EdtrComp_37╩╠dateFormatted╩╩╩╬=╣.╣EdtrComp_29╩╠value╩╩╠false╩╩╬=╣.╣EdtrComp_3╩╠value╩╩╠true╩╩╩"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_34",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'Complete'╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_34"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "q-label "
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_33"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-btn v-btn--contained theme--light v-size--default success"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_35"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "row d-flex flex-row justify-center"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_6"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "v-card v-sheet theme--light"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_29"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-dialog__container"
+			}
+		},
+		{
+			"T": "VDialog",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_3",
+					"T": "prop"
+				},
+				"width": {
+					"H": "╬900╩╩",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click:outside": {
+					"H": "╬=╣.╣EdtrComp_3╩╠value╩╩╠false╩╩╩"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VCard",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_5",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_15",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'v-card__title'╩╩",
+													"T": "class"
+												},
+												"text": {
+													"H": "╬'Information Card'╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_15"
+											},
+											"O": {
+												"cType": "child",
+												"compDomClasses": "q-label  v-card__title"
+											}
+										},
+										{
+											"T": "VTextField",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_10",
+													"T": "prop"
+												},
+												"label": {
+													"H": "╬'Departure Date'╩╩",
+													"T": "prop"
+												},
+												"regular": {
+													"H": "╬'true'╩╩",
+													"T": "prop"
+												},
+												"disabled": {
+													"H": "╬true╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_10"
+											},
+											"O": {
+												"cType": "child",
+												"compDomClasses": "v-input v-input--is-label-active v-input--is-dirty v-input--is-disabled theme--light v-text-field v-text-field--is-booted"
+											}
+										},
+										{
+											"T": "VTextField",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_11",
+													"T": "prop"
+												},
+												"label": {
+													"H": "╬'Return Date'╩╩",
+													"T": "prop"
+												},
+												"regular": {
+													"H": "╬'true'╩╩",
+													"T": "prop"
+												},
+												"disabled": {
+													"H": "╬true╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_11"
+											},
+											"O": {
+												"cType": "child",
+												"compDomClasses": "v-input v-input--is-label-active v-input--is-dirty v-input--is-disabled theme--light v-text-field v-text-field--is-booted"
+											}
+										},
+										{
+											"T": "VRow",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_20",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'d-flex flex-row justify-center'╩╩",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_16",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "╬'success'╩╩",
+																	"T": "prop"
+																},
+																"regular": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "╬=╣.╣EdtrComp_3╩╠value╩╩╠false╩╩╩"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_22",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'Thank you for choosing us'╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_22"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "q-label "
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_16"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-btn v-btn--contained theme--light v-size--default success"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_20"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "row d-flex flex-row justify-center"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_5"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "v-card v-sheet theme--light"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_3"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-dialog__container"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {}
+};
+export default pjson

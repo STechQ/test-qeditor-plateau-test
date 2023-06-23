@@ -1,0 +1,1748 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VRow",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_375",
+					"T": "prop"
+				},
+				"customCompClass": {
+					"H": "'blue-grey lighten-5'",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VContainer",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_377",
+									"T": "prop"
+								},
+								"class": {
+									"H": "'d-flex'",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VRow",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_379",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'col-md-3'",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_383",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VImg",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_38",
+																					"T": "prop"
+																				},
+																				"src": {
+																					"H": "'https://i.pinimg.com/originals/b8/6c/81/b86c81b55d7bb5210993f774cc383537.png'",
+																					"T": "prop"
+																				},
+																				"height": {
+																					"H": "'80'",
+																					"T": "prop"
+																				},
+																				"width": {
+																					"H": "'50'",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "Ghost",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_39",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_39"
+																							},
+																							"O": {
+																								"cType": "child"
+																							}
+																						}
+																					],
+																					"cType": "scopedSlot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_38"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-image v-responsive theme--light newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_383"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "row newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_379"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "row col-md-3 newDropBorder"
+											}
+										},
+										{
+											"T": "VRow",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_381",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'col-md-6 justify-start'",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Ghost",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_40",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_40"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "editor-ghost-comp newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_381"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "row col-md-6 justify-start newDropBorder"
+											}
+										},
+										{
+											"T": "VCombobox",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_98",
+													"T": "prop"
+												},
+												"label": {
+													"H": "'Set theme'",
+													"T": "prop"
+												},
+												"items": {
+													"H": "if (Quick.theme.getThemeList()){Quick.theme.getThemeList()}\r\nelse {[]}\r\n",
+													"T": "prop"
+												}
+											},
+											"E": {
+												"change": {
+													"H": "//EdtrComp_98.items = Quick.theme.getThemeList()\r\nquick.Quick.theme.setTheme(components.EdtrComp_98.qValue);",
+													"P": "value:any",
+													"HL": "TS"
+												}
+											},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Ghost",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_30",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_30"
+															},
+															"O": {
+																"cType": "child"
+															}
+														}
+													],
+													"cType": "scopedSlot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_98"
+											},
+											"O": {
+												"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted v-select v-autocomplete undefined newDropBorder",
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_377"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "container d-flex newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_375"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "blue-grey lighten-5 newDropBorder"
+			}
+		},
+		{
+			"T": "VRow",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_395",
+					"T": "prop"
+				},
+				"customCompClass": {
+					"H": "'blue-grey lighten-5'",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VContainer",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_397",
+									"T": "prop"
+								},
+								"class": {
+									"H": "'d-flex'",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VDatePicker",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_42",
+													"T": "prop"
+												},
+												"locale": {
+													"H": "'tr-tr'",
+													"T": "prop"
+												},
+												"value": {
+													"H": "Date.now().toFormattedString('YYYY-MM-DD')",
+													"T": "prop"
+												},
+												"firstDayOfWeek": {
+													"H": "1",
+													"T": "prop"
+												},
+												"eventColor": {
+													"H": "'primary'",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Ghost",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_43",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_43"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "editor-ghost-comp newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_42"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-picker v-card v-picker--date theme--light newDropBorder"
+											}
+										},
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_28",
+													"T": "prop"
+												},
+												"class": {
+													"H": "''",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VDataTable",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_31",
+																	"T": "prop"
+																},
+																"headers": {
+																	"H": "[{ text = 'Dessert (100g serving)', align= 'start', sortable= false, value= 'name'},\n{ text = 'Calories', value= 'calories', sortable = true },\n{ text = 'Fat (g)', value= 'fat' },\n{ text = 'Carbs (g)', value= 'carbs' },\n{ text = 'Protein (g)', value= 'protein' },\n{ text = 'Iron (%)', value= 'iron' }]",
+																	"T": "prop"
+																},
+																"items": {
+																	"H": "[{name = 'Frozens Yogurt', calories = 159, fat = '6.0', carbs = 24, protein = '4.0', iron = '1%'},\n{name = 'Ice cream sandwich', calories = 237, fat = '9.0', carbs = 37, protein = '4.3', iron = '1%'},\n{name = 'Eclair', calories = 262, fat = '16.0', carbs = 23, protein = '6.0', iron = '7%'},\n{name = 'Cupcake', calories = 305, fat = '3.7', carbs = 67, protein = '4.3', iron = '8%'},\n{name = 'Gingerbread',calories = 356, fat = '16.0', carbs = 49, protein = '3.9', iron = '16%'},\n{name = 'Jelly bean', calories = 375,  fat = '0.0', carbs = 94, protein = '0.0', iron = '0%'},\n{name = 'Lollipop', calories = 392, fat = '0.2', carbs = 98, protein = '0.0', iron = '2 %'},\n{name = 'Honeycomb', calories = 408, fat = '3.2', carbs = 87, protein = '6.5', iron = '45%'},\n{name = 'Donut', calories = 452, fat = '25.0', carbs = 51, protein = '4.9', iron = '22%'},\n{name = 'KitKat', calories = 518, fat = '26.0', carbs = 65, protein = '7', iron=  '6 %'}]",
+																	"T": "prop"
+																},
+																"footerProps": {
+																	"H": "{showFirstLastPage = true,\nfirstIcon = 'mdi-arrow-collapse-left',\nlastIcon = 'mdi-arrow-collapse-right',\nprevIcon = 'mdi-minus',\nnextIcon = 'mdi-plus'}",
+																	"T": "prop"
+																},
+																"itemsPerPage": {
+																	"H": "5",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "Ghost",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_32",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_32"
+																			},
+																			"O": {
+																				"cType": "child"
+																			}
+																		}
+																	],
+																	"cType": "scopedSlot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_31"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-data-table v-data-table--has-bottom theme--light newDropBorder"
+															}
+														},
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_49",
+																	"T": "prop"
+																},
+																"class": {
+																	"H": "'d-flex flex-row'",
+																	"T": "class"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VContainer",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_51",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_67",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "'THEMES'",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_67"
+																							},
+																							"O": {
+																								"compDomClasses": "q-label newDropBorder",
+																								"cType": "slot"
+																							}
+																						},
+																						{
+																							"T": "VRow",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_68",
+																									"T": "prop"
+																								},
+																								"class": {
+																									"H": "'d-flex flex-row'",
+																									"T": "class"
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "VTextField",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_55",
+																													"T": "prop"
+																												},
+																												"label": {
+																													"H": "'Text field label'",
+																													"T": "prop"
+																												},
+																												"regular": {
+																													"H": "'true'",
+																													"T": "prop"
+																												},
+																												"class": {
+																													"H": "''",
+																													"T": "class"
+																												}
+																											},
+																											"E": {},
+																											"C": {
+																												"default": {
+																													"c": [
+																														{
+																															"T": "Ghost",
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_56",
+																																	"T": "prop"
+																																}
+																															},
+																															"E": {},
+																															"C": {},
+																															"_Editor": {
+																																"eID": "EdtrComp_56"
+																															},
+																															"O": {
+																																"cType": "child"
+																															}
+																														}
+																													],
+																													"cType": "scopedSlot"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_55"
+																											},
+																											"O": {
+																												"cType": "slot",
+																												"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted mr-12 newDropBorder",
+																												"layout": {
+																													"dOpt": {
+																														"xs": [
+																															"sp:mr-12"
+																														]
+																													},
+																													"class": "mr-12"
+																												}
+																											}
+																										},
+																										{
+																											"T": "VBtn",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_70",
+																													"T": "prop"
+																												},
+																												"color": {
+																													"H": "'primary'",
+																													"T": "prop"
+																												},
+																												"regular": {
+																													"H": "true",
+																													"T": "prop"
+																												},
+																												"class": {
+																													"H": "''",
+																													"T": "class"
+																												}
+																											},
+																											"E": {
+																												"click": {
+																													"H": "\r\nlet myArr = quick.Quick.theme.getThemeList();\r\n\r\nlet val = '';\r\n\r\nmyArr.forEach(item => {\r\n    val = val + item + ', ';\r\n});\r\n\r\ncomponents.EdtrComp_55.qValue = val;\r\n\r\n",
+																													"P": "mouseEvent:unknown | undefined",
+																													"HL": "TS"
+																												}
+																											},
+																											"C": {
+																												"default": {
+																													"c": [
+																														{
+																															"T": "QLabel",
+																															"C": {},
+																															"E": {},
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_71",
+																																	"T": "prop"
+																																},
+																																"text": {
+																																	"H": "'Get theme list'",
+																																	"T": "prop"
+																																}
+																															},
+																															"_Editor": {
+																																"eID": "EdtrComp_71"
+																															},
+																															"O": {
+																																"cType": "child",
+																																"compDomClasses": "q-label newDropBorder"
+																															}
+																														}
+																													],
+																													"cType": "slot"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_70"
+																											},
+																											"O": {
+																												"cType": "slot",
+																												"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary ml-8 newDropBorder",
+																												"layout": {
+																													"dOpt": {
+																														"xs": [
+																															"sp:ml-8"
+																														]
+																													},
+																													"class": "ml-8"
+																												}
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_68"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "row d-flex flex-row newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_51"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "container newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_49"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "row d-flex flex-row newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_28"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col d-flex flex-column newDropBorder",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_397"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "container d-flex newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_65",
+									"T": "prop"
+								},
+								"class": {
+									"H": "'col-xl-4 col-md-4 flex-row'",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VBtn",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_61",
+													"T": "prop"
+												},
+												"color": {
+													"H": "'primary'",
+													"T": "prop"
+												},
+												"regular": {
+													"H": "true",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'sftt-btn-grd'",
+													"T": "class"
+												}
+											},
+											"E": {
+												"click": {
+													"H": "quick.EM.trace('Theme List');\r\nlet themeList =    quick.Quick.theme.getThemeList();\r\nquick.EM.trace(themeList);\r\nquick.EM.trace('Theme is changed to myTheme');\r\nquick.Quick.theme.setTheme('myTheme');",
+													"P": "mouseEvent:unknown | undefined",
+													"HL": "TS"
+												}
+											},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"C": {},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_62",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "'Set my Theme'",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_62"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "q-label newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_61"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary sftt-btn-grd newDropBorder"
+											}
+										},
+										{
+											"T": "VBtn",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_59",
+													"T": "prop"
+												},
+												"color": {
+													"H": "'primary'",
+													"T": "prop"
+												},
+												"regular": {
+													"H": "true",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'sftt-btn-grd'",
+													"T": "class"
+												}
+											},
+											"E": {
+												"click": {
+													"H": "quick.EM.trace('Theme List');\r\nlet themeList =    quick.Quick.theme.getThemeList();\r\nquick.EM.trace(themeList);\r\nquick.EM.trace('Theme is changed to darkTheme');\r\nquick.Quick.theme.setTheme('darkTheme');",
+													"P": "mouseEvent:unknown | undefined",
+													"HL": "TS"
+												}
+											},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"C": {},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_60",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "'Test DarkTheme'",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_60"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "q-label newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_59"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary sftt-btn-grd newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_65"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row col-xl-4 col-md-4 flex-row ml-2 newDropBorder",
+								"layout": {
+									"dOpt": {
+										"xs": [
+											"sp:ml-2"
+										]
+									},
+									"class": "ml-2"
+								}
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_395"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "blue-grey lighten-5 newDropBorder"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VRow",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_375",
+					"T": "prop"
+				},
+				"customCompClass": {
+					"H": "╬'blue-grey lighten-5'╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VContainer",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_377",
+									"T": "prop"
+								},
+								"class": {
+									"H": "╬'d-flex'╩╩",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VRow",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_379",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'col-md-3'╩╩",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_383",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VImg",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_38",
+																					"T": "prop"
+																				},
+																				"src": {
+																					"H": "╬'https://i.pinimg.com/originals/b8/6c/81/b86c81b55d7bb5210993f774cc383537.png'╩╩",
+																					"T": "prop"
+																				},
+																				"height": {
+																					"H": "╬'80'╩╩",
+																					"T": "prop"
+																				},
+																				"width": {
+																					"H": "╬'50'╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "Ghost",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_39",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_39"
+																							},
+																							"O": {
+																								"cType": "child"
+																							}
+																						}
+																					],
+																					"cType": "scopedSlot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_38"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-image v-responsive theme--light newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_383"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "row newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_379"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "row col-md-3 newDropBorder"
+											}
+										},
+										{
+											"T": "VRow",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_381",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'col-md-6 justify-start'╩╩",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Ghost",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_40",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_40"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "editor-ghost-comp newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_381"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "row col-md-6 justify-start newDropBorder"
+											}
+										},
+										{
+											"T": "VCombobox",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_98",
+													"T": "prop"
+												},
+												"label": {
+													"H": "╬'Set theme'╩╩",
+													"T": "prop"
+												},
+												"items": {
+													"H": "╬if╣()╣.╣.╣Quick╩╠theme╩╩╠getThemeList╩╩╩╠╬()╣.╣.╣Quick╩╠theme╩╩╠getThemeList╩╩╩╩╠╬[]╩╩╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {
+												"change": {
+													"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\n//EdtrComp_98.items = Quick.theme.getThemeList()\r\nquick.Quick.theme.setTheme(components.EdtrComp_98.qValue);\r\n",
+													"P": "value:any",
+													"HL": "JS"
+												}
+											},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Ghost",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_30",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_30"
+															},
+															"O": {
+																"cType": "child"
+															}
+														}
+													],
+													"cType": "scopedSlot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_98"
+											},
+											"O": {
+												"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted v-select v-autocomplete undefined newDropBorder",
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_377"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "container d-flex newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_375"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "blue-grey lighten-5 newDropBorder"
+			}
+		},
+		{
+			"T": "VRow",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_395",
+					"T": "prop"
+				},
+				"customCompClass": {
+					"H": "╬'blue-grey lighten-5'╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VContainer",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_397",
+									"T": "prop"
+								},
+								"class": {
+									"H": "╬'d-flex'╩╩",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VDatePicker",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_42",
+													"T": "prop"
+												},
+												"locale": {
+													"H": "╬'tr-tr'╩╩",
+													"T": "prop"
+												},
+												"value": {
+													"H": "╬()╣.╣()╣.╣Date╩╠now╩╩╩╠toFormattedString╩╩╠'YYYY-MM-DD'╩╩╩",
+													"T": "prop"
+												},
+												"firstDayOfWeek": {
+													"H": "╬1╩╩",
+													"T": "prop"
+												},
+												"eventColor": {
+													"H": "╬'primary'╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Ghost",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_43",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_43"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "editor-ghost-comp newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_42"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-picker v-card v-picker--date theme--light newDropBorder"
+											}
+										},
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_28",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬''╩╩",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VDataTable",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_31",
+																	"T": "prop"
+																},
+																"headers": {
+																	"H": "╬[]╠{}╠=╣text╩╠'Dessert (100g serving)'╩╩╠=╣align╩╠'start'╩╩╠=╣sortable╩╠false╩╩╠=╣value╩╠'name'╩╩╩╠{}╠=╣text╩╠'Calories'╩╩╠=╣value╩╠'calories'╩╩╠=╣sortable╩╠true╩╩╩╠{}╠=╣text╩╠'Fat (g)'╩╩╠=╣value╩╠'fat'╩╩╩╠{}╠=╣text╩╠'Carbs (g)'╩╩╠=╣value╩╠'carbs'╩╩╩╠{}╠=╣text╩╠'Protein (g)'╩╩╠=╣value╩╠'protein'╩╩╩╠{}╠=╣text╩╠'Iron (%)'╩╩╠=╣value╩╠'iron'╩╩╩╩╩",
+																	"T": "prop"
+																},
+																"items": {
+																	"H": "╬[]╠{}╠=╣name╩╠'Frozens Yogurt'╩╩╠=╣calories╩╠159╩╩╠=╣fat╩╠'6.0'╩╩╠=╣carbs╩╠24╩╩╠=╣protein╩╠'4.0'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Ice cream sandwich'╩╩╠=╣calories╩╠237╩╩╠=╣fat╩╠'9.0'╩╩╠=╣carbs╩╠37╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Eclair'╩╩╠=╣calories╩╠262╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠23╩╩╠=╣protein╩╠'6.0'╩╩╠=╣iron╩╠'7%'╩╩╩╠{}╠=╣name╩╠'Cupcake'╩╩╠=╣calories╩╠305╩╩╠=╣fat╩╠'3.7'╩╩╠=╣carbs╩╠67╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'8%'╩╩╩╠{}╠=╣name╩╠'Gingerbread'╩╩╠=╣calories╩╠356╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠49╩╩╠=╣protein╩╠'3.9'╩╩╠=╣iron╩╠'16%'╩╩╩╠{}╠=╣name╩╠'Jelly bean'╩╩╠=╣calories╩╠375╩╩╠=╣fat╩╠'0.0'╩╩╠=╣carbs╩╠94╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'0%'╩╩╩╠{}╠=╣name╩╠'Lollipop'╩╩╠=╣calories╩╠392╩╩╠=╣fat╩╠'0.2'╩╩╠=╣carbs╩╠98╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'2 %'╩╩╩╠{}╠=╣name╩╠'Honeycomb'╩╩╠=╣calories╩╠408╩╩╠=╣fat╩╠'3.2'╩╩╠=╣carbs╩╠87╩╩╠=╣protein╩╠'6.5'╩╩╠=╣iron╩╠'45%'╩╩╩╠{}╠=╣name╩╠'Donut'╩╩╠=╣calories╩╠452╩╩╠=╣fat╩╠'25.0'╩╩╠=╣carbs╩╠51╩╩╠=╣protein╩╠'4.9'╩╩╠=╣iron╩╠'22%'╩╩╩╠{}╠=╣name╩╠'KitKat'╩╩╠=╣calories╩╠518╩╩╠=╣fat╩╠'26.0'╩╩╠=╣carbs╩╠65╩╩╠=╣protein╩╠'7'╩╩╠=╣iron╩╠'6 %'╩╩╩╩╩",
+																	"T": "prop"
+																},
+																"footerProps": {
+																	"H": "╬{}╠=╣showFirstLastPage╩╠true╩╩╠=╣firstIcon╩╠'mdi-arrow-collapse-left'╩╩╠=╣lastIcon╩╠'mdi-arrow-collapse-right'╩╩╠=╣prevIcon╩╠'mdi-minus'╩╩╠=╣nextIcon╩╠'mdi-plus'╩╩╩╩",
+																	"T": "prop"
+																},
+																"itemsPerPage": {
+																	"H": "╬5╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "Ghost",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_32",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_32"
+																			},
+																			"O": {
+																				"cType": "child"
+																			}
+																		}
+																	],
+																	"cType": "scopedSlot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_31"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-data-table v-data-table--has-bottom theme--light newDropBorder"
+															}
+														},
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_49",
+																	"T": "prop"
+																},
+																"class": {
+																	"H": "╬'d-flex flex-row'╩╩",
+																	"T": "class"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VContainer",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_51",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_67",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "╬'THEMES'╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_67"
+																							},
+																							"O": {
+																								"compDomClasses": "q-label newDropBorder",
+																								"cType": "slot"
+																							}
+																						},
+																						{
+																							"T": "VRow",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_68",
+																									"T": "prop"
+																								},
+																								"class": {
+																									"H": "╬'d-flex flex-row'╩╩",
+																									"T": "class"
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "VTextField",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_55",
+																													"T": "prop"
+																												},
+																												"label": {
+																													"H": "╬'Text field label'╩╩",
+																													"T": "prop"
+																												},
+																												"regular": {
+																													"H": "╬'true'╩╩",
+																													"T": "prop"
+																												},
+																												"class": {
+																													"H": "╬''╩╩",
+																													"T": "class"
+																												}
+																											},
+																											"E": {},
+																											"C": {
+																												"default": {
+																													"c": [
+																														{
+																															"T": "Ghost",
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_56",
+																																	"T": "prop"
+																																}
+																															},
+																															"E": {},
+																															"C": {},
+																															"_Editor": {
+																																"eID": "EdtrComp_56"
+																															},
+																															"O": {
+																																"cType": "child"
+																															}
+																														}
+																													],
+																													"cType": "scopedSlot"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_55"
+																											},
+																											"O": {
+																												"cType": "slot",
+																												"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted mr-12 ╬''╩╩ newDropBorder",
+																												"layout": {
+																													"dOpt": {
+																														"xs": [
+																															"sp:mr-12"
+																														]
+																													},
+																													"class": "mr-12"
+																												}
+																											}
+																										},
+																										{
+																											"T": "VBtn",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_70",
+																													"T": "prop"
+																												},
+																												"color": {
+																													"H": "╬'primary'╩╩",
+																													"T": "prop"
+																												},
+																												"regular": {
+																													"H": "╬true╩╩",
+																													"T": "prop"
+																												},
+																												"class": {
+																													"H": "╬''╩╩",
+																													"T": "class"
+																												}
+																											},
+																											"E": {
+																												"click": {
+																													"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nvar myArr = quick.Quick.theme.getThemeList();\r\nvar val = '';\r\nmyArr.forEach(function (item) {\r\n    val = val + item + ', ';\r\n});\r\ncomponents.EdtrComp_55.qValue = val;\r\n",
+																													"P": "mouseEvent:unknown | undefined",
+																													"HL": "JS"
+																												}
+																											},
+																											"C": {
+																												"default": {
+																													"c": [
+																														{
+																															"T": "QLabel",
+																															"C": {},
+																															"E": {},
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_71",
+																																	"T": "prop"
+																																},
+																																"text": {
+																																	"H": "╬'Get theme list'╩╩",
+																																	"T": "prop"
+																																}
+																															},
+																															"_Editor": {
+																																"eID": "EdtrComp_71"
+																															},
+																															"O": {
+																																"cType": "child",
+																																"compDomClasses": "q-label newDropBorder"
+																															}
+																														}
+																													],
+																													"cType": "slot"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_70"
+																											},
+																											"O": {
+																												"cType": "slot",
+																												"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary ml-8 newDropBorder",
+																												"layout": {
+																													"dOpt": {
+																														"xs": [
+																															"sp:ml-8"
+																														]
+																													},
+																													"class": "ml-8"
+																												}
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_68"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "row d-flex flex-row newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_51"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "container newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_49"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "row d-flex flex-row newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_28"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col d-flex flex-column newDropBorder",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_397"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "container d-flex newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_65",
+									"T": "prop"
+								},
+								"class": {
+									"H": "╬'col-xl-4 col-md-4 flex-row'╩╩",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VBtn",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_61",
+													"T": "prop"
+												},
+												"color": {
+													"H": "╬'primary'╩╩",
+													"T": "prop"
+												},
+												"regular": {
+													"H": "╬true╩╩",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'sftt-btn-grd'╩╩",
+													"T": "class"
+												}
+											},
+											"E": {
+												"click": {
+													"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.EM.trace('Theme List');\r\nvar themeList = quick.Quick.theme.getThemeList();\r\nquick.EM.trace(themeList);\r\nquick.EM.trace('Theme is changed to myTheme');\r\nquick.Quick.theme.setTheme('myTheme');\r\n",
+													"P": "mouseEvent:unknown | undefined",
+													"HL": "JS"
+												}
+											},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"C": {},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_62",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬'Set my Theme'╩╩",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_62"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "q-label newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_61"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary sftt-btn-grd newDropBorder"
+											}
+										},
+										{
+											"T": "VBtn",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_59",
+													"T": "prop"
+												},
+												"color": {
+													"H": "╬'primary'╩╩",
+													"T": "prop"
+												},
+												"regular": {
+													"H": "╬true╩╩",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'sftt-btn-grd'╩╩",
+													"T": "class"
+												}
+											},
+											"E": {
+												"click": {
+													"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.EM.trace('Theme List');\r\nvar themeList = quick.Quick.theme.getThemeList();\r\nquick.EM.trace(themeList);\r\nquick.EM.trace('Theme is changed to darkTheme');\r\nquick.Quick.theme.setTheme('darkTheme');\r\n",
+													"P": "mouseEvent:unknown | undefined",
+													"HL": "JS"
+												}
+											},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"C": {},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_60",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬'Test DarkTheme'╩╩",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_60"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "q-label newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_59"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary sftt-btn-grd newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_65"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row col-xl-4 col-md-4 flex-row ml-2 newDropBorder",
+								"layout": {
+									"dOpt": {
+										"xs": [
+											"sp:ml-2"
+										]
+									},
+									"class": "ml-2"
+								}
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_395"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "blue-grey lighten-5 newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {}
+};
+export default pjson

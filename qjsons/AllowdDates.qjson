@@ -1,0 +1,244 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VInlineDatepicker",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				},
+				"label": {
+					"H": "'Pick a date'",
+					"T": "prop"
+				},
+				"locale": {
+					"H": "'tr'",
+					"T": "prop"
+				},
+				"willAttach": {
+					"H": "'true'",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		},
+		{
+			"T": "VDatePicker",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_2",
+					"T": "prop"
+				},
+				"qValue": {
+					"H": "Date.now().toFormattedString('YYYY-MM-DD')",
+					"T": "prop"
+				},
+				"eventColor": {
+					"H": "'primary'",
+					"T": "prop"
+				},
+				"firstDayOfWeek": {
+					"H": "1",
+					"T": "prop"
+				},
+				"locale": {
+					"H": "'tr-tr'",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				},
+				"type": {
+					"H": "'month'",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "Ghost",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_3",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_3"
+							},
+							"O": {
+								"cType": "child"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_2"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		},
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_4",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"EndRender": {
+					"H": "(<any>components.EdtrComp_2).allowedDates = val => parseInt(val.split('-')[1], 10) % 2 === 0;\r\n\r\n(<any>components.EdtrComp_1).allowedDates = val => parseInt(val.split('-')[2], 10) % 2 === 0",
+					"HL": "TS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_4"
+			},
+			"O": {
+				"cType": "child"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VInlineDatepicker",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				},
+				"label": {
+					"H": "╬'Pick a date'╩╩",
+					"T": "prop"
+				},
+				"locale": {
+					"H": "╬'tr'╩╩",
+					"T": "prop"
+				},
+				"willAttach": {
+					"H": "╬'true'╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-inline-date-picker-div-class newDropBorder"
+			}
+		},
+		{
+			"T": "VDatePicker",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_2",
+					"T": "prop"
+				},
+				"qValue": {
+					"H": "╬()╣.╣()╣.╣Date╩╠now╩╩╩╠toFormattedString╩╩╠'YYYY-MM-DD'╩╩╩",
+					"T": "prop"
+				},
+				"eventColor": {
+					"H": "╬'primary'╩╩",
+					"T": "prop"
+				},
+				"firstDayOfWeek": {
+					"H": "╬1╩╩",
+					"T": "prop"
+				},
+				"locale": {
+					"H": "╬'tr-tr'╩╩",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"type": {
+					"H": "╬'month'╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "Ghost",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_3",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_3"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "editor-ghost-comp newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_2"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-picker v-card v-picker--date theme--light newDropBorder"
+			}
+		},
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_4",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"EndRender": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ncomponents.EdtrComp_2.allowedDates = function (val) { return parseInt(val.split('-')[1], 10) % 2 === 0; };\r\ncomponents.EdtrComp_1.allowedDates = function (val) { return parseInt(val.split('-')[2], 10) % 2 === 0; };\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfNF9FbmRSZW5kZXJfRS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkVkdHJDb21wXzRfRW5kUmVuZGVyX0UudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUNNLFVBQVUsQ0FBQyxVQUFXLENBQUMsWUFBWSxHQUFHLFVBQUEsR0FBRyxJQUFJLE9BQUEsUUFBUSxDQUFDLEdBQUcsQ0FBQyxLQUFLLENBQUMsR0FBRyxDQUFDLENBQUMsQ0FBQyxDQUFDLEVBQUUsRUFBRSxDQUFDLEdBQUcsQ0FBQyxLQUFLLENBQUMsRUFBekMsQ0FBeUMsQ0FBQztBQUV2RixVQUFVLENBQUMsVUFBVyxDQUFDLFlBQVksR0FBRyxVQUFBLEdBQUcsSUFBSSxPQUFBLFFBQVEsQ0FBQyxHQUFHLENBQUMsS0FBSyxDQUFDLEdBQUcsQ0FBQyxDQUFDLENBQUMsQ0FBQyxFQUFFLEVBQUUsQ0FBQyxHQUFHLENBQUMsS0FBSyxDQUFDLEVBQXpDLENBQXlDLENBQUEiLCJzb3VyY2VzQ29udGVudCI6WyJcbig8YW55PmNvbXBvbmVudHMuRWR0ckNvbXBfMikuYWxsb3dlZERhdGVzID0gdmFsID0+IHBhcnNlSW50KHZhbC5zcGxpdCgnLScpWzFdLCAxMCkgJSAyID09PSAwO1xyXG5cclxuKDxhbnk+Y29tcG9uZW50cy5FZHRyQ29tcF8xKS5hbGxvd2VkRGF0ZXMgPSB2YWwgPT4gcGFyc2VJbnQodmFsLnNwbGl0KCctJylbMl0sIDEwKSAlIDIgPT09IDBcbiBleHBvcnR7fTtcbiJdfQ==",
+					"HL": "JS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_4"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {}
+};
+export default pjson

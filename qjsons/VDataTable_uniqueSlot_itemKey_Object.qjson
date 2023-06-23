@@ -1,0 +1,1101 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "MessagingComp",
+					"T": "prop"
+				},
+				"triggerOnRestored": {
+					"H": "false",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"PostRender": {
+					"H": "\r\nlet serviseResponse = [{\"questionGroup\":{\"id\":15,\"version\":0,\"code\":\"QuestionGroup\",\"name\":\"Koçluk Vermek / Personeli Geliştirme\",\"status\":\"ACTIVE\",\"questions\":[{\"id\":50,\"version\":0,\"code\":\"Question\",\"name\":\"Çalışanlarının gelişim fırsatlarını tanımlar, zorlayıcı ve gelişimini sağlayıcı projelerde onları destekler.\",\"status\":\"ACTIVE\"},{\"id\":51,\"version\":0,\"code\":\"Question\",\"name\":\"Ekibindekileri yetiştirmek için yeterli zamanı ayırır.\",\"status\":\"ACTIVE\"},{\"id\":52,\"version\":0,\"code\":\"Question\",\"name\":\"Çalışanlarının gelişimlerini sağlamak üzere performans görüşme dönemleri haricinde de geri bildirim görüşmeleri yapar, kendi gelişim planları doğrultusunda sorumluluk almalarını sağlar.\",\"status\":\"ACTIVE\"}],\"answerGroup\":{\"id\":1,\"version\":0,\"code\":\"RADIO_BUTTON\",\"name\":\"Answer With Five\",\"status\":\"ACTIVE\",\"answerType\":\"RADIO_BUTTON\",\"answer\":[{\"id\":1,\"version\":0,\"code\":\"FIKRIM_YOK\",\"name\":\"Fikrim Yok\",\"status\":\"ACTIVE\",\"point\":0,\"answerOrder\":1},{\"id\":2,\"version\":0,\"code\":\"HICBIR_ZAMAN\",\"name\":\"Hiçbir zaman\",\"status\":\"ACTIVE\",\"point\":1,\"answerOrder\":2},{\"id\":3,\"version\":0,\"code\":\"NADIREN\",\"name\":\"Nadiren\",\"status\":\"ACTIVE\",\"point\":2,\"answerOrder\":3},{\"id\":4,\"version\":0,\"code\":\"GENELLIKLE\",\"name\":\"Genellikle\",\"status\":\"ACTIVE\",\"point\":3,\"answerOrder\":4},{\"id\":5,\"version\":0,\"code\":\"COGU_ZAMAN\",\"name\":\"Çoğu Zaman\",\"status\":\"ACTIVE\",\"point\":4,\"answerOrder\":5},{\"id\":6,\"version\":0,\"code\":\"HER_ZAMAN\",\"name\":\"Her Zaman\",\"status\":\"ACTIVE\",\"point\":5,\"answerOrder\":6}]}},\"questions\":[{\"question\":{\"id\":50,\"version\":0,\"code\":\"Question\",\"name\":\"Çalışanlarının gelişim fırsatlarını tanımlar, zorlayıcı ve gelişimini sağlayıcı projelerde onları destekler.\",\"status\":\"ACTIVE\"}},{\"question\":{\"id\":51,\"version\":0,\"code\":\"Question\",\"name\":\"Ekibindekileri yetiştirmek için yeterli zamanı ayırır.\",\"status\":\"ACTIVE\"}},{\"question\":{\"id\":52,\"version\":0,\"code\":\"Question\",\"name\":\"Çalışanlarının gelişimlerini sağlamak üzere performans görüşme dönemleri haricinde de geri bildirim görüşmeleri yapar, kendi gelişim planları doğrultusunda sorumluluk almalarını sağlar.\",\"status\":\"ACTIVE\"}}]},{\"questionGroup\":{\"id\":16,\"version\":0,\"code\":\"QuestionGroup\",\"name\":\"Motive Etme\",\"status\":\"ACTIVE\",\"questions\":[{\"id\":53,\"version\":0,\"code\":\"Question\",\"name\":\"Kişilerin farklı motivasyonel ihtiyaçlarını belirler ve bunlara uygun yaklaşımlar sergiler.\",\"status\":\"ACTIVE\"},{\"id\":54,\"version\":0,\"code\":\"Question\",\"name\":\"Kişilerin yapabileceklerinin en iyisini yapmaları için gerekli ortamı hazırlar.\",\"status\":\"ACTIVE\"},{\"id\":55,\"version\":0,\"code\":\"Question\",\"name\":\"Kişilere yaptıkları işin önemini ve etkisini hissettirir, pozitif yaklaşım sergiler.\",\"status\":\"ACTIVE\"},{\"id\":56,\"version\":0,\"code\":\"Question\",\"name\":\"Kişilerin moral düzeyini etkileyecek olumsuzlukları filtreler.\",\"status\":\"ACTIVE\"}],\"answerGroup\":{\"id\":1,\"version\":0,\"code\":\"RADIO_BUTTON\",\"name\":\"Answer With Five\",\"status\":\"ACTIVE\",\"answerType\":\"RADIO_BUTTON\",\"answer\":[{\"id\":1,\"version\":0,\"code\":\"FIKRIM_YOK\",\"name\":\"Fikrim Yok\",\"status\":\"ACTIVE\",\"point\":0,\"answerOrder\":1},{\"id\":2,\"version\":0,\"code\":\"HICBIR_ZAMAN\",\"name\":\"Hiçbir zaman\",\"status\":\"ACTIVE\",\"point\":1,\"answerOrder\":2},{\"id\":3,\"version\":0,\"code\":\"NADIREN\",\"name\":\"Nadiren\",\"status\":\"ACTIVE\",\"point\":2,\"answerOrder\":3},{\"id\":4,\"version\":0,\"code\":\"GENELLIKLE\",\"name\":\"Genellikle\",\"status\":\"ACTIVE\",\"point\":3,\"answerOrder\":4},{\"id\":5,\"version\":0,\"code\":\"COGU_ZAMAN\",\"name\":\"Çoğu Zaman\",\"status\":\"ACTIVE\",\"point\":4,\"answerOrder\":5},{\"id\":6,\"version\":0,\"code\":\"HER_ZAMAN\",\"name\":\"Her Zaman\",\"status\":\"ACTIVE\",\"point\":5,\"answerOrder\":6}]}},\"questions\":[{\"question\":{\"id\":53,\"version\":0,\"code\":\"Question\",\"name\":\"Kişilerin farklı motivasyonel ihtiyaçlarını belirler ve bunlara uygun yaklaşımlar sergiler.\",\"status\":\"ACTIVE\"}},{\"question\":{\"id\":54,\"version\":0,\"code\":\"Question\",\"name\":\"Kişilerin yapabileceklerinin en iyisini yapmaları için gerekli ortamı hazırlar.\",\"status\":\"ACTIVE\"}},{\"question\":{\"id\":55,\"version\":0,\"code\":\"Question\",\"name\":\"Kişilere yaptıkları işin önemini ve etkisini hissettirir, pozitif yaklaşım sergiler.\",\"status\":\"ACTIVE\"}},{\"question\":{\"id\":56,\"version\":0,\"code\":\"Question\",\"name\":\"Kişilerin moral düzeyini etkileyecek olumsuzlukları filtreler.\",\"status\":\"ACTIVE\"}}]}]\r\nresponse ={execution:serviseResponse};\r\n\r\n//const execution = response.execution;\r\n//const size = execution.length;\r\ndebugger;\r\ncomponents.surveyTable.items = response.execution[0].questions;\r\n// quick.EM.trace(components.surveyTable.items);\r\n// components.parentQuestionGroup.text = execution[0].questionGroup.name;\r\n// // quick.store.set('#pageSize',1);\r\n// quick.store.set('#questions',execution);\r\n//components.pageLabel.text = '1/' + size\r\n// var questionSize = 0;\r\n// for(var i=0; i<execution.length;i++){\r\n//     questionSize += execution[i].questions.length;\r\n// }\r\n// quick.store.set('#questionSize',questionSize);\r\n// quick.EM.trace('*************evaluatedSurveyExecutionSuccess end******************')",
+					"TO": 1,
+					"HL": "TS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_21"
+			},
+			"O": {
+				"cType": "child"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container container--fluid'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_231",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VDataTable",
+															"P": {
+																"ID": {
+																	"H": "surveyTable",
+																	"T": "prop"
+																},
+																"footerProps": {
+																	"H": "{showFirstLastPage = true,\nfirstIcon = 'mdi-arrow-collapse-left',\nlastIcon = 'mdi-arrow-collapse-right',\nprevIcon = 'mdi-minus',\nnextIcon = 'mdi-plus'}",
+																	"T": "prop"
+																},
+																"headers": {
+																	"H": "[{text='Sorular', align= 'start', value= 'question.name'},\n{text='Cevaplar', value= 'answer',align='center'}]",
+																	"T": "prop"
+																},
+																"itemsPerPage": {
+																	"H": "5",
+																	"T": "prop"
+																},
+																"mobileBreakpoint": {
+																	"H": "600",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"calculateWidths": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"disablePagination": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"disableFiltering": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"fixedHeader": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"hideDefaultFooter": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"uniqueSlots": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"itemKey": {
+																	"H": "'question.id'",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"item.answer": {
+																	"c": [
+																		{
+																			"T": "VRadioGroup",
+																			"P": {
+																				"ID": {
+																					"H": "answerRadioGroup",
+																					"T": "prop"
+																				},
+																				"column": {
+																					"H": "false",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VRadio",
+																							"P": {
+																								"ID": {
+																									"H": "answerRadio1",
+																									"T": "prop"
+																								},
+																								"label": {
+																									"H": "'Fikrim Yok'",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"change": {
+																									"H": "EM.trace('harrybırak rb1')\r\nEM.trace(answerRadio1.qValue)\r\nitem.answer = answerRadio1.qValue\r\n",
+																									"P": "index",
+																									"HL": "QS"
+																								}
+																							},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_2955"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"layout": {
+																									"dOpt": {
+																										"xs": [
+																											"sp:pl-7"
+																										],
+																										"lg": []
+																									},
+																									"class": "pl-7"
+																								}
+																							}
+																						},
+																						{
+																							"T": "VRadio",
+																							"P": {
+																								"ID": {
+																									"H": "answerRadio2",
+																									"T": "prop"
+																								},
+																								"label": {
+																									"H": "'Hiçbir Zaman'",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"change": {
+																									"H": "EM.trace('harrybırak rb2') \r\nEM.trace(answerRadio2.qValue)\r\nitem.answer = answerRadio2.qValue",
+																									"P": "index",
+																									"HL": "QS"
+																								}
+																							},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_2975"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"layout": {
+																									"dOpt": {
+																										"xs": [
+																											"sp:pl-16"
+																										]
+																									},
+																									"class": "pl-16"
+																								}
+																							}
+																						},
+																						{
+																							"T": "VRadio",
+																							"P": {
+																								"ID": {
+																									"H": "answerRadio3",
+																									"T": "prop"
+																								},
+																								"label": {
+																									"H": "'Nadiren'",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"change": {
+																									"H": "EM.trace('harrybırak rb3') \r\nEM.trace(answerRadio3.qValue)\r\nitem.answer = answerRadio3.qValue",
+																									"P": "index",
+																									"HL": "QS"
+																								}
+																							},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_2968"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"layout": {
+																									"dOpt": {
+																										"xs": [
+																											"sp:pl-16"
+																										]
+																									},
+																									"class": "pl-16"
+																								}
+																							}
+																						},
+																						{
+																							"T": "VRadio",
+																							"P": {
+																								"ID": {
+																									"H": "answerRadio4",
+																									"T": "prop"
+																								},
+																								"label": {
+																									"H": "'Genellikle'",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"change": {
+																									"H": "EM.trace('harrybırak rb4') \r\nEM.trace(answerRadio4.qValue)\r\nitem.answer = answerRadio4.qValue",
+																									"P": "index",
+																									"HL": "QS"
+																								}
+																							},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_3494"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"layout": {
+																									"dOpt": {
+																										"xs": [
+																											"sp:pl-16"
+																										]
+																									},
+																									"class": "pl-16"
+																								}
+																							}
+																						},
+																						{
+																							"T": "VRadio",
+																							"P": {
+																								"ID": {
+																									"H": "answerRadio5",
+																									"T": "prop"
+																								},
+																								"label": {
+																									"H": "'Çoğu Zaman'",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"change": {
+																									"H": "EM.trace('harrybırak rb5') \r\nEM.trace(answerRadio5.qValue)\r\nitem.answer = answerRadio5.qValue",
+																									"P": "index",
+																									"HL": "QS"
+																								}
+																							},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_3485"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"layout": {
+																									"dOpt": {
+																										"xs": [
+																											"sp:pl-16"
+																										]
+																									},
+																									"class": "pl-16"
+																								}
+																							}
+																						},
+																						{
+																							"T": "VRadio",
+																							"P": {
+																								"ID": {
+																									"H": "answerRadio6",
+																									"T": "prop"
+																								},
+																								"label": {
+																									"H": "'Her Zaman'",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"change": {
+																									"H": "EM.trace('harrybırak rb6') \r\nEM.trace(answerRadio6.qValue)\r\nitem.answer = answerRadio6.qValue",
+																									"P": "index",
+																									"HL": "QS"
+																								}
+																							},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_3476"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"layout": {
+																									"dOpt": {
+																										"xs": [
+																											"sp:pl-16"
+																										]
+																									},
+																									"class": "pl-16"
+																								}
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_2948"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"sp:ml-16",
+																							"sp:pl-16"
+																						]
+																					},
+																					"class": "ml-16 pl-16"
+																				}
+																			}
+																		}
+																	],
+																	"cType": "scopedSlot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_1293"
+															},
+															"O": {
+																"cType": "scopedSlot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_232",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_232"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_231"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_313",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VDivider",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_346",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_346"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_324",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_324"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_313"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_22"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "MessagingComp",
+					"T": "prop"
+				},
+				"triggerOnRestored": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"PostRender": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nvar serviseResponse = [{ \"questionGroup\": { \"id\": 15, \"version\": 0, \"code\": \"QuestionGroup\", \"name\": \"Koçluk Vermek / Personeli Geliştirme\", \"status\": \"ACTIVE\", \"questions\": [{ \"id\": 50, \"version\": 0, \"code\": \"Question\", \"name\": \"Çalışanlarının gelişim fırsatlarını tanımlar, zorlayıcı ve gelişimini sağlayıcı projelerde onları destekler.\", \"status\": \"ACTIVE\" }, { \"id\": 51, \"version\": 0, \"code\": \"Question\", \"name\": \"Ekibindekileri yetiştirmek için yeterli zamanı ayırır.\", \"status\": \"ACTIVE\" }, { \"id\": 52, \"version\": 0, \"code\": \"Question\", \"name\": \"Çalışanlarının gelişimlerini sağlamak üzere performans görüşme dönemleri haricinde de geri bildirim görüşmeleri yapar, kendi gelişim planları doğrultusunda sorumluluk almalarını sağlar.\", \"status\": \"ACTIVE\" }], \"answerGroup\": { \"id\": 1, \"version\": 0, \"code\": \"RADIO_BUTTON\", \"name\": \"Answer With Five\", \"status\": \"ACTIVE\", \"answerType\": \"RADIO_BUTTON\", \"answer\": [{ \"id\": 1, \"version\": 0, \"code\": \"FIKRIM_YOK\", \"name\": \"Fikrim Yok\", \"status\": \"ACTIVE\", \"point\": 0, \"answerOrder\": 1 }, { \"id\": 2, \"version\": 0, \"code\": \"HICBIR_ZAMAN\", \"name\": \"Hiçbir zaman\", \"status\": \"ACTIVE\", \"point\": 1, \"answerOrder\": 2 }, { \"id\": 3, \"version\": 0, \"code\": \"NADIREN\", \"name\": \"Nadiren\", \"status\": \"ACTIVE\", \"point\": 2, \"answerOrder\": 3 }, { \"id\": 4, \"version\": 0, \"code\": \"GENELLIKLE\", \"name\": \"Genellikle\", \"status\": \"ACTIVE\", \"point\": 3, \"answerOrder\": 4 }, { \"id\": 5, \"version\": 0, \"code\": \"COGU_ZAMAN\", \"name\": \"Çoğu Zaman\", \"status\": \"ACTIVE\", \"point\": 4, \"answerOrder\": 5 }, { \"id\": 6, \"version\": 0, \"code\": \"HER_ZAMAN\", \"name\": \"Her Zaman\", \"status\": \"ACTIVE\", \"point\": 5, \"answerOrder\": 6 }] } }, \"questions\": [{ \"question\": { \"id\": 50, \"version\": 0, \"code\": \"Question\", \"name\": \"Çalışanlarının gelişim fırsatlarını tanımlar, zorlayıcı ve gelişimini sağlayıcı projelerde onları destekler.\", \"status\": \"ACTIVE\" } }, { \"question\": { \"id\": 51, \"version\": 0, \"code\": \"Question\", \"name\": \"Ekibindekileri yetiştirmek için yeterli zamanı ayırır.\", \"status\": \"ACTIVE\" } }, { \"question\": { \"id\": 52, \"version\": 0, \"code\": \"Question\", \"name\": \"Çalışanlarının gelişimlerini sağlamak üzere performans görüşme dönemleri haricinde de geri bildirim görüşmeleri yapar, kendi gelişim planları doğrultusunda sorumluluk almalarını sağlar.\", \"status\": \"ACTIVE\" } }] }, { \"questionGroup\": { \"id\": 16, \"version\": 0, \"code\": \"QuestionGroup\", \"name\": \"Motive Etme\", \"status\": \"ACTIVE\", \"questions\": [{ \"id\": 53, \"version\": 0, \"code\": \"Question\", \"name\": \"Kişilerin farklı motivasyonel ihtiyaçlarını belirler ve bunlara uygun yaklaşımlar sergiler.\", \"status\": \"ACTIVE\" }, { \"id\": 54, \"version\": 0, \"code\": \"Question\", \"name\": \"Kişilerin yapabileceklerinin en iyisini yapmaları için gerekli ortamı hazırlar.\", \"status\": \"ACTIVE\" }, { \"id\": 55, \"version\": 0, \"code\": \"Question\", \"name\": \"Kişilere yaptıkları işin önemini ve etkisini hissettirir, pozitif yaklaşım sergiler.\", \"status\": \"ACTIVE\" }, { \"id\": 56, \"version\": 0, \"code\": \"Question\", \"name\": \"Kişilerin moral düzeyini etkileyecek olumsuzlukları filtreler.\", \"status\": \"ACTIVE\" }], \"answerGroup\": { \"id\": 1, \"version\": 0, \"code\": \"RADIO_BUTTON\", \"name\": \"Answer With Five\", \"status\": \"ACTIVE\", \"answerType\": \"RADIO_BUTTON\", \"answer\": [{ \"id\": 1, \"version\": 0, \"code\": \"FIKRIM_YOK\", \"name\": \"Fikrim Yok\", \"status\": \"ACTIVE\", \"point\": 0, \"answerOrder\": 1 }, { \"id\": 2, \"version\": 0, \"code\": \"HICBIR_ZAMAN\", \"name\": \"Hiçbir zaman\", \"status\": \"ACTIVE\", \"point\": 1, \"answerOrder\": 2 }, { \"id\": 3, \"version\": 0, \"code\": \"NADIREN\", \"name\": \"Nadiren\", \"status\": \"ACTIVE\", \"point\": 2, \"answerOrder\": 3 }, { \"id\": 4, \"version\": 0, \"code\": \"GENELLIKLE\", \"name\": \"Genellikle\", \"status\": \"ACTIVE\", \"point\": 3, \"answerOrder\": 4 }, { \"id\": 5, \"version\": 0, \"code\": \"COGU_ZAMAN\", \"name\": \"Çoğu Zaman\", \"status\": \"ACTIVE\", \"point\": 4, \"answerOrder\": 5 }, { \"id\": 6, \"version\": 0, \"code\": \"HER_ZAMAN\", \"name\": \"Her Zaman\", \"status\": \"ACTIVE\", \"point\": 5, \"answerOrder\": 6 }] } }, \"questions\": [{ \"question\": { \"id\": 53, \"version\": 0, \"code\": \"Question\", \"name\": \"Kişilerin farklı motivasyonel ihtiyaçlarını belirler ve bunlara uygun yaklaşımlar sergiler.\", \"status\": \"ACTIVE\" } }, { \"question\": { \"id\": 54, \"version\": 0, \"code\": \"Question\", \"name\": \"Kişilerin yapabileceklerinin en iyisini yapmaları için gerekli ortamı hazırlar.\", \"status\": \"ACTIVE\" } }, { \"question\": { \"id\": 55, \"version\": 0, \"code\": \"Question\", \"name\": \"Kişilere yaptıkları işin önemini ve etkisini hissettirir, pozitif yaklaşım sergiler.\", \"status\": \"ACTIVE\" } }, { \"question\": { \"id\": 56, \"version\": 0, \"code\": \"Question\", \"name\": \"Kişilerin moral düzeyini etkileyecek olumsuzlukları filtreler.\", \"status\": \"ACTIVE\" } }] }];\r\nresponse = { execution: serviseResponse };\r\n//const execution = response.execution;\r\n//const size = execution.length;\r\ndebugger;\r\ncomponents.surveyTable.items = response.execution[0].questions;\r\n",
+					"TO": 1,
+					"HL": "JS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_21"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": ""
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container container--fluid'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_231",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VDataTable",
+															"P": {
+																"ID": {
+																	"H": "surveyTable",
+																	"T": "prop"
+																},
+																"footerProps": {
+																	"H": "╬{}╠=╣showFirstLastPage╩╠true╩╩╠=╣firstIcon╩╠'mdi-arrow-collapse-left'╩╩╠=╣lastIcon╩╠'mdi-arrow-collapse-right'╩╩╠=╣prevIcon╩╠'mdi-minus'╩╩╠=╣nextIcon╩╠'mdi-plus'╩╩╩╩",
+																	"T": "prop"
+																},
+																"headers": {
+																	"H": "╬[]╠{}╠=╣text╩╠'Sorular'╩╩╠=╣align╩╠'start'╩╩╠=╣value╩╠'question.name'╩╩╩╠{}╠=╣text╩╠'Cevaplar'╩╩╠=╣value╩╠'answer'╩╩╠=╣align╩╠'center'╩╩╩╩╩",
+																	"T": "prop"
+																},
+																"itemsPerPage": {
+																	"H": "╬5╩╩",
+																	"T": "prop"
+																},
+																"mobileBreakpoint": {
+																	"H": "╬600╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"calculateWidths": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"disablePagination": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"disableFiltering": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"fixedHeader": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"hideDefaultFooter": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"uniqueSlots": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"itemKey": {
+																	"H": "╬'question.id'╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"item.answer": {
+																	"c": [
+																		{
+																			"T": "VRadioGroup",
+																			"P": {
+																				"ID": {
+																					"H": "answerRadioGroup_q_52",
+																					"T": "prop"
+																				},
+																				"column": {
+																					"H": "╬false╩╩",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VRadio",
+																							"P": {
+																								"ID": {
+																									"H": "answerRadio1",
+																									"T": "prop"
+																								},
+																								"label": {
+																									"H": "╬'Fikrim Yok'╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"change": {
+																									"H": "╬()╣.╣EM╩╠trace╩╩╠'harrybırak rb1'╩╩╬()╣.╣EM╩╠trace╩╩╠.╣answerRadio1╩╠qValue╩╩╩╬=╣.╣item╩╠answer╩╩╠.╣answerRadio1╩╠qValue╩╩╩╩",
+																									"P": "index",
+																									"HL": "QS"
+																								}
+																							},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_2955"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"layout": {
+																									"dOpt": {
+																										"xs": [
+																											"sp:pl-7"
+																										],
+																										"lg": []
+																									},
+																									"class": "pl-7"
+																								},
+																								"compDomClasses": "v-radio theme--light pl-7 newDropBorder"
+																							}
+																						},
+																						{
+																							"T": "VRadio",
+																							"P": {
+																								"ID": {
+																									"H": "answerRadio2",
+																									"T": "prop"
+																								},
+																								"label": {
+																									"H": "╬'Hiçbir Zaman'╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"change": {
+																									"H": "╬()╣.╣EM╩╠trace╩╩╠'harrybırak rb2'╩╩╬()╣.╣EM╩╠trace╩╩╠.╣answerRadio2╩╠qValue╩╩╩╬=╣.╣item╩╠answer╩╩╠.╣answerRadio2╩╠qValue╩╩╩╩",
+																									"P": "index",
+																									"HL": "QS"
+																								}
+																							},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_2975"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"layout": {
+																									"dOpt": {
+																										"xs": [
+																											"sp:pl-16"
+																										]
+																									},
+																									"class": "pl-16"
+																								},
+																								"compDomClasses": "v-radio theme--light pl-16 newDropBorder"
+																							}
+																						},
+																						{
+																							"T": "VRadio",
+																							"P": {
+																								"ID": {
+																									"H": "answerRadio3",
+																									"T": "prop"
+																								},
+																								"label": {
+																									"H": "╬'Nadiren'╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"change": {
+																									"H": "╬()╣.╣EM╩╠trace╩╩╠'harrybırak rb3'╩╩╬()╣.╣EM╩╠trace╩╩╠.╣answerRadio3╩╠qValue╩╩╩╬=╣.╣item╩╠answer╩╩╠.╣answerRadio3╩╠qValue╩╩╩╩",
+																									"P": "index",
+																									"HL": "QS"
+																								}
+																							},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_2968"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"layout": {
+																									"dOpt": {
+																										"xs": [
+																											"sp:pl-16"
+																										]
+																									},
+																									"class": "pl-16"
+																								},
+																								"compDomClasses": "v-radio theme--light pl-16 newDropBorder"
+																							}
+																						},
+																						{
+																							"T": "VRadio",
+																							"P": {
+																								"ID": {
+																									"H": "answerRadio4",
+																									"T": "prop"
+																								},
+																								"label": {
+																									"H": "╬'Genellikle'╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"change": {
+																									"H": "╬()╣.╣EM╩╠trace╩╩╠'harrybırak rb4'╩╩╬()╣.╣EM╩╠trace╩╩╠.╣answerRadio4╩╠qValue╩╩╩╬=╣.╣item╩╠answer╩╩╠.╣answerRadio4╩╠qValue╩╩╩╩",
+																									"P": "index",
+																									"HL": "QS"
+																								}
+																							},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_3494"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"layout": {
+																									"dOpt": {
+																										"xs": [
+																											"sp:pl-16"
+																										]
+																									},
+																									"class": "pl-16"
+																								},
+																								"compDomClasses": "v-radio theme--light pl-16 newDropBorder"
+																							}
+																						},
+																						{
+																							"T": "VRadio",
+																							"P": {
+																								"ID": {
+																									"H": "answerRadio5",
+																									"T": "prop"
+																								},
+																								"label": {
+																									"H": "╬'Çoğu Zaman'╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"change": {
+																									"H": "╬()╣.╣EM╩╠trace╩╩╠'harrybırak rb5'╩╩╬()╣.╣EM╩╠trace╩╩╠.╣answerRadio5╩╠qValue╩╩╩╬=╣.╣item╩╠answer╩╩╠.╣answerRadio5╩╠qValue╩╩╩╩",
+																									"P": "index",
+																									"HL": "QS"
+																								}
+																							},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_3485"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"layout": {
+																									"dOpt": {
+																										"xs": [
+																											"sp:pl-16"
+																										]
+																									},
+																									"class": "pl-16"
+																								},
+																								"compDomClasses": "v-radio theme--light pl-16 newDropBorder"
+																							}
+																						},
+																						{
+																							"T": "VRadio",
+																							"P": {
+																								"ID": {
+																									"H": "answerRadio6",
+																									"T": "prop"
+																								},
+																								"label": {
+																									"H": "╬'Her Zaman'╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"change": {
+																									"H": "╬()╣.╣EM╩╠trace╩╩╠'harrybırak rb6'╩╩╬()╣.╣EM╩╠trace╩╩╠.╣answerRadio6╩╠qValue╩╩╩╬=╣.╣item╩╠answer╩╩╠.╣answerRadio6╩╠qValue╩╩╩╩",
+																									"P": "index",
+																									"HL": "QS"
+																								}
+																							},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_3476"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"layout": {
+																									"dOpt": {
+																										"xs": [
+																											"sp:pl-16"
+																										]
+																									},
+																									"class": "pl-16"
+																								},
+																								"compDomClasses": "v-radio theme--light pl-16 newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_2948"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"sp:ml-16",
+																							"sp:pl-16"
+																						]
+																					},
+																					"class": "ml-16 pl-16"
+																				},
+																				"compDomClasses": "v-input theme--light v-input--selection-controls v-input--radio-group ml-16 pl-16 newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "scopedSlot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_1293"
+															},
+															"O": {
+																"cType": "scopedSlot",
+																"compDomClasses": "v-data-table theme--light newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_232",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_232"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												},
+												"compDomClasses": "col d-flex flex-column newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_231"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_313",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VDivider",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_346",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_346"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-divider theme--light newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_324",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_324"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												},
+												"compDomClasses": "col d-flex flex-column newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_313"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_22"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container container--fluid newDropBorder"
+			}
+		}
+	],
+	"lrids": {
+		"tr-TR": {
+			"FIKRIM_YOK": "'Fikrim Yok'",
+			"HICBIR_ZAMAN": "'Hiçbir Zaman'",
+			"NADIREN": "'Nadiren'",
+			"GENELLIKLE": "'Genellikle'",
+			"COGU_ZAMAN": "'Çoğu Zaman'",
+			"HER_ZAMAN": "'Her Zaman'",
+			"label_previous": "'Önceki'",
+			"label_next": "'Sonraki'",
+			"label_alert_missing_answer": "'Lütfen soruları cevaplayınız.'"
+		},
+		"en-US": {
+			"FIKRIM_YOK": "'No Idea'",
+			"HICBIR_ZAMAN": "'Anytime'",
+			"NADIREN": "'Rarely'",
+			"GENELLIKLE": "'Usually'",
+			"COGU_ZAMAN": "'Usually+'",
+			"HER_ZAMAN": "'Always'",
+			"label_previous": "'Previous'",
+			"label_next": "'Next'",
+			"label_alert_missing_answer": "'Please answer the questions.'"
+		}
+	},
+	"clrids": {
+		"tr-TR": {
+			"FIKRIM_YOK": "╬'Fikrim Yok'╩╩",
+			"HICBIR_ZAMAN": "╬'Hiçbir Zaman'╩╩",
+			"NADIREN": "╬'Nadiren'╩╩",
+			"GENELLIKLE": "╬'Genellikle'╩╩",
+			"COGU_ZAMAN": "╬'Çoğu Zaman'╩╩",
+			"HER_ZAMAN": "╬'Her Zaman'╩╩",
+			"label_previous": "╬'Önceki'╩╩",
+			"label_next": "╬'Sonraki'╩╩",
+			"label_alert_missing_answer": "╬'Lütfen soruları cevaplayınız.'╩╩"
+		},
+		"en-US": {
+			"FIKRIM_YOK": "╬'No Idea'╩╩",
+			"HICBIR_ZAMAN": "╬'Anytime'╩╩",
+			"NADIREN": "╬'Rarely'╩╩",
+			"GENELLIKLE": "╬'Usually'╩╩",
+			"COGU_ZAMAN": "╬'Usually+'╩╩",
+			"HER_ZAMAN": "╬'Always'╩╩",
+			"label_previous": "╬'Previous'╩╩",
+			"label_next": "╬'Next'╩╩",
+			"label_alert_missing_answer": "╬'Please answer the questions.'╩╩"
+		}
+	},
+	"description": {}
+};
+export default pjson

@@ -1,0 +1,568 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_3",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"EndRender": {
+					"H": "storedState={'columns'=[{'visibleIndex'=0,'dataField'='name','dataType'='string','visible'=true},{'visibleIndex'=1,'dataField'='calories','dataType'='number','visible'=true},{'visibleIndex'=2,'dataField'='fat','dataType'='string','visible'=true},{'visibleIndex'=3,'dataField'='carbs','dataType'='number','visible'=true,'filterValues'=[65,67]},{'visibleIndex'=4,'dataField'='protein','dataType'='string','visible'=true},{'visibleIndex'=5,'dataField'='iron','dataType'='string','visible'=true}],'allowedPageSizes'=[10,20,40],'filterPanel'={'filterEnabled'=true},'filterValue'=null,'searchText'='','pageIndex'=0,'pageSize'=20}\r\nstore.set('storedState', storedState)"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_3"
+			},
+			"O": {
+				"compDomClasses": "",
+				"cType": "child"
+			}
+		},
+		{
+			"T": "DxDataGrid",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				},
+				"dataSource": {
+					"H": "[{name = 'Frozens Yogurt', calories = 159, fat = '6.0', carbs = 24, protein = '4.0', iron = '1%'},\n{name = 'Ice cream sandwich', calories = 237, fat = '9.0', carbs = 37, protein = '4.3', iron = '1%'},\n{name = 'Eclair', calories = 262, fat = '16.0', carbs = 23, protein = '6.0', iron = '7%'},\n{name = 'Cupcake', calories = 305, fat = '3.7', carbs = 67, protein = '4.3', iron = '8%'},\n{name = 'Gingerbread',calories = 356, fat = '16.0', carbs = 49, protein = '3.9', iron = '16%'},\n{name = 'Jelly bean', calories = 375,  fat = '0.0', carbs = 94, protein = '0.0', iron = '0%'},\n{name = 'Lollipop', calories = 392, fat = '0.2', carbs = 98, protein = '0.0', iron = '2 %'},\n{name = 'Honeycomb', calories = 408, fat = '3.2', carbs = 87, protein = '6.5', iron = '45%'},\n{name = 'Donut', calories = 452, fat = '25.0', carbs = 51, protein = '4.9', iron = '22%'},\n{name = 'KitKat', calories = 518, fat = '26.0', carbs = 65, protein = '7', iron=  '6 %'}]",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "DxStateStoring",
+							"P": {
+								"enabled": {
+									"H": "true",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_2",
+									"T": "prop"
+								},
+								"type": {
+									"H": "'custom'",
+									"T": "prop"
+								}
+							},
+							"E": {
+								"customLoad": {
+									"H": "store.get('storedState')",
+									"PE": true
+								},
+								"customSave": {
+									"H": "//Save the current state of the data grid to the db\r\nrequestObject={}\r\nrequestObject.url='saveStateServiceAddress'\r\nrequestObject.http='put'\r\nrequestObject.data=state\r\nrequestObject.responseField='firstResponse'\r\nrequestObject.blockRender=true\r\nrequestObject.onSuccess='onSuccess'\r\nRequest.async(requestObject)",
+									"PE": true,
+									"P": "state"
+								}
+							},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_2"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "DxPaging",
+							"P": {
+								"pageSize": {
+									"H": "3",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_4",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "DxPager",
+							"P": {
+								"showPageSizeSelector": {
+									"H": "true",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_5",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_5"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "DxSearchPanel",
+							"P": {
+								"visible": {
+									"H": "true",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_6",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_6"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "DxFilterRow",
+							"P": {
+								"visible": {
+									"H": "'showFilterRow'",
+									"T": "prop"
+								},
+								"applyFilter": {
+									"H": "'currentFilter'",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_7",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_7"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "DxHeaderFilter",
+							"P": {
+								"visible": {
+									"H": "'showFilterRow'",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_8",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_8"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "DxExport",
+							"P": {
+								"allowExportSelectedData": {
+									"H": "true",
+									"T": "prop"
+								},
+								"enabled": {
+									"H": "true",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_9",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_9"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "DxRowDragging",
+							"P": {
+								"allowReordering": {
+									"H": "true",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_10",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_10"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "DxSelection",
+							"P": {
+								"mode": {
+									"H": "'multiple'",
+									"T": "prop"
+								},
+								"deferred": {
+									"H": "true",
+									"T": "prop"
+								},
+								"showCheckBoxesMode": {
+									"H": "'checkBoxesMode'",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_11",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_11"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": ""
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"forceUpdateAfterPropertySetting": true,
+				"cType": "child",
+				"compDomClasses": "dx-widget dx-visibility-change-handler"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_3",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"EndRender": {
+					"H": "╬=╣storedState╩╠{}╠=╣'columns'╩╠[]╠{}╠=╣'visibleIndex'╩╠0╩╩╠=╣'dataField'╩╠'name'╩╩╠=╣'dataType'╩╠'string'╩╩╠=╣'visible'╩╠true╩╩╩╠{}╠=╣'visibleIndex'╩╠1╩╩╠=╣'dataField'╩╠'calories'╩╩╠=╣'dataType'╩╠'number'╩╩╠=╣'visible'╩╠true╩╩╩╠{}╠=╣'visibleIndex'╩╠2╩╩╠=╣'dataField'╩╠'fat'╩╩╠=╣'dataType'╩╠'string'╩╩╠=╣'visible'╩╠true╩╩╩╠{}╠=╣'visibleIndex'╩╠3╩╩╠=╣'dataField'╩╠'carbs'╩╩╠=╣'dataType'╩╠'number'╩╩╠=╣'visible'╩╠true╩╩╠=╣'filterValues'╩╠[]╠65╩╠67╩╩╩╩╠{}╠=╣'visibleIndex'╩╠4╩╩╠=╣'dataField'╩╠'protein'╩╩╠=╣'dataType'╩╠'string'╩╩╠=╣'visible'╩╠true╩╩╩╠{}╠=╣'visibleIndex'╩╠5╩╩╠=╣'dataField'╩╠'iron'╩╩╠=╣'dataType'╩╠'string'╩╩╠=╣'visible'╩╠true╩╩╩╩╩╠=╣'allowedPageSizes'╩╠[]╠10╩╠20╩╠40╩╩╩╠=╣'filterPanel'╩╠{}╠=╣'filterEnabled'╩╠true╩╩╩╩╠=╣'filterValue'╩╠null╩╩╠=╣'searchText'╩╠''╩╩╠=╣'pageIndex'╩╠0╩╩╠=╣'pageSize'╩╠20╩╩╩╩╬()╣.╣store╩╠set╩╩╠'storedState'╩╠storedState╩╩╩"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_3"
+			},
+			"O": {
+				"compDomClasses": "",
+				"cType": "child"
+			}
+		},
+		{
+			"T": "DxDataGrid",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				},
+				"dataSource": {
+					"H": "╬[]╠{}╠=╣name╩╠'Frozens Yogurt'╩╩╠=╣calories╩╠159╩╩╠=╣fat╩╠'6.0'╩╩╠=╣carbs╩╠24╩╩╠=╣protein╩╠'4.0'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Ice cream sandwich'╩╩╠=╣calories╩╠237╩╩╠=╣fat╩╠'9.0'╩╩╠=╣carbs╩╠37╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Eclair'╩╩╠=╣calories╩╠262╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠23╩╩╠=╣protein╩╠'6.0'╩╩╠=╣iron╩╠'7%'╩╩╩╠{}╠=╣name╩╠'Cupcake'╩╩╠=╣calories╩╠305╩╩╠=╣fat╩╠'3.7'╩╩╠=╣carbs╩╠67╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'8%'╩╩╩╠{}╠=╣name╩╠'Gingerbread'╩╩╠=╣calories╩╠356╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠49╩╩╠=╣protein╩╠'3.9'╩╩╠=╣iron╩╠'16%'╩╩╩╠{}╠=╣name╩╠'Jelly bean'╩╩╠=╣calories╩╠375╩╩╠=╣fat╩╠'0.0'╩╩╠=╣carbs╩╠94╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'0%'╩╩╩╠{}╠=╣name╩╠'Lollipop'╩╩╠=╣calories╩╠392╩╩╠=╣fat╩╠'0.2'╩╩╠=╣carbs╩╠98╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'2 %'╩╩╩╠{}╠=╣name╩╠'Honeycomb'╩╩╠=╣calories╩╠408╩╩╠=╣fat╩╠'3.2'╩╩╠=╣carbs╩╠87╩╩╠=╣protein╩╠'6.5'╩╩╠=╣iron╩╠'45%'╩╩╩╠{}╠=╣name╩╠'Donut'╩╩╠=╣calories╩╠452╩╩╠=╣fat╩╠'25.0'╩╩╠=╣carbs╩╠51╩╩╠=╣protein╩╠'4.9'╩╩╠=╣iron╩╠'22%'╩╩╩╠{}╠=╣name╩╠'KitKat'╩╩╠=╣calories╩╠518╩╩╠=╣fat╩╠'26.0'╩╩╠=╣carbs╩╠65╩╩╠=╣protein╩╠'7'╩╩╠=╣iron╩╠'6 %'╩╩╩╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "DxStateStoring",
+							"P": {
+								"enabled": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_2",
+									"T": "prop"
+								},
+								"type": {
+									"H": "╬'custom'╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {
+								"customLoad": {
+									"H": "╬()╣.╣store╩╠get╩╩╠'storedState'╩╩╩",
+									"PE": true
+								},
+								"customSave": {
+									"H": "╬=╣requestObject╩╠{}╩╩╬=╣.╣requestObject╩╠url╩╩╠'saveStateServiceAddress'╩╩╬=╣.╣requestObject╩╠http╩╩╠'put'╩╩╬=╣.╣requestObject╩╠data╩╩╠state╩╩╬=╣.╣requestObject╩╠responseField╩╩╠'firstResponse'╩╩╬=╣.╣requestObject╩╠blockRender╩╩╠true╩╩╬=╣.╣requestObject╩╠onSuccess╩╩╠'onSuccess'╩╩╬()╣.╣Request╩╠async╩╩╠requestObject╩╩╩",
+									"PE": true,
+									"P": "state"
+								}
+							},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_2"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "DxPaging",
+							"P": {
+								"pageSize": {
+									"H": "╬3╩╩",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_4",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "DxPager",
+							"P": {
+								"showPageSizeSelector": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_5",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_5"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "DxSearchPanel",
+							"P": {
+								"visible": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_6",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_6"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "DxFilterRow",
+							"P": {
+								"visible": {
+									"H": "╬'showFilterRow'╩╩",
+									"T": "prop"
+								},
+								"applyFilter": {
+									"H": "╬'currentFilter'╩╩",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_7",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_7"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "DxHeaderFilter",
+							"P": {
+								"visible": {
+									"H": "╬'showFilterRow'╩╩",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_8",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_8"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "DxExport",
+							"P": {
+								"allowExportSelectedData": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"enabled": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_9",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_9"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "DxRowDragging",
+							"P": {
+								"allowReordering": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_10",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_10"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "DxSelection",
+							"P": {
+								"mode": {
+									"H": "╬'multiple'╩╩",
+									"T": "prop"
+								},
+								"deferred": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"showCheckBoxesMode": {
+									"H": "╬'checkBoxesMode'╩╩",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_11",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_11"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": ""
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"forceUpdateAfterPropertySetting": true,
+				"cType": "child",
+				"compDomClasses": "dx-widget dx-visibility-change-handler"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {}
+};
+export default pjson

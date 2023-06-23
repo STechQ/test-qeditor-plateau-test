@@ -1,0 +1,302 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VCheckbox",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				},
+				"label": {
+					"H": "'Teşvik-Faiz Destekli'",
+					"T": "prop"
+				},
+				"color": {
+					"H": "'primary'",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "\r\nif (EdtrComp_1.internalValue==true) {\r\n    EdtrComp_6.disabled=true\r\n   EdtrComp_7.disabled=true\r\n    \r\n} else {\r\n    EM.trace('else')\r\n     EdtrComp_6.disabled=false\r\n   EdtrComp_7.disabled=false\r\n}",
+					"P": "mouseEvent",
+					"HL": "QS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-input theme--light v-input--selection-controls v-input--checkbox"
+			}
+		},
+		{
+			"T": "VCheckbox",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_6",
+					"T": "prop"
+				},
+				"label": {
+					"H": "'Teşvikli'",
+					"T": "prop"
+				},
+				"color": {
+					"H": "'primary'",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "\r\n\r\nif (EdtrComp_6.internalValue==true) {\r\n    EdtrComp_1.disabled=true\r\n   EdtrComp_7.disabled=true\r\n    \r\n} else {\r\n    EM.trace('else')\r\n     EdtrComp_1.disabled=false\r\n   EdtrComp_7.disabled=false\r\n}",
+					"P": "mouseEvent"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_6"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-input theme--light v-input--selection-controls v-input--checkbox"
+			}
+		},
+		{
+			"T": "VCheckbox",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_7",
+					"T": "prop"
+				},
+				"label": {
+					"H": "'Katkı payı'",
+					"T": "prop"
+				},
+				"color": {
+					"H": "'primary'",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "\r\n\r\nif (EdtrComp_7.internalValue==true) {\r\n    EdtrComp_1.disabled=true\r\n   EdtrComp_6.disabled=true\r\n    \r\n} else {\r\n    EM.trace('else')\r\n     EdtrComp_1.disabled=false\r\n   EdtrComp_6.disabled=false\r\n}",
+					"P": "mouseEvent"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_7"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-input theme--light v-input--selection-controls v-input--checkbox"
+			}
+		},
+		{
+			"T": "VCheckbox",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_11",
+					"T": "prop"
+				},
+				"label": {
+					"H": "'Sat-geri kirala'",
+					"T": "prop"
+				},
+				"color": {
+					"H": "'primary'",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_11"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-input theme--light v-input--selection-controls v-input--checkbox"
+			}
+		},
+		{
+			"T": "VCheckbox",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_10",
+					"T": "prop"
+				},
+				"label": {
+					"H": "'2. El ürün'",
+					"T": "prop"
+				},
+				"color": {
+					"H": "'primary'",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_10"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-input theme--light v-input--selection-controls v-input--checkbox"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VCheckbox",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				},
+				"label": {
+					"H": "╬'Teşvik-Faiz Destekli'╩╩",
+					"T": "prop"
+				},
+				"color": {
+					"H": "╬'primary'╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "╬if╣==╣.╣EdtrComp_1╩╠internalValue╩╩╠true╩╩╠╬=╣.╣EdtrComp_6╩╠disabled╩╩╠true╩╩╬=╣.╣EdtrComp_7╩╠disabled╩╩╠true╩╩╩╠╬()╣.╣EM╩╠trace╩╩╠'else'╩╩╬=╣.╣EdtrComp_6╩╠disabled╩╩╠false╩╩╬=╣.╣EdtrComp_7╩╠disabled╩╩╠false╩╩╩╩╩",
+					"P": "mouseEvent",
+					"HL": "QS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-input v-input--is-label-active v-input--is-dirty theme--light v-input--selection-controls v-input--checkbox primary--text"
+			}
+		},
+		{
+			"T": "VCheckbox",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_6",
+					"T": "prop"
+				},
+				"label": {
+					"H": "╬'Teşvikli'╩╩",
+					"T": "prop"
+				},
+				"color": {
+					"H": "╬'primary'╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "╬if╣==╣.╣EdtrComp_6╩╠internalValue╩╩╠true╩╩╠╬=╣.╣EdtrComp_1╩╠disabled╩╩╠true╩╩╬=╣.╣EdtrComp_7╩╠disabled╩╩╠true╩╩╩╠╬()╣.╣EM╩╠trace╩╩╠'else'╩╩╬=╣.╣EdtrComp_1╩╠disabled╩╩╠false╩╩╬=╣.╣EdtrComp_7╩╠disabled╩╩╠false╩╩╩╩╩",
+					"P": "mouseEvent"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_6"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-input v-input--is-disabled theme--light v-input--selection-controls v-input--checkbox"
+			}
+		},
+		{
+			"T": "VCheckbox",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_7",
+					"T": "prop"
+				},
+				"label": {
+					"H": "╬'Katkı payı'╩╩",
+					"T": "prop"
+				},
+				"color": {
+					"H": "╬'primary'╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "╬if╣==╣.╣EdtrComp_7╩╠internalValue╩╩╠true╩╩╠╬=╣.╣EdtrComp_1╩╠disabled╩╩╠true╩╩╬=╣.╣EdtrComp_6╩╠disabled╩╩╠true╩╩╩╠╬()╣.╣EM╩╠trace╩╩╠'else'╩╩╬=╣.╣EdtrComp_1╩╠disabled╩╩╠false╩╩╬=╣.╣EdtrComp_6╩╠disabled╩╩╠false╩╩╩╩╩",
+					"P": "mouseEvent"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_7"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-input v-input--is-disabled theme--light v-input--selection-controls v-input--checkbox"
+			}
+		},
+		{
+			"T": "VCheckbox",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_11",
+					"T": "prop"
+				},
+				"label": {
+					"H": "╬'Sat-geri kirala'╩╩",
+					"T": "prop"
+				},
+				"color": {
+					"H": "╬'primary'╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_11"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-input theme--light v-input--selection-controls v-input--checkbox newDropBorder"
+			}
+		},
+		{
+			"T": "VCheckbox",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_10",
+					"T": "prop"
+				},
+				"label": {
+					"H": "╬'2. El ürün'╩╩",
+					"T": "prop"
+				},
+				"color": {
+					"H": "╬'primary'╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_10"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-input theme--light v-input--selection-controls v-input--checkbox newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {}
+};
+export default pjson

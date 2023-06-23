@@ -1,0 +1,1831 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_4",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container container--fluid'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VCard",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_6",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "true",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VContainer",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_8",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'container container--fluid'",
+													"T": "class"
+												},
+												"visible": {
+													"H": "true",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_54",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VCol",
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VFileInput",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_56",
+																									"T": "prop"
+																								},
+																								"placeholder": {
+																									"H": "'Select a file'",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"DiscardSettings": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"autofocus": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"chips": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"clearable": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"clearIcon": {
+																									"H": "'mdi-delete'",
+																									"T": "prop"
+																								},
+																								"multiple": {
+																									"H": "false",
+																									"T": "attr"
+																								},
+																								"counter": {
+																									"H": "50",
+																									"T": "prop"
+																								},
+																								"dense": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"error": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"filled": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"flat": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"hideDetails": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"hideInput": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"label": {
+																									"H": "'please select file'",
+																									"T": "prop"
+																								},
+																								"hint": {
+																									"H": "'text'",
+																									"T": "prop"
+																								},
+																								"outlined": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"rounded": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"shaped": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"solo": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"singleLine": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"smallChips": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"success": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"validateOnBlur": {
+																									"H": "false",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_56"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_55",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_55"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_54"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														},
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_69",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VCol",
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VFileInput",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_139",
+																									"T": "prop"
+																								},
+																								"placeholder": {
+																									"H": "'Accept : Only image'",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"accept": {
+																									"H": "'image/*'",
+																									"T": "attr"
+																								},
+																								"outlined": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"prependIcon": {
+																									"H": "'mdi-image-multiple'",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_139"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_74",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_74"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_69"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														},
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_80",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VCol",
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VFileInput",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_152",
+																									"T": "prop"
+																								},
+																								"placeholder": {
+																									"H": "'smallChips'",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"smallChips": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"autofocus": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"prependIcon": {
+																									"H": "'mdi-alert'",
+																									"T": "prop"
+																								},
+																								"appendIcon": {
+																									"H": "'mdi-close'",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_152"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_87",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_87"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_80"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														},
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_267",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VCol",
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VFileInput",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_286",
+																									"T": "prop"
+																								},
+																								"placeholder": {
+																									"H": "'Counter :  the total number of files'",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"counter": {
+																									"H": "'30'",
+																									"T": "prop"
+																								},
+																								"dense": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"error": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"clearable": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"flat": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"hideDetails": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"hideInput": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"rounded": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"shaped": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"solo": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"outlined": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"filled": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"appendIcon": {
+																									"H": "'mdi-delete'",
+																									"T": "prop"
+																								},
+																								"prependIcon": {
+																									"H": "'mdi-cursor-default'",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_286"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_276",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_276"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_267"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														},
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_353",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VCol",
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VFileInput",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_386",
+																									"T": "prop"
+																								},
+																								"placeholder": {
+																									"H": "'Dense : reduces the file input height'",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"dense": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"error": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"loading": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"prependIcon": {
+																									"H": "'mdi-database'",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_386"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_364",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_364"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_353"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														},
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_437",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VCol",
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VFileInput",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_549",
+																									"T": "prop"
+																								},
+																								"placeholder": {
+																									"H": "'Multiple'",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"multiple": {
+																									"H": "true",
+																									"T": "attr"
+																								},
+																								"success": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"solo": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"singleLine": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"smallChips": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"prependInnerIcon": {
+																									"H": "'mdi-cloud'",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_549"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_450",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_450"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_437"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														},
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_598",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VCol",
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VFileInput",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_747",
+																									"T": "prop"
+																								},
+																								"placeholder": {
+																									"H": "'Prepend Icon - Filled'",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"prependIcon": {
+																									"H": "'mdi-camera'",
+																									"T": "prop"
+																								},
+																								"filled": {
+																									"H": "true",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_747"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_613",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_613"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_598"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														},
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_634",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VCol",
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VFileInput",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_838",
+																									"T": "prop"
+																								},
+																								"placeholder": {
+																									"H": "'Show size'",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"dense": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"showSize": {
+																									"H": "'1024'",
+																									"T": "prop"
+																								},
+																								"success": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"outlined": {
+																									"H": "true",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_838"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_635",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_635"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_634"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_8"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_6"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_4"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_4",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container container--fluid'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VCard",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_6",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VContainer",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_8",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'container container--fluid'╩╩",
+													"T": "class"
+												},
+												"visible": {
+													"H": "╬true╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_54",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VCol",
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VFileInput",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_56",
+																									"T": "prop"
+																								},
+																								"placeholder": {
+																									"H": "╬'Select a file'╩╩",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"DiscardSettings": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"autofocus": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"chips": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"clearable": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"clearIcon": {
+																									"H": "╬'mdi-delete'╩╩",
+																									"T": "prop"
+																								},
+																								"multiple": {
+																									"H": "╬false╩╩",
+																									"T": "attr"
+																								},
+																								"counter": {
+																									"H": "╬50╩╩",
+																									"T": "prop"
+																								},
+																								"dense": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"error": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"filled": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"flat": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"hideDetails": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"hideInput": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"label": {
+																									"H": "╬'please select file'╩╩",
+																									"T": "prop"
+																								},
+																								"hint": {
+																									"H": "╬'text'╩╩",
+																									"T": "prop"
+																								},
+																								"outlined": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"rounded": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"shaped": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"solo": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"singleLine": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"smallChips": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"success": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"validateOnBlur": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_56"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted v-text-field--placeholder v-file-input undefined"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_55",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_55"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "col newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_54"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "row newDropBorder"
+															}
+														},
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_69",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VCol",
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VFileInput",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_139",
+																									"T": "prop"
+																								},
+																								"placeholder": {
+																									"H": "╬'Accept : Only image'╩╩",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"accept": {
+																									"H": "╬'image/*'╩╩",
+																									"T": "attr"
+																								},
+																								"outlined": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"prependIcon": {
+																									"H": "╬'mdi-image-multiple'╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_139"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted v-text-field--placeholder v-file-input undefined newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_74",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_74"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "col newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_69"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "row newDropBorder"
+															}
+														},
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_80",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VCol",
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VFileInput",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_152",
+																									"T": "prop"
+																								},
+																								"placeholder": {
+																									"H": "╬'smallChips'╩╩",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"smallChips": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"autofocus": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"prependIcon": {
+																									"H": "╬'mdi-alert'╩╩",
+																									"T": "prop"
+																								},
+																								"appendIcon": {
+																									"H": "╬'mdi-close'╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_152"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted v-text-field--placeholder v-file-input undefined newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_87",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_87"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "col newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_80"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "row newDropBorder"
+															}
+														},
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_267",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VCol",
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VFileInput",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_286",
+																									"T": "prop"
+																								},
+																								"placeholder": {
+																									"H": "╬'Counter :  the total number of files'╩╩",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"counter": {
+																									"H": "╬'30'╩╩",
+																									"T": "prop"
+																								},
+																								"dense": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"error": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"clearable": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"flat": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"hideDetails": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"hideInput": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"rounded": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"shaped": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"solo": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"outlined": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"filled": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"appendIcon": {
+																									"H": "╬'mdi-delete'╩╩",
+																									"T": "prop"
+																								},
+																								"prependIcon": {
+																									"H": "╬'mdi-cursor-default'╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_286"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted v-text-field--placeholder v-file-input undefined newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_276",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_276"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "col newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_267"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "row newDropBorder"
+															}
+														},
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_353",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VCol",
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VFileInput",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_386",
+																									"T": "prop"
+																								},
+																								"placeholder": {
+																									"H": "╬'Dense : reduces the file input height'╩╩",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"dense": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"error": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"loading": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"prependIcon": {
+																									"H": "╬'mdi-database'╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_386"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "v-input v-input--is-loading v-input--dense theme--light v-text-field v-text-field--is-booted v-text-field--placeholder v-file-input undefined newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_364",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_364"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "col newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_353"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "row newDropBorder"
+															}
+														},
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_437",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VCol",
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VFileInput",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_549",
+																									"T": "prop"
+																								},
+																								"placeholder": {
+																									"H": "╬'Multiple'╩╩",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"multiple": {
+																									"H": "╬true╩╩",
+																									"T": "attr"
+																								},
+																								"success": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"solo": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"singleLine": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"smallChips": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"prependInnerIcon": {
+																									"H": "╬'mdi-cloud'╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_549"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "v-input v-input--has-state theme--light v-text-field v-text-field--is-booted v-text-field--placeholder v-file-input success--text undefined newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_450",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_450"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "col newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_437"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "row newDropBorder"
+															}
+														},
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_598",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VCol",
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VFileInput",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_747",
+																									"T": "prop"
+																								},
+																								"placeholder": {
+																									"H": "╬'Prepend Icon - Filled'╩╩",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"prependIcon": {
+																									"H": "╬'mdi-camera'╩╩",
+																									"T": "prop"
+																								},
+																								"filled": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_747"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "v-input theme--light v-text-field v-text-field--single-line v-text-field--filled v-text-field--is-booted v-text-field--enclosed v-text-field--placeholder v-file-input undefined newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_613",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_613"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "col newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_598"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "row newDropBorder"
+															}
+														},
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_634",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VCol",
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VFileInput",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_838",
+																									"T": "prop"
+																								},
+																								"placeholder": {
+																									"H": "╬'Show size'╩╩",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"dense": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"showSize": {
+																									"H": "╬'1024'╩╩",
+																									"T": "prop"
+																								},
+																								"success": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"outlined": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_838"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "v-input v-input--dense theme--light v-text-field v-text-field--is-booted v-text-field--enclosed v-text-field--outlined v-text-field--placeholder v-file-input undefined newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_635",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_635"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "col newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_634"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "row newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_8"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "container container--fluid newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_6"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "v-card v-sheet theme--light newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_4"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container container--fluid newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {}
+};
+export default pjson

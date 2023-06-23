@@ -1,0 +1,506 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": ""
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_19",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_13",
+									"T": "prop"
+								},
+								"class": {
+									"H": "'d-flex flex-row'",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VBtn",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_2",
+													"T": "prop"
+												},
+												"color": {
+													"H": "'primary'",
+													"T": "prop"
+												},
+												"regular": {
+													"H": "true",
+													"T": "prop"
+												}
+											},
+											"E": {
+												"click": {
+													"H": "//qjson url that you want to come back after authentication\r\nuri = 'http://localhost:3004/microui/supplierfinance/qjson/sso/callback'\r\n\r\n//endpoint login url. \r\nendpoint='http://localhost:3004/sso_test.html'\r\n\r\n//ask your auth service provider (client-id)\r\nid = '90921d5e-34fd-4328-a8ed-57552f6b1125'\r\n\r\n//ask your auth service provider.\r\nscope='openid'\r\n\r\nsso.start({clientId=id,authorizeEndpoint=endpoint,redirectUri=uri,scope=scope})\r\n",
+													"P": "mouseEvent"
+												}
+											},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"C": {},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_3",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "'SSO Start'",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_3"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "q-label "
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_2"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_13"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row d-flex flex-row"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_19"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_21",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_15",
+									"T": "prop"
+								},
+								"class": {
+									"H": "'d-flex flex-row'",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VBtn",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_6",
+													"T": "prop"
+												},
+												"color": {
+													"H": "'primary'",
+													"T": "prop"
+												},
+												"regular": {
+													"H": "true",
+													"T": "prop"
+												}
+											},
+											"E": {
+												"click": {
+													"H": "//for valdiation request, ask your auth service provider. (token endpoint)\r\nendpoint = 'https://adfs.uatisbank/adfs/oauth2/token'\r\n\r\n//after authentication redirect there will be querystring params (code,state)\r\nparams=Quick.getDeepLinkParams()\r\nEM.trace(params)\r\n\r\n//ask your auth service provider\r\ntype='plateau:sso:user:e'\r\n\r\nsso.validate({urlParams=params,tokenEndpoint=endpoint,type=type,onSuccess='onSuccess',onFail='onFail'})",
+													"P": "mouseEvent"
+												},
+												"onSuccess": {
+													"H": "EM.trace('onSuccess')",
+													"C": true
+												},
+												"onFail": {
+													"H": "EM.trace('onFail')",
+													"C": true
+												}
+											},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"C": {},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_8",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "'SSO Validate'",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_8"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "q-label "
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_6"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_15"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row d-flex flex-row"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_21"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": ""
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_19",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_13",
+									"T": "prop"
+								},
+								"class": {
+									"H": "╬'d-flex flex-row'╩╩",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VBtn",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_2",
+													"T": "prop"
+												},
+												"color": {
+													"H": "╬'primary'╩╩",
+													"T": "prop"
+												},
+												"regular": {
+													"H": "╬true╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {
+												"click": {
+													"H": "╬=╣uri╩╠'http://localhost:3004/microui/supplierfinance/qjson/sso/callback'╩╩╬=╣endpoint╩╠'http://localhost:3004/sso_test.html'╩╩╬=╣id╩╠'90921d5e-34fd-4328-a8ed-57552f6b1125'╩╩╬=╣scope╩╠'openid'╩╩╬()╣.╣sso╩╠start╩╩╠{}╠=╣clientId╩╠id╩╩╠=╣authorizeEndpoint╩╠endpoint╩╩╠=╣redirectUri╩╠uri╩╩╠=╣scope╩╠scope╩╩╩╩╩",
+													"P": "mouseEvent"
+												}
+											},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"C": {},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_3",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬'SSO Start'╩╩",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_3"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "q-label "
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_2"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_13"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row d-flex flex-row"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_19"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_21",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_15",
+									"T": "prop"
+								},
+								"class": {
+									"H": "╬'d-flex flex-row'╩╩",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VBtn",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_6",
+													"T": "prop"
+												},
+												"color": {
+													"H": "╬'primary'╩╩",
+													"T": "prop"
+												},
+												"regular": {
+													"H": "╬true╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {
+												"click": {
+													"H": "╬=╣endpoint╩╠'https://adfs.uatisbank/adfs/oauth2/token'╩╩╬=╣params╩╠()╣.╣Quick╩╠getDeepLinkParams╩╩╩╩╬()╣.╣EM╩╠trace╩╩╠params╩╩╬=╣type╩╠'plateau:sso:user:e'╩╩╬()╣.╣sso╩╠validate╩╩╠{}╠=╣urlParams╩╠params╩╩╠=╣tokenEndpoint╩╠endpoint╩╩╠=╣type╩╠type╩╩╠=╣onSuccess╩╠'onSuccess'╩╩╠=╣onFail╩╠'onFail'╩╩╩╩╩",
+													"P": "mouseEvent"
+												},
+												"onSuccess": {
+													"H": "╬()╣.╣EM╩╠trace╩╩╠'onSuccess'╩╩╩",
+													"C": true
+												},
+												"onFail": {
+													"H": "╬()╣.╣EM╩╠trace╩╩╠'onFail'╩╩╩",
+													"C": true
+												}
+											},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"C": {},
+															"E": {},
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_8",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬'SSO Validate'╩╩",
+																	"T": "prop"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_8"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "q-label "
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_6"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_15"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row d-flex flex-row"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_21"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {}
+};
+export default pjson

@@ -1,0 +1,862 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container container--fluid'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_3",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_8",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "'span'",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "'Pipeline Sample Page'",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_8"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_6",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_6"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_3"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_232",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_245",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "'primary'",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "\r\nquick.store.set(\"#pipelineBagStoreKey\", \"pipelineBagStoreValue\");\r\n\r\nlet requestCustomer = <any>{};\r\nrequestCustomer.url = \"https://reqres.in/api/users\";\r\nrequestCustomer.http = 'post';\r\nrequestCustomer.data = {\r\n    \"name\": \"morpheus\",\r\n    \"job\": \"leader\"\r\n};\r\nrequestCustomer.responseField = 'data'\r\nrequestCustomer.onSuccess = 'createCustomerOnSuccess';\r\nrequestCustomer.onFail = 'createCustomerOnFail';\r\nquick.Request.async(requestCustomer);",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "TS"
+																},
+																"createCustomerOnSuccess": {
+																	"H": "if (response.data != null){\r\n    quick.EM.trace(\"createCustomer Success\");\r\n    quick.EM.trace(response.data);\r\n    components.EdtrComp_378.text = response.data;\r\n}",
+																	"C": true,
+																	"HL": "TS"
+																},
+																"createCustomerOnFail": {
+																	"H": "declare var error: any;\r\nquick.EM.trace(\"createCustomer Fail\");\r\nquick.EM.trace(error);\r\n components.EdtrComp_378.text = error.response;",
+																	"C": true,
+																	"HL": "TS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_256",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'Send Request Sample - Success'",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_256"
+																			},
+																			"O": {
+																				"cType": "child"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_245"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"sp:mr-10"
+																		]
+																	},
+																	"class": "mr-10"
+																}
+															}
+														},
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_473",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "'primary'",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "\r\nquick.store.set(\"#pipelineBagStoreKey\", \"pipelineBagStoreValue\");\r\n\r\nlet requestCustomer = <any>{};\r\nrequestCustomer.url = \"https://reqres.indd/api/users\";\r\nrequestCustomer.http = 'post';\r\nrequestCustomer.data = {\r\n    \"name\": \"morpheus\",\r\n    \"job\": \"leader\"\r\n};\r\nrequestCustomer.responseField = 'data'\r\nrequestCustomer.onSuccess = 'createCustomerOnSuccess';\r\nrequestCustomer.onFail = 'createCustomerOnFail';\r\nquick.Request.async(requestCustomer);",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "TS"
+																},
+																"createCustomerOnSuccess": {
+																	"H": "if (response.data != null){\r\n    quick.EM.trace(\"createCustomer Success\");\r\n    quick.EM.trace(response.data);\r\n    components.EdtrComp_378.text = response.data;\r\n}",
+																	"C": true,
+																	"HL": "TS"
+																},
+																"createCustomerOnFail": {
+																	"H": "declare var error: any;\r\nquick.EM.trace(\"createCustomer Fail\");\r\nquick.EM.trace(error);\r\n components.EdtrComp_378.text = error.response;",
+																	"C": true,
+																	"HL": "TS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_474",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'Send Request Sample - Error'",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_474"
+																			},
+																			"O": {
+																				"cType": "child"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_473"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"sp:mr-10"
+																		]
+																	},
+																	"class": "mr-10"
+																}
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_243",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_243"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_232"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_34",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_367",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "'span'",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "'RESPONSE:'",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_367"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"sp:mr-10"
+																		]
+																	},
+																	"class": "mr-10"
+																}
+															}
+														},
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_378",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "'span'",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "'Text'",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_378"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_47",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_47"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_34"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container container--fluid'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_3",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_8",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "╬'span'╩╩",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬'Pipeline Sample Page'╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_8"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "q-label newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_6",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_6"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_3"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_232",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_245",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "╬'primary'╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.store.set(\"#pipelineBagStoreKey\", \"pipelineBagStoreValue\");\r\nvar requestCustomer = {};\r\nrequestCustomer.url = \"https://reqres.in/api/users\";\r\nrequestCustomer.http = 'post';\r\nrequestCustomer.data = {\r\n    \"name\": \"morpheus\",\r\n    \"job\": \"leader\"\r\n};\r\nrequestCustomer.responseField = 'data';\r\nrequestCustomer.onSuccess = 'createCustomerOnSuccess';\r\nrequestCustomer.onFail = 'createCustomerOnFail';\r\nquick.Request.async(requestCustomer);\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfMjQ1X2NsaWNrX0UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJFZHRyQ29tcF8yNDVfY2xpY2tfRS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBRUEsS0FBSyxDQUFDLEtBQUssQ0FBQyxHQUFHLENBQUMsc0JBQXNCLEVBQUUsdUJBQXVCLENBQUMsQ0FBQztBQUVqRSxJQUFJLGVBQWUsR0FBUSxFQUFFLENBQUM7QUFDOUIsZUFBZSxDQUFDLEdBQUcsR0FBRyw2QkFBNkIsQ0FBQztBQUNwRCxlQUFlLENBQUMsSUFBSSxHQUFHLE1BQU0sQ0FBQztBQUM5QixlQUFlLENBQUMsSUFBSSxHQUFHO0lBQ25CLE1BQU0sRUFBRSxVQUFVO0lBQ2xCLEtBQUssRUFBRSxRQUFRO0NBQ2xCLENBQUM7QUFDRixlQUFlLENBQUMsYUFBYSxHQUFHLE1BQU0sQ0FBQTtBQUN0QyxlQUFlLENBQUMsU0FBUyxHQUFHLHlCQUF5QixDQUFDO0FBQ3RELGVBQWUsQ0FBQyxNQUFNLEdBQUcsc0JBQXNCLENBQUM7QUFDaEQsS0FBSyxDQUFDLE9BQU8sQ0FBQyxLQUFLLENBQUMsZUFBZSxDQUFDLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJkZWNsYXJlIHZhciBtb3VzZUV2ZW50OnVua25vd24gfCB1bmRlZmluZWRcblxyXG5xdWljay5zdG9yZS5zZXQoXCIjcGlwZWxpbmVCYWdTdG9yZUtleVwiLCBcInBpcGVsaW5lQmFnU3RvcmVWYWx1ZVwiKTtcclxuXHJcbmxldCByZXF1ZXN0Q3VzdG9tZXIgPSA8YW55Pnt9O1xyXG5yZXF1ZXN0Q3VzdG9tZXIudXJsID0gXCJodHRwczovL3JlcXJlcy5pbi9hcGkvdXNlcnNcIjtcclxucmVxdWVzdEN1c3RvbWVyLmh0dHAgPSAncG9zdCc7XHJcbnJlcXVlc3RDdXN0b21lci5kYXRhID0ge1xyXG4gICAgXCJuYW1lXCI6IFwibW9ycGhldXNcIixcclxuICAgIFwiam9iXCI6IFwibGVhZGVyXCJcclxufTtcclxucmVxdWVzdEN1c3RvbWVyLnJlc3BvbnNlRmllbGQgPSAnZGF0YSdcclxucmVxdWVzdEN1c3RvbWVyLm9uU3VjY2VzcyA9ICdjcmVhdGVDdXN0b21lck9uU3VjY2Vzcyc7XHJcbnJlcXVlc3RDdXN0b21lci5vbkZhaWwgPSAnY3JlYXRlQ3VzdG9tZXJPbkZhaWwnO1xyXG5xdWljay5SZXF1ZXN0LmFzeW5jKHJlcXVlc3RDdXN0b21lcik7XG4gZXhwb3J0e307XG4iXX0=",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "JS"
+																},
+																"createCustomerOnSuccess": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nif (response.data != null) {\r\n    quick.EM.trace(\"createCustomer Success\");\r\n    quick.EM.trace(response.data);\r\n    components.EdtrComp_378.text = response.data;\r\n}\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfMjQ1X2NyZWF0ZUN1c3RvbWVyT25TdWNjZXNzX0UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJFZHRyQ29tcF8yNDVfY3JlYXRlQ3VzdG9tZXJPblN1Y2Nlc3NfRS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQ0EsSUFBSSxRQUFRLENBQUMsSUFBSSxJQUFJLElBQUksRUFBQztJQUN0QixLQUFLLENBQUMsRUFBRSxDQUFDLEtBQUssQ0FBQyx3QkFBd0IsQ0FBQyxDQUFDO0lBQ3pDLEtBQUssQ0FBQyxFQUFFLENBQUMsS0FBSyxDQUFDLFFBQVEsQ0FBQyxJQUFJLENBQUMsQ0FBQztJQUM5QixVQUFVLENBQUMsWUFBWSxDQUFDLElBQUksR0FBRyxRQUFRLENBQUMsSUFBSSxDQUFDO0NBQ2hEIiwic291cmNlc0NvbnRlbnQiOlsiXG5pZiAocmVzcG9uc2UuZGF0YSAhPSBudWxsKXtcclxuICAgIHF1aWNrLkVNLnRyYWNlKFwiY3JlYXRlQ3VzdG9tZXIgU3VjY2Vzc1wiKTtcclxuICAgIHF1aWNrLkVNLnRyYWNlKHJlc3BvbnNlLmRhdGEpO1xyXG4gICAgY29tcG9uZW50cy5FZHRyQ29tcF8zNzgudGV4dCA9IHJlc3BvbnNlLmRhdGE7XHJcbn1cbiBleHBvcnR7fTtcbiJdfQ==",
+																	"C": true,
+																	"HL": "JS"
+																},
+																"createCustomerOnFail": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.EM.trace(\"createCustomer Fail\");\r\nquick.EM.trace(error);\r\ncomponents.EdtrComp_378.text = error.response;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfMjQ1X2NyZWF0ZUN1c3RvbWVyT25GYWlsX0UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJFZHRyQ29tcF8yNDVfY3JlYXRlQ3VzdG9tZXJPbkZhaWxfRS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBRUEsS0FBSyxDQUFDLEVBQUUsQ0FBQyxLQUFLLENBQUMscUJBQXFCLENBQUMsQ0FBQztBQUN0QyxLQUFLLENBQUMsRUFBRSxDQUFDLEtBQUssQ0FBQyxLQUFLLENBQUMsQ0FBQztBQUNyQixVQUFVLENBQUMsWUFBWSxDQUFDLElBQUksR0FBRyxLQUFLLENBQUMsUUFBUSxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiXG5kZWNsYXJlIHZhciBlcnJvcjogYW55O1xyXG5xdWljay5FTS50cmFjZShcImNyZWF0ZUN1c3RvbWVyIEZhaWxcIik7XHJcbnF1aWNrLkVNLnRyYWNlKGVycm9yKTtcclxuIGNvbXBvbmVudHMuRWR0ckNvbXBfMzc4LnRleHQgPSBlcnJvci5yZXNwb25zZTtcbiBleHBvcnR7fTtcbiJdfQ==",
+																	"C": true,
+																	"HL": "JS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_256",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'Send Request Sample - Success'╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_256"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "q-label newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_245"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"sp:mr-10"
+																		]
+																	},
+																	"class": "mr-10"
+																},
+																"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary mr-10 newDropBorder"
+															}
+														},
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_473",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "╬'primary'╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.store.set(\"#pipelineBagStoreKey\", \"pipelineBagStoreValue\");\r\nvar requestCustomer = {};\r\nrequestCustomer.url = \"https://reqres.indd/api/users\";\r\nrequestCustomer.http = 'post';\r\nrequestCustomer.data = {\r\n    \"name\": \"morpheus\",\r\n    \"job\": \"leader\"\r\n};\r\nrequestCustomer.responseField = 'data';\r\nrequestCustomer.onSuccess = 'createCustomerOnSuccess';\r\nrequestCustomer.onFail = 'createCustomerOnFail';\r\nquick.Request.async(requestCustomer);\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfNDczX2NsaWNrX0UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJFZHRyQ29tcF80NzNfY2xpY2tfRS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBRUEsS0FBSyxDQUFDLEtBQUssQ0FBQyxHQUFHLENBQUMsc0JBQXNCLEVBQUUsdUJBQXVCLENBQUMsQ0FBQztBQUVqRSxJQUFJLGVBQWUsR0FBUSxFQUFFLENBQUM7QUFDOUIsZUFBZSxDQUFDLEdBQUcsR0FBRywrQkFBK0IsQ0FBQztBQUN0RCxlQUFlLENBQUMsSUFBSSxHQUFHLE1BQU0sQ0FBQztBQUM5QixlQUFlLENBQUMsSUFBSSxHQUFHO0lBQ25CLE1BQU0sRUFBRSxVQUFVO0lBQ2xCLEtBQUssRUFBRSxRQUFRO0NBQ2xCLENBQUM7QUFDRixlQUFlLENBQUMsYUFBYSxHQUFHLE1BQU0sQ0FBQTtBQUN0QyxlQUFlLENBQUMsU0FBUyxHQUFHLHlCQUF5QixDQUFDO0FBQ3RELGVBQWUsQ0FBQyxNQUFNLEdBQUcsc0JBQXNCLENBQUM7QUFDaEQsS0FBSyxDQUFDLE9BQU8sQ0FBQyxLQUFLLENBQUMsZUFBZSxDQUFDLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJkZWNsYXJlIHZhciBtb3VzZUV2ZW50OnVua25vd24gfCB1bmRlZmluZWRcblxyXG5xdWljay5zdG9yZS5zZXQoXCIjcGlwZWxpbmVCYWdTdG9yZUtleVwiLCBcInBpcGVsaW5lQmFnU3RvcmVWYWx1ZVwiKTtcclxuXHJcbmxldCByZXF1ZXN0Q3VzdG9tZXIgPSA8YW55Pnt9O1xyXG5yZXF1ZXN0Q3VzdG9tZXIudXJsID0gXCJodHRwczovL3JlcXJlcy5pbmRkL2FwaS91c2Vyc1wiO1xyXG5yZXF1ZXN0Q3VzdG9tZXIuaHR0cCA9ICdwb3N0JztcclxucmVxdWVzdEN1c3RvbWVyLmRhdGEgPSB7XHJcbiAgICBcIm5hbWVcIjogXCJtb3JwaGV1c1wiLFxyXG4gICAgXCJqb2JcIjogXCJsZWFkZXJcIlxyXG59O1xyXG5yZXF1ZXN0Q3VzdG9tZXIucmVzcG9uc2VGaWVsZCA9ICdkYXRhJ1xyXG5yZXF1ZXN0Q3VzdG9tZXIub25TdWNjZXNzID0gJ2NyZWF0ZUN1c3RvbWVyT25TdWNjZXNzJztcclxucmVxdWVzdEN1c3RvbWVyLm9uRmFpbCA9ICdjcmVhdGVDdXN0b21lck9uRmFpbCc7XHJcbnF1aWNrLlJlcXVlc3QuYXN5bmMocmVxdWVzdEN1c3RvbWVyKTtcbiBleHBvcnR7fTtcbiJdfQ==",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "JS"
+																},
+																"createCustomerOnSuccess": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nif (response.data != null) {\r\n    quick.EM.trace(\"createCustomer Success\");\r\n    quick.EM.trace(response.data);\r\n    components.EdtrComp_378.text = response.data;\r\n}\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfNDczX2NyZWF0ZUN1c3RvbWVyT25TdWNjZXNzX0UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJFZHRyQ29tcF80NzNfY3JlYXRlQ3VzdG9tZXJPblN1Y2Nlc3NfRS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQ0EsSUFBSSxRQUFRLENBQUMsSUFBSSxJQUFJLElBQUksRUFBQztJQUN0QixLQUFLLENBQUMsRUFBRSxDQUFDLEtBQUssQ0FBQyx3QkFBd0IsQ0FBQyxDQUFDO0lBQ3pDLEtBQUssQ0FBQyxFQUFFLENBQUMsS0FBSyxDQUFDLFFBQVEsQ0FBQyxJQUFJLENBQUMsQ0FBQztJQUM5QixVQUFVLENBQUMsWUFBWSxDQUFDLElBQUksR0FBRyxRQUFRLENBQUMsSUFBSSxDQUFDO0NBQ2hEIiwic291cmNlc0NvbnRlbnQiOlsiXG5pZiAocmVzcG9uc2UuZGF0YSAhPSBudWxsKXtcclxuICAgIHF1aWNrLkVNLnRyYWNlKFwiY3JlYXRlQ3VzdG9tZXIgU3VjY2Vzc1wiKTtcclxuICAgIHF1aWNrLkVNLnRyYWNlKHJlc3BvbnNlLmRhdGEpO1xyXG4gICAgY29tcG9uZW50cy5FZHRyQ29tcF8zNzgudGV4dCA9IHJlc3BvbnNlLmRhdGE7XHJcbn1cbiBleHBvcnR7fTtcbiJdfQ==",
+																	"C": true,
+																	"HL": "JS"
+																},
+																"createCustomerOnFail": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.EM.trace(\"createCustomer Fail\");\r\nquick.EM.trace(error);\r\ncomponents.EdtrComp_378.text = error.response;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfNDczX2NyZWF0ZUN1c3RvbWVyT25GYWlsX0UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJFZHRyQ29tcF80NzNfY3JlYXRlQ3VzdG9tZXJPbkZhaWxfRS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBRUEsS0FBSyxDQUFDLEVBQUUsQ0FBQyxLQUFLLENBQUMscUJBQXFCLENBQUMsQ0FBQztBQUN0QyxLQUFLLENBQUMsRUFBRSxDQUFDLEtBQUssQ0FBQyxLQUFLLENBQUMsQ0FBQztBQUNyQixVQUFVLENBQUMsWUFBWSxDQUFDLElBQUksR0FBRyxLQUFLLENBQUMsUUFBUSxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiXG5kZWNsYXJlIHZhciBlcnJvcjogYW55O1xyXG5xdWljay5FTS50cmFjZShcImNyZWF0ZUN1c3RvbWVyIEZhaWxcIik7XHJcbnF1aWNrLkVNLnRyYWNlKGVycm9yKTtcclxuIGNvbXBvbmVudHMuRWR0ckNvbXBfMzc4LnRleHQgPSBlcnJvci5yZXNwb25zZTtcbiBleHBvcnR7fTtcbiJdfQ==",
+																	"C": true,
+																	"HL": "JS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_474",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'Send Request Sample - Error'╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_474"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "q-label newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_473"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"sp:mr-10"
+																		]
+																	},
+																	"class": "mr-10"
+																},
+																"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary mr-10 newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_243",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_243"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_232"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_34",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_367",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "╬'span'╩╩",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬'RESPONSE:'╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_367"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"sp:mr-10"
+																		]
+																	},
+																	"class": "mr-10"
+																},
+																"compDomClasses": "q-label mr-10 newDropBorder"
+															}
+														},
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_378",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "╬'span'╩╩",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬'Text'╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_378"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "q-label newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_47",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_47"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_34"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container container--fluid newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {
+		"tr-TR": {
+			"validationMsg": "╬'Lütfen zorunlu alanları giriniz.'╩╩"
+		},
+		"en-US": {
+			"validationMsg": "╬'Please enter all required fields'╩╩"
+		}
+	}
+};
+export default pjson

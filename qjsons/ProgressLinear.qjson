@@ -1,0 +1,1157 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_6",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container container--fluid'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VCard",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_8",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "true",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VContainer",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_23",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'container container--fluid'",
+													"T": "class"
+												},
+												"visible": {
+													"H": "true",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_10",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VCol",
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VProgressLinear",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_5",
+																									"T": "prop"
+																								},
+																								"qValue": {
+																									"H": "15",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "'accent'",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"striped": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"rounded": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"fixed": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"indeterminate": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"bottom": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"absolute": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"backgroundColor": {
+																									"H": "'white'",
+																									"T": "prop"
+																								},
+																								"bufferValue": {
+																									"H": "0",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_5"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"layout": {
+																									"dOpt": {
+																										"xs": []
+																									},
+																									"class": ""
+																								}
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_13",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_13"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_10"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														},
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_173",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VCol",
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VProgressLinear",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_175",
+																									"T": "prop"
+																								},
+																								"qValue": {
+																									"H": "50",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "'error'",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"striped": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"rounded": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"fixed": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"indeterminate": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"bottom": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"absolute": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"backgroundColor": {
+																									"H": "'white'",
+																									"T": "prop"
+																								},
+																								"bufferValue": {
+																									"H": "0",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_175"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"layout": {
+																									"dOpt": {
+																										"xs": []
+																									},
+																									"class": ""
+																								}
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_174",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_174"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_173"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														},
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_230",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VCol",
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VProgressLinear",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_232",
+																									"T": "prop"
+																								},
+																								"qValue": {
+																									"H": "30",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "'secondary'",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"striped": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"rounded": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"fixed": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"indeterminate": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"bottom": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"absolute": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"backgroundColor": {
+																									"H": "'white'",
+																									"T": "prop"
+																								},
+																								"bufferValue": {
+																									"H": "60",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_232"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"layout": {
+																									"dOpt": {
+																										"xs": []
+																									},
+																									"class": ""
+																								}
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_231",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_231"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_230"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														},
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_102",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VCol",
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VProgressLinear",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_104",
+																									"T": "prop"
+																								},
+																								"qValue": {
+																									"H": "100",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "'warning'",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"striped": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"rounded": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"fixed": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"indeterminate": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"bottom": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"absolute": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"backgroundColor": {
+																									"H": "'white'",
+																									"T": "prop"
+																								},
+																								"bufferValue": {
+																									"H": "0",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_104"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"layout": {
+																									"dOpt": {
+																										"xs": []
+																									},
+																									"class": ""
+																								}
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_103",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_103"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_102"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_23"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_8"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_6"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_6",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container container--fluid'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VCard",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_8",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VContainer",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_23",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'container container--fluid'╩╩",
+													"T": "class"
+												},
+												"visible": {
+													"H": "╬true╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_10",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VCol",
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VProgressLinear",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_5",
+																									"T": "prop"
+																								},
+																								"qValue": {
+																									"H": "╬15╩╩",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "╬'accent'╩╩",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"striped": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"rounded": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"fixed": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"indeterminate": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"bottom": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"absolute": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"backgroundColor": {
+																									"H": "╬'white'╩╩",
+																									"T": "prop"
+																								},
+																								"bufferValue": {
+																									"H": "╬0╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_5"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"layout": {
+																									"dOpt": {
+																										"xs": []
+																									},
+																									"class": ""
+																								},
+																								"compDomClasses": "v-progress-linear theme--light newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_13",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_13"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "col newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_10"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "row newDropBorder"
+															}
+														},
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_173",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VCol",
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VProgressLinear",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_175",
+																									"T": "prop"
+																								},
+																								"qValue": {
+																									"H": "╬50╩╩",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "╬'error'╩╩",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"striped": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"rounded": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"fixed": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"indeterminate": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"bottom": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"absolute": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"backgroundColor": {
+																									"H": "╬'white'╩╩",
+																									"T": "prop"
+																								},
+																								"bufferValue": {
+																									"H": "╬0╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_175"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"layout": {
+																									"dOpt": {
+																										"xs": []
+																									},
+																									"class": ""
+																								},
+																								"compDomClasses": "v-progress-linear v-progress-linear--striped theme--light newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_174",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_174"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "col newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_173"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "row newDropBorder"
+															}
+														},
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_230",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VCol",
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VProgressLinear",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_232",
+																									"T": "prop"
+																								},
+																								"qValue": {
+																									"H": "╬30╩╩",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "╬'secondary'╩╩",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"striped": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"rounded": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"fixed": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"indeterminate": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"bottom": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"absolute": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"backgroundColor": {
+																									"H": "╬'white'╩╩",
+																									"T": "prop"
+																								},
+																								"bufferValue": {
+																									"H": "╬60╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_232"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"layout": {
+																									"dOpt": {
+																										"xs": []
+																									},
+																									"class": ""
+																								},
+																								"compDomClasses": "v-progress-linear theme--light newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_231",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_231"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "col newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_230"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "row newDropBorder"
+															}
+														},
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_102",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VCol",
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VProgressLinear",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_104",
+																									"T": "prop"
+																								},
+																								"qValue": {
+																									"H": "╬100╩╩",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "╬'warning'╩╩",
+																									"T": "prop"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"striped": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"rounded": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"fixed": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"indeterminate": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"bottom": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"absolute": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"backgroundColor": {
+																									"H": "╬'white'╩╩",
+																									"T": "prop"
+																								},
+																								"bufferValue": {
+																									"H": "╬0╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_104"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"layout": {
+																									"dOpt": {
+																										"xs": []
+																									},
+																									"class": ""
+																								},
+																								"compDomClasses": "v-progress-linear v-progress-linear--rounded theme--light newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_103",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_103"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "col newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_102"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "row newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_23"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "container container--fluid newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_8"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "v-card v-sheet theme--light newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_6"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container container--fluid newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {
+		"tr-TR": {
+			"InDefault": "╬'Aktif'╩╩",
+			"DeclaredInvalid": "╬'Geçersiz-Döviz Kodu Değişikliği'╩╩",
+			"Replaced": "╬'Geçersiz-Dönüştürme'╩╩",
+			"true": "╬'Evet'╩╩",
+			"false": "╬'Hayır'╩╩",
+			"lbl_baslik": "╬'Döviz Tanım Ekranı'╩╩",
+			"lbl_currencyDesc": "╬'Döviz Kodu Açıklaması'╩╩",
+			"lbl_currencyCode": "╬'Döviz Kodu'╩╩",
+			"lbl_minUnitCode": "╬'Alt Birim Kodu'╩╩",
+			"lbl_convertable": "╬'Convertible Durumu'╩╩",
+			"lbl_status": "╬'Durum'╩╩",
+			"lbl_minUnitShName": "╬'Alt Birim Kodu Açıklaması'╩╩",
+			"lbl_minUnitamt": "╬'Alt Birim Büyüklüğü'╩╩",
+			"lbl_roundOffamt": "╬'Yuvarlama Adımı'╩╩",
+			"lbl_save": "╬'Kayıt işlemini onaylıyor musunuz ?'╩╩",
+			"lbl_close": "╬'Vazgeç'╩╩",
+			"lbl_yes": "╬'Evet'╩╩",
+			"lbl_no": "╬'Hayır'╩╩",
+			"lbl_kaydet": "╬'Kaydet'╩╩",
+			"label_Error_Title": "╬'Kayıt Başarısız'╩╩",
+			"CURRENCY_CODE_MUST_UNIQUE": "╬'Döviz kodu sistemde kayıtlıdır.'╩╩",
+			"lbl_clear": "╬'Temizle'╩╩",
+			"serviceResponse.data.fault.objectErrors[0].message": "╬'Döviz kodu sistemde kayıtlıdır.\t'╩╩"
+		},
+		"en-US": {
+			"InDefault": "╬'InDefault'╩╩",
+			"DeclaredInvalid": "╬'DeclaredInvalid'╩╩",
+			"Replaced": "╬'Replaced'╩╩",
+			"true": "╬'True'╩╩",
+			"false": "╬'False'╩╩",
+			"lbl_baslik": "╬'Create Currency'╩╩",
+			"lbl_currencyDesc": "╬'Description'╩╩",
+			"lbl_currencyCode": "╬'Currency Code'╩╩",
+			"lbl_minUnitCode": "╬'Minor Unit Short Name'╩╩",
+			"lbl_convertable": "╬'Convertable'╩╩",
+			"lbl_status": "╬'Status'╩╩",
+			"lbl_minUnitShName": "╬'Minor Unit Short Name'╩╩",
+			"lbl_minUnitamt": "╬'Minor Unit Amount'╩╩",
+			"lbl_roundOffamt": "╬'Round Off Amount'╩╩",
+			"lbl_save": "╬'Do you approve the registration?'╩╩",
+			"lbl_close": "╬'Close'╩╩",
+			"lbl_yes": "╬'Yes'╩╩",
+			"lbl_no": "╬'No'╩╩",
+			"lbl_kaydet": "╬'Save'╩╩",
+			"label_Error_Title": "╬'Error'╩╩",
+			"CURRENCY_CODE_MUST_UNIQUE": "╬'The currency code is registered in the system.'╩╩",
+			"lbl_clear": "╬'Clear'╩╩",
+			"serviceResponse.data.fault.objectErrors[0].message": "╬'The currency code is registered in the system.\t'╩╩"
+		}
+	}
+};
+export default pjson

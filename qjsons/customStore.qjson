@@ -1,0 +1,310 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "LiveConnection",
+			"P": {
+				"ID": {
+					"H": "connectionComp",
+					"T": "prop"
+				},
+				"secure": {
+					"H": "true",
+					"T": "prop"
+				},
+				"autoConnect": {
+					"H": "false",
+					"T": "prop"
+				},
+				"url": {
+					"H": "//'echo.websocket.org'\r\n//'/js.devexpress.com/Demos/NetCore/liveUpdateSignalRHub'\r\n//'/ws-feed.shrimpy.io/'\r\n//'/ws-feed.shrimpy.io?token=3f823368132fb12f72de8f35a5834e691559c2ec22141facc175d8530a014f668e569cc5aeb1188b993acb1c2e0215d16fe51f8b91de2a003227476ef7fb9634'\r\n//'/dex.binance.org/api/ws/BNB_BTCB-1DE@trades'\r\n//'/stream.cryptowat.ch/connect?apikey=XT11G0PE8VX02ZZ49RUR'\r\n//'/stream.cryptowat.ch/connect?apikey=CXRJ2EJTOLGUF4RNY4CF'\r\n'/ws-feed.pro.coinbase.com'",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"onMessageReceived": {
+					"H": "EM.trace(message)\r\n\r\n//GetAllData\r\nif(message.type =='last_match'){\r\n    if (!store.indexes){\r\n        store.indexes = {}\r\n        store.mydata = []\r\n        store.customStore = {}\r\n        dataGrid.dataSource = []\r\n    }\r\n    targetIndex = store.indexes[message.product_id]\r\n    if (!targetIndex){\r\n        EM.trace('pid: ' + message.product_id)\r\n        store.indexes[message.product_id] = store.mydata.length\r\n        targetIndex = store.mydata.length\r\n    }\r\n    EM.trace('targetIndex: ' + targetIndex)\r\n    EM.trace('store.mydata.length: ' + store.mydata.length)\r\n    store.mydata[targetIndex] = message\r\n    EM.trace(store.mydata)\r\n    \r\n    if(targetIndex == 2){\r\n        EM.trace('Bind All Data')\r\n        store.customStore = devex.createCustomStore({key='product_id', load = store.mydata})\r\n        dataGrid.dataSource = store.customStore\r\n    }\r\n    \r\n}\r\n\r\n//Update\r\nif(message.type=='match'){\r\n        EM.trace('Update Data')\r\n        store.customStore.push([{ 'type'= 'update', 'key'= message.product_id, 'data'= message }])     \r\n}\r\n",
+					"P": "message"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child"
+			}
+		},
+		{
+			"T": "DataGrid",
+			"P": {
+				"ID": {
+					"H": "dataGrid",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_32"
+			},
+			"O": {
+				"cType": "child"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_4",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "//Send socket subscription message on button clicked\r\n//Send() method opens connection if closed and enqueues data to be transmitted.\r\n\r\ntradeSubscription = {}\r\ntradeSubscription.type = 'subscribe'\r\ntradeSubscription.product_ids = ['BTC-USD','ETH-USD','ETH-EUR']\r\n\r\ntradeSubscription.channels = ['matches']\r\n\r\ntickerChannel = {}\r\ntickerChannel.name = 'ticker'\r\ntickerChannel.product_ids = ['BTC-USD','ETH-USD','ETH-EUR']\r\n\r\nconnectionComp.message = tradeSubscription\r\nconnectionComp.Send()",
+					"P": ""
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_5",
+									"T": "prop"
+								},
+								"text": {
+									"H": "'Send Message (CUSTOMSTORE)'",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_5"
+							},
+							"O": {
+								"cType": "child"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_4"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_10",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "connectionComp.Close()",
+					"P": ""
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_12",
+									"T": "prop"
+								},
+								"text": {
+									"H": "'Close Connection'",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_12"
+							},
+							"O": {
+								"cType": "child"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_10"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "LiveConnection",
+			"P": {
+				"ID": {
+					"H": "connectionComp",
+					"T": "prop"
+				},
+				"secure": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"autoConnect": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				},
+				"url": {
+					"H": "╬'/ws-feed.pro.coinbase.com'╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"onMessageReceived": {
+					"H": "╬()╣.╣EM╩╠trace╩╩╠message╩╩╬if╣==╣.╣message╩╠type╩╩╠'last_match'╩╩╠╬if╣!╠.╣store╩╠indexes╩╩╩╠╬=╣.╣store╩╠indexes╩╩╠{}╩╩╬=╣.╣store╩╠mydata╩╩╠[]╩╩╬=╣.╣store╩╠customStore╩╩╠{}╩╩╬=╣.╣dataGrid╩╠dataSource╩╩╠[]╩╩╩╠■╩╬=╣targetIndex╩╠[]╣.╣store╩╠indexes╩╩╠.╣message╩╠product_id╩╩╩╩╬if╣!╠targetIndex╩╩╠╬()╣.╣EM╩╠trace╩╩╠+╣'pid: '╩╠.╣message╩╠product_id╩╩╩╩╬=╣[]╣.╣store╩╠indexes╩╩╠.╣message╩╠product_id╩╩╩╠.╣.╣store╩╠mydata╩╩╠length╩╩╩╬=╣targetIndex╩╠.╣.╣store╩╠mydata╩╩╠length╩╩╩╩╠■╩╬()╣.╣EM╩╠trace╩╩╠+╣'targetIndex: '╩╠targetIndex╩╩╩╬()╣.╣EM╩╠trace╩╩╠+╣'store.mydata.length: '╩╠.╣.╣store╩╠mydata╩╩╠length╩╩╩╩╬=╣[]╣.╣store╩╠mydata╩╩╠targetIndex╩╩╠message╩╩╬()╣.╣EM╩╠trace╩╩╠.╣store╩╠mydata╩╩╩╬if╣==╣targetIndex╩╠2╩╩╠╬()╣.╣EM╩╠trace╩╩╠'Bind All Data'╩╩╬=╣.╣store╩╠customStore╩╩╠()╣.╣devex╩╠createCustomStore╩╩╠{}╠=╣key╩╠'product_id'╩╩╠=╣load╩╠.╣store╩╠mydata╩╩╩╩╩╩╬=╣.╣dataGrid╩╠dataSource╩╩╠.╣store╩╠customStore╩╩╩╩╠■╩╩╠■╩╬if╣==╣.╣message╩╠type╩╩╠'match'╩╩╠╬()╣.╣EM╩╠trace╩╩╠'Update Data'╩╩╬()╣.╣.╣store╩╠customStore╩╩╠push╩╩╠[]╠{}╠=╣'type'╩╠'update'╩╩╠=╣'key'╩╠.╣message╩╠product_id╩╩╩╠=╣'data'╩╠message╩╩╩╩╩╩╠■╩╩",
+					"P": "message"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child"
+			}
+		},
+		{
+			"T": "DataGrid",
+			"P": {
+				"ID": {
+					"H": "dataGrid",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_32"
+			},
+			"O": {
+				"cType": "child"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_4",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "╬=╣tradeSubscription╩╠{}╩╩╬=╣.╣tradeSubscription╩╠type╩╩╠'subscribe'╩╩╬=╣.╣tradeSubscription╩╠product_ids╩╩╠[]╠'BTC-USD'╩╠'ETH-USD'╩╠'ETH-EUR'╩╩╩╬=╣.╣tradeSubscription╩╠channels╩╩╠[]╠'matches'╩╩╩╬=╣tickerChannel╩╠{}╩╩╬=╣.╣tickerChannel╩╠name╩╩╠'ticker'╩╩╬=╣.╣tickerChannel╩╠product_ids╩╩╠[]╠'BTC-USD'╩╠'ETH-USD'╩╠'ETH-EUR'╩╩╩╬=╣.╣connectionComp╩╠message╩╩╠tradeSubscription╩╩╬()╣.╣connectionComp╩╠Send╩╩╩╩",
+					"P": ""
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_5",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬'Send Message (CUSTOMSTORE)'╩╩",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_5"
+							},
+							"O": {
+								"cType": "child"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_4"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_10",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "╬()╣.╣connectionComp╩╠Close╩╩╩╩",
+					"P": ""
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_12",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬'Close Connection'╩╩",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_12"
+							},
+							"O": {
+								"cType": "child"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_10"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {
+		"tr-TR": {}
+	},
+	"description": {}
+};
+export default pjson

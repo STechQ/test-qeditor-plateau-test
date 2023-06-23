@@ -1,0 +1,816 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_5",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'d-flex  justify-center pt-4'",
+					"T": "class"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_38",
+									"T": "prop"
+								},
+								"class": {
+									"H": "'col-lg-12 d-flex  justify-center pl-8 pr-8 pt-8'",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VForm",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_451",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'col-lg-10'",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VTextField",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_326",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "'Kiracı VKN'",
+																	"T": "prop"
+																},
+																"rules": {
+																	"H": "[Quick.validation.required()]",
+																	"T": "prop"
+																},
+																"type": {
+																	"H": "'required'",
+																	"T": "prop"
+																},
+																"error": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"class": {
+																	"H": "'col-lg-12 border-color:black'",
+																	"T": "class"
+																},
+																"outlined": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_326"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted v-text-field--enclosed v-text-field--outlined col-lg-12 border-color:black"
+															}
+														},
+														{
+															"T": "VTextField",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_473",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "'Kullanıcı VKN'",
+																	"T": "prop"
+																},
+																"rules": {
+																	"H": "[Quick.validation.required()]",
+																	"T": "prop"
+																},
+																"type": {
+																	"H": "'required'",
+																	"T": "prop"
+																},
+																"error": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"class": {
+																	"H": "'col-lg-12'",
+																	"T": "class"
+																},
+																"outlined": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_473"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted v-text-field--enclosed v-text-field--outlined col-lg-12"
+															}
+														},
+														{
+															"T": "VTextField",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_462",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "'Şifre'",
+																	"T": "prop"
+																},
+																"type": {
+																	"H": "'password'",
+																	"T": "prop"
+																},
+																"rules": {
+																	"H": "[Quick.validation.required()]",
+																	"T": "prop"
+																},
+																"class": {
+																	"H": "'col-lg-12'",
+																	"T": "class"
+																},
+																"outlined": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_462"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted v-text-field--enclosed v-text-field--outlined col-lg-12"
+															}
+														},
+														{
+															"T": "VCheckbox",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_357",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "'Beni Hatırla'",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_357"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "v-input theme--light v-input--selection-controls v-input--checkbox"
+															}
+														},
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_19",
+																	"T": "prop"
+																},
+																"class": {
+																	"H": "'d-flex  justify-center'",
+																	"T": "class"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_363",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'Merhaba'",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_363"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": ""
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_19"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "row d-flex  justify-center"
+															}
+														},
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_359",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "'info'",
+																	"T": "prop"
+																},
+																"regular": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_360",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'SIFRE OLUSTURUN'",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_360"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": ""
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_359"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-btn v-btn--flat v-btn--text theme--light v-size--default info--text"
+															}
+														},
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_832",
+																	"T": "prop"
+																},
+																"block": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "'Giriş'",
+																	"T": "text"
+																},
+																"class": {
+																	"H": "'sftt-btn-grd'",
+																	"T": "class"
+																},
+																"color": {
+																	"H": "'info'",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "EM.trace('Sifre:'+EdtrComp_462.lazyValue)\r\nEM.trace('Kullanıcı Adı:'+EdtrComp_473.lazyValue)\r\nEM.trace('Dil:'+EdtrComp_512.items[0].text)\r\n\r\nresult = Quick.validateAll()\r\nEM.trace('isValidationSuccess: ' + result)\r\n\r\nif(result){\r\n    EM.trace('Redirect to dashboard..')\r\n    Quick.goDashboard()\r\n}",
+																	"P": ""
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_843",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'Devam'",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_843"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": ""
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_832"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-btn v-btn--block v-btn--contained theme--light v-size--default info sftt-btn-grd"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_451"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-form col-lg-10"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_38"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row col-lg-12 d-flex  justify-center pl-8 pr-8 pt-8"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_5"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "d-flex  justify-center pt-4"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_5",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'d-flex  justify-center pt-4'╩╩",
+					"T": "class"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_38",
+									"T": "prop"
+								},
+								"class": {
+									"H": "╬'col-lg-12 d-flex  justify-center pl-8 pr-8 pt-8'╩╩",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VForm",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_451",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'col-lg-10'╩╩",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VTextField",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_326",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "╬'Kiracı VKN'╩╩",
+																	"T": "prop"
+																},
+																"rules": {
+																	"H": "╬[]╠()╣.╣.╣Quick╩╠validation╩╩╠required╩╩╩╩╩",
+																	"T": "prop"
+																},
+																"type": {
+																	"H": "╬'required'╩╩",
+																	"T": "prop"
+																},
+																"error": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"class": {
+																	"H": "╬'col-lg-12 border-color:black'╩╩",
+																	"T": "class"
+																},
+																"outlined": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_326"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted v-text-field--enclosed v-text-field--outlined col-lg-12 border-color:black"
+															}
+														},
+														{
+															"T": "VTextField",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_473",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "╬'Kullanıcı VKN'╩╩",
+																	"T": "prop"
+																},
+																"rules": {
+																	"H": "╬[]╠()╣.╣.╣Quick╩╠validation╩╩╠required╩╩╩╩╩",
+																	"T": "prop"
+																},
+																"type": {
+																	"H": "╬'required'╩╩",
+																	"T": "prop"
+																},
+																"error": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"class": {
+																	"H": "╬'col-lg-12'╩╩",
+																	"T": "class"
+																},
+																"outlined": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_473"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted v-text-field--enclosed v-text-field--outlined col-lg-12"
+															}
+														},
+														{
+															"T": "VTextField",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_462",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "╬'Şifre'╩╩",
+																	"T": "prop"
+																},
+																"type": {
+																	"H": "╬'password'╩╩",
+																	"T": "prop"
+																},
+																"rules": {
+																	"H": "╬[]╠()╣.╣.╣Quick╩╠validation╩╩╠required╩╩╩╩╩",
+																	"T": "prop"
+																},
+																"class": {
+																	"H": "╬'col-lg-12'╩╩",
+																	"T": "class"
+																},
+																"outlined": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_462"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted v-text-field--enclosed v-text-field--outlined col-lg-12"
+															}
+														},
+														{
+															"T": "VCheckbox",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_357",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "╬'Beni Hatırla'╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_357"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "v-input theme--light v-input--selection-controls v-input--checkbox"
+															}
+														},
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_19",
+																	"T": "prop"
+																},
+																"class": {
+																	"H": "╬'d-flex  justify-center'╩╩",
+																	"T": "class"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_363",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'Merhaba'╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_363"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": ""
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_19"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "row d-flex  justify-center"
+															}
+														},
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_359",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "╬'info'╩╩",
+																	"T": "prop"
+																},
+																"regular": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_360",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'SIFRE OLUSTURUN'╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_360"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": ""
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_359"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-btn v-btn--flat v-btn--text theme--light v-size--default info--text"
+															}
+														},
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_832",
+																	"T": "prop"
+																},
+																"block": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬'Giriş'╩╩",
+																	"T": "text"
+																},
+																"class": {
+																	"H": "╬'sftt-btn-grd'╩╩",
+																	"T": "class"
+																},
+																"color": {
+																	"H": "╬'info'╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "╬()╣.╣EM╩╠trace╩╩╠+╣'Sifre:'╩╠.╣EdtrComp_462╩╠lazyValue╩╩╩╩╬()╣.╣EM╩╠trace╩╩╠+╣'Kullanıcı Adı:'╩╠.╣EdtrComp_473╩╠lazyValue╩╩╩╩╬()╣.╣EM╩╠trace╩╩╠+╣'Dil:'╩╠.╣[]╣.╣EdtrComp_512╩╠items╩╩╠0╩╩╠text╩╩╩╩╬=╣result╩╠()╣.╣Quick╩╠validateAll╩╩╩╩╬()╣.╣EM╩╠trace╩╩╠+╣'isValidationSuccess: '╩╠result╩╩╩╬if╣result╩╠╬()╣.╣EM╩╠trace╩╩╠'Redirect to dashboard..'╩╩╬()╣.╣Quick╩╠goDashboard╩╩╩╩╠■╩╩",
+																	"P": ""
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_843",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'Devam'╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_843"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": ""
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_832"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-btn v-btn--block v-btn--contained theme--light v-size--default info sftt-btn-grd"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_451"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-form col-lg-10"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_38"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row col-lg-12 d-flex  justify-center pl-8 pr-8 pt-8"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_5"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "d-flex  justify-center pt-4"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {}
+};
+export default pjson

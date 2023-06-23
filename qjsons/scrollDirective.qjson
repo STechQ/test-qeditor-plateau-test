@@ -1,0 +1,598 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_6",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"EndRender": {
+					"H": "quick.store.set(\"number\", 0);\r\nfor (let i = 0; i < 11; i++) {\r\n    quick.Quick.createComponent({templateCompQID: \"EdtrComp_5\", newCompQID: i.toString(), place: ElementLocation.Before});\r\n    // components.EdtrComp_5.text += `Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi commodi earum tenetur. Asperiores dolorem placeat ab nobis iusto culpa, autem molestias molestiae quidem pariatur. Debitis beatae expedita nam facere perspiciatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ducimus cupiditate rerum officiis consequuntur laborum doloremque quaerat ipsa voluptates, nobis nam quis nulla ullam at corporis, similique ratione quasi illo!\\n`\r\n}",
+					"HL": "TS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_6"
+			},
+			"O": {
+				"cType": "child"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_7",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container container--fluid '",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VCard",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_46",
+									"T": "prop"
+								},
+								"color": {
+									"H": "'white'",
+									"T": "prop"
+								},
+								"elevation": {
+									"H": "0",
+									"T": "prop"
+								},
+								"outlined": {
+									"H": "true",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "true",
+									"T": "prop"
+								},
+								"class": {
+									"H": "'overflow-y-auto '",
+									"T": "class"
+								},
+								"height": {
+									"H": "400",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VBanner",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_2",
+													"T": "prop"
+												},
+												"sticky": {
+													"H": "true",
+													"T": "prop"
+												},
+												"dark": {
+													"H": "false",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'justify-center text-h5 font-weight-light'",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_1",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "'span'",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "'Scroll Me - Method invoked '",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_1"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														},
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_3",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "'span'",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "'0'",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_3"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"te:font-weight-bold"
+																		]
+																	},
+																	"class": "font-weight-bold"
+																}
+															}
+														},
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_4",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "'span'",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "' times'",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_4"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_2"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										},
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_5",
+													"T": "prop"
+												},
+												"tagType": {
+													"H": "'span'",
+													"T": "prop"
+												},
+												"visible": {
+													"H": "true",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'v-card__text pa-4 mb-4'",
+													"T": "class"
+												},
+												"text": {
+													"H": "'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi commodi earum tenetur. Asperiores dolorem placeat ab nobis iusto culpa, autem molestias molestiae quidem pariatur. Debitis beatae expedita nam facere perspiciatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ducimus cupiditate rerum officiis consequuntur laborum doloremque quaerat ipsa voluptates, nobis nam quis nulla ullam at corporis, similique ratione quasi illo!\\n'",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_5"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"sp:pr-4",
+															"sp:pb-4",
+															"sp:pl-4",
+															"sp:pt-4",
+															"sp:mb-4"
+														]
+													},
+													"class": "pr-4 pb-4 pl-4 pt-4 mb-4"
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_46"
+							},
+							"O": {
+								"cType": "slot"
+							},
+							"D": {
+								"scroll": {
+									"handler": {
+										"H": "let num: number = quick.store.get(\"number\");\r\ndebugger;\r\nconst scrollNum = ++num;\r\nquick.store.set(\"number\", scrollNum);\r\n\r\ncomponents.EdtrComp_3.text = scrollNum.toString();\r\nquick.EM.trace(\"qwe\")\r\nquick.EM.trace(scrollNum)",
+										"L": "handler",
+										"HL": "TS",
+										"P": "e:any"
+									},
+									"self": {
+										"H": "true",
+										"L": "options.self",
+										"HL": "QS"
+									}
+								}
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_7"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_6",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"EndRender": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.store.set(\"number\", 0);\r\nfor (var i = 0; i < 11; i++) {\r\n    quick.Quick.createComponent({ templateCompQID: \"EdtrComp_5\", newCompQID: i.toString(), place: ElementLocation.Before });\r\n    // components.EdtrComp_5.text += `Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi commodi earum tenetur. Asperiores dolorem placeat ab nobis iusto culpa, autem molestias molestiae quidem pariatur. Debitis beatae expedita nam facere perspiciatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ducimus cupiditate rerum officiis consequuntur laborum doloremque quaerat ipsa voluptates, nobis nam quis nulla ullam at corporis, similique ratione quasi illo!\\n`\r\n}\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfNl9FbmRSZW5kZXJfRS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkVkdHJDb21wXzZfRW5kUmVuZGVyX0UudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUNBLEtBQUssQ0FBQyxLQUFLLENBQUMsR0FBRyxDQUFDLFFBQVEsRUFBRSxDQUFDLENBQUMsQ0FBQztBQUM3QixLQUFLLElBQUksQ0FBQyxHQUFHLENBQUMsRUFBRSxDQUFDLEdBQUcsRUFBRSxFQUFFLENBQUMsRUFBRSxFQUFFO0lBQ3pCLEtBQUssQ0FBQyxLQUFLLENBQUMsZUFBZSxDQUFDLEVBQUMsZUFBZSxFQUFFLFlBQVksRUFBRSxVQUFVLEVBQUUsQ0FBQyxDQUFDLFFBQVEsRUFBRSxFQUFFLEtBQUssRUFBRSxlQUFlLENBQUMsTUFBTSxFQUFDLENBQUMsQ0FBQztJQUN0SCw0ZUFBNGU7Q0FDL2UiLCJzb3VyY2VzQ29udGVudCI6WyJcbnF1aWNrLnN0b3JlLnNldChcIm51bWJlclwiLCAwKTtcclxuZm9yIChsZXQgaSA9IDA7IGkgPCAxMTsgaSsrKSB7XHJcbiAgICBxdWljay5RdWljay5jcmVhdGVDb21wb25lbnQoe3RlbXBsYXRlQ29tcFFJRDogXCJFZHRyQ29tcF81XCIsIG5ld0NvbXBRSUQ6IGkudG9TdHJpbmcoKSwgcGxhY2U6IEVsZW1lbnRMb2NhdGlvbi5CZWZvcmV9KTtcclxuICAgIC8vIGNvbXBvbmVudHMuRWR0ckNvbXBfNS50ZXh0ICs9IGBMb3JlbSBpcHN1bSBkb2xvciBzaXQgYW1ldCBjb25zZWN0ZXR1ciBhZGlwaXNpY2luZyBlbGl0LiBNb2RpIGNvbW1vZGkgZWFydW0gdGVuZXR1ci4gQXNwZXJpb3JlcyBkb2xvcmVtIHBsYWNlYXQgYWIgbm9iaXMgaXVzdG8gY3VscGEsIGF1dGVtIG1vbGVzdGlhcyBtb2xlc3RpYWUgcXVpZGVtIHBhcmlhdHVyLiBEZWJpdGlzIGJlYXRhZSBleHBlZGl0YSBuYW0gZmFjZXJlIHBlcnNwaWNpYXRpcy4gTG9yZW0gaXBzdW0gZG9sb3Igc2l0IGFtZXQgY29uc2VjdGV0dXIgYWRpcGlzaWNpbmcgZWxpdC4gUmVwZWxsZW5kdXMgZHVjaW11cyBjdXBpZGl0YXRlIHJlcnVtIG9mZmljaWlzIGNvbnNlcXV1bnR1ciBsYWJvcnVtIGRvbG9yZW1xdWUgcXVhZXJhdCBpcHNhIHZvbHVwdGF0ZXMsIG5vYmlzIG5hbSBxdWlzIG51bGxhIHVsbGFtIGF0IGNvcnBvcmlzLCBzaW1pbGlxdWUgcmF0aW9uZSBxdWFzaSBpbGxvIVxcbmBcclxufVxuIGV4cG9ydHt9O1xuIl19",
+					"HL": "JS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_6"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_7",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container container--fluid '╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VCard",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_46",
+									"T": "prop"
+								},
+								"color": {
+									"H": "╬'white'╩╩",
+									"T": "prop"
+								},
+								"elevation": {
+									"H": "╬0╩╩",
+									"T": "prop"
+								},
+								"outlined": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"class": {
+									"H": "╬'overflow-y-auto '╩╩",
+									"T": "class"
+								},
+								"height": {
+									"H": "╬400╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VBanner",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_2",
+													"T": "prop"
+												},
+												"sticky": {
+													"H": "╬true╩╩",
+													"T": "prop"
+												},
+												"dark": {
+													"H": "╬false╩╩",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'justify-center text-h5 font-weight-light'╩╩",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_1",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "╬'span'╩╩",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬'Scroll Me - Method invoked '╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_1"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "q-label newDropBorder"
+															}
+														},
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_3",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "╬'span'╩╩",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬'0'╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_3"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"te:font-weight-bold"
+																		]
+																	},
+																	"class": "font-weight-bold"
+																},
+																"compDomClasses": "q-label font-weight-bold newDropBorder"
+															}
+														},
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_4",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "╬'span'╩╩",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬' times'╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_4"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "q-label newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_2"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-banner v-sheet theme--light v-banner--sticky justify-center text-h5 font-weight-light newDropBorder"
+											}
+										},
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_5",
+													"T": "prop"
+												},
+												"tagType": {
+													"H": "╬'span'╩╩",
+													"T": "prop"
+												},
+												"visible": {
+													"H": "╬true╩╩",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'v-card__text pa-4 mb-4'╩╩",
+													"T": "class"
+												},
+												"text": {
+													"H": "╬'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi commodi earum tenetur. Asperiores dolorem placeat ab nobis iusto culpa, autem molestias molestiae quidem pariatur. Debitis beatae expedita nam facere perspiciatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ducimus cupiditate rerum officiis consequuntur laborum doloremque quaerat ipsa voluptates, nobis nam quis nulla ullam at corporis, similique ratione quasi illo!\n'╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_5"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"sp:pr-4",
+															"sp:pb-4",
+															"sp:pl-4",
+															"sp:pt-4",
+															"sp:mb-4"
+														]
+													},
+													"class": "pr-4 pb-4 pl-4 pt-4 mb-4"
+												},
+												"compDomClasses": "q-label v-card__text pa-4 mb-4 pr-4 pb-4 pl-4 pt-4 newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_46"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "v-card v-sheet v-sheet--outlined theme--light elevation-0 white overflow-y-auto newDropBorder"
+							},
+							"D": {
+								"scroll": {
+									"handler": {
+										"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nvar num = quick.store.get(\"number\");\r\ndebugger;\r\nvar scrollNum = ++num;\r\nquick.store.set(\"number\", scrollNum);\r\ncomponents.EdtrComp_3.text = scrollNum.toString();\r\nquick.EM.trace(\"qwe\");\r\nquick.EM.trace(scrollNum);\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfNV9oYW5kbGVyX0QuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJFZHRyQ29tcF81X2hhbmRsZXJfRC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQ0EsSUFBSSxHQUFHLEdBQVcsS0FBSyxDQUFDLEtBQUssQ0FBQyxHQUFHLENBQUMsUUFBUSxDQUFDLENBQUM7QUFDNUMsUUFBUSxDQUFDO0FBQ1QsSUFBTSxTQUFTLEdBQUcsRUFBRSxHQUFHLENBQUM7QUFDeEIsS0FBSyxDQUFDLEtBQUssQ0FBQyxHQUFHLENBQUMsUUFBUSxFQUFFLFNBQVMsQ0FBQyxDQUFDO0FBRXJDLFVBQVUsQ0FBQyxVQUFVLENBQUMsSUFBSSxHQUFHLFNBQVMsQ0FBQyxRQUFRLEVBQUUsQ0FBQztBQUNsRCxLQUFLLENBQUMsRUFBRSxDQUFDLEtBQUssQ0FBQyxLQUFLLENBQUMsQ0FBQTtBQUNyQixLQUFLLENBQUMsRUFBRSxDQUFDLEtBQUssQ0FBQyxTQUFTLENBQUMsQ0FBQSIsInNvdXJjZXNDb250ZW50IjpbImRlY2xhcmUgdmFyIGU6YW55XG5sZXQgbnVtOiBudW1iZXIgPSBxdWljay5zdG9yZS5nZXQoXCJudW1iZXJcIik7XHJcbmRlYnVnZ2VyO1xyXG5jb25zdCBzY3JvbGxOdW0gPSArK251bTtcclxucXVpY2suc3RvcmUuc2V0KFwibnVtYmVyXCIsIHNjcm9sbE51bSk7XHJcblxyXG5jb21wb25lbnRzLkVkdHJDb21wXzMudGV4dCA9IHNjcm9sbE51bS50b1N0cmluZygpO1xyXG5xdWljay5FTS50cmFjZShcInF3ZVwiKVxyXG5xdWljay5FTS50cmFjZShzY3JvbGxOdW0pXG4gZXhwb3J0e307XG4iXX0=",
+										"L": "handler",
+										"HL": "JS",
+										"P": "e:any"
+									},
+									"self": {
+										"H": "╬true╩╩",
+										"L": "options.self",
+										"HL": "QS"
+									}
+								}
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_7"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container container--fluid newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {}
+};
+export default pjson

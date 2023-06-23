@@ -1,0 +1,287 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_7",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VCard",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_9",
+									"T": "prop"
+								},
+								"elevation": {
+									"H": "0",
+									"T": "prop"
+								},
+								"outlined": {
+									"H": "true",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "true",
+									"T": "prop"
+								},
+								"width": {
+									"H": "256",
+									"T": "prop"
+								},
+								"height": {
+									"H": "256",
+									"T": "prop"
+								},
+								"rounded": {
+									"H": "'xl'",
+									"T": "prop"
+								},
+								"class": {
+									"H": "'mx-auto '",
+									"T": "class"
+								},
+								"dark": {
+									"H": "false",
+									"T": "prop"
+								}
+							},
+							"E": {
+								"click": {
+									"H": "quick.this.color = \"primary\"\r\ncomponents.EdtrComp_2.text = \"Click Outside\";",
+									"P": "mouseEvent:unknown | undefined",
+									"HL": "TS"
+								}
+							},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_2",
+													"T": "prop"
+												},
+												"tagType": {
+													"H": "'span'",
+													"T": "prop"
+												},
+												"text": {
+													"H": "'Click Me'",
+													"T": "prop"
+												},
+												"visible": {
+													"H": "true",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'text-h6 text-md-h4 fill-height d-flex align-center justify-center'",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_2"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": []
+													},
+													"class": ""
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_9"
+							},
+							"O": {
+								"cType": "slot"
+							},
+							"D": {
+								"click-outside": {
+									"handler": {
+										"H": "quick.this.color = undefined;\r\ncomponents.EdtrComp_2.text = \"Click Me\"",
+										"L": "handler",
+										"HL": "TS",
+										"P": "e:any"
+									}
+								}
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_7"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_7",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VCard",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_9",
+									"T": "prop"
+								},
+								"elevation": {
+									"H": "╬0╩╩",
+									"T": "prop"
+								},
+								"outlined": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"width": {
+									"H": "╬256╩╩",
+									"T": "prop"
+								},
+								"height": {
+									"H": "╬256╩╩",
+									"T": "prop"
+								},
+								"rounded": {
+									"H": "╬'xl'╩╩",
+									"T": "prop"
+								},
+								"class": {
+									"H": "╬'mx-auto '╩╩",
+									"T": "class"
+								},
+								"dark": {
+									"H": "╬false╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {
+								"click": {
+									"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.this.color = \"primary\";\r\ncomponents.EdtrComp_2.text = \"Click Outside\";\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfOV9jbGlja19FLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiRWR0ckNvbXBfOV9jbGlja19FLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQSxLQUFLLENBQUMsSUFBSSxDQUFDLEtBQUssR0FBRyxTQUFTLENBQUE7QUFDNUIsVUFBVSxDQUFDLFVBQVUsQ0FBQyxJQUFJLEdBQUcsZUFBZSxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiZGVjbGFyZSB2YXIgbW91c2VFdmVudDp1bmtub3duIHwgdW5kZWZpbmVkXG5xdWljay50aGlzLmNvbG9yID0gXCJwcmltYXJ5XCJcclxuY29tcG9uZW50cy5FZHRyQ29tcF8yLnRleHQgPSBcIkNsaWNrIE91dHNpZGVcIjtcbiBleHBvcnR7fTtcbiJdfQ==",
+									"P": "mouseEvent:unknown | undefined",
+									"HL": "JS"
+								}
+							},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "QLabel",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_2",
+													"T": "prop"
+												},
+												"tagType": {
+													"H": "╬'span'╩╩",
+													"T": "prop"
+												},
+												"text": {
+													"H": "╬'Click Me'╩╩",
+													"T": "prop"
+												},
+												"visible": {
+													"H": "╬true╩╩",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'text-h6 text-md-h4 fill-height d-flex align-center justify-center'╩╩",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {},
+											"_Editor": {
+												"eID": "EdtrComp_2"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": []
+													},
+													"class": ""
+												},
+												"compDomClasses": "q-label text-h6 text-md-h4 fill-height d-flex align-center justify-center newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_9"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "v-card v-card--link v-sheet v-sheet--outlined theme--light elevation-0 rounded-xl mx-auto newDropBorder"
+							},
+							"D": {
+								"click-outside": {
+									"handler": {
+										"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.this.color = undefined;\r\ncomponents.EdtrComp_2.text = \"Click Me\";\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfMl9oYW5kbGVyX0QuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJFZHRyQ29tcF8yX2hhbmRsZXJfRC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQ0EsS0FBSyxDQUFDLElBQUksQ0FBQyxLQUFLLEdBQUcsU0FBUyxDQUFDO0FBQzdCLFVBQVUsQ0FBQyxVQUFVLENBQUMsSUFBSSxHQUFHLFVBQVUsQ0FBQSIsInNvdXJjZXNDb250ZW50IjpbImRlY2xhcmUgdmFyIGU6YW55XG5xdWljay50aGlzLmNvbG9yID0gdW5kZWZpbmVkO1xyXG5jb21wb25lbnRzLkVkdHJDb21wXzIudGV4dCA9IFwiQ2xpY2sgTWVcIlxuIGV4cG9ydHt9O1xuIl19",
+										"L": "handler",
+										"HL": "JS",
+										"P": "e:any"
+									}
+								}
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_7"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {}
+};
+export default pjson

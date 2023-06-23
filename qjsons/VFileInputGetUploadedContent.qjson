@@ -1,0 +1,223 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VFileInput",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_4",
+					"T": "prop"
+				},
+				"placeholder": {
+					"H": "'Select a file(Placeholder)'",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"change": {
+					"H": "quick.EM.trace(components.EdtrComp_4.accept)\r\nvar reader = new FileReader();\r\n\r\ndebugger\r\nif(components.EdtrComp_4.qValue.type=='text/plain'){\r\n        reader.readAsText(value)\r\n}\r\nelse{\r\n        reader.readAsDataURL(value)\r\n}\r\n reader.onload = () => {\r\n         (<any>components.EdtrComp_9).text=reader.result\r\n          }\r\n",
+					"P": "value:{ lastModified: number; lastModifiedDate: Date; name: string; size: number; type: string; desc: string; }",
+					"HL": "TS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_4"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		},
+		{
+			"T": "QLabel",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_9",
+					"T": "prop"
+				},
+				"tagType": {
+					"H": "'span'",
+					"T": "prop"
+				},
+				"text": {
+					"H": "'Text'",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_9"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_10",
+					"T": "prop"
+				},
+				"color": {
+					"H": "'primary'",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "EM.trace(EdtrComp_4.qValue)",
+					"P": "mouseEvent"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_11",
+									"T": "prop"
+								},
+								"text": {
+									"H": "'Test Button'",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_11"
+							},
+							"O": {
+								"cType": "child"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_10"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VFileInput",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_4",
+					"T": "prop"
+				},
+				"placeholder": {
+					"H": "╬'Select a file(Placeholder)'╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"change": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.EM.trace(components.EdtrComp_4.accept);\r\nvar reader = new FileReader();\r\ndebugger;\r\nif (components.EdtrComp_4.qValue.type == 'text/plain') {\r\n    reader.readAsText(value);\r\n}\r\nelse {\r\n    reader.readAsDataURL(value);\r\n}\r\nreader.onload = function () {\r\n    components.EdtrComp_9.text = reader.result;\r\n};\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfNF9jaGFuZ2VfRS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkVkdHJDb21wXzRfY2hhbmdlX0UudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUNBLEtBQUssQ0FBQyxFQUFFLENBQUMsS0FBSyxDQUFDLFVBQVUsQ0FBQyxVQUFVLENBQUMsTUFBTSxDQUFDLENBQUE7QUFDNUMsSUFBSSxNQUFNLEdBQUcsSUFBSSxVQUFVLEVBQUUsQ0FBQztBQUU5QixRQUFRLENBQUE7QUFDUixJQUFHLFVBQVUsQ0FBQyxVQUFVLENBQUMsTUFBTSxDQUFDLElBQUksSUFBRSxZQUFZLEVBQUM7SUFDM0MsTUFBTSxDQUFDLFVBQVUsQ0FBQyxLQUFLLENBQUMsQ0FBQTtDQUMvQjtLQUNHO0lBQ0ksTUFBTSxDQUFDLGFBQWEsQ0FBQyxLQUFLLENBQUMsQ0FBQTtDQUNsQztBQUNBLE1BQU0sQ0FBQyxNQUFNLEdBQUc7SUFDRixVQUFVLENBQUMsVUFBVyxDQUFDLElBQUksR0FBQyxNQUFNLENBQUMsTUFBTSxDQUFBO0FBQzlDLENBQUMsQ0FBQSIsInNvdXJjZXNDb250ZW50IjpbImRlY2xhcmUgdmFyIHZhbHVlOnsgbGFzdE1vZGlmaWVkOiBudW1iZXI7IGxhc3RNb2RpZmllZERhdGU6IERhdGU7IG5hbWU6IHN0cmluZzsgc2l6ZTogbnVtYmVyOyB0eXBlOiBzdHJpbmc7IGRlc2M6IHN0cmluZzsgfVxucXVpY2suRU0udHJhY2UoY29tcG9uZW50cy5FZHRyQ29tcF80LmFjY2VwdClcclxudmFyIHJlYWRlciA9IG5ldyBGaWxlUmVhZGVyKCk7XHJcblxyXG5kZWJ1Z2dlclxyXG5pZihjb21wb25lbnRzLkVkdHJDb21wXzQucVZhbHVlLnR5cGU9PSd0ZXh0L3BsYWluJyl7XHJcbiAgICAgICAgcmVhZGVyLnJlYWRBc1RleHQodmFsdWUpXHJcbn1cclxuZWxzZXtcclxuICAgICAgICByZWFkZXIucmVhZEFzRGF0YVVSTCh2YWx1ZSlcclxufVxyXG4gcmVhZGVyLm9ubG9hZCA9ICgpID0+IHtcclxuICAgICAgICAgKDxhbnk+Y29tcG9uZW50cy5FZHRyQ29tcF85KS50ZXh0PXJlYWRlci5yZXN1bHRcclxuICAgICAgICAgIH1cclxuXG4gZXhwb3J0e307XG4iXX0=",
+					"P": "value:{ lastModified: number; lastModifiedDate: Date; name: string; size: number; type: string; desc: string; }",
+					"HL": "JS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_4"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-input v-input--is-label-active v-input--is-dirty theme--light v-text-field v-text-field--is-booted v-text-field--placeholder v-file-input"
+			}
+		},
+		{
+			"T": "QLabel",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_9",
+					"T": "prop"
+				},
+				"tagType": {
+					"H": "╬'span'╩╩",
+					"T": "prop"
+				},
+				"text": {
+					"H": "╬'Text'╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_9"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "q-label "
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_10",
+					"T": "prop"
+				},
+				"color": {
+					"H": "╬'primary'╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "╬()╣.╣EM╩╠trace╩╩╠.╣EdtrComp_4╩╠qValue╩╩╩╩",
+					"P": "mouseEvent"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_11",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬'Test Button'╩╩",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_11"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "q-label "
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_10"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {}
+};
+export default pjson
