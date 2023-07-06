@@ -62,6 +62,7 @@ export declare class RenderingManager implements IContextItem {
     private getComponentParentInstance;
     RenderRoot(): Promise<void>;
     Render(jsonIndexParam: number): void;
+    private overrideChildStylesFromParent;
     /**
      * Error component property setter function
      * @param props Property dictionary that will be used for error component

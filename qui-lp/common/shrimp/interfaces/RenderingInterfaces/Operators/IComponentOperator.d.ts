@@ -8,5 +8,6 @@ export interface IComponentOperator {
     matchComponentStyles?: (compColl: IComponentCollection) => void;
     resetStyleDict?: () => void;
     resetStyleSelector?: (compCollection: IComponentCollection, stylePropName: string, breakPoint?: string) => void;
+    resetStyleCompCollection?: (compCollection: IComponentCollection) => void;
 }
 //# sourceMappingURL=IComponentOperator.d.ts.map

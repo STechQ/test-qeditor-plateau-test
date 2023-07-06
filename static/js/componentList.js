@@ -1457,7 +1457,8 @@ var componentOptions = {
             type: String
         },
         activeClass: {
-            type: String
+            type: String,
+            editorDefaultValue: "'primary'"
         },
         centerActive: {
             type: Boolean
@@ -3479,6 +3480,9 @@ nextIcon = 'mdi-plus'}`
         },
         readonly: {
             type: Boolean
+        },
+        rules: {
+            type: "Array<any>"
         },
         success: {
             type: Boolean

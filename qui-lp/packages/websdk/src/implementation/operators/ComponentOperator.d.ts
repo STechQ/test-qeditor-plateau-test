@@ -9,5 +9,6 @@ export declare class ComponentOperator implements IComponentOperator {
     matchComponentStyles(compColl: IComponentCollection): void;
     resetStyleDict(): void;
     resetStyleSelector(compCollection: IComponentCollection, stylePropName: string, breakPoint?: string): void;
+    resetStyleCompCollection(compCollection: IComponentCollection): void;
 }
 //# sourceMappingURL=ComponentOperator.d.ts.map

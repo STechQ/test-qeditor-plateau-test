@@ -1,5 +1,5 @@
 import { IComponentCollection } from "../../../../common/shrimp/interfaces/ComponentInterfaces/IComponentCollection";
-import { IStyleManager, StyleCB } from "../../../../common/shrimp/interfaces/quick/IStyleManager";
+import { IStyleManager, StyleCB, matchStyle } from "../../../../common/shrimp/interfaces/quick/IStyleManager";
 export declare class StyleManager implements IStyleManager {
     private static styleTag;
     private static index;
@@ -18,24 +18,11 @@ export declare class StyleManager implements IStyleManager {
         breakPoint?: string | undefined;
     }) => void;
     static matchComponentStyles: (compCollection: IComponentCollection) => void;
-    static matchStyleValue: ({ selector, selectorValue, styleValue, breakPoint, compType }: {
-        selector: string;
-        selectorValue: string;
-        styleValue: string;
-        breakPoint?: string | undefined;
-        compType: string;
-    }) => void;
-    static addStyleRule: ({ selector, selectorValue, styleValue, breakPoint, compType }: {
-        selector: string;
-        selectorValue: string;
-        styleValue: string;
-        breakPoint?: string | undefined;
-        compType: string;
-    }) => void;
+    static addStyleRule: (matchStyleParam: matchStyle) => void;
     static deleteStyleSelector: (compCollection: IComponentCollection, stylePropName: string, breakPoint?: string | undefined) => void;
-    private static deleteStyleRule;
+    static deleteCompCollectionStyle: (compCollection: IComponentCollection) => void;
+    private static deleteSheet;
+    private static addSheet;
     static fromCamelCase: (message: string) => string;
-    static matchSizeMinValue(sizeString?: string): string;
-    static matchSizeMaxValue(sizeString?: string): string;
 }
 //# sourceMappingURL=StyleManager.d.ts.map

@@ -1,20 +1,24 @@
-import { IPerfable } from "../../src/Performance/IPerfable";
 import { ContextManager } from "../../context";
+import { IPerfable } from "../../src/Performance/IPerfable";
 import { IVnode } from "../ComponentInterfaces/IVnode";
 import { IDictionary } from "../IDictionary";
 import { IDictionaryNullable } from "../IDictionaryNullable";
-import { CompGroupType } from "../quick/IWebSDK";
 import { IDomElement } from "../RenderingInterfaces/IDomElement";
-import { CTyped } from "./ICompJson";
-import { IComponent } from "./IComponent";
-import { ICreatedComponent } from "./ICreatedComponent";
-import { IEventCollection } from "./IEventCollection";
 import { IDoryJr } from "../RenderingInterfaces/IDoryJr";
 import { IHistoryItem } from "../RenderingInterfaces/IHistoryItem";
+import { CompGroupType } from "../quick/IWebSDK";
+import { CTyped, IStyleChild } from "./ICompJson";
+import { IComponent } from "./IComponent";
+import { ICreatedComponent } from "./ICreatedComponent";
 import { IDirectiveCollection } from "./IDirectiveCollection";
+import { IEventCollection } from "./IEventCollection";
 import { StyleValue } from "./IStyle";
 export declare type ScopedSlotCreatorFunc = (scopeObject?: IDictionary<any>) => Array<IComponentCollection>;
 export declare type CreatedFieldsHook = (created: ICreatedComponent) => void;
+export declare type styleChildOverride = {
+    iterateCount: number;
+    subComponents: IStyleChild;
+};
 export declare function CreateLightComponentCollection({ compType, compId, parentCompCollection, compDomClass, component }: {
     compType: string;
     compId: string;
@@ -63,6 +67,7 @@ export interface IComponentCollection extends ILightComponentCollection, IPerfab
     additionals?: Record<string, any>;
     compStyleValues?: StyleValue;
     qjsonInfo: qjsonCollectionInfo;
+    styledComponent?: string;
     SetChildrenFields({ children, childrenCreators }: {
         children?: IDictionary<Array<IComponentCollection>>;
         childrenCreators?: IDictionaryNullable<ScopedSlotCreatorFunc>;

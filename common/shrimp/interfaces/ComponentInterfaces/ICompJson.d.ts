@@ -130,9 +130,16 @@ export interface ICompJson {
     SA?: Array<string>;
     S?: StyleValue;
     _Editor: IEditorJson;
+    SC?: IStyleChild;
 }
 export interface ILayoutJson {
     dOpt: IDictionary<Array<string>>;
     class: string;
 }
+export declare type IStyleChild = {
+    [key: string]: overrideDictionary;
+};
+export declare type overrideDictionary = {
+    [key: string]: string;
+};
 //# sourceMappingURL=ICompJson.d.ts.map

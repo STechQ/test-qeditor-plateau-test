@@ -1,3 +1,4 @@
+import { IStyleChild } from "./ICompJson";
 export declare type StyleValue = Record<string, string | undefined | Record<string, string>>;
 export interface StyleItem {
     [key: string]: StyleValue | undefined;
@@ -41,7 +42,7 @@ export declare const COMPONENT_STYLE_TYPE: {
 export interface IComponentDefinition {
     componentStyleList: IComponentStyleInlineInterface;
     propMigrateList?: Record<string, string>;
-    inheritedChildList?: Record<string, Record<string, string>>;
+    inheritedChildList?: IStyleChild;
 }
 export declare type IAssetList = Record<string, Record<string, StyleValue>>;
 export declare enum FontWeights {

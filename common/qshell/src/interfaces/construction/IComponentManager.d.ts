@@ -19,7 +19,7 @@ export interface IComponentManager extends IContextItem {
     getComponentValue(compCollection: IComponentCollection): any;
     setComponentValue(compCollection: IComponentCollection, value: string): void;
     getComponentStyle(comp: IComponent): any;
-    setComponentStyle(compCollection: IComponentCollection, prop: string, value: string): void;
+    setComponentStyle(compCollection: IComponentCollection, prop?: string, value?: string): void;
     onComponentDestroy?: ({ parentComponent, childVDomElement, childKey, }: {
         parentComponent: IComponent;
         childVDomElement: IVnode;

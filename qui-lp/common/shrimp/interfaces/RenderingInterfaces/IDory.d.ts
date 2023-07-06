@@ -128,6 +128,7 @@ export interface IDory extends IContextItem {
     GetAssetValues(): IAssetList | undefined;
     ResetStyleDict(): void;
     DeleteStyleSelector(compCollection: IComponentCollection, stylePropName: string, breakPoint?: string): void;
+    DeleteStyleCompCollection(compCollection: IComponentCollection): void;
 }
 export declare const DoryContextName = "Dory";
 //# sourceMappingURL=IDory.d.ts.map

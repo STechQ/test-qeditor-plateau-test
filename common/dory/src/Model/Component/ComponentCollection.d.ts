@@ -87,5 +87,11 @@ export declare class ComponentCollection implements IComponentCollection {
      * @returns void
      */
     proxifyStyleField(compCollection: IComponentCollection): void;
+    /**
+     * Create style field on the component instance and proxify the newly created field
+     * @param compCollection Component collection
+     * @returns void
+     */
+    watchStyledComponent(compCollection: IComponentCollection): void;
 }
 //# sourceMappingURL=ComponentCollection.d.ts.map
