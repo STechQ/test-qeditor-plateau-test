@@ -909,136 +909,136 @@ var componentOptions = {
         },
         eventEnd: {
             type: String,
-            editorDefaultValue:"'end'"
+            editorDefaultValue: "'end'"
         },
-        eventHeight:{
-            type : Number,
-            editorDefaultValue:20
+        eventHeight: {
+            type: Number,
+            editorDefaultValue: 20
         },
-        eventMarginBottom:{
-            type : Number
+        eventMarginBottom: {
+            type: Number
         },
-        eventMore:{
+        eventMore: {
             type: Boolean
         },
-        eventMoreText:{
-            type:String
+        eventMoreText: {
+            type: String
         },
-        eventName:{
+        eventName: {
             type: "string | Function",
-            editorDefaultValue:"'name'"
+            editorDefaultValue: "'name'"
 
         },
-        eventColor:{
+        eventColor: {
             type: "string | Function",
-            editorDefaultValue:"'primary'",
+            editorDefaultValue: "'primary'",
             options: ["'primary'", "'secondary'", "'accent'", "'success'", "'error'", "'info'", "'warning'"]
 
         },
-        eventOverlapMode:{
+        eventOverlapMode: {
             type: "string | Function",
-            editorDefaultValue:"'stack'"
+            editorDefaultValue: "'stack'"
         },
-        eventOverlapThreshold:{
+        eventOverlapThreshold: {
             type: "string | number "
         },
-        eventRipple:{
+        eventRipple: {
             type: "boolean | object"
         },
-        eventStart:{
+        eventStart: {
             type: String,
-            editorDefaultValue:"'start'"
+            editorDefaultValue: "'start'"
         },
-        eventTextColor:{
+        eventTextColor: {
             type: "string | Function"
         },
-        eventTimed:{
+        eventTimed: {
             type: "string | Function",
-            editorDefaultValue:"'timed'"
+            editorDefaultValue: "'timed'"
         },
-        events:{
+        events: {
             type: "Array<any>",
             editorDefaultValue: `[{'name'= 'Event 1', 'start'= '2023-06-01', 'timed'= false,'color'='primary' },{'name'= 'Event 2', 'start'= '2023-06-03T11:30:00', 'end'= '2023-06-03T15:30:00', 'timed'= true,'color'='secondary'  },{'name'= 'Event 3', 'start'= '2023-06-13', 'end'= '2023-06-17', 'timed'= true,'color'='error'  },{'name'= 'Event 4', 'start'= '2023-06-21', 'end'= '2023-06-21', 'timed'= true,'color'='primary'  },{'name'= 'Event 5', 'start'= '2023-06-21', 'end'= '2023-06-23', 'timed'= true,'color'='secondary'  },{'name'= 'Event 6', 'start'= '2023-06-25', 'end'= '2023-06-25', 'timed'= true,'color'='error'  },{'name'= 'Event 7', 'start'= '2023-06-25', 'end'= '2023-06-25', 'timed'= true,'color'='success'  },{'name'= 'Event 8', 'start'= '2023-06-25', 'end'= '2023-06-25', 'timed'= true,'color'='warning'  } ]`
         },
-        firstInterval:{
+        firstInterval: {
             type: "number | string "
         },
-        firstTime:{
-           type: "number | string | object"
+        firstTime: {
+            type: "number | string | object"
         },
-        hideHeader:{
+        hideHeader: {
             type: Boolean
         },
-        intervalCount:{
+        intervalCount: {
             type: "number | string "
         },
-        intervalFormat:{
+        intervalFormat: {
             type: Function
         },
-        intervalHeight:{
+        intervalHeight: {
             type: "number | string "
         },
-        intervalMinutes:{
+        intervalMinutes: {
             type: "number | string "
         },
-        intervalStyle:{
+        intervalStyle: {
             type: Function
         },
-        intervalWidth:{
+        intervalWidth: {
             type: "number | string "
         },
-        light:{
+        light: {
             type: Boolean
         },
-        locale:{
+        locale: {
             type: String
         },
-        localeFirstDayOfYear:{
+        localeFirstDayOfYear: {
             type: "string | number "
         },
-        maxDays:{
+        maxDays: {
             type: Number
         },
-        minWeeks:{
+        minWeeks: {
             type: "any"
         },
-        monthFormat:{
+        monthFormat: {
             type: Function
         },
-        now:{
-            type : String
+        now: {
+            type: String
         },
-        shortIntervals:{
+        shortIntervals: {
             type: Boolean
         },
-        shortMonths:{
+        shortMonths: {
             type: Boolean
         },
-        shortWeekdays:{
+        shortWeekdays: {
             type: Boolean
         },
-        showIntervalLabel:{
+        showIntervalLabel: {
             type: Function
         },
-        showMonthOnFirst:{
+        showMonthOnFirst: {
             type: Boolean
         },
-        showWeek:{
+        showWeek: {
             type: Boolean
         },
-        start:{
+        start: {
             type: "string | number | date "
         },
-        type:{
+        type: {
             type: String,
-            editorDefaultValue:"'month'"
+            editorDefaultValue: "'month'"
         },
-        weekdayFormat:{
+        weekdayFormat: {
             type: Function
         },
-        weekdays:{
+        weekdays: {
             type: "Array<any> | string",
-            editorDefaultValue:[0,1,2,3,4,5,6]
+            editorDefaultValue: [0, 1, 2, 3, 4, 5, 6]
         }
 
     },
@@ -5283,6 +5283,32 @@ nextIcon = 'mdi-plus'}`
         visible: {
             type: Boolean,
             editorDefaultValue: "true"
+        }
+    },
+    QAnimation: {
+        source: [String, Object],
+        width: {
+            type: Number,
+            editorDefaultValue: 400
+        },
+        height: {
+            type: Number,
+            editorDefaultValue: 400
+        },
+        position: {
+            type: String
+        },
+        top: {
+            type: [String, Number],
+        },
+        right: {
+            type: [String, Number],
+        },
+        bottom: {
+            type: [String, Number],
+        },
+        left: {
+            type: [String, Number],
         }
     }
 };

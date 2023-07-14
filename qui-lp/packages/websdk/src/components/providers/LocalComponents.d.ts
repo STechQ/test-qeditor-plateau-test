@@ -112,6 +112,11 @@ declare const localComponents: {
         loaded: boolean;
         module: undefined;
     };
+    QAnimation: {
+        importFunc: () => Promise<void>;
+        loaded: boolean;
+        module: undefined;
+    };
     QVideo: {
         importFunc: () => Promise<void>;
         loaded: boolean;
