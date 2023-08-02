@@ -2,7 +2,7 @@ import { IQuickInputFormatOptions } from "./externalInterfaces";
 import { Context } from "./src/core/context";
 export declare class QuickInputFormat {
     private readonly context;
-    constructor(inputElm: HTMLInputElement, options: IQuickInputFormatOptions, context?: Context);
+    constructor(inputElm: HTMLInputElement | HTMLTextAreaElement, options: IQuickInputFormatOptions, context?: Context);
     run(): void;
     getUnmaskValue(): string;
 }

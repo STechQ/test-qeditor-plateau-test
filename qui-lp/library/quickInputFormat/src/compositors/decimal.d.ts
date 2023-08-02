@@ -7,6 +7,7 @@ export declare class Decimal implements ICompositor {
     private _unmaskedValue;
     private _skipInputEvent;
     private _isMinValueSet;
+    private _isPasted;
     constructor(context: Context);
     compose(): void;
     private setMinValueOnBlur;

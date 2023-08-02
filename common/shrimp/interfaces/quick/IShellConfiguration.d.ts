@@ -57,7 +57,7 @@ export interface IShellConfiguration {
         append?: boolean;
         childName: string;
     }) => void;
-    deleteComponent?: (compCollection: IComponentCollection) => void;
+    deleteComponent?: (compCollection: IComponentCollection | IDomElement) => void;
     coreComponentOverrider?(componentName: string): IComponentClassEngine | null;
     roleBaseViewHelper?: (key: string) => boolean;
     resetTimeTextField?: (componentContext: any) => void;
@@ -122,6 +122,9 @@ export interface IShellConfiguration {
         data: string;
         name: string;
     }) => boolean;
+    getComponent?: ({ compID }: {
+        compID: string;
+    }) => IDomElement;
 }
 export interface IHistoryBasedShellConfiguration {
     isEditor: boolean;

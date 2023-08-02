@@ -397,31 +397,6 @@ body .v-application .error--text {
 }
 
 /* V3.0 Changes */
-
-/* Class Name: custom-scroll */
-/* Components: v-card */
-/* Apple style 7-pixel scroll bar */
-/* Google Chrome */
-.custom-scroll::-webkit-scrollbar {
-  height: 7px;
-  width: 7px;
-  background-color: transparent;
-}
-
-.custom-scroll {
-  overflow: auto;
-}
-
-.custom-scroll::-webkit-scrollbar-thumb {
-  background-color: #7f7f7f;
-}
-
-/*Firefox and other scanner*/
-.custom-scroll {
-  scrollbar-width: 7px;
-  scrollbar-color: #7f7f7f transparent;
-}
-
 /* Class Name: devx-ellipsis-qlabel */
 /* Components: QLabel */
 /* Aciklama: DevExpress table içerisinde başlıkları 3 nokta çıkarmak için  */
@@ -662,6 +637,20 @@ body .v-application .v-tabs {
   border-left: 1px solid rgb(152 29 29 / 19%);
   border-right: 1px solid rgb(152 29 29 / 19%);
 }
+
+/* Aciklama: Tablonun en solundaki Actions kolonunun yatay scroll olduğunda sticky kalması */
+.stickytableleft table>tbody>tr>td.fixed,
+.stickytableleft table>thead>tr>th.fixed {
+  position: sticky !important;
+  position: -webkit-sticky !important;
+  left: 0;
+  z-index: 1;
+  background: white;
+  border-left: 1px solid rgb(152 29 29 / 19%);
+  border-right: 1px solid rgb(152 29 29 / 19%);
+}
+
+
 
 /* V3.2 Changes */
 

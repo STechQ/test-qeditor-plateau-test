@@ -6,18 +6,19 @@ import { IComponentInstanceTracker } from "../../../shrimp/interfaces/ComponentI
 import { IVnode } from "../../../shrimp/interfaces/ComponentInterfaces/IVnode";
 import { IDictionary } from "../../../shrimp/interfaces/IDictionary";
 import { IHostResponseData } from "../../../shrimp/interfaces/IHostResponseData";
+import { IDomElement } from "../../../shrimp/interfaces/RenderingInterfaces/IDomElement";
 import { INetwork } from "../../../shrimp/interfaces/quick/IContainerServices";
 import { ICookieAccess } from "../../../shrimp/interfaces/quick/ICookieAccess";
+import { IExcel } from "../../../shrimp/interfaces/quick/IExcel";
 import { IFormatConfiguration } from "../../../shrimp/interfaces/quick/IFormatConfiguration";
 import { IFormattingDefinition } from "../../../shrimp/interfaces/quick/IFormattingDefinition";
+import { ILocationPosition } from "../../../shrimp/interfaces/quick/ILocationPosition";
 import { IPlatform } from "../../../shrimp/interfaces/quick/IPlatform";
 import { IProcessManager } from "../../../shrimp/interfaces/quick/IProcessManager";
 import { IHistoryBasedShellConfiguration, IShellConfiguration } from "../../../shrimp/interfaces/quick/IShellConfiguration";
 import { IShellGlobalMethods } from "../../../shrimp/interfaces/quick/IShellGlobalMethods";
 import { IStore } from "../../../shrimp/interfaces/quick/IStore";
 import { IUrlOptions } from "../../../shrimp/interfaces/quick/IUrl";
-import { ILocationPosition } from "../../../shrimp/interfaces/quick/ILocationPosition";
-import { IExcel } from "../../../shrimp/interfaces/quick/IExcel";
 export declare class ShellConfiguration implements IShellConfiguration {
     network: INetwork;
     lridHelper?: (label: string, dataSource?: object | null) => string;
@@ -54,7 +55,7 @@ export declare class ShellConfiguration implements IShellConfiguration {
         append?: boolean;
         childName: string;
     }) => void;
-    deleteComponent?: (compCollection: IComponentCollection) => void;
+    deleteComponent?: (compCollection: IComponentCollection | IDomElement) => void;
     resetTimeTextField?: (componentContext: any) => void;
     roleBaseViewHelper?: (key: string) => boolean;
     redirectTo?({ url }: {
@@ -117,6 +118,9 @@ export declare class ShellConfiguration implements IShellConfiguration {
         data: string;
         name: string;
     }) => boolean;
+    getComponent?: ({ compID }: {
+        compID: string;
+    }) => IDomElement;
     constructor();
 }
 //# sourceMappingURL=ShellConfiguration.d.ts.map

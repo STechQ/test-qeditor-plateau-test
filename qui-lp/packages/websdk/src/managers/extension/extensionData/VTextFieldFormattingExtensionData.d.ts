@@ -1,6 +1,5 @@
 import InputMask from "inputmask";
 import { ContextManager } from "../../../../../../common/shrimp/context";
-import { IComponent } from "../../../../../../common/shrimp/interfaces/ComponentInterfaces/IComponent";
 import { IComponentCollection } from "../../../../../../common/shrimp/interfaces/ComponentInterfaces/IComponentCollection";
 import { IVnode } from "../../../../../../common/shrimp/interfaces/ComponentInterfaces/IVnode";
 import { IWebSDKSettingsWrapper } from "../../../../../../common/shrimp/interfaces/quick/IWebSDK";
@@ -18,6 +17,7 @@ export declare class VTextFieldFormattingExtensionData implements IExtensionData
     private setDefaultConfigurations;
     private static maskComplete;
     private static beforePaste;
-    static findInputDOM(component: IComponent): IVnode | undefined;
+    static findInputDOM(componentCollection: IComponentCollection): IVnode | undefined;
+    private static getComponentHtmlElement;
 }
 //# sourceMappingURL=VTextFieldFormattingExtensionData.d.ts.map

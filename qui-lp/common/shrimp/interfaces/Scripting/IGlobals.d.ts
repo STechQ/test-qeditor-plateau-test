@@ -13,6 +13,7 @@ import { PlatformType } from "../quick/IPlatform";
 import { IShell } from "../quick/IShell";
 import { IUrlOptions } from "../quick/IUrl";
 import { IExcel } from "../quick/IExcel";
+import { IDomElement } from "../RenderingInterfaces/IDomElement";
 export interface IGlobals_Request {
     async(requestObject: IRequest): Promise<INetworkResponse<Record<string, any>>> | undefined;
     download(requestObject: IDownloadRequest): void;
@@ -104,7 +105,7 @@ export interface IGlobals_Quick {
         templateChildName: string;
         newChildName?: string;
     }) => void;
-    deleteComponent: (componentInstance: IComponent) => void;
+    deleteComponent: (componentInstance: IComponent | IDomElement) => void;
     bind: ({ bindedObject, fields, }: {
         bindedObject: string | undefined;
         fields: Array<string> | object | undefined;
@@ -306,6 +307,7 @@ export interface IGlobalsBase {
     parent: IGlobals_parent;
     process?: IGlobals_process;
     return: (retVal: any) => void;
+    await: (retVal: any) => void;
     currentPage: IGlobals_currentPage;
     cryptography: IGlobals_cryptography;
     encoding: IGlobals_Encoding;

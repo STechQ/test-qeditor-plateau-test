@@ -55,7 +55,7 @@ export declare class GlobalMethodsImpl implements IGlobalMethods {
      * @param location Indicates the new component will be placed
      */
     private static decideCompLocation;
-    deleteComponent(compCollection: IComponentCollection): void;
+    deleteComponent(compCollection: IComponentCollection | IDomElement): void;
     setPageTitle(value: string): void;
     copyToClipboard(value: string): void;
     getCurrentPosition(): Promise<ILocationPosition>;
@@ -80,5 +80,8 @@ export declare class GlobalMethodsImpl implements IGlobalMethods {
     getPageTitle(): string | undefined;
     getFavicon(): string | undefined;
     getMinEngineLogType(): any;
+    getComponent({ compID }: {
+        compID: string;
+    }): IDomElement;
 }
 //# sourceMappingURL=GlobalMethodsImpl.d.ts.map

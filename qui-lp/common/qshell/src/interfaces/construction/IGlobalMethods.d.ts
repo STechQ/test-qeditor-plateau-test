@@ -40,7 +40,7 @@ export interface IGlobalMethods extends IContextItem {
         appendToChild?: boolean;
         childName: string;
     }) => void;
-    deleteComponent: (compCollection: IComponentCollection) => void;
+    deleteComponent: (compCollection: IComponentCollection | IDomElement) => void;
     setPageTitle(value: string): void;
     copyToClipboard(value: string): void;
     getCurrentPosition?: () => Promise<ILocationPosition> | undefined;
@@ -69,5 +69,8 @@ export interface IGlobalMethods extends IContextItem {
         data: string;
         name: string;
     }) => boolean;
+    getComponent?: ({ compID }: {
+        compID: string;
+    }) => IDomElement;
 }
 //# sourceMappingURL=IGlobalMethods.d.ts.map
