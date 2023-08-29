@@ -1,9 +1,9 @@
+import { AxiosRequestConfig } from 'axios';
 import { INetworkManager } from "../../../../common/qshell";
 import { IDictionary } from "../../../../common/shrimp/interfaces/IDictionary";
 import { IContainerServicesWrapper, INetwork, IRequestOptions } from "../../../../common/shrimp/interfaces/quick/IContainerServices";
 import { INetworkResponse } from "../../../../common/shrimp/interfaces/quick/INetworkResponse";
 import { IWebSDKSettingsWrapper } from "../../../../common/shrimp/interfaces/quick/IWebSDK";
-import { AxiosRequestConfig } from 'axios';
 import { StoreManager } from "../implementation/StoreManager";
 export default class NetworkManagerImpl implements INetworkManager {
     contextName: string;

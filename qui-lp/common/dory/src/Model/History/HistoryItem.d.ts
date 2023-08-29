@@ -12,7 +12,7 @@ import { DoryJr } from "../../DoryJr";
 import { HistoryManager } from "../../Managers/HistoryManager";
 export declare class HistoryItem implements IHistoryItem {
     private qjson;
-    private context;
+    context: ContextManager;
     controlDict: IDictionary<IComponentCollection>;
     controlList: Array<IComponentCollection>;
     private compInstDict?;

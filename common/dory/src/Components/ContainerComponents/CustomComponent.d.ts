@@ -9,7 +9,7 @@ import { PartialDisplayHookCb } from "../../../../shrimp/interfaces/RenderingInt
 import { IDoryJr } from "../../../../shrimp/interfaces/RenderingInterfaces/IDoryJr";
 import { RenderingContext } from "../../Context/RenderingContext";
 import { Dory } from "../../Dory";
-import { IContextTargetInst } from "../../Managers/PropCalcContext";
+import { IContextTargetInst } from "../../../../shrimp/interfaces/quick/IStore";
 export default class CustomComponent extends TSComponentBase implements IDynamicPropComponent {
     protected qJsonPath: string;
     protected props: IDictionary<any>;

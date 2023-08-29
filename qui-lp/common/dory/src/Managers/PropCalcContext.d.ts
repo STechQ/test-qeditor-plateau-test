@@ -1,24 +1,14 @@
 import { ContextManager, IContextItem } from "../../../shrimp/context";
-import { IComponentCollection } from "../../../shrimp/interfaces/ComponentInterfaces/IComponentCollection";
-export interface IContextTargetInst {
-    targetInstance: object | ICompDepTarget;
-}
-export interface IContextDepTarget {
-    instanceHolder: IContextTargetInst;
-    field: string;
-    depScriptValue: string;
-}
-export interface ICompDepTarget {
-    ref: IComponentCollection;
-}
+import { ScriptLang } from "../../../shrimp/interfaces/Scripting/scriptLang";
+import { ICompDepTarget, IContextDepTarget, IContextTargetInst, IStore } from "../../../shrimp/interfaces/quick/IStore";
 export declare class PropCalcContext implements IContextItem {
     static ContextName: string;
     contextName: string;
     private evaluator;
     private contextTarget?;
-    private context;
-    constructor(context: ContextManager);
-    watch(bindObject: object, field: string): void;
+    context: ContextManager;
+    constructor(context: ContextManager, contextTarget?: IContextDepTarget);
+    watch(bindObject: IStore, field: string): void;
     /**
      * Return prop context value
      * @param self 'this' will be lost when triggering from Object defined get method
@@ -31,7 +21,12 @@ export declare class PropCalcContext implements IContextItem {
      * @param self 'this' will be lost when triggering from Object defined get method
      * @param lang Evaluator language option
      */
-    private propContextDepTriggerer;
+    propContextDepTriggerer({ depTarget, dataItem, self, lang }: {
+        depTarget: IContextDepTarget;
+        dataItem: object;
+        self: PropCalcContext;
+        lang?: ScriptLang;
+    }): void;
     /**
      * Set prop context value with field and scriptValue
      * @param instanceHolder Target object instance

@@ -531,29 +531,58 @@ var InspireTreeHelper = /** @class */ (function () {
     };
     InspireTreeHelper.prototype.createInspireTreeEditorDisplayName = function (gm, pageJson) {
         if (!pageJson) {
-            return {};
+            return;
         }
-        var editorDisplayNames = {};
+        var displayNames = {};
+        var customComponentValues = {};
+        var returnNames = {
+            customCompValues: {},
+            editorDisplayNames: {}
+        };
         QJsonHelper_1.QJsonHelper.ForEachComp(pageJson, function (compJson, path) {
             var componentPim = gm.getComponentPim(compJson.T);
-            if (componentPim === null || componentPim === void 0 ? void 0 : componentPim.EditorDisplayName) {
-                if (!editorDisplayNames[compJson.T]) {
-                    editorDisplayNames[compJson.T] = componentPim.EditorDisplayName;
+            var componentList = gm.pimManager.GetComponentList();
+            if (compJson.T == "CustomComponent") {
+                Object.keys(componentList).forEach(function (element) {
+                    var _a;
+                    var compValue = componentList[element];
+                    Object.keys((_a = compValue.Component) === null || _a === void 0 ? void 0 : _a.Properties).forEach(function (item) {
+                        var _a, _b, _c, _d;
+                        if (((_a = compValue.Component) === null || _a === void 0 ? void 0 : _a.Properties[item].Name) == "QJsonPath" && ((_c = (_b = compValue.Component) === null || _b === void 0 ? void 0 : _b.Properties[item].DefaultValue) === null || _c === void 0 ? void 0 : _c.EditorDefault) == ((_d = compJson.P.QJsonPath) === null || _d === void 0 ? void 0 : _d.H)) {
+                            if (componentPim === null || componentPim === void 0 ? void 0 : componentPim.EditorDisplayName) {
+                                var componentDisplayName = componentList[element].Component.Name == "RenderingComponent" ? componentPim.EditorDisplayName : componentList[element].Component.Name;
+                                customComponentValues[compJson._Editor.eID] = componentDisplayName;
+                                returnNames.customCompValues = customComponentValues;
+                            }
+                        }
+                    });
+                });
+            }
+            else if (componentPim === null || componentPim === void 0 ? void 0 : componentPim.EditorDisplayName) {
+                if (!displayNames[compJson.T]) {
+                    displayNames[compJson.T] = componentPim.EditorDisplayName;
+                    returnNames.editorDisplayNames = displayNames;
                 }
             }
             return true;
         });
-        return editorDisplayNames;
+        return returnNames;
     };
     InspireTreeHelper.prototype.createInspireTreeJson = function (pageJson, editorDisplayNames) {
         var _this = this;
-        if (!pageJson) {
+        if (!pageJson || !editorDisplayNames) {
             return [];
         }
         var inspireTree = [];
+        var checkCompType = function (compJson) {
+            var _a, _b;
+            return compJson.T == "CustomComponent" ?
+                (_a = editorDisplayNames.customCompValues) === null || _a === void 0 ? void 0 : _a[compJson._Editor.eID] : (_b = editorDisplayNames.editorDisplayNames) === null || _b === void 0 ? void 0 : _b[compJson.T];
+        };
         QJsonHelper_1.QJsonHelper.ForEachComp(pageJson, function (compJson, path) {
             var traverse = function (compJson, isChildComp) {
-                var tempObj = _this.createInspireItem(compJson, editorDisplayNames === null || editorDisplayNames === void 0 ? void 0 : editorDisplayNames[compJson.T]);
+                var displayName = checkCompType(compJson);
+                var tempObj = _this.createInspireItem(compJson, displayName);
                 Object.keys(compJson.C).forEach(function (key) {
                     var childrenArray = compJson.C[key].c.filter(function (item) { return item != null; });
                     childrenArray.map(function (childComp) {
@@ -563,7 +592,8 @@ var InspireTreeHelper = /** @class */ (function () {
                             childNode = traverse(childComp, true);
                         }
                         else {
-                            childNode = _this.createInspireItem(childComp, editorDisplayNames === null || editorDisplayNames === void 0 ? void 0 : editorDisplayNames[childComp.T]);
+                            var childDisplayName = checkCompType(childComp);
+                            childNode = _this.createInspireItem(childComp, childDisplayName);
                         }
                         tempObj["children"].push(childNode);
                     });

@@ -17,9 +17,9 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     isFullScreen: Boolean;
 }, {
     closeDragElement(): void;
-    elementDrag(e: MouseEvent): void;
-    elementMobileDrag(e: TouchEvent): void;
-    dragMouseDown(e: MouseEvent): void;
+    elementDrag(mouseEvent: MouseEvent): void;
+    elementMobileDrag(mouseEvent: TouchEvent): void;
+    dragMouseDown(mouseEvent: MouseEvent): void;
     dragElement(elmnt: HTMLDivElement): void;
     closePopup(): void;
     toggleFullscreen(): void;

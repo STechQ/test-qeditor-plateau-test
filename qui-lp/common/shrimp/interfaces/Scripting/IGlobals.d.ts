@@ -79,8 +79,12 @@ export interface IGlobals_Quick {
     isObject: (obj: any) => boolean;
     validation: {
         required: (message?: any) => (value: any) => any;
-        minLength: (minLenght: any, message?: any) => (value: any) => any;
-        maxLength: (maxLenght: any, message?: any) => (value: any) => any;
+        minLength: (minLenght: any, message?: any, options?: {
+            disableNewlineOnCount?: boolean;
+        }) => (value: any) => any;
+        maxLength: (maxLenght: any, message?: any, options?: {
+            disableNewlineOnCount?: boolean;
+        }) => (value: any) => any;
         email: (message?: any) => (value: any) => any;
         iban: (message?: any) => (value: any) => any;
         regex: (regexVal: any, message?: any) => (value: any) => any;

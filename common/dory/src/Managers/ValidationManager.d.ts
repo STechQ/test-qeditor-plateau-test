@@ -35,8 +35,12 @@ export declare class ValidationManager {
     private iterateToChild;
     private showAlertBox;
     required(message: any): (value: any) => any;
-    minLength(minLength: any, message: any): (value: any) => any;
-    maxLength(maxLength: any, message: any): (value: any) => any;
+    minLength(minLength: any, message: any, options?: {
+        disableNewlineOnCount?: boolean;
+    }): (value: any) => any;
+    maxLength(maxLength: any, message: any, options?: {
+        disableNewlineOnCount?: boolean;
+    }): (value: any) => any;
     email(message: any): (value: any) => any;
     iban(message: any): (value: any) => any;
     regex(regexVal: any, message: any): (value: any) => any;

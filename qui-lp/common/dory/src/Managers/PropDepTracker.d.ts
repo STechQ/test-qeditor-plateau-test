@@ -1,4 +1,5 @@
-import { IContextDepTarget, PropCalcContext } from "./PropCalcContext";
+import { IContextDepTarget, IStore } from "../../../shrimp/interfaces/quick/IStore";
+import { PropCalcContext } from "./PropCalcContext";
 export declare class PropDepTracker {
     /**
      * Create a new object with one way binded
@@ -7,7 +8,7 @@ export declare class PropDepTracker {
      * @param depGetter Get method of subscribed fields
      * @param depTriggerer Trigger method of subscribers
      */
-    createDepTracker(bindObject: any, field: string | number | symbol, depGetter: (context: PropCalcContext) => IContextDepTarget | undefined, depTriggerer: Function, propCalcContext: PropCalcContext): void;
+    createDepTracker(bindObject: IStore, field: string | number | symbol, depGetter: (context: PropCalcContext) => IContextDepTarget | undefined, depTriggerer: Function, propCalcContext: PropCalcContext): void;
     /**
      * Getter of one way binded object
      * @param depGetter Get method of subscribed fields
