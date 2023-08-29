@@ -2128,6 +2128,83 @@ input[type="checkbox"] {
 .quickEditor .rightBlock select,
 .quickEditor .rightBlock input {
   margin-right: 10px;
+  outline: none;
+}
+
+.quickEditor.readOnly .tableList ul li,
+.quickEditor.readOnly .asset-div-flex,
+.quickEditor.readOnly li:has(.asset-div-flex),
+.quickEditor.readOnly .nemo_quickBtns button,
+.quickEditor.readOnly .autoTest_sourceCodeMonacoShell,
+.quickEditor.readOnly .createNamedCompBtn button,
+.quickEditor.readOnly .rightBlock .quick-checkbox-div-container,
+.quickEditor.readOnly .rightBlock .spaceNumber,
+.quickEditor.readOnly .rightBlock .collapsible-prop .dropdown i.mdi-plus,
+.quickEditor.readOnly .rightBlock .collapsible-prop .addLayout,
+.quickEditor.readOnly .rightBlock .collapsible-prop .deleteLayout,
+.quickEditor.readOnly .rightBlock .size_component button,
+.quickEditor.readOnly .rightBlock .color-picker-comp,
+.quickEditor.readOnly .rightBlock .asset-div,
+.quickEditor.readOnly .rightBlock .breakpoint_field .range-input input::-webkit-slider-thumb,
+.quickEditor.readOnly .rightBlock .slider_component input[type="range"],
+.quickEditor.readOnly .rightBlock .slider_component input[type="range"]::-webkit-slider-runnable-track,
+.quickEditor.readOnly .rightBlock .asset-select,
+.quickEditor.readOnly .rightBlock .alignComponent button,
+.quickEditor.readOnly .rightBlock .slider-grid input,
+.quickEditor.readOnly .rightBlock .editModeWrapper li {
+  pointer-events: none;
+}
+
+.quickEditor.readOnly .render-page.autoTest_dropArea div[draggable=true],
+.quickEditor.readOnly .inspireTree li[draggable=true] {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+.quickEditor.readOnly .rightBlock select,
+.quickEditor.readOnly .rightBlock .inputWrapper input:not(.filterInput),
+.quickEditor.readOnly .rightBlock .quick-style-input-select,
+.quickEditor.readOnly .rightBlock .buttonsGroup button,
+.quickEditor.readOnly .rightBlock .prop-switch,
+.quickEditor.readOnly .rightBlock .prop-switch .prop-switch-slider,
+.quickEditor.readOnly .rightBlock .autoTest_addCustomEvent_btn,
+.quickEditor.readOnly .rightBlock .autoTest_saveCodeEditor,
+.quickEditor.readOnly .overlayPopup .autoTest_saveCodeEditor,
+.quickEditor.readOnly .eventButtons button,
+.quickEditor.readOnly .quickEditor-container td .quickEditor-btn.quickEditor-black,
+.quickEditor.readOnly .quickEditor-container .paleGrayRows i,
+.quickEditor.readOnly .mega_drop_menu .menu_left:nth-of-type(1) .greybox li,
+.quickEditor.readOnly .quickEditor-container div:has(.autoTest_newLRID) > button {
+  pointer-events: none;
+  background-color: rgba(230,230,230, 0.12) !important;
+  color: rgba(0,0,0, .26) !important;
+  border-color: rgba(161, 161, 161, 0.3) !important;
+}
+
+.quickEditor.readOnly .rightBlock .inputWrapper,
+.quickEditor.readOnly .tableList ul,
+.quickEditor.readOnly .nemo_quickBtns,
+.quickEditor.readOnly .rightBlock .buttonsGroup,
+.quickEditor.readOnly .rightBlock .collapsible-prop .dropdown i.mdi-plus,
+.quickEditor.readOnly .rightBlock .collapsible-prop .addLayout,
+.quickEditor.readOnly .rightBlock .collapsible-prop .deleteLayount,
+.quickEditor.readOnly .rightBlock #EventEditor,
+.quickEditor.readOnly .rightBlock #PropertyEditor,
+.quickEditor.readOnly .rightBlock #settings-editor,
+.quickEditor.readOnly .rightBlock .eventButtons li,
+.quickEditor.readOnly .rightBlock .autoTest_saveCodeEditor,
+.quickEditor.readOnly .overlayPopup .autoTest_saveCodeEditor {
+  /* cursor: url('https://stechq.github.io/cdn/Idetemplates/disabled_visible.svg') 5 5, auto; */
+  cursor: not-allowed;
+}
+
+.quickEditor.readOnly .render-page.autoTest_dropArea .autoTest_sourceCodeSaveButton {
+  pointer-events: none;
+  background-color: rgba(200,200,200, 1) !important;
+  color: rgba(0,0,0, .26) !important;
+  border-color: rgba(161, 161, 161, 1) !important;
 }
 
 @media only screen and (min-width: 35em) {}
