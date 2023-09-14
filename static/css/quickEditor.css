@@ -2154,7 +2154,10 @@ input[type="checkbox"] {
 .quickEditor.readOnly .rightBlock .editModeWrapper li {
   pointer-events: none;
 }
-
+.quickEditor.readOnly .autoTest_sourceCodeMonacoShell .minimap.slider-mouseover {
+  pointer-events: auto;
+  cursor: default;
+}
 .quickEditor.readOnly .render-page.autoTest_dropArea div[draggable=true],
 .quickEditor.readOnly .inspireTree li[draggable=true] {
   -webkit-user-drag: none;

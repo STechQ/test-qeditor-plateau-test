@@ -15,6 +15,7 @@ export default class NetworkManagerImpl implements INetworkManager {
     checkPlateauIAM(qjson: any): Promise<void>;
     private getConfiguration;
     private manageOtherDomains;
+    private urlDecider;
     private getUrl;
     private openLoading;
     private closeLoading;

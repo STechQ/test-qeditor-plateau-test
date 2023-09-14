@@ -21,6 +21,7 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     readonly: boolean;
     rules: unknown[];
     value: string;
+    willAttach: boolean;
     textFieldClass: string;
     _renderingProps: any;
 }>;

@@ -18,6 +18,12 @@ export interface IWebSDKSettings {
     selectedServiceUrl?: string;
     settingsProxyYaml?: object;
     qjsonDirectPath?: boolean;
+    fileMap?: Array<{
+        id: string;
+        path: string;
+        name: string;
+        version: string;
+    }>;
     disableBackManagement?: boolean;
     backendInf?: IBackendInf;
     regionalDefinition?: Array<IRegionalDefinition>;
