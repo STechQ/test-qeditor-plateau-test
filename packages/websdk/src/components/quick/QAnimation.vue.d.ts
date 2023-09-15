@@ -13,6 +13,7 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     top: string | number;
     right: string | number;
     bottom: string | number;
+    zIndex: string | number;
     left: string | number;
 }>;
 export default _default;

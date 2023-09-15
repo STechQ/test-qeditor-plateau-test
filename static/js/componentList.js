@@ -5300,6 +5300,9 @@ nextIcon = 'mdi-plus'}`
         bottom: {
             type: [String, Number],
         },
+        zIndex: {
+            type: [String, Number],
+          },
         left: {
             type: [String, Number],
         }
