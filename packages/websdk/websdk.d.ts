@@ -47,6 +47,9 @@ declare class WebsdkContainer {
     private LoadJS;
     private LoadQjson;
     private configureLivePreview;
+    private registerServiceWorker;
+    onSWMessage(packId: any): Promise<void>;
+    sendMessage(msg: any): void;
 }
 declare function init(PlateauUIOptions?: IPlateauUIOptions, environmentInfo?: string): Promise<WebsdkContainer | undefined>;
 declare function createRenderer({ mountPoint }: {

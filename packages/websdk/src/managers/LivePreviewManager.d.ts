@@ -6,6 +6,12 @@ export declare class LivePreviewManager {
     constructor(targetWindow: Window);
     isItLivePreview(): Promise<string | undefined>;
     getLivePreviewSettings(): Promise<any | undefined>;
+    sendSwMessage(packId: any): Promise<{
+        type: "lpServiceWorkerRequestResponse";
+        resourceModel: string;
+        resourceId: string;
+        resourceType: string;
+    } | undefined>;
     setExternalQJsonRetriever(sdk: IWebSDK): void;
 }
 //# sourceMappingURL=LivePreviewManager.d.ts.map
