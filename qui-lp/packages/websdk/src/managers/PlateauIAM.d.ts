@@ -1,4 +1,4 @@
-import { ISettingsIAM, ISettingsIAMOptions } from '@stechquick/algae/lib/quick/IPlateauUI';
+import { ISettingsIAM } from '@stechquick/algae/lib/quick/IPlateauUI';
 import { IPlateauIAM } from "../../../../common/shrimp/interfaces/quick/IPlateauIAM";
 export declare class PlateauIAM implements IPlateauIAM {
     settingsIAM: ISettingsIAM | undefined;
@@ -7,7 +7,7 @@ export declare class PlateauIAM implements IPlateauIAM {
     private initOptions;
     private keycloak?;
     private iamPlateau;
-    setOptions(initOptions: ISettingsIAMOptions): void;
+    setOptions(iam: ISettingsIAM["iam"]): void;
     isAuthenticated(): true | undefined;
     init(callback: Function): Promise<void>;
     private constructIAMPlateau;

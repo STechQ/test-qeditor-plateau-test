@@ -1,7 +1,7 @@
-import { ISettingsIAM, ISettingsIAMOptions } from "@stechquick/algae/lib/quick/IPlateauUI";
+import { ISettingsIAM } from "@stechquick/algae/lib/quick/IPlateauUI";
 export interface IPlateauIAM {
     refreshPromise(): Promise<boolean | undefined>;
-    setOptions(initOptions: ISettingsIAMOptions): void;
+    setOptions(iam: ISettingsIAM["iam"]): void;
     isAuthenticated(): true | undefined;
     init(callback: Function): Promise<void>;
     logout(): void;

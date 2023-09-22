@@ -1,0 +1,2206 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container container--fluid'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_270",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_272",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "'span'",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "'required'",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_272"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"te:font-weight-bold",
+																			"tc:error--text"
+																		]
+																	},
+																	"class": "font-weight-bold error--text"
+																}
+															}
+														},
+														{
+															"T": "VTextField",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_273",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"rules": {
+																	"H": "\r\n[Quick.validation.required('This field must be filled.')]",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "'This field must be filled.'",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_273"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": []
+																	},
+																	"class": ""
+																}
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_271",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_271"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										},
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_275",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "'span'",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "'vkn'",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_275"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"te:font-weight-bold",
+																			"tc:error--text"
+																		]
+																	},
+																	"class": "font-weight-bold error--text"
+																}
+															}
+														},
+														{
+															"T": "VTextField",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_276",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"rules": {
+																	"H": "\r\n[Quick.validation.vkn('wrong vkn login.')]",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "'Enter your tax identification number.'",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_276"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_274",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_274"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_270"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "VRowComp",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_48",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "'span'",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "'MinLength'",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_48"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"te:font-weight-bold",
+																			"tc:error--text"
+																		]
+																	},
+																	"class": "font-weight-bold error--text"
+																}
+															}
+														},
+														{
+															"T": "VTextField",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_5",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"rules": {
+																	"H": "\r\n[Quick.validation.minLength(5,'Enter at least 5 characters')]",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "'enter at least 5 values'",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_5"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": []
+																	},
+																	"class": ""
+																}
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "VColComp",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_27"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										},
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_103",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "'span'",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "'MaxLength'",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_103"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"te:font-weight-bold",
+																			"tc:error--text"
+																		]
+																	},
+																	"class": "font-weight-bold error--text"
+																}
+															}
+														},
+														{
+															"T": "VTextField",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_45",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"rules": {
+																	"H": "\r\n[Quick.validation.maxLength(5,'You can enter up to 5 values.')]",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "'enter up to 5 values'",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_45"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_44",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_44"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_24"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_140",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_142",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "'span'",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "'email'",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_142"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"te:font-weight-bold",
+																			"tc:error--text"
+																		]
+																	},
+																	"class": "font-weight-bold error--text"
+																}
+															}
+														},
+														{
+															"T": "VTextField",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_143",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"rules": {
+																	"H": "\r\n[Quick.validation.email('You entered the wrong email')]",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "'enter your email address'",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_143"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": []
+																	},
+																	"class": ""
+																}
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_141",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_141"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										},
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_145",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "'span'",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "'iban'",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_145"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"te:font-weight-bold",
+																			"tc:error--text"
+																		]
+																	},
+																	"class": "font-weight-bold error--text"
+																}
+															}
+														},
+														{
+															"T": "VTextField",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_146",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"rules": {
+																	"H": "\r\n[Quick.validation.iban('You have entered an incorrect iban')]",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "'Enter your 26-digit iban number.'",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_146"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_144",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_144"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_140"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_191",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_193",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "'span'",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "'regex'",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_193"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"te:font-weight-bold",
+																			"tc:error--text"
+																		]
+																	},
+																	"class": "font-weight-bold error--text"
+																}
+															}
+														},
+														{
+															"T": "VTextField",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_194",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"rules": {
+																	"H": "\r\nmyregex=regex('^[0-9]*$')\r\n[Quick.validation.required(),Quick.validation.regex(myregex,'hatalı')]",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "'Only numbers must be entered.'",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_194"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": []
+																	},
+																	"class": ""
+																}
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_192",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_192"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										},
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_196",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "'span'",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "'regex'",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_196"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"te:font-weight-bold",
+																			"tc:error--text"
+																		]
+																	},
+																	"class": "font-weight-bold error--text"
+																}
+															}
+														},
+														{
+															"T": "VTextField",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_197",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"rules": {
+																	"H": "myregex=regex('^[a-zA-Z0-9]*$')\r\n[Quick.validation.required(),Quick.validation.regex(myregex,'hatalı')]",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "'Only numbers and letters must be entered.'",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_197"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_195",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_195"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_191"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_1",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_3",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "'span'",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "'regex'",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_3"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"te:font-weight-bold",
+																			"tc:error--text"
+																		]
+																	},
+																	"class": "font-weight-bold error--text"
+																}
+															}
+														},
+														{
+															"T": "VTextField",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_4",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"rules": {
+																	"H": "myregex=regex('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$')\r\n[Quick.validation.required(),Quick.validation.regex(myregex,'hatalı')]",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "'Escape Turkish characters.'",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_4"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": []
+																	},
+																	"class": ""
+																}
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_2",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_2"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										},
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_7",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "'span'",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "'tckn'",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_7"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"te:font-weight-bold",
+																			"tc:error--text"
+																		]
+																	},
+																	"class": "font-weight-bold error--text"
+																}
+															}
+														},
+														{
+															"T": "VTextField",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_8",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"rules": {
+																	"H": "\r\n[Quick.validation.tckn('Incorrect TC ID entry.')]",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "'Enter your 11-digit TR ID number.'",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_8"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_6",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_6"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_1"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_22"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container container--fluid'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_270",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_272",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "╬'span'╩╩",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬'required'╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_272"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"te:font-weight-bold",
+																			"tc:error--text"
+																		]
+																	},
+																	"class": "font-weight-bold error--text"
+																},
+																"compDomClasses": "q-label font-weight-bold error--text newDropBorder"
+															}
+														},
+														{
+															"T": "VTextField",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_273",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"rules": {
+																	"H": "╬[]╠()╣.╣.╣Quick╩╠validation╩╩╠required╩╩╠'This field must be filled.'╩╩╩╩",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "╬'This field must be filled.'╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_273"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": []
+																	},
+																	"class": ""
+																},
+																"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted undefined newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_271",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_271"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											}
+										},
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_275",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "╬'span'╩╩",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬'vkn'╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_275"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"te:font-weight-bold",
+																			"tc:error--text"
+																		]
+																	},
+																	"class": "font-weight-bold error--text"
+																},
+																"compDomClasses": "q-label font-weight-bold error--text newDropBorder"
+															}
+														},
+														{
+															"T": "VTextField",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_276",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"rules": {
+																	"H": "╬[]╠()╣.╣.╣Quick╩╠validation╩╩╠vkn╩╩╠'wrong vkn login.'╩╩╩╩",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "╬'Enter your tax identification number.'╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_276"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted undefined newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_274",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_274"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_270"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "VRowComp",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_48",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "╬'span'╩╩",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬'MinLength'╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_48"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"te:font-weight-bold",
+																			"tc:error--text"
+																		]
+																	},
+																	"class": "font-weight-bold error--text"
+																},
+																"compDomClasses": "q-label font-weight-bold error--text newDropBorder"
+															}
+														},
+														{
+															"T": "VTextField",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_5",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"rules": {
+																	"H": "╬[]╠()╣.╣.╣Quick╩╠validation╩╩╠minLength╩╩╠5╩╠'Enter at least 5 characters'╩╩╩╩",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "╬'enter at least 5 values'╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_5"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": []
+																	},
+																	"class": ""
+																},
+																"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted undefined newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "VColComp",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_27"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											}
+										},
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_103",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "╬'span'╩╩",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬'MaxLength'╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_103"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"te:font-weight-bold",
+																			"tc:error--text"
+																		]
+																	},
+																	"class": "font-weight-bold error--text"
+																},
+																"compDomClasses": "q-label font-weight-bold error--text newDropBorder"
+															}
+														},
+														{
+															"T": "VTextField",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_45",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"rules": {
+																	"H": "╬[]╠()╣.╣.╣Quick╩╠validation╩╩╠maxLength╩╩╠5╩╠'You can enter up to 5 values.'╩╩╩╩",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "╬'enter up to 5 values'╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_45"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted undefined newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_44",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_44"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_24"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_140",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_142",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "╬'span'╩╩",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬'email'╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_142"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"te:font-weight-bold",
+																			"tc:error--text"
+																		]
+																	},
+																	"class": "font-weight-bold error--text"
+																},
+																"compDomClasses": "q-label font-weight-bold error--text newDropBorder"
+															}
+														},
+														{
+															"T": "VTextField",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_143",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"rules": {
+																	"H": "╬[]╠()╣.╣.╣Quick╩╠validation╩╩╠email╩╩╠'You entered the wrong email'╩╩╩╩",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "╬'enter your email address'╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_143"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": []
+																	},
+																	"class": ""
+																},
+																"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted undefined newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_141",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_141"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											}
+										},
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_145",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "╬'span'╩╩",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬'iban'╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_145"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"te:font-weight-bold",
+																			"tc:error--text"
+																		]
+																	},
+																	"class": "font-weight-bold error--text"
+																},
+																"compDomClasses": "q-label font-weight-bold error--text newDropBorder"
+															}
+														},
+														{
+															"T": "VTextField",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_146",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"rules": {
+																	"H": "╬[]╠()╣.╣.╣Quick╩╠validation╩╩╠iban╩╩╠'You have entered an incorrect iban'╩╩╩╩",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "╬'Enter your 26-digit iban number.'╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_146"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted undefined newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_144",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_144"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_140"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_191",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_193",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "╬'span'╩╩",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬'regex'╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_193"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"te:font-weight-bold",
+																			"tc:error--text"
+																		]
+																	},
+																	"class": "font-weight-bold error--text"
+																},
+																"compDomClasses": "q-label font-weight-bold error--text newDropBorder"
+															}
+														},
+														{
+															"T": "VTextField",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_194",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"rules": {
+																	"H": "╬=╣myregex╩╠()╣regex╩╠'^[0-9]*$'╩╩╩╬[]╠()╣.╣.╣Quick╩╠validation╩╩╠required╩╩╩╠()╣.╣.╣Quick╩╠validation╩╩╠regex╩╩╠myregex╩╠'hatalı'╩╩╩╩",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "╬'Only numbers must be entered.'╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_194"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": []
+																	},
+																	"class": ""
+																},
+																"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted undefined newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_192",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_192"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											}
+										},
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_196",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "╬'span'╩╩",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬'regex'╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_196"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"te:font-weight-bold",
+																			"tc:error--text"
+																		]
+																	},
+																	"class": "font-weight-bold error--text"
+																},
+																"compDomClasses": "q-label font-weight-bold error--text newDropBorder"
+															}
+														},
+														{
+															"T": "VTextField",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_197",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"rules": {
+																	"H": "╬=╣myregex╩╠()╣regex╩╠'^[a-zA-Z0-9]*$'╩╩╩╬[]╠()╣.╣.╣Quick╩╠validation╩╩╠required╩╩╩╠()╣.╣.╣Quick╩╠validation╩╩╠regex╩╩╠myregex╩╠'hatalı'╩╩╩╩",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "╬'Only numbers and letters must be entered.'╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_197"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted undefined newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_195",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_195"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_191"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_1",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_3",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "╬'span'╩╩",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬'regex'╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_3"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"te:font-weight-bold",
+																			"tc:error--text"
+																		]
+																	},
+																	"class": "font-weight-bold error--text"
+																},
+																"compDomClasses": "q-label font-weight-bold error--text newDropBorder"
+															}
+														},
+														{
+															"T": "VTextField",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_4",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"rules": {
+																	"H": "╬=╣myregex╩╠()╣regex╩╠'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$'╩╩╩╬[]╠()╣.╣.╣Quick╩╠validation╩╩╠required╩╩╩╠()╣.╣.╣Quick╩╠validation╩╩╠regex╩╩╠myregex╩╠'hatalı'╩╩╩╩",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "╬'Escape Turkish characters.'╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_4"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": []
+																	},
+																	"class": ""
+																},
+																"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted undefined newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_2",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_2"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											}
+										},
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_7",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "╬'span'╩╩",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬'tckn'╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_7"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"te:font-weight-bold",
+																			"tc:error--text"
+																		]
+																	},
+																	"class": "font-weight-bold error--text"
+																},
+																"compDomClasses": "q-label font-weight-bold error--text newDropBorder"
+															}
+														},
+														{
+															"T": "VTextField",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_8",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"rules": {
+																	"H": "╬[]╠()╣.╣.╣Quick╩╠validation╩╩╠tckn╩╩╠'Incorrect TC ID entry.'╩╩╩╩",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "╬'Enter your 11-digit TR ID number.'╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_8"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted undefined newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_6",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_6"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_1"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_22"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container container--fluid newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"opt": {}
+};
+export default pjson

@@ -28,6 +28,7 @@ export interface IWebSDKSettings {
     backendInf?: IBackendInf;
     regionalDefinition?: Array<IRegionalDefinition>;
     cssPath?: Array<string> | Record<string, Array<string>>;
+    enableClientCache?: boolean;
     pipelineqjson?: string;
     alertqjson?: string;
     loadingqjson?: string;

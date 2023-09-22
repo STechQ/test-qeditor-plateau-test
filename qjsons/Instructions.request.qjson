@@ -1,0 +1,1225 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_81",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"closeVisible": {
+					"H": "components.EdtrComp_29.visible = false;\r\ncomponents.EdtrComp_90.visible = false;",
+					"C": true,
+					"HL": "TS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_81"
+			},
+			"O": {
+				"cType": "child"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container container--fluid'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_3",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_8",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "'primary'",
+																	"T": "prop"
+																},
+																"depressed": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"elevation": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"height": {
+																	"H": "'40px'",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "quick.MM.trigger(\"closeVisible\");\r\n\r\nconst req: IRequest = {\r\n    url: \"https://reqres.in/api/users?page=2\",\r\n    data: null,\r\n    blockRender: false,\r\n    http: \"get\",\r\n    onFail: \"failEvent\",\r\n    onSuccess: \"successEvent\",\r\n    responseField: \"usersPage\"\r\n};\r\n\r\nquick.Request.async(req);",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "TS"
+																},
+																"successEvent": {
+																	"H": "components.EdtrComp_29.visible = true;\r\ncomponents.EdtrComp_40.items = response.usersPage.data",
+																	"C": true,
+																	"HL": "TS"
+																},
+																"failEvent": {
+																	"H": "debugger;\r\ndeclare var error:INetworkError\r\nquick.EM.trace(error.response)",
+																	"C": true,
+																	"HL": "TS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_11",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'Get Request'",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_11"
+																			},
+																			"O": {
+																				"cType": "child"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_8"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_6",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_6"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										},
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_23",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "'primary'",
+																	"T": "prop"
+																},
+																"depressed": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"elevation": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"height": {
+																	"H": "'40px'",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "quick.MM.trigger(\"closeVisible\");\r\n\r\nconst req: IRequest = {\r\n    url: \"https://reqres.in/api/users\",\r\n    data: {\r\n        \"name\": \"morpheus\",\r\n        \"job\": \"leader\"\r\n    },\r\n    blockRender: false,\r\n    http: \"post\",\r\n    onFail: \"onFail\",\r\n    onSuccess: \"successEvent\",\r\n    responseField: \"createUser\"\r\n};\r\n\r\nquick.Request.async(req);",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "TS"
+																},
+																"successEvent": {
+																	"H": "components.EdtrComp_29.visible = false;\r\ncomponents.EdtrComp_90.visible = true;\r\ncomponents.EdtrComp_113.text = \"Successful request\"\r\n\r\ncomponents.EdtrComp_99.color = \"primary\";\r\ncomponents.EdtrComp_99.icon = \"mdi-check-circle\";\r\nquick.EM.trace(response.createUser);",
+																	"C": true,
+																	"HL": "TS"
+																},
+																"failEvent": {
+																	"H": "debugger;\r\ndeclare var error:INetworkError\r\nquick.EM.trace(error.response)",
+																	"C": true,
+																	"HL": "TS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_24",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'Post Request'",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_24"
+																			},
+																			"O": {
+																				"cType": "child"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_23"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_22",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_22"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										},
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_18",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "'primary'",
+																	"T": "prop"
+																},
+																"depressed": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"elevation": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"height": {
+																	"H": "'40px'",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "quick.MM.trigger(\"closeVisible\")\r\n\r\nconst req: IRequest = {\r\n    url: \"https://reqres.in/api/register\",\r\n    data: {\r\n        \"email\": \"sydney@fife\"\r\n    },\r\n    blockRender: false,\r\n    http: \"post\",\r\n    onFail: \"failEvent\",\r\n    onSuccess: null,\r\n    responseField: null\r\n};\r\n\r\nquick.Request.async(req);",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "TS"
+																},
+																"failEvent": {
+																	"H": "declare let error;\r\nquick.EM.trace(\"Error Response\")\r\nquick.EM.trace(error.response);\r\nquick.EM.trace(\"Error Stack\")\r\nquick.EM.trace(error.stack);\r\nquick.EM.trace(\"Error request\")\r\nquick.EM.trace(error.request);\r\n\r\ncomponents.EdtrComp_90.visible = true;\r\ncomponents.EdtrComp_99.icon = \"mdi-alert-circle\";\r\ncomponents.EdtrComp_99.color = \"error\";\r\ncomponents.EdtrComp_113.text = \"Unsuccessful request\";",
+																	"C": true,
+																	"HL": "TS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_19",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'Unsuccessful Request'",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_19"
+																			},
+																			"O": {
+																				"cType": "child"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_18"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_17",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_17"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_3"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_29",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "false",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VDataTable",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_40",
+																	"T": "prop"
+																},
+																"footerProps": {
+																	"H": "{showFirstLastPage = true,\nfirstIcon = 'mdi-arrow-collapse-left',\nlastIcon = 'mdi-arrow-collapse-right',\nprevIcon = 'mdi-minus',\nnextIcon = 'mdi-plus'}",
+																	"T": "prop"
+																},
+																"headers": {
+																	"H": "[{ text = 'ID', value= 'id'},\n{ text = 'First Name', value= 'first_name' },\n{ text = 'Last Name', value= 'last_name' },\n{ text = 'E-mail', value= 'email' }]",
+																	"T": "prop"
+																},
+																"itemsPerPage": {
+																	"H": "5",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_40"
+															},
+															"O": {
+																"cType": "scopedSlot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_34",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_34"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_29"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_90",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "false",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VAlert",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_99",
+																	"T": "prop"
+																},
+																"border": {
+																	"H": "'top'",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "'primary'",
+																	"T": "prop"
+																},
+																"closeIcon": {
+																	"H": "'mdi-close-circle'",
+																	"T": "prop"
+																},
+																"coloredBorder": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"dismissible": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"elevation": {
+																	"H": "4",
+																	"T": "prop"
+																},
+																"icon": {
+																	"H": "'mdi-check-circle'",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_113",
+																					"T": "prop"
+																				},
+																				"tagType": {
+																					"H": "'span'",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'Text'",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_113"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_99"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_97",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_97"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_90"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_81",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"closeVisible": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ncomponents.EdtrComp_29.visible = false;\r\ncomponents.EdtrComp_90.visible = false;\r\n",
+					"C": true,
+					"HL": "JS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_81"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container container--fluid'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_3",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_8",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "╬'primary'╩╩",
+																	"T": "prop"
+																},
+																"depressed": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"elevation": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"height": {
+																	"H": "╬'40px'╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.MM.trigger(\"closeVisible\");\r\nvar req = {\r\n    url: \"https://reqres.in/api/users?page=2\",\r\n    data: null,\r\n    blockRender: false,\r\n    http: \"get\",\r\n    onFail: \"failEvent\",\r\n    onSuccess: \"successEvent\",\r\n    responseField: \"usersPage\"\r\n};\r\nquick.Request.async(req);\r\n",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "JS"
+																},
+																"successEvent": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ncomponents.EdtrComp_29.visible = true;\r\ncomponents.EdtrComp_40.items = response.usersPage.data;\r\n",
+																	"C": true,
+																	"HL": "JS"
+																},
+																"failEvent": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ndebugger;\r\nquick.EM.trace(error.response);\r\n",
+																	"C": true,
+																	"HL": "JS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_11",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'Get Request'╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_11"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "q-label newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_8"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-btn v-btn--depressed theme--light elevation-0 v-size--default primary newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_6",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_6"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											}
+										},
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_23",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "╬'primary'╩╩",
+																	"T": "prop"
+																},
+																"depressed": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"elevation": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"height": {
+																	"H": "╬'40px'╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.MM.trigger(\"closeVisible\");\r\nvar req = {\r\n    url: \"https://reqres.in/api/users\",\r\n    data: {\r\n        \"name\": \"morpheus\",\r\n        \"job\": \"leader\"\r\n    },\r\n    blockRender: false,\r\n    http: \"post\",\r\n    onFail: \"onFail\",\r\n    onSuccess: \"successEvent\",\r\n    responseField: \"createUser\"\r\n};\r\nquick.Request.async(req);\r\n",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "JS"
+																},
+																"successEvent": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ncomponents.EdtrComp_29.visible = false;\r\ncomponents.EdtrComp_90.visible = true;\r\ncomponents.EdtrComp_113.text = \"Successful request\";\r\ncomponents.EdtrComp_99.color = \"primary\";\r\ncomponents.EdtrComp_99.icon = \"mdi-check-circle\";\r\nquick.EM.trace(response.createUser);\r\n",
+																	"C": true,
+																	"HL": "JS"
+																},
+																"failEvent": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ndebugger;\r\nquick.EM.trace(error.response);\r\n",
+																	"C": true,
+																	"HL": "JS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_24",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'Post Request'╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_24"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "q-label newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_23"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-btn v-btn--depressed theme--light elevation-0 v-size--default primary newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_22",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_22"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											}
+										},
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_18",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "╬'primary'╩╩",
+																	"T": "prop"
+																},
+																"depressed": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"elevation": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"height": {
+																	"H": "╬'40px'╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.MM.trigger(\"closeVisible\");\r\nvar req = {\r\n    url: \"https://reqres.in/api/register\",\r\n    data: {\r\n        \"email\": \"sydney@fife\"\r\n    },\r\n    blockRender: false,\r\n    http: \"post\",\r\n    onFail: \"failEvent\",\r\n    onSuccess: null,\r\n    responseField: null\r\n};\r\nquick.Request.async(req);\r\n",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "JS"
+																},
+																"failEvent": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.EM.trace(\"Error Response\");\r\nquick.EM.trace(error.response);\r\nquick.EM.trace(\"Error Stack\");\r\nquick.EM.trace(error.stack);\r\nquick.EM.trace(\"Error request\");\r\nquick.EM.trace(error.request);\r\ncomponents.EdtrComp_90.visible = true;\r\ncomponents.EdtrComp_99.icon = \"mdi-alert-circle\";\r\ncomponents.EdtrComp_99.color = \"error\";\r\ncomponents.EdtrComp_113.text = \"Unsuccessful request\";\r\n",
+																	"C": true,
+																	"HL": "JS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_19",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'Unsuccessful Request'╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_19"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "q-label newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_18"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-btn v-btn--depressed theme--light elevation-0 v-size--default primary newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_17",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_17"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_3"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_29",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "╬false╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VDataTable",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_40",
+																	"T": "prop"
+																},
+																"footerProps": {
+																	"H": "╬{}╠=╣showFirstLastPage╩╠true╩╩╠=╣firstIcon╩╠'mdi-arrow-collapse-left'╩╩╠=╣lastIcon╩╠'mdi-arrow-collapse-right'╩╩╠=╣prevIcon╩╠'mdi-minus'╩╩╠=╣nextIcon╩╠'mdi-plus'╩╩╩╩",
+																	"T": "prop"
+																},
+																"headers": {
+																	"H": "╬[]╠{}╠=╣text╩╠'ID'╩╩╠=╣value╩╠'id'╩╩╩╠{}╠=╣text╩╠'First Name'╩╩╠=╣value╩╠'first_name'╩╩╩╠{}╠=╣text╩╠'Last Name'╩╩╠=╣value╩╠'last_name'╩╩╩╠{}╠=╣text╩╠'E-mail'╩╩╠=╣value╩╠'email'╩╩╩╩╩",
+																	"T": "prop"
+																},
+																"itemsPerPage": {
+																	"H": "╬5╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_40"
+															},
+															"O": {
+																"cType": "scopedSlot",
+																"compDomClasses": "v-data-table v-data-table--has-bottom theme--light newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_34",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_34"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_29"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_90",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "╬false╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VAlert",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_99",
+																	"T": "prop"
+																},
+																"border": {
+																	"H": "╬'top'╩╩",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "╬'primary'╩╩",
+																	"T": "prop"
+																},
+																"closeIcon": {
+																	"H": "╬'mdi-close-circle'╩╩",
+																	"T": "prop"
+																},
+																"coloredBorder": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"dismissible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"elevation": {
+																	"H": "╬4╩╩",
+																	"T": "prop"
+																},
+																"icon": {
+																	"H": "╬'mdi-check-circle'╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_113",
+																					"T": "prop"
+																				},
+																				"tagType": {
+																					"H": "╬'span'╩╩",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'Text'╩╩",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_113"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "q-label newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_99"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-alert v-sheet theme--light elevation-4 v-alert--border v-alert--border-top newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_97",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_97"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_90"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container container--fluid newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"opt": {}
+};
+export default pjson

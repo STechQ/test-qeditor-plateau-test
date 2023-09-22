@@ -611,12 +611,13 @@ var InspireTreeHelper = /** @class */ (function () {
         return inspireTree;
     };
     InspireTreeHelper.prototype.createInspireItem = function (compJson, editorDisplayName) {
-        var _a;
+        var _a, _b;
         var tempObj = {
             text: (editorDisplayName !== null && editorDisplayName !== void 0 ? editorDisplayName : compJson.T) + '(' + compJson.P.ID.H + ')',
             EID: compJson._Editor.eID,
             compType: compJson.T,
             O: { cType: (_a = compJson.O) === null || _a === void 0 ? void 0 : _a.cType },
+            nativeCompType: ((_b = compJson.CP) === null || _b === void 0 ? void 0 : _b.includes("<<named:")) ? "namedComponent" : undefined
         };
         if (compJson.T == GhostConstants_1.GhostContants.Name) {
             tempObj.itree = { state: { "drop-target": false, draggable: false, /*"drag-targeting": false,*/ selectable: false, focused: false, selected: false } };
