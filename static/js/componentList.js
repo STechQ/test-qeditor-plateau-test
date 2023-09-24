@@ -4749,6 +4749,15 @@ nextIcon = 'mdi-plus'}`
         clearable: {
             type: Boolean
         },
+        compareTableValue: {
+            type: String
+        },
+        compareText: {
+            type: String
+        },
+        compareValue: {
+            type: "any"
+        },
         counter: {
             type: "boolean | string | number"
         },
