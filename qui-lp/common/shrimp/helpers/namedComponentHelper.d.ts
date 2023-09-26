@@ -1,4 +1,4 @@
-import { INamedCompModel } from "../interfaces/quick/INamedCompModel";
+import { INamedCompModel } from "@stechquick/algae/lib/quick/INamedCompModel";
 export declare class NamedComponentHelper {
     loadNamedComponent(compName: string, compPath: string, options: {
         compModel?: INamedCompModel;

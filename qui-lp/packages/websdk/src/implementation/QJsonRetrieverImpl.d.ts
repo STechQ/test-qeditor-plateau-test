@@ -1,8 +1,8 @@
-import { IWebSDKSettingsWrapper } from "../../../../common/shrimp/interfaces/quick/IWebSDK";
+import { IExternalQJsonRetriever } from "@stechquick/algae/lib/quick/IExternalQJsonRetriever";
 import { IQJsonRetriever } from "../../../../common/qshell";
-import NetworkManagerImpl from "./NetworkManagerImpl";
-import { IExternalQJsonRetriever } from "../../../../common/shrimp/interfaces/quick/IExternalQJsonRetriever";
 import { QJsonRetrievedType } from "../../../../common/qshell/src/interfaces/construction/IQJsonRetriever";
+import { IWebSDKSettingsWrapper } from "../../../../common/shrimp/interfaces/quick/IWebSDK";
+import NetworkManagerImpl from "./NetworkManagerImpl";
 export default class QJsonRetrieverImpl implements IQJsonRetriever {
     contextName: string;
     private network;

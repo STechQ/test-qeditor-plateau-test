@@ -1,10 +1,10 @@
+import { IExternalQJsonRetriever } from "@stechquick/algae/lib/quick/IExternalQJsonRetriever";
 import { IComponent } from "../ComponentInterfaces/IComponent";
 import { IVersion } from "../ComponentInterfaces/IVersion";
 import { IDomElement } from "../RenderingInterfaces/IDomElement";
 import { IRenderer } from "../RenderingInterfaces/IRenderer";
 import { IRendererConfig } from "../RenderingInterfaces/IRendererConfig";
 import { IContainerServices } from "./IContainerServices";
-import { IExternalQJsonRetriever } from "./IExternalQJsonRetriever";
 import { IRegionalDefinition } from "./IFormattingDefinition";
 import { IUXManager } from "./IUXManager";
 import { IWebSDKSetingsBus } from "./IWebSDKSettingsBus";
