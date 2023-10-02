@@ -1,0 +1,615 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "PageComp",
+					"T": "prop"
+				},
+				"triggerOnRestored": {
+					"H": "false",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"getHeaderFilter": {
+					"H": "\r\nlet requestCustomer :IRequest = <any>{};\r\nrequestCustomer.url = 'https://reqres.in/api/users';\r\nrequestCustomer.http = 'get';\r\n// requestCustomer.data = {\r\n//     \"name\": \"morpheus\",\r\n//     \"job\": \"leader\"\r\n// };\r\nrequestCustomer.responseField = 'headerFilter'\r\nrequestCustomer.onSuccess = 'getHeaderFilterSuccess';\r\nrequestCustomer.onFail = 'onHeaderFilterFail';\r\n\r\nquick.Request.async(requestCustomer);\r\n\r\n\r\n",
+					"C": true,
+					"HL": "TS"
+				},
+				"PreRender": {
+					"H": "quick.Quick.bind({ bindedObject: \"store\", fields: [\"testField\"] });\r\nquick.store.set('testField', \"Field 1 \");",
+					"I": true,
+					"HL": "TS"
+				},
+				"PostRender": {
+					"H": "quick.MM.trigger('getHeaderFilter')\r\ncomponents.EdtrComp_93.dataSource = [{\r\n      \"id\": 7,\r\n      \"email\": \"george.bluth@reqres.in\",\r\n      \"first_name\": \"George\",\r\n      \"last_name\": \"Bluth\",\r\n      \"avatar\": \"https://reqres.in/img/faces/1-image.jpg\"\r\n    },\r\n    {\r\n      \"id\": 8,\r\n      \"email\": \"janet.weaver@reqres.in\",\r\n      \"first_name\": \"Janet\",\r\n      \"last_name\": \"Weaver\",\r\n      \"avatar\": \"https://reqres.in/img/faces/2-image.jpg\"\r\n    },\r\n    {\r\n      \"id\": 9,\r\n      \"email\": \"emma.wong@reqres.in\",\r\n      \"first_name\": \"Emma\",\r\n      \"last_name\": \"Wong\",\r\n      \"avatar\": \"https://reqres.in/img/faces/3-image.jpg\"\r\n    },\r\n    {\r\n      \"id\": 10,\r\n      \"email\": \"eve.holt@reqres.in\",\r\n      \"first_name\": \"Eve\",\r\n      \"last_name\": \"Holt\",\r\n      \"avatar\": \"https://reqres.in/img/faces/4-image.jpg\"\r\n    },\r\n    {\r\n      \"id\": 11,\r\n      \"email\": \"charles.morris@reqres.in\",\r\n      \"first_name\": \"Charles\",\r\n      \"last_name\": \"Morris\",\r\n      \"avatar\": \"https://reqres.in/img/faces/5-image.jpg\"\r\n    },\r\n    {\r\n      \"id\": 12,\r\n      \"email\": \"tracey.ramos@reqres.in\",\r\n      \"first_name\": \"Tracey\",\r\n      \"last_name\": \"Ramos\",\r\n      \"avatar\": \"https://reqres.in/img/faces/6-image.jpg\"\r\n    }\r\n];\r\nquick.Quick.updateComponent(components.EdtrComp_93)",
+					"TO": 1,
+					"HL": "TS"
+				},
+				"getHeaderFilterSuccess": {
+					"H": "quick.store.set('testField',[{text: response.headerFilter.data[0].id, value: response.headerFilter.data[0].id}, {text: response.headerFilter.data[1].id, value: response.headerFilter.data[1].id}])\r\nquick.Quick.updateComponent(components.EdtrComp_93)",
+					"C": true,
+					"HL": "TS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "VRowComp",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "DxDataGrid",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_93",
+																	"T": "prop"
+																},
+																"dataSource": {
+																	"H": "[]",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "DxHeaderFilter",
+																			"P": {
+																				"visible": {
+																					"H": "'showFilterRow'",
+																					"T": "prop"
+																				},
+																				"allowSearch": {
+																					"H": "false",
+																					"T": "prop"
+																				},
+																				"ID": {
+																					"H": "EdtrComp_149",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_149"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		},
+																		{
+																			"T": "DxColumn",
+																			"P": {
+																				"cellTemplate": {
+																					"H": "name",
+																					"T": "prop"
+																				},
+																				"dataField": {
+																					"H": "'id'",
+																					"T": "prop"
+																				},
+																				"ID": {
+																					"H": "EdtrComp_106",
+																					"T": "prop"
+																				},
+																				"allowFiltering": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"allowHeaderFiltering": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"headerFilter": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"calculateFilterExpression": {
+																					"H": "debugger\r\nquick.store.set('filterValue', filterValue)\r\nlet requestCustomer :IRequest = <any>{};\r\nrequestCustomer.url = 'https://reqres.in/api/users';\r\nrequestCustomer.http = 'get';\r\nrequestCustomer.data = {\r\n    \"filterValue\": filterValue\r\n};\r\nrequestCustomer.responseField = 'onHeaderFilter'\r\nrequestCustomer.onSuccess = 'getHeaderFilterSuccess';\r\nrequestCustomer.onFail = 'onHeaderFilterFail';\r\n\r\nquick.Request.async(requestCustomer);",
+																					"PE": true,
+																					"P": "filterValue:any,selectedFilterOperation:string",
+																					"HL": "TS"
+																				},
+																				"getHeaderFilterSuccess": {
+																					"H": "debugger\r\nlet filterValue = quick.store.get('filterValue')\r\ncomponents.EdtrComp_93.dataSource = response.onHeaderFilter.data.filter(item => item.id == filterValue)\r\nquick.Quick.updateComponent(components.EdtrComp_93)",
+																					"C": true,
+																					"HL": "TS"
+																				}
+																			},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "DxHeaderFilter",
+																							"P": {
+																								"visible": {
+																									"H": "'showFilterRow'",
+																									"T": "prop"
+																								},
+																								"allowSearch": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"ID": {
+																									"H": "EdtrComp_103",
+																									"T": "prop"
+																								},
+																								"dataSource": {
+																									"H": "//await(MM.getHeaderFilter())\r\n//await(MM.trigger('getHeaderFilter'))\r\nstore.get('testField')",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_103"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_106"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		},
+																		{
+																			"T": "DxColumn",
+																			"P": {
+																				"cellTemplate": {
+																					"H": "protein",
+																					"T": "prop"
+																				},
+																				"dataField": {
+																					"H": "'email'",
+																					"T": "prop"
+																				},
+																				"ID": {
+																					"H": "EdtrComp_188",
+																					"T": "prop"
+																				},
+																				"allowFiltering": {
+																					"H": "false",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_188"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_93"
+															},
+															"O": {
+																"cType": "scopedSlot",
+																"forceUpdateAfterPropertySetting": true
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "VColComp",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_3"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_5"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "PageComp",
+					"T": "prop"
+				},
+				"triggerOnRestored": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"getHeaderFilter": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nvar requestCustomer = {};\r\nrequestCustomer.url = 'https://reqres.in/api/users';\r\nrequestCustomer.http = 'get';\r\n// requestCustomer.data = {\r\n//     \"name\": \"morpheus\",\r\n//     \"job\": \"leader\"\r\n// };\r\nrequestCustomer.responseField = 'headerFilter';\r\nrequestCustomer.onSuccess = 'getHeaderFilterSuccess';\r\nrequestCustomer.onFail = 'onHeaderFilterFail';\r\nquick.Request.async(requestCustomer);\r\n",
+					"C": true,
+					"HL": "JS"
+				},
+				"PreRender": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.Quick.bind({ bindedObject: \"store\", fields: [\"testField\"] });\r\nquick.store.set('testField', \"Field 1 \");\r\n",
+					"I": true,
+					"HL": "JS"
+				},
+				"PostRender": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.MM.trigger('getHeaderFilter');\r\ncomponents.EdtrComp_93.dataSource = [{\r\n        \"id\": 7,\r\n        \"email\": \"george.bluth@reqres.in\",\r\n        \"first_name\": \"George\",\r\n        \"last_name\": \"Bluth\",\r\n        \"avatar\": \"https://reqres.in/img/faces/1-image.jpg\"\r\n    },\r\n    {\r\n        \"id\": 8,\r\n        \"email\": \"janet.weaver@reqres.in\",\r\n        \"first_name\": \"Janet\",\r\n        \"last_name\": \"Weaver\",\r\n        \"avatar\": \"https://reqres.in/img/faces/2-image.jpg\"\r\n    },\r\n    {\r\n        \"id\": 9,\r\n        \"email\": \"emma.wong@reqres.in\",\r\n        \"first_name\": \"Emma\",\r\n        \"last_name\": \"Wong\",\r\n        \"avatar\": \"https://reqres.in/img/faces/3-image.jpg\"\r\n    },\r\n    {\r\n        \"id\": 10,\r\n        \"email\": \"eve.holt@reqres.in\",\r\n        \"first_name\": \"Eve\",\r\n        \"last_name\": \"Holt\",\r\n        \"avatar\": \"https://reqres.in/img/faces/4-image.jpg\"\r\n    },\r\n    {\r\n        \"id\": 11,\r\n        \"email\": \"charles.morris@reqres.in\",\r\n        \"first_name\": \"Charles\",\r\n        \"last_name\": \"Morris\",\r\n        \"avatar\": \"https://reqres.in/img/faces/5-image.jpg\"\r\n    },\r\n    {\r\n        \"id\": 12,\r\n        \"email\": \"tracey.ramos@reqres.in\",\r\n        \"first_name\": \"Tracey\",\r\n        \"last_name\": \"Ramos\",\r\n        \"avatar\": \"https://reqres.in/img/faces/6-image.jpg\"\r\n    }\r\n];\r\nquick.Quick.updateComponent(components.EdtrComp_93);\r\n",
+					"TO": 1,
+					"HL": "JS"
+				},
+				"getHeaderFilterSuccess": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.store.set('testField', [{ text: response.headerFilter.data[0].id, value: response.headerFilter.data[0].id }, { text: response.headerFilter.data[1].id, value: response.headerFilter.data[1].id }]);\r\nquick.Quick.updateComponent(components.EdtrComp_93);\r\n",
+					"C": true,
+					"HL": "JS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "VRowComp",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "DxDataGrid",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_93",
+																	"T": "prop"
+																},
+																"dataSource": {
+																	"H": "╬[]╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "DxHeaderFilter",
+																			"P": {
+																				"visible": {
+																					"H": "╬'showFilterRow'╩╩",
+																					"T": "prop"
+																				},
+																				"allowSearch": {
+																					"H": "╬false╩╩",
+																					"T": "prop"
+																				},
+																				"ID": {
+																					"H": "EdtrComp_149",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_149"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": ""
+																			}
+																		},
+																		{
+																			"T": "DxColumn",
+																			"P": {
+																				"cellTemplate": {
+																					"H": "╬name╩╩",
+																					"T": "prop"
+																				},
+																				"dataField": {
+																					"H": "╬'id'╩╩",
+																					"T": "prop"
+																				},
+																				"ID": {
+																					"H": "EdtrComp_106",
+																					"T": "prop"
+																				},
+																				"allowFiltering": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"allowHeaderFiltering": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"headerFilter": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"calculateFilterExpression": {
+																					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ndebugger;\r\nquick.store.set('filterValue', filterValue);\r\nvar requestCustomer = {};\r\nrequestCustomer.url = 'https://reqres.in/api/users';\r\nrequestCustomer.http = 'get';\r\nrequestCustomer.data = {\r\n    \"filterValue\": filterValue\r\n};\r\nrequestCustomer.responseField = 'onHeaderFilter';\r\nrequestCustomer.onSuccess = 'getHeaderFilterSuccess';\r\nrequestCustomer.onFail = 'onHeaderFilterFail';\r\nquick.Request.async(requestCustomer);\r\n",
+																					"PE": true,
+																					"P": "filterValue:any,selectedFilterOperation:string",
+																					"HL": "JS"
+																				},
+																				"getHeaderFilterSuccess": {
+																					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ndebugger;\r\nvar filterValue = quick.store.get('filterValue');\r\ncomponents.EdtrComp_93.dataSource = response.onHeaderFilter.data.filter(function (item) { return item.id == filterValue; });\r\nquick.Quick.updateComponent(components.EdtrComp_93);\r\n",
+																					"C": true,
+																					"HL": "JS"
+																				}
+																			},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "DxHeaderFilter",
+																							"P": {
+																								"visible": {
+																									"H": "╬'showFilterRow'╩╩",
+																									"T": "prop"
+																								},
+																								"allowSearch": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"ID": {
+																									"H": "EdtrComp_103",
+																									"T": "prop"
+																								},
+																								"dataSource": {
+																									"H": "╬()╣.╣store╩╠get╩╩╠'testField'╩╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_103"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": ""
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_106"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": ""
+																			}
+																		},
+																		{
+																			"T": "DxColumn",
+																			"P": {
+																				"cellTemplate": {
+																					"H": "╬protein╩╩",
+																					"T": "prop"
+																				},
+																				"dataField": {
+																					"H": "╬'email'╩╩",
+																					"T": "prop"
+																				},
+																				"ID": {
+																					"H": "EdtrComp_188",
+																					"T": "prop"
+																				},
+																				"allowFiltering": {
+																					"H": "╬false╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_188"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": ""
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_93"
+															},
+															"O": {
+																"cType": "scopedSlot",
+																"forceUpdateAfterPropertySetting": true,
+																"compDomClasses": "dx-widget dx-visibility-change-handler newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "VColComp",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_3"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												},
+												"compDomClasses": "col d-flex flex-column newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_5"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"opt": {}
+};
+export default pjson
