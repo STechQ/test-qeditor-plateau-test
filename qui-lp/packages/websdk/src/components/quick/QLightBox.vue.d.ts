@@ -15,6 +15,11 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     initialRect: DOMRect | null;
     coords: string[];
     isFullScreen: Boolean;
+    isMinimized: Boolean;
+    savedPosition: null;
+    currentWidth: string;
+    currentHeight: string;
+    insetRight: string;
 }, {
     closeDragElement(): void;
     elementDrag(mouseEvent: MouseEvent): void;
@@ -23,13 +28,19 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     dragElement(elmnt: HTMLDivElement): void;
     closePopup(): void;
     toggleFullscreen(): void;
+    minimizeWindow(): void;
     resizeMouseDown(event: MouseEvent, handle: "top-left" | "top-right" | "bottom-left" | "bottom-right"): void;
     resizeMouseMove(event: any): void;
     resizeMouseUp(): void;
     clickEvent(e: Event): void;
     fixZIndex(): void;
     configureForEditor(): void;
-}, unknown, {
+}, {
+    classObject: {
+        [x: string]: any;
+        minimized: any;
+    };
+}, {
     width: string;
     height: string;
     headerPadding: string;
@@ -46,6 +57,7 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     closeBtn: boolean;
     fullScreen: boolean;
     resizable: boolean;
+    minimizable: boolean;
 }>;
 export default _default;
 //# sourceMappingURL=QLightBox.vue.d.ts.map
