@@ -2135,7 +2135,6 @@ input[type="checkbox"] {
 .quickEditor.readOnly .asset-div-flex,
 .quickEditor.readOnly li:has(.asset-div-flex),
 .quickEditor.readOnly .nemo_quickBtns button,
-.quickEditor.readOnly .autoTest_sourceCodeMonacoShell,
 .quickEditor.readOnly .createNamedCompBtn button,
 .quickEditor.readOnly .rightBlock .quick-checkbox-div-container,
 .quickEditor.readOnly .rightBlock .spaceNumber,
@@ -2154,10 +2153,16 @@ input[type="checkbox"] {
 .quickEditor.readOnly .rightBlock .editModeWrapper li {
   pointer-events: none;
 }
+
 .quickEditor.readOnly .autoTest_sourceCodeMonacoShell .minimap.slider-mouseover {
   pointer-events: auto;
   cursor: default;
 }
+
+.quickEditor.readOnly .autoTest_sourceCodeMonacoShell {
+  pointer-events: auto;
+}
+
 .quickEditor.readOnly .render-page.autoTest_dropArea div[draggable=true],
 .quickEditor.readOnly .inspireTree li[draggable=true] {
   -webkit-user-drag: none;
@@ -2179,10 +2184,10 @@ input[type="checkbox"] {
 .quickEditor.readOnly .quickEditor-container td .quickEditor-btn.quickEditor-black,
 .quickEditor.readOnly .quickEditor-container .paleGrayRows i,
 .quickEditor.readOnly .mega_drop_menu .menu_left:nth-of-type(1) .greybox li,
-.quickEditor.readOnly .quickEditor-container div:has(.autoTest_newLRID) > button {
+.quickEditor.readOnly .quickEditor-container div:has(.autoTest_newLRID)>button {
   pointer-events: none;
-  background-color: rgba(230,230,230, 0.12) !important;
-  color: rgba(0,0,0, .26) !important;
+  background-color: rgba(230, 230, 230, 0.12) !important;
+  color: rgba(0, 0, 0, .26) !important;
   border-color: rgba(161, 161, 161, 0.3) !important;
 }
 
@@ -2205,8 +2210,8 @@ input[type="checkbox"] {
 
 .quickEditor.readOnly .render-page.autoTest_dropArea .autoTest_sourceCodeSaveButton {
   pointer-events: none;
-  background-color: rgba(200,200,200, 1) !important;
-  color: rgba(0,0,0, .26) !important;
+  background-color: rgba(200, 200, 200, 1) !important;
+  color: rgba(0, 0, 0, .26) !important;
   border-color: rgba(161, 161, 161, 1) !important;
 }
 
