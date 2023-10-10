@@ -4789,6 +4789,9 @@ nextIcon = 'mdi-plus'}`
         flat: {
             type: Boolean
         },
+        hideDetails: {
+            type: Boolean
+        },
         hint: {
             type: String
         },

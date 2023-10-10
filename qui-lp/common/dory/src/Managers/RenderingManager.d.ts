@@ -56,6 +56,7 @@ export declare class RenderingManager implements IContextItem {
      */
     private GenerateDirectives;
     private CalculateStyle;
+    private generetaPropsFromStyle;
     private getItemValue;
     private GenerateChildren;
     private isEditMode;

@@ -45,6 +45,7 @@ export interface IComponentDefinition {
     propMigrateList?: Record<string, string>;
     inheritedChildList?: IStyleChild;
     propRemoveList?: Array<string>;
+    extendedDefaulStyleList?: Record<string, string>;
 }
 export declare type IAssetList = Record<string, Record<string, StyleValue>>;
 export declare enum FontWeights {
