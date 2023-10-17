@@ -20,7 +20,7 @@
         }
 
         var delayTime = location.search.indexOf("quickdebug=true") > -1 ? 15 : 0
-        delay(delayTime, () => window.location.href = "/index.html?q=" + location.pathname + (location.search ? "&" + location.search.replace("?", "") : ""));
+        delay(delayTime, () => window.location.href = "/index.html?q=" + location.pathname + (location.search ? "&" + location.search.replace("?", "") : "") + location.hash);
     </script>
 </body>
 

@@ -634,6 +634,10 @@ var componentOptions = {
         },
         hideOverlay: {
             type: Boolean
+        },
+        persistent: {
+            type: Boolean,
+            editorDefaultValue: "false"
         }
     },
     VBreadcrumbs: {
