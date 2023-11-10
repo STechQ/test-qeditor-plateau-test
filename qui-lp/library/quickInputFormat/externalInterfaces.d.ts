@@ -12,5 +12,6 @@ export interface IQuickInputFormatOptions {
     placeholder: string | undefined;
     preventPaste: boolean | undefined;
     regex: string | undefined;
+    selectAllOnClick: boolean | undefined;
 }
 //# sourceMappingURL=externalInterfaces.d.ts.map
