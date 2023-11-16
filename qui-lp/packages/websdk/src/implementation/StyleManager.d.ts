@@ -6,6 +6,7 @@ export declare class StyleManager implements IStyleManager {
     private static cssIndexDict;
     static compStyleDict: Record<string, StyleCB>;
     static resetDict(): void;
+    static clearStyleTag(): void;
     static createStyleTag(): void;
     static exceptionalComponents: {
         Tooltip: string;

@@ -10,6 +10,7 @@ import { ScriptLang } from "../../../../shrimp/interfaces/Scripting/scriptLang";
 import { RenderingContext } from "../../Context/RenderingContext";
 import { DoryJr } from "../../DoryJr";
 import { HistoryManager } from "../../Managers/HistoryManager";
+import { IRenderingManager } from "../../../../shrimp/interfaces/RenderingInterfaces/IRenderingManager";
 export declare class HistoryItem implements IHistoryItem {
     private qjson;
     context: ContextManager;
@@ -77,6 +78,7 @@ export declare class HistoryItem implements IHistoryItem {
     getQLang(): ScriptLang | undefined;
     GetRenderingContext(): RenderingContext;
     GetDoryJrs(): DoryJr[] | null;
+    GetRenderingManager(): IRenderingManager | undefined;
     /**
      * Do not use directly, use Dory.SetLRType.
      */
