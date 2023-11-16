@@ -10,6 +10,8 @@ export declare class PlateauIAM implements IPlateauIAM {
     setOptions(iam: ISettingsIAM["iam"]): void;
     isAuthenticated(): true | undefined;
     init(callback: Function): Promise<void>;
+    private pathJoin;
+    private setQueryOrFragment;
     private constructIAMPlateau;
     private getTokens;
     private setTokens;
