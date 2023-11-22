@@ -9,5 +9,6 @@ export interface IPlateauIAM {
     getInfo: () => object | undefined;
     login(): Promise<void>;
     settingsIAM: ISettingsIAM | undefined;
+    keycloak?: Keycloak.KeycloakInstance | undefined;
 }
 //# sourceMappingURL=IPlateauIAM.d.ts.map

@@ -68,6 +68,7 @@ export declare class Dory implements IDory {
     }): Promise<void>;
     private PageCompleted;
     private innerRender;
+    private resetStyle;
     ReRender(): void;
     CallHibernate(): void;
     SetErrorCallBack(callBack: (errors: Array<IQError>) => void): void;
@@ -164,6 +165,7 @@ export declare class Dory implements IDory {
     SetAssetValues(values?: IAssetList): void;
     GetAssetValues(): IAssetList | undefined;
     ResetStyleDict(): void;
+    clearStyleTag(): void;
     DeleteStyleSelector(compCollection: IComponentCollection, stylePropName: string, breakPoint?: string): void;
     DeleteStyleCompCollection(compCollection: IComponentCollection): void;
 }
