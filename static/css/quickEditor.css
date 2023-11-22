@@ -1047,7 +1047,7 @@
   float: left;
   background: #fafafa;
   border-right: 1px solid #e0e0e0;
-  height: 100vh;
+  height: 100%;
 }
 
 .quickEditor .leftBlock.hide {
@@ -2213,16 +2213,6 @@ input[type="checkbox"] {
   background-color: rgba(200, 200, 200, 1) !important;
   color: rgba(0, 0, 0, .26) !important;
   border-color: rgba(161, 161, 161, 1) !important;
-}
-
-.quickEditor #monacoShell .monaco-editor-hover-content:has(p) {
-  background-color: #757575;
-  border-radius: 4px;
-  color: #FFF;
-}
-
-.quickEditor #monacoShell .monaco-editor-hover:has(p) {
-  border-radius: 4px;
 }
 
 @media only screen and (min-width: 35em) {}

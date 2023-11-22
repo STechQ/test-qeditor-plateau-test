@@ -1,3 +1,4 @@
+import { IContextItem } from "../../../shrimp/context";
 import { PageScripting } from "../../../shrimp/helpers/scripting/PageScripting";
 import { TypeHelper } from "../../../shrimp/helpers/typeHelper";
 import { CType, ICompJson } from "../../../shrimp/interfaces/ComponentInterfaces/ICompJson";
@@ -8,9 +9,7 @@ import { ContextManager } from "../../../shrimp/src/context/contextManager";
 import { BlockInfo } from "../Context/BlockInfo";
 import { ComponentCommunicator } from "../Helpers/ComponentCommunicator";
 import { Evaluator } from "./Evaluator";
-import { IRenderingManager } from "../../../shrimp/interfaces/RenderingInterfaces/IRenderingManager";
-import { QJsonManagerForAIService } from "../../../shrimp/helpers/AIServiceHelper/QJsonManagerForAIService";
-export declare class RenderingManager implements IRenderingManager {
+export declare class RenderingManager implements IContextItem {
     static ContextName: string;
     contextName: string;
     pjson: Array<ICompJson | null>;
@@ -30,7 +29,6 @@ export declare class RenderingManager implements IRenderingManager {
     private dynamicCompIDSuffix?;
     private pageScrtipting?;
     private qjsonVersion?;
-    QJsonManagerForAIService: QJsonManagerForAIService | undefined;
     constructor({ pjson, context, dataItem, asChildType, asChildName, controlDict, qLang, parentCompCollection, compareCompValue, dynamicCompIDSuffix, pageScripting, qjsonVersion }: {
         pjson: Array<ICompJson | null>;
         context: ContextManager;
