@@ -5,12 +5,16 @@ export declare class PlateauIAM implements IPlateauIAM {
     private refreshTime;
     private updateTime;
     private initOptions;
-    private keycloak?;
+    keycloak?: Keycloak.KeycloakInstance;
     private iamPlateau;
     setOptions(iam: ISettingsIAM["iam"]): void;
     isAuthenticated(): true | undefined;
     init(callback: Function): Promise<void>;
+    private pathJoin;
+    private setQueryOrFragment;
     private constructIAMPlateau;
+    private getTokens;
+    private setTokens;
     refreshPromise(): Promise<boolean | undefined>;
     logout(): void;
     getToken: () => string | undefined;
