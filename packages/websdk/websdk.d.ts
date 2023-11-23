@@ -2,7 +2,6 @@ import { IRenderer } from "../../common/shrimp/interfaces/RenderingInterfaces/IR
 import { IDomElement } from "../../common/shrimp/interfaces/RenderingInterfaces/IDomElement";
 import { LivePreviewManager } from "./src/managers/LivePreviewManager";
 import { IPlateauUIOptions } from "@stechquick/algae/lib/quick/IPlateauUI";
-import { IPlateauIAM } from "../../common/shrimp/interfaces/quick/IPlateauIAM";
 declare class PlateauUI {
     private container;
     private renderer;
@@ -25,7 +24,7 @@ declare class WebsdkContainer {
     private SDKSettings?;
     private SDKConfiguration?;
     mountPoint?: IDomElement;
-    PlateauIAM: IPlateauIAM | undefined;
+    private PlateauIAM;
     private PlateauUIOptions;
     lpManager?: LivePreviewManager;
     constructor();

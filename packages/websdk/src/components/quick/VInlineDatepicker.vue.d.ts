@@ -75,8 +75,6 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     solo: boolean;
     soloInverted: boolean;
     prependInnerIcon: string;
-    displayFormat: string;
-    DiscardSettings: boolean;
 }>;
 export default _default;
 //# sourceMappingURL=VInlineDatepicker.vue.d.ts.map
