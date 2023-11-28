@@ -26,7 +26,7 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     isCurrentGroupContainsClickedItem(item: any, clickedItem: any): void;
     clickRow(item: Object, index: Number): void;
     calculatePadding(index: number, item: any): Number;
-    collapseAll(): void;
+    collapseAll(activeList?: any): void;
     updateMini(): void;
     onClickGroup(): void;
 }, unknown, {
