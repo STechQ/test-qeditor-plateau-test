@@ -29,6 +29,7 @@ export interface IWebSDKSettings {
     regionalDefinition?: Array<IRegionalDefinition>;
     cssPath?: Array<string> | Record<string, Array<string>>;
     enableClientCache?: boolean;
+    serviceWorkerPath?: string;
     pipelineqjson?: string;
     alertqjson?: string;
     loadingqjson?: string;
