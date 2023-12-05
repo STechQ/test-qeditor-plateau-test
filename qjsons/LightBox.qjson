@@ -209,6 +209,10 @@ let pjson = {
 					"H": "true",
 					"T": "prop"
 				},
+				"minimizable": {
+					"H": "true",
+					"T": "prop"
+				},
 				"width": {
 					"H": "'900px'",
 					"T": "prop"
@@ -244,45 +248,17 @@ let pjson = {
 												"default": {
 													"c": [
 														{
-															"T": "QLabel",
+															"T": "Ghost",
 															"P": {
 																"ID": {
-																	"H": "EdtrComp_20",
-																	"T": "prop"
-																},
-																"tagType": {
-																	"H": "'span'",
-																	"T": "prop"
-																},
-																"text": {
-																	"H": "'Cevap Gönder'",
-																	"T": "prop"
-																},
-																"visible": {
-																	"H": "true",
-																	"T": "prop"
-																},
-																"processHtml": {
-																	"H": "false",
+																	"H": "EdtrComp_45",
 																	"T": "prop"
 																}
 															},
 															"E": {},
 															"C": {},
 															"_Editor": {
-																"eID": "EdtrComp_20"
-															},
-															"O": {
-																"cType": "slot",
-																"layout": {
-																	"dOpt": {
-																		"xs": [
-																			"te:font-weight-bold",
-																			"tt:text-h6"
-																		]
-																	},
-																	"class": "font-weight-bold text-h6"
-																}
+																"eID": "EdtrComp_45"
 															}
 														}
 													],
@@ -1042,6 +1018,10 @@ let pjson = {
 					"H": "╬true╩╩",
 					"T": "prop"
 				},
+				"minimizable": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
 				"width": {
 					"H": "╬'900px'╩╩",
 					"T": "prop"
@@ -1077,46 +1057,21 @@ let pjson = {
 												"default": {
 													"c": [
 														{
-															"T": "QLabel",
+															"T": "Ghost",
 															"P": {
 																"ID": {
-																	"H": "EdtrComp_20",
-																	"T": "prop"
-																},
-																"tagType": {
-																	"H": "╬'span'╩╩",
-																	"T": "prop"
-																},
-																"text": {
-																	"H": "╬'Cevap Gönder'╩╩",
-																	"T": "prop"
-																},
-																"visible": {
-																	"H": "╬true╩╩",
-																	"T": "prop"
-																},
-																"processHtml": {
-																	"H": "╬false╩╩",
+																	"H": "EdtrComp_45",
 																	"T": "prop"
 																}
 															},
 															"E": {},
 															"C": {},
 															"_Editor": {
-																"eID": "EdtrComp_20"
+																"eID": "EdtrComp_45"
 															},
 															"O": {
-																"cType": "slot",
-																"layout": {
-																	"dOpt": {
-																		"xs": [
-																			"te:font-weight-bold",
-																			"tt:text-h6"
-																		]
-																	},
-																	"class": "font-weight-bold text-h6"
-																},
-																"compDomClasses": "q-label font-weight-bold text-h6 newDropBorder"
+																"cType": "child",
+																"compDomClasses": "editor-ghost-comp newDropBorder"
 															}
 														}
 													],
@@ -1673,12 +1628,12 @@ let pjson = {
 			},
 			"O": {
 				"cType": "slot",
-				"compDomClasses": "newDropBorder"
+				"compDomClasses": "class newDropBorder"
 			}
 		}
 	],
 	"lrids": {},
-	"clrids": {},
+	"clrids": {}, 
 	"opt": {}
 };
 export default pjson

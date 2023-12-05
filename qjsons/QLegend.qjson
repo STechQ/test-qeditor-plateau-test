@@ -20,7 +20,7 @@ let pjson = {
 					"HL": "TS"
 				},
 				"EndRender": {
-					"H": "components.myTextField.qValue =  \"textField new\";\r\ncomponents.myTextField.compareValue = 'textField old';\r\n\r\ncomponents.myTextarea.qValue = \"tetxarea new\";;\r\ncomponents.myTextarea.compareValue = 'tetxarea old';\r\n\r\ncomponents.mySelect.qValue = 2;\r\ncomponents.mySelect.compareValue = null;\r\n\r\ncomponents.myAutocomplete.qValue = 2;\r\ncomponents.myAutocomplete.compareValue = 1;\r\ncomponents.myAutocomplete.compareText = components.myAutocomplete.items.filter(item => item.value == components.myAutocomplete.compareValue)[0].text;\r\n\r\ncomponents.EdtrComp_3.items = [{ID : 1, name : 'Frozens Yogurt New', calories : 159, fat : '6.0', carbs : 24, protein : '4.0', iron : ''},\r\n{ID : 2, name : 'Ice cream sandwich', calories : 237, fat : '10.0', carbs : 37, protein : '', iron : ''},\r\n{ID : 3, name : 'Eclair', calories : 270, fat : '16.0', carbs : 23, protein : '6.0', iron : '7%'},\r\n{ID : 4, name : 'Cupcake', calories : 305, fat : '3.7', carbs : 67, protein : '4.2', iron : '10%'},\r\n{ID : 5, name : 'Gingerbread',calories : 356, fat : '16.0', carbs : 49, protein : '3.9', iron : '16%'},\r\n{ID : 6, name : 'Jelly bean', calories : '',  fat : '0.0', carbs : 94, protein : '0.0', iron : '0%'},\r\n{ID : 7, name : 'Lollipop', calories : 392, fat : '0.2', carbs : 98, protein : '0.0', iron : '2 %'},\r\n{ID : 8, name : 'Honeycomb', calories : 408, fat : '3.2', carbs : 87, protein : '6.5', iron : '45%'},\r\n{ID : 9, name : 'Donut', calories : 452, fat : '25.0', carbs : 51, protein : '4.9', iron : '22%'},\r\n{ID : 10, name : '', calories : 518, fat : '26.0', carbs : 65, protein : '7', iron:  '6 %'}];\r\n\r\n\r\ncomponents.EdtrComp_3.compareValue = [{ID : 1, name : 'Frozens Yogurt', fat : '6.0', carbs : 24, protein : '4.0', iron : '1%'},\r\n{ID : 2, name : 'Ice cream sandwich', calories : 237, fat : '9.0', carbs : 37, protein : '4.3', iron : '1%'},\r\n{ID : 3, name : 'Eclair', calories : 262, fat : '16.0', carbs : 23, protein : '6.0', iron : '7%'},\r\n{ID : 4, name : 'Cupcake', calories : 305, fat : '3.7', carbs : 67, protein : '10.3', iron : '8%'},\r\n{ID : 5, fat : '16.0', carbs : 49, protein : '3.9'},\r\n{ID : 6, name : 'Jelly bean', calories : 375,  fat : '0.0', carbs : 94, protein : '0.0', iron : '0%'},\r\n{ID : 7, name : 'Lollipop', fat : '0.2', carbs : 98, protein : '0.0', iron : '2 %'},\r\n{ID : 8, name : 'Honeycomb', calories : 408, fat : '3.2', carbs : 87, protein : '6.5', iron : '45%'},\r\n{ID : 9, name : 'Donut', calories : 452, fat : '25.0', carbs : 51, protein : '4.9', iron : '22%'},\r\n{ID : 10, name : 'KitKat', calories : 518, fat : '26.0', carbs : 50, iron:  '5 %'}];",
+					"H": "components.myTextField.qValue = undefined;\r\ncomponents.myTextField.compareValue = 'qwe';\r\n\r\ncomponents.mySelect.qValue = 2;\r\ncomponents.mySelect.compareValue = null;\r\n\r\ncomponents.myAutocomplete.qValue = 2;\r\ncomponents.myAutocomplete.compareValue = 1;\r\ncomponents.myAutocomplete.compareText = components.myAutocomplete.items.filter(item => item.value == components.myAutocomplete.compareValue)[0].text;\r\n\r\ncomponents.EdtrComp_3.items = [{ID : 1, name : 'Frozens Yogurt New', calories : 159, fat : '6.0', carbs : 24, protein : '4.0', iron : ''},\r\n{ID : 2, name : 'Ice cream sandwich', calories : 237, fat : '10.0', carbs : 37, protein : '', iron : ''},\r\n{ID : 3, name : 'Eclair', calories : 270, fat : '16.0', carbs : 23, protein : '6.0', iron : '7%'},\r\n{ID : 4, name : 'Cupcake', calories : 305, fat : '3.7', carbs : 67, protein : '4.2', iron : '10%'},\r\n{ID : 5, name : 'Gingerbread',calories : 356, fat : '16.0', carbs : 49, protein : '3.9', iron : '16%'},\r\n{ID : 6, name : 'Jelly bean', calories : '',  fat : '0.0', carbs : 94, protein : '0.0', iron : '0%'},\r\n{ID : 7, name : 'Lollipop', calories : 392, fat : '0.2', carbs : 98, protein : '0.0', iron : '2 %'},\r\n{ID : 8, name : 'Honeycomb', calories : 408, fat : '3.2', carbs : 87, protein : '6.5', iron : '45%'},\r\n{ID : 9, name : 'Donut', calories : 452, fat : '25.0', carbs : 51, protein : '4.9', iron : '22%'},\r\n{ID : 10, name : '', calories : 518, fat : '26.0', carbs : 65, protein : '7', iron:  '6 %'}];\r\n\r\n\r\ncomponents.EdtrComp_3.compareValue = [{ID : 1, name : 'Frozens Yogurt', fat : '6.0', carbs : 24, protein : '4.0', iron : '1%'},\r\n{ID : 2, name : 'Ice cream sandwich', calories : 237, fat : '9.0', carbs : 37, protein : '4.3', iron : '1%'},\r\n{ID : 3, name : 'Eclair', calories : 262, fat : '16.0', carbs : 23, protein : '6.0', iron : '7%'},\r\n{ID : 4, name : 'Cupcake', calories : 305, fat : '3.7', carbs : 67, protein : '10.3', iron : '8%'},\r\n{ID : 5, fat : '16.0', carbs : 49, protein : '3.9'},\r\n{ID : 6, name : 'Jelly bean', calories : 375,  fat : '0.0', carbs : 94, protein : '0.0', iron : '0%'},\r\n{ID : 7, name : 'Lollipop', fat : '0.2', carbs : 98, protein : '0.0', iron : '2 %'},\r\n{ID : 8, name : 'Honeycomb', calories : 408, fat : '3.2', carbs : 87, protein : '6.5', iron : '45%'},\r\n{ID : 9, name : 'Donut', calories : 452, fat : '25.0', carbs : 51, protein : '4.9', iron : '22%'},\r\n{ID : 10, name : 'KitKat', calories : 518, fat : '26.0', carbs : 50, iron:  '5 %'}];",
 					"HL": "TS"
 				}
 			},
@@ -310,92 +310,6 @@ let pjson = {
 							"T": "VRow",
 							"P": {
 								"ID": {
-									"H": "EdtrComp_37",
-									"T": "prop"
-								}
-							},
-							"E": {},
-							"C": {
-								"default": {
-									"c": [
-										{
-											"T": "VCol",
-											"P": {
-												"ID": {
-													"H": "EdtrComp_38",
-													"T": "prop"
-												}
-											},
-											"E": {},
-											"C": {
-												"default": {
-													"c": [
-														{
-															"T": "VTextarea",
-															"P": {
-																"ID": {
-																	"H": "myTextarea",
-																	"T": "prop"
-																},
-																"visible": {
-																	"H": "true",
-																	"T": "prop"
-																},
-																"outlined": {
-																	"H": "true",
-																	"T": "prop"
-																},
-																"label": {
-																	"H": "'Text area  label'",
-																	"T": "prop"
-																}
-															},
-															"E": {},
-															"C": {},
-															"_Editor": {
-																"eID": "EdtrComp_64"
-															},
-															"O": {
-																"cType": "slot"
-															}
-														}
-													],
-													"cType": "slot"
-												}
-											},
-											"_Editor": {
-												"eID": "EdtrComp_38"
-											},
-											"O": {
-												"cType": "slot",
-												"layout": {
-													"dOpt": {
-														"xs": [
-															"d:d-flex",
-															"fd:flex-column"
-														]
-													},
-													"class": "d-flex flex-column"
-												},
-												"compDomClasses": "col d-flex flex-column"
-											}
-										}
-									],
-									"cType": "slot"
-								}
-							},
-							"_Editor": {
-								"eID": "EdtrComp_37"
-							},
-							"O": {
-								"cType": "slot",
-								"compDomClasses": "row"
-							}
-						},
-						{
-							"T": "VRow",
-							"P": {
-								"ID": {
 									"H": "EdtrComp_99",
 									"T": "prop"
 								}
@@ -429,10 +343,6 @@ let pjson = {
 																	"T": "prop"
 																},
 																"visible": {
-																	"H": "true",
-																	"T": "prop"
-																},
-																"outlined": {
 																	"H": "true",
 																	"T": "prop"
 																}
@@ -523,10 +433,6 @@ let pjson = {
 																"label": {
 																	"H": "'My Autocomplete'",
 																	"T": "prop"
-																},
-																"outlined": {
-																	"H": "true",
-																	"T": "prop"
 																}
 															},
 															"E": {},
@@ -610,7 +516,7 @@ let pjson = {
 					"HL": "JS"
 				},
 				"EndRender": {
-					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ncomponents.myTextField.qValue = \"textField new\";\r\ncomponents.myTextField.compareValue = 'textField old';\r\ncomponents.myTextarea.qValue = \"tetxarea new\";\r\n;\r\ncomponents.myTextarea.compareValue = 'tetxarea old';\r\ncomponents.mySelect.qValue = 2;\r\ncomponents.mySelect.compareValue = null;\r\ncomponents.myAutocomplete.qValue = 2;\r\ncomponents.myAutocomplete.compareValue = 1;\r\ncomponents.myAutocomplete.compareText = components.myAutocomplete.items.filter(function (item) { return item.value == components.myAutocomplete.compareValue; })[0].text;\r\ncomponents.EdtrComp_3.items = [{ ID: 1, name: 'Frozens Yogurt New', calories: 159, fat: '6.0', carbs: 24, protein: '4.0', iron: '' },\r\n    { ID: 2, name: 'Ice cream sandwich', calories: 237, fat: '10.0', carbs: 37, protein: '', iron: '' },\r\n    { ID: 3, name: 'Eclair', calories: 270, fat: '16.0', carbs: 23, protein: '6.0', iron: '7%' },\r\n    { ID: 4, name: 'Cupcake', calories: 305, fat: '3.7', carbs: 67, protein: '4.2', iron: '10%' },\r\n    { ID: 5, name: 'Gingerbread', calories: 356, fat: '16.0', carbs: 49, protein: '3.9', iron: '16%' },\r\n    { ID: 6, name: 'Jelly bean', calories: '', fat: '0.0', carbs: 94, protein: '0.0', iron: '0%' },\r\n    { ID: 7, name: 'Lollipop', calories: 392, fat: '0.2', carbs: 98, protein: '0.0', iron: '2 %' },\r\n    { ID: 8, name: 'Honeycomb', calories: 408, fat: '3.2', carbs: 87, protein: '6.5', iron: '45%' },\r\n    { ID: 9, name: 'Donut', calories: 452, fat: '25.0', carbs: 51, protein: '4.9', iron: '22%' },\r\n    { ID: 10, name: '', calories: 518, fat: '26.0', carbs: 65, protein: '7', iron: '6 %' }];\r\ncomponents.EdtrComp_3.compareValue = [{ ID: 1, name: 'Frozens Yogurt', fat: '6.0', carbs: 24, protein: '4.0', iron: '1%' },\r\n    { ID: 2, name: 'Ice cream sandwich', calories: 237, fat: '9.0', carbs: 37, protein: '4.3', iron: '1%' },\r\n    { ID: 3, name: 'Eclair', calories: 262, fat: '16.0', carbs: 23, protein: '6.0', iron: '7%' },\r\n    { ID: 4, name: 'Cupcake', calories: 305, fat: '3.7', carbs: 67, protein: '10.3', iron: '8%' },\r\n    { ID: 5, fat: '16.0', carbs: 49, protein: '3.9' },\r\n    { ID: 6, name: 'Jelly bean', calories: 375, fat: '0.0', carbs: 94, protein: '0.0', iron: '0%' },\r\n    { ID: 7, name: 'Lollipop', fat: '0.2', carbs: 98, protein: '0.0', iron: '2 %' },\r\n    { ID: 8, name: 'Honeycomb', calories: 408, fat: '3.2', carbs: 87, protein: '6.5', iron: '45%' },\r\n    { ID: 9, name: 'Donut', calories: 452, fat: '25.0', carbs: 51, protein: '4.9', iron: '22%' },\r\n    { ID: 10, name: 'KitKat', calories: 518, fat: '26.0', carbs: 50, iron: '5 %' }];\r\n",
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ncomponents.myTextField.qValue = undefined;\r\ncomponents.myTextField.compareValue = 'qwe';\r\ncomponents.mySelect.qValue = 2;\r\ncomponents.mySelect.compareValue = null;\r\ncomponents.myAutocomplete.qValue = 2;\r\ncomponents.myAutocomplete.compareValue = 1;\r\ncomponents.myAutocomplete.compareText = components.myAutocomplete.items.filter(function (item) { return item.value == components.myAutocomplete.compareValue; })[0].text;\r\ncomponents.EdtrComp_3.items = [{ ID: 1, name: 'Frozens Yogurt New', calories: 159, fat: '6.0', carbs: 24, protein: '4.0', iron: '' },\r\n    { ID: 2, name: 'Ice cream sandwich', calories: 237, fat: '10.0', carbs: 37, protein: '', iron: '' },\r\n    { ID: 3, name: 'Eclair', calories: 270, fat: '16.0', carbs: 23, protein: '6.0', iron: '7%' },\r\n    { ID: 4, name: 'Cupcake', calories: 305, fat: '3.7', carbs: 67, protein: '4.2', iron: '10%' },\r\n    { ID: 5, name: 'Gingerbread', calories: 356, fat: '16.0', carbs: 49, protein: '3.9', iron: '16%' },\r\n    { ID: 6, name: 'Jelly bean', calories: '', fat: '0.0', carbs: 94, protein: '0.0', iron: '0%' },\r\n    { ID: 7, name: 'Lollipop', calories: 392, fat: '0.2', carbs: 98, protein: '0.0', iron: '2 %' },\r\n    { ID: 8, name: 'Honeycomb', calories: 408, fat: '3.2', carbs: 87, protein: '6.5', iron: '45%' },\r\n    { ID: 9, name: 'Donut', calories: 452, fat: '25.0', carbs: 51, protein: '4.9', iron: '22%' },\r\n    { ID: 10, name: '', calories: 518, fat: '26.0', carbs: 65, protein: '7', iron: '6 %' }];\r\ncomponents.EdtrComp_3.compareValue = [{ ID: 1, name: 'Frozens Yogurt', fat: '6.0', carbs: 24, protein: '4.0', iron: '1%' },\r\n    { ID: 2, name: 'Ice cream sandwich', calories: 237, fat: '9.0', carbs: 37, protein: '4.3', iron: '1%' },\r\n    { ID: 3, name: 'Eclair', calories: 262, fat: '16.0', carbs: 23, protein: '6.0', iron: '7%' },\r\n    { ID: 4, name: 'Cupcake', calories: 305, fat: '3.7', carbs: 67, protein: '10.3', iron: '8%' },\r\n    { ID: 5, fat: '16.0', carbs: 49, protein: '3.9' },\r\n    { ID: 6, name: 'Jelly bean', calories: 375, fat: '0.0', carbs: 94, protein: '0.0', iron: '0%' },\r\n    { ID: 7, name: 'Lollipop', fat: '0.2', carbs: 98, protein: '0.0', iron: '2 %' },\r\n    { ID: 8, name: 'Honeycomb', calories: 408, fat: '3.2', carbs: 87, protein: '6.5', iron: '45%' },\r\n    { ID: 9, name: 'Donut', calories: 452, fat: '25.0', carbs: 51, protein: '4.9', iron: '22%' },\r\n    { ID: 10, name: 'KitKat', calories: 518, fat: '26.0', carbs: 50, iron: '5 %' }];\r\n",
 					"HL": "JS"
 				}
 			},
@@ -1424,7 +1330,7 @@ let pjson = {
 																			},
 																			"O": {
 																				"cType": "child",
-																				"compDomClasses": "v-input v-input--is-label-active v-input--is-dirty theme--light v-text-field v-text-field--is-booted v-text-field--enclosed v-text-field--outlined sftt-value-updated"
+																				"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted v-text-field--enclosed v-text-field--outlined sftt-value-removed"
 																			}
 																		}
 																	],
@@ -1470,129 +1376,6 @@ let pjson = {
 							},
 							"_Editor": {
 								"eID": "EdtrComp_14"
-							},
-							"O": {
-								"cType": "slot",
-								"compDomClasses": "row newDropBorder"
-							}
-						},
-						{
-							"T": "VRow",
-							"P": {
-								"ID": {
-									"H": "EdtrComp_37",
-									"T": "prop"
-								}
-							},
-							"E": {},
-							"C": {
-								"default": {
-									"c": [
-										{
-											"T": "VCol",
-											"P": {
-												"ID": {
-													"H": "EdtrComp_38",
-													"T": "prop"
-												}
-											},
-											"E": {},
-											"C": {
-												"default": {
-													"c": [
-														{
-															"T": "Tooltip",
-															"P": {
-																"ID": {
-																	"H": "myTextarea_tooltip",
-																	"T": "prop"
-																},
-																"disabled": {
-																	"H": "╬true╩╩",
-																	"T": "prop"
-																},
-																"position": {
-																	"H": "╬'top'╩╩",
-																	"T": "prop"
-																}
-															},
-															"E": {},
-															"C": {
-																"default": {
-																	"c": [
-																		{
-																			"T": "VTextarea",
-																			"P": {
-																				"ID": {
-																					"H": "myTextarea",
-																					"T": "prop"
-																				},
-																				"visible": {
-																					"H": "╬true╩╩",
-																					"T": "prop"
-																				},
-																				"outlined": {
-																					"H": "╬true╩╩",
-																					"T": "prop"
-																				},
-																				"label": {
-																					"H": "╬'Text area  label'╩╩",
-																					"T": "prop"
-																				}
-																			},
-																			"E": {},
-																			"C": {},
-																			"_Editor": {
-																				"eID": "EdtrComp_64"
-																			},
-																			"O": {
-																				"cType": "slot",
-																				"compDomClasses": "v-input v-textarea v-input--is-label-active v-input--is-dirty theme--light v-text-field v-text-field--is-booted v-text-field--enclosed v-text-field--outlined sftt-value-updated"
-																			}
-																		}
-																	],
-																	"cType": "slot"
-																}
-															},
-															"_Editor": {
-																"eID": "EdtrComp_64_tooltip"
-															},
-															"O": {
-																"layout": {
-																	"class": "sftt-compare-value-tooltip",
-																	"dOpt": {}
-																},
-																"cType": "child",
-																"compDomClasses": "tooltip-div-class sftt-compare-value-tooltip newDropBorder"
-															}
-														}
-													],
-													"cType": "slot"
-												}
-											},
-											"_Editor": {
-												"eID": "EdtrComp_38"
-											},
-											"O": {
-												"cType": "slot",
-												"layout": {
-													"dOpt": {
-														"xs": [
-															"d:d-flex",
-															"fd:flex-column"
-														]
-													},
-													"class": "d-flex flex-column"
-												},
-												"compDomClasses": "col d-flex flex-column newDropBorder"
-											}
-										}
-									],
-									"cType": "slot"
-								}
-							},
-							"_Editor": {
-								"eID": "EdtrComp_37"
 							},
 							"O": {
 								"cType": "slot",
@@ -1658,10 +1441,6 @@ let pjson = {
 																				"visible": {
 																					"H": "╬true╩╩",
 																					"T": "prop"
-																				},
-																				"outlined": {
-																					"H": "╬true╩╩",
-																					"T": "prop"
 																				}
 																			},
 																			"E": {},
@@ -1671,7 +1450,7 @@ let pjson = {
 																			},
 																			"O": {
 																				"cType": "slot",
-																				"compDomClasses": "v-input v-input--is-label-active v-input--is-dirty theme--light v-text-field v-text-field--is-booted v-text-field--enclosed v-text-field--outlined v-select sftt-value-saved"
+																				"compDomClasses": "v-input v-input--is-label-active v-input--is-dirty theme--light v-text-field v-text-field--is-booted v-select sftt-value-saved"
 																			}
 																		}
 																	],
@@ -1687,7 +1466,7 @@ let pjson = {
 																	"dOpt": {}
 																},
 																"cType": "child",
-																"compDomClasses": "tooltip-div-class sftt-compare-value-tooltip"
+																"compDomClasses": "tooltip-div-class sftt-compare-value-tooltip newDropBorder"
 															}
 														}
 													],
@@ -1715,7 +1494,7 @@ let pjson = {
 													},
 													"class": "d-flex flex-column"
 												},
-												"compDomClasses": "col d-flex flex-column"
+												"compDomClasses": "col d-flex flex-column newDropBorder"
 											}
 										}
 									],
@@ -1727,7 +1506,7 @@ let pjson = {
 							},
 							"O": {
 								"cType": "slot",
-								"compDomClasses": "row"
+								"compDomClasses": "row newDropBorder"
 							}
 						},
 						{
@@ -1789,10 +1568,6 @@ let pjson = {
 																				"label": {
 																					"H": "╬'My Autocomplete'╩╩",
 																					"T": "prop"
-																				},
-																				"outlined": {
-																					"H": "╬true╩╩",
-																					"T": "prop"
 																				}
 																			},
 																			"E": {},
@@ -1802,7 +1577,7 @@ let pjson = {
 																			},
 																			"O": {
 																				"cType": "slot",
-																				"compDomClasses": "v-input v-input--is-label-active v-input--is-dirty theme--light v-text-field v-text-field--is-booted v-text-field--enclosed v-text-field--outlined v-select v-autocomplete sftt-value-updated"
+																				"compDomClasses": "v-input v-input--is-label-active v-input--is-dirty theme--light v-text-field v-text-field--is-booted v-select v-autocomplete sftt-value-updated"
 																			}
 																		}
 																	],
@@ -1875,7 +1650,6 @@ let pjson = {
 		}
 	],
 	"lrids": {},
-	"clrids": {},
-	"opt": {}
+	"clrids": {}
 };
 export default pjson
