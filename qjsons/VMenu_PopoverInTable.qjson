@@ -189,8 +189,9 @@ let pjson = {
 															},
 															"E": {
 																"click": {
-																	"H": "on.click(mouseEvent)\r\nEdtrComp_41.qValue = true",
-																	"P": "mouseEvent"
+																	"H": "\r\ncomponents.EdtrComp_37.qValue =!components.EdtrComp_37.qValue",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "TS"
 																}
 															},
 															"C": {
@@ -226,6 +227,9 @@ let pjson = {
 															},
 															"O": {
 																"cType": "slot"
+															},
+															"D": {
+																"click-outside": {}
 															}
 														}
 													],
@@ -456,8 +460,9 @@ let pjson = {
 															},
 															"E": {
 																"click": {
-																	"H": "╬()╣.╣on╩╠click╩╩╠mouseEvent╩╩╬=╣.╣EdtrComp_41╩╠qValue╩╩╠true╩╩╩",
-																	"P": "mouseEvent"
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ncomponents.EdtrComp_37.qValue = !components.EdtrComp_37.qValue;\r\n",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "JS"
 																}
 															},
 															"C": {
@@ -495,6 +500,9 @@ let pjson = {
 															"O": {
 																"cType": "slot",
 																"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary"
+															},
+															"D": {
+																"click-outside": {}
 															}
 														}
 													],
@@ -518,7 +526,7 @@ let pjson = {
 							},
 							"O": {
 								"cType": "scopedSlot",
-								"compDomClasses": "v-data-table v-data-table--has-bottom theme--light"
+								"compDomClasses": "v-data-table v-data-table--has-bottom theme--light newDropBorder"
 							}
 						}
 					],
@@ -530,11 +538,21 @@ let pjson = {
 			},
 			"O": {
 				"cType": "slot",
-				"compDomClasses": "container container--fluid"
+				"compDomClasses": "container container--fluid newDropBorder"
 			}
 		}
 	],
 	"lrids": {},
-	"clrids": {}
+	"clrids": {
+		"tr-TR": {
+			"VALIDATION_E_MAIL": "╬'Hatalı e-posta'╩╩",
+			"VALIDATION_PHONE_NUMBER": "╬'Hatalı telefon numarası'╩╩"
+		},
+		"en-US": {
+			"VALIDATION_E_MAIL": "╬'Incorrect e-mail address'╩╩",
+			"VALIDATION_PHONE_NUMBER": "╬'Incorrect phone number'╩╩"
+		}
+	},
+	"opt": {}
 };
 export default pjson

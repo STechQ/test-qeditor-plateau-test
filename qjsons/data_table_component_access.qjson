@@ -1,54 +1,6 @@
 let pjson = {
 	"pJson": [
 		{
-			"T": "VBtn",
-			"P": {
-				"ID": {
-					"H": "EdtrComp_1",
-					"T": "prop"
-				}
-			},
-			"E": {
-				"click": {
-					"H": "EdtrComp_3.items[1].selected = !EdtrComp_3.items[1].selected"
-				}
-			},
-			"C": {
-				"default": {
-					"c": [
-						{
-							"T": "QLabel",
-							"C": {},
-							"E": {},
-							"P": {
-								"ID": {
-									"H": "EdtrComp_2",
-									"T": "prop"
-								},
-								"text": {
-									"H": "'Readonly Disable Selected Rows'",
-									"T": "prop"
-								}
-							},
-							"_Editor": {
-								"eID": "EdtrComp_2"
-							},
-							"O": {
-								"cType": "child"
-							}
-						}
-					],
-					"cType": "slot"
-				}
-			},
-			"_Editor": {
-				"eID": "EdtrComp_1"
-			},
-			"O": {
-				"cType": "slot"
-			}
-		},
-		{
 			"T": "VDataTable",
 			"P": {
 				"ID": {
@@ -60,7 +12,7 @@ let pjson = {
 					"T": "prop"
 				},
 				"items": {
-					"H": "tableItems = [{name = 'Frozens Yogurt', calories = 159, fat = '6.0', carbs = 24, protein = '4.0', iron = '1%'},\n{name = 'Ice cream sandwich', calories = 237, fat = '9.0', carbs = 37, protein = '4.3', iron = '1%'}]\n\nforeach (item in tableItems) {\n    item.selected= false\n}\ntableItems",
+					"H": " [{name = 'Frozens Yogurt', calories = 159, fat = '6.0', carbs = 24, protein = '4.0', iron = '1%'},\n{name = 'Ice cream sandwich', calories = 237, fat = '9.0', carbs = 37, protein = '4.3', iron = '1%'}]",
 					"T": "prop"
 				},
 				"itemsPerPage": {
@@ -78,8 +30,9 @@ let pjson = {
 			},
 			"E": {
 				"item-selected": {
-					"H": "EM.trace(rowObj)\r\nrowObj.item.selected = rowObj.value\r\n",
-					"P": "rowObj"
+					"H": "quick.EM.trace(rowObj)\r\n",
+					"P": "rowObj:IVDataTableItemSelect",
+					"HL": "TS"
 				}
 			},
 			"C": {
@@ -149,12 +102,7 @@ let pjson = {
 									"T": "prop"
 								}
 							},
-							"E": {
-								"input": {
-									"H": "item.fat = value\r\nEM.trace(value)\r\n",
-									"P": "value"
-								}
-							},
+							"E": {},
 							"C": {},
 							"_Editor": {
 								"eID": "EdtrComp_8"
@@ -177,54 +125,6 @@ let pjson = {
 	],
 	"cJson": [
 		{
-			"T": "VBtn",
-			"P": {
-				"ID": {
-					"H": "EdtrComp_1",
-					"T": "prop"
-				}
-			},
-			"E": {
-				"click": {
-					"H": "╬=╣.╣[]╣.╣EdtrComp_3╩╠items╩╩╠1╩╩╠selected╩╩╠!╠.╣[]╣.╣EdtrComp_3╩╠items╩╩╠1╩╩╠selected╩╩╩╩╩"
-				}
-			},
-			"C": {
-				"default": {
-					"c": [
-						{
-							"T": "QLabel",
-							"C": {},
-							"E": {},
-							"P": {
-								"ID": {
-									"H": "EdtrComp_2",
-									"T": "prop"
-								},
-								"text": {
-									"H": "╬'Readonly Disable Selected Rows'╩╩",
-									"T": "prop"
-								}
-							},
-							"_Editor": {
-								"eID": "EdtrComp_2"
-							},
-							"O": {
-								"cType": "child"
-							}
-						}
-					],
-					"cType": "slot"
-				}
-			},
-			"_Editor": {
-				"eID": "EdtrComp_1"
-			},
-			"O": {
-				"cType": "slot"
-			}
-		},
-		{
 			"T": "VDataTable",
 			"P": {
 				"ID": {
@@ -236,7 +136,7 @@ let pjson = {
 					"T": "prop"
 				},
 				"items": {
-					"H": "╬=╣tableItems╩╠[]╠{}╠=╣name╩╠'Frozens Yogurt'╩╩╠=╣calories╩╠159╩╩╠=╣fat╩╠'6.0'╩╩╠=╣carbs╩╠24╩╩╠=╣protein╩╠'4.0'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Ice cream sandwich'╩╩╠=╣calories╩╠237╩╩╠=╣fat╩╠'9.0'╩╩╠=╣carbs╩╠37╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'1%'╩╩╩╩╩╬foreach╣in╣item╩╠tableItems╩╩╠╬=╣.╣item╩╠selected╩╩╠false╩╩╩╩╬tableItems╩╩",
+					"H": "╬[]╠{}╠=╣name╩╠'Frozens Yogurt'╩╩╠=╣calories╩╠159╩╩╠=╣fat╩╠'6.0'╩╩╠=╣carbs╩╠24╩╩╠=╣protein╩╠'4.0'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Ice cream sandwich'╩╩╠=╣calories╩╠237╩╩╠=╣fat╩╠'9.0'╩╩╠=╣carbs╩╠37╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'1%'╩╩╩╩╩",
 					"T": "prop"
 				},
 				"itemsPerPage": {
@@ -254,8 +154,9 @@ let pjson = {
 			},
 			"E": {
 				"item-selected": {
-					"H": "╬()╣.╣EM╩╠trace╩╩╠rowObj╩╩╬=╣.╣.╣rowObj╩╠item╩╩╠selected╩╩╠.╣rowObj╩╠value╩╩╩╩",
-					"P": "rowObj"
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.EM.trace(rowObj);\r\n",
+					"P": "rowObj:IVDataTableItemSelect",
+					"HL": "JS"
 				}
 			},
 			"C": {
@@ -301,7 +202,8 @@ let pjson = {
 								"eID": "EdtrComp_6"
 							},
 							"O": {
-								"cType": "child"
+								"cType": "child",
+								"compDomClasses": "q-label newDropBorder"
 							}
 						}
 					],
@@ -325,18 +227,14 @@ let pjson = {
 									"T": "prop"
 								}
 							},
-							"E": {
-								"input": {
-									"H": "╬=╣.╣item╩╠fat╩╩╠value╩╩╬()╣.╣EM╩╠trace╩╩╠value╩╩╩",
-									"P": "value"
-								}
-							},
+							"E": {},
 							"C": {},
 							"_Editor": {
 								"eID": "EdtrComp_8"
 							},
 							"O": {
-								"cType": "child"
+								"cType": "child",
+								"compDomClasses": "v-input v-input--is-label-active v-input--is-dirty v-input--is-readonly theme--light v-text-field v-text-field--is-booted undefined newDropBorder"
 							}
 						}
 					],
@@ -347,12 +245,117 @@ let pjson = {
 				"eID": "EdtrComp_3"
 			},
 			"O": {
-				"cType": "child"
+				"cType": "child",
+				"compDomClasses": "v-data-table v-data-table--has-bottom theme--light newDropBorder"
 			}
 		}
 	],
 	"lrids": {},
-	"clrids": {},
-	"description": {}
+	"clrids": {
+		"tr-TR": {
+			"label_yes": "╬'Evet'╩╩",
+			"label_no": "╬'Hayır'╩╩",
+			"label_create": "╬'Takvim Oluşturma'╩╩",
+			"label_code": "╬'Takvim Kodu'╩╩",
+			"label_name": "╬'Takvim İsmi'╩╩",
+			"day1": "╬'Pazartesi'╩╩",
+			"day3": "╬'Çarşamba'╩╩",
+			"day4": "╬'Perşembe'╩╩",
+			"day5": "╬'Cuma'╩╩",
+			"day6": "╬'Cumartesi'╩╩",
+			"day7": "╬'Pazar'╩╩",
+			"holidayList": "╬'Tatil Listesi'╩╩",
+			"uploadEx": "╬'Excel Yükle'╩╩",
+			"exportEx": "╬'Excele Aktar'╩╩",
+			"addHoliday": "╬'Yeni Tatil Ekle'╩╩",
+			"tblYear": "╬'Yıl'╩╩",
+			"tblMonth": "╬'Ay'╩╩",
+			"tblDay": "╬'Gün'╩╩",
+			"tblPageText": "╬'Satır Sayısı'╩╩",
+			"tblAllText": "╬'Hepsi'╩╩",
+			"tblType": "╬'Tatil Tipi'╩╩",
+			"tblName": "╬'Tatil Adı'╩╩",
+			"tblStatus": "╬'Tatil Statü'╩╩",
+			"tblNoData": "╬'Veri Yok'╩╩",
+			"btnSave": "╬'Kaydet'╩╩",
+			"calendarDef": "╬'Takvim Tanımı: Bu bölümde tanımlanacak olan takvimin kodu, ismi ve statüsü ile birlikte girilmelidir.'╩╩",
+			"workDef": "╬'Çalışma Günleri Tanımı: Bu bölümde çalışma günleri işaretlenmelidir.'╩╩",
+			"holidayDef": "╬'Tatil Tanımlamaları: Bu bölümde takvim içerisinde yer almasını istediğiniz tatil günlerinin tanımı yapılmaktadır.'╩╩",
+			"popUpHolidayDef": "╬'Yeni Tatil Tanımı'╩╩",
+			"halfDayText": "╬'Tatil Yarım Gün Mü?'╩╩",
+			"btnKapat": "╬'Kapat'╩╩",
+			"labelSuc": "╬'Kayıt başarılı.'╩╩",
+			"labelFail": "╬'Servis çağrısı hatası.'╩╩",
+			"workDay": "╬'Çalışma Günleri'╩╩",
+			"PENDING": "╬'Beklemede'╩╩",
+			"PASSIVE": "╬'Pasif'╩╩",
+			"CANCELLED": "╬'İptal'╩╩",
+			"READY": "╬'Hazır'╩╩",
+			"BLOCKED": "╬'Bloke'╩╩",
+			"ACTIVE": "╬'Aktif'╩╩",
+			"label_status": "╬'Takvim Statü'╩╩",
+			"CHANGING_AS_DAY": "╬'Yıla göre değişen tatil'╩╩",
+			"FIXED_REOCCURING": "╬'Sabit tatiller'╩╩",
+			"EXCEPTION_HOLIDAY_AS_WORKING_DAY": "╬'Çalışma günü olarak istisna tatil'╩╩",
+			"day2": "╬'Salı'╩╩",
+			"label_is_half_days_business_day": "╬'Yarım Günler İş Günü Mü?'╩╩",
+			"label_METADATA_CODE_ALREADY_EXISTS": "╬'Verilen kod kullanılmaktadır. '╩╩",
+			"label_delete": "╬'Sil'╩╩",
+			"label_detail": "╬'Detay'╩╩"
+		},
+		"en-US": {
+			"label_yes": "╬'Yes'╩╩",
+			"label_no": "╬'No'╩╩",
+			"label_create": "╬'Create Calendar'╩╩",
+			"label_code": "╬'Calendar Code'╩╩",
+			"label_name": "╬'Calendar Name'╩╩",
+			"day1": "╬'Monday'╩╩",
+			"day3": "╬'Wednesday'╩╩",
+			"day4": "╬'Thursday'╩╩",
+			"day5": "╬'Friday'╩╩",
+			"day6": "╬'Saturday'╩╩",
+			"day7": "╬'Sunday'╩╩",
+			"holidayList": "╬'Holiday List'╩╩",
+			"uploadEx": "╬'Upload Excel'╩╩",
+			"exportEx": "╬'Export to Excel'╩╩",
+			"addHoliday": "╬'Add New Holiday'╩╩",
+			"tblYear": "╬'Year'╩╩",
+			"tblMonth": "╬'Month'╩╩",
+			"tblDay": "╬'Day'╩╩",
+			"tblPageText": "╬'Row per page'╩╩",
+			"tblAllText": "╬'All'╩╩",
+			"tblType": "╬'Holiday Type'╩╩",
+			"tblName": "╬'Holiday Name'╩╩",
+			"tblStatus": "╬'Holiday Status'╩╩",
+			"tblNoData": "╬'No Data Available'╩╩",
+			"btnSave": "╬'Save'╩╩",
+			"calendarDef": "╬'Calendar Definition: In this section, you need to enter the calendar code, name and status of the calendar that will be defined'╩╩",
+			"workDef": "╬'Definition of Working Days: Working days should be marked in this section.'╩╩",
+			"holidayDef": "╬'Holiday Definitions: This section defines the holidays that you want to be included in the calendar.'╩╩",
+			"popUpHolidayDef": "╬'New Holiday Definition'╩╩",
+			"halfDayText": "╬'Is the Holiday Half a Day?'╩╩",
+			"btnKapat": "╬'Close'╩╩",
+			"labelSuc": "╬'The registration is successful.'╩╩",
+			"labelFail": "╬'Service call error.'╩╩",
+			"workDay": "╬'Working Days'╩╩",
+			"PENDING": "╬'Pending'╩╩",
+			"PASSIVE": "╬'Passive'╩╩",
+			"CANCELLED": "╬'Cancelled'╩╩",
+			"READY": "╬'Ready'╩╩",
+			"BLOCKED": "╬'Blocked'╩╩",
+			"ACTIVE": "╬'Active'╩╩",
+			"label_status": "╬'Calendar Status'╩╩",
+			"CHANGING_AS_DAY": "╬'Changing as day'╩╩",
+			"FIXED_REOCCURING": "╬'Fixed reoccuring'╩╩",
+			"EXCEPTION_HOLIDAY_AS_WORKING_DAY": "╬'Exception holiday as working day'╩╩",
+			"day2": "╬'Tuesday'╩╩",
+			"label_is_half_days_business_day": "╬'Are Half Days Business Day?'╩╩",
+			"label_METADATA_CODE_ALREADY_EXISTS": "╬'Given code already exists. '╩╩",
+			"label_delete": "╬'Delete'╩╩",
+			"label_detail": "╬'Detail'╩╩"
+		}
+	},
+	"description": {},
+	"opt": {}
 };
 export default pjson

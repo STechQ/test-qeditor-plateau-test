@@ -12,7 +12,7 @@ let pjson = {
 					"T": "prop"
 				},
 				"items": {
-					"H": "[{name = 'Frozens Yogurt', calories = 159, fat = '6.0', carbs = 24, protein = '4.0', iron = '1%', caloriesDisable='true', nameDisable='true'},\n{name = 'Ice cream sandwich', calories = 237, fat = '9.0', carbs = 37, protein = '4.3', iron = '1%', proteinDisable='true'},\n{name = 'Eclair', calories = 262, fat = '16.0', carbs = 23, protein = '6.0', iron = '7%', fatDisable='true', nameDisable='true'},\n{name = 'Cupcake', calories = 305, fat = '3.7', carbs = 67, protein = '4.3', iron = '8%',nameDisable='true', caloriesDisable='true', proteinDisable='true'},\n{name = 'Gingerbread',calories = 356, fat = '16.0', carbs = 49, protein = '3.9', iron = '16%'},\n{name = 'Jelly bean', calories = 375,  fat = '0.0', carbs = 94, protein = '0.0', iron = '0%'},\n{name = 'Lollipop', calories = 392, fat = '0.2', carbs = 98, protein = '0.0', iron = '2 %'},\n{name = 'Honeycomb', calories = 408, fat = '3.2', carbs = 87, protein = '6.5', iron = '45%'},\n{name = 'Donut', calories = 452, fat = '25.0', carbs = 51, protein = '4.9', iron = '22%'},\n{name = 'KitKat', calories = 518, fat = '26.0', carbs = 65, protein = '7', iron=  '6 %'}]",
+					"H": "[{name = 'Frozens Yogurt', calories = 159, fat = '6.0', carbs = 24, protein = '4.0', iron = '1%', caloriesDisable='true', nameDisable='true', uniqId = 0},\n{name = 'Ice cream sandwich', calories = 237, fat = '9.0', carbs = 37, protein = '4.3', iron = '1%', proteinDisable='true' ,uniqId = 1},\n{name = 'Eclair', calories = 262, fat = '16.0', carbs = 23, protein = '6.0', iron = '7%', fatDisable='true', nameDisable='true' ,uniqId = 2},\n{name = 'Cupcake', calories = 305, fat = '3.7', carbs = 67, protein = '4.3', iron = '8%',nameDisable='true', caloriesDisable='true', proteinDisable='true' ,uniqId = 3},\n{name = 'Gingerbread',calories = 356, fat = '16.0', carbs = 49, protein = '3.9', iron = '16%' ,uniqId = 4},\n{name = 'Jelly bean', calories = 375,  fat = '0.0', carbs = 94, protein = '0.0', iron = '0%' ,uniqId = 5},\n{name = 'Lollipop', calories = 392, fat = '0.2', carbs = 98, protein = '0.0', iron = '2 %' ,uniqId = 6},\n{name = 'Honeycomb', calories = 408, fat = '3.2', carbs = 87, protein = '6.5', iron = '45%' ,uniqId = 7},\n{name = 'Donut', calories = 452, fat = '25.0', carbs = 51, protein = '4.9', iron = '22%' ,uniqId = 8},\n{name = 'KitKat', calories = 518, fat = '26.0', carbs = 65, protein = '7', iron=  '6 %' ,uniqId = 9}]",
 					"T": "prop"
 				},
 				"itemsPerPage": {
@@ -22,9 +22,31 @@ let pjson = {
 				"hideDefaultFooter": {
 					"H": "true",
 					"T": "prop"
+				},
+				"uniqueSlots": {
+					"H": "true",
+					"T": "prop"
+				},
+				"itemKey": {
+					"H": "'uniqId'",
+					"T": "prop"
+				},
+				"showSelect": {
+					"H": "false",
+					"T": "prop"
+				},
+				"selectableKey": {
+					"H": "'isSelectable'",
+					"T": "prop"
 				}
 			},
-			"E": {},
+			"E": {
+				"click:row": {
+					"H": "// quick.EM.trace(row)\r\nquick.EM.trace(components.EdtrComp_1)\r\n\r\nquick.EM.trace(components.EdtrComp_1.items[0])",
+					"P": "index:any,row:IVDataTableClickRow",
+					"HL": "TS"
+				}
+			},
 			"C": {
 				"item.iron": {
 					"c": [
@@ -46,7 +68,9 @@ let pjson = {
 							},
 							"E": {
 								"click": {
-									"H": "EdtrComp_6.value=true\r\nEdtrComp_17.value=EdtrComp_1.items[0].name\r\nEdtrComp_18.value=EdtrComp_1.items[0].calories\r\n\r\nforeach(item in EdtrComp_1.items) {\r\n   \r\n     b=EdtrComp_1.items.indexOf(item)\r\n   \r\n     EM.trace(b)\r\n     \r\n     EdtrComp_17.value=EdtrComp_1.items[b].name\r\n     EdtrComp_18.value=EdtrComp_1.items[b].calories\r\n     EdtrComp_25.value=EdtrComp_1.items[b].fat\r\n     EdtrComp_26.value=EdtrComp_1.items[b].carbs\r\n     EdtrComp_27.value=EdtrComp_1.items[b].protein\r\n\r\n     EdtrComp_17.disabled=EdtrComp_1.items[b].nameDisable\r\n     EdtrComp_18.disabled=EdtrComp_1.items[b].caloriesDisable\r\n     EdtrComp_25.disabled=EdtrComp_1.items[b].fatDisable\r\n     EdtrComp_26.disabled=EdtrComp_1.items[b].carbsDisable\r\n     EdtrComp_27.disabled=EdtrComp_1.items[b].proteinDisable\r\n\r\n    EM.trace('ccccc'+c)\r\n    \r\n     EM.trace('transition:' +b)\r\n     EdtrComp_6.origin=b\r\n    \r\n   \r\n}\r\n"
+									"H": "components.EdtrComp_6.qValue=!components.EdtrComp_6.qValue\r\n\r\ndebugger\r\ndeclare var item;\r\n quick.EM.trace('mee: '+ item)\r\n for (let i =0; i<=10; i++)\r\n {\r\n      if(item.uniqId ==i ) \r\n      {\r\n           components.EdtrComp_17.qValue=components.EdtrComp_1.items[i].name\r\n     components.EdtrComp_18.qValue=components.EdtrComp_1.items[i].calories\r\n     components.EdtrComp_25.qValue=components.EdtrComp_1.items[i].fat\r\n     components.EdtrComp_26.qValue=components.EdtrComp_1.items[i].carbs\r\n     components.EdtrComp_27.qValue=components.EdtrComp_1.items[i].protein\r\n\r\n     components.EdtrComp_17.disabled=components.EdtrComp_1.items[i].nameDisable\r\n     components.EdtrComp_18.disabled=components.EdtrComp_1.items[i].caloriesDisable\r\n     components.EdtrComp_25.disabled=components.EdtrComp_1.items[i].fatDisable\r\n     components.EdtrComp_26.disabled=components.EdtrComp_1.items[i].carbsDisable\r\n     components.EdtrComp_27.disabled=components.EdtrComp_1.items[i].proteinDisable\r\n\r\n      }\r\n\r\n };\r\n\r\n\r\n",
+									"P": "mouseEvent:unknown | undefined",
+									"HL": "TS"
 								}
 							},
 							"C": {
@@ -104,14 +128,6 @@ let pjson = {
 				},
 				"width": {
 					"H": "700",
-					"T": "prop"
-				},
-				"fullscreen": {
-					"H": "false",
-					"T": "prop"
-				},
-				"persistent": {
-					"H": "false",
 					"T": "prop"
 				},
 				"eager": {
@@ -310,7 +326,7 @@ let pjson = {
 									"T": "prop"
 								},
 								"class": {
-									"H": "'white d-flex  justify-center'",
+									"H": "'white d-flex justify-center'",
 									"T": "class"
 								}
 							},
@@ -336,7 +352,9 @@ let pjson = {
 											},
 											"E": {
 												"click": {
-													"H": "\r\nEM.trace('Origin'+ EdtrComp_6.origin)\r\nforeach(item in EdtrComp_1.items) {\r\n   \r\n     b=EdtrComp_1.items.indexOf(item)\r\n   \r\n     EM.trace(b)\r\n     EM.trace(EdtrComp_1.items[b])\r\n     \r\n     EdtrComp_1.items[EdtrComp_6.origin].name=EdtrComp_17.internalValue\r\n      EdtrComp_1.items[EdtrComp_6.origin].calories=EdtrComp_18.internalValue\r\n       EdtrComp_1.items[EdtrComp_6.origin].fat=EdtrComp_25.internalValue\r\n        EdtrComp_1.items[EdtrComp_6.origin].carbs=EdtrComp_26.internalValue\r\n         EdtrComp_1.items[EdtrComp_6.origin].protein=EdtrComp_27.internalValue\r\n         \r\n    \r\n\r\n}\r\n\r\nEdtrComp_6.value=false\r\n\r\n\r\n\r\n"
+													"H": "\r\ndebugger\r\nquick.EM.trace('Origin' + components.EdtrComp_6.origin)\r\nlet myItem = components.EdtrComp_1.items\r\n\r\nmyItem.forEach(item => {\r\n\r\n   let b = components.EdtrComp_1.items.indexOf(item)\r\n\r\n   quick.EM.trace(b)\r\n   quick.EM.trace(components.EdtrComp_1.items[b])\r\n   if (components.EdtrComp_17.qValue== components.EdtrComp_1.items[b].name){\r\n   components.EdtrComp_1.items[b].name = components.EdtrComp_17.qValue\r\n   components.EdtrComp_1.items[b].calories = components.EdtrComp_18.qValue\r\n   components.EdtrComp_1.items[b].fat = components.EdtrComp_25.qValue\r\n   components.EdtrComp_1.items[b].carbs = components.EdtrComp_26.qValue\r\n   components.EdtrComp_1.items[b].protein = components.EdtrComp_27.qValue\r\n   }\r\n\r\n   \r\n\r\n});\r\n\r\ncomponents.EdtrComp_6.qValue = false\r\n\r\n\r\n\r\n",
+													"P": "mouseEvent:unknown | undefined",
+													"HL": "TS"
 												}
 											},
 											"C": {
@@ -395,46 +413,6 @@ let pjson = {
 			"O": {
 				"cType": "slot"
 			}
-		},
-		{
-			"T": "VRow",
-			"P": {
-				"ID": {
-					"H": "EdtrComp_8",
-					"T": "prop"
-				}
-			},
-			"E": {},
-			"C": {
-				"default": {
-					"c": [
-						{
-							"T": "Ghost",
-							"P": {
-								"ID": {
-									"H": "EdtrComp_15",
-									"T": "prop"
-								}
-							},
-							"E": {},
-							"C": {},
-							"_Editor": {
-								"eID": "EdtrComp_15"
-							},
-							"O": {
-								"cType": "child"
-							}
-						}
-					],
-					"cType": "slot"
-				}
-			},
-			"_Editor": {
-				"eID": "EdtrComp_8"
-			},
-			"O": {
-				"cType": "slot"
-			}
 		}
 	],
 	"cJson": [
@@ -450,7 +428,7 @@ let pjson = {
 					"T": "prop"
 				},
 				"items": {
-					"H": "╬[]╠{}╠=╣name╩╠'Frozens Yogurt'╩╩╠=╣calories╩╠159╩╩╠=╣fat╩╠'6.0'╩╩╠=╣carbs╩╠24╩╩╠=╣protein╩╠'4.0'╩╩╠=╣iron╩╠'1%'╩╩╠=╣caloriesDisable╩╠'true'╩╩╠=╣nameDisable╩╠'true'╩╩╩╠{}╠=╣name╩╠'Ice cream sandwich'╩╩╠=╣calories╩╠237╩╩╠=╣fat╩╠'9.0'╩╩╠=╣carbs╩╠37╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'1%'╩╩╠=╣proteinDisable╩╠'true'╩╩╩╠{}╠=╣name╩╠'Eclair'╩╩╠=╣calories╩╠262╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠23╩╩╠=╣protein╩╠'6.0'╩╩╠=╣iron╩╠'7%'╩╩╠=╣fatDisable╩╠'true'╩╩╠=╣nameDisable╩╠'true'╩╩╩╠{}╠=╣name╩╠'Cupcake'╩╩╠=╣calories╩╠305╩╩╠=╣fat╩╠'3.7'╩╩╠=╣carbs╩╠67╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'8%'╩╩╠=╣nameDisable╩╠'true'╩╩╠=╣caloriesDisable╩╠'true'╩╩╠=╣proteinDisable╩╠'true'╩╩╩╠{}╠=╣name╩╠'Gingerbread'╩╩╠=╣calories╩╠356╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠49╩╩╠=╣protein╩╠'3.9'╩╩╠=╣iron╩╠'16%'╩╩╩╠{}╠=╣name╩╠'Jelly bean'╩╩╠=╣calories╩╠375╩╩╠=╣fat╩╠'0.0'╩╩╠=╣carbs╩╠94╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'0%'╩╩╩╠{}╠=╣name╩╠'Lollipop'╩╩╠=╣calories╩╠392╩╩╠=╣fat╩╠'0.2'╩╩╠=╣carbs╩╠98╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'2 %'╩╩╩╠{}╠=╣name╩╠'Honeycomb'╩╩╠=╣calories╩╠408╩╩╠=╣fat╩╠'3.2'╩╩╠=╣carbs╩╠87╩╩╠=╣protein╩╠'6.5'╩╩╠=╣iron╩╠'45%'╩╩╩╠{}╠=╣name╩╠'Donut'╩╩╠=╣calories╩╠452╩╩╠=╣fat╩╠'25.0'╩╩╠=╣carbs╩╠51╩╩╠=╣protein╩╠'4.9'╩╩╠=╣iron╩╠'22%'╩╩╩╠{}╠=╣name╩╠'KitKat'╩╩╠=╣calories╩╠518╩╩╠=╣fat╩╠'26.0'╩╩╠=╣carbs╩╠65╩╩╠=╣protein╩╠'7'╩╩╠=╣iron╩╠'6 %'╩╩╩╩╩",
+					"H": "╬[]╠{}╠=╣name╩╠'Frozens Yogurt'╩╩╠=╣calories╩╠159╩╩╠=╣fat╩╠'6.0'╩╩╠=╣carbs╩╠24╩╩╠=╣protein╩╠'4.0'╩╩╠=╣iron╩╠'1%'╩╩╠=╣caloriesDisable╩╠'true'╩╩╠=╣nameDisable╩╠'true'╩╩╠=╣uniqId╩╠0╩╩╩╠{}╠=╣name╩╠'Ice cream sandwich'╩╩╠=╣calories╩╠237╩╩╠=╣fat╩╠'9.0'╩╩╠=╣carbs╩╠37╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'1%'╩╩╠=╣proteinDisable╩╠'true'╩╩╠=╣uniqId╩╠1╩╩╩╠{}╠=╣name╩╠'Eclair'╩╩╠=╣calories╩╠262╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠23╩╩╠=╣protein╩╠'6.0'╩╩╠=╣iron╩╠'7%'╩╩╠=╣fatDisable╩╠'true'╩╩╠=╣nameDisable╩╠'true'╩╩╠=╣uniqId╩╠2╩╩╩╠{}╠=╣name╩╠'Cupcake'╩╩╠=╣calories╩╠305╩╩╠=╣fat╩╠'3.7'╩╩╠=╣carbs╩╠67╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'8%'╩╩╠=╣nameDisable╩╠'true'╩╩╠=╣caloriesDisable╩╠'true'╩╩╠=╣proteinDisable╩╠'true'╩╩╠=╣uniqId╩╠3╩╩╩╠{}╠=╣name╩╠'Gingerbread'╩╩╠=╣calories╩╠356╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠49╩╩╠=╣protein╩╠'3.9'╩╩╠=╣iron╩╠'16%'╩╩╠=╣uniqId╩╠4╩╩╩╠{}╠=╣name╩╠'Jelly bean'╩╩╠=╣calories╩╠375╩╩╠=╣fat╩╠'0.0'╩╩╠=╣carbs╩╠94╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'0%'╩╩╠=╣uniqId╩╠5╩╩╩╠{}╠=╣name╩╠'Lollipop'╩╩╠=╣calories╩╠392╩╩╠=╣fat╩╠'0.2'╩╩╠=╣carbs╩╠98╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'2 %'╩╩╠=╣uniqId╩╠6╩╩╩╠{}╠=╣name╩╠'Honeycomb'╩╩╠=╣calories╩╠408╩╩╠=╣fat╩╠'3.2'╩╩╠=╣carbs╩╠87╩╩╠=╣protein╩╠'6.5'╩╩╠=╣iron╩╠'45%'╩╩╠=╣uniqId╩╠7╩╩╩╠{}╠=╣name╩╠'Donut'╩╩╠=╣calories╩╠452╩╩╠=╣fat╩╠'25.0'╩╩╠=╣carbs╩╠51╩╩╠=╣protein╩╠'4.9'╩╩╠=╣iron╩╠'22%'╩╩╠=╣uniqId╩╠8╩╩╩╠{}╠=╣name╩╠'KitKat'╩╩╠=╣calories╩╠518╩╩╠=╣fat╩╠'26.0'╩╩╠=╣carbs╩╠65╩╩╠=╣protein╩╠'7'╩╩╠=╣iron╩╠'6 %'╩╩╠=╣uniqId╩╠9╩╩╩╩╩",
 					"T": "prop"
 				},
 				"itemsPerPage": {
@@ -460,9 +438,31 @@ let pjson = {
 				"hideDefaultFooter": {
 					"H": "╬true╩╩",
 					"T": "prop"
+				},
+				"uniqueSlots": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"itemKey": {
+					"H": "╬'uniqId'╩╩",
+					"T": "prop"
+				},
+				"showSelect": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				},
+				"selectableKey": {
+					"H": "╬'isSelectable'╩╩",
+					"T": "prop"
 				}
 			},
-			"E": {},
+			"E": {
+				"click:row": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\n// quick.EM.trace(row)\r\nquick.EM.trace(components.EdtrComp_1);\r\nquick.EM.trace(components.EdtrComp_1.items[0]);\r\n",
+					"P": "index:any,row:IVDataTableClickRow",
+					"HL": "JS"
+				}
+			},
 			"C": {
 				"item.iron": {
 					"c": [
@@ -470,7 +470,7 @@ let pjson = {
 							"T": "VBtn",
 							"P": {
 								"ID": {
-									"H": "EdtrComp_3",
+									"H": "EdtrComp_3_q_4",
 									"T": "prop"
 								},
 								"color": {
@@ -484,7 +484,9 @@ let pjson = {
 							},
 							"E": {
 								"click": {
-									"H": "╬=╣.╣EdtrComp_6╩╠value╩╩╠true╩╩╬=╣.╣EdtrComp_17╩╠value╩╩╠.╣[]╣.╣EdtrComp_1╩╠items╩╩╠0╩╩╠name╩╩╩╬=╣.╣EdtrComp_18╩╠value╩╩╠.╣[]╣.╣EdtrComp_1╩╠items╩╩╠0╩╩╠calories╩╩╩╬foreach╣in╣item╩╠.╣EdtrComp_1╩╠items╩╩╩╠╬=╣b╩╠()╣.╣.╣EdtrComp_1╩╠items╩╩╠indexOf╩╩╠item╩╩╩╬()╣.╣EM╩╠trace╩╩╠b╩╩╬=╣.╣EdtrComp_17╩╠value╩╩╠.╣[]╣.╣EdtrComp_1╩╠items╩╩╠b╩╩╠name╩╩╩╬=╣.╣EdtrComp_18╩╠value╩╩╠.╣[]╣.╣EdtrComp_1╩╠items╩╩╠b╩╩╠calories╩╩╩╬=╣.╣EdtrComp_25╩╠value╩╩╠.╣[]╣.╣EdtrComp_1╩╠items╩╩╠b╩╩╠fat╩╩╩╬=╣.╣EdtrComp_26╩╠value╩╩╠.╣[]╣.╣EdtrComp_1╩╠items╩╩╠b╩╩╠carbs╩╩╩╬=╣.╣EdtrComp_27╩╠value╩╩╠.╣[]╣.╣EdtrComp_1╩╠items╩╩╠b╩╩╠protein╩╩╩╬=╣.╣EdtrComp_17╩╠disabled╩╩╠.╣[]╣.╣EdtrComp_1╩╠items╩╩╠b╩╩╠nameDisable╩╩╩╬=╣.╣EdtrComp_18╩╠disabled╩╩╠.╣[]╣.╣EdtrComp_1╩╠items╩╩╠b╩╩╠caloriesDisable╩╩╩╬=╣.╣EdtrComp_25╩╠disabled╩╩╠.╣[]╣.╣EdtrComp_1╩╠items╩╩╠b╩╩╠fatDisable╩╩╩╬=╣.╣EdtrComp_26╩╠disabled╩╩╠.╣[]╣.╣EdtrComp_1╩╠items╩╩╠b╩╩╠carbsDisable╩╩╩╬=╣.╣EdtrComp_27╩╠disabled╩╩╠.╣[]╣.╣EdtrComp_1╩╠items╩╩╠b╩╩╠proteinDisable╩╩╩╬()╣.╣EM╩╠trace╩╩╠+╣'ccccc'╩╠c╩╩╩╬()╣.╣EM╩╠trace╩╩╠+╣'transition:'╩╠b╩╩╩╬=╣.╣EdtrComp_6╩╠origin╩╩╠b╩╩╩╩╩"
+									"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ncomponents.EdtrComp_6.qValue = !components.EdtrComp_6.qValue;\r\ndebugger;\r\nquick.EM.trace('mee: ' + item);\r\nfor (var i = 0; i <= 10; i++) {\r\n    if (item.uniqId == i) {\r\n        components.EdtrComp_17.qValue = components.EdtrComp_1.items[i].name;\r\n        components.EdtrComp_18.qValue = components.EdtrComp_1.items[i].calories;\r\n        components.EdtrComp_25.qValue = components.EdtrComp_1.items[i].fat;\r\n        components.EdtrComp_26.qValue = components.EdtrComp_1.items[i].carbs;\r\n        components.EdtrComp_27.qValue = components.EdtrComp_1.items[i].protein;\r\n        components.EdtrComp_17.disabled = components.EdtrComp_1.items[i].nameDisable;\r\n        components.EdtrComp_18.disabled = components.EdtrComp_1.items[i].caloriesDisable;\r\n        components.EdtrComp_25.disabled = components.EdtrComp_1.items[i].fatDisable;\r\n        components.EdtrComp_26.disabled = components.EdtrComp_1.items[i].carbsDisable;\r\n        components.EdtrComp_27.disabled = components.EdtrComp_1.items[i].proteinDisable;\r\n    }\r\n}\r\n;\r\n",
+									"P": "mouseEvent:unknown | undefined",
+									"HL": "JS"
 								}
 							},
 							"C": {
@@ -508,7 +510,8 @@ let pjson = {
 												"eID": "EdtrComp_4"
 											},
 											"O": {
-												"cType": "child"
+												"cType": "child",
+												"compDomClasses": "q-label newDropBorder"
 											}
 										}
 									],
@@ -519,7 +522,8 @@ let pjson = {
 								"eID": "EdtrComp_3"
 							},
 							"O": {
-								"cType": "slot"
+								"cType": "slot",
+								"compDomClasses": "v-btn v-btn--contained theme--light v-size--default success newDropBorder"
 							}
 						}
 					],
@@ -530,7 +534,8 @@ let pjson = {
 				"eID": "EdtrComp_1"
 			},
 			"O": {
-				"cType": "child"
+				"cType": "child",
+				"compDomClasses": "v-data-table theme--light newDropBorder"
 			}
 		},
 		{
@@ -542,14 +547,6 @@ let pjson = {
 				},
 				"width": {
 					"H": "╬700╩╩",
-					"T": "prop"
-				},
-				"fullscreen": {
-					"H": "╬false╩╩",
-					"T": "prop"
-				},
-				"persistent": {
-					"H": "╬false╩╩",
 					"T": "prop"
 				},
 				"eager": {
@@ -615,7 +612,8 @@ let pjson = {
 																"eID": "EdtrComp_17"
 															},
 															"O": {
-																"cType": "child"
+																"cType": "child",
+																"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted undefined"
 															}
 														},
 														{
@@ -640,7 +638,8 @@ let pjson = {
 																"eID": "EdtrComp_18"
 															},
 															"O": {
-																"cType": "child"
+																"cType": "child",
+																"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted undefined"
 															}
 														},
 														{
@@ -665,7 +664,8 @@ let pjson = {
 																"eID": "EdtrComp_25"
 															},
 															"O": {
-																"cType": "child"
+																"cType": "child",
+																"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted undefined"
 															}
 														},
 														{
@@ -690,7 +690,8 @@ let pjson = {
 																"eID": "EdtrComp_26"
 															},
 															"O": {
-																"cType": "child"
+																"cType": "child",
+																"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted undefined"
 															}
 														},
 														{
@@ -715,7 +716,8 @@ let pjson = {
 																"eID": "EdtrComp_27"
 															},
 															"O": {
-																"cType": "child"
+																"cType": "child",
+																"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted undefined"
 															}
 														}
 													],
@@ -726,7 +728,8 @@ let pjson = {
 												"eID": "EdtrComp_23"
 											},
 											"O": {
-												"cType": "slot"
+												"cType": "slot",
+												"compDomClasses": "container"
 											}
 										}
 									],
@@ -737,7 +740,8 @@ let pjson = {
 								"eID": "EdtrComp_2"
 							},
 							"O": {
-								"cType": "slot"
+								"cType": "slot",
+								"compDomClasses": "row col-md-12 white"
 							}
 						},
 						{
@@ -748,7 +752,7 @@ let pjson = {
 									"T": "prop"
 								},
 								"class": {
-									"H": "╬'white d-flex  justify-center'╩╩",
+									"H": "╬'white d-flex justify-center'╩╩",
 									"T": "class"
 								}
 							},
@@ -774,7 +778,9 @@ let pjson = {
 											},
 											"E": {
 												"click": {
-													"H": "╬()╣.╣EM╩╠trace╩╩╠+╣'Origin'╩╠.╣EdtrComp_6╩╠origin╩╩╩╩╬foreach╣in╣item╩╠.╣EdtrComp_1╩╠items╩╩╩╠╬=╣b╩╠()╣.╣.╣EdtrComp_1╩╠items╩╩╠indexOf╩╩╠item╩╩╩╬()╣.╣EM╩╠trace╩╩╠b╩╩╬()╣.╣EM╩╠trace╩╩╠[]╣.╣EdtrComp_1╩╠items╩╩╠b╩╩╩╬=╣.╣[]╣.╣EdtrComp_1╩╠items╩╩╠.╣EdtrComp_6╩╠origin╩╩╩╠name╩╩╠.╣EdtrComp_17╩╠internalValue╩╩╩╬=╣.╣[]╣.╣EdtrComp_1╩╠items╩╩╠.╣EdtrComp_6╩╠origin╩╩╩╠calories╩╩╠.╣EdtrComp_18╩╠internalValue╩╩╩╬=╣.╣[]╣.╣EdtrComp_1╩╠items╩╩╠.╣EdtrComp_6╩╠origin╩╩╩╠fat╩╩╠.╣EdtrComp_25╩╠internalValue╩╩╩╬=╣.╣[]╣.╣EdtrComp_1╩╠items╩╩╠.╣EdtrComp_6╩╠origin╩╩╩╠carbs╩╩╠.╣EdtrComp_26╩╠internalValue╩╩╩╬=╣.╣[]╣.╣EdtrComp_1╩╠items╩╩╠.╣EdtrComp_6╩╠origin╩╩╩╠protein╩╩╠.╣EdtrComp_27╩╠internalValue╩╩╩╩╩╬=╣.╣EdtrComp_6╩╠value╩╩╠false╩╩╩"
+													"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ndebugger;\r\nquick.EM.trace('Origin' + components.EdtrComp_6.origin);\r\nvar myItem = components.EdtrComp_1.items;\r\nmyItem.forEach(function (item) {\r\n    var b = components.EdtrComp_1.items.indexOf(item);\r\n    quick.EM.trace(b);\r\n    quick.EM.trace(components.EdtrComp_1.items[b]);\r\n    if (components.EdtrComp_17.qValue == components.EdtrComp_1.items[b].name) {\r\n        components.EdtrComp_1.items[b].name = components.EdtrComp_17.qValue;\r\n        components.EdtrComp_1.items[b].calories = components.EdtrComp_18.qValue;\r\n        components.EdtrComp_1.items[b].fat = components.EdtrComp_25.qValue;\r\n        components.EdtrComp_1.items[b].carbs = components.EdtrComp_26.qValue;\r\n        components.EdtrComp_1.items[b].protein = components.EdtrComp_27.qValue;\r\n    }\r\n});\r\ncomponents.EdtrComp_6.qValue = false;\r\n",
+													"P": "mouseEvent:unknown | undefined",
+													"HL": "JS"
 												}
 											},
 											"C": {
@@ -798,7 +804,8 @@ let pjson = {
 																"eID": "EdtrComp_11"
 															},
 															"O": {
-																"cType": "child"
+																"cType": "child",
+																"compDomClasses": "q-label "
 															}
 														}
 													],
@@ -809,7 +816,8 @@ let pjson = {
 												"eID": "EdtrComp_10"
 											},
 											"O": {
-												"cType": "slot"
+												"cType": "slot",
+												"compDomClasses": "v-btn v-btn--contained theme--light v-size--default success"
 											}
 										}
 									],
@@ -820,7 +828,8 @@ let pjson = {
 								"eID": "EdtrComp_28"
 							},
 							"O": {
-								"cType": "slot"
+								"cType": "slot",
+								"compDomClasses": "row white d-flex justify-center"
 							}
 						}
 					],
@@ -831,52 +840,14 @@ let pjson = {
 				"eID": "EdtrComp_6"
 			},
 			"O": {
-				"cType": "slot"
-			}
-		},
-		{
-			"T": "VRow",
-			"P": {
-				"ID": {
-					"H": "EdtrComp_8",
-					"T": "prop"
-				}
-			},
-			"E": {},
-			"C": {
-				"default": {
-					"c": [
-						{
-							"T": "Ghost",
-							"P": {
-								"ID": {
-									"H": "EdtrComp_15",
-									"T": "prop"
-								}
-							},
-							"E": {},
-							"C": {},
-							"_Editor": {
-								"eID": "EdtrComp_15"
-							},
-							"O": {
-								"cType": "child"
-							}
-						}
-					],
-					"cType": "slot"
-				}
-			},
-			"_Editor": {
-				"eID": "EdtrComp_8"
-			},
-			"O": {
-				"cType": "slot"
+				"cType": "slot",
+				"compDomClasses": "newDropBorder"
 			}
 		}
 	],
 	"lrids": {},
 	"clrids": {},
-	"description": {}
+	"description": {},
+	"opt": {}
 };
 export default pjson

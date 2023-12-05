@@ -40,11 +40,11 @@ let pjson = {
 									"T": "prop"
 								},
 								"text": {
-									"H": "'home'",
+									"H": "'Test'",
 									"T": "prop"
 								},
 								"class": {
-									"H": "if(Number.parse(item.protein) > Number.parse('4.2')){\r\n    'primary'\r\n}",
+									"H": "if(Number.parse(item.protein) > Number.parse('4.2')){\r\n    'primary'\r\n    \r\n}",
 									"T": "class"
 								}
 							},
@@ -110,7 +110,7 @@ let pjson = {
 									"T": "prop"
 								},
 								"text": {
-									"H": "╬'home'╩╩",
+									"H": "╬'Test'╩╩",
 									"T": "prop"
 								},
 								"class": {
@@ -124,7 +124,8 @@ let pjson = {
 								"eID": "EdtrComp_6"
 							},
 							"O": {
-								"cType": "child"
+								"cType": "child",
+								"compDomClasses": "q-label newDropBorder"
 							}
 						}
 					],
@@ -135,12 +136,37 @@ let pjson = {
 				"eID": "EdtrComp_3"
 			},
 			"O": {
-				"cType": "child"
+				"cType": "child",
+				"compDomClasses": "v-data-table theme--light newDropBorder"
 			}
 		}
 	],
 	"lrids": {},
-	"clrids": {},
-	"description": {}
+	"clrids": {
+		"tr-TR": {
+			"FIKRIM_YOK": "╬'Fikrim Yok'╩╩",
+			"HICBIR_ZAMAN": "╬'Hiçbir Zaman'╩╩",
+			"NADIREN": "╬'Nadiren'╩╩",
+			"GENELLIKLE": "╬'Genellikle'╩╩",
+			"COGU_ZAMAN": "╬'Çoğu Zaman'╩╩",
+			"HER_ZAMAN": "╬'Her Zaman'╩╩",
+			"label_previous": "╬'Önceki'╩╩",
+			"label_next": "╬'Sonraki'╩╩",
+			"label_alert_missing_answer": "╬'Lütfen soruları cevaplayınız.'╩╩"
+		},
+		"en-US": {
+			"FIKRIM_YOK": "╬'No Idea'╩╩",
+			"HICBIR_ZAMAN": "╬'Anytime'╩╩",
+			"NADIREN": "╬'Rarely'╩╩",
+			"GENELLIKLE": "╬'Usually'╩╩",
+			"COGU_ZAMAN": "╬'Usually+'╩╩",
+			"HER_ZAMAN": "╬'Always'╩╩",
+			"label_previous": "╬'Previous'╩╩",
+			"label_next": "╬'Next'╩╩",
+			"label_alert_missing_answer": "╬'Please answer the questions.'╩╩"
+		}
+	},
+	"description": {},
+	"opt": {}
 };
 export default pjson

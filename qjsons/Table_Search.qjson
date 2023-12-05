@@ -14,8 +14,9 @@ let pjson = {
 			},
 			"E": {
 				"input": {
-					"H": "EdtrComp_1.search=value",
-					"P": "value"
+					"H": "components.EdtrComp_1.search=value",
+					"P": "value:any",
+					"HL": "TS"
 				}
 			},
 			"C": {},
@@ -71,8 +72,9 @@ let pjson = {
 			},
 			"E": {
 				"input": {
-					"H": "╬=╣.╣EdtrComp_1╩╠search╩╩╠value╩╩╩",
-					"P": "value"
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ncomponents.EdtrComp_1.search = value;\r\n",
+					"P": "value:any",
+					"HL": "JS"
 				}
 			},
 			"C": {},
@@ -80,7 +82,8 @@ let pjson = {
 				"eID": "EdtrComp_2"
 			},
 			"O": {
-				"cType": "child"
+				"cType": "child",
+				"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted newDropBorder"
 			}
 		},
 		{
@@ -109,14 +112,14 @@ let pjson = {
 				"eID": "EdtrComp_1"
 			},
 			"O": {
-				"cType": "child"
+				"cType": "child",
+				"compDomClasses": "v-data-table v-data-table--has-bottom theme--light newDropBorder"
 			}
 		}
 	],
 	"lrids": {},
-	"clrids": {
-		"tr-TR": {}
-	},
-	"description": {}
+	"clrids": {},
+	"description": {},
+	"opt": {}
 };
 export default pjson

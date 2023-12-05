@@ -112,7 +112,9 @@ let pjson = {
 			},
 			"E": {
 				"click": {
-					"H": "messages=[{message='Message'}, {message='Message'}]\r\nindex=store.get('index')\r\nif(!index) {\r\n    store.set('index', 1)\r\n    index = 1\r\n}\r\nforeach (item in messages) {\r\n    EM.trace(item)\r\n    Quick.createComponent({templateCompQID='listItem',newCompQID=index, dataSource=item.message + index, place='After' })\r\n    index = index + 1\r\n    store.set('index', index)\r\n}"
+					"H": "let message\r\nlet messages=[{message:'Message'}, {message:'Message'}]\r\nlet index=quick.store.get('index')\r\nif(!index) {\r\n    quick.store.set('index', 1)\r\n    index = 1\r\n}\r\nlet item\r\nmessages.forEach (function (item:any) {\r\n    quick.EM.trace(item)\r\n    quick.Quick.createComponent({templateCompQID:'listItem',newCompQID:index, dataSource:item.message + index, place:<any>'After' })\r\n    index = index + 1\r\n    quick.store.set('index', index);\r\n});",
+					"P": "mouseEvent:unknown | undefined",
+					"HL": "TS"
 				}
 			},
 			"C": {
@@ -221,7 +223,7 @@ let pjson = {
 											},
 											"O": {
 												"cType": "slot",
-												"compDomClasses": "v-list-item v-list-item--link theme--light"
+												"compDomClasses": "v-list-item v-list-item--link theme--light newDropBorder"
 											}
 										}
 									],
@@ -233,7 +235,7 @@ let pjson = {
 							},
 							"O": {
 								"cType": "slot",
-								"compDomClasses": "v-item-group theme--light v-list-item-group"
+								"compDomClasses": "v-item-group theme--light v-list-item-group newDropBorder"
 							}
 						}
 					],
@@ -245,7 +247,7 @@ let pjson = {
 			},
 			"O": {
 				"cType": "slot",
-				"compDomClasses": "v-list v-sheet v-sheet--tile theme--light"
+				"compDomClasses": "v-list v-sheet theme--light newDropBorder"
 			}
 		},
 		{
@@ -266,7 +268,9 @@ let pjson = {
 			},
 			"E": {
 				"click": {
-					"H": "╬=╣messages╩╠[]╠{}╠=╣message╩╠'Message'╩╩╩╠{}╠=╣message╩╠'Message'╩╩╩╩╩╬=╣index╩╠()╣.╣store╩╠get╩╩╠'index'╩╩╩╬if╣!╠index╩╩╠╬()╣.╣store╩╠set╩╩╠'index'╩╠1╩╩╬=╣index╩╠1╩╩╩╠■╩╬foreach╣in╣item╩╠messages╩╩╠╬()╣.╣EM╩╠trace╩╩╠item╩╩╬()╣.╣Quick╩╠createComponent╩╩╠{}╠=╣templateCompQID╩╠'listItem'╩╩╠=╣newCompQID╩╠index╩╩╠=╣dataSource╩╠+╣.╣item╩╠message╩╩╠index╩╩╩╠=╣place╩╠'After'╩╩╩╩╬=╣index╩╠+╣index╩╠1╩╩╩╬()╣.╣store╩╠set╩╩╠'index'╩╠index╩╩╩╩╩"
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nvar message;\r\nvar messages = [{ message: 'Message' }, { message: 'Message' }];\r\nvar index = quick.store.get('index');\r\nif (!index) {\r\n    quick.store.set('index', 1);\r\n    index = 1;\r\n}\r\nvar item;\r\nmessages.forEach(function (item) {\r\n    quick.EM.trace(item);\r\n    quick.Quick.createComponent({ templateCompQID: 'listItem', newCompQID: index, dataSource: item.message + index, place: 'After' });\r\n    index = index + 1;\r\n    quick.store.set('index', index);\r\n});\r\n",
+					"P": "mouseEvent:unknown | undefined",
+					"HL": "JS"
 				}
 			},
 			"C": {
@@ -291,7 +295,7 @@ let pjson = {
 							},
 							"O": {
 								"cType": "child",
-								"compDomClasses": "q-label "
+								"compDomClasses": "q-label newDropBorder"
 							}
 						}
 					],
@@ -303,12 +307,13 @@ let pjson = {
 			},
 			"O": {
 				"cType": "slot",
-				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary"
+				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary newDropBorder"
 			}
 		}
 	],
 	"lrids": {},
 	"clrids": {},
-	"description": {}
+	"description": {},
+	"opt": {}
 };
 export default pjson

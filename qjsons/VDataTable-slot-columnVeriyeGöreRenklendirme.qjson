@@ -78,11 +78,11 @@ let pjson = {
 																	"T": "prop"
 																},
 																"headers": {
-																	"H": "[{ text = 'Dessert (100g serving)', align= 'start', sortable= false, value= 'name'},\n{ text = 'Calories', value= 'calories', sortable = true },\n{ text = 'Fat (g)', value= 'fat' },\n{ text = 'Carbs (g)', value= 'carbs' },\n{ text = 'Protein (g)', value= 'protein' },\n{ text = 'Iron (%)', value= 'iron' }]",
+																	"H": "[{ text = 'Dessert (100g serving)', align= 'start', sortable= false, value= 'name'},\n{ text = 'Calories', value= 'calories', sortable = true },\n{ text = 'Fat (g)', value= 'fat' },\n{ text = 'Carbs (g)', value= 'carbs' },\n{ text = 'Protein (g)', value= 'protein' },\n{ text = 'Iron (%)', value= 'iron'}]",
 																	"T": "prop"
 																},
 																"items": {
-																	"H": "[{name = 'Frozens Yogurt', calories = 159, fat = '6.0', carbs = 24, protein = '4.0', iron = 'iptal'},\n{name = 'Ice cream sandwich', calories = 237, fat = '9.0', carbs = 37, protein = '4.3', iron = 'basarili'},\n{name = 'Eclair', calories = 262, fat = '16.0', carbs = 23, protein = '6.0', iron = 'iptal'},\n{name = 'Cupcake', calories = 305, fat = '3.7', carbs = 67, protein = '4.3', iron = 'basarili'},\n{name = 'Gingerbread',calories = 356, fat = '16.0', carbs = 49, protein = '3.9', iron = 'iptal'},\n{name = 'Jelly bean', calories = 375,  fat = '0.0', carbs = 94, protein = '0.0', iron = 'basarili'},\n{name = 'Lollipop', calories = 392, fat = '0.2', carbs = 98, protein = '0.0', iron = 'iptal'},\n{name = 'Honeycomb', calories = 408, fat = '3.2', carbs = 87, protein = '6.5', iron = 'basarili'},\n{name = 'Donut', calories = 452, fat = '25.0', carbs = 51, protein = '4.9', iron = 'iptal'},\n{name = 'KitKat', calories = 518, fat = '26.0', carbs = 65, protein = '7', iron=  'basarili'}]",
+																	"H": "[{name = 'Frozens Yogurt', calories = 159, fat = '6.0', carbs = 24, protein = '4.0', iron = 'İPTAL'},\n{name = 'Ice cream sandwich', calories = 237, fat = '9.0', carbs = 37, protein = '4.3', iron = 'BAŞARILI'},\n{name = 'Eclair', calories = 262, fat = '16.0', carbs = 23, protein = '6.0', iron = 'İPTAL'},\n{name = 'Cupcake', calories = 305, fat = '3.7', carbs = 67, protein = '4.3', iron = 'BAŞARILI'},\n{name = 'Gingerbread',calories = 356, fat = '16.0', carbs = 49, protein = '3.9', iron = 'İPTAL'},\n{name = 'Jelly bean', calories = 375,  fat = '0.0', carbs = 94, protein = '0.0', iron = 'BAŞARILI'},\n{name = 'Lollipop', calories = 392, fat = '0.2', carbs = 98, protein = '0.0', iron = 'İPTAL'},\n{name = 'Honeycomb', calories = 408, fat = '3.2', carbs = 87, protein = '6.5', iron = 'BAŞARILI'},\n{name = 'Donut', calories = 452, fat = '25.0', carbs = 51, protein = '4.9', iron = 'İPTAL'},\n{name = 'KitKat', calories = 518, fat = '26.0', carbs = 65, protein = '7', iron=  'BAŞARILI'}]",
 																	"T": "prop"
 																},
 																"itemsPerPage": {
@@ -114,7 +114,7 @@ let pjson = {
 																					"T": "prop"
 																				},
 																				"class": {
-																					"H": "if(item.iron == 'basarili'){\r\n    'yellow'\r\n}else {\r\n    'red'\r\n}",
+																					"H": "if(item.iron == 'BAŞARILI'){\r\n    'green'\r\n}else {\r\n    'red'\r\n}",
 																					"T": "class"
 																				}
 																			},
@@ -169,7 +169,17 @@ let pjson = {
 																								"fontWeight": "400"
 																							},
 																							"O": {
-																								"cType": "slot"
+																								"cType": "slot",
+																								"layout": {
+																									"dOpt": {
+																										"xs": [
+																											"te:font-weight-bold",
+																											"tt:text-body-2",
+																											"sp:pl-2"
+																										]
+																									},
+																									"class": "font-weight-bold text-body-2 pl-2"
+																								}
 																							}
 																						}
 																					],
@@ -325,7 +335,16 @@ let pjson = {
 																				"fontWeight": "400"
 																			},
 																			"O": {
-																				"cType": "slot"
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"te:font-weight-bold",
+																							"tt:text-body-2"
+																						]
+																					},
+																					"class": "font-weight-bold text-body-2"
+																				}
 																			}
 																		}
 																	],
@@ -552,7 +571,7 @@ let pjson = {
 																	"T": "prop"
 																},
 																"items": {
-																	"H": "╬[]╠{}╠=╣name╩╠'Frozens Yogurt'╩╩╠=╣calories╩╠159╩╩╠=╣fat╩╠'6.0'╩╩╠=╣carbs╩╠24╩╩╠=╣protein╩╠'4.0'╩╩╠=╣iron╩╠'iptal'╩╩╩╠{}╠=╣name╩╠'Ice cream sandwich'╩╩╠=╣calories╩╠237╩╩╠=╣fat╩╠'9.0'╩╩╠=╣carbs╩╠37╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'basarili'╩╩╩╠{}╠=╣name╩╠'Eclair'╩╩╠=╣calories╩╠262╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠23╩╩╠=╣protein╩╠'6.0'╩╩╠=╣iron╩╠'iptal'╩╩╩╠{}╠=╣name╩╠'Cupcake'╩╩╠=╣calories╩╠305╩╩╠=╣fat╩╠'3.7'╩╩╠=╣carbs╩╠67╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'basarili'╩╩╩╠{}╠=╣name╩╠'Gingerbread'╩╩╠=╣calories╩╠356╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠49╩╩╠=╣protein╩╠'3.9'╩╩╠=╣iron╩╠'iptal'╩╩╩╠{}╠=╣name╩╠'Jelly bean'╩╩╠=╣calories╩╠375╩╩╠=╣fat╩╠'0.0'╩╩╠=╣carbs╩╠94╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'basarili'╩╩╩╠{}╠=╣name╩╠'Lollipop'╩╩╠=╣calories╩╠392╩╩╠=╣fat╩╠'0.2'╩╩╠=╣carbs╩╠98╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'iptal'╩╩╩╠{}╠=╣name╩╠'Honeycomb'╩╩╠=╣calories╩╠408╩╩╠=╣fat╩╠'3.2'╩╩╠=╣carbs╩╠87╩╩╠=╣protein╩╠'6.5'╩╩╠=╣iron╩╠'basarili'╩╩╩╠{}╠=╣name╩╠'Donut'╩╩╠=╣calories╩╠452╩╩╠=╣fat╩╠'25.0'╩╩╠=╣carbs╩╠51╩╩╠=╣protein╩╠'4.9'╩╩╠=╣iron╩╠'iptal'╩╩╩╠{}╠=╣name╩╠'KitKat'╩╩╠=╣calories╩╠518╩╩╠=╣fat╩╠'26.0'╩╩╠=╣carbs╩╠65╩╩╠=╣protein╩╠'7'╩╩╠=╣iron╩╠'basarili'╩╩╩╩╩",
+																	"H": "╬[]╠{}╠=╣name╩╠'Frozens Yogurt'╩╩╠=╣calories╩╠159╩╩╠=╣fat╩╠'6.0'╩╩╠=╣carbs╩╠24╩╩╠=╣protein╩╠'4.0'╩╩╠=╣iron╩╠'İPTAL'╩╩╩╠{}╠=╣name╩╠'Ice cream sandwich'╩╩╠=╣calories╩╠237╩╩╠=╣fat╩╠'9.0'╩╩╠=╣carbs╩╠37╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'BAŞARILI'╩╩╩╠{}╠=╣name╩╠'Eclair'╩╩╠=╣calories╩╠262╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠23╩╩╠=╣protein╩╠'6.0'╩╩╠=╣iron╩╠'İPTAL'╩╩╩╠{}╠=╣name╩╠'Cupcake'╩╩╠=╣calories╩╠305╩╩╠=╣fat╩╠'3.7'╩╩╠=╣carbs╩╠67╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'BAŞARILI'╩╩╩╠{}╠=╣name╩╠'Gingerbread'╩╩╠=╣calories╩╠356╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠49╩╩╠=╣protein╩╠'3.9'╩╩╠=╣iron╩╠'İPTAL'╩╩╩╠{}╠=╣name╩╠'Jelly bean'╩╩╠=╣calories╩╠375╩╩╠=╣fat╩╠'0.0'╩╩╠=╣carbs╩╠94╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'BAŞARILI'╩╩╩╠{}╠=╣name╩╠'Lollipop'╩╩╠=╣calories╩╠392╩╩╠=╣fat╩╠'0.2'╩╩╠=╣carbs╩╠98╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'İPTAL'╩╩╩╠{}╠=╣name╩╠'Honeycomb'╩╩╠=╣calories╩╠408╩╩╠=╣fat╩╠'3.2'╩╩╠=╣carbs╩╠87╩╩╠=╣protein╩╠'6.5'╩╩╠=╣iron╩╠'BAŞARILI'╩╩╩╠{}╠=╣name╩╠'Donut'╩╩╠=╣calories╩╠452╩╩╠=╣fat╩╠'25.0'╩╩╠=╣carbs╩╠51╩╩╠=╣protein╩╠'4.9'╩╩╠=╣iron╩╠'İPTAL'╩╩╩╠{}╠=╣name╩╠'KitKat'╩╩╠=╣calories╩╠518╩╩╠=╣fat╩╠'26.0'╩╩╠=╣carbs╩╠65╩╩╠=╣protein╩╠'7'╩╩╠=╣iron╩╠'BAŞARILI'╩╩╩╩╩",
 																	"T": "prop"
 																},
 																"itemsPerPage": {
@@ -584,7 +603,7 @@ let pjson = {
 																					"T": "prop"
 																				},
 																				"class": {
-																					"H": "╬if╣==╣.╣item╩╠iron╩╩╠'basarili'╩╩╠╬'yellow'╩╩╠╬'red'╩╩╩╩",
+																					"H": "╬if╣==╣.╣item╩╠iron╩╩╠'BAŞARILI'╩╩╠╬'green'╩╩╠╬'red'╩╩╩╩",
 																					"T": "class"
 																				}
 																			},
@@ -640,7 +659,17 @@ let pjson = {
 																							},
 																							"O": {
 																								"cType": "slot",
-																								"compDomClasses": "q-label newDropBorder"
+																								"layout": {
+																									"dOpt": {
+																										"xs": [
+																											"te:font-weight-bold",
+																											"tt:text-body-2",
+																											"sp:pl-2"
+																										]
+																									},
+																									"class": "font-weight-bold text-body-2 pl-2"
+																								},
+																								"compDomClasses": "q-label font-weight-bold text-body-2 pl-2 newDropBorder"
 																							}
 																						}
 																					],
@@ -799,7 +828,16 @@ let pjson = {
 																			},
 																			"O": {
 																				"cType": "slot",
-																				"compDomClasses": "q-label red--text newDropBorder"
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"te:font-weight-bold",
+																							"tt:text-body-2"
+																						]
+																					},
+																					"class": "font-weight-bold text-body-2"
+																				},
+																				"compDomClasses": "q-label red--text font-weight-bold text-body-2 newDropBorder"
 																			}
 																		}
 																	],
@@ -947,7 +985,16 @@ let pjson = {
 		}
 	],
 	"lrids": {},
-	"clrids": {},
+	"clrids": {
+		"tr-TR": {
+			"VALIDATION_E_MAIL": "╬'Hatalı e-posta'╩╩",
+			"VALIDATION_PHONE_NUMBER": "╬'Hatalı telefon numarası'╩╩"
+		},
+		"en-US": {
+			"VALIDATION_E_MAIL": "╬'Incorrect e-mail address'╩╩",
+			"VALIDATION_PHONE_NUMBER": "╬'Incorrect phone number'╩╩"
+		}
+	},
 	"opt": {}
 };
 export default pjson

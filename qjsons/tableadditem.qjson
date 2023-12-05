@@ -19,14 +19,15 @@ let pjson = {
 			},
 			"O": {
 				"dynProps": true,
-				"compDomClasses": ""
+				"compDomClasses": "",
+				"cType": "child"
 			}
 		},
 		{
 			"T": "VDataTable",
 			"P": {
 				"ID": {
-					"H": "EdtrComp_6",
+					"H": "Datatable",
 					"T": "prop"
 				},
 				"headers": {
@@ -42,7 +43,7 @@ let pjson = {
 					"T": "prop"
 				},
 				"itemsPerPage": {
-					"H": "5",
+					"H": "15",
 					"T": "prop"
 				}
 			},
@@ -52,7 +53,8 @@ let pjson = {
 				"eID": "EdtrComp_6"
 			},
 			"O": {
-				"compDomClasses": "v-data-table theme--light"
+				"compDomClasses": "v-data-table theme--light",
+				"cType": "scopedSlot"
 			}
 		},
 		{
@@ -73,8 +75,9 @@ let pjson = {
 			},
 			"E": {
 				"click": {
-					"H": "a = {name = 'KitKat21', calories = 518, fat = '26.0', carbs = 65, protein = '7', iron=  '6 %'}\r\nb = Quick.copy(EdtrComp_6.items)\r\nb.push(a)\r\nEdtrComp_6.items = b",
-					"P": "mouseEvent"
+					"H": "debugger\r\nlet newItem = {name : 'KitKat21', calories : 518, fat : '26.0', carbs : 65, protein : '7', iron:  '6 %'}\r\nlet copy = quick.Quick.copy(components.Datatable.items)\r\ncopy.push(newItem)\r\ncomponents.Datatable.items = copy\r\n",
+					"P": "mouseEvent:unknown | undefined",
+					"HL": "TS"
 				}
 			},
 			"C": {
@@ -90,7 +93,7 @@ let pjson = {
 									"T": "prop"
 								},
 								"text": {
-									"H": "'Test Button'",
+									"H": "'Add Item'",
 									"T": "prop"
 								}
 							},
@@ -143,7 +146,7 @@ let pjson = {
 			"T": "VDataTable",
 			"P": {
 				"ID": {
-					"H": "EdtrComp_6",
+					"H": "Datatable",
 					"T": "prop"
 				},
 				"headers": {
@@ -159,7 +162,7 @@ let pjson = {
 					"T": "prop"
 				},
 				"itemsPerPage": {
-					"H": "╬5╩╩",
+					"H": "╬15╩╩",
 					"T": "prop"
 				}
 			},
@@ -169,8 +172,8 @@ let pjson = {
 				"eID": "EdtrComp_6"
 			},
 			"O": {
-				"cType": "child",
-				"compDomClasses": "v-data-table theme--light"
+				"compDomClasses": "v-data-table v-data-table--has-bottom theme--light newDropBorder",
+				"cType": "scopedSlot"
 			}
 		},
 		{
@@ -191,8 +194,9 @@ let pjson = {
 			},
 			"E": {
 				"click": {
-					"H": "╬=╣a╩╠{}╠=╣name╩╠'KitKat21'╩╩╠=╣calories╩╠518╩╩╠=╣fat╩╠'26.0'╩╩╠=╣carbs╩╠65╩╩╠=╣protein╩╠'7'╩╩╠=╣iron╩╠'6 %'╩╩╩╩╬=╣b╩╠()╣.╣Quick╩╠copy╩╩╠.╣EdtrComp_6╩╠items╩╩╩╩╬()╣.╣b╩╠push╩╩╠a╩╩╬=╣.╣EdtrComp_6╩╠items╩╩╠b╩╩╩",
-					"P": "mouseEvent"
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ndebugger;\r\nvar newItem = { name: 'KitKat21', calories: 518, fat: '26.0', carbs: 65, protein: '7', iron: '6 %' };\r\nvar copy = quick.Quick.copy(components.Datatable.items);\r\ncopy.push(newItem);\r\ncomponents.Datatable.items = copy;\r\n",
+					"P": "mouseEvent:unknown | undefined",
+					"HL": "JS"
 				}
 			},
 			"C": {
@@ -208,7 +212,7 @@ let pjson = {
 									"T": "prop"
 								},
 								"text": {
-									"H": "╬'Test Button'╩╩",
+									"H": "╬'Add Item'╩╩",
 									"T": "prop"
 								}
 							},
@@ -217,7 +221,7 @@ let pjson = {
 							},
 							"O": {
 								"cType": "child",
-								"compDomClasses": "q-label "
+								"compDomClasses": "q-label newDropBorder"
 							}
 						}
 					],
@@ -229,12 +233,22 @@ let pjson = {
 			},
 			"O": {
 				"cType": "slot",
-				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary"
+				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary newDropBorder"
 			}
 		}
 	],
 	"lrids": {},
-	"clrids": {},
-	"description": {}
+	"clrids": {
+		"tr-TR": {
+			"VALIDATION_E_MAIL": "╬'Hatalı e-posta'╩╩",
+			"VALIDATION_PHONE_NUMBER": "╬'Hatalı telefon numarası'╩╩"
+		},
+		"en-US": {
+			"VALIDATION_E_MAIL": "╬'Incorrect e-mail address'╩╩",
+			"VALIDATION_PHONE_NUMBER": "╬'Incorrect phone number'╩╩"
+		}
+	},
+	"description": {},
+	"opt": {}
 };
 export default pjson

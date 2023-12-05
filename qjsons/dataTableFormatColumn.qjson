@@ -24,12 +24,7 @@ let pjson = {
 					"T": "prop"
 				}
 			},
-			"E": {
-				"click": {
-					"H": "\r\nserviceDate = '04011989'\r\ndateObj = Quick.parseToDate(serviceDate,'DDMMYYYY')\r\nEM.trace(dateObj)\r\nshortDate = Quick.toShortDate(dateObj)\r\nEM.trace(shortDate)",
-					"C": true
-				}
-			},
+			"E": {},
 			"C": {
 				"item.date": {
 					"c": [
@@ -72,12 +67,7 @@ let pjson = {
 									"T": "prop"
 								}
 							},
-							"E": {
-								"EndRender": {
-									"H": "\r\nserviceDate = '04011989'\r\n\r\ntableData = [{date = Date.now(), dateUI = shortDate, shortTime = Date.now(), money = 2400},\r\n{date = Date.now(), dateUI = shortDate, shortTime = Date.now(), money = 370000}]\r\n\r\ndataTable.items = tableData",
-									"C": true
-								}
-							},
+							"E": {},
 							"C": {},
 							"_Editor": {
 								"eID": "EdtrComp_10"
@@ -179,12 +169,7 @@ let pjson = {
 					"T": "prop"
 				}
 			},
-			"E": {
-				"click": {
-					"H": "╬=╣serviceDate╩╠'04011989'╩╩╬=╣dateObj╩╠()╣.╣Quick╩╠parseToDate╩╩╠serviceDate╩╠'DDMMYYYY'╩╩╩╬()╣.╣EM╩╠trace╩╩╠dateObj╩╩╬=╣shortDate╩╠()╣.╣Quick╩╠toShortDate╩╩╠dateObj╩╩╩╬()╣.╣EM╩╠trace╩╩╠shortDate╩╩╩",
-					"C": true
-				}
-			},
+			"E": {},
 			"C": {
 				"item.date": {
 					"c": [
@@ -206,7 +191,7 @@ let pjson = {
 								"eID": "EdtrComp_8"
 							},
 							"O": {
-								"compDomClasses": "q-label ",
+								"compDomClasses": "q-label newDropBorder",
 								"cType": "child"
 							}
 						}
@@ -227,18 +212,13 @@ let pjson = {
 									"T": "prop"
 								}
 							},
-							"E": {
-								"EndRender": {
-									"H": "╬=╣serviceDate╩╠'04011989'╩╩╬=╣tableData╩╠[]╠{}╠=╣date╩╠()╣.╣Date╩╠now╩╩╩╩╠=╣dateUI╩╠shortDate╩╩╠=╣shortTime╩╠()╣.╣Date╩╠now╩╩╩╩╠=╣money╩╠2400╩╩╩╠{}╠=╣date╩╠()╣.╣Date╩╠now╩╩╩╩╠=╣dateUI╩╠shortDate╩╩╠=╣shortTime╩╠()╣.╣Date╩╠now╩╩╩╩╠=╣money╩╠370000╩╩╩╩╩╬=╣.╣dataTable╩╠items╩╩╠tableData╩╩╩",
-									"C": true
-								}
-							},
+							"E": {},
 							"C": {},
 							"_Editor": {
 								"eID": "EdtrComp_10"
 							},
 							"O": {
-								"compDomClasses": "q-label ",
+								"compDomClasses": "q-label newDropBorder",
 								"cType": "child"
 							}
 						}
@@ -265,7 +245,7 @@ let pjson = {
 								"eID": "EdtrComp_7"
 							},
 							"O": {
-								"compDomClasses": "q-label ",
+								"compDomClasses": "q-label newDropBorder",
 								"cType": "child"
 							}
 						}
@@ -292,7 +272,7 @@ let pjson = {
 								"eID": "EdtrComp_6"
 							},
 							"O": {
-								"compDomClasses": "q-label ",
+								"compDomClasses": "q-label newDropBorder",
 								"cType": "child"
 							}
 						}
@@ -305,12 +285,13 @@ let pjson = {
 			},
 			"O": {
 				"cType": "child",
-				"compDomClasses": "v-data-table theme--light"
+				"compDomClasses": "v-data-table v-data-table--has-bottom theme--light newDropBorder"
 			}
 		}
 	],
 	"lrids": {},
 	"clrids": {},
-	"description": {}
+	"description": {},
+	"opt": {}
 };
 export default pjson

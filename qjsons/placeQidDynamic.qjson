@@ -53,7 +53,9 @@ let pjson = {
 											"_Editor": {
 												"eID": "EdtrComp_5"
 											},
-											"O": {}
+											"O": {
+												"cType": "slot"
+											}
 										}
 									],
 									"cType": "slot"
@@ -107,7 +109,8 @@ let pjson = {
 								"eID": "EdtrComp_8"
 							},
 							"O": {
-								"compDomClasses": "q-label "
+								"compDomClasses": "q-label ",
+								"cType": "slot"
 							}
 						}
 					],
@@ -140,8 +143,9 @@ let pjson = {
 			},
 			"E": {
 				"click": {
-					"H": "index=Math.random(0,10000)\r\nQuick.createComponent({templateCompQID='EdtrComp_9', newCompQID=index, placeQID='EdtrComp_3', place='Before'})",
-					"P": "mouseEvent"
+					"H": "let index= Math.floor(Math.random()*100)\r\nquick.Quick.createComponent({templateCompQID:'EdtrComp_9', newCompQID:<any>index, placeQID:'EdtrComp_3', place:<any>'Before'})\r\n\r\n",
+					"P": "mouseEvent:unknown | undefined",
+					"HL": "TS"
 				}
 			},
 			"C": {
@@ -236,7 +240,10 @@ let pjson = {
 											"_Editor": {
 												"eID": "EdtrComp_5"
 											},
-											"O": {}
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted undefined newDropBorder"
+											}
 										}
 									],
 									"cType": "slot"
@@ -246,7 +253,8 @@ let pjson = {
 								"eID": "EdtrComp_9"
 							},
 							"O": {
-								"cType": "slot"
+								"cType": "slot",
+								"compDomClasses": "row d-flex flex-row newDropBorder"
 							}
 						}
 					],
@@ -257,7 +265,8 @@ let pjson = {
 				"eID": "EdtrComp_1"
 			},
 			"O": {
-				"cType": "slot"
+				"cType": "slot",
+				"compDomClasses": "container newDropBorder"
 			}
 		},
 		{
@@ -290,8 +299,8 @@ let pjson = {
 								"eID": "EdtrComp_8"
 							},
 							"O": {
-								"cType": "child",
-								"compDomClasses": "q-label "
+								"compDomClasses": "q-label newDropBorder",
+								"cType": "slot"
 							}
 						}
 					],
@@ -303,7 +312,7 @@ let pjson = {
 			},
 			"O": {
 				"cType": "slot",
-				"compDomClasses": "container"
+				"compDomClasses": "container newDropBorder"
 			}
 		},
 		{
@@ -324,8 +333,9 @@ let pjson = {
 			},
 			"E": {
 				"click": {
-					"H": "╬=╣index╩╠()╣.╣Math╩╠random╩╩╠0╩╠10000╩╩╩╬()╣.╣Quick╩╠createComponent╩╩╠{}╠=╣templateCompQID╩╠'EdtrComp_9'╩╩╠=╣newCompQID╩╠index╩╩╠=╣placeQID╩╠'EdtrComp_3'╩╩╠=╣place╩╠'Before'╩╩╩╩╩",
-					"P": "mouseEvent"
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nvar index = Math.floor(Math.random() * 100);\r\nquick.Quick.createComponent({ templateCompQID: 'EdtrComp_9', newCompQID: index, placeQID: 'EdtrComp_3', place: 'Before' });\r\n",
+					"P": "mouseEvent:unknown | undefined",
+					"HL": "JS"
 				}
 			},
 			"C": {
@@ -350,7 +360,7 @@ let pjson = {
 							},
 							"O": {
 								"cType": "child",
-								"compDomClasses": "q-label "
+								"compDomClasses": "q-label newDropBorder"
 							}
 						}
 					],
@@ -362,12 +372,13 @@ let pjson = {
 			},
 			"O": {
 				"cType": "slot",
-				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary"
+				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary newDropBorder"
 			}
 		}
 	],
 	"lrids": {},
 	"clrids": {},
-	"description": {}
+	"description": {},
+	"opt": {}
 };
 export default pjson

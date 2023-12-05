@@ -1,0 +1,689 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "PageComp",
+					"T": "prop"
+				},
+				"triggerOnRestored": {
+					"H": "false",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"PostRender": {
+					"H": "\r\n(<any[]>components.myDataTable.headers).forEach(item => {\r\n    item.filter = function (value, search, item) {\r\n        let result = turkishCharacterToEnglish(value).indexOf(turkishCharacterToEnglish(search)) > -1;\r\n        return result;\r\n\r\n    }\r\n});\r\n\r\n\r\nfunction turkishCharacterToEnglish(text: string) {\r\n    let turkishChars = ['ı', 'ğ', 'İ', 'Ğ', 'ç', 'Ç', 'ş', 'Ş', 'ö', 'Ö', 'ü', 'Ü'];\r\n    let englishChars = ['i', 'g', 'I', 'G', 'c', 'C', 's', 'S', 'o', 'O', 'u', 'U'];\r\n\r\n    // Match chars\r\n    for (let i = 0; i < turkishChars.length; i++)\r\n        text = text.replace(turkishChars[i], englishChars[i]);\r\n\r\n    return text;\r\n}\r\n",
+					"TO": 1,
+					"HL": "TS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_131",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VTextField",
+															"P": {
+																"ID": {
+																	"H": "textSearch",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "'Table Search'",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"outlined": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"input": {
+																	"H": "components.myDataTable.search=value;",
+																	"P": "value:any",
+																	"HL": "TS"
+																}
+															},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_138"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_136",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_136"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_131"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "VRowComp",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VDataTable",
+															"P": {
+																"ID": {
+																	"H": "myDataTable",
+																	"T": "prop"
+																},
+																"footerProps": {
+																	"H": "{showFirstLastPage = true,\nfirstIcon = 'mdi-arrow-collapse-left',\nlastIcon = 'mdi-arrow-collapse-right',\nprevIcon = 'mdi-minus',\nnextIcon = 'mdi-plus'}",
+																	"T": "prop"
+																},
+																"headers": {
+																	"H": "[{ text = 'Dessert (100g serving)', align= 'start', sortable= false, value= 'name', filterable= true},\n{ text = 'Calories', value= 'calories', sortable = true, filterable= false },\n{ text = 'Fat (g)', value= 'fat' , filterable= false},\n{ text = 'Carbs (g)', value= 'carbs' , filterable= false},\n{ text = 'Protein (g)', value= 'protein', filterable= false },\n{ text = 'Iron (%)', value= 'iron', filterable= false }]",
+																	"T": "prop"
+																},
+																"items": {
+																	"H": "[{name = 'Frozens Yogurt', calories = 159, fat = '6.0', carbs = 24, protein = '4.0', iron = '1%'},\n{name = 'Ice cream sandwich', calories = 237, fat = '9.0', carbs = 37, protein = '4.3', iron = '1%'},\n{name = 'alıs Eclair', calories = 262, fat = '16.0', carbs = 23, protein = '6.0', iron = '7%'},\n{name = 'Cupcake', calories = 305, fat = '3.7', carbs = 67, protein = '4.3', iron = '8%'},\n{name = 'alış Gingerbread',calories = 356, fat = '16.0', carbs = 49, protein = '3.9', iron = '16%'},\n{name = 'Jelly bean', calories = 375,  fat = '0.0', carbs = 94, protein = '0.0', iron = '0%'},\n{name = 'Lollipop', calories = 392, fat = '0.2', carbs = 98, protein = '0.0', iron = '2 %'},\n{name = 'Honeycomb', calories = 408, fat = '3.2', carbs = 87, protein = '6.5', iron = '45%'},\n{name = 'Donut', calories = 452, fat = '25.0', carbs = 51, protein = '4.9', iron = '22%'},\n{name = 'KitKat', calories = 518, fat = '26.0', carbs = 65, protein = '7', iron=  '6 %'}]",
+																	"T": "prop"
+																},
+																"itemsPerPage": {
+																	"H": "5",
+																	"T": "prop"
+																},
+																"mobileBreakpoint": {
+																	"H": "600",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_8"
+															},
+															"O": {
+																"cType": "scopedSlot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "VColComp",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_3"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_5"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "PageComp",
+					"T": "prop"
+				},
+				"triggerOnRestored": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"PostRender": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ncomponents.myDataTable.headers.forEach(function (item) {\r\n    item.filter = function (value, search, item) {\r\n        var result = turkishCharacterToEnglish(value).indexOf(turkishCharacterToEnglish(search)) > -1;\r\n        return result;\r\n    };\r\n});\r\nfunction turkishCharacterToEnglish(text) {\r\n    var turkishChars = ['ı', 'ğ', 'İ', 'Ğ', 'ç', 'Ç', 'ş', 'Ş', 'ö', 'Ö', 'ü', 'Ü'];\r\n    var englishChars = ['i', 'g', 'I', 'G', 'c', 'C', 's', 'S', 'o', 'O', 'u', 'U'];\r\n    // Match chars\r\n    for (var i = 0; i < turkishChars.length; i++)\r\n        text = text.replace(turkishChars[i], englishChars[i]);\r\n    return text;\r\n}\r\n",
+					"TO": 1,
+					"HL": "JS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_131",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VTextField",
+															"P": {
+																"ID": {
+																	"H": "textSearch",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "╬'Table Search'╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"outlined": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"input": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ncomponents.myDataTable.search = value;\r\n",
+																	"P": "value:any",
+																	"HL": "JS"
+																}
+															},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_138"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted v-text-field--enclosed v-text-field--outlined undefined newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_136",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_136"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												},
+												"compDomClasses": "col d-flex flex-column newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_131"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "VRowComp",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VDataTable",
+															"P": {
+																"ID": {
+																	"H": "myDataTable",
+																	"T": "prop"
+																},
+																"footerProps": {
+																	"H": "╬{}╠=╣showFirstLastPage╩╠true╩╩╠=╣firstIcon╩╠'mdi-arrow-collapse-left'╩╩╠=╣lastIcon╩╠'mdi-arrow-collapse-right'╩╩╠=╣prevIcon╩╠'mdi-minus'╩╩╠=╣nextIcon╩╠'mdi-plus'╩╩╩╩",
+																	"T": "prop"
+																},
+																"headers": {
+																	"H": "╬[]╠{}╠=╣text╩╠'Dessert (100g serving)'╩╩╠=╣align╩╠'start'╩╩╠=╣sortable╩╠false╩╩╠=╣value╩╠'name'╩╩╠=╣filterable╩╠true╩╩╩╠{}╠=╣text╩╠'Calories'╩╩╠=╣value╩╠'calories'╩╩╠=╣sortable╩╠true╩╩╠=╣filterable╩╠false╩╩╩╠{}╠=╣text╩╠'Fat (g)'╩╩╠=╣value╩╠'fat'╩╩╠=╣filterable╩╠false╩╩╩╠{}╠=╣text╩╠'Carbs (g)'╩╩╠=╣value╩╠'carbs'╩╩╠=╣filterable╩╠false╩╩╩╠{}╠=╣text╩╠'Protein (g)'╩╩╠=╣value╩╠'protein'╩╩╠=╣filterable╩╠false╩╩╩╠{}╠=╣text╩╠'Iron (%)'╩╩╠=╣value╩╠'iron'╩╩╠=╣filterable╩╠false╩╩╩╩╩",
+																	"T": "prop"
+																},
+																"items": {
+																	"H": "╬[]╠{}╠=╣name╩╠'Frozens Yogurt'╩╩╠=╣calories╩╠159╩╩╠=╣fat╩╠'6.0'╩╩╠=╣carbs╩╠24╩╩╠=╣protein╩╠'4.0'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Ice cream sandwich'╩╩╠=╣calories╩╠237╩╩╠=╣fat╩╠'9.0'╩╩╠=╣carbs╩╠37╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'alıs Eclair'╩╩╠=╣calories╩╠262╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠23╩╩╠=╣protein╩╠'6.0'╩╩╠=╣iron╩╠'7%'╩╩╩╠{}╠=╣name╩╠'Cupcake'╩╩╠=╣calories╩╠305╩╩╠=╣fat╩╠'3.7'╩╩╠=╣carbs╩╠67╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'8%'╩╩╩╠{}╠=╣name╩╠'alış Gingerbread'╩╩╠=╣calories╩╠356╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠49╩╩╠=╣protein╩╠'3.9'╩╩╠=╣iron╩╠'16%'╩╩╩╠{}╠=╣name╩╠'Jelly bean'╩╩╠=╣calories╩╠375╩╩╠=╣fat╩╠'0.0'╩╩╠=╣carbs╩╠94╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'0%'╩╩╩╠{}╠=╣name╩╠'Lollipop'╩╩╠=╣calories╩╠392╩╩╠=╣fat╩╠'0.2'╩╩╠=╣carbs╩╠98╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'2 %'╩╩╩╠{}╠=╣name╩╠'Honeycomb'╩╩╠=╣calories╩╠408╩╩╠=╣fat╩╠'3.2'╩╩╠=╣carbs╩╠87╩╩╠=╣protein╩╠'6.5'╩╩╠=╣iron╩╠'45%'╩╩╩╠{}╠=╣name╩╠'Donut'╩╩╠=╣calories╩╠452╩╩╠=╣fat╩╠'25.0'╩╩╠=╣carbs╩╠51╩╩╠=╣protein╩╠'4.9'╩╩╠=╣iron╩╠'22%'╩╩╩╠{}╠=╣name╩╠'KitKat'╩╩╠=╣calories╩╠518╩╩╠=╣fat╩╠'26.0'╩╩╠=╣carbs╩╠65╩╩╠=╣protein╩╠'7'╩╩╠=╣iron╩╠'6 %'╩╩╩╩╩",
+																	"T": "prop"
+																},
+																"itemsPerPage": {
+																	"H": "╬5╩╩",
+																	"T": "prop"
+																},
+																"mobileBreakpoint": {
+																	"H": "╬600╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_8"
+															},
+															"O": {
+																"cType": "scopedSlot",
+																"compDomClasses": "v-data-table v-data-table--has-bottom theme--light newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "VColComp",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_3"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												},
+												"compDomClasses": "col d-flex flex-column newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_5"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {
+		"tr-TR": {
+			"active": "╬'Aktif Projeler'╩╩",
+			"address": "╬'Adress'╩╩",
+			"amounInfo": "╬'Tutar Bilgileri'╩╩",
+			"ann": "╬'Duyurular'╩╩",
+			"apply": "╬'Hemen Başvur'╩╩",
+			"approvalAwaiting": "╬'Onay Bekleniyor'╩╩",
+			"averageM": "╬'Ort. Vade'╩╩",
+			"averageMaturity": "╬'Ortalama Vade (Gün)'╩╩",
+			"awaitedDocumentation": "╬'Evrak Bekleniyor'╩╩",
+			"babs": "╬'BA/BS Mutabakat'╩╩",
+			"bankCode": "╬'Banka Kodu'╩╩",
+			"bidAmount": "╬'Teklif Tutarı'╩╩",
+			"bidT": "╬'Teklif T.'╩╩",
+			"billed": "╬'Faturalanan Projeler'╩╩",
+			"branch": "╬'Şubeler'╩╩",
+			"branchCode": "╬'Şube Kodu'╩╩",
+			"buttonexit": "╬'Çıkış Yap'╩╩",
+			"buttongiveup": "╬'Vazgeç'╩╩",
+			"calculator": "╬'Hesaplama Araçları'╩╩",
+			"cancelled": "╬'İptal Edildi'╩╩",
+			"cekmatik": "╬'Çekmatik'╩╩",
+			"changePass": "╬'Şifre Değiştir'╩╩",
+			"checks": "╬'Çeklerim'╩╩",
+			"company": "╬'Firma Bilgilerim'╩╩",
+			"confirmAmount": "╬'Onaylanan Tutar'╩╩",
+			"confirmT": "╬'Onaylanan T.'╩╩",
+			"contact": "╬'İletişim(Bize Ulaşın)'╩╩",
+			"contactOne": "╬'Genel Müdürlük ve Şubeler'╩╩",
+			"contactThree": "╬'Müşteri Temsilcisi'╩╩",
+			"contactTwo": "╬'İletişim Formu'╩╩",
+			"contactUs": "╬'Bize Ulaşın'╩╩",
+			"deductionAmount": "╬'Kesinti Tutarı'╩╩",
+			"deductionT": "╬'Kesinti T.'╩╩",
+			"demand": "╬'Talep İzleme'╩╩",
+			"demands": "╬'Taleplerim'╩╩",
+			"denied": "╬'Reddedildi'╩╩",
+			"evaluatedBeing": "╬'Değerlendiriliyor'╩╩",
+			"evaluatedChecks": "╬'Değerlendirilen Çekler'╩╩",
+			"exit": "╬'Çıkış'╩╩",
+			"exitquestion": "╬'Çıkmak İstediğinize Emin Misiniz?'╩╩",
+			"explanation": "╬'numaralı başvurunuz oluşturulmuştur.'╩╩",
+			"explanation2": "╬'Başvurunuzun durumunu işlemlerim menüsünden takip edebilirsiniz.'╩╩",
+			"fax": "╬'Faks'╩╩",
+			"filter": "╬'FİLTRELE'╩╩",
+			"genusCheck": "╬'Çek Döviz Cinsi'╩╩",
+			"guarantees": "╬'Teminatlarım'╩╩",
+			"headquarter": "╬'Genel Müdürlük'╩╩",
+			"home": "╬'Anasayfa'╩╩",
+			"identifierTitle": "╬'Keşideci Unvanı'╩╩",
+			"kvkk": "╬'Yasal Bilgilendirmeler'╩╩",
+			"maturityDate": "╬'Vade Tarihi'╩╩",
+			"myTransactions": "╬'İşlemlerim'╩╩",
+			"newtransaction": "╬'Yeni İşlem'╩╩",
+			"newTransaction": "╬'Yeni İşlem'╩╩",
+			"noCheck": "╬'Çek No'╩╩",
+			"noTransaction": "╬'İşlem No'╩╩",
+			"otherInfo": "╬'Diğer Bilgiler'╩╩",
+			"outMoney": "╬'Para Çıkışı Yapıldı'╩╩",
+			"payment": "╬'Ödemelerim'╩╩",
+			"phone": "╬'Telefon'╩╩",
+			"policies": "╬'Poliçelerim'╩╩",
+			"pro": "╬'Projelerim'╩╩",
+			"profileInfo": "╬'Profil Bilgileri'╩╩",
+			"proforma": "╬'Proformalarım'╩╩",
+			"reports": "╬'Raporlar'╩╩",
+			"requests": "╬'Öneri/Talep/Şikayet'╩╩",
+			"returnHome": "╬'ANA SAYFAYA DÖN'╩╩",
+			"sentC": "╬'Tkf Gön. Ç.'╩╩",
+			"sentCheck": "╬'Teklif Gönderilen Çek'╩╩",
+			"services": "╬'Hizmetlerimiz'╩╩",
+			"setting": "╬'Ayarlar'╩╩",
+			"sort": "╬'SIRALA'╩╩",
+			"startDate": "╬'Başvuru Tarihi'╩╩",
+			"state": "╬'Durum'╩╩",
+			"tender": "╬'Teklif Aşamasındaki Projeler'╩╩",
+			"totalAmount": "╬'Toplam Tutar'╩╩",
+			"totalCheck": "╬'Toplam Çek'╩╩",
+			"totalCheck2": "╬'Çek Tutarı'╩╩",
+			"totalT": "╬'Toplam T.'╩╩",
+			"transacations": "╬'İŞLEMLERİM'╩╩",
+			"transaction": "╬'İşlemlerim'╩╩",
+			"transactionComplete": "╬'İşleminiz Tamamlanmıştır'╩╩",
+			"transactionDetail": "╬'İşlem Detayı'╩╩",
+			"transactionSummary": "╬'İşlem Özeti'╩╩",
+			"unApproved": "╬'Onaylanmayan'╩╩"
+		},
+		"en-US": {
+			"active": "╬'Projects in Active Stage'╩╩",
+			"address": "╬'Address'╩╩",
+			"amounInfo": "╬'Amount Information'╩╩",
+			"ann": "╬'Announcement'╩╩",
+			"apply": "╬'Apply Now'╩╩",
+			"approvalAwaiting": "╬'Awaiting Approval'╩╩",
+			"averageM": "╬'Ave. Maturity'╩╩",
+			"averageMaturity": "╬'Average Maturity (Day)'╩╩",
+			"awaitedDocumentation": "╬'Documentation Awaited'╩╩",
+			"babs": "╬'BA/BS Reconciliation'╩╩",
+			"bankCode": "╬'Bank Code'╩╩",
+			"bidAmount": "╬'Bid Amount'╩╩",
+			"bidT": "╬'Bid T.'╩╩",
+			"billed": "╬'Projects in Billing Stage'╩╩",
+			"branch": "╬'Branches'╩╩",
+			"branchCode": "╬'Branch Code'╩╩",
+			"buttonexit": "╬'Exit'╩╩",
+			"buttongiveup": "╬'Give Up'╩╩",
+			"calculator": "╬'Calculation Tools'╩╩",
+			"cancelled": "╬'It is cancelled'╩╩",
+			"cekmatik": "╬'Çekmatik'╩╩",
+			"changePass": "╬'Change Password'╩╩",
+			"checks": "╬'My Checks'╩╩",
+			"company": "╬'My Company Information'╩╩",
+			"confirmAmount": "╬'Confirmed Amount'╩╩",
+			"confirmT": "╬'Confirm T.'╩╩",
+			"contact": "╬'Contact(Contact Us)'╩╩",
+			"contactOne": "╬'Headquarter and Branches'╩╩",
+			"contactThree": "╬'Representative '╩╩",
+			"contactTwo": "╬'Contact Form'╩╩",
+			"contactUs": "╬'Contact Us'╩╩",
+			"deductionAmount": "╬'Deduction Amount'╩╩",
+			"deductionT": "╬'Deduction T.'╩╩",
+			"demand": "╬'Demand Monitoring'╩╩",
+			"demands": "╬'My Demands'╩╩",
+			"denied": "╬'Denied'╩╩",
+			"evaluatedBeing": "╬'Being Evaluated'╩╩",
+			"evaluatedChecks": "╬'Evaluated Checks'╩╩",
+			"exit": "╬'Log out'╩╩",
+			"exitquestion": "╬'Are You Sure You Want To Quit?'╩╩",
+			"explanation": "╬'your numbered application has been created.'╩╩",
+			"explanation2": "╬'You can follow the status of your application in the My processes menu.'╩╩",
+			"fax": "╬'Kax'╩╩",
+			"filter": "╬'FILTER'╩╩",
+			"genusCheck": "╬'Check Currency Check'╩╩",
+			"guarantees": "╬'My Guarantees'╩╩",
+			"headquarter": "╬'Headquarter'╩╩",
+			"home": "╬'Homepage'╩╩",
+			"identifierTitle": "╬'Identifier Title'╩╩",
+			"kvkk": "╬'Legal Information'╩╩",
+			"maturityDate": "╬'Maturity Date'╩╩",
+			"myTransactions": "╬'My Transactions'╩╩",
+			"newtransaction": "╬'New Transaction'╩╩",
+			"newTransaction": "╬'New Transaction'╩╩",
+			"noCheck": "╬'Check No'╩╩",
+			"noTransaction": "╬'Transaction No'╩╩",
+			"otherInfo": "╬'Other Information'╩╩",
+			"outMoney": "╬'Money Out'╩╩",
+			"payment": "╬'My Payments'╩╩",
+			"phone": "╬'Telephone'╩╩",
+			"policies": "╬'My Policies'╩╩",
+			"pro": "╬'My Projects'╩╩",
+			"profileInfo": "╬'Information Profile '╩╩",
+			"proforma": "╬'My Proforma'╩╩",
+			"reports": "╬'Reports'╩╩",
+			"requests": "╬'Suggestion/Request/Complaint'╩╩",
+			"returnHome": "╬'RETURN TO HOME PAGE'╩╩",
+			"sentC": "╬'Bid Sent C.'╩╩",
+			"sentCheck": "╬'Bid Sent Check'╩╩",
+			"services": "╬'Services'╩╩",
+			"setting": "╬'Setting'╩╩",
+			"sort": "╬'SORT'╩╩",
+			"startDate": "╬'Application Date'╩╩",
+			"state": "╬'State'╩╩",
+			"tender": "╬'Projects in Proposal Stage'╩╩",
+			"totalAmount": "╬'Total Amount'╩╩",
+			"totalCheck": "╬'Total Check'╩╩",
+			"totalCheck2": "╬'Total Check'╩╩",
+			"totalT": "╬'Total T.'╩╩",
+			"transacations": "╬'MY TRANSACTIONS'╩╩",
+			"transaction": "╬'My Transactions'╩╩",
+			"transactionComplete": "╬'Your transaction Complete.'╩╩",
+			"transactionDetail": "╬'Transaction Detail'╩╩",
+			"transactionSummary": "╬'Transaction Summary'╩╩",
+			"unApproved": "╬'Unapproved'╩╩"
+		}
+	},
+	"opt": {}
+};
+export default pjson

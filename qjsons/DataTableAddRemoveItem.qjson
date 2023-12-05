@@ -1,6 +1,28 @@
 let pjson = {
 	"pJson": [
 		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_135",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"EndRender": {
+					"H": "let myTable= [{name : 'Frozens Yogurt', calories : 159, fat : '6.0', carbs : 24, protein : '4.0', iron : '1%'},\r\n{name : 'Ice cream sandwich', calories : 237, fat : '9.0', carbs : 37, protein : '4.3', iron : '1%'},\r\n{name : 'Eclair', calories : 262, fat : '16.0', carbs : 23, protein : '6.0', iron : '7%'},\r\n{name : 'Cupcake', calories : 305, fat : '3.7', carbs : 67, protein : '4.3', iron : '8%'},\r\n{name : 'Gingerbread',calories : 356, fat : '16.0', carbs : 49, protein : '3.9', iron : '16%'},\r\n{name : 'Jelly bean', calories : 375,  fat : '0.0', carbs : 94, protein : '0.0', iron : '0%'},\r\n{name : 'Lollipop', calories : 392, fat : '0.2', carbs : 98, protein : '0.0', iron : '2 %'},\r\n{name : 'Honeycomb', calories : 408, fat : '3.2', carbs : 87, protein : '6.5', iron : '45%'},\r\n{name : 'Donut', calories : 452, fat : '25.0', carbs : 51, protein : '4.9', iron : '22%'},\r\n{name : 'KitKat', calories : 518, fat : '26.0', carbs : 65, protein : '7', iron:  '6 %'}]\r\n\r\ncomponents.EdtrComp_5.items=myTable",
+					"HL": "TS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_135"
+			},
+			"O": {
+				"cType": "child"
+			}
+		},
+		{
 			"T": "VDataTable",
 			"P": {
 				"ID": {
@@ -11,12 +33,8 @@ let pjson = {
 					"H": "[{ text = 'Dessert (100g serving)', align= 'start', sortable= false, value= 'name'},\n{ text = 'Calories', value= 'calories', sortable = true },\n{ text = 'Fat (g)', value= 'fat' },\n{ text = 'Carbs (g)', value= 'carbs' },\n{ text = 'Protein (g)', value= 'protein' },\n{ text = 'Iron (%)', value= 'iron' }]",
 					"T": "prop"
 				},
-				"items": {
-					"H": "[{name = 'Frozens Yogurt', calories = 159, fat = '6.0', carbs = 24, protein = '4.0', iron = '1%'},\n{name = 'Ice cream sandwich', calories = 237, fat = '9.0', carbs = 37, protein = '4.3', iron = '1%'},\n{name = 'Eclair', calories = 262, fat = '16.0', carbs = 23, protein = '6.0', iron = '7%'},\n{name = 'Cupcake', calories = 305, fat = '3.7', carbs = 67, protein = '4.3', iron = '8%'},\n{name = 'Gingerbread',calories = 356, fat = '16.0', carbs = 49, protein = '3.9', iron = '16%'},\n{name = 'Jelly bean', calories = 375,  fat = '0.0', carbs = 94, protein = '0.0', iron = '0%'},\n{name = 'Lollipop', calories = 392, fat = '0.2', carbs = 98, protein = '0.0', iron = '2 %'},\n{name = 'Honeycomb', calories = 408, fat = '3.2', carbs = 87, protein = '6.5', iron = '45%'},\n{name = 'Donut', calories = 452, fat = '25.0', carbs = 51, protein = '4.9', iron = '22%'},\n{name = 'KitKat', calories = 518, fat = '26.0', carbs = 65, protein = '7', iron=  '6 %'}]",
-					"T": "prop"
-				},
 				"itemsPerPage": {
-					"H": "20",
+					"H": "15",
 					"T": "prop"
 				}
 			},
@@ -70,8 +88,9 @@ let pjson = {
 															},
 															"E": {
 																"click": {
-																	"H": "EdtrComp_5.headers=[{ text = 'Dessert (100g serving)', align= 'start', sortable= false, value= 'name'},\r\n{ text = 'Calories', value= 'calories', sortable = true },\r\n{ text = 'Fat (g)', value= 'fat' },\r\n{ text = 'Carbs (g)', value= 'carbs' },\r\n{ text = 'Protein (g)', value= 'protein' },\r\n{ text = 'Iron (%)', value= 'iron' }]\r\n\r\n EdtrComp_5.headers.push({ text = 'Price', align= 'start', sortable= false, value= 'price'})\r\n\r\n\r\n\r\n\r\n \r\n\r\nEM.trace(EdtrComp_5.headers)\r\nEM.trace(EdtrComp_5.items)",
-																	"P": ""
+																	"H": "components.EdtrComp_5.headers=[\r\n{ text : 'Dessert (100g serving)', align: 'start', sortable: false, value: 'name'},\r\n{ text : 'Calories', value: 'calories', sortable : true },\r\n{ text : 'Fat (g)', value: 'fat' },\r\n{ text : 'Carbs (g)', value: 'carbs' },\r\n{ text : 'Protein (g)', value: 'protein' },\r\n{ text : 'Iron (%)', value: 'iron' }]\r\n\r\ncomponents.EdtrComp_5.headers.push({ text : 'Price', align: 'start', sortable: false, value: 'price'})\r\n\r\nquick.EM.trace(components.EdtrComp_5.headers)\r\nquick.EM.trace(components.EdtrComp_5.items)",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "TS"
 																}
 															},
 															"C": {
@@ -123,8 +142,9 @@ let pjson = {
 															},
 															"E": {
 																"click": {
-																	"H": "EdtrComp_5.items=[{name = 'Frozens Yogurt', calories = 159, fat = '6.0', carbs = 24, protein = '4.0', iron = '1%', price='2 $'},\r\n{name = 'Ice cream sandwich', calories = 237, fat = '9.0', carbs = 37, protein = '4.3', iron = '1%', price='5 $'},\r\n{name = 'Eclair', calories = 262, fat = '16.0', carbs = 23, protein = '6.0', iron = '7%', price='3 $'},\r\n{name = 'Cupcake', calories = 305, fat = '3.7', carbs = 67, protein = '4.3', iron = '8%', price='8 $'},\r\n{name = 'Gingerbread',calories = 356, fat = '16.0', carbs = 49, protein = '3.9', iron = '16%', price='1 $'},\r\n{name = 'Jelly bean', calories = 375,  fat = '0.0', carbs = 94, protein = '0.0', iron = '0%', price='1 $'},\r\n{name = 'Lollipop', calories = 392, fat = '0.2', carbs = 98, protein = '0.0', iron = '2 %', price='1 $'},\r\n{name = 'Honeycomb', calories = 408, fat = '3.2', carbs = 87, protein = '6.5', iron = '45%', price='6 $'},\r\n{name = 'Donut', calories = 452, fat = '25.0', carbs = 51, protein = '4.9', iron = '22%', price='10 $'},\r\n{name = 'KitKat', calories = 518, fat = '26.0', carbs = 65, protein = '7', iron=  '6 %', price='1 $'}]\r\n\r\n EdtrComp_5.items.push({name = 'NEW', calories = 518, fat = '26.0', carbs = 65, protein = '7', iron=  '6 %', price='15 $'})\r\n\r\n",
-																	"P": ""
+																	"H": "components.EdtrComp_5.items.push({name : 'NEW', calories : 518, fat : '26.0', carbs : 65, protein : '7', iron:  '6 %', price:'15 $'})\r\n\r\n",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "TS"
 																}
 															},
 															"C": {
@@ -181,7 +201,7 @@ let pjson = {
 													"T": "prop"
 												},
 												"class": {
-													"H": "'d-flex  justify-end mt-4'",
+													"H": "'d-flex justify-end'",
 													"T": "class"
 												}
 											},
@@ -203,8 +223,9 @@ let pjson = {
 															},
 															"E": {
 																"click": {
-																	"H": "EdtrComp_5.items[10]=[{}]\r\n\r\n",
-																	"P": ""
+																	"H": "\r\nlet item=components.EdtrComp_5.items\r\nitem.pop()\r\ncomponents.EdtrComp_5.items= item\r\nquick.Quick.updateComponent(components.EdtrComp_5)\r\n\r\n\r\n\r\n",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "TS"
 																}
 															},
 															"C": {
@@ -250,7 +271,15 @@ let pjson = {
 												"eID": "EdtrComp_13"
 											},
 											"O": {
-												"cType": "slot"
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"sp:mt-4"
+														]
+													},
+													"class": "mt-4"
+												}
 											}
 										}
 									],
@@ -278,6 +307,29 @@ let pjson = {
 	],
 	"cJson": [
 		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_135",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"EndRender": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nvar myTable = [{ name: 'Frozens Yogurt', calories: 159, fat: '6.0', carbs: 24, protein: '4.0', iron: '1%' },\r\n    { name: 'Ice cream sandwich', calories: 237, fat: '9.0', carbs: 37, protein: '4.3', iron: '1%' },\r\n    { name: 'Eclair', calories: 262, fat: '16.0', carbs: 23, protein: '6.0', iron: '7%' },\r\n    { name: 'Cupcake', calories: 305, fat: '3.7', carbs: 67, protein: '4.3', iron: '8%' },\r\n    { name: 'Gingerbread', calories: 356, fat: '16.0', carbs: 49, protein: '3.9', iron: '16%' },\r\n    { name: 'Jelly bean', calories: 375, fat: '0.0', carbs: 94, protein: '0.0', iron: '0%' },\r\n    { name: 'Lollipop', calories: 392, fat: '0.2', carbs: 98, protein: '0.0', iron: '2 %' },\r\n    { name: 'Honeycomb', calories: 408, fat: '3.2', carbs: 87, protein: '6.5', iron: '45%' },\r\n    { name: 'Donut', calories: 452, fat: '25.0', carbs: 51, protein: '4.9', iron: '22%' },\r\n    { name: 'KitKat', calories: 518, fat: '26.0', carbs: 65, protein: '7', iron: '6 %' }];\r\ncomponents.EdtrComp_5.items = myTable;\r\n",
+					"HL": "JS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_135"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			}
+		},
+		{
 			"T": "VDataTable",
 			"P": {
 				"ID": {
@@ -288,12 +340,8 @@ let pjson = {
 					"H": "╬[]╠{}╠=╣text╩╠'Dessert (100g serving)'╩╩╠=╣align╩╠'start'╩╩╠=╣sortable╩╠false╩╩╠=╣value╩╠'name'╩╩╩╠{}╠=╣text╩╠'Calories'╩╩╠=╣value╩╠'calories'╩╩╠=╣sortable╩╠true╩╩╩╠{}╠=╣text╩╠'Fat (g)'╩╩╠=╣value╩╠'fat'╩╩╩╠{}╠=╣text╩╠'Carbs (g)'╩╩╠=╣value╩╠'carbs'╩╩╩╠{}╠=╣text╩╠'Protein (g)'╩╩╠=╣value╩╠'protein'╩╩╩╠{}╠=╣text╩╠'Iron (%)'╩╩╠=╣value╩╠'iron'╩╩╩╩╩",
 					"T": "prop"
 				},
-				"items": {
-					"H": "╬[]╠{}╠=╣name╩╠'Frozens Yogurt'╩╩╠=╣calories╩╠159╩╩╠=╣fat╩╠'6.0'╩╩╠=╣carbs╩╠24╩╩╠=╣protein╩╠'4.0'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Ice cream sandwich'╩╩╠=╣calories╩╠237╩╩╠=╣fat╩╠'9.0'╩╩╠=╣carbs╩╠37╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Eclair'╩╩╠=╣calories╩╠262╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠23╩╩╠=╣protein╩╠'6.0'╩╩╠=╣iron╩╠'7%'╩╩╩╠{}╠=╣name╩╠'Cupcake'╩╩╠=╣calories╩╠305╩╩╠=╣fat╩╠'3.7'╩╩╠=╣carbs╩╠67╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'8%'╩╩╩╠{}╠=╣name╩╠'Gingerbread'╩╩╠=╣calories╩╠356╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠49╩╩╠=╣protein╩╠'3.9'╩╩╠=╣iron╩╠'16%'╩╩╩╠{}╠=╣name╩╠'Jelly bean'╩╩╠=╣calories╩╠375╩╩╠=╣fat╩╠'0.0'╩╩╠=╣carbs╩╠94╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'0%'╩╩╩╠{}╠=╣name╩╠'Lollipop'╩╩╠=╣calories╩╠392╩╩╠=╣fat╩╠'0.2'╩╩╠=╣carbs╩╠98╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'2 %'╩╩╩╠{}╠=╣name╩╠'Honeycomb'╩╩╠=╣calories╩╠408╩╩╠=╣fat╩╠'3.2'╩╩╠=╣carbs╩╠87╩╩╠=╣protein╩╠'6.5'╩╩╠=╣iron╩╠'45%'╩╩╩╠{}╠=╣name╩╠'Donut'╩╩╠=╣calories╩╠452╩╩╠=╣fat╩╠'25.0'╩╩╠=╣carbs╩╠51╩╩╠=╣protein╩╠'4.9'╩╩╠=╣iron╩╠'22%'╩╩╩╠{}╠=╣name╩╠'KitKat'╩╩╠=╣calories╩╠518╩╩╠=╣fat╩╠'26.0'╩╩╠=╣carbs╩╠65╩╩╠=╣protein╩╠'7'╩╩╠=╣iron╩╠'6 %'╩╩╩╩╩",
-					"T": "prop"
-				},
 				"itemsPerPage": {
-					"H": "╬20╩╩",
+					"H": "╬15╩╩",
 					"T": "prop"
 				}
 			},
@@ -347,8 +395,9 @@ let pjson = {
 															},
 															"E": {
 																"click": {
-																	"H": "╬=╣.╣EdtrComp_5╩╠headers╩╩╠[]╠{}╠=╣text╩╠'Dessert (100g serving)'╩╩╠=╣align╩╠'start'╩╩╠=╣sortable╩╠false╩╩╠=╣value╩╠'name'╩╩╩╠{}╠=╣text╩╠'Calories'╩╩╠=╣value╩╠'calories'╩╩╠=╣sortable╩╠true╩╩╩╠{}╠=╣text╩╠'Fat (g)'╩╩╠=╣value╩╠'fat'╩╩╩╠{}╠=╣text╩╠'Carbs (g)'╩╩╠=╣value╩╠'carbs'╩╩╩╠{}╠=╣text╩╠'Protein (g)'╩╩╠=╣value╩╠'protein'╩╩╩╠{}╠=╣text╩╠'Iron (%)'╩╩╠=╣value╩╠'iron'╩╩╩╩╩╬()╣.╣.╣EdtrComp_5╩╠headers╩╩╠push╩╩╠{}╠=╣text╩╠'Price'╩╩╠=╣align╩╠'start'╩╩╠=╣sortable╩╠false╩╩╠=╣value╩╠'price'╩╩╩╩╬()╣.╣EM╩╠trace╩╩╠.╣EdtrComp_5╩╠headers╩╩╩╬()╣.╣EM╩╠trace╩╩╠.╣EdtrComp_5╩╠items╩╩╩╩",
-																	"P": ""
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ncomponents.EdtrComp_5.headers = [\r\n    { text: 'Dessert (100g serving)', align: 'start', sortable: false, value: 'name' },\r\n    { text: 'Calories', value: 'calories', sortable: true },\r\n    { text: 'Fat (g)', value: 'fat' },\r\n    { text: 'Carbs (g)', value: 'carbs' },\r\n    { text: 'Protein (g)', value: 'protein' },\r\n    { text: 'Iron (%)', value: 'iron' }\r\n];\r\ncomponents.EdtrComp_5.headers.push({ text: 'Price', align: 'start', sortable: false, value: 'price' });\r\nquick.EM.trace(components.EdtrComp_5.headers);\r\nquick.EM.trace(components.EdtrComp_5.items);\r\n",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "JS"
 																}
 															},
 															"C": {
@@ -372,7 +421,8 @@ let pjson = {
 																				"eID": "EdtrComp_17"
 																			},
 																			"O": {
-																				"cType": "child"
+																				"cType": "child",
+																				"compDomClasses": ""
 																			}
 																		}
 																	],
@@ -383,7 +433,8 @@ let pjson = {
 																"eID": "EdtrComp_16"
 															},
 															"O": {
-																"cType": "slot"
+																"cType": "slot",
+																"compDomClasses": "v-btn v-btn--contained theme--light v-size--default newDropBorder"
 															}
 														},
 														{
@@ -400,8 +451,9 @@ let pjson = {
 															},
 															"E": {
 																"click": {
-																	"H": "╬=╣.╣EdtrComp_5╩╠items╩╩╠[]╠{}╠=╣name╩╠'Frozens Yogurt'╩╩╠=╣calories╩╠159╩╩╠=╣fat╩╠'6.0'╩╩╠=╣carbs╩╠24╩╩╠=╣protein╩╠'4.0'╩╩╠=╣iron╩╠'1%'╩╩╠=╣price╩╠'2 $'╩╩╩╠{}╠=╣name╩╠'Ice cream sandwich'╩╩╠=╣calories╩╠237╩╩╠=╣fat╩╠'9.0'╩╩╠=╣carbs╩╠37╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'1%'╩╩╠=╣price╩╠'5 $'╩╩╩╠{}╠=╣name╩╠'Eclair'╩╩╠=╣calories╩╠262╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠23╩╩╠=╣protein╩╠'6.0'╩╩╠=╣iron╩╠'7%'╩╩╠=╣price╩╠'3 $'╩╩╩╠{}╠=╣name╩╠'Cupcake'╩╩╠=╣calories╩╠305╩╩╠=╣fat╩╠'3.7'╩╩╠=╣carbs╩╠67╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'8%'╩╩╠=╣price╩╠'8 $'╩╩╩╠{}╠=╣name╩╠'Gingerbread'╩╩╠=╣calories╩╠356╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠49╩╩╠=╣protein╩╠'3.9'╩╩╠=╣iron╩╠'16%'╩╩╠=╣price╩╠'1 $'╩╩╩╠{}╠=╣name╩╠'Jelly bean'╩╩╠=╣calories╩╠375╩╩╠=╣fat╩╠'0.0'╩╩╠=╣carbs╩╠94╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'0%'╩╩╠=╣price╩╠'1 $'╩╩╩╠{}╠=╣name╩╠'Lollipop'╩╩╠=╣calories╩╠392╩╩╠=╣fat╩╠'0.2'╩╩╠=╣carbs╩╠98╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'2 %'╩╩╠=╣price╩╠'1 $'╩╩╩╠{}╠=╣name╩╠'Honeycomb'╩╩╠=╣calories╩╠408╩╩╠=╣fat╩╠'3.2'╩╩╠=╣carbs╩╠87╩╩╠=╣protein╩╠'6.5'╩╩╠=╣iron╩╠'45%'╩╩╠=╣price╩╠'6 $'╩╩╩╠{}╠=╣name╩╠'Donut'╩╩╠=╣calories╩╠452╩╩╠=╣fat╩╠'25.0'╩╩╠=╣carbs╩╠51╩╩╠=╣protein╩╠'4.9'╩╩╠=╣iron╩╠'22%'╩╩╠=╣price╩╠'10 $'╩╩╩╠{}╠=╣name╩╠'KitKat'╩╩╠=╣calories╩╠518╩╩╠=╣fat╩╠'26.0'╩╩╠=╣carbs╩╠65╩╩╠=╣protein╩╠'7'╩╩╠=╣iron╩╠'6 %'╩╩╠=╣price╩╠'1 $'╩╩╩╩╩╬()╣.╣.╣EdtrComp_5╩╠items╩╩╠push╩╩╠{}╠=╣name╩╠'NEW'╩╩╠=╣calories╩╠518╩╩╠=╣fat╩╠'26.0'╩╩╠=╣carbs╩╠65╩╩╠=╣protein╩╠'7'╩╩╠=╣iron╩╠'6 %'╩╩╠=╣price╩╠'15 $'╩╩╩╩╩",
-																	"P": ""
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ncomponents.EdtrComp_5.items.push({ name: 'NEW', calories: 518, fat: '26.0', carbs: 65, protein: '7', iron: '6 %', price: '15 $' });\r\n",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "JS"
 																}
 															},
 															"C": {
@@ -425,7 +477,8 @@ let pjson = {
 																				"eID": "EdtrComp_19"
 																			},
 																			"O": {
-																				"cType": "child"
+																				"cType": "child",
+																				"compDomClasses": ""
 																			}
 																		}
 																	],
@@ -436,7 +489,8 @@ let pjson = {
 																"eID": "EdtrComp_18"
 															},
 															"O": {
-																"cType": "slot"
+																"cType": "slot",
+																"compDomClasses": "v-btn v-btn--contained theme--light v-size--default newDropBorder"
 															}
 														}
 													],
@@ -447,7 +501,8 @@ let pjson = {
 												"eID": "EdtrComp_9"
 											},
 											"O": {
-												"cType": "slot"
+												"cType": "slot",
+												"compDomClasses": "row col-lg-6 newDropBorder"
 											}
 										},
 										{
@@ -458,7 +513,7 @@ let pjson = {
 													"T": "prop"
 												},
 												"class": {
-													"H": "╬'d-flex  justify-end mt-4'╩╩",
+													"H": "╬'d-flex justify-end'╩╩",
 													"T": "class"
 												}
 											},
@@ -480,8 +535,9 @@ let pjson = {
 															},
 															"E": {
 																"click": {
-																	"H": "╬=╣[]╣.╣EdtrComp_5╩╠items╩╩╠10╩╩╠[]╠{}╩╩╩╩",
-																	"P": ""
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nvar item = components.EdtrComp_5.items;\r\nitem.pop();\r\ncomponents.EdtrComp_5.items = item;\r\nquick.Quick.updateComponent(components.EdtrComp_5);\r\n",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "JS"
 																}
 															},
 															"C": {
@@ -505,7 +561,8 @@ let pjson = {
 																				"eID": "EdtrComp_21"
 																			},
 																			"O": {
-																				"cType": "child"
+																				"cType": "child",
+																				"compDomClasses": ""
 																			}
 																		}
 																	],
@@ -516,7 +573,8 @@ let pjson = {
 																"eID": "EdtrComp_20"
 															},
 															"O": {
-																"cType": "slot"
+																"cType": "slot",
+																"compDomClasses": "v-btn v-btn--contained theme--light v-size--default newDropBorder"
 															}
 														}
 													],
@@ -527,7 +585,16 @@ let pjson = {
 												"eID": "EdtrComp_13"
 											},
 											"O": {
-												"cType": "slot"
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"sp:mt-4"
+														]
+													},
+													"class": "mt-4"
+												},
+												"compDomClasses": "row d-flex justify-end mt-4 newDropBorder"
 											}
 										}
 									],
@@ -538,7 +605,8 @@ let pjson = {
 								"eID": "EdtrComp_7"
 							},
 							"O": {
-								"cType": "slot"
+								"cType": "slot",
+								"compDomClasses": "container d-flex newDropBorder"
 							}
 						}
 					],
@@ -549,12 +617,14 @@ let pjson = {
 				"eID": "EdtrComp_5"
 			},
 			"O": {
-				"cType": "child"
+				"cType": "child",
+				"compDomClasses": "v-data-table v-data-table--has-top v-data-table--has-bottom theme--light newDropBorder"
 			}
 		}
 	],
 	"lrids": {},
 	"clrids": {},
-	"description": {}
+	"description": {},
+	"opt": {}
 };
 export default pjson

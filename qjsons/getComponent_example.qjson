@@ -249,9 +249,9 @@ let pjson = {
 															},
 															"E": {
 																"click": {
-																	"H": "messages=[{message='message '}, {message='message'}]\r\nindex=store.get('index')\r\nif(!index) {\r\n    store.set('index', 1)\r\n    index = 1\r\n}\r\nforeach (item in messages) {\r\n    EM.trace(item)\r\n    Quick.createComponent({templateCompQID='listItem',newCompQID=index, dataSource=item.message + index , place='After'})\r\n    index = index + 1\r\n    store.set('index', index)\r\n}\r\n\r\n\r\n",
-																	"P": "mouseEvent",
-																	"HL": "QS"
+																	"H": "let message\r\nlet messages=[{message:'Message'}, {message:'Message'}]\r\nlet index=quick.store.get('index')\r\nif(!index) {\r\n    quick.store.set('index', 1)\r\n    index = 1\r\n}\r\nlet item\r\nmessages.forEach (function (item:any) {\r\n    quick.EM.trace(item)\r\n    quick.Quick.createComponent({templateCompQID:'listItem',newCompQID:index, dataSource:item.message + index, place:<any>'After' })\r\n    index = index + 1\r\n    quick.store.set('index', index);\r\n});\r\n\r\n",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "TS"
 																}
 															},
 															"C": {
@@ -737,9 +737,9 @@ let pjson = {
 															},
 															"E": {
 																"click": {
-																	"H": "╬=╣messages╩╠[]╠{}╠=╣message╩╠'message '╩╩╩╠{}╠=╣message╩╠'message'╩╩╩╩╩╬=╣index╩╠()╣.╣store╩╠get╩╩╠'index'╩╩╩╬if╣!╠index╩╩╠╬()╣.╣store╩╠set╩╩╠'index'╩╠1╩╩╬=╣index╩╠1╩╩╩╠■╩╬foreach╣in╣item╩╠messages╩╩╠╬()╣.╣EM╩╠trace╩╩╠item╩╩╬()╣.╣Quick╩╠createComponent╩╩╠{}╠=╣templateCompQID╩╠'listItem'╩╩╠=╣newCompQID╩╠index╩╩╠=╣dataSource╩╠+╣.╣item╩╠message╩╩╠index╩╩╩╠=╣place╩╠'After'╩╩╩╩╬=╣index╩╠+╣index╩╠1╩╩╩╬()╣.╣store╩╠set╩╩╠'index'╩╠index╩╩╩╩╩",
-																	"P": "mouseEvent",
-																	"HL": "QS"
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nvar message;\r\nvar messages = [{ message: 'Message' }, { message: 'Message' }];\r\nvar index = quick.store.get('index');\r\nif (!index) {\r\n    quick.store.set('index', 1);\r\n    index = 1;\r\n}\r\nvar item;\r\nmessages.forEach(function (item) {\r\n    quick.EM.trace(item);\r\n    quick.Quick.createComponent({ templateCompQID: 'listItem', newCompQID: index, dataSource: item.message + index, place: 'After' });\r\n    index = index + 1;\r\n    quick.store.set('index', index);\r\n});\r\n",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "JS"
 																}
 															},
 															"C": {
@@ -862,7 +862,7 @@ let pjson = {
 															},
 															"E": {
 																"click": {
-																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nvar messageComp = quick.getComponent(\"listItem_1\");\r\nquick.Quick.deleteComponent(messageComp);\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfMTEyMV9jbGlja19FLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiRWR0ckNvbXBfMTEyMV9jbGlja19FLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQSxJQUFJLFdBQVcsR0FBRSxLQUFLLENBQUMsWUFBWSxDQUFDLFlBQVksQ0FBQyxDQUFBO0FBQ2pELEtBQUssQ0FBQyxLQUFLLENBQUMsZUFBZSxDQUFDLFdBQVcsQ0FBQyxDQUFBIiwic291cmNlc0NvbnRlbnQiOlsiZGVjbGFyZSB2YXIgbW91c2VFdmVudDp1bmtub3duIHwgdW5kZWZpbmVkXG5sZXQgbWVzc2FnZUNvbXA9IHF1aWNrLmdldENvbXBvbmVudChcImxpc3RJdGVtXzFcIilcclxucXVpY2suUXVpY2suZGVsZXRlQ29tcG9uZW50KG1lc3NhZ2VDb21wKVxyXG5cbiBleHBvcnR7fTtcbiJdfQ==",
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nvar messageComp = quick.getComponent(\"listItem_1\");\r\nquick.Quick.deleteComponent(messageComp);\r\n",
 																	"P": "mouseEvent:unknown | undefined",
 																	"HL": "JS"
 																}
@@ -980,6 +980,7 @@ let pjson = {
 	],
 	"lrids": {},
 	"clrids": {},
-	"description": {}
+	"description": {},
+	"opt": {}
 };
 export default pjson

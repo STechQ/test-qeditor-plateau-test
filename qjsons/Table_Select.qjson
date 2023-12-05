@@ -4,7 +4,7 @@ let pjson = {
 			"T": "VDataTable",
 			"P": {
 				"ID": {
-					"H": "EdtrComp_1",
+					"H": "myTable",
 					"T": "prop"
 				},
 				"headers": {
@@ -30,8 +30,9 @@ let pjson = {
 			},
 			"E": {
 				"item-selected": {
-					"H": "EM.trace(rowObj.item)",
-					"P": "rowObj"
+					"H": "quick.EM.trace(rowObj.item)",
+					"P": "rowObj:IVDataTableItemSelect",
+					"HL": "TS"
 				}
 			},
 			"C": {},
@@ -52,7 +53,9 @@ let pjson = {
 			},
 			"E": {
 				"click": {
-					"H": "//Selected Objects\r\nEM.trace(EdtrComp_1.selection)\r\nselectedItems = []\r\nforeach (item in Object.keys(EdtrComp_1.selection)) {\r\n    selectedItems.push(EdtrComp_1.selection[item])\r\n}\r\n//Selected object array\r\nEM.trace(selectedItems)"
+					"H": "//Selected Objects\r\nquick.EM.trace((<any>components.myTable).selection)\r\nlet selectedItems = []\r\n Object.keys((<any>components.myTable).selection).forEach(item =>{\r\n    selectedItems.push((<any>components.myTable).selection[item])\r\n });\r\n//Selected object array\r\nquick.EM.trace(selectedItems);",
+					"P": "mouseEvent:unknown | undefined",
+					"HL": "TS"
 				}
 			},
 			"C": {
@@ -101,7 +104,7 @@ let pjson = {
 			"T": "VDataTable",
 			"P": {
 				"ID": {
-					"H": "EdtrComp_1",
+					"H": "myTable",
 					"T": "prop"
 				},
 				"headers": {
@@ -127,8 +130,9 @@ let pjson = {
 			},
 			"E": {
 				"item-selected": {
-					"H": "╬()╣.╣EM╩╠trace╩╩╠.╣rowObj╩╠item╩╩╩╩",
-					"P": "rowObj"
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.EM.trace(rowObj.item);\r\n",
+					"P": "rowObj:IVDataTableItemSelect",
+					"HL": "JS"
 				}
 			},
 			"C": {},
@@ -136,7 +140,8 @@ let pjson = {
 				"eID": "EdtrComp_1"
 			},
 			"O": {
-				"cType": "child"
+				"cType": "child",
+				"compDomClasses": "v-data-table v-data-table--has-bottom theme--light newDropBorder"
 			}
 		},
 		{
@@ -149,7 +154,9 @@ let pjson = {
 			},
 			"E": {
 				"click": {
-					"H": "╬()╣.╣EM╩╠trace╩╩╠.╣EdtrComp_1╩╠selection╩╩╩╬=╣selectedItems╩╠[]╩╩╬foreach╣in╣item╩╠()╣.╣Object╩╠keys╩╩╠.╣EdtrComp_1╩╠selection╩╩╩╩╠╬()╣.╣selectedItems╩╠push╩╩╠[]╣.╣EdtrComp_1╩╠selection╩╩╠item╩╩╩╩╩╬()╣.╣EM╩╠trace╩╩╠selectedItems╩╩╩"
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\n//Selected Objects\r\nquick.EM.trace(components.myTable.selection);\r\nvar selectedItems = [];\r\nObject.keys(components.myTable.selection).forEach(function (item) {\r\n    selectedItems.push(components.myTable.selection[item]);\r\n});\r\n//Selected object array\r\nquick.EM.trace(selectedItems);\r\n",
+					"P": "mouseEvent:unknown | undefined",
+					"HL": "JS"
 				}
 			},
 			"C": {
@@ -178,7 +185,8 @@ let pjson = {
 								"eID": "EdtrComp_3"
 							},
 							"O": {
-								"cType": "child"
+								"cType": "child",
+								"compDomClasses": "q-label newDropBorder"
 							}
 						}
 					],
@@ -189,14 +197,14 @@ let pjson = {
 				"eID": "EdtrComp_2"
 			},
 			"O": {
-				"cType": "slot"
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default newDropBorder"
 			}
 		}
 	],
 	"lrids": {},
-	"clrids": {
-		"tr-TR": {}
-	},
-	"description": {}
+	"clrids": {},
+	"description": {},
+	"opt": {}
 };
 export default pjson
