@@ -9,7 +9,7 @@ import { IDomElement } from "../../../../common/shrimp/interfaces/RenderingInter
 import { IRenderer } from "../../../../common/shrimp/interfaces/RenderingInterfaces/IRenderer";
 import { IRendererConfig } from "../../../../common/shrimp/interfaces/RenderingInterfaces/IRendererConfig";
 import { ILocationPosition } from "../../../../common/shrimp/interfaces/quick/ILocationPosition";
-import { IExcel } from "../../../../common/shrimp/interfaces/quick/IExcel";
+import { IExcel, IExcelList } from "../../../../common/shrimp/interfaces/quick/IExcel";
 export declare class GlobalMethodsImpl implements IGlobalMethods {
     contextName: string;
     parentInstance: any;
@@ -60,7 +60,7 @@ export declare class GlobalMethodsImpl implements IGlobalMethods {
     copyToClipboard(value: string): void;
     getCurrentPosition(): Promise<ILocationPosition>;
     setFavicon(favicon: string): void;
-    exportToXlsxHandler(excelFile: IExcel): void;
+    exportToXlsxHandler(excelFile: IExcel | IExcelList): void;
     downloadHandler(responseFile: {
         data: string;
         name: string;

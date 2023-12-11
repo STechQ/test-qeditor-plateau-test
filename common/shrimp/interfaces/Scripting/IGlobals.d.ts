@@ -12,7 +12,7 @@ import { INetworkResponse } from "../quick/INetworkResponse";
 import { PlatformType } from "../quick/IPlatform";
 import { IShell } from "../quick/IShell";
 import { IUrlOptions } from "../quick/IUrl";
-import { IExcel } from "../quick/IExcel";
+import { IExcel, IExcelList } from "../quick/IExcel";
 import { IDomElement } from "../RenderingInterfaces/IDomElement";
 export interface IGlobals_Request {
     async(requestObject: IRequest): Promise<INetworkResponse<Record<string, any>>> | undefined;
@@ -121,7 +121,7 @@ export interface IGlobals_Quick {
     getPageTitle?: () => void;
     getFavicon?: () => void;
     updateComponent: (Comp?: IComponent) => any;
-    exportToXlsx: (excelFile: IExcel) => void;
+    exportToXlsx: (excelFile: IExcel | IExcelList) => void;
     toLongDate: (date: Date, formatType?: string) => string;
     toShortDate: (date: Date, formatType?: string) => string;
     toLongTime: (date: Date, formatType?: string) => string;

@@ -22,7 +22,7 @@ import { IProcessManager } from "./IProcessManager";
 import { IShellGlobalMethods } from "./IShellGlobalMethods";
 import { IStorageAccess } from "./IStore";
 import { IUrlOptions } from "./IUrl";
-import { IExcel } from "./IExcel";
+import { IExcel, IExcelList } from "./IExcel";
 export interface IShellConfiguration {
     network: INetwork;
     lridHelper?: (label: string, params: Object) => string;
@@ -68,7 +68,7 @@ export interface IShellConfiguration {
     getUrl?(options?: {
         noQueryString?: boolean;
     }): string | undefined;
-    exportToXlsxHandler?: (excelFile: IExcel) => void;
+    exportToXlsxHandler?: (excelFile: IExcel | IExcelList) => void;
     setComponentClass?: (componentInstance: IComponentCollection, classes: Array<string>) => void;
     setComponentsProperty?: (componentCollection: IComponentCollection, propertyName: string, propertyValue: any) => void;
     setTheme?: (newTheme: string) => void;
@@ -159,7 +159,7 @@ export declare type RetrieveCjsonDelegate = ({ qjsonPath, }: {
     qjsonPath: string;
 }) => Promise<IQJSon | undefined>;
 export declare type CreateContainerViewDelegate = (compUID: string) => unknown;
-export declare type UpdateContainerViewDelegate = ({ givenObject, elements, pageShift, }: {
+export declare type UpdateContainerViewDelegate = ({ givenObject, elements, pageShift }: {
     givenObject: unknown;
     elements?: Array<unknown> | string;
     pageShift: boolean;

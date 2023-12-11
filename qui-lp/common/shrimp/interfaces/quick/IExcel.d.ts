@@ -1,5 +1,11 @@
-export interface IExcel {
+export interface IExcel extends IExcelSheet {
     fileName: string;
+}
+export interface IExcelList {
+    fileName: string;
+    sheetList: Array<IExcelSheet>;
+}
+export interface IExcelSheet {
     items: Array<object>;
     headers: Array<object> | Array<IExcelHeader>;
     sheetName?: string;

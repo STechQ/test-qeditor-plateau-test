@@ -8,7 +8,7 @@ import { IAlertParameters } from "../../../../shrimp/interfaces/quick/IShellGlob
 import { IDomElement } from "../../../../shrimp/interfaces/RenderingInterfaces/IDomElement";
 import { IRenderer } from "../../../../shrimp/interfaces/RenderingInterfaces/IRenderer";
 import { ILocationPosition } from "../../../../shrimp/interfaces/quick/ILocationPosition";
-import { IExcel } from "../../../../shrimp/interfaces/quick/IExcel";
+import { IExcel, IExcelList } from "../../../../shrimp/interfaces/quick/IExcel";
 export declare const GlobalMethodsContextName: string;
 /**
  * QShell CreateRenderer (known types, used inside engine equivalent of GO like stuff)
@@ -46,7 +46,7 @@ export interface IGlobalMethods extends IContextItem {
     getCurrentPosition?: () => Promise<ILocationPosition> | undefined;
     getPageTitle?: () => void;
     getFavicon?: () => void;
-    exportToXlsxHandler?: (excelFile: IExcel) => void;
+    exportToXlsxHandler?: (excelFile: IExcel | IExcelList) => void;
     setComponentClass?: (compCollection: IComponentCollection, classes: Array<string>) => void;
     setComponentsProperty?: (compCollection: IComponentCollection, propertyName: string, propertyValue: string) => void;
     goNative?: ({ code, param, }: {
