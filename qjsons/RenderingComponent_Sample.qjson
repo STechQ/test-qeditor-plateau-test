@@ -1,0 +1,3184 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_34",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"PostRender": {
+					"H": "\r\n(<any>components.Footer).absolute = true;\r\n(<any>components.QMenuDesktop).mini = false;\r\n\r\n\r\ncomponents.renderingComp.RenderGo('/static/qjsons/webDashboard.qjson');\r\n\r\n\r\n",
+					"TO": 1,
+					"HL": "TS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_34"
+			},
+			"O": {
+				"compDomClasses": "",
+				"cType": "child"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_17",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container container--fluid'",
+					"T": "class"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_10",
+									"T": "prop"
+								},
+								"class": {
+									"H": "'blue darken-4'",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_12",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VIcon",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_271",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "'mdi-menu'",
+																	"T": "text"
+																},
+																"color": {
+																	"H": "'white'",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "// quick.EM.trace(\"click start \" + components.MenuComp.visible);\r\n// quick.EM.trace(\"click start  \" + (<any> components.MenuComp).mini);\r\n// (<any> components.MenuComp).mini = false;\r\n// components.MenuComp.visible=true;\r\n\r\n// debugger;\r\n// quick.EM.trace(\"click end \" + components.MenuComp.visible);\r\n// quick.EM.trace(\"click end \" + (<any> components.MenuComp).mini);",
+																	"P": "mouseEvent:object",
+																	"HL": "TS"
+																}
+															},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_271"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-icon notranslate v-icon--link mdi mdi-menu theme--light white--text"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_12"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-row",
+															"a:align-center",
+															"sp:pt-3",
+															"sp:pb-3",
+															"sp:pl-3",
+															"c:col-1"
+														],
+														"md": [
+															"fd:flex-row",
+															"a:align-center",
+															"sp:pt-3",
+															"sp:pb-3",
+															"sp:pl-3",
+															"c:d-none"
+														]
+													},
+													"class": "d-flex flex-row align-center pt-3 pb-3 pl-3 col-1 flex-md-row align-md-center pt-md-3 pb-md-3 pl-md-3 d-md-none"
+												},
+												"compDomClasses": "col d-flex flex-row align-center pt-3 pb-3 pl-3 col-1 flex-md-row align-md-center pt-md-3 pb-md-3 pl-md-3 d-md-none"
+											}
+										},
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_10172",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_6617",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"href": {
+																	"H": "'https://www.google.com.tr/'",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VImg",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_10174",
+																					"T": "prop"
+																				},
+																				"eager": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"maxHeight": {
+																					"H": "'33'",
+																					"T": "prop"
+																				},
+																				"maxWidth": {
+																					"H": "'119'",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_10174"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": []
+																					},
+																					"class": ""
+																				},
+																				"compDomClasses": "v-image v-responsive theme--light"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_6617"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_10172"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-row",
+															"a:align-center",
+															"sp:pt-3",
+															"sp:pb-3",
+															"sp:pl-3",
+															"c:col-11"
+														],
+														"md": [
+															"d:d-flex",
+															"fd:flex-row",
+															"a:align-center",
+															"sp:pt-3",
+															"sp:pb-3",
+															"sp:pl-3",
+															"d:d-flex",
+															"c:col-3"
+														]
+													},
+													"class": "d-flex flex-row align-center pt-3 pb-3 pl-3 col-11 d-md-flex flex-md-row align-md-center pt-md-3 pb-md-3 pl-md-3 d-md-flex col-md-3"
+												},
+												"compDomClasses": "col d-flex flex-row align-center pt-3 pb-3 pl-3 col-11 d-md-flex flex-md-row align-md-center pt-md-3 pb-md-3 pl-md-3 col-md-12"
+											}
+										},
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_14",
+													"T": "prop"
+												},
+												"Render": {
+													"H": "false",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VTextField",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_19",
+																	"T": "prop"
+																},
+																"outlined": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"class": {
+																	"H": "'hide-details'",
+																	"T": "class"
+																},
+																"solo": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"success": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"readonly": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"regular": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"error": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"disabled": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"dense": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"DiscardFormat": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"DiscardSettings": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"Render": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"appendIcon": {
+																	"H": "'mdi-magnify'",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_19"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"sp:mr-3",
+																			"sp:mb-n8"
+																		]
+																	},
+																	"class": "mr-3 mb-n8"
+																},
+																"compDomClasses": "v-input v-input--dense theme--light v-text-field v-text-field--single-line v-text-field--solo v-text-field--is-booted v-text-field--enclosed v-text-field--outlined hide-details mr-3 mb-n8 ╬'hide-details'╩╩"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_14"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"fd:flex-row",
+															"sp:pt-3",
+															"sp:pb-4",
+															"j:justify-end",
+															"sp:pr-0",
+															"c:d-none"
+														]
+													},
+													"class": "flex-row pt-3 pb-4 justify-end pr-0 d-none"
+												},
+												"compDomClasses": "col flex-row pt-3 pb-4 justify-end pr-0 d-none"
+											}
+										},
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_612",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "TFNameSurname",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "'span'",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"class": {
+																	"H": "'fontsize-20 white--text'",
+																	"T": "class"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_1250"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"te:font-weight-medium"
+																		],
+																		"md": [
+																			"sp:mr-5",
+																			"te:font-weight-medium",
+																			"sp:mb-1"
+																		]
+																	},
+																	"class": "font-weight-medium mr-md-5 font-md-weight-medium mb-md-1"
+																}
+															}
+														},
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_1050",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "'whiteButton'",
+																	"T": "prop"
+																},
+																"outlined": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_1151",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'Çıkış Yap'",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"class": {
+																					"H": "'text-decoration-underline'",
+																					"T": "class"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_1151"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"te:font-weight-medium"
+																						]
+																					},
+																					"class": "font-weight-medium"
+																				}
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_1050"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_612"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-row",
+															"a:align-center",
+															"sp:pt-3",
+															"sp:pb-3",
+															"sp:pl-3",
+															"c:col-11"
+														],
+														"md": [
+															"d:d-flex",
+															"sp:pt-3",
+															"sp:pb-3",
+															"sp:pl-3",
+															"d:d-flex",
+															"fd:flex-row",
+															"a:align-end",
+															"j:justify-end",
+															"c:col-9"
+														]
+													},
+													"class": "d-flex flex-row align-center pt-3 pb-3 pl-3 col-11 d-md-flex pt-md-3 pb-md-3 pl-md-3 d-md-flex flex-md-row align-md-end justify-md-end col-md-9"
+												},
+												"compDomClasses": "col d-flex flex-row align-center pt-3 pb-3 pl-3 col-11 d-md-flex flex-md-row align-md-center pt-md-3 pb-md-3 pl-md-3 col-md-12"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_10"
+							},
+							"O": {
+								"cType": "slot",
+								"layout": {
+									"dOpt": {
+										"xs": [
+											"sp:mb-0",
+											"sp:mt-0",
+											"sp:pt-0",
+											"sp:pb-0"
+										]
+									},
+									"class": "mb-0 mt-0 pt-0 pb-0"
+								},
+								"compDomClasses": "row blue darken-4 mb-0 mt-0 pt-0 pb-0"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_30",
+									"T": "prop"
+								},
+								"class": {
+									"H": "'grey lighten-5'",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QMenu",
+															"P": {
+																"ID": {
+																	"H": "QMenuDesktop",
+																	"T": "prop"
+																},
+																"menuData": {
+																	"H": "[{menuItem='true',code=LR('home'),imagePath='mdi-view-dashboard', id='dashboard'},\r\n{menuItem='true',code=LR('ann'),imagePath='mdi-message-alert', id='announcement'},\r\n{menuItem='true',code=LR('pro'),imagePath='mdi-bookmark-multiple', id='project' ,children=[{menuItem='true',code=LR('tender'), id='proposalProject'},{menuItem='true',code=LR('active'), id='activeProject'},{menuItem='true',code=LR('billed'), id='billedProject'}]},\r\n{menuItem='true',code=LR('payment'),imagePath='mdi-credit-card-outline', id='payment' ,children=[{menuItem='true',code=LR('upcoming'), id='upcomingPayment'},{menuItem='true',code=LR('overdue'), id='latePayment'}]},\r\n{menuItem='true',code=LR('calculator'),imagePath='mdi-calculator', id = 'calculator'},\r\n{menuItem='true',code=LR('apply'),imagePath='mdi-clipboard-check', id='requestOffer'},\r\n{menuItem='true',code=LR('policies'),imagePath='mdi-file-document-edit', id='insurancePolicies'},\r\n{menuItem='true',code=LR('guarantees'),imagePath='mdi-text-box-check', id='guaranteeList'},\r\n{menuItem='true',code=LR('proforma'),imagePath='mdi-text-box-outline', id='proformas'},\r\n{menuItem='true',code=LR('babs'),imagePath='mdi-file-document', id='babsagreement'},\r\n{menuItem='true',code=LR('company'),imagePath='mdi-domain', id='companyDetail'},\r\n{menuItem='true',code=LR('demands'),imagePath='mdi-playlist-check' ,children=[{menuItem='true',code=LR('requests'), id='myDemands'},{menuItem='true',code=LR('demand'), id='requests'}]},\r\n{menuItem='true',code=LR('contact'),imagePath='mdi-map-marker-question', id='contactUs'},\r\n{menuItem='true',code=LR('setting'),imagePath='mdi-cog', id='setting'}]",
+																	"T": "prop"
+																},
+																"title": {
+																	"H": "''",
+																	"T": "prop"
+																},
+																"showOnlyIcon": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"autoCollapse": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"hideMenuTitle": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"activeColor": {
+																	"H": "'primary'",
+																	"T": "prop"
+																},
+																"width": {
+																	"H": "'240px'",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click:row": {
+																	"H": "quick.Quick.screen.toTop();\r\n\r\nlet webRedirectUrl = '';\r\n\r\nif ((<any>item).id == \"dashboard\") {\r\n    webRedirectUrl = '/static/qjsons/dashboard.qjson';\r\n}\r\nelse if ((<any>item).id == \"announcement\") {\r\n    webRedirectUrl = '/static/qjsons/announcement.qjson';\r\n}\r\nelse if ((<any>item).id == \"project\") {\r\n    webRedirectUrl = '/static/qjsons/project.qjson';\r\n\r\n}\r\nelse if ((<any>item).id == \"activeProject\") {\r\n    webRedirectUrl = '/static/qjsons/activeProject.qjson';\r\n}\r\nelse if ((<any>item).id == \"proposalProject\") {\r\n    webRedirectUrl = '/static/qjsons/proposalProject.qjson';\r\n}\r\nelse if ((<any>item).id == \"billedProject\") {\r\n    webRedirectUrl = '/static/qjsons/billedProject.qjson';\r\n}\r\nelse if ((<any>item).id == \"upcomingPayment\") {\r\n    webRedirectUrl = '/static/qjsons/upcomingPayment.qjson';\r\n}\r\nelse if ((<any>item).id == \"calculator\") {\r\n    webRedirectUrl = '/static/qjsons/calculator.qjson';\r\n}\r\nelse if ((<any>item).id == \"requestOffer\") {\r\n    webRedirectUrl = '/static/qjsons/requestOffer.qjson';\r\n}\r\nelse if ((<any>item).id == \"insurancePolicies\") {\r\n    webRedirectUrl = '/static/qjsons/insurancePolicies.qjson';\r\n}\r\nelse if ((<any>item).id == \"guaranteeList\") {\r\n    webRedirectUrl = '/static/qjsons/guaranteeList.qjson';\r\n}\r\nelse if ((<any>item).id == \"proformas\") {\r\n    webRedirectUrl = '/static/qjsons/proformas.qjson';\r\n}\r\nelse if ((<any>item).id == \"babsagreement\") {\r\n    webRedirectUrl = '/static/qjsons/babsagreement.qjson';\r\n}\r\nelse if ((<any>item).id == \"proformaEquipments\") {\r\n    webRedirectUrl = '/static/qjsons/proformaEquipments.qjson';\r\n}\r\nelse if ((<any>item).id == \"companyDetail\") {\r\n    webRedirectUrl = '/static/qjsons/companyDetail.qjson';\r\n}\r\nelse if ((<any>item).id == \"myDemands\") {\r\n    webRedirectUrl = '/static/qjsons/myDemands.qjson';\r\n}\r\nelse if ((<any>item).id == \"requests\") {\r\n    webRedirectUrl = '/static/qjsons/requests.qjson';\r\n}\r\nelse if ((<any>item).id == \"setting\") {\r\n    webRedirectUrl = '/static/qjsons/setting.qjson';\r\n}\r\nelse if ((<any>item).id == \"contactUs\") {\r\n    webRedirectUrl = '/static/qjsons/contactUs.qjson';\r\n}\r\nelse if ((<any>item).id == \"latePayment\") {\r\n    webRedirectUrl = '/static/qjsons/latePayment.qjson';\r\n}\r\n\r\n\r\ncomponents.renderingComp.QJsonPath = webRedirectUrl;\r\n",
+																	"P": "item:IQMenuMenuDataItem",
+																	"HL": "TS"
+																}
+															},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_10622"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-navigation-drawer v-navigation-drawer--open theme--light undefined newDropBorder",
+																"layout": {
+																	"dOpt": {
+																		"xs": []
+																	},
+																	"class": ""
+																}
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_10576",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_10576"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"c:d-none"
+														],
+														"md": [
+															"d:d-flex",
+															"sp:pl-0",
+															"sp:pb-0",
+															"fd:flex-row",
+															"sp:pt-0",
+															"c:col-3"
+														],
+														"lg": [
+															"d:d-flex",
+															"sp:pl-0",
+															"sp:pb-0",
+															"fd:flex-row",
+															"sp:pt-0",
+															"d:d-flex",
+															"c:col-2"
+														]
+													},
+													"class": "d-none d-md-flex pl-md-0 pb-md-0 flex-md-row pt-md-0 col-md-3 d-lg-flex pl-lg-0 pb-lg-0 flex-lg-row pt-lg-0 d-lg-flex col-lg-2"
+												},
+												"compDomClasses": "col d-none d-md-flex pl-md-0 pb-md-0 col-md-2 flex-md-row newDropBorder"
+											}
+										},
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_32",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_88",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VCol",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_90",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "RenderingComponent",
+																							"P": {
+																								"ID": {
+																									"H": "renderingComp",
+																									"T": "prop"
+																								},
+																								"QJsonPath": {
+																									"H": "'/static/qjsons/webDashboard.qjson'",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_92"
+																							},
+																							"O": {
+																								"dynProps": true,
+																								"compDomClasses": "",
+																								"cType": "child"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_90"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"d:d-flex",
+																							"fd:flex-column",
+																							"sp:pr-0",
+																							"sp:pl-3",
+																							"sp:pt-0"
+																						],
+																						"md": [
+																							"d:d-flex",
+																							"fd:flex-column",
+																							"sp:pr-7",
+																							"sp:pl-10",
+																							"d:d-flex",
+																							"sp:pt-0"
+																						]
+																					},
+																					"class": "d-flex flex-column pr-0 pl-3 pt-0 d-md-flex flex-md-column pr-md-7 pl-md-10 d-md-flex pt-md-0"
+																				},
+																				"compDomClasses": "col d-flex flex-column pr-0 pl-3 d-md-flex flex-md-column pr-md-7 pl-md-10 newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_88"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "row newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_32"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"sp:pl-0",
+															"sp:pb-0",
+															"fd:flex-row",
+															"sp:pt-0"
+														]
+													},
+													"class": "d-flex pl-0 pb-0 flex-row pt-0"
+												},
+												"compDomClasses": "col d-flex pl-0 pb-0 flex-row newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_30"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row grey lighten-5 newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_35",
+									"T": "prop"
+								},
+								"class": {
+									"H": "'grey lighten-5'",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "ColFooter",
+													"T": "prop"
+												},
+												"customCompClass": {
+													"H": "'webfooter'",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Ghost",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_1533",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_1533"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "editor-ghost-comp"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_36"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"sp:pl-0",
+															"sp:pr-0",
+															"sp:pb-0",
+															"sp:pt-0",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex pl-0 pr-0 pb-0 pt-0 flex-column"
+												},
+												"compDomClasses": "webfooter d-flex pl-0 pr-0 pb-0 pt-0 flex-column"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_35"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row grey lighten-5"
+							}
+						},
+						{
+							"T": "VFooter",
+							"P": {
+								"ID": {
+									"H": "Footer",
+									"T": "prop"
+								},
+								"class": {
+									"H": "'blue darken-4'",
+									"T": "class"
+								},
+								"inset": {
+									"H": "true",
+									"T": "prop"
+								},
+								"padless": {
+									"H": "true",
+									"T": "prop"
+								},
+								"tile": {
+									"H": "false",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VContainer",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_28",
+													"T": "prop"
+												},
+												"class": {
+													"H": "'container container--fluid'",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_41",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VCol",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_43",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "BtnSocialMediaIcon1",
+																									"T": "prop"
+																								},
+																								"link": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"width": {
+																									"H": "050",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "VIcon",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_51",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "'mdi-facebook'",
+																													"T": "text"
+																												},
+																												"color": {
+																													"H": "'white'",
+																													"T": "prop"
+																												},
+																												"size": {
+																													"H": "'35'",
+																													"T": "prop"
+																												}
+																											},
+																											"E": {},
+																											"C": {},
+																											"_Editor": {
+																												"eID": "EdtrComp_51"
+																											},
+																											"O": {
+																												"cType": "slot",
+																												"compDomClasses": "v-icon notranslate mdi mdi-facebook theme--light white--text"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_52"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "v-btn v-btn--flat v-btn--text theme--light v-size--default pl-0 pr-0",
+																								"layout": {
+																									"dOpt": {
+																										"xs": [
+																											"sp:pl-0",
+																											"sp:pr-0"
+																										]
+																									},
+																									"class": "pl-0 pr-0"
+																								}
+																							}
+																						},
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "BtnSocialMediaIcon2",
+																									"T": "prop"
+																								},
+																								"link": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"width": {
+																									"H": "050",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "VIcon",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_4",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "'mdi-linkedin'",
+																													"T": "text"
+																												},
+																												"color": {
+																													"H": "'white'",
+																													"T": "prop"
+																												},
+																												"size": {
+																													"H": "'35'",
+																													"T": "prop"
+																												}
+																											},
+																											"E": {},
+																											"C": {},
+																											"_Editor": {
+																												"eID": "EdtrComp_4"
+																											},
+																											"O": {
+																												"cType": "slot",
+																												"compDomClasses": "v-icon notranslate mdi mdi-linkedin theme--light white--text"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_3"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "v-btn v-btn--flat v-btn--text theme--light v-size--default pl-0 pr-0",
+																								"layout": {
+																									"dOpt": {
+																										"xs": [
+																											"sp:pl-0",
+																											"sp:pr-0"
+																										]
+																									},
+																									"class": "pl-0 pr-0"
+																								}
+																							}
+																						},
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "BtnSocialMediaIcon3",
+																									"T": "prop"
+																								},
+																								"link": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "true",
+																									"T": "prop"
+																								},
+																								"width": {
+																									"H": "050",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "VIcon",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_2",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "'mdi-instagram'",
+																													"T": "text"
+																												},
+																												"color": {
+																													"H": "'white'",
+																													"T": "prop"
+																												},
+																												"size": {
+																													"H": "'35'",
+																													"T": "prop"
+																												}
+																											},
+																											"E": {},
+																											"C": {},
+																											"_Editor": {
+																												"eID": "EdtrComp_2"
+																											},
+																											"O": {
+																												"cType": "slot",
+																												"compDomClasses": "v-icon notranslate mdi mdi-instagram theme--light white--text"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_1"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "v-btn v-btn--flat v-btn--text theme--light v-size--default pl-0 pr-0",
+																								"layout": {
+																									"dOpt": {
+																										"xs": [
+																											"sp:pl-0",
+																											"sp:pr-0"
+																										]
+																									},
+																									"class": "pl-0 pr-0"
+																								}
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_43"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"d:d-flex",
+																							"fd:flex-row",
+																							"c:col-12",
+																							"a:align-center",
+																							"j:justify-center"
+																						]
+																					},
+																					"class": "d-flex flex-row col-12 align-center justify-center"
+																				},
+																				"compDomClasses": "col d-flex flex-row col-12 align-center justify-center"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_41"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": []
+																	},
+																	"class": ""
+																},
+																"compDomClasses": "row"
+															}
+														},
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_48",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VCol",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_49",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_9",
+																									"T": "prop"
+																								},
+																								"tagType": {
+																									"H": "'span'",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "//'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque orci eros, dictum at elementum ut, tincidunt quis magna. Donec tempor mi dolor, sit amet dictum enim imperdiet non. Vestibulum eget metus egestas, molestie elit vitae, lacinia nibh. Donec tincidunt nulla non purus semper laoreet. In quis ligula ut sem bibendum euismod. Sed massa erat, ultrices sed iaculis in, blandit ac ex. Ut elementum, risus id viverra tempus, quam est iaculis nisl, a ultrices eros dolor non est. '",
+																									"T": "prop"
+																								},
+																								"class": {
+																									"H": "'white--text qLabelTextAllignCenter'",
+																									"T": "class"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_9"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "q-label  white--text qLabelTextAllignCenter font-weight-regular",
+																								"layout": {
+																									"dOpt": {
+																										"xs": [
+																											"te:font-weight-regular"
+																										]
+																									},
+																									"class": "font-weight-regular"
+																								}
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_49"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"d:d-flex",
+																							"a:align-center",
+																							"j:justify-center",
+																							"c:col-12",
+																							"sp:pl-16",
+																							"sp:pr-16"
+																						]
+																					},
+																					"class": "d-flex align-center justify-center col-12 pl-16 pr-16"
+																				},
+																				"compDomClasses": "col d-flex align-center justify-center col-12 pl-16 pr-16"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_48"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "row"
+															}
+														},
+														{
+															"T": "VDivider",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_11",
+																	"T": "prop"
+																},
+																"inset": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"vertical": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"class": {
+																	"H": "'white'",
+																	"T": "class"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_11"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-divider theme--light white"
+															}
+														},
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_18",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VCol",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_20",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_21",
+																									"T": "prop"
+																								},
+																								"tagType": {
+																									"H": "'span'",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "'2021  -  Vuetify '",
+																									"T": "prop"
+																								},
+																								"class": {
+																									"H": "'white--text'",
+																									"T": "class"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_21"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "q-label  white--text"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_20"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"d:d-flex",
+																							"fd:flex-column",
+																							"a:align-center",
+																							"sp:pt-3"
+																						]
+																					},
+																					"class": "d-flex flex-column align-center pt-3"
+																				},
+																				"compDomClasses": "col d-flex flex-column align-center pt-3"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_18"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "row"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_28"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"sp:ml-0",
+															"sp:mr-0",
+															"sp:pr-0",
+															"sp:pl-0",
+															"sp:pb-0",
+															"sp:mb-0"
+														]
+													},
+													"class": "ml-0 mr-0 pr-0 pl-0 pb-0 mb-0"
+												},
+												"compDomClasses": "container container container--fluid ml-0 mr-0 pr-0 pl-0 pb-0 mb-0"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_39"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "v-footer v-sheet theme--light v-footer--padless v-footer--inset blue darken-4 pl-0 pr-0",
+								"layout": {
+									"dOpt": {
+										"xs": [
+											"sp:pl-0",
+											"sp:pr-0"
+										]
+									},
+									"class": "pl-0 pr-0"
+								}
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_17"
+			},
+			"O": {
+				"cType": "slot",
+				"layout": {
+					"dOpt": {
+						"xs": [
+							"sp:pt-0",
+							"sp:pb-0",
+							"sp:mt-0",
+							"sp:mb-0"
+						]
+					},
+					"class": "pt-0 pb-0 mt-0 mb-0"
+				},
+				"compDomClasses": "container container--fluid pt-0 pb-0 mt-0 mb-0 newDropBorder"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_34",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"PostRender": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ncomponents.Footer.absolute = true;\r\ncomponents.QMenuDesktop.mini = false;\r\ncomponents.renderingComp.RenderGo('/static/qjsons/webDashboard.qjson');\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfMzRfUG9zdFJlbmRlcl9FLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiRWR0ckNvbXBfMzRfUG9zdFJlbmRlcl9FLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFFTSxVQUFVLENBQUMsTUFBTyxDQUFDLFFBQVEsR0FBRyxJQUFJLENBQUM7QUFDbkMsVUFBVSxDQUFDLFlBQWEsQ0FBQyxJQUFJLEdBQUcsS0FBSyxDQUFDO0FBRzVDLFVBQVUsQ0FBQyxhQUFhLENBQUMsUUFBUSxDQUFDLG1DQUFtQyxDQUFDLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJcblxyXG4oPGFueT5jb21wb25lbnRzLkZvb3RlcikuYWJzb2x1dGUgPSB0cnVlO1xyXG4oPGFueT5jb21wb25lbnRzLlFNZW51RGVza3RvcCkubWluaSA9IGZhbHNlO1xyXG5cclxuXHJcbmNvbXBvbmVudHMucmVuZGVyaW5nQ29tcC5SZW5kZXJHbygnL3N0YXRpYy9xanNvbnMvd2ViRGFzaGJvYXJkLnFqc29uJyk7XHJcblxyXG5cclxuXG4gZXhwb3J0e307XG4iXX0=",
+					"TO": 1,
+					"HL": "JS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_34"
+			},
+			"O": {
+				"compDomClasses": "newDropBorder",
+				"cType": "child"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_17",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container container--fluid'╩╩",
+					"T": "class"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_10",
+									"T": "prop"
+								},
+								"class": {
+									"H": "╬'blue darken-4'╩╩",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_12",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VIcon",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_271",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬'mdi-menu'╩╩",
+																	"T": "text"
+																},
+																"color": {
+																	"H": "╬'white'╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfMjcxX2NsaWNrX0UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJFZHRyQ29tcF8yNzFfY2xpY2tfRS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiIiwic291cmNlc0NvbnRlbnQiOlsiZGVjbGFyZSB2YXIgbW91c2VFdmVudDpvYmplY3Rcbi8vIHF1aWNrLkVNLnRyYWNlKFwiY2xpY2sgc3RhcnQgXCIgKyBjb21wb25lbnRzLk1lbnVDb21wLnZpc2libGUpO1xyXG4vLyBxdWljay5FTS50cmFjZShcImNsaWNrIHN0YXJ0ICBcIiArICg8YW55PiBjb21wb25lbnRzLk1lbnVDb21wKS5taW5pKTtcclxuLy8gKDxhbnk+IGNvbXBvbmVudHMuTWVudUNvbXApLm1pbmkgPSBmYWxzZTtcclxuLy8gY29tcG9uZW50cy5NZW51Q29tcC52aXNpYmxlPXRydWU7XHJcblxyXG4vLyBkZWJ1Z2dlcjtcclxuLy8gcXVpY2suRU0udHJhY2UoXCJjbGljayBlbmQgXCIgKyBjb21wb25lbnRzLk1lbnVDb21wLnZpc2libGUpO1xyXG4vLyBxdWljay5FTS50cmFjZShcImNsaWNrIGVuZCBcIiArICg8YW55PiBjb21wb25lbnRzLk1lbnVDb21wKS5taW5pKTtcbiBleHBvcnR7fTtcbiJdfQ==",
+																	"P": "mouseEvent:object",
+																	"HL": "JS"
+																}
+															},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_271"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-icon notranslate v-icon--link mdi mdi-menu theme--light white--text"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_12"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-row",
+															"a:align-center",
+															"sp:pt-3",
+															"sp:pb-3",
+															"sp:pl-3",
+															"c:col-1"
+														],
+														"md": [
+															"fd:flex-row",
+															"a:align-center",
+															"sp:pt-3",
+															"sp:pb-3",
+															"sp:pl-3",
+															"c:d-none"
+														]
+													},
+													"class": "d-flex flex-row align-center pt-3 pb-3 pl-3 col-1 flex-md-row align-md-center pt-md-3 pb-md-3 pl-md-3 d-md-none"
+												},
+												"compDomClasses": "col d-flex flex-row align-center pt-3 pb-3 pl-3 col-1 flex-md-row align-md-center pt-md-3 pb-md-3 pl-md-3 d-md-none"
+											}
+										},
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_10172",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_6617",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"href": {
+																	"H": "╬'https://www.google.com.tr/'╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VImg",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_10174",
+																					"T": "prop"
+																				},
+																				"eager": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"maxHeight": {
+																					"H": "╬'33'╩╩",
+																					"T": "prop"
+																				},
+																				"maxWidth": {
+																					"H": "╬'119'╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_10174"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": []
+																					},
+																					"class": ""
+																				},
+																				"compDomClasses": "v-image v-responsive theme--light"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_6617"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-btn v-btn--flat v-btn--text theme--light v-size--default newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_10172"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-row",
+															"a:align-center",
+															"sp:pt-3",
+															"sp:pb-3",
+															"sp:pl-3",
+															"c:col-11"
+														],
+														"md": [
+															"d:d-flex",
+															"fd:flex-row",
+															"a:align-center",
+															"sp:pt-3",
+															"sp:pb-3",
+															"sp:pl-3",
+															"d:d-flex",
+															"c:col-3"
+														]
+													},
+													"class": "d-flex flex-row align-center pt-3 pb-3 pl-3 col-11 d-md-flex flex-md-row align-md-center pt-md-3 pb-md-3 pl-md-3 d-md-flex col-md-3"
+												},
+												"compDomClasses": "col d-flex flex-row align-center pt-3 pb-3 pl-3 col-11 d-md-flex flex-md-row align-md-center pt-md-3 pb-md-3 pl-md-3 col-md-3 newDropBorder"
+											}
+										},
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_14",
+													"T": "prop"
+												},
+												"Render": {
+													"H": "╬false╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VTextField",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_19",
+																	"T": "prop"
+																},
+																"outlined": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"class": {
+																	"H": "╬'hide-details'╩╩",
+																	"T": "class"
+																},
+																"solo": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"success": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"readonly": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"regular": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"error": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"disabled": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"dense": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"DiscardFormat": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"DiscardSettings": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"Render": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"appendIcon": {
+																	"H": "╬'mdi-magnify'╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_19"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"sp:mr-3",
+																			"sp:mb-n8"
+																		]
+																	},
+																	"class": "mr-3 mb-n8"
+																},
+																"compDomClasses": "v-input v-input--dense theme--light v-text-field v-text-field--single-line v-text-field--solo v-text-field--is-booted v-text-field--enclosed v-text-field--outlined hide-details mr-3 mb-n8 ╬'hide-details'╩╩"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_14"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"fd:flex-row",
+															"sp:pt-3",
+															"sp:pb-4",
+															"j:justify-end",
+															"sp:pr-0",
+															"c:d-none"
+														]
+													},
+													"class": "flex-row pt-3 pb-4 justify-end pr-0 d-none"
+												},
+												"compDomClasses": "col flex-row pt-3 pb-4 justify-end pr-0 d-none"
+											}
+										},
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_612",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "TFNameSurname",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "╬'span'╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"class": {
+																	"H": "╬'fontsize-20 white--text'╩╩",
+																	"T": "class"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_1250"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": [
+																			"te:font-weight-medium"
+																		],
+																		"md": [
+																			"sp:mr-5",
+																			"te:font-weight-medium",
+																			"sp:mb-1"
+																		]
+																	},
+																	"class": "font-weight-medium mr-md-5 font-md-weight-medium mb-md-1"
+																},
+																"compDomClasses": "q-label fontsize-20 white--text font-weight-medium mr-md-5 font-md-weight-medium mb-md-1 newDropBorder"
+															}
+														},
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_1050",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "╬'whiteButton'╩╩",
+																	"T": "prop"
+																},
+																"outlined": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_1151",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'Çıkış Yap'╩╩",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"class": {
+																					"H": "╬'text-decoration-underline'╩╩",
+																					"T": "class"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_1151"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"te:font-weight-medium"
+																						]
+																					},
+																					"class": "font-weight-medium"
+																				},
+																				"compDomClasses": "q-label text-decoration-underline font-weight-medium newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_1050"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-btn v-btn--depressed v-btn--flat v-btn--outlined v-btn--text theme--light v-size--default whiteButton--text newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_612"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-row",
+															"a:align-center",
+															"sp:pt-3",
+															"sp:pb-3",
+															"sp:pl-3",
+															"c:col-11"
+														],
+														"md": [
+															"d:d-flex",
+															"sp:pt-3",
+															"sp:pb-3",
+															"sp:pl-3",
+															"d:d-flex",
+															"fd:flex-row",
+															"a:align-end",
+															"j:justify-end",
+															"c:col-9"
+														]
+													},
+													"class": "d-flex flex-row align-center pt-3 pb-3 pl-3 col-11 d-md-flex pt-md-3 pb-md-3 pl-md-3 d-md-flex flex-md-row align-md-end justify-md-end col-md-9"
+												},
+												"compDomClasses": "col d-flex flex-row align-center pt-3 pb-3 pl-3 col-11 d-md-flex pt-md-3 pb-md-3 pl-md-3 flex-md-row align-md-end justify-md-end col-md-9 newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_10"
+							},
+							"O": {
+								"cType": "slot",
+								"layout": {
+									"dOpt": {
+										"xs": [
+											"sp:mb-0",
+											"sp:mt-0",
+											"sp:pt-0",
+											"sp:pb-0"
+										]
+									},
+									"class": "mb-0 mt-0 pt-0 pb-0"
+								},
+								"compDomClasses": "row blue darken-4 mb-0 mt-0 pt-0 pb-0 newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_30",
+									"T": "prop"
+								},
+								"class": {
+									"H": "╬'grey lighten-5'╩╩",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QMenu",
+															"P": {
+																"ID": {
+																	"H": "QMenuDesktop",
+																	"T": "prop"
+																},
+																"menuData": {
+																	"H": "╬[]╠{}╠=╣menuItem╩╠'true'╩╩╠=╣code╩╠()╣LR╩╠'home'╩╩╩╠=╣imagePath╩╠'mdi-view-dashboard'╩╩╠=╣id╩╠'dashboard'╩╩╩╠{}╠=╣menuItem╩╠'true'╩╩╠=╣code╩╠()╣LR╩╠'ann'╩╩╩╠=╣imagePath╩╠'mdi-message-alert'╩╩╠=╣id╩╠'announcement'╩╩╩╠{}╠=╣menuItem╩╠'true'╩╩╠=╣code╩╠()╣LR╩╠'pro'╩╩╩╠=╣imagePath╩╠'mdi-bookmark-multiple'╩╩╠=╣id╩╠'project'╩╩╠=╣children╩╠[]╠{}╠=╣menuItem╩╠'true'╩╩╠=╣code╩╠()╣LR╩╠'tender'╩╩╩╠=╣id╩╠'proposalProject'╩╩╩╠{}╠=╣menuItem╩╠'true'╩╩╠=╣code╩╠()╣LR╩╠'active'╩╩╩╠=╣id╩╠'activeProject'╩╩╩╠{}╠=╣menuItem╩╠'true'╩╩╠=╣code╩╠()╣LR╩╠'billed'╩╩╩╠=╣id╩╠'billedProject'╩╩╩╩╩╩╠{}╠=╣menuItem╩╠'true'╩╩╠=╣code╩╠()╣LR╩╠'payment'╩╩╩╠=╣imagePath╩╠'mdi-credit-card-outline'╩╩╠=╣id╩╠'payment'╩╩╠=╣children╩╠[]╠{}╠=╣menuItem╩╠'true'╩╩╠=╣code╩╠()╣LR╩╠'upcoming'╩╩╩╠=╣id╩╠'upcomingPayment'╩╩╩╠{}╠=╣menuItem╩╠'true'╩╩╠=╣code╩╠()╣LR╩╠'overdue'╩╩╩╠=╣id╩╠'latePayment'╩╩╩╩╩╩╠{}╠=╣menuItem╩╠'true'╩╩╠=╣code╩╠()╣LR╩╠'calculator'╩╩╩╠=╣imagePath╩╠'mdi-calculator'╩╩╠=╣id╩╠'calculator'╩╩╩╠{}╠=╣menuItem╩╠'true'╩╩╠=╣code╩╠()╣LR╩╠'apply'╩╩╩╠=╣imagePath╩╠'mdi-clipboard-check'╩╩╠=╣id╩╠'requestOffer'╩╩╩╠{}╠=╣menuItem╩╠'true'╩╩╠=╣code╩╠()╣LR╩╠'policies'╩╩╩╠=╣imagePath╩╠'mdi-file-document-edit'╩╩╠=╣id╩╠'insurancePolicies'╩╩╩╠{}╠=╣menuItem╩╠'true'╩╩╠=╣code╩╠()╣LR╩╠'guarantees'╩╩╩╠=╣imagePath╩╠'mdi-text-box-check'╩╩╠=╣id╩╠'guaranteeList'╩╩╩╠{}╠=╣menuItem╩╠'true'╩╩╠=╣code╩╠()╣LR╩╠'proforma'╩╩╩╠=╣imagePath╩╠'mdi-text-box-outline'╩╩╠=╣id╩╠'proformas'╩╩╩╠{}╠=╣menuItem╩╠'true'╩╩╠=╣code╩╠()╣LR╩╠'babs'╩╩╩╠=╣imagePath╩╠'mdi-file-document'╩╩╠=╣id╩╠'babsagreement'╩╩╩╠{}╠=╣menuItem╩╠'true'╩╩╠=╣code╩╠()╣LR╩╠'company'╩╩╩╠=╣imagePath╩╠'mdi-domain'╩╩╠=╣id╩╠'companyDetail'╩╩╩╠{}╠=╣menuItem╩╠'true'╩╩╠=╣code╩╠()╣LR╩╠'demands'╩╩╩╠=╣imagePath╩╠'mdi-playlist-check'╩╩╠=╣children╩╠[]╠{}╠=╣menuItem╩╠'true'╩╩╠=╣code╩╠()╣LR╩╠'requests'╩╩╩╠=╣id╩╠'myDemands'╩╩╩╠{}╠=╣menuItem╩╠'true'╩╩╠=╣code╩╠()╣LR╩╠'demand'╩╩╩╠=╣id╩╠'requests'╩╩╩╩╩╩╠{}╠=╣menuItem╩╠'true'╩╩╠=╣code╩╠()╣LR╩╠'contact'╩╩╩╠=╣imagePath╩╠'mdi-map-marker-question'╩╩╠=╣id╩╠'contactUs'╩╩╩╠{}╠=╣menuItem╩╠'true'╩╩╠=╣code╩╠()╣LR╩╠'setting'╩╩╩╠=╣imagePath╩╠'mdi-cog'╩╩╠=╣id╩╠'setting'╩╩╩╩╩",
+																	"T": "prop"
+																},
+																"title": {
+																	"H": "╬''╩╩",
+																	"T": "prop"
+																},
+																"showOnlyIcon": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"autoCollapse": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"hideMenuTitle": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"activeColor": {
+																	"H": "╬'primary'╩╩",
+																	"T": "prop"
+																},
+																"width": {
+																	"H": "╬'240px'╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click:row": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.Quick.screen.toTop();\r\nvar webRedirectUrl = '';\r\nif (item.id == \"dashboard\") {\r\n    webRedirectUrl = '/static/qjsons/dashboard.qjson';\r\n}\r\nelse if (item.id == \"announcement\") {\r\n    webRedirectUrl = '/static/qjsons/announcement.qjson';\r\n}\r\nelse if (item.id == \"project\") {\r\n    webRedirectUrl = '/static/qjsons/project.qjson';\r\n}\r\nelse if (item.id == \"activeProject\") {\r\n    webRedirectUrl = '/static/qjsons/activeProject.qjson';\r\n}\r\nelse if (item.id == \"proposalProject\") {\r\n    webRedirectUrl = '/static/qjsons/proposalProject.qjson';\r\n}\r\nelse if (item.id == \"billedProject\") {\r\n    webRedirectUrl = '/static/qjsons/billedProject.qjson';\r\n}\r\nelse if (item.id == \"upcomingPayment\") {\r\n    webRedirectUrl = '/static/qjsons/upcomingPayment.qjson';\r\n}\r\nelse if (item.id == \"calculator\") {\r\n    webRedirectUrl = '/static/qjsons/calculator.qjson';\r\n}\r\nelse if (item.id == \"requestOffer\") {\r\n    webRedirectUrl = '/static/qjsons/requestOffer.qjson';\r\n}\r\nelse if (item.id == \"insurancePolicies\") {\r\n    webRedirectUrl = '/static/qjsons/insurancePolicies.qjson';\r\n}\r\nelse if (item.id == \"guaranteeList\") {\r\n    webRedirectUrl = '/static/qjsons/guaranteeList.qjson';\r\n}\r\nelse if (item.id == \"proformas\") {\r\n    webRedirectUrl = '/static/qjsons/proformas.qjson';\r\n}\r\nelse if (item.id == \"babsagreement\") {\r\n    webRedirectUrl = '/static/qjsons/babsagreement.qjson';\r\n}\r\nelse if (item.id == \"proformaEquipments\") {\r\n    webRedirectUrl = '/static/qjsons/proformaEquipments.qjson';\r\n}\r\nelse if (item.id == \"companyDetail\") {\r\n    webRedirectUrl = '/static/qjsons/companyDetail.qjson';\r\n}\r\nelse if (item.id == \"myDemands\") {\r\n    webRedirectUrl = '/static/qjsons/myDemands.qjson';\r\n}\r\nelse if (item.id == \"requests\") {\r\n    webRedirectUrl = '/static/qjsons/requests.qjson';\r\n}\r\nelse if (item.id == \"setting\") {\r\n    webRedirectUrl = '/static/qjsons/setting.qjson';\r\n}\r\nelse if (item.id == \"contactUs\") {\r\n    webRedirectUrl = '/static/qjsons/contactUs.qjson';\r\n}\r\nelse if (item.id == \"latePayment\") {\r\n    webRedirectUrl = '/static/qjsons/latePayment.qjson';\r\n}\r\ncomponents.renderingComp.QJsonPath = webRedirectUrl;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUU1lbnVEZXNrdG9wX2NsaWNrOnJvd19FLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiUU1lbnVEZXNrdG9wX2NsaWNrOnJvd19FLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQSxLQUFLLENBQUMsS0FBSyxDQUFDLE1BQU0sQ0FBQyxLQUFLLEVBQUUsQ0FBQztBQUUzQixJQUFJLGNBQWMsR0FBRyxFQUFFLENBQUM7QUFFeEIsSUFBVSxJQUFLLENBQUMsRUFBRSxJQUFJLFdBQVcsRUFBRTtJQUMvQixjQUFjLEdBQUcsZ0NBQWdDLENBQUM7Q0FDckQ7S0FDSSxJQUFVLElBQUssQ0FBQyxFQUFFLElBQUksY0FBYyxFQUFFO0lBQ3ZDLGNBQWMsR0FBRyxtQ0FBbUMsQ0FBQztDQUN4RDtLQUNJLElBQVUsSUFBSyxDQUFDLEVBQUUsSUFBSSxTQUFTLEVBQUU7SUFDbEMsY0FBYyxHQUFHLDhCQUE4QixDQUFDO0NBRW5EO0tBQ0ksSUFBVSxJQUFLLENBQUMsRUFBRSxJQUFJLGVBQWUsRUFBRTtJQUN4QyxjQUFjLEdBQUcsb0NBQW9DLENBQUM7Q0FDekQ7S0FDSSxJQUFVLElBQUssQ0FBQyxFQUFFLElBQUksaUJBQWlCLEVBQUU7SUFDMUMsY0FBYyxHQUFHLHNDQUFzQyxDQUFDO0NBQzNEO0tBQ0ksSUFBVSxJQUFLLENBQUMsRUFBRSxJQUFJLGVBQWUsRUFBRTtJQUN4QyxjQUFjLEdBQUcsb0NBQW9DLENBQUM7Q0FDekQ7S0FDSSxJQUFVLElBQUssQ0FBQyxFQUFFLElBQUksaUJBQWlCLEVBQUU7SUFDMUMsY0FBYyxHQUFHLHNDQUFzQyxDQUFDO0NBQzNEO0tBQ0ksSUFBVSxJQUFLLENBQUMsRUFBRSxJQUFJLFlBQVksRUFBRTtJQUNyQyxjQUFjLEdBQUcsaUNBQWlDLENBQUM7Q0FDdEQ7S0FDSSxJQUFVLElBQUssQ0FBQyxFQUFFLElBQUksY0FBYyxFQUFFO0lBQ3ZDLGNBQWMsR0FBRyxtQ0FBbUMsQ0FBQztDQUN4RDtLQUNJLElBQVUsSUFBSyxDQUFDLEVBQUUsSUFBSSxtQkFBbUIsRUFBRTtJQUM1QyxjQUFjLEdBQUcsd0NBQXdDLENBQUM7Q0FDN0Q7S0FDSSxJQUFVLElBQUssQ0FBQyxFQUFFLElBQUksZUFBZSxFQUFFO0lBQ3hDLGNBQWMsR0FBRyxvQ0FBb0MsQ0FBQztDQUN6RDtLQUNJLElBQVUsSUFBSyxDQUFDLEVBQUUsSUFBSSxXQUFXLEVBQUU7SUFDcEMsY0FBYyxHQUFHLGdDQUFnQyxDQUFDO0NBQ3JEO0tBQ0ksSUFBVSxJQUFLLENBQUMsRUFBRSxJQUFJLGVBQWUsRUFBRTtJQUN4QyxjQUFjLEdBQUcsb0NBQW9DLENBQUM7Q0FDekQ7S0FDSSxJQUFVLElBQUssQ0FBQyxFQUFFLElBQUksb0JBQW9CLEVBQUU7SUFDN0MsY0FBYyxHQUFHLHlDQUF5QyxDQUFDO0NBQzlEO0tBQ0ksSUFBVSxJQUFLLENBQUMsRUFBRSxJQUFJLGVBQWUsRUFBRTtJQUN4QyxjQUFjLEdBQUcsb0NBQW9DLENBQUM7Q0FDekQ7S0FDSSxJQUFVLElBQUssQ0FBQyxFQUFFLElBQUksV0FBVyxFQUFFO0lBQ3BDLGNBQWMsR0FBRyxnQ0FBZ0MsQ0FBQztDQUNyRDtLQUNJLElBQVUsSUFBSyxDQUFDLEVBQUUsSUFBSSxVQUFVLEVBQUU7SUFDbkMsY0FBYyxHQUFHLCtCQUErQixDQUFDO0NBQ3BEO0tBQ0ksSUFBVSxJQUFLLENBQUMsRUFBRSxJQUFJLFNBQVMsRUFBRTtJQUNsQyxjQUFjLEdBQUcsOEJBQThCLENBQUM7Q0FDbkQ7S0FDSSxJQUFVLElBQUssQ0FBQyxFQUFFLElBQUksV0FBVyxFQUFFO0lBQ3BDLGNBQWMsR0FBRyxnQ0FBZ0MsQ0FBQztDQUNyRDtLQUNJLElBQVUsSUFBSyxDQUFDLEVBQUUsSUFBSSxhQUFhLEVBQUU7SUFDdEMsY0FBYyxHQUFHLGtDQUFrQyxDQUFDO0NBQ3ZEO0FBR0QsVUFBVSxDQUFDLGFBQWEsQ0FBQyxTQUFTLEdBQUcsY0FBYyxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiZGVjbGFyZSB2YXIgaXRlbTpJUU1lbnVNZW51RGF0YUl0ZW1cbnF1aWNrLlF1aWNrLnNjcmVlbi50b1RvcCgpO1xyXG5cclxubGV0IHdlYlJlZGlyZWN0VXJsID0gJyc7XHJcblxyXG5pZiAoKDxhbnk+aXRlbSkuaWQgPT0gXCJkYXNoYm9hcmRcIikge1xyXG4gICAgd2ViUmVkaXJlY3RVcmwgPSAnL3N0YXRpYy9xanNvbnMvZGFzaGJvYXJkLnFqc29uJztcclxufVxyXG5lbHNlIGlmICgoPGFueT5pdGVtKS5pZCA9PSBcImFubm91bmNlbWVudFwiKSB7XHJcbiAgICB3ZWJSZWRpcmVjdFVybCA9ICcvc3RhdGljL3Fqc29ucy9hbm5vdW5jZW1lbnQucWpzb24nO1xyXG59XHJcbmVsc2UgaWYgKCg8YW55Pml0ZW0pLmlkID09IFwicHJvamVjdFwiKSB7XHJcbiAgICB3ZWJSZWRpcmVjdFVybCA9ICcvc3RhdGljL3Fqc29ucy9wcm9qZWN0LnFqc29uJztcclxuXHJcbn1cclxuZWxzZSBpZiAoKDxhbnk+aXRlbSkuaWQgPT0gXCJhY3RpdmVQcm9qZWN0XCIpIHtcclxuICAgIHdlYlJlZGlyZWN0VXJsID0gJy9zdGF0aWMvcWpzb25zL2FjdGl2ZVByb2plY3QucWpzb24nO1xyXG59XHJcbmVsc2UgaWYgKCg8YW55Pml0ZW0pLmlkID09IFwicHJvcG9zYWxQcm9qZWN0XCIpIHtcclxuICAgIHdlYlJlZGlyZWN0VXJsID0gJy9zdGF0aWMvcWpzb25zL3Byb3Bvc2FsUHJvamVjdC5xanNvbic7XHJcbn1cclxuZWxzZSBpZiAoKDxhbnk+aXRlbSkuaWQgPT0gXCJiaWxsZWRQcm9qZWN0XCIpIHtcclxuICAgIHdlYlJlZGlyZWN0VXJsID0gJy9zdGF0aWMvcWpzb25zL2JpbGxlZFByb2plY3QucWpzb24nO1xyXG59XHJcbmVsc2UgaWYgKCg8YW55Pml0ZW0pLmlkID09IFwidXBjb21pbmdQYXltZW50XCIpIHtcclxuICAgIHdlYlJlZGlyZWN0VXJsID0gJy9zdGF0aWMvcWpzb25zL3VwY29taW5nUGF5bWVudC5xanNvbic7XHJcbn1cclxuZWxzZSBpZiAoKDxhbnk+aXRlbSkuaWQgPT0gXCJjYWxjdWxhdG9yXCIpIHtcclxuICAgIHdlYlJlZGlyZWN0VXJsID0gJy9zdGF0aWMvcWpzb25zL2NhbGN1bGF0b3IucWpzb24nO1xyXG59XHJcbmVsc2UgaWYgKCg8YW55Pml0ZW0pLmlkID09IFwicmVxdWVzdE9mZmVyXCIpIHtcclxuICAgIHdlYlJlZGlyZWN0VXJsID0gJy9zdGF0aWMvcWpzb25zL3JlcXVlc3RPZmZlci5xanNvbic7XHJcbn1cclxuZWxzZSBpZiAoKDxhbnk+aXRlbSkuaWQgPT0gXCJpbnN1cmFuY2VQb2xpY2llc1wiKSB7XHJcbiAgICB3ZWJSZWRpcmVjdFVybCA9ICcvc3RhdGljL3Fqc29ucy9pbnN1cmFuY2VQb2xpY2llcy5xanNvbic7XHJcbn1cclxuZWxzZSBpZiAoKDxhbnk+aXRlbSkuaWQgPT0gXCJndWFyYW50ZWVMaXN0XCIpIHtcclxuICAgIHdlYlJlZGlyZWN0VXJsID0gJy9zdGF0aWMvcWpzb25zL2d1YXJhbnRlZUxpc3QucWpzb24nO1xyXG59XHJcbmVsc2UgaWYgKCg8YW55Pml0ZW0pLmlkID09IFwicHJvZm9ybWFzXCIpIHtcclxuICAgIHdlYlJlZGlyZWN0VXJsID0gJy9zdGF0aWMvcWpzb25zL3Byb2Zvcm1hcy5xanNvbic7XHJcbn1cclxuZWxzZSBpZiAoKDxhbnk+aXRlbSkuaWQgPT0gXCJiYWJzYWdyZWVtZW50XCIpIHtcclxuICAgIHdlYlJlZGlyZWN0VXJsID0gJy9zdGF0aWMvcWpzb25zL2JhYnNhZ3JlZW1lbnQucWpzb24nO1xyXG59XHJcbmVsc2UgaWYgKCg8YW55Pml0ZW0pLmlkID09IFwicHJvZm9ybWFFcXVpcG1lbnRzXCIpIHtcclxuICAgIHdlYlJlZGlyZWN0VXJsID0gJy9zdGF0aWMvcWpzb25zL3Byb2Zvcm1hRXF1aXBtZW50cy5xanNvbic7XHJcbn1cclxuZWxzZSBpZiAoKDxhbnk+aXRlbSkuaWQgPT0gXCJjb21wYW55RGV0YWlsXCIpIHtcclxuICAgIHdlYlJlZGlyZWN0VXJsID0gJy9zdGF0aWMvcWpzb25zL2NvbXBhbnlEZXRhaWwucWpzb24nO1xyXG59XHJcbmVsc2UgaWYgKCg8YW55Pml0ZW0pLmlkID09IFwibXlEZW1hbmRzXCIpIHtcclxuICAgIHdlYlJlZGlyZWN0VXJsID0gJy9zdGF0aWMvcWpzb25zL215RGVtYW5kcy5xanNvbic7XHJcbn1cclxuZWxzZSBpZiAoKDxhbnk+aXRlbSkuaWQgPT0gXCJyZXF1ZXN0c1wiKSB7XHJcbiAgICB3ZWJSZWRpcmVjdFVybCA9ICcvc3RhdGljL3Fqc29ucy9yZXF1ZXN0cy5xanNvbic7XHJcbn1cclxuZWxzZSBpZiAoKDxhbnk+aXRlbSkuaWQgPT0gXCJzZXR0aW5nXCIpIHtcclxuICAgIHdlYlJlZGlyZWN0VXJsID0gJy9zdGF0aWMvcWpzb25zL3NldHRpbmcucWpzb24nO1xyXG59XHJcbmVsc2UgaWYgKCg8YW55Pml0ZW0pLmlkID09IFwiY29udGFjdFVzXCIpIHtcclxuICAgIHdlYlJlZGlyZWN0VXJsID0gJy9zdGF0aWMvcWpzb25zL2NvbnRhY3RVcy5xanNvbic7XHJcbn1cclxuZWxzZSBpZiAoKDxhbnk+aXRlbSkuaWQgPT0gXCJsYXRlUGF5bWVudFwiKSB7XHJcbiAgICB3ZWJSZWRpcmVjdFVybCA9ICcvc3RhdGljL3Fqc29ucy9sYXRlUGF5bWVudC5xanNvbic7XHJcbn1cclxuXHJcblxyXG5jb21wb25lbnRzLnJlbmRlcmluZ0NvbXAuUUpzb25QYXRoID0gd2ViUmVkaXJlY3RVcmw7XHJcblxuIGV4cG9ydHt9O1xuIl19",
+																	"P": "item:IQMenuMenuDataItem",
+																	"HL": "JS"
+																}
+															},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_10622"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-navigation-drawer v-navigation-drawer--open theme--light undefined newDropBorder",
+																"layout": {
+																	"dOpt": {
+																		"xs": []
+																	},
+																	"class": ""
+																}
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_10576",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_10576"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"c:d-none"
+														],
+														"md": [
+															"d:d-flex",
+															"sp:pl-0",
+															"sp:pb-0",
+															"fd:flex-row",
+															"sp:pt-0",
+															"c:col-3"
+														],
+														"lg": [
+															"d:d-flex",
+															"sp:pl-0",
+															"sp:pb-0",
+															"fd:flex-row",
+															"sp:pt-0",
+															"d:d-flex",
+															"c:col-2"
+														]
+													},
+													"class": "d-none d-md-flex pl-md-0 pb-md-0 flex-md-row pt-md-0 col-md-3 d-lg-flex pl-lg-0 pb-lg-0 flex-lg-row pt-lg-0 d-lg-flex col-lg-2"
+												},
+												"compDomClasses": "col d-none d-md-flex pl-md-0 pb-md-0 flex-md-row pt-md-0 col-md-3 d-lg-flex pl-lg-0 pb-lg-0 flex-lg-row pt-lg-0 col-lg-2 newDropBorder"
+											}
+										},
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_32",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_88",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VCol",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_90",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "RenderingComponent",
+																							"P": {
+																								"ID": {
+																									"H": "renderingComp",
+																									"T": "prop"
+																								},
+																								"QJsonPath": {
+																									"H": "╬'/static/qjsons/webDashboard.qjson'╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_92"
+																							},
+																							"O": {
+																								"dynProps": true,
+																								"compDomClasses": "",
+																								"cType": "child"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_90"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"d:d-flex",
+																							"fd:flex-column",
+																							"sp:pr-0",
+																							"sp:pl-3",
+																							"sp:pt-0"
+																						],
+																						"md": [
+																							"d:d-flex",
+																							"fd:flex-column",
+																							"sp:pr-7",
+																							"sp:pl-10",
+																							"d:d-flex",
+																							"sp:pt-0"
+																						]
+																					},
+																					"class": "d-flex flex-column pr-0 pl-3 pt-0 d-md-flex flex-md-column pr-md-7 pl-md-10 d-md-flex pt-md-0"
+																				},
+																				"compDomClasses": "col d-flex flex-column pr-0 pl-3 pt-0 d-md-flex flex-md-column pr-md-7 pl-md-10 pt-md-0 newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_88"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "row newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_32"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"sp:pl-0",
+															"sp:pb-0",
+															"fd:flex-row",
+															"sp:pt-0"
+														]
+													},
+													"class": "d-flex pl-0 pb-0 flex-row pt-0"
+												},
+												"compDomClasses": "col d-flex pl-0 pb-0 flex-row pt-0 newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_30"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row grey lighten-5 newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_35",
+									"T": "prop"
+								},
+								"class": {
+									"H": "╬'grey lighten-5'╩╩",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "ColFooter",
+													"T": "prop"
+												},
+												"customCompClass": {
+													"H": "╬'webfooter'╩╩",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Ghost",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_1533",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_1533"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "editor-ghost-comp"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_36"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"sp:pl-0",
+															"sp:pr-0",
+															"sp:pb-0",
+															"sp:pt-0",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex pl-0 pr-0 pb-0 pt-0 flex-column"
+												},
+												"compDomClasses": "webfooter d-flex pl-0 pr-0 pb-0 pt-0 flex-column"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_35"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row grey lighten-5"
+							}
+						},
+						{
+							"T": "VFooter",
+							"P": {
+								"ID": {
+									"H": "Footer",
+									"T": "prop"
+								},
+								"class": {
+									"H": "╬'blue darken-4'╩╩",
+									"T": "class"
+								},
+								"inset": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"padless": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"tile": {
+									"H": "╬false╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VContainer",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_28",
+													"T": "prop"
+												},
+												"class": {
+													"H": "╬'container container--fluid'╩╩",
+													"T": "class"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_41",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VCol",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_43",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "BtnSocialMediaIcon1",
+																									"T": "prop"
+																								},
+																								"link": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"width": {
+																									"H": "╬050╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "VIcon",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_51",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "╬'mdi-facebook'╩╩",
+																													"T": "text"
+																												},
+																												"color": {
+																													"H": "╬'white'╩╩",
+																													"T": "prop"
+																												},
+																												"size": {
+																													"H": "╬'35'╩╩",
+																													"T": "prop"
+																												}
+																											},
+																											"E": {},
+																											"C": {},
+																											"_Editor": {
+																												"eID": "EdtrComp_51"
+																											},
+																											"O": {
+																												"cType": "slot",
+																												"compDomClasses": "v-icon notranslate mdi mdi-facebook theme--light white--text"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_52"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "v-btn v-btn--flat v-btn--text theme--light v-size--default pl-0 pr-0",
+																								"layout": {
+																									"dOpt": {
+																										"xs": [
+																											"sp:pl-0",
+																											"sp:pr-0"
+																										]
+																									},
+																									"class": "pl-0 pr-0"
+																								}
+																							}
+																						},
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "BtnSocialMediaIcon2",
+																									"T": "prop"
+																								},
+																								"link": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"width": {
+																									"H": "╬050╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "VIcon",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_4",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "╬'mdi-linkedin'╩╩",
+																													"T": "text"
+																												},
+																												"color": {
+																													"H": "╬'white'╩╩",
+																													"T": "prop"
+																												},
+																												"size": {
+																													"H": "╬'35'╩╩",
+																													"T": "prop"
+																												}
+																											},
+																											"E": {},
+																											"C": {},
+																											"_Editor": {
+																												"eID": "EdtrComp_4"
+																											},
+																											"O": {
+																												"cType": "slot",
+																												"compDomClasses": "v-icon notranslate mdi mdi-linkedin theme--light white--text"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_3"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "v-btn v-btn--flat v-btn--text theme--light v-size--default pl-0 pr-0",
+																								"layout": {
+																									"dOpt": {
+																										"xs": [
+																											"sp:pl-0",
+																											"sp:pr-0"
+																										]
+																									},
+																									"class": "pl-0 pr-0"
+																								}
+																							}
+																						},
+																						{
+																							"T": "VBtn",
+																							"P": {
+																								"ID": {
+																									"H": "BtnSocialMediaIcon3",
+																									"T": "prop"
+																								},
+																								"link": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "╬true╩╩",
+																									"T": "prop"
+																								},
+																								"width": {
+																									"H": "╬050╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "VIcon",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_2",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "╬'mdi-instagram'╩╩",
+																													"T": "text"
+																												},
+																												"color": {
+																													"H": "╬'white'╩╩",
+																													"T": "prop"
+																												},
+																												"size": {
+																													"H": "╬'35'╩╩",
+																													"T": "prop"
+																												}
+																											},
+																											"E": {},
+																											"C": {},
+																											"_Editor": {
+																												"eID": "EdtrComp_2"
+																											},
+																											"O": {
+																												"cType": "slot",
+																												"compDomClasses": "v-icon notranslate mdi mdi-instagram theme--light white--text"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_1"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "v-btn v-btn--flat v-btn--text theme--light v-size--default pl-0 pr-0",
+																								"layout": {
+																									"dOpt": {
+																										"xs": [
+																											"sp:pl-0",
+																											"sp:pr-0"
+																										]
+																									},
+																									"class": "pl-0 pr-0"
+																								}
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_43"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"d:d-flex",
+																							"fd:flex-row",
+																							"c:col-12",
+																							"a:align-center",
+																							"j:justify-center"
+																						]
+																					},
+																					"class": "d-flex flex-row col-12 align-center justify-center"
+																				},
+																				"compDomClasses": "col d-flex flex-row col-12 align-center justify-center"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_41"
+															},
+															"O": {
+																"cType": "slot",
+																"layout": {
+																	"dOpt": {
+																		"xs": []
+																	},
+																	"class": ""
+																},
+																"compDomClasses": "row"
+															}
+														},
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_48",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VCol",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_49",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_9",
+																									"T": "prop"
+																								},
+																								"tagType": {
+																									"H": "╬'span'╩╩",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "╩",
+																									"T": "prop"
+																								},
+																								"class": {
+																									"H": "╬'white--text qLabelTextAllignCenter'╩╩",
+																									"T": "class"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_9"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "q-label  white--text qLabelTextAllignCenter font-weight-regular",
+																								"layout": {
+																									"dOpt": {
+																										"xs": [
+																											"te:font-weight-regular"
+																										]
+																									},
+																									"class": "font-weight-regular"
+																								}
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_49"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"d:d-flex",
+																							"a:align-center",
+																							"j:justify-center",
+																							"c:col-12",
+																							"sp:pl-16",
+																							"sp:pr-16"
+																						]
+																					},
+																					"class": "d-flex align-center justify-center col-12 pl-16 pr-16"
+																				},
+																				"compDomClasses": "col d-flex align-center justify-center col-12 pl-16 pr-16"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_48"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "row"
+															}
+														},
+														{
+															"T": "VDivider",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_11",
+																	"T": "prop"
+																},
+																"inset": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"vertical": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"class": {
+																	"H": "╬'white'╩╩",
+																	"T": "class"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_11"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-divider theme--light white"
+															}
+														},
+														{
+															"T": "VRow",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_18",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VCol",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_20",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_21",
+																									"T": "prop"
+																								},
+																								"tagType": {
+																									"H": "╬'span'╩╩",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "╬'2021  -  Vuetify '╩╩",
+																									"T": "prop"
+																								},
+																								"class": {
+																									"H": "╬'white--text'╩╩",
+																									"T": "class"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_21"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "q-label  white--text"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_20"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"layout": {
+																					"dOpt": {
+																						"xs": [
+																							"d:d-flex",
+																							"fd:flex-column",
+																							"a:align-center",
+																							"sp:pt-3"
+																						]
+																					},
+																					"class": "d-flex flex-column align-center pt-3"
+																				},
+																				"compDomClasses": "col d-flex flex-column align-center pt-3"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_18"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "row"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_28"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"sp:ml-0",
+															"sp:mr-0",
+															"sp:pr-0",
+															"sp:pl-0",
+															"sp:pb-0",
+															"sp:mb-0"
+														]
+													},
+													"class": "ml-0 mr-0 pr-0 pl-0 pb-0 mb-0"
+												},
+												"compDomClasses": "container container container--fluid ml-0 mr-0 pr-0 pl-0 pb-0 mb-0"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_39"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "v-footer v-sheet theme--light v-footer--absolute v-footer--padless v-footer--inset blue darken-4 pl-0 pr-0 ╬'blue darken-4'╩╩",
+								"layout": {
+									"dOpt": {
+										"xs": [
+											"sp:pl-0",
+											"sp:pr-0"
+										]
+									},
+									"class": "pl-0 pr-0"
+								}
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_17"
+			},
+			"O": {
+				"cType": "slot",
+				"layout": {
+					"dOpt": {
+						"xs": [
+							"sp:pt-0",
+							"sp:pb-0",
+							"sp:mt-0",
+							"sp:mb-0"
+						]
+					},
+					"class": "pt-0 pb-0 mt-0 mb-0"
+				},
+				"compDomClasses": "container container--fluid pt-0 pb-0 mt-0 mb-0 newDropBorder"
+			}
+		}
+	],
+	"lrids": {
+		"tr-TR": {
+			"home": "'Anasayfa'",
+			"ann": "'Duyurular'",
+			"pro": "'Projelerim'",
+			"tender": "'Teklif Aşamasındaki Projeler'",
+			"active": "'Aktif Projeler'",
+			"billed": "'Faturalanan Projeler'",
+			"upcoming": "'Yaklaşan Ödemeler'",
+			"overdue": "'Geciken Ödemeler'",
+			"calculator": "'Hesaplama Araçları'",
+			"apply": "'Hemen Başvur'",
+			"policies": "'Poliçelerim'",
+			"guarantees": "'Teminatlarım'",
+			"proforma": "'Proformalarım'",
+			"company": "'Firma Bilgilerim'",
+			"demands": "'Taleplerim'",
+			"setting": "'Ayarlar'",
+			"payment": "'Ödemelerim'",
+			"babs": "'BA/BS Mutabakat'",
+			"demand": "'Talep İzleme'",
+			"requests": "'Öneri/Talep/Şikayet'",
+			"contact": "'İletişim Bize Ulaşın'"
+		},
+		"en-US": {
+			"home": "'Homepage'",
+			"ann": "'Announcement'",
+			"pro": "'My Projects'",
+			"tender": "'Projects in Proposal Stage'",
+			"active": "'Projects in Active Stage'",
+			"billed": "'Projects in Billing Stage'",
+			"upcoming": "'Upcoming Payments'",
+			"overdue": "'Overdue Payments'",
+			"calculator": "'Calculation Tools'",
+			"apply": "'Apply Now'",
+			"policies": "'My Policies'",
+			"guarantees": "'My Guarantees'",
+			"proforma": "'My Proforma'",
+			"company": "'My Company Information'",
+			"demands": "'My Demands'",
+			"setting": "'Setting'",
+			"payment": "'My Payments'",
+			"babs": "'BA/BS Reconciliation'",
+			"demand": "'Demand Monitoring'",
+			"requests": "'Suggestion/Request/Complaint'",
+			"contact": "'Contact(Contact Us)'"
+		}
+	},
+	"clrids": {
+		"tr-TR": {
+			"home": "╬'Anasayfa'╩╩",
+			"ann": "╬'Duyurular'╩╩",
+			"pro": "╬'Projelerim'╩╩",
+			"tender": "╬'Teklif Aşamasındaki Projeler'╩╩",
+			"active": "╬'Aktif Projeler'╩╩",
+			"billed": "╬'Faturalanan Projeler'╩╩",
+			"upcoming": "╬'Yaklaşan Ödemeler'╩╩",
+			"overdue": "╬'Geciken Ödemeler'╩╩",
+			"calculator": "╬'Hesaplama Araçları'╩╩",
+			"apply": "╬'Hemen Başvur'╩╩",
+			"policies": "╬'Poliçelerim'╩╩",
+			"guarantees": "╬'Teminatlarım'╩╩",
+			"proforma": "╬'Proformalarım'╩╩",
+			"company": "╬'Firma Bilgilerim'╩╩",
+			"demands": "╬'Taleplerim'╩╩",
+			"setting": "╬'Ayarlar'╩╩",
+			"payment": "╬'Ödemelerim'╩╩",
+			"babs": "╬'BA/BS Mutabakat'╩╩",
+			"demand": "╬'Talep İzleme'╩╩",
+			"requests": "╬'Öneri/Talep/Şikayet'╩╩",
+			"contact": "╬'İletişim Bize Ulaşın'╩╩"
+		},
+		"en-US": {
+			"home": "╬'Homepage'╩╩",
+			"ann": "╬'Announcement'╩╩",
+			"pro": "╬'My Projects'╩╩",
+			"tender": "╬'Projects in Proposal Stage'╩╩",
+			"active": "╬'Projects in Active Stage'╩╩",
+			"billed": "╬'Projects in Billing Stage'╩╩",
+			"upcoming": "╬'Upcoming Payments'╩╩",
+			"overdue": "╬'Overdue Payments'╩╩",
+			"calculator": "╬'Calculation Tools'╩╩",
+			"apply": "╬'Apply Now'╩╩",
+			"policies": "╬'My Policies'╩╩",
+			"guarantees": "╬'My Guarantees'╩╩",
+			"proforma": "╬'My Proforma'╩╩",
+			"company": "╬'My Company Information'╩╩",
+			"demands": "╬'My Demands'╩╩",
+			"setting": "╬'Setting'╩╩",
+			"payment": "╬'My Payments'╩╩",
+			"babs": "╬'BA/BS Reconciliation'╩╩",
+			"demand": "╬'Demand Monitoring'╩╩",
+			"requests": "╬'Suggestion/Request/Complaint'╩╩",
+			"contact": "╬'Contact(Contact Us)'╩╩"
+		}
+	},
+	"description": {}
+};
+export default pjson

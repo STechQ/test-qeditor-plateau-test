@@ -1,0 +1,754 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_5",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container container--fluid'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_7",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VDataTable",
+															"P": {
+																"ID": {
+																	"H": "dataTable",
+																	"T": "prop"
+																},
+																"footerProps": {
+																	"H": "{showFirstLastPage = true,\nfirstIcon = 'mdi-arrow-collapse-left',\nlastIcon = 'mdi-arrow-collapse-right',\nprevIcon = 'mdi-minus',\nnextIcon = 'mdi-plus'}",
+																	"T": "prop"
+																},
+																"headers": {
+																	"H": "[{ text = 'Dessert (100g serving)', align= 'start', sortable= false, value= 'name'},\n{ text = 'Calories', value= 'calories', sortable = true },\n{ text = 'Fat (g)', value= 'fat' },\n{ text = 'Carbs (g)', value= 'carbs' },\n{ text = 'Protein (g)', value= 'protein' },\n{ text = 'Iron (%)', value= 'iron' }]",
+																	"T": "prop"
+																},
+																"items": {
+																	"H": "[{name = 'Frozens Yogurt', calories = 159, fat = '6.0', carbs = 24, protein = '4.0', iron = '1%'},\n{name = 'Ice cream sandwich', calories = 237, fat = '9.0', carbs = 37, protein = '4.3', iron = '1%'},\n{name = 'Eclair', calories = 262, fat = '16.0', carbs = 23, protein = '6.0', iron = '7%'},\n{name = 'Cupcake', calories = 305, fat = '3.7', carbs = 67, protein = '4.3', iron = '8%'},\n{name = 'Gingerbread',calories = 356, fat = '16.0', carbs = 49, protein = '3.9', iron = '16%'},\n{name = 'Jelly bean', calories = 375,  fat = '0.0', carbs = 94, protein = '0.0', iron = '0%'},\n{name = 'Lollipop', calories = 392, fat = '0.2', carbs = 98, protein = '0.0', iron = '2 %'},\n{name = 'Honeycomb', calories = 408, fat = '3.2', carbs = 87, protein = '6.5', iron = '45%'},\n{name = 'Donut', calories = 452, fat = '25.0', carbs = 51, protein = '4.9', iron = '22%'},\n{name = 'KitKat', calories = 518, fat = '26.0', carbs = 65, protein = '7', iron=  '6 %'}]",
+																	"T": "prop"
+																},
+																"itemsPerPage": {
+																	"H": "5",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_12"
+															},
+															"O": {
+																"cType": "scopedSlot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_10",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_10"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_7"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_15",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_22",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "'primary'",
+																	"T": "prop"
+																},
+																"depressed": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"elevation": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"height": {
+																	"H": "'40px'",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "\r\nquick.Quick.exportToXlsx({ fileName: 'test', items: components.dataTable.items, headers: components.dataTable.headers });\r\n\r\n\r\n/*\r\nOR\r\nlet headers = [{ value: 'name', text: 'Name' }, { value: 'fat', text: 'Fat (g)' }];\r\nquick.Quick.exportToXlsx({ fileName: 'test', items: components.dataTable.items, headers: headers });\r\n\r\n*/\r\n\r\n\r\n",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "TS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_27",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'Table exportToXlsx'",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_27"
+																			},
+																			"O": {
+																				"cType": "child"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_22"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														},
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_64",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "'primary'",
+																	"T": "prop"
+																},
+																"depressed": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"elevation": {
+																	"H": "0",
+																	"T": "prop"
+																},
+																"height": {
+																	"H": "'40px'",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "\r\n//Export object sub member variables to excel \r\n\r\nlet items: object[] = [\r\n    { fat: { a1: { a: \"aa1\" } }, bat: \"b1\" },\r\n    { fat: { a1: { a: \"aa1\" } }, bat: \"b1\" },\r\n    { fat: { a1: { a: \"aa1\" } }, bat: \"b1\" },\r\n    { fat: { a1: { a: \"aa1\" } }, bat: \"b1\" }\r\n]\r\nlet headers: object[] = [{ value: 'fat.a1.a', text: 'Fat (g)' }, { value: 'bat', text: 'bat (g)' }];\r\n\r\ndebugger;\r\nquick.Quick.exportToXlsx({ fileName: \"deneme\", items, headers });\r\n",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "TS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_65",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'Export object sub member variables to excel'",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_65"
+																			},
+																			"O": {
+																				"cType": "child"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_64"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_20",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_20"
+											},
+											"O": {
+												"cType": "slot"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_15"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_5"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_5",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container container--fluid'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_7",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VDataTable",
+															"P": {
+																"ID": {
+																	"H": "dataTable",
+																	"T": "prop"
+																},
+																"footerProps": {
+																	"H": "╬{}╠=╣showFirstLastPage╩╠true╩╩╠=╣firstIcon╩╠'mdi-arrow-collapse-left'╩╩╠=╣lastIcon╩╠'mdi-arrow-collapse-right'╩╩╠=╣prevIcon╩╠'mdi-minus'╩╩╠=╣nextIcon╩╠'mdi-plus'╩╩╩╩",
+																	"T": "prop"
+																},
+																"headers": {
+																	"H": "╬[]╠{}╠=╣text╩╠'Dessert (100g serving)'╩╩╠=╣align╩╠'start'╩╩╠=╣sortable╩╠false╩╩╠=╣value╩╠'name'╩╩╩╠{}╠=╣text╩╠'Calories'╩╩╠=╣value╩╠'calories'╩╩╠=╣sortable╩╠true╩╩╩╠{}╠=╣text╩╠'Fat (g)'╩╩╠=╣value╩╠'fat'╩╩╩╠{}╠=╣text╩╠'Carbs (g)'╩╩╠=╣value╩╠'carbs'╩╩╩╠{}╠=╣text╩╠'Protein (g)'╩╩╠=╣value╩╠'protein'╩╩╩╠{}╠=╣text╩╠'Iron (%)'╩╩╠=╣value╩╠'iron'╩╩╩╩╩",
+																	"T": "prop"
+																},
+																"items": {
+																	"H": "╬[]╠{}╠=╣name╩╠'Frozens Yogurt'╩╩╠=╣calories╩╠159╩╩╠=╣fat╩╠'6.0'╩╩╠=╣carbs╩╠24╩╩╠=╣protein╩╠'4.0'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Ice cream sandwich'╩╩╠=╣calories╩╠237╩╩╠=╣fat╩╠'9.0'╩╩╠=╣carbs╩╠37╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Eclair'╩╩╠=╣calories╩╠262╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠23╩╩╠=╣protein╩╠'6.0'╩╩╠=╣iron╩╠'7%'╩╩╩╠{}╠=╣name╩╠'Cupcake'╩╩╠=╣calories╩╠305╩╩╠=╣fat╩╠'3.7'╩╩╠=╣carbs╩╠67╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'8%'╩╩╩╠{}╠=╣name╩╠'Gingerbread'╩╩╠=╣calories╩╠356╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠49╩╩╠=╣protein╩╠'3.9'╩╩╠=╣iron╩╠'16%'╩╩╩╠{}╠=╣name╩╠'Jelly bean'╩╩╠=╣calories╩╠375╩╩╠=╣fat╩╠'0.0'╩╩╠=╣carbs╩╠94╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'0%'╩╩╩╠{}╠=╣name╩╠'Lollipop'╩╩╠=╣calories╩╠392╩╩╠=╣fat╩╠'0.2'╩╩╠=╣carbs╩╠98╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'2 %'╩╩╩╠{}╠=╣name╩╠'Honeycomb'╩╩╠=╣calories╩╠408╩╩╠=╣fat╩╠'3.2'╩╩╠=╣carbs╩╠87╩╩╠=╣protein╩╠'6.5'╩╩╠=╣iron╩╠'45%'╩╩╩╠{}╠=╣name╩╠'Donut'╩╩╠=╣calories╩╠452╩╩╠=╣fat╩╠'25.0'╩╩╠=╣carbs╩╠51╩╩╠=╣protein╩╠'4.9'╩╩╠=╣iron╩╠'22%'╩╩╩╠{}╠=╣name╩╠'KitKat'╩╩╠=╣calories╩╠518╩╩╠=╣fat╩╠'26.0'╩╩╠=╣carbs╩╠65╩╩╠=╣protein╩╠'7'╩╩╠=╣iron╩╠'6 %'╩╩╩╩╩",
+																	"T": "prop"
+																},
+																"itemsPerPage": {
+																	"H": "╬5╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_12"
+															},
+															"O": {
+																"cType": "scopedSlot",
+																"compDomClasses": "v-data-table v-data-table--has-bottom theme--light newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_10",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_10"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_7"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_15",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_22",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "╬'primary'╩╩",
+																	"T": "prop"
+																},
+																"depressed": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"elevation": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"height": {
+																	"H": "╬'40px'╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.Quick.exportToXlsx({ fileName: 'test', items: components.dataTable.items, headers: components.dataTable.headers });\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfMjJfY2xpY2tfRS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkVkdHJDb21wXzIyX2NsaWNrX0UudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUVBLEtBQUssQ0FBQyxLQUFLLENBQUMsWUFBWSxDQUFDLEVBQUUsUUFBUSxFQUFFLE1BQU0sRUFBRSxLQUFLLEVBQUUsVUFBVSxDQUFDLFNBQVMsQ0FBQyxLQUFLLEVBQUUsT0FBTyxFQUFFLFVBQVUsQ0FBQyxTQUFTLENBQUMsT0FBTyxFQUFFLENBQUMsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImRlY2xhcmUgdmFyIG1vdXNlRXZlbnQ6dW5rbm93biB8IHVuZGVmaW5lZFxuXHJcbnF1aWNrLlF1aWNrLmV4cG9ydFRvWGxzeCh7IGZpbGVOYW1lOiAndGVzdCcsIGl0ZW1zOiBjb21wb25lbnRzLmRhdGFUYWJsZS5pdGVtcywgaGVhZGVyczogY29tcG9uZW50cy5kYXRhVGFibGUuaGVhZGVycyB9KTtcclxuXHJcblxyXG4vKlxyXG5PUlxyXG5sZXQgaGVhZGVycyA9IFt7IHZhbHVlOiAnbmFtZScsIHRleHQ6ICdOYW1lJyB9LCB7IHZhbHVlOiAnZmF0JywgdGV4dDogJ0ZhdCAoZyknIH1dO1xyXG5xdWljay5RdWljay5leHBvcnRUb1hsc3goeyBmaWxlTmFtZTogJ3Rlc3QnLCBpdGVtczogY29tcG9uZW50cy5kYXRhVGFibGUuaXRlbXMsIGhlYWRlcnM6IGhlYWRlcnMgfSk7XHJcblxyXG4qL1xyXG5cclxuXHJcblxuIGV4cG9ydHt9O1xuIl19",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "JS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_27",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'Table exportToXlsx'╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_27"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "q-label newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_22"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-btn v-btn--depressed theme--light elevation-0 v-size--default primary newDropBorder"
+															}
+														},
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_64",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "╬'primary'╩╩",
+																	"T": "prop"
+																},
+																"depressed": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"elevation": {
+																	"H": "╬0╩╩",
+																	"T": "prop"
+																},
+																"height": {
+																	"H": "╬'40px'╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\n//Export object sub member variables to excel \r\nvar items = [\r\n    { fat: { a1: { a: \"aa1\" } }, bat: \"b1\" },\r\n    { fat: { a1: { a: \"aa1\" } }, bat: \"b1\" },\r\n    { fat: { a1: { a: \"aa1\" } }, bat: \"b1\" },\r\n    { fat: { a1: { a: \"aa1\" } }, bat: \"b1\" }\r\n];\r\nvar headers = [{ value: 'fat.a1.a', text: 'Fat (g)' }, { value: 'bat', text: 'bat (g)' }];\r\ndebugger;\r\nquick.Quick.exportToXlsx({ fileName: \"deneme\", items: items, headers: headers });\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfNjRfY2xpY2tfRS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkVkdHJDb21wXzY0X2NsaWNrX0UudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUVBLDhDQUE4QztBQUU5QyxJQUFJLEtBQUssR0FBYTtJQUNsQixFQUFFLEdBQUcsRUFBRSxFQUFFLEVBQUUsRUFBRSxFQUFFLENBQUMsRUFBRSxLQUFLLEVBQUUsRUFBRSxFQUFFLEdBQUcsRUFBRSxJQUFJLEVBQUU7SUFDeEMsRUFBRSxHQUFHLEVBQUUsRUFBRSxFQUFFLEVBQUUsRUFBRSxDQUFDLEVBQUUsS0FBSyxFQUFFLEVBQUUsRUFBRSxHQUFHLEVBQUUsSUFBSSxFQUFFO0lBQ3hDLEVBQUUsR0FBRyxFQUFFLEVBQUUsRUFBRSxFQUFFLEVBQUUsQ0FBQyxFQUFFLEtBQUssRUFBRSxFQUFFLEVBQUUsR0FBRyxFQUFFLElBQUksRUFBRTtJQUN4QyxFQUFFLEdBQUcsRUFBRSxFQUFFLEVBQUUsRUFBRSxFQUFFLENBQUMsRUFBRSxLQUFLLEVBQUUsRUFBRSxFQUFFLEdBQUcsRUFBRSxJQUFJLEVBQUU7Q0FDM0MsQ0FBQTtBQUNELElBQUksT0FBTyxHQUFhLENBQUMsRUFBRSxLQUFLLEVBQUUsVUFBVSxFQUFFLElBQUksRUFBRSxTQUFTLEVBQUUsRUFBRSxFQUFFLEtBQUssRUFBRSxLQUFLLEVBQUUsSUFBSSxFQUFFLFNBQVMsRUFBRSxDQUFDLENBQUM7QUFFcEcsUUFBUSxDQUFDO0FBQ1QsS0FBSyxDQUFDLEtBQUssQ0FBQyxZQUFZLENBQUMsRUFBRSxRQUFRLEVBQUUsUUFBUSxFQUFFLEtBQUssT0FBQSxFQUFFLE9BQU8sU0FBQSxFQUFFLENBQUMsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbImRlY2xhcmUgdmFyIG1vdXNlRXZlbnQ6dW5rbm93biB8IHVuZGVmaW5lZFxuXHJcbi8vRXhwb3J0IG9iamVjdCBzdWIgbWVtYmVyIHZhcmlhYmxlcyB0byBleGNlbCBcclxuXHJcbmxldCBpdGVtczogb2JqZWN0W10gPSBbXHJcbiAgICB7IGZhdDogeyBhMTogeyBhOiBcImFhMVwiIH0gfSwgYmF0OiBcImIxXCIgfSxcclxuICAgIHsgZmF0OiB7IGExOiB7IGE6IFwiYWExXCIgfSB9LCBiYXQ6IFwiYjFcIiB9LFxyXG4gICAgeyBmYXQ6IHsgYTE6IHsgYTogXCJhYTFcIiB9IH0sIGJhdDogXCJiMVwiIH0sXHJcbiAgICB7IGZhdDogeyBhMTogeyBhOiBcImFhMVwiIH0gfSwgYmF0OiBcImIxXCIgfVxyXG5dXHJcbmxldCBoZWFkZXJzOiBvYmplY3RbXSA9IFt7IHZhbHVlOiAnZmF0LmExLmEnLCB0ZXh0OiAnRmF0IChnKScgfSwgeyB2YWx1ZTogJ2JhdCcsIHRleHQ6ICdiYXQgKGcpJyB9XTtcclxuXHJcbmRlYnVnZ2VyO1xyXG5xdWljay5RdWljay5leHBvcnRUb1hsc3goeyBmaWxlTmFtZTogXCJkZW5lbWVcIiwgaXRlbXMsIGhlYWRlcnMgfSk7XHJcblxuIGV4cG9ydHt9O1xuIl19",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "JS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_65",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'Export object sub member variables to excel'╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_65"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "q-label newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_64"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-btn v-btn--depressed theme--light elevation-0 v-size--default primary newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_20",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_20"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_15"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_5"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container container--fluid newDropBorder"
+			}
+		}
+	],
+	"lrids": {
+		"tr-TR": {
+			"code": "'Kodu'",
+			"name": "'Adı'",
+			"endDate": "'Bitiş Tarihi'",
+			"update": "'Güncelle'",
+			"save": "'Kaydet'",
+			"delete": "'Sil'",
+			"close": "'Kapat'",
+			"yes": "'Evet'",
+			"no": "'Hayır'",
+			"detailDialogTitleLabel": "'Görev Özellikleri'",
+			"costCenter": "'Masraf Merkezi'",
+			"searchDetail": "'Detaylı Arama'",
+			"clear": "'Temizle'",
+			"query": "'Sorgula'",
+			"closeSearchDetail": "'Detaylı Aramayı Kapat'",
+			"add": "'Görev Ekle'",
+			"jobType": "'Görev Tipi'",
+			"startDate": "'Başlangıç Tarihi'",
+			"edit": "'Düzelt'",
+			"createHistory": "'Tarihçe Oluştur'",
+			"addDialogTitleLabel": "'Görev Ekleme'",
+			"updateDialogTitleLabel": "'Görev Güncelleme'",
+			"deleteDataLabel": "'Kaydı silmek istediğinizden emin misiniz ?'",
+			"organizationStatus": "'Organizasyonda Görünsün'",
+			"checkInput": "'Boş geçilemez.'",
+			"historicalUpdateLabel": "'Yapmış olduğunuz işlem için tarihçeli kayıt oluşturmak istiyor musunuz ?'",
+			"dependJob": "'Bağlı Olduğu Görev'",
+			"notFindMatchData": "'Bu kriterlere uygun görev bulunamamıştır. Yeni görev tanımlamak ister misiniz ?'",
+			"noDataText": "'Kayıt yok.'",
+			"jobList": "'Görev Listesi'",
+			"jobHistoryList": "'Görev Tarihçesi'"
+		},
+		"en-US": {
+			"code": "'Code'",
+			"name": "'Name'",
+			"endDate": "'End Date'",
+			"update": "'Update'",
+			"save": "'Save'",
+			"delete": "'Delete'",
+			"close": "'Close'",
+			"yes": "'Yes'",
+			"no": "'No'",
+			"detailDialogTitleLabel": "'Detail Job'",
+			"costCenter": "'Cost Center'",
+			"searchDetail": "'Search Detail '",
+			"clear": "'Clear'",
+			"query": "'Query'",
+			"closeSearchDetail": "'Close Detail Search'",
+			"add": "'Add Job'",
+			"jobType": "'Job Type'",
+			"startDate": "'Start Date'",
+			"edit": "'Edit'",
+			"createHistory": "'Create History'",
+			"addDialogTitleLabel": "'Add Job'",
+			"updateDialogTitleLabel": "'Update Job'",
+			"deleteDataLabel": "'Are you sure you want to delete the data?'",
+			"organizationStatus": "'Organization Status'",
+			"checkInput": "'Cannot be left blank'",
+			"historicalUpdateLabel": "'Dou you want to historical update?'",
+			"dependJob": "'Depend Job'",
+			"notFindMatchData": "'Info'",
+			"noDataText": "'No Data Available'",
+			"jobList": "'Job List'",
+			"jobHistoryList": "'Job History'"
+		}
+	},
+	"clrids": {
+		"tr-TR": {
+			"code": "╬'Kodu'╩╩",
+			"name": "╬'Adı'╩╩",
+			"endDate": "╬'Bitiş Tarihi'╩╩",
+			"update": "╬'Güncelle'╩╩",
+			"save": "╬'Kaydet'╩╩",
+			"delete": "╬'Sil'╩╩",
+			"close": "╬'Kapat'╩╩",
+			"yes": "╬'Evet'╩╩",
+			"no": "╬'Hayır'╩╩",
+			"detailDialogTitleLabel": "╬'Görev Özellikleri'╩╩",
+			"costCenter": "╬'Masraf Merkezi'╩╩",
+			"searchDetail": "╬'Detaylı Arama'╩╩",
+			"clear": "╬'Temizle'╩╩",
+			"query": "╬'Sorgula'╩╩",
+			"closeSearchDetail": "╬'Detaylı Aramayı Kapat'╩╩",
+			"add": "╬'Görev Ekle'╩╩",
+			"jobType": "╬'Görev Tipi'╩╩",
+			"startDate": "╬'Başlangıç Tarihi'╩╩",
+			"edit": "╬'Düzelt'╩╩",
+			"createHistory": "╬'Tarihçe Oluştur'╩╩",
+			"addDialogTitleLabel": "╬'Görev Ekleme'╩╩",
+			"updateDialogTitleLabel": "╬'Görev Güncelleme'╩╩",
+			"deleteDataLabel": "╬'Kaydı silmek istediğinizden emin misiniz ?'╩╩",
+			"organizationStatus": "╬'Organizasyonda Görünsün'╩╩",
+			"checkInput": "╬'Boş geçilemez.'╩╩",
+			"historicalUpdateLabel": "╬'Yapmış olduğunuz işlem için tarihçeli kayıt oluşturmak istiyor musunuz ?'╩╩",
+			"dependJob": "╬'Bağlı Olduğu Görev'╩╩",
+			"notFindMatchData": "╬'Bu kriterlere uygun görev bulunamamıştır. Yeni görev tanımlamak ister misiniz ?'╩╩",
+			"noDataText": "╬'Kayıt yok.'╩╩",
+			"jobList": "╬'Görev Listesi'╩╩",
+			"jobHistoryList": "╬'Görev Tarihçesi'╩╩"
+		},
+		"en-US": {
+			"code": "╬'Code'╩╩",
+			"name": "╬'Name'╩╩",
+			"endDate": "╬'End Date'╩╩",
+			"update": "╬'Update'╩╩",
+			"save": "╬'Save'╩╩",
+			"delete": "╬'Delete'╩╩",
+			"close": "╬'Close'╩╩",
+			"yes": "╬'Yes'╩╩",
+			"no": "╬'No'╩╩",
+			"detailDialogTitleLabel": "╬'Detail Job'╩╩",
+			"costCenter": "╬'Cost Center'╩╩",
+			"searchDetail": "╬'Search Detail '╩╩",
+			"clear": "╬'Clear'╩╩",
+			"query": "╬'Query'╩╩",
+			"closeSearchDetail": "╬'Close Detail Search'╩╩",
+			"add": "╬'Add Job'╩╩",
+			"jobType": "╬'Job Type'╩╩",
+			"startDate": "╬'Start Date'╩╩",
+			"edit": "╬'Edit'╩╩",
+			"createHistory": "╬'Create History'╩╩",
+			"addDialogTitleLabel": "╬'Add Job'╩╩",
+			"updateDialogTitleLabel": "╬'Update Job'╩╩",
+			"deleteDataLabel": "╬'Are you sure you want to delete the data?'╩╩",
+			"organizationStatus": "╬'Organization Status'╩╩",
+			"checkInput": "╬'Cannot be left blank'╩╩",
+			"historicalUpdateLabel": "╬'Dou you want to historical update?'╩╩",
+			"dependJob": "╬'Depend Job'╩╩",
+			"notFindMatchData": "╬'Info'╩╩",
+			"noDataText": "╬'No Data Available'╩╩",
+			"jobList": "╬'Job List'╩╩",
+			"jobHistoryList": "╬'Job History'╩╩"
+		}
+	},
+	"description": {}
+};
+export default pjson
