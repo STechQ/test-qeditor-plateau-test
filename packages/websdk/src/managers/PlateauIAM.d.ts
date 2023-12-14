@@ -28,6 +28,7 @@ export declare class PlateauIAM implements IPlateauIAM {
     private getKeyCloakOptions;
     private getLoginOptions;
     logout(): void;
+    private getRedirectURL;
     private getLogoutURLParams;
     getToken: () => string | undefined;
     getInfo: () => object | undefined;
