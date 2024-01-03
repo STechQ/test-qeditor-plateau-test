@@ -1,10 +1,10 @@
 import { IWebSDK } from "../../../../common/shrimp/interfaces/quick/IWebSDK";
 export declare class LivePreviewManager {
-    private frameCommunication;
+    private frameCommunication?;
     private livePreviewID;
     private getQjsonUrlPrefix;
-    constructor(targetWindow: Window);
-    isItLivePreview(): Promise<string | undefined>;
+    constructor();
+    isItLivePreview(): Promise<string | false>;
     getLivePreviewSettings(): Promise<any | undefined>;
     sendSwMessage(packId: any): Promise<{
         type: "lpServiceWorkerRequestResponse";
