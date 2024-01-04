@@ -14,6 +14,7 @@ export declare class ChartComponentManager {
     };
     private createInnerChart;
     private chartOptions;
+    private chartYPropSetter;
     private chartXPropSetter;
     private chartXTimePropSetter;
     private chartXTimeDisplayFormatsPropSetter;
