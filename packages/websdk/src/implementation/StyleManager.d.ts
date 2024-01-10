@@ -19,6 +19,7 @@ export declare class StyleManager implements IStyleManager {
         breakPoint?: string | undefined;
     }) => void;
     static matchComponentStyles: (compCollection: IComponentCollection) => void;
+    static convertUnit(value: string, percentage: number): number;
     static getStyleNumberValue(value: any): {
         value: any;
         suffix: any;
