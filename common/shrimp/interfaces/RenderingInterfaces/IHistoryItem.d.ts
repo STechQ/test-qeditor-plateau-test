@@ -2,6 +2,7 @@ import { IComponentCollection } from "../ComponentInterfaces/IComponentCollectio
 import { IRenderingContext } from "./IRenderingContext";
 import { IRenderingManager } from "./IRenderingManager";
 export interface IHistoryItem {
+    GetControlWithTypeName(typeName: string): IComponentCollection | null;
     additionals?: any;
     GetRenderingContext(): IRenderingContext;
     GetRenderingManager(): IRenderingManager | undefined;

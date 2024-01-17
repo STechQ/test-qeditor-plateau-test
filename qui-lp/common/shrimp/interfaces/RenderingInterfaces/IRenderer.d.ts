@@ -9,6 +9,7 @@ import { INavigationDemand } from "../quick/INavigationDemand";
 import { ISiteSettings } from "../quick/ISiteSettings";
 import { DisplayHookCb, IDory, PartialDisplayHookCb } from "./IDory";
 import { IDoryJr } from "./IDoryJr";
+import { IHistoryItem } from "./IHistoryItem";
 import { IPageCompletedCb, IPageRenderStartedCb } from "./ILifeCycleCb";
 export interface IRendererChild {
     Render({ qjson, props, events, compParentInst, storeItems, pageId, pageName }: {
@@ -27,6 +28,7 @@ export interface IDoryRendererChild extends IRendererChild {
     readonly DoryJrInst: IDoryJr;
 }
 export interface IRenderer {
+    GetCurrentHistoryItem(): IHistoryItem | null | undefined;
     PageCompletedHook: Hook<IPageCompletedCb>;
     PageRenderStartedHook: Hook<IPageRenderStartedCb>;
     readonly BeforeRenderStartHook: Hook<() => void>;

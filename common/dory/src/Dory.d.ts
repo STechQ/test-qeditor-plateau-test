@@ -66,6 +66,7 @@ export declare class Dory implements IDory {
         pageId?: string;
         pageName?: string;
     }): Promise<void>;
+    GetCurrentHistoryItem(): HistoryItem | null | undefined;
     private PageCompleted;
     private innerRender;
     private resetStyle;

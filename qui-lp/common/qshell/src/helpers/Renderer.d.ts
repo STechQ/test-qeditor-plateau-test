@@ -41,6 +41,7 @@ export declare class Renderer implements IRenderer {
     SetPartialDisplayCallBack(callBackFunc: PartialDisplayHookCb): void;
     GetNavigationDemand(pageId: string): INavigationDemand | null;
     GoHistory(navigationDemand: INavigationDemand): void;
+    GetCurrentHistoryItem(): import("../../../shrimp/interfaces/RenderingInterfaces/IHistoryItem").IHistoryItem | null | undefined;
     Back(): void;
     Forward(): void;
     Clear(): void;

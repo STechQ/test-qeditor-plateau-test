@@ -28,6 +28,7 @@ export interface IGoHistoryOptions {
     navigationDemand?: INavigationDemand;
 }
 export interface IDory extends IContextItem {
+    GetCurrentHistoryItem(): IHistoryItem | null | undefined;
     readonly PartialDisplayHook: Hook<PartialDisplayHookCb>;
     readonly DisplayHook: Hook<DisplayHookCb>;
     readonly network: INetwork;
