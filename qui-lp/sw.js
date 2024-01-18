@@ -2129,7 +2129,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 var node_buffer_1 = __webpack_require__(/*! node:buffer */ "../../node_modules/buffer/index.js");
 ;
-var binaryFileTypes = ["gif", "png", "jpeg", "jpg", "svg", "woff", "woff2", "ttf"];
+var binaryFileTypes = ["gif", "png", "jpeg", "jpg", "svg", "woff", "woff2", "ttf", "otf"];
 var swTimeout = 15000;
 var syncResolved = false;
 new Promise(function (res) { return res(); }).then(function () { return syncResolved = true; });
@@ -2225,6 +2225,7 @@ var run = function (event) { return __awaiter(void 0, void 0, void 0, function (
                     case "woff2": return [3 /*break*/, 3];
                     case "woff": return [3 /*break*/, 3];
                     case "ttf": return [3 /*break*/, 3];
+                    case "otf": return [3 /*break*/, 3];
                     case "qjson": return [3 /*break*/, 5];
                 }
                 return [3 /*break*/, 7];
