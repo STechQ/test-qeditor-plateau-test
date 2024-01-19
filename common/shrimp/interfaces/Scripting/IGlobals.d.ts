@@ -87,6 +87,7 @@ export interface IGlobals_Quick {
         }) => (value: any) => any;
         email: (message?: any) => (value: any) => any;
         iban: (message?: any) => (value: any) => any;
+        IBANNumOnly: (message?: any) => (value: any) => any;
         regex: (regexVal: any, message?: any) => (value: any) => any;
         tckn: (message?: any) => (value: any) => any;
         vkn: (message?: any) => (value: any) => any;

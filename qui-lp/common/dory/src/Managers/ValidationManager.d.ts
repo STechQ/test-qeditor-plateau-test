@@ -42,7 +42,7 @@ export declare class ValidationManager {
         disableNewlineOnCount?: boolean;
     }): (value: any) => any;
     email(message: any): (value: any) => any;
-    iban(message: any): (value: any) => any;
+    iban(message: any, ibanOnly: boolean): (value: any) => any;
     regex(regexVal: any, message: any): (value: any) => any;
     tckn(message?: any): (value: any) => any;
     vkn(message?: any): (value: any) => any;
