@@ -58,7 +58,7 @@ export declare class RenderingManager implements IRenderingManager {
      */
     private GenerateDirectives;
     private CalculateStyle;
-    private generetaPropsFromStyle;
+    private generatePropsFromStyle;
     private getItemValue;
     private GenerateChildren;
     private isEditMode;

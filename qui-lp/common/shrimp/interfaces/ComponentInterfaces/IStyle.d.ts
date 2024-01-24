@@ -46,6 +46,7 @@ export interface IComponentDefinition {
     inheritedChildList?: IStyleChild;
     propRemoveList?: Array<string>;
     extendedDefaulStyleList?: Record<string, string>;
+    hideStyledCompField?: boolean;
 }
 export declare type IAssetList = Record<string, Record<string, StyleValue>>;
 export declare enum FontWeights {
