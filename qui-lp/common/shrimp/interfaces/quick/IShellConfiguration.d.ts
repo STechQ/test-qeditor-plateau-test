@@ -125,6 +125,7 @@ export interface IShellConfiguration {
     getComponent?: ({ compID }: {
         compID: string;
     }) => IDomElement;
+    getNetworkConnection?: () => boolean;
 }
 export interface IHistoryBasedShellConfiguration {
     isEditor: boolean;
