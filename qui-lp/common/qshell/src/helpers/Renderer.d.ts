@@ -3,6 +3,7 @@ import { Hook } from "../../../shrimp/helpers/hook";
 import { ILRID } from "../../../shrimp/interfaces/ComponentInterfaces/ILocalResource";
 import { IQJSon } from "../../../shrimp/interfaces/ComponentInterfaces/IQJson";
 import { IDictionary } from "../../../shrimp/interfaces/IDictionary";
+import { IConfig } from "../../../shrimp/interfaces/quick/IConfig";
 import { INavigationDemand } from "../../../shrimp/interfaces/quick/INavigationDemand";
 import { PlatformType } from "../../../shrimp/interfaces/quick/IPlatform";
 import { ISiteSettings } from "../../../shrimp/interfaces/quick/ISiteSettings";
@@ -34,6 +35,7 @@ export declare class Renderer implements IRenderer {
     }): Promise<void>;
     CreateChildRenderer(compUIDPrefix?: string): DoryRendererChild;
     SetLRType(LRType?: string): void;
+    SetConfigValues(configValues?: IConfig[]): void;
     SetGlobalLRDict(GlobalLRDict?: ILRID): void;
     SetSiteSettings(siteSettings: ISiteSettings): void;
     SetPlatformType(platformType: PlatformType): void;

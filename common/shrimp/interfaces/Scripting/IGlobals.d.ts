@@ -15,6 +15,7 @@ import { IUrlOptions } from "../quick/IUrl";
 import { IExcel, IExcelList } from "../quick/IExcel";
 import { IDomElement } from "../RenderingInterfaces/IDomElement";
 import { IPermanentStoreObject, Plateau_UI_PermanantDB_Name } from "../RenderingInterfaces/Operators/IIndexedDbOperator";
+import { IConfig } from "../quick/IConfig";
 export interface IGlobals_Request {
     async(requestObject: IRequest): Promise<INetworkResponse<Record<string, any>>> | undefined;
     download(requestObject: IDownloadRequest): void;
@@ -182,6 +183,9 @@ export interface IGlobals_Quick {
     };
     authentication: {
         getIamToken: () => Promise<string | undefined> | undefined;
+    };
+    config: {
+        get: (key: string) => IConfig | undefined;
     };
 }
 export interface IGlobals_store {
