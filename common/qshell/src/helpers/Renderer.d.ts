@@ -5,6 +5,7 @@ import { IQJSon } from "../../../shrimp/interfaces/ComponentInterfaces/IQJson";
 import { IDictionary } from "../../../shrimp/interfaces/IDictionary";
 import { IConfig } from "../../../shrimp/interfaces/quick/IConfig";
 import { INavigationDemand } from "../../../shrimp/interfaces/quick/INavigationDemand";
+import { INavigationOptions } from "../../../shrimp/interfaces/quick/INavigationManager";
 import { PlatformType } from "../../../shrimp/interfaces/quick/IPlatform";
 import { ISiteSettings } from "../../../shrimp/interfaces/quick/ISiteSettings";
 import { DisplayHookCb, IDory, PartialDisplayHookCb } from "../../../shrimp/interfaces/RenderingInterfaces/IDory";
@@ -25,13 +26,14 @@ export declare class Renderer implements IRenderer {
         doryInstanceName?: string;
         operatorCollection: IRendererOperatorCollection;
     });
-    Render({ pjsonPath, compParentInst, storeItems, pageId, pageName, pjsonContent }: {
+    Render({ pjsonPath, compParentInst, storeItems, pageId, pageName, pjsonContent, options }: {
         pjsonPath?: string;
         compParentInst?: any;
         storeItems?: IDictionary<any>;
         pageId?: string;
         pageName?: string;
         pjsonContent?: IQJSon;
+        options?: INavigationOptions;
     }): Promise<void>;
     CreateChildRenderer(compUIDPrefix?: string): DoryRendererChild;
     SetLRType(LRType?: string): void;

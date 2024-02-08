@@ -14,6 +14,7 @@ import { IShell } from "../quick/IShell";
 import { IUrlOptions } from "../quick/IUrl";
 import { IExcel, IExcelList } from "../quick/IExcel";
 import { IDomElement } from "../RenderingInterfaces/IDomElement";
+import { INavigationOptions } from "../quick/INavigationManager";
 import { IPermanentStoreObject, Plateau_UI_PermanantDB_Name } from "../RenderingInterfaces/Operators/IIndexedDbOperator";
 import { IConfig } from "../quick/IConfig";
 export interface IGlobals_Request {
@@ -64,10 +65,7 @@ export interface IGlobals_Quick {
     performance: () => any;
     back: (...args: any[]) => any;
     goHistory: (step: number) => void;
-    go: (qjsonPath: string, options?: {
-        newTab?: boolean;
-        store?: boolean;
-    }) => any;
+    go: (qjsonPath: string, options?: INavigationOptions) => any;
     goNative?: ({ code, param }: {
         code: string;
         param?: Record<string, any>;
