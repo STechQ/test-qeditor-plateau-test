@@ -12,7 +12,6 @@ export declare class HistoryManager implements IHistoryManager, IContextItem {
     doryLike: DoryLikeData;
     private rootHMCache?;
     constructor(context: ContextManager, doryLike: DoryLikeData);
-    GetCreaterComp(): import("../../../shrimp/interfaces/ComponentInterfaces/IComponentCollection").IComponentCollection | undefined;
     currentLevel(): HistoryLevel;
     addLevel(): void;
     isCurrentlyOnLightbox(): boolean;

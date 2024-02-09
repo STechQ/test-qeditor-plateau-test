@@ -5,7 +5,6 @@ import { ILRID } from "../ComponentInterfaces/ILocalResource";
 import { IQJSon } from "../ComponentInterfaces/IQJson";
 import { StyleJson } from "../ComponentInterfaces/IStyle";
 import { IDictionary } from "../IDictionary";
-import { IConfig } from "../quick/IConfig";
 import { INavigationDemand } from "../quick/INavigationDemand";
 import { ISiteSettings } from "../quick/ISiteSettings";
 import { DisplayHookCb, IDory, PartialDisplayHookCb } from "./IDory";
@@ -61,7 +60,6 @@ export interface IRenderer {
     Trigger(eventName: string, parameters?: Record<string, any>): any;
     SetEditMode(state: boolean): void;
     Hibernate(): void;
-    SetConfigValues(configValues?: IConfig[]): void;
 }
 export interface ISettingsQJsonContext extends IContextItem {
     PipelineChangeHook: Hook<() => void>;

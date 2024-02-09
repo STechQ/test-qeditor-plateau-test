@@ -14,9 +14,6 @@ import { IShell } from "../quick/IShell";
 import { IUrlOptions } from "../quick/IUrl";
 import { IExcel, IExcelList } from "../quick/IExcel";
 import { IDomElement } from "../RenderingInterfaces/IDomElement";
-import { INavigationOptions } from "../quick/INavigationManager";
-import { IPermanentStoreObject, Plateau_UI_PermanantDB_Name } from "../RenderingInterfaces/Operators/IIndexedDbOperator";
-import { IConfig } from "../quick/IConfig";
 export interface IGlobals_Request {
     async(requestObject: IRequest): Promise<INetworkResponse<Record<string, any>>> | undefined;
     download(requestObject: IDownloadRequest): void;
@@ -65,7 +62,10 @@ export interface IGlobals_Quick {
     performance: () => any;
     back: (...args: any[]) => any;
     goHistory: (step: number) => void;
-    go: (qjsonPath: string, options?: INavigationOptions) => any;
+    go: (qjsonPath: string, options?: {
+        newTab?: boolean;
+        store?: boolean;
+    }) => any;
     goNative?: ({ code, param }: {
         code: string;
         param?: Record<string, any>;
@@ -172,18 +172,12 @@ export interface IGlobals_Quick {
         show: () => void;
         hide: () => void;
     };
-    network: {
-        isConnected: boolean;
-    };
     render: {
         block(): void;
         resume(): void;
     };
     authentication: {
         getIamToken: () => Promise<string | undefined> | undefined;
-    };
-    config: {
-        get: (key: string) => IConfig | undefined;
     };
 }
 export interface IGlobals_store {
@@ -192,16 +186,6 @@ export interface IGlobals_store {
     getAll: (name: any) => any;
     delete: (name: any) => void;
     deleteAll: (name: any) => void;
-}
-export interface IGlobals_permanentStore {
-    set: <T>(object: IPermanentStoreObject<T>) => void;
-    get: <T>(key: string) => Promise<IPermanentStoreObject<T> | undefined>;
-    delete: (key: string) => Promise<void | undefined>;
-    getAll: <T>() => Promise<IPermanentStoreObject<T>[] | undefined>;
-    changeDb: (dbName: string | undefined) => Promise<void>;
-    deleteDb: (dbName: string | undefined) => Promise<void>;
-    originalDbName: typeof Plateau_UI_PermanantDB_Name;
-    getCurrentDbName: () => string;
 }
 export interface IGlobals_cookie {
     set: (key: string, cookieValue: ICookieValue) => void;
@@ -320,7 +304,6 @@ export interface IGlobalsBase {
     containerServices?: IGlobals_ContainerServices;
     sso: IGlobals_sso;
     store: IGlobals_store;
-    permanentStore: IGlobals_permanentStore;
     cookie: IGlobals_cookie;
     localStorage: IGlobals_LocalStorage;
     Url: IGlobals_Url;

@@ -1,6 +1,5 @@
 import { ContextManager, IContextItem } from "../../../../shrimp/context";
 import { IQJSon } from "../../../../shrimp/interfaces/ComponentInterfaces/IQJson";
-import { MobileAnimation } from "../../../../shrimp/interfaces/quick/INavigationManager";
 import { IDory } from "../../../../shrimp/interfaces/RenderingInterfaces/IDory";
 import { IModuleManager } from "../../interfaces/construction/IModuleManager";
 import { IQJsonRetriever } from "../../interfaces/construction/IQJsonRetriever";
@@ -32,15 +31,13 @@ export declare type QjsonData = {
     type: "content";
     content: IQJSon;
     options?: {
-        disableLoading?: boolean;
-        mobileAnimation?: MobileAnimation;
+        disableLoading: boolean;
     };
 } | {
     type: "path";
     path: string;
     options?: {
-        disableLoading?: boolean;
-        mobileAnimation?: MobileAnimation;
+        disableLoading: boolean;
     };
 };
 //# sourceMappingURL=QJsonPool.d.ts.map
