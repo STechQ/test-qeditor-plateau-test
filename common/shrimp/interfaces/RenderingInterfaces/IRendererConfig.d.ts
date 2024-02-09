@@ -1,6 +1,7 @@
 import { AlertType, ErrorSource, IActionButton } from "../ComponentInterfaces/IAlert";
 import { IComponentCollection } from "../ComponentInterfaces/IComponentCollection";
 import { ILRID } from "../ComponentInterfaces/ILocalResource";
+import { IConfig } from "../quick/IConfig";
 import { IExternalLocalizationFunc } from "../quick/IExternalLocalizationFunc";
 import { INavigationManager } from "../quick/INavigationManager";
 import { PlatformType } from "../quick/IPlatform";
@@ -34,5 +35,6 @@ export interface IRendererConfig {
     processManager?: IProcessManager;
     navigationManager?: INavigationManager;
     platform?: PlatformType;
+    configValues?: IConfig[];
 }
 //# sourceMappingURL=IRendererConfig.d.ts.map

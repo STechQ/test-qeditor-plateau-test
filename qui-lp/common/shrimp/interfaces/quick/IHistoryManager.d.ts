@@ -1,3 +1,4 @@
+import { IComponentCollection } from "../ComponentInterfaces/IComponentCollection";
 import { INavigationDemand, INavigationDemandType } from "./INavigationDemand";
 export interface IHistoryManager {
     checkIfHistoryExist(options: INavigationDemand): boolean;
@@ -11,5 +12,6 @@ export interface IHistoryManager {
     getNavDemand(pageId: string): INavigationDemand | null;
     Back(options: INavigationDemand): void;
     Forward(options: INavigationDemand): void;
+    GetCreaterComp(): IComponentCollection | undefined;
 }
 //# sourceMappingURL=IHistoryManager.d.ts.map
