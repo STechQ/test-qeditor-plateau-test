@@ -13,7 +13,6 @@ import { IExcel, IExcelList } from "../../../shrimp/interfaces/quick/IExcel";
 import { IFormatConfiguration } from "../../../shrimp/interfaces/quick/IFormatConfiguration";
 import { IFormattingDefinition } from "../../../shrimp/interfaces/quick/IFormattingDefinition";
 import { ILocationPosition } from "../../../shrimp/interfaces/quick/ILocationPosition";
-import { INavigationOptions } from "../../../shrimp/interfaces/quick/INavigationManager";
 import { IPlatform } from "../../../shrimp/interfaces/quick/IPlatform";
 import { IProcessManager } from "../../../shrimp/interfaces/quick/IProcessManager";
 import { IHistoryBasedShellConfiguration, IShellConfiguration } from "../../../shrimp/interfaces/quick/IShellConfiguration";
@@ -24,7 +23,10 @@ export declare class ShellConfiguration implements IShellConfiguration {
     network: INetwork;
     lridHelper?: (label: string, dataSource?: object | null) => string;
     go?: Function;
-    go2?(qjsonPath: string, options?: INavigationOptions): void;
+    go2?(qjsonPath: string, options?: {
+        newTab?: boolean;
+        store?: boolean;
+    }): void;
     goNative?: Function;
     triggerPreviousPage?: Function;
     nemoComponents?: object;
@@ -119,7 +121,6 @@ export declare class ShellConfiguration implements IShellConfiguration {
     getComponent?: ({ compID }: {
         compID: string;
     }) => IDomElement;
-    getNetworkConnection?: () => boolean;
     constructor();
 }
 //# sourceMappingURL=ShellConfiguration.d.ts.map

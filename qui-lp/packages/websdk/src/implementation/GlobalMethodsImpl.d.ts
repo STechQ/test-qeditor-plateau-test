@@ -69,8 +69,6 @@ export declare class GlobalMethodsImpl implements IGlobalMethods {
     setComponentsProperty(componentCollection: IComponentCollection, propertyName: string, propertyValue: any): void;
     clearPageClose(): void;
     setPageClose(): void;
-    listenNetworkConnection(): void;
-    getNetworkConnection(): boolean;
     scrollIntoView(component: IComponent): void;
     YOffset(): number;
     XOffset(): number;
