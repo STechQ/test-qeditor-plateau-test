@@ -8,6 +8,7 @@ import { IContainerServices } from "./IContainerServices";
 import { IRegionalDefinition } from "./IFormattingDefinition";
 import { IUXManager } from "./IUXManager";
 import { IWebSDKSetingsBus } from "./IWebSDKSettingsBus";
+import { IConfig } from "./IConfig";
 export interface IWebSDKSettingsWrapper {
     settings: IWebSDKSettings;
 }
@@ -56,6 +57,7 @@ export interface IWebSDKSettings {
     quickStyle?: string;
     versions?: IVersion;
     useLocalProxyOnClient?: boolean;
+    configValues?: IConfig[];
 }
 export interface IBackendInf {
     containerName?: any;

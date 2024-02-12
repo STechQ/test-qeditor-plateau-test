@@ -22,6 +22,7 @@ import { ISettingsQJsonContext } from "./IRenderer";
 import { IRendererOperatorCollection } from "./Operators/IRendererOperatorCollection";
 import { IStore } from "../quick/IStore";
 import { IAssetList } from "../ComponentInterfaces/IStyle";
+import { IConfig } from "../quick/IConfig";
 export declare type PartialDisplayHookCb = (elements: Array<IDomElement>, pageId?: string, pageName?: string, navigationDirection?: INavigationDemandType, override?: boolean, doryJr?: IDoryJr | undefined, additioanls?: any | undefined) => void;
 export declare type DisplayHookCb = (elements: IDomElement[], pageId?: string, pageName?: string, navigationDirection?: INavigationDemandType, additionals?: any, noHistory?: boolean) => void;
 export interface IGoHistoryOptions {
@@ -101,6 +102,7 @@ export interface IDory extends IContextItem {
     getPreviousPageName(): string | undefined;
     SetTSComponentWrapper(callBackComponentTarget: Function): void;
     SetLRType(LRType?: string, LRTypeRTL?: boolean): void;
+    SetConfigValues(configValues?: IConfig[]): void;
     GetLRType(): string;
     CallHibernate(): void;
     SetGlobalLRDict(GlobalLRDict?: ILRID): void;

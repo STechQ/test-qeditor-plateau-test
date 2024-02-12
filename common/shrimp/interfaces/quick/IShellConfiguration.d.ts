@@ -23,14 +23,12 @@ import { IShellGlobalMethods } from "./IShellGlobalMethods";
 import { IStorageAccess } from "./IStore";
 import { IUrlOptions } from "./IUrl";
 import { IExcel, IExcelList } from "./IExcel";
+import { INavigationOptions } from "./INavigationManager";
 export interface IShellConfiguration {
     network: INetwork;
     lridHelper?: (label: string, params: Object) => string;
     go?: Function;
-    go2?(qjsonPath: string, options?: {
-        newTab?: boolean;
-        store?: boolean;
-    }): void;
+    go2?(qjsonPath: string, options?: INavigationOptions): void;
     triggerPreviousPage?: Function;
     nemoComponents?: object;
     storeAccess?: IStorageAccess;
@@ -125,6 +123,7 @@ export interface IShellConfiguration {
     getComponent?: ({ compID }: {
         compID: string;
     }) => IDomElement;
+    getNetworkConnection?: () => boolean;
 }
 export interface IHistoryBasedShellConfiguration {
     isEditor: boolean;

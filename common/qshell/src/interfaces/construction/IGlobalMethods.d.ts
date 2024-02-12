@@ -72,5 +72,7 @@ export interface IGlobalMethods extends IContextItem {
     getComponent?: ({ compID }: {
         compID: string;
     }) => IDomElement;
+    listenNetworkConnection?: () => void;
+    getNetworkConnection?: () => boolean;
 }
 //# sourceMappingURL=IGlobalMethods.d.ts.map

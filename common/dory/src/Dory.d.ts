@@ -24,6 +24,7 @@ import { ShellConfiguration } from "./Config/ShellConfiguration";
 import { SharedStoreContext } from "./Context/Store/SharedStoreContext";
 import { HistoryItem } from "./Model/History/HistoryItem";
 import { IAssetList } from "../../shrimp/interfaces/ComponentInterfaces/IStyle";
+import { IConfig } from "../../shrimp/interfaces/quick/IConfig";
 export declare class Dory implements IDory {
     static ContextName: string;
     contextName: string;
@@ -58,6 +59,8 @@ export declare class Dory implements IDory {
     constructor(interDoryContext: ContextManager);
     GetLRType(): string;
     SetLRType(LRType?: string, LRTypeRTL?: boolean): Promise<void>;
+    SetConfigValues(configValues?: IConfig[]): void;
+    GetConfigValues(key: string): IConfig | undefined;
     SetGlobalLRDict(GlobalLRDict?: ILRID): void;
     Render({ qjson, compParentInst, storeItems, pageId, pageName }: {
         qjson: IQJSon;

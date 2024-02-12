@@ -2,6 +2,7 @@ import { IRendererConfig } from "../../../../common/shrimp/interfaces/RenderingI
 import { INavigationManager } from "../../../../common/qshell";
 import { IUrlOptions } from "../../../../common/shrimp/interfaces/quick/IUrl";
 import { ContextManager } from "../../../../common/shrimp/context";
+import { INavigationOptions } from "../../../../common/shrimp/interfaces/quick/INavigationManager";
 export declare class NavigationManagerImpl implements INavigationManager {
     contextName: string;
     private websdkContext;
@@ -13,10 +14,7 @@ export declare class NavigationManagerImpl implements INavigationManager {
         config?: IRendererConfig;
         websdkContext: ContextManager;
     });
-    go2(qjsonPath: string, options?: {
-        newTab?: boolean;
-        store?: boolean;
-    }, cb?: () => void): void;
+    go2(qjsonPath: string, options?: INavigationOptions, cb?: () => void): void;
     createFunctions(config: IRendererConfig): void;
     getUrl(options: any): string;
     backOverride(): void;
