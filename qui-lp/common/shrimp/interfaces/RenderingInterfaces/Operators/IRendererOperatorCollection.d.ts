@@ -2,12 +2,12 @@ import { IComponentOperator } from "./IComponentOperator";
 import { IEventOperator } from "./IEventOperator";
 import { ILoadingOperator } from "./ILoadingOperator";
 import { IAuthenticationOperator } from "./IAuthenticationOperator";
-import { IIndexedDbOperator } from "./IIndexedDbOperator";
+import { IPermanentStoreOperator } from "./IPermanentStoreOperator";
 export interface IRendererOperatorCollection {
     eventOperator?: IEventOperator;
     componentOperator?: IComponentOperator;
     loadingOperator: ILoadingOperator;
     authenticationOperator?: IAuthenticationOperator;
-    indexedDbOperator?: IIndexedDbOperator;
+    permanentStoreOperator?: IPermanentStoreOperator;
 }
 //# sourceMappingURL=IRendererOperatorCollection.d.ts.map

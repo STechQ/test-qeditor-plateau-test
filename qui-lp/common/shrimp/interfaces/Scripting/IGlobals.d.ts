@@ -15,8 +15,7 @@ import { IUrlOptions } from "../quick/IUrl";
 import { IExcel, IExcelList } from "../quick/IExcel";
 import { IDomElement } from "../RenderingInterfaces/IDomElement";
 import { INavigationOptions } from "../quick/INavigationManager";
-import { IPermanentStoreObject, Plateau_UI_PermanantDB_Name } from "../RenderingInterfaces/Operators/IIndexedDbOperator";
-import { IConfig } from "../quick/IConfig";
+import { IPermanentStoreObject, Plateau_UI_PermanantStore_Name } from "../RenderingInterfaces/Operators/IPermanentStoreOperator";
 export interface IGlobals_Request {
     /**
      * Sends a network request.
@@ -971,7 +970,7 @@ export interface IGlobals_Quick {
         getIamToken: () => Promise<string | undefined> | undefined;
     };
     config: {
-        get: (key: string) => IConfig | undefined;
+        get: (key: string) => any | undefined;
     };
 }
 export interface IGlobals_store {
@@ -1027,10 +1026,10 @@ export interface IGlobals_permanentStore {
     get: <T>(key: string) => Promise<IPermanentStoreObject<T> | undefined>;
     delete: (key: string) => Promise<void | undefined>;
     getAll: <T>() => Promise<IPermanentStoreObject<T>[] | undefined>;
-    changeDb: (dbName: string | undefined) => Promise<void>;
-    deleteDb: (dbName: string | undefined) => Promise<void>;
-    originalDbName: typeof Plateau_UI_PermanantDB_Name;
-    getCurrentDbName: () => string;
+    createOrChangeStore: (storeName: string | undefined) => Promise<void>;
+    deleteStore: (storeName: string | undefined) => Promise<void>;
+    readonly defaultStoreName: typeof Plateau_UI_PermanantStore_Name;
+    readonly currentStoreName: string;
 }
 export interface IGlobals_cookie {
     /**
