@@ -12,7 +12,14 @@ let pjson = {
 					"T": "prop"
 				}
 			},
-			"E": {},
+			"E": {
+				"onNetworkStatusChange": {
+					"H": "declare var isNetworkConnected;\r\nquick.EM.trace(\"isNetworkConnected\");\r\nquick.EM.trace(isNetworkConnected);",
+					"C": true,
+					"EV": true,
+					"HL": "TS"
+				}
+			},
 			"C": {},
 			"_Editor": {
 				"eID": "EdtrComp_1"
@@ -540,131 +547,6 @@ let pjson = {
 							},
 							"_Editor": {
 								"eID": "EdtrComp_4"
-							},
-							"O": {
-								"cType": "slot"
-							}
-						},
-						{
-							"T": "VRow",
-							"P": {
-								"ID": {
-									"H": "EdtrComp_890",
-									"T": "prop"
-								}
-							},
-							"E": {},
-							"C": {
-								"default": {
-									"c": [
-										{
-											"T": "VCol",
-											"C": {
-												"default": {
-													"c": [
-														{
-															"T": "VBtn",
-															"P": {
-																"ID": {
-																	"H": "EdtrComp_892",
-																	"T": "prop"
-																},
-																"color": {
-																	"H": "'primary'",
-																	"T": "prop"
-																},
-																"depressed": {
-																	"H": "true",
-																	"T": "prop"
-																},
-																"elevation": {
-																	"H": "0",
-																	"T": "prop"
-																},
-																"height": {
-																	"H": "'40px'",
-																	"T": "prop"
-																},
-																"visible": {
-																	"H": "true",
-																	"T": "prop"
-																}
-															},
-															"E": {
-																"click": {
-																	"H": "quick.permanentStore.createOrChangeStore(\"myStore2\");",
-																	"P": "mouseEvent:unknown | undefined",
-																	"HL": "TS"
-																}
-															},
-															"C": {
-																"default": {
-																	"c": [
-																		{
-																			"T": "QLabel",
-																			"C": {},
-																			"E": {},
-																			"P": {
-																				"ID": {
-																					"H": "EdtrComp_893",
-																					"T": "prop"
-																				},
-																				"text": {
-																					"H": "'Change Db 2'",
-																					"T": "prop"
-																				}
-																			},
-																			"_Editor": {
-																				"eID": "EdtrComp_893"
-																			},
-																			"O": {
-																				"cType": "child"
-																			}
-																		}
-																	],
-																	"cType": "slot"
-																}
-															},
-															"_Editor": {
-																"eID": "EdtrComp_892"
-															},
-															"O": {
-																"cType": "slot"
-															}
-														}
-													],
-													"cType": "slot"
-												}
-											},
-											"E": {},
-											"P": {
-												"ID": {
-													"H": "EdtrComp_891",
-													"T": "prop"
-												}
-											},
-											"_Editor": {
-												"eID": "EdtrComp_891"
-											},
-											"O": {
-												"cType": "slot",
-												"layout": {
-													"dOpt": {
-														"xs": [
-															"d:d-flex",
-															"fd:flex-column"
-														]
-													},
-													"class": "d-flex flex-column"
-												}
-											}
-										}
-									],
-									"cType": "slot"
-								}
-							},
-							"_Editor": {
-								"eID": "EdtrComp_890"
 							},
 							"O": {
 								"cType": "slot"
@@ -1570,7 +1452,14 @@ let pjson = {
 					"T": "prop"
 				}
 			},
-			"E": {},
+			"E": {
+				"onNetworkStatusChange": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.EM.trace(\"isNetworkConnected\");\r\nquick.EM.trace(isNetworkConnected);\r\n",
+					"C": true,
+					"EV": true,
+					"HL": "JS"
+				}
+			},
 			"C": {},
 			"_Editor": {
 				"eID": "EdtrComp_1"
@@ -2114,135 +2003,6 @@ let pjson = {
 							},
 							"_Editor": {
 								"eID": "EdtrComp_4"
-							},
-							"O": {
-								"cType": "slot",
-								"compDomClasses": "row newDropBorder"
-							}
-						},
-						{
-							"T": "VRow",
-							"P": {
-								"ID": {
-									"H": "EdtrComp_890",
-									"T": "prop"
-								}
-							},
-							"E": {},
-							"C": {
-								"default": {
-									"c": [
-										{
-											"T": "VCol",
-											"C": {
-												"default": {
-													"c": [
-														{
-															"T": "VBtn",
-															"P": {
-																"ID": {
-																	"H": "EdtrComp_892",
-																	"T": "prop"
-																},
-																"color": {
-																	"H": "╬'primary'╩╩",
-																	"T": "prop"
-																},
-																"depressed": {
-																	"H": "╬true╩╩",
-																	"T": "prop"
-																},
-																"elevation": {
-																	"H": "╬0╩╩",
-																	"T": "prop"
-																},
-																"height": {
-																	"H": "╬'40px'╩╩",
-																	"T": "prop"
-																},
-																"visible": {
-																	"H": "╬true╩╩",
-																	"T": "prop"
-																}
-															},
-															"E": {
-																"click": {
-																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.permanentStore.createOrChangeStore(\"myStore2\");\r\n",
-																	"P": "mouseEvent:unknown | undefined",
-																	"HL": "JS"
-																}
-															},
-															"C": {
-																"default": {
-																	"c": [
-																		{
-																			"T": "QLabel",
-																			"C": {},
-																			"E": {},
-																			"P": {
-																				"ID": {
-																					"H": "EdtrComp_893",
-																					"T": "prop"
-																				},
-																				"text": {
-																					"H": "╬'Change Db 2'╩╩",
-																					"T": "prop"
-																				}
-																			},
-																			"_Editor": {
-																				"eID": "EdtrComp_893"
-																			},
-																			"O": {
-																				"cType": "child",
-																				"compDomClasses": "q-label newDropBorder"
-																			}
-																		}
-																	],
-																	"cType": "slot"
-																}
-															},
-															"_Editor": {
-																"eID": "EdtrComp_892"
-															},
-															"O": {
-																"cType": "slot",
-																"compDomClasses": "v-btn v-btn--depressed theme--light elevation-0 v-size--default primary newDropBorder"
-															}
-														}
-													],
-													"cType": "slot"
-												}
-											},
-											"E": {},
-											"P": {
-												"ID": {
-													"H": "EdtrComp_891",
-													"T": "prop"
-												}
-											},
-											"_Editor": {
-												"eID": "EdtrComp_891"
-											},
-											"O": {
-												"cType": "slot",
-												"layout": {
-													"dOpt": {
-														"xs": [
-															"d:d-flex",
-															"fd:flex-column"
-														]
-													},
-													"class": "d-flex flex-column"
-												},
-												"compDomClasses": "col d-flex flex-column newDropBorder"
-											}
-										}
-									],
-									"cType": "slot"
-								}
-							},
-							"_Editor": {
-								"eID": "EdtrComp_890"
 							},
 							"O": {
 								"cType": "slot",
@@ -2839,7 +2599,7 @@ let pjson = {
 																			},
 																			"O": {
 																				"cType": "child",
-																				"compDomClasses": "q-label "
+																				"compDomClasses": "q-label newDropBorder"
 																			}
 																		}
 																	],
@@ -2851,7 +2611,7 @@ let pjson = {
 															},
 															"O": {
 																"cType": "slot",
-																"compDomClasses": "v-btn v-btn--depressed theme--light elevation-0 v-size--default primary"
+																"compDomClasses": "v-btn v-btn--depressed theme--light elevation-0 v-size--default primary newDropBorder"
 															}
 														}
 													],
@@ -2968,7 +2728,7 @@ let pjson = {
 																			},
 																			"O": {
 																				"cType": "child",
-																				"compDomClasses": "q-label "
+																				"compDomClasses": "q-label newDropBorder"
 																			}
 																		}
 																	],
@@ -2980,7 +2740,7 @@ let pjson = {
 															},
 															"O": {
 																"cType": "slot",
-																"compDomClasses": "v-btn v-btn--depressed theme--light elevation-0 v-size--default primary"
+																"compDomClasses": "v-btn v-btn--depressed theme--light elevation-0 v-size--default primary newDropBorder"
 															}
 														}
 													],
@@ -3008,7 +2768,7 @@ let pjson = {
 													},
 													"class": "d-flex flex-column"
 												},
-												"compDomClasses": "col d-flex flex-column"
+												"compDomClasses": "col d-flex flex-column newDropBorder"
 											}
 										}
 									],
@@ -3020,7 +2780,7 @@ let pjson = {
 							},
 							"O": {
 								"cType": "slot",
-								"compDomClasses": "row"
+								"compDomClasses": "row newDropBorder"
 							}
 						},
 						{
@@ -3097,7 +2857,7 @@ let pjson = {
 																			},
 																			"O": {
 																				"cType": "child",
-																				"compDomClasses": "q-label "
+																				"compDomClasses": "q-label newDropBorder"
 																			}
 																		}
 																	],
@@ -3109,7 +2869,7 @@ let pjson = {
 															},
 															"O": {
 																"cType": "slot",
-																"compDomClasses": "v-btn v-btn--depressed theme--light elevation-0 v-size--default primary"
+																"compDomClasses": "v-btn v-btn--depressed theme--light elevation-0 v-size--default primary newDropBorder"
 															}
 														}
 													],
@@ -3137,7 +2897,7 @@ let pjson = {
 													},
 													"class": "d-flex flex-column"
 												},
-												"compDomClasses": "col d-flex flex-column"
+												"compDomClasses": "col d-flex flex-column newDropBorder"
 											}
 										}
 									],
@@ -3149,7 +2909,7 @@ let pjson = {
 							},
 							"O": {
 								"cType": "slot",
-								"compDomClasses": "row"
+								"compDomClasses": "row newDropBorder"
 							}
 						}
 					],
