@@ -1,5 +1,5 @@
-export declare const Plateau_UI_PermanantStore_Name = "PermanantStore";
-export declare const Plateau_UI_PermanantStore_Name_Prefix = "Plateau_UI_";
+export declare const Plateau_UI_PermanentStore_Name = "PermanentStore";
+export declare const Plateau_UI_PermanentStore_Name_Prefix = "Plateau_UI_";
 export interface IPermanentStoreObject<T> {
     key: string;
     value: T;

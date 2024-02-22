@@ -15,7 +15,7 @@ import { IUrlOptions } from "../quick/IUrl";
 import { IExcel, IExcelList } from "../quick/IExcel";
 import { IDomElement } from "../RenderingInterfaces/IDomElement";
 import { INavigationOptions } from "../quick/INavigationManager";
-import { IPermanentStoreObject, Plateau_UI_PermanantStore_Name } from "../RenderingInterfaces/Operators/IPermanentStoreOperator";
+import { IPermanentStoreObject, Plateau_UI_PermanentStore_Name } from "../RenderingInterfaces/Operators/IPermanentStoreOperator";
 export interface IGlobals_Request {
     /**
      * Sends a network request.
@@ -945,10 +945,10 @@ export interface IGlobals_Quick {
     };
     network: {
         /**
-         * To quickly determine the online/offline status of the network.
+         * Determines the online/offline status of the network.
          *
          * @memberof network
-         * @returns {boolean} - The online/offline status of the network
+         * @returns {boolean} - The online/offline status of the network.
         */
         isConnected: boolean;
     };
@@ -1029,7 +1029,7 @@ export interface IGlobals_store {
 }
 export interface IGlobals_permanentStore {
     /**
-     * Sets a value to the permanent store.
+     * Sets a key-value pair object to the Permanent Store.
      * @param {IPermanentStoreObject} [object] - The key-value pair object which will be stored within the permanent store.
      * @param {string} object.key - Key under which the data will be stored within the permanent store.
      * @param {any} object.value - Actual data to be stored.
@@ -1040,7 +1040,7 @@ export interface IGlobals_permanentStore {
     */
     set: <T>(object: IPermanentStoreObject<T>) => void;
     /**
-     * Gets key-value pair object from the permanent store.
+     * Gets a key-value pair object from the Permanent Store.
      * @param {string} key - Key under which the data will be retrieved from the permanent store.
      * @returns {IPermanentStoreObject} - Returns the key-value pair object associated with the 'key' in the permanent stored object.
      *
@@ -1049,7 +1049,7 @@ export interface IGlobals_permanentStore {
     */
     get: <T>(key: string) => Promise<IPermanentStoreObject<T> | undefined>;
     /**
-    * Deletes a value from the permanent store.
+    * Deletes a key-value pair object associated with the 'key' in the permanent store .
     * @param {string} key - Key under which the data will be deleted from the permanent store.
     * @returns {void}
     *
@@ -1058,7 +1058,7 @@ export interface IGlobals_permanentStore {
    */
     delete: (key: string) => Promise<void | undefined>;
     /**
-    * Gets all values from the permanent store.
+    * Gets all key-value pair objects from the permanent store.
     * @returns {IPermanentStoreObject[]}- Returns all the key-value pair object list associated in the permanent store.
     *
     * @example
@@ -1075,7 +1075,7 @@ export interface IGlobals_permanentStore {
     */
     createOrChangeStore: (storeName: string | undefined) => Promise<void>;
     /**
-     * Delete permanent store.
+     * Deletes the Permanent Store.
      * @param {string}storeName - Store name will be deleted.
      * @returns {void}
      *
@@ -1084,15 +1084,15 @@ export interface IGlobals_permanentStore {
     */
     deleteStore: (storeName: string | undefined) => Promise<void>;
     /**
-     * Gets default permanent store name. If you don't provide the permanent store name that your application will use, default using store name is  'PermanantStore'
-     * @returns {string} - Default using store name is  'PermanantStore'
+     * Gets default Permanent Store name. If you don't provide the Permanent Store name that your application uses, default using store name will be 'PermanentStore'
+     * @returns {string} - Default using store name is  'PermanentStore'
      *
      * @example
      * quick.permanentStore.defaultStoreName;
     */
-    readonly defaultStoreName: typeof Plateau_UI_PermanantStore_Name;
+    readonly defaultStoreName: typeof Plateau_UI_PermanentStore_Name;
     /**
-    * Gets the current permanent store name which provided by createOrChangeStore() method and using currently permanent store name.
+    * Gets the Permanent Store name which provided by createOrChangeStore() method and currently being used.
     * @returns {string} - The name of the permanent store currently being used.
     *
     * @example

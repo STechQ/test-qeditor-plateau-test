@@ -1,6 +1,6 @@
 import { IPermanentStoreObject } from "../../../../common/shrimp/interfaces/RenderingInterfaces/Operators/IPermanentStoreOperator";
 export declare class PermanentStoreManager {
-    private static permanantDbName;
+    private static permanentDbName;
     static changeDb(dbName: string): void;
     deleteDb(dbName: string): Promise<void>;
     static getCurrentStoreName(): string;
