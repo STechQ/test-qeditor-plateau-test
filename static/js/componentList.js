@@ -1920,6 +1920,9 @@ var componentOptions = {
         customGroup: {
             type: Function
         },
+        customSort: {
+            type: Function
+        },
         dark: {
             type: Boolean
         },
