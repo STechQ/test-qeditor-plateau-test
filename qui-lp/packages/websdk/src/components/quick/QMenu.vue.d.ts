@@ -4,6 +4,7 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     resultList: ObjectConstructor[];
     innerClass: string;
     containes: boolean;
+    classMenu: string | undefined;
 }, {
     setTheme(): "primaryTheme" | "secondaryTheme" | "successTheme" | "errorTheme" | "warningTheme" | "white--text";
     isIconPathAvaliable(imagePath: any): boolean;
@@ -27,7 +28,7 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     clickRow(item: Object, index: Number): void;
     calculatePadding(index: number, item: any): Number;
     collapseAll(activeList?: any): void;
-    updateMini(): void;
+    updateMini(isMini?: boolean | undefined): void;
     onClickGroup(): void;
 }, unknown, {
     activeColor: string;
@@ -35,6 +36,7 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     miniVariantWidth: string;
     menuData: any;
     collapseOnItemSelect: boolean;
+    disabled: boolean;
     hideMenuTitle: boolean;
     fixed: boolean;
     color: string;
