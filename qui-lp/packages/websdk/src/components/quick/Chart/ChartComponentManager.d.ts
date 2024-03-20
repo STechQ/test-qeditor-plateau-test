@@ -2,6 +2,7 @@ import { IComponent } from "../../../../../../common/shrimp/interfaces/Component
 import { ICreatedComponent } from "../../../../../../common/shrimp/interfaces/ComponentInterfaces/ICreatedComponent";
 import { IDictionary } from "../../../../../../common/shrimp/interfaces/IDictionary";
 import { ComponentTarget } from "../../providers/ComponentProvider";
+import 'chartjs-adapter-date-fns';
 export declare class ChartComponentManager {
     constructor();
     createChildTypeChartComponent(props: IDictionary<any>, target: ComponentTarget, componentName: string, parentInstance: any): {
