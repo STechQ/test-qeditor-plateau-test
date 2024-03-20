@@ -37,6 +37,7 @@ export declare class Renderer implements IRenderer {
     }): Promise<void>;
     CreateChildRenderer(compUIDPrefix?: string): DoryRendererChild;
     SetLRType(LRType?: string): void;
+    GetLRType(): string;
     SetConfigValues(configValues?: IConfig[]): void;
     SetGlobalLRDict(GlobalLRDict?: ILRID): void;
     SetSiteSettings(siteSettings: ISiteSettings): void;

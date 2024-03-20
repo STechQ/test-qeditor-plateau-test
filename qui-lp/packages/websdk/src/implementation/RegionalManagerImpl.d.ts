@@ -13,6 +13,7 @@ export declare class RegionalManagerImpl implements IRegionalManager {
     setRegion(regionName: string): void;
     getRegion(): string;
     getFormattingDefinitionByCurrentRegion(): IFormattingDefinition | undefined;
+    getFormattingDefinitionBySelectedRegion(selectedRegion: string): IFormattingDefinition | undefined;
     onLRChange(language?: string): void;
 }
 //# sourceMappingURL=RegionalManagerImpl.d.ts.map

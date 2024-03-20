@@ -1,3 +1,4 @@
+import { QShell } from "../../../../common/qshell";
 import { ContextManager } from "../../../../common/shrimp/context";
 import { CType } from "../../../../common/shrimp/interfaces/ComponentInterfaces/ICompJson";
 import { IComponentCollection } from "../../../../common/shrimp/interfaces/ComponentInterfaces/IComponentCollection";
@@ -11,10 +12,12 @@ export declare class ComponentInstanceTracker implements IComponentInstanceTrack
     private servicesWrapper;
     private settingsWrapper;
     private websdkContext;
+    private qshell;
     constructor(options: {
         servicesWrapper: IContainerServicesWrapper;
         settingsWrapper: IWebSDKSettingsWrapper;
         websdkContext: ContextManager;
+        qshell: QShell;
     });
     TrackCompInstance(compData: {
         asChildType: CType | null;

@@ -48,6 +48,7 @@ export interface IRenderer {
     Clear(): void;
     SetDisplayCallBack(callBackFunc: DisplayHookCb): void;
     SetPartialDisplayCallBack(callBackFunc: PartialDisplayHookCb): void;
+    GetLRType(): string;
     SetLRType(LRType: string): void;
     SetGlobalLRDict(GlobalLRDict: ILRID): void;
     SetSiteSettings(siteSettings: ISiteSettings): void;
