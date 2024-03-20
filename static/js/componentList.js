@@ -4684,6 +4684,9 @@ nextIcon = 'mdi-plus'}`
             type: "number | string",
             propType: "attr"
         },
+        name: {
+            type: String
+        },
         tabindex: {
             type: "number | string"
         },
