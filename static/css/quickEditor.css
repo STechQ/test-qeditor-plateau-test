@@ -2215,7 +2215,7 @@ input[type="checkbox"] {
   border-color: rgba(161, 161, 161, 1) !important;
 }
 
-.quickEditor #monacoShell .monaco-editor-hover-content:has(p) {
+.quickEditor #monacoShell .hover-row.markdown-hover > .hover-contents:not(.code-hover-contents) {
   background-color: #757575;
   border-radius: 4px;
   color: #FFF;

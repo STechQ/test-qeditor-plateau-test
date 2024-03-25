@@ -29,6 +29,7 @@ export interface IShellConfiguration {
     lridHelper?: (label: string, params: Object) => string;
     go?: Function;
     go2?(qjsonPath: string, options?: INavigationOptions): void;
+    integrationsEventTrigger?(name: string, params: any[]): void;
     triggerPreviousPage?: Function;
     nemoComponents?: object;
     storeAccess?: IStorageAccess;

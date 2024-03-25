@@ -1450,6 +1450,7 @@ export interface IGlobalsBase {
     currentPage: IGlobals_currentPage;
     cryptography: IGlobals_cryptography;
     encoding: IGlobals_Encoding;
+    webScripts: {};
 }
 export interface IGlobalsTS extends IGlobalsBase {
     devex?: IGlobals_devex;

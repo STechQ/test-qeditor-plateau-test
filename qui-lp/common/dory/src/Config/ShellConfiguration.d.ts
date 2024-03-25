@@ -25,6 +25,7 @@ export declare class ShellConfiguration implements IShellConfiguration {
     lridHelper?: (label: string, dataSource?: object | null) => string;
     go?: Function;
     go2?(qjsonPath: string, options?: INavigationOptions): void;
+    integrationsEventTrigger?(name: string, params: any[]): void;
     goNative?: Function;
     triggerPreviousPage?: Function;
     nemoComponents?: object;

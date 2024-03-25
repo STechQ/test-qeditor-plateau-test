@@ -4,7 +4,6 @@ export interface StyleItem {
     [key: string]: StyleValue | undefined;
     default?: StyleValue;
 }
-export declare type StyleJson = Record<string, StyleItem>;
 export interface IComponentStyleInlineInterface {
     [key: string]: Array<IComponentInternalSI>;
 }

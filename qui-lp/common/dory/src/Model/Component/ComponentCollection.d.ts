@@ -1,7 +1,7 @@
 import { ContextManager } from "../../../../shrimp/context";
 import { CTyped, ICompJson } from "../../../../shrimp/interfaces/ComponentInterfaces/ICompJson";
 import { IComponent } from "../../../../shrimp/interfaces/ComponentInterfaces/IComponent";
-import { CreatedFieldsHook, IComponentCollection, qjsonCollectionInfo, ScopedSlotCreatorFunc } from "../../../../shrimp/interfaces/ComponentInterfaces/IComponentCollection";
+import { CreatedFieldsHook, IComponentCollection, ScopedSlotCreatorFunc, qjsonCollectionInfo } from "../../../../shrimp/interfaces/ComponentInterfaces/IComponentCollection";
 import { ICreatedComponent } from "../../../../shrimp/interfaces/ComponentInterfaces/ICreatedComponent";
 import { IDirectiveCollection } from "../../../../shrimp/interfaces/ComponentInterfaces/IDirectiveCollection";
 import { IEventCollection } from "../../../../shrimp/interfaces/ComponentInterfaces/IEventCollection";
@@ -9,9 +9,9 @@ import { StyleValue } from "../../../../shrimp/interfaces/ComponentInterfaces/IS
 import { IVnode } from "../../../../shrimp/interfaces/ComponentInterfaces/IVnode";
 import { IDictionary } from "../../../../shrimp/interfaces/IDictionary";
 import { IDictionaryNullable } from "../../../../shrimp/interfaces/IDictionaryNullable";
-import { CompGroupType } from "../../../../shrimp/interfaces/quick/IWebSDK";
 import { IDomElement } from "../../../../shrimp/interfaces/RenderingInterfaces/IDomElement";
 import { IDoryJr } from "../../../../shrimp/interfaces/RenderingInterfaces/IDoryJr";
+import { CompGroupType } from "../../../../shrimp/interfaces/quick/IWebSDK";
 import { HistoryItem } from "../History/HistoryItem";
 export declare class ComponentCollection implements IComponentCollection {
     static IterateToChild(controlListOrItem: Array<IComponentCollection> | IComponentCollection, callback: (item: IComponentCollection) => boolean, options?: {
@@ -87,6 +87,7 @@ export declare class ComponentCollection implements IComponentCollection {
      * @returns void
      */
     proxifyStyleField(compCollection: IComponentCollection): void;
+    private matchThemeColors;
     /**
      * Create style field on the component instance and proxify the newly created field
      * @param compCollection Component collection

@@ -12,6 +12,7 @@ import { ICookieManager } from "./src/interfaces/construction/ICookieManager";
 import { ICryptographyManager } from "./src/interfaces/construction/ICryptographyManager";
 import { IGlobalMethods } from "./src/interfaces/construction/IGlobalMethods";
 import { IHostTriggerer } from "./src/interfaces/construction/IHostTriggerer";
+import { IIntegrationsManager } from "./src/interfaces/construction/IIntegrationsManager";
 import { ILanguageExtensions } from "./src/interfaces/construction/ILanguageExtensions";
 import { IModuleManager } from "./src/interfaces/construction/IModuleManager";
 import { INavigationManager } from "./src/interfaces/construction/INavigationManager";
@@ -44,13 +45,14 @@ declare class QShell implements IContextItem {
         platformType: PlatformType;
         platformManager: IPlatformManager;
     }, operatorCollection: IRendererOperatorCollection);
-    CreateRenderer({ componentManager, globalMethods, doryInstanceName, componentInstanceTracker, langExtensions, navigationManager, storeManager, cookieManager, processManager, cryptoManager, config }: {
+    CreateRenderer({ componentManager, globalMethods, doryInstanceName, componentInstanceTracker, langExtensions, navigationManager, integrationsManager, storeManager, cookieManager, processManager, cryptoManager, config }: {
         componentManager: IComponentManager;
         globalMethods: IGlobalMethods;
         doryInstanceName?: string;
         componentInstanceTracker?: IComponentInstanceTracker;
         langExtensions?: ILanguageExtensions;
         navigationManager?: INavigationManager;
+        integrationsManager?: IIntegrationsManager;
         storeManager?: IStoreManager;
         cookieManager?: ICookieManager;
         processManager?: IProcessManager;
