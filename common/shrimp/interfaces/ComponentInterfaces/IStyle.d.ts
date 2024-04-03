@@ -23,6 +23,7 @@ export interface IComponentStyleKey {
     value?: string;
     key?: string;
     [key: string]: string | boolean | undefined;
+    disabled?: boolean;
 }
 export declare const COMPONENT_STYLE_TYPE: {
     "color-picker": string;
