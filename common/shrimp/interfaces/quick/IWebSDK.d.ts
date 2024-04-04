@@ -59,6 +59,7 @@ export interface IWebSDKSettings {
     useLocalProxyOnClient?: boolean;
     configValues?: IConfig[];
     appSettings?: IAppSettings;
+    disablePagePool?: boolean;
 }
 export interface IBackendInf {
     containerName?: any;

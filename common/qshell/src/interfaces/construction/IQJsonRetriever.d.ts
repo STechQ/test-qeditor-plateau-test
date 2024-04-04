@@ -5,6 +5,7 @@ export declare type QJsonRetrievedType = string | {
     qjson: string;
 };
 export interface IQJsonRetriever extends IContextItem {
+    get disablePagePool(): boolean | undefined;
     retrieveQJsonAsync(qjsonPath: string, options?: {
         disableLoading?: boolean;
         mobileAnimation?: MobileAnimation;
