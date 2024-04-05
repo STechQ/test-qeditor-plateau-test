@@ -1,18 +1,17 @@
-import { ITheme } from "@stechquick/algae/lib/quick/IPlateauUI";
 import { ContextManager } from "../../../shrimp/context";
 import { Hook } from "../../../shrimp/helpers/hook";
 import { ILRID } from "../../../shrimp/interfaces/ComponentInterfaces/ILocalResource";
 import { IQJSon } from "../../../shrimp/interfaces/ComponentInterfaces/IQJson";
 import { IDictionary } from "../../../shrimp/interfaces/IDictionary";
-import { DisplayHookCb, IDory, PartialDisplayHookCb } from "../../../shrimp/interfaces/RenderingInterfaces/IDory";
-import { IPageCompletedCb, IPageRenderStartedCb } from "../../../shrimp/interfaces/RenderingInterfaces/ILifeCycleCb";
-import { IDoryRenderer, IRenderer, ISettingsQJsonContext } from "../../../shrimp/interfaces/RenderingInterfaces/IRenderer";
-import { IRendererOperatorCollection } from "../../../shrimp/interfaces/RenderingInterfaces/Operators/IRendererOperatorCollection";
 import { IConfig } from "../../../shrimp/interfaces/quick/IConfig";
 import { INavigationDemand } from "../../../shrimp/interfaces/quick/INavigationDemand";
 import { INavigationOptions } from "../../../shrimp/interfaces/quick/INavigationManager";
 import { PlatformType } from "../../../shrimp/interfaces/quick/IPlatform";
 import { ISiteSettings } from "../../../shrimp/interfaces/quick/ISiteSettings";
+import { DisplayHookCb, IDory, PartialDisplayHookCb } from "../../../shrimp/interfaces/RenderingInterfaces/IDory";
+import { IPageCompletedCb, IPageRenderStartedCb } from "../../../shrimp/interfaces/RenderingInterfaces/ILifeCycleCb";
+import { IDoryRenderer, IRenderer, ISettingsQJsonContext } from "../../../shrimp/interfaces/RenderingInterfaces/IRenderer";
+import { IRendererOperatorCollection } from "../../../shrimp/interfaces/RenderingInterfaces/Operators/IRendererOperatorCollection";
 import { DoryRendererChild } from "./RendererChild";
 export declare class Renderer implements IRenderer {
     context: ContextManager;
@@ -59,8 +58,6 @@ export declare class Renderer implements IRenderer {
     private getPageName;
     Trigger(eventName: string, parameters: Record<string, any>): any;
     SetEditMode(state: boolean): void;
-    SetThemeName(themeName: string): void;
-    SetThemes(themes: ITheme[]): void;
 }
 export declare class DoryRenderer extends Renderer implements IDoryRenderer {
     get DoryInst(): IDory;

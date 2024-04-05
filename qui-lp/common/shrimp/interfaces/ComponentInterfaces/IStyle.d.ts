@@ -4,6 +4,7 @@ export interface StyleItem {
     [key: string]: StyleValue | undefined;
     default?: StyleValue;
 }
+export declare type StyleJson = Record<string, StyleItem>;
 export interface IComponentStyleInlineInterface {
     [key: string]: Array<IComponentInternalSI>;
 }
@@ -23,7 +24,6 @@ export interface IComponentStyleKey {
     value?: string;
     key?: string;
     [key: string]: string | boolean | undefined;
-    disabled?: boolean;
 }
 export declare const COMPONENT_STYLE_TYPE: {
     "color-picker": string;

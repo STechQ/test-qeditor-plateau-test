@@ -10,7 +10,6 @@ export default class QJsonRetrieverImpl implements IQJsonRetriever {
     private externalQJsonRetriever?;
     private get qjsonDirectPath();
     private get qjsonUrlPrefix();
-    get disablePagePool(): boolean | undefined;
     constructor({ contextName, network, settingsWrapper }: {
         contextName: string;
         network: NetworkManagerImpl;

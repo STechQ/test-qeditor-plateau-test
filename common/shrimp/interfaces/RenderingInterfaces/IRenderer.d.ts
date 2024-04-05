@@ -1,9 +1,9 @@
-import { ITheme } from "@stechquick/algae/lib/quick/IPlateauUI";
 import { IContextItem } from "../../context";
 import { Hook } from "../../helpers/hook";
 import { IComponentCollection } from "../ComponentInterfaces/IComponentCollection";
 import { ILRID } from "../ComponentInterfaces/ILocalResource";
 import { IQJSon } from "../ComponentInterfaces/IQJson";
+import { StyleJson } from "../ComponentInterfaces/IStyle";
 import { IDictionary } from "../IDictionary";
 import { IConfig } from "../quick/IConfig";
 import { INavigationDemand } from "../quick/INavigationDemand";
@@ -63,8 +63,6 @@ export interface IRenderer {
     SetEditMode(state: boolean): void;
     Hibernate(): void;
     SetConfigValues(configValues?: IConfig[]): void;
-    SetThemeName(themeName: string): void;
-    SetThemes(themes: Array<ITheme>): void;
 }
 export interface ISettingsQJsonContext extends IContextItem {
     PipelineChangeHook: Hook<() => void>;
@@ -78,6 +76,8 @@ export interface ISettingsQJsonContext extends IContextItem {
     GetLoadingQjson(): IQJSon | undefined;
     SetLoadingQjson(qjson: IQJSon): void;
     SetGlobalLocalizationQjson(qJson: IQJSon): void;
+    GetQuickStyle(): StyleJson | undefined;
+    SetQuickStyle(styles?: StyleJson): void;
 }
 export interface IDoryRenderer extends IRenderer {
     readonly DoryInst: IDory;

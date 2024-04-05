@@ -1,15 +1,15 @@
-import { QJsonManagerForAIService } from "../../../shrimp/helpers/AIServiceHelper/QJsonManagerForAIService";
 import { PageScripting } from "../../../shrimp/helpers/scripting/PageScripting";
 import { TypeHelper } from "../../../shrimp/helpers/typeHelper";
 import { CType, ICompJson } from "../../../shrimp/interfaces/ComponentInterfaces/ICompJson";
 import { IComponentCollection } from "../../../shrimp/interfaces/ComponentInterfaces/IComponentCollection";
 import { IDictionary } from "../../../shrimp/interfaces/IDictionary";
-import { IRenderingManager } from "../../../shrimp/interfaces/RenderingInterfaces/IRenderingManager";
 import { ScriptLang } from "../../../shrimp/interfaces/Scripting/scriptLang";
 import { ContextManager } from "../../../shrimp/src/context/contextManager";
 import { BlockInfo } from "../Context/BlockInfo";
 import { ComponentCommunicator } from "../Helpers/ComponentCommunicator";
 import { Evaluator } from "./Evaluator";
+import { IRenderingManager } from "../../../shrimp/interfaces/RenderingInterfaces/IRenderingManager";
+import { QJsonManagerForAIService } from "../../../shrimp/helpers/AIServiceHelper/QJsonManagerForAIService";
 export declare class RenderingManager implements IRenderingManager {
     static ContextName: string;
     contextName: string;
@@ -58,7 +58,6 @@ export declare class RenderingManager implements IRenderingManager {
      */
     private GenerateDirectives;
     private CalculateStyle;
-    private matchThemeColors;
     private generatePropsFromStyle;
     private getItemValue;
     private GenerateChildren;

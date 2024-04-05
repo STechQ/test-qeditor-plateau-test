@@ -1,17 +1,14 @@
-import { ITheme } from "@stechquick/algae/lib/quick/IPlateauUI";
 import { ContextManager } from "../../shrimp/context";
 import { Hook } from "../../shrimp/helpers/hook";
 import { IComponentCollection } from "../../shrimp/interfaces/ComponentInterfaces/IComponentCollection";
 import { ILRID } from "../../shrimp/interfaces/ComponentInterfaces/ILocalResource";
 import { IQJSon } from "../../shrimp/interfaces/ComponentInterfaces/IQJson";
-import { IAssetList } from "../../shrimp/interfaces/ComponentInterfaces/IStyle";
 import { IDictionary } from "../../shrimp/interfaces/IDictionary";
-import { IConfig } from "../../shrimp/interfaces/quick/IConfig";
 import { IEditorInstance } from "../../shrimp/interfaces/quick/IEditorInstance";
-import { IRegionalDefinition } from "../../shrimp/interfaces/quick/IFormattingDefinition";
 import { INavigationDemand, INavigationDemandType } from "../../shrimp/interfaces/quick/INavigationDemand";
 import { PlatformType } from "../../shrimp/interfaces/quick/IPlatform";
 import { IQError } from "../../shrimp/interfaces/quick/IQError";
+import { IRegionalDefinition } from "../../shrimp/interfaces/quick/IFormattingDefinition";
 import { IShellConfiguration } from "../../shrimp/interfaces/quick/IShellConfiguration";
 import { ISiteSettings } from "../../shrimp/interfaces/quick/ISiteSettings";
 import { IStore } from "../../shrimp/interfaces/quick/IStore";
@@ -26,6 +23,8 @@ import { ScriptLang } from "../../shrimp/interfaces/Scripting/scriptLang";
 import { ShellConfiguration } from "./Config/ShellConfiguration";
 import { SharedStoreContext } from "./Context/Store/SharedStoreContext";
 import { HistoryItem } from "./Model/History/HistoryItem";
+import { IAssetList } from "../../shrimp/interfaces/ComponentInterfaces/IStyle";
+import { IConfig } from "../../shrimp/interfaces/quick/IConfig";
 export declare class Dory implements IDory {
     static ContextName: string;
     contextName: string;
@@ -57,8 +56,6 @@ export declare class Dory implements IDory {
     get isRenderCompleted(): boolean;
     private set isRenderCompleted(value);
     assetValues?: IAssetList;
-    private themes?;
-    private currentTheme?;
     constructor(interDoryContext: ContextManager);
     GetLRType(): string;
     SetLRType(LRType?: string, LRTypeRTL?: boolean): Promise<void>;
@@ -175,9 +172,5 @@ export declare class Dory implements IDory {
     clearStyleTag(): void;
     DeleteStyleSelector(compCollection: IComponentCollection, stylePropName: string, breakPoint?: string): void;
     DeleteStyleCompCollection(compCollection: IComponentCollection): void;
-    SetThemeName(themeName: string): void;
-    SetThemes(themes: Array<ITheme>): void;
-    GetCurrentTheme(): string | undefined;
-    GetThemes(): ITheme[] | undefined;
 }
 //# sourceMappingURL=Dory.d.ts.map
