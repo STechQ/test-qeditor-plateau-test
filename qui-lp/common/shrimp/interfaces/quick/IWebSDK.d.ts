@@ -1,15 +1,15 @@
 import { IExternalQJsonRetriever } from "@stechquick/algae/lib/quick/IExternalQJsonRetriever";
+import { IAppSettings } from "@stechquick/algae/lib/quick/IPlateauUI";
 import { IComponent } from "../ComponentInterfaces/IComponent";
 import { IVersion } from "../ComponentInterfaces/IVersion";
 import { IDomElement } from "../RenderingInterfaces/IDomElement";
 import { IRenderer } from "../RenderingInterfaces/IRenderer";
 import { IRendererConfig } from "../RenderingInterfaces/IRendererConfig";
+import { IConfig } from "./IConfig";
 import { IContainerServices } from "./IContainerServices";
 import { IRegionalDefinition } from "./IFormattingDefinition";
 import { IUXManager } from "./IUXManager";
 import { IWebSDKSetingsBus } from "./IWebSDKSettingsBus";
-import { IConfig } from "./IConfig";
-import { IAppSettings } from "@stechquick/algae/lib/quick/IPlateauUI";
 export interface IWebSDKSettingsWrapper {
     settings: IWebSDKSettings;
 }
@@ -55,11 +55,11 @@ export interface IWebSDKSettings {
     title?: string;
     favicon?: string;
     minEngineLogLevel?: string;
-    quickStyle?: string;
     versions?: IVersion;
     useLocalProxyOnClient?: boolean;
     configValues?: IConfig[];
     appSettings?: IAppSettings;
+    disablePagePool?: boolean;
 }
 export interface IBackendInf {
     containerName?: any;

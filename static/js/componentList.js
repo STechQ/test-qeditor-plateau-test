@@ -2590,7 +2590,8 @@ nextIcon = 'mdi-plus'}`
             type: Boolean
         },
         method: {
-            type: String
+            type: String,
+            options: ["'post'"]
         },
         validate: {
             type: Function

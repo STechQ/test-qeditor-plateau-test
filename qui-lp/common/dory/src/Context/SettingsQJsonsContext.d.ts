@@ -1,7 +1,6 @@
 import { ContextManager, IContextItem } from "../../../shrimp/context";
 import { Hook } from "../../../shrimp/helpers/hook";
 import { IQJSon } from "../../../shrimp/interfaces/ComponentInterfaces/IQJson";
-import { StyleJson } from "../../../shrimp/interfaces/ComponentInterfaces/IStyle";
 import { IDory } from "../../../shrimp/interfaces/RenderingInterfaces/IDory";
 import { ISettingsQJsonContext } from "../../../shrimp/interfaces/RenderingInterfaces/IRenderer";
 export declare class SettingsQJsonsContext implements ISettingsQJsonContext, IContextItem {
@@ -14,7 +13,6 @@ export declare class SettingsQJsonsContext implements ISettingsQJsonContext, ICo
     private pipelineQjson?;
     private alertQjson?;
     private loadingQjson?;
-    private _quickStyle?;
     private dory;
     constructor({ context, dory }: {
         context: ContextManager;
@@ -28,8 +26,6 @@ export declare class SettingsQJsonsContext implements ISettingsQJsonContext, ICo
     SetLoadingQjson(qjson: IQJSon): void;
     GetLoadingQjson(): IQJSon | undefined;
     SetGlobalLocalizationQjson(qJson: IQJSon): void;
-    GetQuickStyle(): StyleJson | undefined;
-    SetQuickStyle(value: StyleJson | undefined): void;
     TriggerPipeline(methodName: string, methodArgs: Record<string, any>): Promise<any> | any;
     RerenderPipelineQjson(): Promise<void> | undefined;
 }
