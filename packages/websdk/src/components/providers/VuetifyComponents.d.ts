@@ -49,6 +49,7 @@ declare const vuetifyLibrary: {
     VListItemSubtitle: any;
     VListItemActionText: any;
     VListItemContent: any;
+    VListItemIcon: any;
     VNavigationDrawer: any;
     VOverflowBtn: any;
     VOverlay: any;
