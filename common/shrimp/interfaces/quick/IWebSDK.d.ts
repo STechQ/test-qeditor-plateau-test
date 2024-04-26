@@ -30,6 +30,7 @@ export interface IWebSDKSettings {
     backendInf?: IBackendInf;
     regionalDefinition?: Array<IRegionalDefinition>;
     cssPath?: Array<string> | Record<string, Array<string>>;
+    fontPath?: Array<IFontSettings>;
     enableClientCache?: boolean;
     serviceWorkerPath?: string;
     pipelineqjson?: string;
@@ -60,6 +61,13 @@ export interface IWebSDKSettings {
     configValues?: IConfig[];
     appSettings?: IAppSettings;
     disablePagePool?: boolean;
+}
+export interface IFontSettings {
+    id: string;
+    fontName: string;
+    fontWeights: Array<string> | number;
+    path?: string;
+    combinedFont?: string;
 }
 export interface IBackendInf {
     containerName?: any;

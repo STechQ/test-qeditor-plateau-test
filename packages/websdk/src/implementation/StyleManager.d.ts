@@ -1,5 +1,6 @@
 import { IComponentCollection } from "../../../../common/shrimp/interfaces/ComponentInterfaces/IComponentCollection";
 import { IStyleManager } from "../../../../common/shrimp/interfaces/quick/IStyleManager";
+import { IFontSettings } from "../../../../common/shrimp/interfaces/quick/IWebSDK";
 export declare class StyleManager implements IStyleManager {
     private static styleTag;
     private static themeTag;
@@ -9,6 +10,7 @@ export declare class StyleManager implements IStyleManager {
     static resetDict(): void;
     static clearStyleTag(): void;
     static createStyleTag(): void;
+    static createFontFace(fonts?: Array<IFontSettings>, isSourceFromPath?: boolean): void;
     private static exceptionalComponents;
     private static decideCompStyleWithDict;
     static matchComponentStyles: (compCollection: IComponentCollection) => void;
