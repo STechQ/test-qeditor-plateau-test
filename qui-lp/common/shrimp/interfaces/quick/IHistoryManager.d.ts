@@ -13,5 +13,6 @@ export interface IHistoryManager {
     Back(options: INavigationDemand): void;
     Forward(options: INavigationDemand): void;
     GetCreaterComp(): IComponentCollection | undefined;
+    GetComponentByType(typeName: string, levelIndex?: number): IComponentCollection | null;
 }
 //# sourceMappingURL=IHistoryManager.d.ts.map

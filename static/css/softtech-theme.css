@@ -655,6 +655,24 @@ body .v-application .v-tabs {
 /* V3.2 Changes */
 
 /* Bileşen değer farklılıklarının hesaplanması ve bileşenlere yansıltılması*/
+.sftt-value-none.v-text-field fieldset,
+.sftt-value-none.v-text-field--outlined fieldset {
+  border: 5px solid #CFD8DC !important; /*  blue-grey-lighten-4 https://vuetifyjs.com/en/styles/colors/#material-colors */
+  border-radius: 5px !important;
+}
+
+.v-input--checkbox.sftt-value-none,
+.v-input--radio-group.sftt-value-none,
+.v-radio.sftt-value-none {
+  border: 5px solid #CFD8DC !important;
+  border-radius: 5px !important;
+}
+
+.v-data-table .sftt-value-none.v-chip {
+  background-color: #CFD8DC !important;
+}
+
+
 .sftt-value-saved.v-text-field fieldset,
 .sftt-value-saved.v-text-field--outlined fieldset {
   border: 5px solid #c5e1a5 !important;

@@ -6,7 +6,7 @@ export declare enum ValueTypeClasses {
     saved = "sftt-value-saved",
     updated = "sftt-value-updated",
     removed = "sftt-value-removed",
-    none = ""
+    none = "sftt-value-none"
 }
 export declare enum ValueStatus {
     saved = "saved",
@@ -63,6 +63,7 @@ export declare class compDiffHelper {
     private static displayTooltip;
     private static calcComparisonClass;
     static removeValueClass(componentClass?: string): string;
+    static includeNoneValueClass(componentClass?: string): boolean;
     /**
      * Compare given parameters and set the Tooltip, Chip and Label fields
      * @param compJson Reference component json
