@@ -1,4 +1,4 @@
-import { ITheme } from "@stechquick/algae/lib/quick/IPlateauUI";
+import { ITheme } from "@stechquick/algae/lib/quick/ITheme";
 import { ContextManager } from "../../shrimp/context";
 import { Hook } from "../../shrimp/helpers/hook";
 import { IComponentCollection } from "../../shrimp/interfaces/ComponentInterfaces/IComponentCollection";

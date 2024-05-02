@@ -1,4 +1,4 @@
-import { IThemeSettings } from "@stechquick/algae/lib/quick/IPlateauUI";
+import { IThemeSettings } from "@stechquick/algae/lib/quick/ITheme";
 import Vue from "vue";
 import { QShell } from "../../../../common/qshell";
 import { ContextManager } from "../../../../common/shrimp/context";

@@ -23,7 +23,7 @@ import { IRendererOperatorCollection } from "./Operators/IRendererOperatorCollec
 import { IStore } from "../quick/IStore";
 import { IAssetList } from "../ComponentInterfaces/IStyle";
 import { IConfig } from "../quick/IConfig";
-import { ITheme } from "@stechquick/algae/lib/quick/IPlateauUI";
+import { ITheme } from "@stechquick/algae/lib/quick/ITheme";
 export declare type PartialDisplayHookCb = (elements: Array<IDomElement>, pageId?: string, pageName?: string, navigationDirection?: INavigationDemandType, override?: boolean, doryJr?: IDoryJr | undefined, additioanls?: any | undefined) => void;
 export declare type DisplayHookCb = (elements: IDomElement[], pageId?: string, pageName?: string, navigationDirection?: INavigationDemandType, additionals?: any, noHistory?: boolean) => void;
 export interface IGoHistoryOptions {

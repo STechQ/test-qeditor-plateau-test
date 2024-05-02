@@ -1,5 +1,4 @@
 import { IStyleChild } from "./ICompJson";
-import { FontOptions } from "@stechquick/algae/lib/quick/IPlateauUI";
 export declare type StyleValue = Record<string, string | undefined | Record<string, string>>;
 export interface StyleItem {
     [key: string]: StyleValue | undefined;
@@ -50,20 +49,4 @@ export interface IComponentDefinition {
     hideStyledCompField?: boolean;
 }
 export declare type IAssetList = Record<string, Record<string, StyleValue>>;
-export declare enum FontWeights {
-    "Thin - 100" = 100,
-    "Extra Light - 200" = 200,
-    "Light - 300" = 300,
-    "Regular - 400" = 400,
-    "Medium - 500" = 500,
-    "SemiBold - 600" = 600,
-    "Bold - 700" = 700,
-    "Extra Bold - 800" = 800,
-    "Black - 900" = 900,
-    "Weight - 1000" = 1000
-}
-export declare enum FontStyles {
-    "Italic" = 0
-}
-export declare const getDefaultFonts: () => FontOptions[];
 //# sourceMappingURL=IStyle.d.ts.map
