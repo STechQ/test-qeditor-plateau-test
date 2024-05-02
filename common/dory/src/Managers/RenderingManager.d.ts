@@ -58,7 +58,8 @@ export declare class RenderingManager implements IRenderingManager {
      */
     private GenerateDirectives;
     private CalculateStyle;
-    private matchThemeColors;
+    private matchTheme;
+    private matchThemeFonts;
     private generatePropsFromStyle;
     private getItemValue;
     private GenerateChildren;

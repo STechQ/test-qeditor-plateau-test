@@ -231,9 +231,10 @@ export interface IGlobals_Quick {
          *
          * @function
          * @param {string} themeName - The name of the theme to set.
+         * @param {string} isLight - Apply light or dark version of the current theme.
          * @returns {void}
         */
-        setTheme: (themeName: string) => void;
+        setTheme: (themeName: string, isLight?: boolean) => void;
         /**
          * Retrieves the list of available themes.
          *

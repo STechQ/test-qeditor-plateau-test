@@ -59,7 +59,10 @@ export declare class Renderer implements IRenderer {
     private getPageName;
     Trigger(eventName: string, parameters: Record<string, any>): any;
     SetEditMode(state: boolean): void;
-    SetThemeName(themeName: string): void;
+    SetThemeName(theme: {
+        isLight: boolean;
+        name: string;
+    }): void;
     SetThemes(themes: ITheme[]): void;
 }
 export declare class DoryRenderer extends Renderer implements IDoryRenderer {

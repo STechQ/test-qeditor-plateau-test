@@ -99,6 +99,6 @@ export declare class HistoryItem implements IHistoryItem {
      * @returns boolean
      */
     private findComparisonCompAndReplace;
-    themeConfiguration(context: ContextManager, themeName: string): void;
+    themeConfiguration(context: ContextManager, themeName: string, isLight?: boolean): void;
 }
 //# sourceMappingURL=HistoryItem.d.ts.map

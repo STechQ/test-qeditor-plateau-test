@@ -175,9 +175,15 @@ export declare class Dory implements IDory {
     clearStyleTag(): void;
     DeleteStyleSelector(compCollection: IComponentCollection, stylePropName: string, breakPoint?: string): void;
     DeleteStyleCompCollection(compCollection: IComponentCollection): void;
-    SetThemeName(themeName: string): void;
+    SetThemeName(theme: {
+        isLight: boolean;
+        name: string;
+    }): void;
     SetThemes(themes: Array<ITheme>): void;
-    GetCurrentTheme(): string | undefined;
+    GetCurrentTheme(): {
+        isLight: boolean;
+        name: string;
+    } | undefined;
     GetThemes(): ITheme[] | undefined;
 }
 //# sourceMappingURL=Dory.d.ts.map

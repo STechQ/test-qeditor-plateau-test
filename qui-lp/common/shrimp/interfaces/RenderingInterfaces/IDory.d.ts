@@ -133,9 +133,15 @@ export interface IDory extends IContextItem {
     ResetStyleDict(): void;
     DeleteStyleSelector(compCollection: IComponentCollection, stylePropName: string, breakPoint?: string): void;
     DeleteStyleCompCollection(compCollection: IComponentCollection): void;
-    SetThemeName(themeName: string): void;
+    SetThemeName(theme: {
+        isLight: boolean;
+        name: string;
+    }): void;
     SetThemes(themes: Array<ITheme>): void;
-    GetCurrentTheme(): string | undefined;
+    GetCurrentTheme(): {
+        isLight: boolean;
+        name: string;
+    } | undefined;
     GetThemes(): Array<ITheme> | undefined;
 }
 export declare const DoryContextName = "Dory";

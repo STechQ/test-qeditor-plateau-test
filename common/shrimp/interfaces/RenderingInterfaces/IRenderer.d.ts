@@ -63,7 +63,10 @@ export interface IRenderer {
     SetEditMode(state: boolean): void;
     Hibernate(): void;
     SetConfigValues(configValues?: IConfig[]): void;
-    SetThemeName(themeName: string): void;
+    SetThemeName(theme: {
+        isLight: boolean;
+        name: string;
+    }): void;
     SetThemes(themes: Array<ITheme>): void;
 }
 export interface ISettingsQJsonContext extends IContextItem {

@@ -1,4 +1,5 @@
 import { IStyleChild } from "./ICompJson";
+import { FontOptions } from "@stechquick/algae/lib/quick/IPlateauUI";
 export declare type StyleValue = Record<string, string | undefined | Record<string, string>>;
 export interface StyleItem {
     [key: string]: StyleValue | undefined;
@@ -64,4 +65,5 @@ export declare enum FontWeights {
 export declare enum FontStyles {
     "Italic" = 0
 }
+export declare const getDefaultFonts: () => FontOptions[];
 //# sourceMappingURL=IStyle.d.ts.map
