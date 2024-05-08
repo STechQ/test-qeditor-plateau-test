@@ -35,13 +35,17 @@ export interface IRenderer {
     readonly BeforeRenderStartHook: Hook<() => void>;
     DisplayHook: Hook<DisplayHookCb>;
     settingsQJsons: ISettingsQJsonContext;
-    Render({ pjsonPath, compParentInst, storeItems, pageId, pageName, pjsonContent }: {
+    Render({ pjsonPath, compParentInst, storeItems, pageId, pageName, pjsonContent, theme }: {
         pjsonPath?: string;
         compParentInst?: any;
         storeItems?: IDictionary<any>;
         pageId?: string;
         pageName?: string;
         pjsonContent?: any;
+        theme?: {
+            name: string;
+            isLight: boolean;
+        };
     }): void;
     Back(): void;
     Forward(): void;
@@ -68,6 +72,7 @@ export interface IRenderer {
         name: string;
     }): void;
     SetThemes(themes: Array<ITheme>): void;
+    SetThemeMode(isLight: boolean): void;
 }
 export interface ISettingsQJsonContext extends IContextItem {
     PipelineChangeHook: Hook<() => void>;

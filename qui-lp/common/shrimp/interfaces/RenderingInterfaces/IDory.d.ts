@@ -38,12 +38,16 @@ export interface IDory extends IContextItem {
     PageRenderStartedHook: Hook<IPageRenderStartedCb>;
     SettingsQJsonContext: ISettingsQJsonContext;
     platformType: PlatformType;
-    Render({ qjson, compParentInst, storeItems, pageId, pageName }: {
+    Render({ qjson, compParentInst, storeItems, pageId, pageName, theme }: {
         qjson: IQJSon;
         compParentInst?: any;
         storeItems?: IDictionary<any>;
         pageId?: string;
         pageName?: string;
+        theme?: {
+            name: string;
+            isLight: boolean;
+        };
     }): Promise<void>;
     SetDisplayCallBack({ callBackFunc }: {
         callBackFunc: DisplayHookCb;
@@ -143,6 +147,7 @@ export interface IDory extends IContextItem {
         name: string;
     } | undefined;
     GetThemes(): Array<ITheme> | undefined;
+    SetThemeMode(isLight: boolean): void;
 }
 export declare const DoryContextName = "Dory";
 //# sourceMappingURL=IDory.d.ts.map

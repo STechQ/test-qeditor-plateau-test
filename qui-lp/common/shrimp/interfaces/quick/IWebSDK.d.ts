@@ -61,7 +61,6 @@ export interface IWebSDKSettings {
     configValues?: IConfig[];
     appSettings?: IAppSettings;
     disablePagePool?: boolean;
-    blockFontRequest?: boolean;
 }
 export interface IFontSettings {
     id: string;

@@ -65,12 +65,16 @@ export declare class Dory implements IDory {
     SetConfigValues(configValues?: IConfig[]): void;
     GetConfigValues(key: string): IConfig | undefined;
     SetGlobalLRDict(GlobalLRDict?: ILRID): void;
-    Render({ qjson, compParentInst, storeItems, pageId, pageName }: {
+    Render({ qjson, compParentInst, storeItems, pageId, pageName, theme }: {
         qjson: IQJSon;
         compParentInst?: any;
         storeItems?: IDictionary<any>;
         pageId?: string;
         pageName?: string;
+        theme?: {
+            name: string;
+            isLight: boolean;
+        };
     }): Promise<void>;
     GetCurrentHistoryItem(): HistoryItem | null | undefined;
     private PageCompleted;
@@ -185,5 +189,6 @@ export declare class Dory implements IDory {
         name: string;
     } | undefined;
     GetThemes(): ITheme[] | undefined;
+    SetThemeMode(isLight: boolean): void;
 }
 //# sourceMappingURL=Dory.d.ts.map
