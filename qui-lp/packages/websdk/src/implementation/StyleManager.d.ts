@@ -9,7 +9,7 @@ export declare class StyleManager implements IStyleManager {
     private static compStyleDict;
     static resetDict(): void;
     static clearStyleTag(): void;
-    static createStyleTag(): void;
+    static createStyleTag(blokFontRequest?: boolean): void;
     static createFontFace(fonts?: Array<IFontSettings>, isSourceFromPath?: boolean): void;
     private static exceptionalComponents;
     private static decideCompStyleWithDict;

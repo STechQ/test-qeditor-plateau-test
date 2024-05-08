@@ -27,7 +27,7 @@ export declare class Renderer implements IRenderer {
         doryInstanceName?: string;
         operatorCollection: IRendererOperatorCollection;
     });
-    Render({ pjsonPath, compParentInst, storeItems, pageId, pageName, pjsonContent, options, theme }: {
+    Render({ pjsonPath, compParentInst, storeItems, pageId, pageName, pjsonContent, options }: {
         pjsonPath?: string;
         compParentInst?: any;
         storeItems?: IDictionary<any>;
@@ -35,10 +35,6 @@ export declare class Renderer implements IRenderer {
         pageName?: string;
         pjsonContent?: IQJSon;
         options?: INavigationOptions;
-        theme?: {
-            name: string;
-            isLight: boolean;
-        };
     }): Promise<void>;
     CreateChildRenderer(compUIDPrefix?: string): DoryRendererChild;
     SetLRType(LRType?: string): void;
@@ -68,7 +64,6 @@ export declare class Renderer implements IRenderer {
         name: string;
     }): void;
     SetThemes(themes: ITheme[]): void;
-    SetThemeMode(isLight: boolean): void;
 }
 export declare class DoryRenderer extends Renderer implements IDoryRenderer {
     get DoryInst(): IDory;
