@@ -1,0 +1,2257 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrCompare",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"EndRender": {
+					"H": "components.EdtrComp_39.qValue = true;\r\ncomponents.EdtrComp_39.compareValue = false;\r\n\r\ncomponents.EdtrComp_77.qValue = 1;\r\ncomponents.EdtrComp_77.compareValue = 0;\r\n\r\n\r\n\r\ncomponents.mySaved.qValue = \"Saved Value\";\r\ncomponents.mySaved.compareValue = undefined;\r\n\r\n\r\ncomponents.myUpdated.qValue = \"Updated Value\";\r\ncomponents.myUpdated.compareValue = \"Old Value\";\r\n\r\ncomponents.myDeleted.qValue = undefined;\r\ncomponents.myDeleted.compareValue = \"Removed Comp Value\";\r\n\r\ncomponents.myUnchanged.qValue = \"UnChanged Value\";\r\ncomponents.myUnchanged.compareValue = \"UnChanged Value\";\r\n\r\n\r\ncomponents.myTable.items = [{ID : 1, name : 'Frozens Yogurt New', calories : 159, fat : '6.0', carbs : 24, protein : '4.0', iron : ''},\r\n{ID : 2, name : 'Ice cream sandwich', calories : 237, fat : '10.0', carbs : 37, protein : '', iron : ''},\r\n{ID : 3, name : 'Eclair', calories : 270, fat : '16.0', carbs : 23, protein : '6.0', iron : '7%'},\r\n{ID : 4, name : 'Cupcake', calories : 305, fat : '3.7', carbs : 67, protein : '4.2', iron : '10%'},\r\n{ID : 5, name : 'Gingerbread',calories : 356, fat : '16.0', carbs : 49, protein : '3.9', iron : '16%'},\r\n{ID : 6, name : 'Jelly bean', calories : '',  fat : '0.0', carbs : 94, protein : '0.0', iron : '0%'},\r\n{ID : 7, name : 'Lollipop', calories : 392, fat : '0.2', carbs : 98, protein : '0.0', iron : '2 %'},\r\n{ID : 8, name : 'Honeycomb', calories : 408, fat : '3.2', carbs : 87, protein : '6.5', iron : '45%'},\r\n{ID : 9, name : 'Donut', calories : 452, fat : '25.0', carbs : 51, protein : '4.9', iron : '22%'},\r\n{ID : 10, name : '', calories : 518, fat : '26.0', carbs : 65, protein : '7', iron:  '6 %'}];\r\n\r\n\r\ncomponents.myTable.compareValue = [{ID : 1, name : 'Frozens Yogurt', fat : '6.0', carbs : 24, protein : '4.0', iron : '1%'},\r\n{ID : 2, name : 'Ice cream sandwich', calories : 237, fat : '9.0', carbs : 37, protein : '4.3', iron : '1%'},\r\n{ID : 3, name : 'Eclair', calories : 262, fat : '16.0', carbs : 23, protein : '6.0', iron : '7%'},\r\n{ID : 4, name : 'Cupcake', calories : 305, fat : '3.7', carbs : 67, protein : '10.3', iron : '8%'},\r\n{ID : 5, fat : '16.0', carbs : 49, protein : '3.9'},\r\n{ID : 6, name : 'Jelly bean', calories : 375,  fat : '0.0', carbs : 94, protein : '0.0', iron : '0%'},\r\n{ID : 7, name : 'Lollipop', fat : '0.2', carbs : 98, protein : '0.0', iron : '2 %'},\r\n{ID : 8, name : 'Honeycomb', calories : 408, fat : '3.2', carbs : 87, protein : '6.5', iron : '45%'},\r\n{ID : 9, name : 'Donut', calories : 452, fat : '25.0', carbs : 51, protein : '4.9', iron : '22%'},\r\n{ID : 10, name : 'KitKat', calories : 518, fat : '26.0', carbs : 50, iron:  '5 %'}];",
+					"HL": "TS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_3"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": ""
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_8",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_10",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_12",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLegend",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_1",
+																	"T": "prop"
+																},
+																"QJsonPath": {
+																	"H": "'qjson://QLegend'",
+																	"T": "prop"
+																},
+																"showUnchanged": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_1"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": ""
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_12"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												},
+												"compDomClasses": "col d-flex flex-column"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_10"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_14",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_15",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VTextField",
+															"P": {
+																"ID": {
+																	"H": "mySaved",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "'Saved Text field label'",
+																	"T": "prop"
+																},
+																"regular": {
+																	"H": "'true'",
+																	"T": "prop"
+																},
+																"outlined": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_4"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "v-input theme--light v-text-field v-text-field--enclosed v-text-field--outlined sftt-value-removed sftt-value-removed sftt-value-removed"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_15"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												},
+												"compDomClasses": "col d-flex flex-column"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_14"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_28",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_29",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VTextField",
+															"P": {
+																"ID": {
+																	"H": "myUpdated",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "'Updated Text field label'",
+																	"T": "prop"
+																},
+																"regular": {
+																	"H": "'true'",
+																	"T": "prop"
+																},
+																"outlined": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_30"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "v-input theme--light v-text-field v-text-field--enclosed v-text-field--outlined sftt-value-removed sftt-value-removed sftt-value-removed"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_29"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												},
+												"compDomClasses": "col d-flex flex-column"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_28"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_2",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_5",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VTextField",
+															"P": {
+																"ID": {
+																	"H": "myDeleted",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "'Removed Text field label'",
+																	"T": "prop"
+																},
+																"regular": {
+																	"H": "'true'",
+																	"T": "prop"
+																},
+																"outlined": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"placeholder": {
+																	"H": "'Removed Comp Value'",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_6"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "v-input theme--light v-text-field v-text-field--enclosed v-text-field--outlined sftt-value-removed sftt-value-removed sftt-value-removed"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_5"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												},
+												"compDomClasses": "col d-flex flex-column"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_2"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_136",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_137",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VTextField",
+															"P": {
+																"ID": {
+																	"H": "myUnchanged",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "'Text field label'",
+																	"T": "prop"
+																},
+																"regular": {
+																	"H": "'true'",
+																	"T": "prop"
+																},
+																"outlined": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_138"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "v-input theme--light v-text-field v-text-field--enclosed v-text-field--outlined sftt-value-removed sftt-value-removed sftt-value-removed"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_137"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												},
+												"compDomClasses": "col d-flex flex-column"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_136"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_97",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VDataTable",
+															"P": {
+																"ID": {
+																	"H": "myTable",
+																	"T": "prop"
+																},
+																"footerProps": {
+																	"H": "{showFirstLastPage = true,\nfirstIcon = 'mdi-arrow-collapse-left',\nlastIcon = 'mdi-arrow-collapse-right',\nprevIcon = 'mdi-minus',\nnextIcon = 'mdi-plus'}",
+																	"T": "prop"
+																},
+																"headers": {
+																	"H": "[{ text = 'Dessert (100g serving)', align= 'start', sortable= false, value= 'name'},\n{ text = 'Calories', value= 'calories', sortable = true },\n{ text = 'Fat (g)', value= 'fat' },\n{ text = 'Carbs (g)', value= 'carbs' },\n{ text = 'Protein (g)', value= 'protein' },\n{ text = 'Iron (%)', value= 'iron' }]",
+																	"T": "prop"
+																},
+																"items": {
+																	"H": "[{name = 'Frozens Yogurt', calories = 159, fat = '6.0', carbs = 24, protein = '4.0', iron = '1%'},\n{name = 'Ice cream sandwich', calories = 237, fat = '9.0', carbs = 37, protein = '4.3', iron = '1%'},\n{name = 'Eclair', calories = 262, fat = '16.0', carbs = 23, protein = '6.0', iron = '7%'},\n{name = 'Cupcake', calories = 305, fat = '3.7', carbs = 67, protein = '4.3', iron = '8%'},\n{name = 'Gingerbread',calories = 356, fat = '16.0', carbs = 49, protein = '3.9', iron = '16%'},\n{name = 'Jelly bean', calories = 375,  fat = '0.0', carbs = 94, protein = '0.0', iron = '0%'},\n{name = 'Lollipop', calories = 392, fat = '0.2', carbs = 98, protein = '0.0', iron = '2 %'},\n{name = 'Honeycomb', calories = 408, fat = '3.2', carbs = 87, protein = '6.5', iron = '45%'},\n{name = 'Donut', calories = 452, fat = '25.0', carbs = 51, protein = '4.9', iron = '22%'},\n{name = 'KitKat', calories = 518, fat = '26.0', carbs = 65, protein = '7', iron=  '6 %'}]",
+																	"T": "prop"
+																},
+																"itemsPerPage": {
+																	"H": "5",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"CompareDataField": {
+																	"H": "'ID'",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_86"
+															},
+															"O": {
+																"cType": "scopedSlot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_110",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_110"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_97"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_146",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VRadioGroup",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_77",
+																	"T": "prop"
+																},
+																"column": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "'My Radio'",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VRadio",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_91",
+																					"T": "prop"
+																				},
+																				"label": {
+																					"H": "'Test radio label 1'",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_91"
+																			},
+																			"O": {
+																				"cType": "child"
+																			}
+																		},
+																		{
+																			"T": "VRadio",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_105",
+																					"T": "prop"
+																				},
+																				"label": {
+																					"H": "'Test radio label 1'",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_105"
+																			},
+																			"O": {
+																				"cType": "child"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_77"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														},
+														{
+															"T": "VCheckbox",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_39",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "'primary'",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "'My CheckBox'",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_39"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_161",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_161"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_146"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_8"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrCompare",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"EndRender": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ncomponents.EdtrComp_39.qValue = true;\r\ncomponents.EdtrComp_39.compareValue = false;\r\ncomponents.EdtrComp_77.qValue = 1;\r\ncomponents.EdtrComp_77.compareValue = 0;\r\ncomponents.mySaved.qValue = \"Saved Value\";\r\ncomponents.mySaved.compareValue = undefined;\r\ncomponents.myUpdated.qValue = \"Updated Value\";\r\ncomponents.myUpdated.compareValue = \"Old Value\";\r\ncomponents.myDeleted.qValue = undefined;\r\ncomponents.myDeleted.compareValue = \"Removed Comp Value\";\r\ncomponents.myUnchanged.qValue = \"UnChanged Value\";\r\ncomponents.myUnchanged.compareValue = \"UnChanged Value\";\r\ncomponents.myTable.items = [{ ID: 1, name: 'Frozens Yogurt New', calories: 159, fat: '6.0', carbs: 24, protein: '4.0', iron: '' },\r\n    { ID: 2, name: 'Ice cream sandwich', calories: 237, fat: '10.0', carbs: 37, protein: '', iron: '' },\r\n    { ID: 3, name: 'Eclair', calories: 270, fat: '16.0', carbs: 23, protein: '6.0', iron: '7%' },\r\n    { ID: 4, name: 'Cupcake', calories: 305, fat: '3.7', carbs: 67, protein: '4.2', iron: '10%' },\r\n    { ID: 5, name: 'Gingerbread', calories: 356, fat: '16.0', carbs: 49, protein: '3.9', iron: '16%' },\r\n    { ID: 6, name: 'Jelly bean', calories: '', fat: '0.0', carbs: 94, protein: '0.0', iron: '0%' },\r\n    { ID: 7, name: 'Lollipop', calories: 392, fat: '0.2', carbs: 98, protein: '0.0', iron: '2 %' },\r\n    { ID: 8, name: 'Honeycomb', calories: 408, fat: '3.2', carbs: 87, protein: '6.5', iron: '45%' },\r\n    { ID: 9, name: 'Donut', calories: 452, fat: '25.0', carbs: 51, protein: '4.9', iron: '22%' },\r\n    { ID: 10, name: '', calories: 518, fat: '26.0', carbs: 65, protein: '7', iron: '6 %' }];\r\ncomponents.myTable.compareValue = [{ ID: 1, name: 'Frozens Yogurt', fat: '6.0', carbs: 24, protein: '4.0', iron: '1%' },\r\n    { ID: 2, name: 'Ice cream sandwich', calories: 237, fat: '9.0', carbs: 37, protein: '4.3', iron: '1%' },\r\n    { ID: 3, name: 'Eclair', calories: 262, fat: '16.0', carbs: 23, protein: '6.0', iron: '7%' },\r\n    { ID: 4, name: 'Cupcake', calories: 305, fat: '3.7', carbs: 67, protein: '10.3', iron: '8%' },\r\n    { ID: 5, fat: '16.0', carbs: 49, protein: '3.9' },\r\n    { ID: 6, name: 'Jelly bean', calories: 375, fat: '0.0', carbs: 94, protein: '0.0', iron: '0%' },\r\n    { ID: 7, name: 'Lollipop', fat: '0.2', carbs: 98, protein: '0.0', iron: '2 %' },\r\n    { ID: 8, name: 'Honeycomb', calories: 408, fat: '3.2', carbs: 87, protein: '6.5', iron: '45%' },\r\n    { ID: 9, name: 'Donut', calories: 452, fat: '25.0', carbs: 51, protein: '4.9', iron: '22%' },\r\n    { ID: 10, name: 'KitKat', calories: 518, fat: '26.0', carbs: 50, iron: '5 %' }];\r\n",
+					"HL": "JS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_3"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_8",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_10",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_12",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLegend",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_1",
+																	"T": "prop"
+																},
+																"QJsonPath": {
+																	"H": "╬'qjson://QLegend'╩╩",
+																	"T": "prop"
+																},
+																"showUnchanged": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_1"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_12"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												},
+												"compDomClasses": "col d-flex flex-column newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_10"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_14",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_15",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Tooltip",
+															"P": {
+																"ID": {
+																	"H": "mySaved_tooltip",
+																	"T": "prop"
+																},
+																"disabled": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"position": {
+																	"H": "╬'top'╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VTextField",
+																			"P": {
+																				"ID": {
+																					"H": "mySaved",
+																					"T": "prop"
+																				},
+																				"label": {
+																					"H": "╬'Saved Text field label'╩╩",
+																					"T": "prop"
+																				},
+																				"regular": {
+																					"H": "╬'true'╩╩",
+																					"T": "prop"
+																				},
+																				"outlined": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_4"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "v-input v-input--is-label-active v-input--is-dirty theme--light v-text-field v-text-field--is-booted v-text-field--enclosed v-text-field--outlined sftt-value-saved newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_4_tooltip"
+															},
+															"O": {
+																"layout": {
+																	"class": "sftt-compare-value-tooltip",
+																	"dOpt": {}
+																},
+																"cType": "child",
+																"compDomClasses": "tooltip-div-class sftt-compare-value-tooltip newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_15"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												},
+												"compDomClasses": "col d-flex flex-column newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_14"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_28",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_29",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Tooltip",
+															"P": {
+																"ID": {
+																	"H": "myUpdated_tooltip",
+																	"T": "prop"
+																},
+																"disabled": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"position": {
+																	"H": "╬'top'╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VTextField",
+																			"P": {
+																				"ID": {
+																					"H": "myUpdated",
+																					"T": "prop"
+																				},
+																				"label": {
+																					"H": "╬'Updated Text field label'╩╩",
+																					"T": "prop"
+																				},
+																				"regular": {
+																					"H": "╬'true'╩╩",
+																					"T": "prop"
+																				},
+																				"outlined": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_30"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "v-input v-input--is-label-active v-input--is-dirty theme--light v-text-field v-text-field--is-booted v-text-field--enclosed v-text-field--outlined sftt-value-updated newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_30_tooltip"
+															},
+															"O": {
+																"layout": {
+																	"class": "sftt-compare-value-tooltip",
+																	"dOpt": {}
+																},
+																"cType": "child",
+																"compDomClasses": "tooltip-div-class sftt-compare-value-tooltip newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_29"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												},
+												"compDomClasses": "col d-flex flex-column newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_28"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_2",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_5",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Tooltip",
+															"P": {
+																"ID": {
+																	"H": "myDeleted_tooltip",
+																	"T": "prop"
+																},
+																"disabled": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"position": {
+																	"H": "╬'top'╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VTextField",
+																			"P": {
+																				"ID": {
+																					"H": "myDeleted",
+																					"T": "prop"
+																				},
+																				"label": {
+																					"H": "╬'Removed Text field label'╩╩",
+																					"T": "prop"
+																				},
+																				"regular": {
+																					"H": "╬'true'╩╩",
+																					"T": "prop"
+																				},
+																				"outlined": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"placeholder": {
+																					"H": "╬'Removed Comp Value'╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_6"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted v-text-field--enclosed v-text-field--outlined v-text-field--placeholder sftt-value-removed"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_6_tooltip"
+															},
+															"O": {
+																"layout": {
+																	"class": "sftt-compare-value-tooltip",
+																	"dOpt": {}
+																},
+																"cType": "child",
+																"compDomClasses": "tooltip-div-class sftt-compare-value-tooltip newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_5"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												},
+												"compDomClasses": "col d-flex flex-column newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_2"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_136",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"P": {
+												"ID": {
+													"H": "EdtrComp_137",
+													"T": "prop"
+												}
+											},
+											"E": {},
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Tooltip",
+															"P": {
+																"ID": {
+																	"H": "myUnchanged_tooltip",
+																	"T": "prop"
+																},
+																"disabled": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"position": {
+																	"H": "╬'top'╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VTextField",
+																			"P": {
+																				"ID": {
+																					"H": "myUnchanged",
+																					"T": "prop"
+																				},
+																				"label": {
+																					"H": "╬'Text field label'╩╩",
+																					"T": "prop"
+																				},
+																				"regular": {
+																					"H": "╬'true'╩╩",
+																					"T": "prop"
+																				},
+																				"outlined": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_138"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "v-input v-input--is-label-active v-input--is-dirty theme--light v-text-field v-text-field--is-booted v-text-field--enclosed v-text-field--outlined sftt-value-none"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_138_tooltip"
+															},
+															"O": {
+																"layout": {
+																	"class": "sftt-compare-value-tooltip",
+																	"dOpt": {}
+																},
+																"cType": "child",
+																"compDomClasses": "tooltip-div-class sftt-compare-value-tooltip newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_137"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												},
+												"compDomClasses": "col d-flex flex-column newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_136"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_97",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VDataTable",
+															"P": {
+																"ID": {
+																	"H": "myTable",
+																	"T": "prop"
+																},
+																"footerProps": {
+																	"H": "╬{}╠=╣showFirstLastPage╩╠true╩╩╠=╣firstIcon╩╠'mdi-arrow-collapse-left'╩╩╠=╣lastIcon╩╠'mdi-arrow-collapse-right'╩╩╠=╣prevIcon╩╠'mdi-minus'╩╩╠=╣nextIcon╩╠'mdi-plus'╩╩╩╩",
+																	"T": "prop"
+																},
+																"headers": {
+																	"H": "╬[]╠{}╠=╣text╩╠'Dessert (100g serving)'╩╩╠=╣align╩╠'start'╩╩╠=╣sortable╩╠false╩╩╠=╣value╩╠'name'╩╩╩╠{}╠=╣text╩╠'Calories'╩╩╠=╣value╩╠'calories'╩╩╠=╣sortable╩╠true╩╩╩╠{}╠=╣text╩╠'Fat (g)'╩╩╠=╣value╩╠'fat'╩╩╩╠{}╠=╣text╩╠'Carbs (g)'╩╩╠=╣value╩╠'carbs'╩╩╩╠{}╠=╣text╩╠'Protein (g)'╩╩╠=╣value╩╠'protein'╩╩╩╠{}╠=╣text╩╠'Iron (%)'╩╩╠=╣value╩╠'iron'╩╩╩╩╩",
+																	"T": "prop"
+																},
+																"items": {
+																	"H": "╬[]╠{}╠=╣name╩╠'Frozens Yogurt'╩╩╠=╣calories╩╠159╩╩╠=╣fat╩╠'6.0'╩╩╠=╣carbs╩╠24╩╩╠=╣protein╩╠'4.0'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Ice cream sandwich'╩╩╠=╣calories╩╠237╩╩╠=╣fat╩╠'9.0'╩╩╠=╣carbs╩╠37╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Eclair'╩╩╠=╣calories╩╠262╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠23╩╩╠=╣protein╩╠'6.0'╩╩╠=╣iron╩╠'7%'╩╩╩╠{}╠=╣name╩╠'Cupcake'╩╩╠=╣calories╩╠305╩╩╠=╣fat╩╠'3.7'╩╩╠=╣carbs╩╠67╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'8%'╩╩╩╠{}╠=╣name╩╠'Gingerbread'╩╩╠=╣calories╩╠356╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠49╩╩╠=╣protein╩╠'3.9'╩╩╠=╣iron╩╠'16%'╩╩╩╠{}╠=╣name╩╠'Jelly bean'╩╩╠=╣calories╩╠375╩╩╠=╣fat╩╠'0.0'╩╩╠=╣carbs╩╠94╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'0%'╩╩╩╠{}╠=╣name╩╠'Lollipop'╩╩╠=╣calories╩╠392╩╩╠=╣fat╩╠'0.2'╩╩╠=╣carbs╩╠98╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'2 %'╩╩╩╠{}╠=╣name╩╠'Honeycomb'╩╩╠=╣calories╩╠408╩╩╠=╣fat╩╠'3.2'╩╩╠=╣carbs╩╠87╩╩╠=╣protein╩╠'6.5'╩╩╠=╣iron╩╠'45%'╩╩╩╠{}╠=╣name╩╠'Donut'╩╩╠=╣calories╩╠452╩╩╠=╣fat╩╠'25.0'╩╩╠=╣carbs╩╠51╩╩╠=╣protein╩╠'4.9'╩╩╠=╣iron╩╠'22%'╩╩╩╠{}╠=╣name╩╠'KitKat'╩╩╠=╣calories╩╠518╩╩╠=╣fat╩╠'26.0'╩╩╠=╣carbs╩╠65╩╩╠=╣protein╩╠'7'╩╩╠=╣iron╩╠'6 %'╩╩╩╩╩",
+																	"T": "prop"
+																},
+																"itemsPerPage": {
+																	"H": "╬5╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"CompareDataField": {
+																	"H": "╬'ID'╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"item.name": {
+																	"c": [
+																		{
+																			"T": "Tooltip",
+																			"P": {
+																				"ID": {
+																					"H": "myTable_compareTooltip",
+																					"T": "prop"
+																				},
+																				"toolTipContent": {
+																					"T": "prop",
+																					"DE": true
+																				},
+																				"position": {
+																					"H": "╬'top'╩╩",
+																					"T": "prop",
+																					"DE": true
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VChip",
+																							"P": {
+																								"ID": {
+																									"H": "myTable_compareChip",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "sftt-value-saved",
+																									"T": "prop",
+																									"DE": true
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"P": {
+																												"ID": {
+																													"H": "myTable_compareLabel",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "Gingerbread",
+																													"T": "prop",
+																													"DE": true
+																												}
+																											},
+																											"C": {},
+																											"E": {},
+																											"_Editor": {
+																												"eID": "myTable_compareLabel"
+																											},
+																											"O": {
+																												"cType": "child",
+																												"compDomClasses": "q-label "
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "myTable_compareChip"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"compDomClasses": "v-chip theme--light v-size--default sftt-value-saved undefined"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "myTable_compareTooltip"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "tooltip-div-class"
+																			}
+																		}
+																	],
+																	"cType": "scopedSlot"
+																},
+																"item.calories": {
+																	"c": [
+																		{
+																			"T": "Tooltip",
+																			"P": {
+																				"ID": {
+																					"H": "myTable_compareTooltip",
+																					"T": "prop"
+																				},
+																				"toolTipContent": {
+																					"T": "prop",
+																					"DE": true
+																				},
+																				"position": {
+																					"H": "╬'top'╩╩",
+																					"T": "prop",
+																					"DE": true
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VChip",
+																							"P": {
+																								"ID": {
+																									"H": "myTable_compareChip",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "sftt-value-saved",
+																									"T": "prop",
+																									"DE": true
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"P": {
+																												"ID": {
+																													"H": "myTable_compareLabel",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": 356,
+																													"T": "prop",
+																													"DE": true
+																												}
+																											},
+																											"C": {},
+																											"E": {},
+																											"_Editor": {
+																												"eID": "myTable_compareLabel"
+																											},
+																											"O": {
+																												"cType": "child",
+																												"compDomClasses": "q-label "
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "myTable_compareChip"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"compDomClasses": "v-chip theme--light v-size--default sftt-value-saved undefined"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "myTable_compareTooltip"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "tooltip-div-class"
+																			}
+																		}
+																	],
+																	"cType": "scopedSlot"
+																},
+																"item.fat": {
+																	"c": [
+																		{
+																			"T": "Tooltip",
+																			"P": {
+																				"ID": {
+																					"H": "myTable_compareTooltip",
+																					"T": "prop"
+																				},
+																				"toolTipContent": {
+																					"H": "16.0",
+																					"T": "prop",
+																					"DE": true
+																				},
+																				"position": {
+																					"H": "╬'top'╩╩",
+																					"T": "prop",
+																					"DE": true
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VChip",
+																							"P": {
+																								"ID": {
+																									"H": "myTable_compareChip",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "sftt-value-none",
+																									"T": "prop",
+																									"DE": true
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"P": {
+																												"ID": {
+																													"H": "myTable_compareLabel",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "16.0",
+																													"T": "prop",
+																													"DE": true
+																												}
+																											},
+																											"C": {},
+																											"E": {},
+																											"_Editor": {
+																												"eID": "myTable_compareLabel"
+																											},
+																											"O": {
+																												"cType": "child",
+																												"compDomClasses": "q-label "
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "myTable_compareChip"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"compDomClasses": "v-chip theme--light v-size--default sftt-value-saved undefined"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "myTable_compareTooltip"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "tooltip-div-class"
+																			}
+																		}
+																	],
+																	"cType": "scopedSlot"
+																},
+																"item.carbs": {
+																	"c": [
+																		{
+																			"T": "Tooltip",
+																			"P": {
+																				"ID": {
+																					"H": "myTable_compareTooltip",
+																					"T": "prop"
+																				},
+																				"toolTipContent": {
+																					"H": 49,
+																					"T": "prop",
+																					"DE": true
+																				},
+																				"position": {
+																					"H": "╬'top'╩╩",
+																					"T": "prop",
+																					"DE": true
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VChip",
+																							"P": {
+																								"ID": {
+																									"H": "myTable_compareChip",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "sftt-value-none",
+																									"T": "prop",
+																									"DE": true
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"P": {
+																												"ID": {
+																													"H": "myTable_compareLabel",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": 49,
+																													"T": "prop",
+																													"DE": true
+																												}
+																											},
+																											"C": {},
+																											"E": {},
+																											"_Editor": {
+																												"eID": "myTable_compareLabel"
+																											},
+																											"O": {
+																												"cType": "child",
+																												"compDomClasses": "q-label "
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "myTable_compareChip"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"compDomClasses": "v-chip theme--light v-size--default sftt-value-saved undefined"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "myTable_compareTooltip"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "tooltip-div-class"
+																			}
+																		}
+																	],
+																	"cType": "scopedSlot"
+																},
+																"item.protein": {
+																	"c": [
+																		{
+																			"T": "Tooltip",
+																			"P": {
+																				"ID": {
+																					"H": "myTable_compareTooltip",
+																					"T": "prop"
+																				},
+																				"toolTipContent": {
+																					"H": "3.9",
+																					"T": "prop",
+																					"DE": true
+																				},
+																				"position": {
+																					"H": "╬'top'╩╩",
+																					"T": "prop",
+																					"DE": true
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VChip",
+																							"P": {
+																								"ID": {
+																									"H": "myTable_compareChip",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "sftt-value-none",
+																									"T": "prop",
+																									"DE": true
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"P": {
+																												"ID": {
+																													"H": "myTable_compareLabel",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "3.9",
+																													"T": "prop",
+																													"DE": true
+																												}
+																											},
+																											"C": {},
+																											"E": {},
+																											"_Editor": {
+																												"eID": "myTable_compareLabel"
+																											},
+																											"O": {
+																												"cType": "child",
+																												"compDomClasses": "q-label "
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "myTable_compareChip"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"compDomClasses": "v-chip theme--light v-size--default sftt-value-saved undefined"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "myTable_compareTooltip"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "tooltip-div-class"
+																			}
+																		}
+																	],
+																	"cType": "scopedSlot"
+																},
+																"item.iron": {
+																	"c": [
+																		{
+																			"T": "Tooltip",
+																			"P": {
+																				"ID": {
+																					"H": "myTable_compareTooltip",
+																					"T": "prop"
+																				},
+																				"toolTipContent": {
+																					"T": "prop",
+																					"DE": true
+																				},
+																				"position": {
+																					"H": "╬'top'╩╩",
+																					"T": "prop",
+																					"DE": true
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VChip",
+																							"P": {
+																								"ID": {
+																									"H": "myTable_compareChip",
+																									"T": "prop"
+																								},
+																								"color": {
+																									"H": "sftt-value-saved",
+																									"T": "prop",
+																									"DE": true
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "QLabel",
+																											"P": {
+																												"ID": {
+																													"H": "myTable_compareLabel",
+																													"T": "prop"
+																												},
+																												"text": {
+																													"H": "16%",
+																													"T": "prop",
+																													"DE": true
+																												}
+																											},
+																											"C": {},
+																											"E": {},
+																											"_Editor": {
+																												"eID": "myTable_compareLabel"
+																											},
+																											"O": {
+																												"cType": "child",
+																												"compDomClasses": "q-label "
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "myTable_compareChip"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"compDomClasses": "v-chip theme--light v-size--default sftt-value-saved undefined"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "myTable_compareTooltip"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "tooltip-div-class"
+																			}
+																		}
+																	],
+																	"cType": "scopedSlot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_86"
+															},
+															"O": {
+																"cType": "scopedSlot",
+																"compDomClasses": "v-data-table v-data-table--has-bottom theme--light newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_110",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_110"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												},
+												"compDomClasses": "col d-flex flex-column newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_97"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_146",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "Tooltip",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_77_tooltip",
+																	"T": "prop"
+																},
+																"disabled": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"position": {
+																	"H": "╬'top'╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VRadioGroup",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_77",
+																					"T": "prop"
+																				},
+																				"column": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"label": {
+																					"H": "╬'My Radio'╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VRadio",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_91",
+																									"T": "prop"
+																								},
+																								"label": {
+																									"H": "╬'Test radio label 1'╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_91"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"compDomClasses": "v-radio theme--light"
+																							}
+																						},
+																						{
+																							"T": "VRadio",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_105",
+																									"T": "prop"
+																								},
+																								"label": {
+																									"H": "╬'Test radio label 1'╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_105"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"compDomClasses": "v-radio theme--light v-item--active undefined"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_77"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-input v-input--is-label-active v-input--is-dirty theme--light v-input--selection-controls v-input--radio-group v-input--radio-group--column sftt-value-updated"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_77_tooltip"
+															},
+															"O": {
+																"layout": {
+																	"class": "sftt-compare-value-tooltip",
+																	"dOpt": {}
+																},
+																"cType": "child",
+																"compDomClasses": "tooltip-div-class sftt-compare-value-tooltip"
+															}
+														},
+														{
+															"T": "Tooltip",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_39_tooltip",
+																	"T": "prop"
+																},
+																"disabled": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"position": {
+																	"H": "╬'top'╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VCheckbox",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_39",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "╬'primary'╩╩",
+																					"T": "prop"
+																				},
+																				"label": {
+																					"H": "╬'My CheckBox'╩╩",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_39"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-input v-input--is-label-active v-input--is-dirty theme--light v-input--selection-controls v-input--checkbox primary--text sftt-value-updated"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_39_tooltip"
+															},
+															"O": {
+																"layout": {
+																	"class": "sftt-compare-value-tooltip",
+																	"dOpt": {}
+																},
+																"cType": "child",
+																"compDomClasses": "tooltip-div-class sftt-compare-value-tooltip"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_161",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_161"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												},
+												"compDomClasses": "col d-flex flex-column"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_146"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_8"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"opt": {}
+};
+export default pjson

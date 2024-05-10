@@ -14,4 +14,11 @@ export declare type matchStyle = {
     breakPoint?: string;
     compType: string;
 };
+export declare type styleCss = {
+    styleUrlList?: string[];
+    styleCssList?: {
+        style: string;
+        id: string;
+    }[];
+};
 //# sourceMappingURL=IStyleManager.d.ts.map

@@ -10,34 +10,31 @@ let pjson = {
 			},
 			"E": {
 				"onBeforeRequest": {
-					"H": "declare const requestObject : any\r\nquick.EM.trace(\"onBeforeRequest executed\")\r\nlet langCode = quick.store.get(\"#pipelineBagStoreKey\") || \"en-US\";\r\nrequestObject.headers[\"request-language\"] = langCode;",
+					"H": "quick.EM.trace('Pipeline Inside onBeforeRequest Event');\r\n\r\ndeclare var requestObject: IRequest;\r\n\r\n// ADDING HEADER\r\n// - adding header\r\nrequestObject.headers[\"pipelineKey\"] = \"pipelineValue\";\r\n\r\n// - adding header from bagStore\r\nlet pipelineBagStoreValue = quick.store.get(\"#pipelineBagStoreKey\");\r\nrequestObject.headers[\"pipelineBagStoreKey\"] = pipelineBagStoreValue\r\n\r\n// - adding header according to url\r\nif (requestObject.url.indexOf(\"employees\") > -1) {\r\n    requestObject.headers[\"pipelineKey2\"] = \"pipelineValue2\"\r\n}\r\n\r\n// ADDING DATA - You can add all of type data.\r\nrequestObject.data[\"pipelineData\"] = { key: \"myDataKey\", value: \"myDataValue\" };\r\n\r\n//SETTING TIMEOUT\r\nrequestObject.timeout = 20000;\r\n",
 					"C": true,
 					"EV": true,
 					"HL": "TS"
 				},
 				"onAfterResponse": {
-					"H": "quick.EM.trace(\"onAfterResponse executed\")\r\nquick.EM.trace(response);",
+					"H": "//MANILAPUTE THE SUCCESSFUL RESPONSE\r\ndebugger;\r\ndeclare var response: INetworkResponse;\r\n\r\nquick.EM.trace('Pipeline Inside onAfterResponse Event');\r\nquick.EM.trace(response);\r\n\r\n//READ RESPONSE\r\nlet responseData = response.data;\r\nlet responseHeaders = response.headers;\r\nlet responseStatus = response.status;\r\nlet responseStatusText = response.statusText;\r\n\r\n//MANILAPUTE THE SUCCESSFUL RESPONSE\r\nresponse.data[\"myResponse\"] = \"myResponse 1\";\r\nresponse.headers[\"myResponseHeader\"] = \"myResponseHeader\";",
 					"C": true,
 					"EV": true,
 					"HL": "TS"
 				},
-				"PreRender": {
-					"H": "\r\nlet langCode = quick.Quick.getLanguage();\r\nlet lang = \"tr\";\r\nif (langCode == \"en-US\") {\r\n    lang = \"en\";\r\n}\r\nlet request1 = <any>{};\r\nrequest1.url = 'http://metadata.turisiam-int.turisiam.plateaux.softtech/api/localization/bundles';\r\nrequest1.http = 'get';\r\nrequest1.data = { locale: lang };\r\nrequest1.responseField = 'data'\r\nrequest1.onSuccess = 'localizationOnSuccess';\r\nrequest1.onFail = 'localizationOnFail';\r\nrequest1.blockRender = true;\r\nquick.Request.async(request1);\r\n",
-					"I": true,
-					"HL": "TS"
-				},
-				"localizationOnSuccess": {
-					"H": "\r\nif (response.data != null && response.data.success) {\r\n    quick.EM.trace(\"Localization Success\");\r\n    quick.EM.trace(response.data);\r\n\r\n    let resourceList = response.data.bundles[0].resources;\r\n    let langCode = \"tr-TR\";\r\n    if (response.data.bundles[0].language == \"en\") {\r\n        langCode = \"en-US\";\r\n    }\r\n\r\n    quick.importLocalization(langCode, resourceList, { overrite: true });\r\n\r\n}",
+				"onAfterErrorResponse": {
+					"H": "//MANILAPUTE THE FAILED RESPONSE\r\n\r\ndeclare var response: INetworkResponse;\r\n\r\nquick.EM.trace('Pipeline Inside onAfterErrorResponse Event');\r\nquick.EM.trace(response);\r\n\r\n//READ RESPONSE\r\nlet responseData = response.data;\r\nlet responseHeaders = response.headers;\r\nlet responseStatus = response.status;\r\nlet responseStatusText = response.statusText;\r\n",
 					"C": true,
-					"HL": "TS"
-				},
-				"localizationOnFail": {
-					"H": "declare var error: any;\r\nquick.EM.trace(\"Localization Fail\");\r\nquick.EM.trace(error);",
-					"C": true,
+					"EV": true,
 					"HL": "TS"
 				},
 				"onPostRender": {
-					"H": "// this event is triggered after each page render in the application\r\nquick.EM.trace(\"pipeline onPostRender\");",
+					"H": "// this event is triggered after each page render in the application\r\nquick.EM.trace('Pipeline Inside onPostRender Event');",
+					"C": true,
+					"EV": true,
+					"HL": "TS"
+				},
+				"logHandler": {
+					"H": "// Accessing printed logs;\r\n\r\n// The system described below can be used to use the logs (EM.trace) written on the front page (qjson)\r\n// and the logs printed on the engine (such as sending to service, keeping in the store etc.).\r\n\r\ndeclare var messages: IMessage;\r\n\r\nlet messageMsg = messages.message; // Log message\r\nlet messageType = messages.type; // Debug | MobilDebug | Trace | Warning | Error\r\nlet messageTime = messages.time; // When the browser writes the message\r\nlet messageCaller = messages.caller; // Caller function name of the message ",
 					"C": true,
 					"EV": true,
 					"HL": "TS"
@@ -64,34 +61,31 @@ let pjson = {
 			},
 			"E": {
 				"onBeforeRequest": {
-					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.EM.trace(\"onBeforeRequest executed\");\r\nvar langCode = quick.store.get(\"#pipelineBagStoreKey\") || \"en-US\";\r\nrequestObject.headers[\"request-language\"] = langCode;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfMjJfb25CZWZvcmVSZXF1ZXN0X0UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJFZHRyQ29tcF8yMl9vbkJlZm9yZVJlcXVlc3RfRS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBRUEsS0FBSyxDQUFDLEVBQUUsQ0FBQyxLQUFLLENBQUMsMEJBQTBCLENBQUMsQ0FBQTtBQUMxQyxJQUFJLFFBQVEsR0FBRyxLQUFLLENBQUMsS0FBSyxDQUFDLEdBQUcsQ0FBQyxzQkFBc0IsQ0FBQyxJQUFJLE9BQU8sQ0FBQztBQUNsRSxhQUFhLENBQUMsT0FBTyxDQUFDLGtCQUFrQixDQUFDLEdBQUcsUUFBUSxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiXG5kZWNsYXJlIGNvbnN0IHJlcXVlc3RPYmplY3QgOiBhbnlcclxucXVpY2suRU0udHJhY2UoXCJvbkJlZm9yZVJlcXVlc3QgZXhlY3V0ZWRcIilcclxubGV0IGxhbmdDb2RlID0gcXVpY2suc3RvcmUuZ2V0KFwiI3BpcGVsaW5lQmFnU3RvcmVLZXlcIikgfHwgXCJlbi1VU1wiO1xyXG5yZXF1ZXN0T2JqZWN0LmhlYWRlcnNbXCJyZXF1ZXN0LWxhbmd1YWdlXCJdID0gbGFuZ0NvZGU7XG4gZXhwb3J0e307XG4iXX0=",
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.EM.trace('Pipeline Inside onBeforeRequest Event');\r\n// ADDING HEADER\r\n// - adding header\r\nrequestObject.headers[\"pipelineKey\"] = \"pipelineValue\";\r\n// - adding header from bagStore\r\nvar pipelineBagStoreValue = quick.store.get(\"#pipelineBagStoreKey\");\r\nrequestObject.headers[\"pipelineBagStoreKey\"] = pipelineBagStoreValue;\r\n// - adding header according to url\r\nif (requestObject.url.indexOf(\"employees\") > -1) {\r\n    requestObject.headers[\"pipelineKey2\"] = \"pipelineValue2\";\r\n}\r\n// ADDING DATA - You can add all of type data.\r\nrequestObject.data[\"pipelineData\"] = { key: \"myDataKey\", value: \"myDataValue\" };\r\n//SETTING TIMEOUT\r\nrequestObject.timeout = 20000;\r\n",
 					"C": true,
 					"EV": true,
 					"HL": "JS"
 				},
 				"onAfterResponse": {
-					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.EM.trace(\"onAfterResponse executed\");\r\nquick.EM.trace(response);\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfMjJfb25BZnRlclJlc3BvbnNlX0UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJFZHRyQ29tcF8yMl9vbkFmdGVyUmVzcG9uc2VfRS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQ0EsS0FBSyxDQUFDLEVBQUUsQ0FBQyxLQUFLLENBQUMsMEJBQTBCLENBQUMsQ0FBQTtBQUMxQyxLQUFLLENBQUMsRUFBRSxDQUFDLEtBQUssQ0FBQyxRQUFRLENBQUMsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIlxucXVpY2suRU0udHJhY2UoXCJvbkFmdGVyUmVzcG9uc2UgZXhlY3V0ZWRcIilcclxucXVpY2suRU0udHJhY2UocmVzcG9uc2UpO1xuIGV4cG9ydHt9O1xuIl19",
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\n//MANILAPUTE THE SUCCESSFUL RESPONSE\r\ndebugger;\r\nquick.EM.trace('Pipeline Inside onAfterResponse Event');\r\nquick.EM.trace(response);\r\n//READ RESPONSE\r\nvar responseData = response.data;\r\nvar responseHeaders = response.headers;\r\nvar responseStatus = response.status;\r\nvar responseStatusText = response.statusText;\r\n//MANILAPUTE THE SUCCESSFUL RESPONSE\r\nresponse.data[\"myResponse\"] = \"myResponse 1\";\r\nresponse.headers[\"myResponseHeader\"] = \"myResponseHeader\";\r\n",
 					"C": true,
 					"EV": true,
 					"HL": "JS"
 				},
-				"PreRender": {
-					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nvar langCode = quick.Quick.getLanguage();\r\nvar lang = \"tr\";\r\nif (langCode == \"en-US\") {\r\n    lang = \"en\";\r\n}\r\nvar request1 = {};\r\nrequest1.url = 'http://metadata.turisiam-int.turisiam.plateaux.softtech/api/localization/bundles';\r\nrequest1.http = 'get';\r\nrequest1.data = { locale: lang };\r\nrequest1.responseField = 'data';\r\nrequest1.onSuccess = 'localizationOnSuccess';\r\nrequest1.onFail = 'localizationOnFail';\r\nrequest1.blockRender = true;\r\nquick.Request.async(request1);\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfMjJfUHJlUmVuZGVyX0UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJFZHRyQ29tcF8yMl9QcmVSZW5kZXJfRS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBRUEsSUFBSSxRQUFRLEdBQUcsS0FBSyxDQUFDLEtBQUssQ0FBQyxXQUFXLEVBQUUsQ0FBQztBQUN6QyxJQUFJLElBQUksR0FBRyxJQUFJLENBQUM7QUFDaEIsSUFBSSxRQUFRLElBQUksT0FBTyxFQUFFO0lBQ3JCLElBQUksR0FBRyxJQUFJLENBQUM7Q0FDZjtBQUNELElBQUksUUFBUSxHQUFRLEVBQUUsQ0FBQztBQUN2QixRQUFRLENBQUMsR0FBRyxHQUFHLGtGQUFrRixDQUFDO0FBQ2xHLFFBQVEsQ0FBQyxJQUFJLEdBQUcsS0FBSyxDQUFDO0FBQ3RCLFFBQVEsQ0FBQyxJQUFJLEdBQUcsRUFBRSxNQUFNLEVBQUUsSUFBSSxFQUFFLENBQUM7QUFDakMsUUFBUSxDQUFDLGFBQWEsR0FBRyxNQUFNLENBQUE7QUFDL0IsUUFBUSxDQUFDLFNBQVMsR0FBRyx1QkFBdUIsQ0FBQztBQUM3QyxRQUFRLENBQUMsTUFBTSxHQUFHLG9CQUFvQixDQUFDO0FBQ3ZDLFFBQVEsQ0FBQyxXQUFXLEdBQUcsSUFBSSxDQUFDO0FBQzVCLEtBQUssQ0FBQyxPQUFPLENBQUMsS0FBSyxDQUFDLFFBQVEsQ0FBQyxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiXG5cclxubGV0IGxhbmdDb2RlID0gcXVpY2suUXVpY2suZ2V0TGFuZ3VhZ2UoKTtcclxubGV0IGxhbmcgPSBcInRyXCI7XHJcbmlmIChsYW5nQ29kZSA9PSBcImVuLVVTXCIpIHtcclxuICAgIGxhbmcgPSBcImVuXCI7XHJcbn1cclxubGV0IHJlcXVlc3QxID0gPGFueT57fTtcclxucmVxdWVzdDEudXJsID0gJ2h0dHA6Ly9tZXRhZGF0YS50dXJpc2lhbS1pbnQudHVyaXNpYW0ucGxhdGVhdXguc29mdHRlY2gvYXBpL2xvY2FsaXphdGlvbi9idW5kbGVzJztcclxucmVxdWVzdDEuaHR0cCA9ICdnZXQnO1xyXG5yZXF1ZXN0MS5kYXRhID0geyBsb2NhbGU6IGxhbmcgfTtcclxucmVxdWVzdDEucmVzcG9uc2VGaWVsZCA9ICdkYXRhJ1xyXG5yZXF1ZXN0MS5vblN1Y2Nlc3MgPSAnbG9jYWxpemF0aW9uT25TdWNjZXNzJztcclxucmVxdWVzdDEub25GYWlsID0gJ2xvY2FsaXphdGlvbk9uRmFpbCc7XHJcbnJlcXVlc3QxLmJsb2NrUmVuZGVyID0gdHJ1ZTtcclxucXVpY2suUmVxdWVzdC5hc3luYyhyZXF1ZXN0MSk7XHJcblxuIGV4cG9ydHt9O1xuIl19",
-					"I": true,
-					"HL": "JS"
-				},
-				"localizationOnSuccess": {
-					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nif (response.data != null && response.data.success) {\r\n    quick.EM.trace(\"Localization Success\");\r\n    quick.EM.trace(response.data);\r\n    var resourceList = response.data.bundles[0].resources;\r\n    var langCode = \"tr-TR\";\r\n    if (response.data.bundles[0].language == \"en\") {\r\n        langCode = \"en-US\";\r\n    }\r\n    quick.importLocalization(langCode, resourceList, { overrite: true });\r\n}\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfMjJfbG9jYWxpemF0aW9uT25TdWNjZXNzX0UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJFZHRyQ29tcF8yMl9sb2NhbGl6YXRpb25PblN1Y2Nlc3NfRS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBRUEsSUFBSSxRQUFRLENBQUMsSUFBSSxJQUFJLElBQUksSUFBSSxRQUFRLENBQUMsSUFBSSxDQUFDLE9BQU8sRUFBRTtJQUNoRCxLQUFLLENBQUMsRUFBRSxDQUFDLEtBQUssQ0FBQyxzQkFBc0IsQ0FBQyxDQUFDO0lBQ3ZDLEtBQUssQ0FBQyxFQUFFLENBQUMsS0FBSyxDQUFDLFFBQVEsQ0FBQyxJQUFJLENBQUMsQ0FBQztJQUU5QixJQUFJLFlBQVksR0FBRyxRQUFRLENBQUMsSUFBSSxDQUFDLE9BQU8sQ0FBQyxDQUFDLENBQUMsQ0FBQyxTQUFTLENBQUM7SUFDdEQsSUFBSSxRQUFRLEdBQUcsT0FBTyxDQUFDO0lBQ3ZCLElBQUksUUFBUSxDQUFDLElBQUksQ0FBQyxPQUFPLENBQUMsQ0FBQyxDQUFDLENBQUMsUUFBUSxJQUFJLElBQUksRUFBRTtRQUMzQyxRQUFRLEdBQUcsT0FBTyxDQUFDO0tBQ3RCO0lBRUQsS0FBSyxDQUFDLGtCQUFrQixDQUFDLFFBQVEsRUFBRSxZQUFZLEVBQUUsRUFBRSxRQUFRLEVBQUUsSUFBSSxFQUFFLENBQUMsQ0FBQztDQUV4RSIsInNvdXJjZXNDb250ZW50IjpbIlxuXHJcbmlmIChyZXNwb25zZS5kYXRhICE9IG51bGwgJiYgcmVzcG9uc2UuZGF0YS5zdWNjZXNzKSB7XHJcbiAgICBxdWljay5FTS50cmFjZShcIkxvY2FsaXphdGlvbiBTdWNjZXNzXCIpO1xyXG4gICAgcXVpY2suRU0udHJhY2UocmVzcG9uc2UuZGF0YSk7XHJcblxyXG4gICAgbGV0IHJlc291cmNlTGlzdCA9IHJlc3BvbnNlLmRhdGEuYnVuZGxlc1swXS5yZXNvdXJjZXM7XHJcbiAgICBsZXQgbGFuZ0NvZGUgPSBcInRyLVRSXCI7XHJcbiAgICBpZiAocmVzcG9uc2UuZGF0YS5idW5kbGVzWzBdLmxhbmd1YWdlID09IFwiZW5cIikge1xyXG4gICAgICAgIGxhbmdDb2RlID0gXCJlbi1VU1wiO1xyXG4gICAgfVxyXG5cclxuICAgIHF1aWNrLmltcG9ydExvY2FsaXphdGlvbihsYW5nQ29kZSwgcmVzb3VyY2VMaXN0LCB7IG92ZXJyaXRlOiB0cnVlIH0pO1xyXG5cclxufVxuIGV4cG9ydHt9O1xuIl19",
+				"onAfterErrorResponse": {
+					"H": "//MANILAPUTE THE FAILED RESPONSE\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.EM.trace('Pipeline Inside onAfterErrorResponse Event');\r\nquick.EM.trace(response);\r\n//READ RESPONSE\r\nvar responseData = response.data;\r\nvar responseHeaders = response.headers;\r\nvar responseStatus = response.status;\r\nvar responseStatusText = response.statusText;\r\n",
 					"C": true,
-					"HL": "JS"
-				},
-				"localizationOnFail": {
-					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.EM.trace(\"Localization Fail\");\r\nquick.EM.trace(error);\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfMjJfbG9jYWxpemF0aW9uT25GYWlsX0UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJFZHRyQ29tcF8yMl9sb2NhbGl6YXRpb25PbkZhaWxfRS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBRUEsS0FBSyxDQUFDLEVBQUUsQ0FBQyxLQUFLLENBQUMsbUJBQW1CLENBQUMsQ0FBQztBQUNwQyxLQUFLLENBQUMsRUFBRSxDQUFDLEtBQUssQ0FBQyxLQUFLLENBQUMsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIlxuZGVjbGFyZSB2YXIgZXJyb3I6IGFueTtcclxucXVpY2suRU0udHJhY2UoXCJMb2NhbGl6YXRpb24gRmFpbFwiKTtcclxucXVpY2suRU0udHJhY2UoZXJyb3IpO1xuIGV4cG9ydHt9O1xuIl19",
-					"C": true,
+					"EV": true,
 					"HL": "JS"
 				},
 				"onPostRender": {
-					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\n// this event is triggered after each page render in the application\r\nquick.EM.trace(\"pipeline onPostRender\");\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRWR0ckNvbXBfMjJfb25Qb3N0UmVuZGVyX0UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJFZHRyQ29tcF8yMl9vblBvc3RSZW5kZXJfRS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQ0Esb0VBQW9FO0FBQ3BFLEtBQUssQ0FBQyxFQUFFLENBQUMsS0FBSyxDQUFDLHVCQUF1QixDQUFDLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyJcbi8vIHRoaXMgZXZlbnQgaXMgdHJpZ2dlcmVkIGFmdGVyIGVhY2ggcGFnZSByZW5kZXIgaW4gdGhlIGFwcGxpY2F0aW9uXHJcbnF1aWNrLkVNLnRyYWNlKFwicGlwZWxpbmUgb25Qb3N0UmVuZGVyXCIpO1xuIGV4cG9ydHt9O1xuIl19",
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\n// this event is triggered after each page render in the application\r\nquick.EM.trace('Pipeline Inside onPostRender Event');\r\n",
+					"C": true,
+					"EV": true,
+					"HL": "JS"
+				},
+				"logHandler": {
+					"H": "// Accessing printed logs;\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\nvar messageMsg = messages.message; // Log message\r\nvar messageType = messages.type; // Debug | MobilDebug | Trace | Warning | Error\r\nvar messageTime = messages.time; // When the browser writes the message\r\nvar messageCaller = messages.caller; // Caller function name of the message \r\n",
 					"C": true,
 					"EV": true,
 					"HL": "JS"
@@ -107,22 +101,8 @@ let pjson = {
 			}
 		}
 	],
-	"lrids": {
-		"tr-TR": {
-			"validationMsg": "'Lütfen zorunlu alanları giriniz.'"
-		},
-		"en-US": {
-			"validationMsg": "'Please enter all required fields'"
-		}
-	},
-	"clrids": {
-		"tr-TR": {
-			"validationMsg": "╬'Lütfen zorunlu alanları giriniz.'╩╩"
-		},
-		"en-US": {
-			"validationMsg": "╬'Please enter all required fields'╩╩"
-		}
-	},
-	"description": {}
+	"lrids": {},
+	"clrids": {},
+	"opt": {}
 };
 export default pjson

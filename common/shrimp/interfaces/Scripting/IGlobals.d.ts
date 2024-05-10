@@ -980,6 +980,12 @@ export interface IGlobals_Quick {
         get: (key: string) => any | undefined;
     };
 }
+export interface IMessage {
+    message: string;
+    type: string;
+    time: string;
+    caller: string;
+}
 export interface IGlobals_store {
     /**
      * Sets a value to the store.
