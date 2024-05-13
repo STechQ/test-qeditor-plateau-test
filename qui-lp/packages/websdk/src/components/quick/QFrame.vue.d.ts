@@ -6,7 +6,7 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     Send(message: any): void;
     renderSource(url: any): any;
     base64ToBlob(base64: any, type?: string): Blob;
-    post(url: String, params: any, enctype?: String | undefined): void;
+    post(url: string, params: any, enctype?: string | undefined): void;
     onLoad(): void;
 }, {
     style: string;
@@ -16,6 +16,7 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     height: string;
     border: number;
     isLoading: boolean;
+    _renderingProps: any;
 }>;
 export default _default;
 //# sourceMappingURL=QFrame.vue.d.ts.map
