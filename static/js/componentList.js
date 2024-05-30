@@ -1202,7 +1202,8 @@ var componentOptions = {
             type: Boolean
         },
         showArrows: {
-            type: Boolean
+            type: Boolean,
+            editorDefaultValue: "true"
         },
         showArrowsOnHover: {
             type: Boolean
