@@ -1317,7 +1317,7 @@ var componentOptions = {
             type: "Array<any> | string"
         },
         hideDetails: {
-            type: String | Boolean
+            type: "string | boolean"
         },
         indeterminateIcon: {
             type: String
@@ -2455,7 +2455,7 @@ nextIcon = 'mdi-plus'}`
             type: "number | string"
         },
         hideDetails: {
-            type: Boolean
+            type: "string | boolean"
         },
         hideInput: {
             type: Boolean
@@ -3487,7 +3487,7 @@ nextIcon = 'mdi-plus'}`
             type: "Array<any> | string"
         },
         hideDetails: {
-            type: Boolean
+            type: "string | boolean"
         },
         hint: {
             type: String
@@ -3573,7 +3573,7 @@ nextIcon = 'mdi-plus'}`
             type: "number | string"
         },
         hideDetails: {
-            type: "boolean | string"
+            type: "string | boolean"
         },
         hint: {
             type: String
@@ -3809,7 +3809,7 @@ nextIcon = 'mdi-plus'}`
             type: "number | string"
         },
         hideDetails: {
-            type: String | Boolean
+            type: "string | boolean"
         },
         hint: {
             type: String
@@ -4399,7 +4399,7 @@ nextIcon = 'mdi-plus'}`
             type: "Array<any> | string"
         },
         hideDetails: {
-            type: String | Boolean
+            type: "string | boolean"
         },
         hint: {
             type: String
@@ -4690,7 +4690,7 @@ nextIcon = 'mdi-plus'}`
             type: "number | string"
         },
         hideDetails: {
-            type: String | Boolean
+            type: "string | boolean"
         },
         hint: {
             type: String
@@ -4840,7 +4840,7 @@ nextIcon = 'mdi-plus'}`
             type: Boolean
         },
         hideDetails: {
-            type: Boolean
+            type: "string | boolean"
         },
         hint: {
             type: String
