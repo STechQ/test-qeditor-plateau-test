@@ -24,6 +24,7 @@ import { IStorageAccess } from "./IStore";
 import { IUrlOptions } from "./IUrl";
 import { IExcel, IExcelList } from "./IExcel";
 import { INavigationOptions } from "./INavigationManager";
+import { IDecryptDataRequest, IDecryptDataResponse, IEncryptDataRequest, IEncryptDataResponse, IHashDataRequest, IHashDataResponse } from "../../helpers/cryptoHelper";
 export interface IShellConfiguration {
     network: INetwork;
     lridHelper?: (label: string, params: Object) => string;
@@ -116,6 +117,9 @@ export interface IShellConfiguration {
         digestAlgorithm: string | "sha512";
         padding: string | "pkcs15";
     }) => string;
+    hash?: (data: IHashDataRequest) => Promise<IHashDataResponse>;
+    encrypt?: (data: IEncryptDataRequest) => Promise<IEncryptDataResponse>;
+    decrypt?: (data: IDecryptDataRequest) => Promise<IDecryptDataResponse>;
     getMinEngineLogType?: () => LogType | undefined;
     downloadHandler?: (responseFile: {
         data: string;

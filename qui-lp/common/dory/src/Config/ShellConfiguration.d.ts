@@ -1,3 +1,4 @@
+import { IDecryptDataRequest, IDecryptDataResponse, IEncryptDataRequest, IEncryptDataResponse, IHashDataRequest, IHashDataResponse } from "../../../shrimp/helpers/cryptoHelper";
 import { IMessage, LogType } from "../../../shrimp/helpers/logger";
 import { ElementLocation } from "../../../shrimp/interfaces/ComponentInterfaces/ElementLocation";
 import { IComponent, IComponentClassEngine } from "../../../shrimp/interfaces/ComponentInterfaces/IComponent";
@@ -112,6 +113,9 @@ export declare class ShellConfiguration implements IShellConfiguration {
         digestAlgorithm: string | "sha512";
         padding: string | "pkcs15";
     }) => string;
+    hash?: (data: IHashDataRequest) => Promise<IHashDataResponse>;
+    encrypt?: (data: IEncryptDataRequest) => Promise<IEncryptDataResponse>;
+    decrypt?: (data: IDecryptDataRequest) => Promise<IDecryptDataResponse>;
     getMinEngineLogType?: () => LogType | undefined;
     downloadHandler?: (responseFile: {
         data: string;
