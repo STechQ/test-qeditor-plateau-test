@@ -1476,12 +1476,6 @@ export interface IGlobalsQS extends IGlobalsBase {
     Url: IGlobals_Url;
 }
 export interface IGlobals_cryptography {
-    generateKeyPair: () => Record<string, string> | undefined;
-    store(keyPair: Record<string, string>): void;
-    sign(value: string, privateKey: string, options?: {
-        digestAlgorithm: string | "sha512";
-        padding: string | "pkcs15";
-    }): string | undefined;
     hash(data: IHashDataRequest): Promise<IHashDataResponse | undefined>;
     encrypt(data: IEncryptDataRequest): Promise<IEncryptDataResponse | undefined>;
     decrypt(data: IDecryptDataRequest): Promise<IDecryptDataResponse | undefined>;
