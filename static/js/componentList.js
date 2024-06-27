@@ -5308,6 +5308,10 @@ nextIcon = 'mdi-plus'}`
             type: Boolean,
             editorDefaultValue: "false"
         },
+        showPrint: {
+            type: Boolean,
+            editorDefaultValue: "false"
+        },
         src: {
             default: "",
             type: String
