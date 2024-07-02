@@ -1458,7 +1458,7 @@ export interface IGlobalsBase {
     currentPage: IGlobals_currentPage;
     cryptography: IGlobals_cryptography;
     encoding: IGlobals_Encoding;
-    scripts: IScripts;
+    integrations: IScripts;
     webScripts: {};
 }
 export interface IScripts {
