@@ -1465,6 +1465,7 @@ export interface IScripts {
     dataroid: {
         clearUserProfile: () => void;
         setUserProfile: (cid: string, email: string) => void;
+        track: (eventName: string, params: Record<string, null | undefined | string | number | Date | boolean | Array<string> | Array<number>>) => void;
     };
 }
 export interface IGlobalsTS extends IGlobalsBase {
