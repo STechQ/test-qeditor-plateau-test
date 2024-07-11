@@ -17,7 +17,6 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     height: string;
     border: number;
     isLoading: boolean;
-    allowFullScreen: boolean;
     _renderingProps: any;
 }>;
 export default _default;
