@@ -655,6 +655,7 @@ body .v-application .v-tabs {
 /* V3.2 Changes */
 
 /* Bileşen değer farklılıklarının hesaplanması ve bileşenlere yansıltılması*/
+/* Legend Component Start */
 .sftt-value-none.v-text-field fieldset,
 .sftt-value-none.v-text-field--outlined fieldset {
   border: 5px solid #CFD8DC !important; /*  blue-grey-lighten-4 https://vuetifyjs.com/en/styles/colors/#material-colors */
@@ -727,6 +728,18 @@ body .v-application .v-tabs {
 .sftt-compare-value-tooltip {
   width: inherit;
 }
+
+
+.sftt-value-none.v-text-field--rounded fieldset,
+.sftt-value-saved.v-text-field--rounded fieldset,
+.sftt-value-updated.v-text-field--rounded fieldset,
+.sftt-value-removed.v-text-field--rounded fieldset {
+  border-radius: 28px !important;
+}
+
+
+/* Legend Component END */
+
 ::-webkit-scrollbar {
   width: 12px;
   height: 12px;

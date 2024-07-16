@@ -39,6 +39,7 @@ export declare const COMPONENT_STYLE_TYPE: {
     border: string;
     "break-point-picker": string;
     "layout-input": string;
+    display: string;
 };
 export interface IComponentDefinition {
     componentStyleList: IComponentStyleInlineInterface;
