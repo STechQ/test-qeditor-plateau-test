@@ -77,10 +77,18 @@ let pjson = {
 												"default": {
 													"c": [
 														{
-															"T": "VList",
+															"T": "VCard",
 															"P": {
 																"ID": {
-																	"H": "EdtrComp_41",
+																	"H": "EdtrComp_1",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "'white'",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
 																	"T": "prop"
 																}
 															},
@@ -89,10 +97,10 @@ let pjson = {
 																"default": {
 																	"c": [
 																		{
-																			"T": "VListItemGroup",
+																			"T": "VRow",
 																			"P": {
 																				"ID": {
-																					"H": "EdtrComp_46",
+																					"H": "EdtrComp_3",
 																					"T": "prop"
 																				}
 																			},
@@ -101,37 +109,205 @@ let pjson = {
 																				"default": {
 																					"c": [
 																						{
-																							"T": "VListItem",
-																							"P": {
-																								"ID": {
-																									"H": "EdtrComp_49",
-																									"T": "prop"
-																								}
-																							},
-																							"E": {},
+																							"T": "VCol",
 																							"C": {
 																								"default": {
 																									"c": [
 																										{
-																											"T": "QLabel",
+																											"T": "VBtn",
 																											"P": {
 																												"ID": {
-																													"H": "EdtrComp_51",
+																													"H": "EdtrComp_10",
 																													"T": "prop"
 																												},
-																												"tagType": {
-																													"H": "'span'",
+																												"color": {
+																													"H": "'primary'",
 																													"T": "prop"
 																												},
-																												"text": {
-																													"H": "'Text'",
+																												"depressed": {
+																													"H": "true",
+																													"T": "prop"
+																												},
+																												"elevation": {
+																													"H": "0",
+																													"T": "prop"
+																												},
+																												"height": {
+																													"H": "'40px'",
+																													"T": "prop"
+																												},
+																												"visible": {
+																													"H": "true",
+																													"T": "prop"
+																												},
+																												"Render": {
+																													"H": "if(item.carbs==24){true}else{false}",
 																													"T": "prop"
 																												}
 																											},
 																											"E": {},
-																											"C": {},
+																											"C": {
+																												"default": {
+																													"c": [
+																														{
+																															"T": "QLabel",
+																															"C": {},
+																															"E": {},
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_13",
+																																	"T": "prop"
+																																},
+																																"text": {
+																																	"H": "'Button 1'",
+																																	"T": "prop"
+																																}
+																															},
+																															"_Editor": {
+																																"eID": "EdtrComp_13"
+																															},
+																															"O": {
+																																"cType": "child"
+																															}
+																														}
+																													],
+																													"cType": "slot"
+																												}
+																											},
 																											"_Editor": {
-																												"eID": "EdtrComp_51"
+																												"eID": "EdtrComp_10"
+																											},
+																											"O": {
+																												"cType": "slot"
+																											}
+																										},
+																										{
+																											"T": "VBtn",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_22",
+																													"T": "prop"
+																												},
+																												"color": {
+																													"H": "'primary'",
+																													"T": "prop"
+																												},
+																												"depressed": {
+																													"H": "true",
+																													"T": "prop"
+																												},
+																												"elevation": {
+																													"H": "0",
+																													"T": "prop"
+																												},
+																												"height": {
+																													"H": "'40px'",
+																													"T": "prop"
+																												},
+																												"visible": {
+																													"H": "true",
+																													"T": "prop"
+																												},
+																												"Render": {
+																													"H": "if(item.carbs!=24){true}else{false}",
+																													"T": "prop"
+																												}
+																											},
+																											"E": {},
+																											"C": {
+																												"default": {
+																													"c": [
+																														{
+																															"T": "QLabel",
+																															"C": {},
+																															"E": {},
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_23",
+																																	"T": "prop"
+																																},
+																																"text": {
+																																	"H": "'Button 2'",
+																																	"T": "prop"
+																																}
+																															},
+																															"_Editor": {
+																																"eID": "EdtrComp_23"
+																															},
+																															"O": {
+																																"cType": "child"
+																															}
+																														}
+																													],
+																													"cType": "slot"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_22"
+																											},
+																											"O": {
+																												"cType": "slot"
+																											}
+																										},
+																										{
+																											"T": "VBtn",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_18",
+																													"T": "prop"
+																												},
+																												"color": {
+																													"H": "'primary'",
+																													"T": "prop"
+																												},
+																												"depressed": {
+																													"H": "true",
+																													"T": "prop"
+																												},
+																												"elevation": {
+																													"H": "0",
+																													"T": "prop"
+																												},
+																												"height": {
+																													"H": "'40px'",
+																													"T": "prop"
+																												},
+																												"visible": {
+																													"H": "true",
+																													"T": "prop"
+																												}
+																											},
+																											"E": {},
+																											"C": {
+																												"default": {
+																													"c": [
+																														{
+																															"T": "QLabel",
+																															"C": {},
+																															"E": {},
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_19",
+																																	"T": "prop"
+																																},
+																																"text": {
+																																	"H": "'Button 3'",
+																																	"T": "prop"
+																																}
+																															},
+																															"_Editor": {
+																																"eID": "EdtrComp_19"
+																															},
+																															"O": {
+																																"cType": "child"
+																															}
+																														}
+																													],
+																													"cType": "slot"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_18"
 																											},
 																											"O": {
 																												"cType": "slot"
@@ -141,11 +317,27 @@ let pjson = {
 																									"cType": "slot"
 																								}
 																							},
+																							"E": {},
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_6",
+																									"T": "prop"
+																								}
+																							},
 																							"_Editor": {
-																								"eID": "EdtrComp_49"
+																								"eID": "EdtrComp_6"
 																							},
 																							"O": {
-																								"cType": "slot"
+																								"cType": "slot",
+																								"layout": {
+																									"dOpt": {
+																										"xs": [
+																											"d:d-flex",
+																											"fd:flex-column"
+																										]
+																									},
+																									"class": "d-flex flex-column"
+																								}
 																							}
 																						}
 																					],
@@ -153,7 +345,7 @@ let pjson = {
 																				}
 																			},
 																			"_Editor": {
-																				"eID": "EdtrComp_46"
+																				"eID": "EdtrComp_3"
 																			},
 																			"O": {
 																				"cType": "slot"
@@ -164,7 +356,7 @@ let pjson = {
 																}
 															},
 															"_Editor": {
-																"eID": "EdtrComp_41"
+																"eID": "EdtrComp_1"
 															},
 															"O": {
 																"cType": "slot"
@@ -189,7 +381,7 @@ let pjson = {
 															},
 															"E": {
 																"click": {
-																	"H": "\r\ncomponents.EdtrComp_37.qValue =!components.EdtrComp_37.qValue",
+																	"H": "declare let on;\r\non.click(mouseEvent);",
 																	"P": "mouseEvent:unknown | undefined",
 																	"HL": "TS"
 																}
@@ -260,6 +452,76 @@ let pjson = {
 			},
 			"_Editor": {
 				"eID": "EdtrComp_35"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_38",
+					"T": "prop"
+				},
+				"color": {
+					"H": "'primary'",
+					"T": "prop"
+				},
+				"depressed": {
+					"H": "true",
+					"T": "prop"
+				},
+				"elevation": {
+					"H": "0",
+					"T": "prop"
+				},
+				"height": {
+					"H": "'40px'",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "let newItems=[{name : 'Frozens Yogurt', calories : 159, fat : '6.0', carbs : 25, protein : '4.0', iron : '1%'},\r\n{name : 'Ice cream sandwich', calories : 237, fat : '9.0', carbs : 37, protein : '4.3', iron : '1%'},\r\n{name : 'Eclair', calories : 262, fat : '16.0', carbs : 23, protein : '6.0', iron : '7%'},\r\n{name : 'Cupcake', calories : 305, fat : '3.7', carbs : 67, protein : '4.3', iron : '8%'},\r\n{name : 'Gingerbread',calories : 356, fat : '16.0', carbs : 49, protein : '3.9', iron : '16%'},\r\n{name : 'Jelly bean', calories : 375,  fat : '0.0', carbs : 94, protein : '0.0', iron : '0%'},\r\n{name : 'Lollipop', calories : 392, fat : '0.2', carbs : 98, protein : '0.0', iron : '2 %'},\r\n{name : 'Honeycomb', calories : 408, fat : '3.2', carbs : 87, protein : '6.5', iron : '45%'},\r\n{name : 'Donut', calories : 452, fat : '25.0', carbs : 51, protein : '4.9', iron : '22%'},\r\n{name : 'KitKat', calories : 518, fat : '26.0', carbs : 65, protein : '7', iron:  '6 %'}];\r\n\r\ncomponents.EdtrComp_57.items = newItems;",
+					"P": "mouseEvent:unknown | undefined",
+					"HL": "TS"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_41",
+									"T": "prop"
+								},
+								"text": {
+									"H": "'Update Table'",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_41"
+							},
+							"O": {
+								"cType": "child"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_38"
 			},
 			"O": {
 				"cType": "slot"
@@ -344,10 +606,18 @@ let pjson = {
 												"default": {
 													"c": [
 														{
-															"T": "VList",
+															"T": "VCard",
 															"P": {
 																"ID": {
-																	"H": "EdtrComp_41",
+																	"H": "EdtrComp_1",
+																	"T": "prop"
+																},
+																"color": {
+																	"H": "╬'white'╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
 																	"T": "prop"
 																}
 															},
@@ -356,10 +626,10 @@ let pjson = {
 																"default": {
 																	"c": [
 																		{
-																			"T": "VListItemGroup",
+																			"T": "VRow",
 																			"P": {
 																				"ID": {
-																					"H": "EdtrComp_46",
+																					"H": "EdtrComp_3",
 																					"T": "prop"
 																				}
 																			},
@@ -368,53 +638,242 @@ let pjson = {
 																				"default": {
 																					"c": [
 																						{
-																							"T": "VListItem",
-																							"P": {
-																								"ID": {
-																									"H": "EdtrComp_49",
-																									"T": "prop"
-																								}
-																							},
-																							"E": {},
+																							"T": "VCol",
 																							"C": {
 																								"default": {
 																									"c": [
 																										{
-																											"T": "QLabel",
+																											"T": "VBtn",
 																											"P": {
 																												"ID": {
-																													"H": "EdtrComp_51",
+																													"H": "EdtrComp_10",
 																													"T": "prop"
 																												},
-																												"tagType": {
-																													"H": "╬'span'╩╩",
+																												"color": {
+																													"H": "╬'primary'╩╩",
 																													"T": "prop"
 																												},
-																												"text": {
-																													"H": "╬'Text'╩╩",
+																												"depressed": {
+																													"H": "╬true╩╩",
+																													"T": "prop"
+																												},
+																												"elevation": {
+																													"H": "╬0╩╩",
+																													"T": "prop"
+																												},
+																												"height": {
+																													"H": "╬'40px'╩╩",
+																													"T": "prop"
+																												},
+																												"visible": {
+																													"H": "╬true╩╩",
+																													"T": "prop"
+																												},
+																												"Render": {
+																													"H": "╬if╣==╣.╣item╩╠carbs╩╩╠24╩╩╠╬true╩╩╠╬false╩╩╩╩",
 																													"T": "prop"
 																												}
 																											},
 																											"E": {},
-																											"C": {},
+																											"C": {
+																												"default": {
+																													"c": [
+																														{
+																															"T": "QLabel",
+																															"C": {},
+																															"E": {},
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_13",
+																																	"T": "prop"
+																																},
+																																"text": {
+																																	"H": "╬'Button 1'╩╩",
+																																	"T": "prop"
+																																}
+																															},
+																															"_Editor": {
+																																"eID": "EdtrComp_13"
+																															},
+																															"O": {
+																																"cType": "child",
+																																"compDomClasses": "q-label "
+																															}
+																														}
+																													],
+																													"cType": "slot"
+																												}
+																											},
 																											"_Editor": {
-																												"eID": "EdtrComp_51"
+																												"eID": "EdtrComp_10"
 																											},
 																											"O": {
 																												"cType": "slot",
-																												"compDomClasses": "q-label "
+																												"compDomClasses": "v-btn v-btn--depressed theme--light elevation-0 v-size--default primary"
+																											}
+																										},
+																										{
+																											"T": "VBtn",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_22",
+																													"T": "prop"
+																												},
+																												"color": {
+																													"H": "╬'primary'╩╩",
+																													"T": "prop"
+																												},
+																												"depressed": {
+																													"H": "╬true╩╩",
+																													"T": "prop"
+																												},
+																												"elevation": {
+																													"H": "╬0╩╩",
+																													"T": "prop"
+																												},
+																												"height": {
+																													"H": "╬'40px'╩╩",
+																													"T": "prop"
+																												},
+																												"visible": {
+																													"H": "╬true╩╩",
+																													"T": "prop"
+																												},
+																												"Render": {
+																													"H": "╬if╣!=╣.╣item╩╠carbs╩╩╠24╩╩╠╬true╩╩╠╬false╩╩╩╩",
+																													"T": "prop"
+																												}
+																											},
+																											"E": {},
+																											"C": {
+																												"default": {
+																													"c": [
+																														{
+																															"T": "QLabel",
+																															"C": {},
+																															"E": {},
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_23",
+																																	"T": "prop"
+																																},
+																																"text": {
+																																	"H": "╬'Button 2'╩╩",
+																																	"T": "prop"
+																																}
+																															},
+																															"_Editor": {
+																																"eID": "EdtrComp_23"
+																															},
+																															"O": {
+																																"cType": "child",
+																																"compDomClasses": "q-label "
+																															}
+																														}
+																													],
+																													"cType": "slot"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_22"
+																											},
+																											"O": {
+																												"cType": "slot",
+																												"compDomClasses": "v-btn v-btn--depressed theme--light elevation-0 v-size--default primary"
+																											}
+																										},
+																										{
+																											"T": "VBtn",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_18",
+																													"T": "prop"
+																												},
+																												"color": {
+																													"H": "╬'primary'╩╩",
+																													"T": "prop"
+																												},
+																												"depressed": {
+																													"H": "╬true╩╩",
+																													"T": "prop"
+																												},
+																												"elevation": {
+																													"H": "╬0╩╩",
+																													"T": "prop"
+																												},
+																												"height": {
+																													"H": "╬'40px'╩╩",
+																													"T": "prop"
+																												},
+																												"visible": {
+																													"H": "╬true╩╩",
+																													"T": "prop"
+																												}
+																											},
+																											"E": {},
+																											"C": {
+																												"default": {
+																													"c": [
+																														{
+																															"T": "QLabel",
+																															"C": {},
+																															"E": {},
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_19",
+																																	"T": "prop"
+																																},
+																																"text": {
+																																	"H": "╬'Button 3'╩╩",
+																																	"T": "prop"
+																																}
+																															},
+																															"_Editor": {
+																																"eID": "EdtrComp_19"
+																															},
+																															"O": {
+																																"cType": "child",
+																																"compDomClasses": "q-label "
+																															}
+																														}
+																													],
+																													"cType": "slot"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_18"
+																											},
+																											"O": {
+																												"cType": "slot",
+																												"compDomClasses": "v-btn v-btn--depressed theme--light elevation-0 v-size--default primary"
 																											}
 																										}
 																									],
 																									"cType": "slot"
 																								}
 																							},
+																							"E": {},
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_6",
+																									"T": "prop"
+																								}
+																							},
 																							"_Editor": {
-																								"eID": "EdtrComp_49"
+																								"eID": "EdtrComp_6"
 																							},
 																							"O": {
 																								"cType": "slot",
-																								"compDomClasses": "v-list-item v-list-item--link theme--light"
+																								"layout": {
+																									"dOpt": {
+																										"xs": [
+																											"d:d-flex",
+																											"fd:flex-column"
+																										]
+																									},
+																									"class": "d-flex flex-column"
+																								},
+																								"compDomClasses": "col d-flex flex-column"
 																							}
 																						}
 																					],
@@ -422,11 +881,11 @@ let pjson = {
 																				}
 																			},
 																			"_Editor": {
-																				"eID": "EdtrComp_46"
+																				"eID": "EdtrComp_3"
 																			},
 																			"O": {
 																				"cType": "slot",
-																				"compDomClasses": "v-item-group theme--light v-list-item-group"
+																				"compDomClasses": "row"
 																			}
 																		}
 																	],
@@ -434,11 +893,11 @@ let pjson = {
 																}
 															},
 															"_Editor": {
-																"eID": "EdtrComp_41"
+																"eID": "EdtrComp_1"
 															},
 															"O": {
 																"cType": "slot",
-																"compDomClasses": "v-list v-sheet theme--light"
+																"compDomClasses": "v-card v-sheet theme--light white"
 															}
 														}
 													],
@@ -460,7 +919,7 @@ let pjson = {
 															},
 															"E": {
 																"click": {
-																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ncomponents.EdtrComp_37.qValue = !components.EdtrComp_37.qValue;\r\n",
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\non.click(mouseEvent);\r\n",
 																	"P": "mouseEvent:unknown | undefined",
 																	"HL": "JS"
 																}
@@ -540,19 +999,82 @@ let pjson = {
 				"cType": "slot",
 				"compDomClasses": "container container--fluid newDropBorder"
 			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_38",
+					"T": "prop"
+				},
+				"color": {
+					"H": "╬'primary'╩╩",
+					"T": "prop"
+				},
+				"depressed": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"elevation": {
+					"H": "╬0╩╩",
+					"T": "prop"
+				},
+				"height": {
+					"H": "╬'40px'╩╩",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nvar newItems = [{ name: 'Frozens Yogurt', calories: 159, fat: '6.0', carbs: 25, protein: '4.0', iron: '1%' },\r\n    { name: 'Ice cream sandwich', calories: 237, fat: '9.0', carbs: 37, protein: '4.3', iron: '1%' },\r\n    { name: 'Eclair', calories: 262, fat: '16.0', carbs: 23, protein: '6.0', iron: '7%' },\r\n    { name: 'Cupcake', calories: 305, fat: '3.7', carbs: 67, protein: '4.3', iron: '8%' },\r\n    { name: 'Gingerbread', calories: 356, fat: '16.0', carbs: 49, protein: '3.9', iron: '16%' },\r\n    { name: 'Jelly bean', calories: 375, fat: '0.0', carbs: 94, protein: '0.0', iron: '0%' },\r\n    { name: 'Lollipop', calories: 392, fat: '0.2', carbs: 98, protein: '0.0', iron: '2 %' },\r\n    { name: 'Honeycomb', calories: 408, fat: '3.2', carbs: 87, protein: '6.5', iron: '45%' },\r\n    { name: 'Donut', calories: 452, fat: '25.0', carbs: 51, protein: '4.9', iron: '22%' },\r\n    { name: 'KitKat', calories: 518, fat: '26.0', carbs: 65, protein: '7', iron: '6 %' }];\r\ncomponents.EdtrComp_57.items = newItems;\r\n",
+					"P": "mouseEvent:unknown | undefined",
+					"HL": "JS"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_41",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬'Update Table'╩╩",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_41"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "q-label newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_38"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--depressed theme--light elevation-0 v-size--default primary newDropBorder"
+			}
 		}
 	],
 	"lrids": {},
-	"clrids": {
-		"tr-TR": {
-			"VALIDATION_E_MAIL": "╬'Hatalı e-posta'╩╩",
-			"VALIDATION_PHONE_NUMBER": "╬'Hatalı telefon numarası'╩╩"
-		},
-		"en-US": {
-			"VALIDATION_E_MAIL": "╬'Incorrect e-mail address'╩╩",
-			"VALIDATION_PHONE_NUMBER": "╬'Incorrect phone number'╩╩"
-		}
-	},
+	"clrids": {},
 	"opt": {}
 };
 export default pjson
