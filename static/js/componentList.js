@@ -615,6 +615,10 @@ var componentOptions = {
         }
     },
     VBottomSheet: {
+        attach: {
+            type: Boolean,
+            editorDefaultValue: "false"
+        },
         qValue: {
             type: "any"
         },
