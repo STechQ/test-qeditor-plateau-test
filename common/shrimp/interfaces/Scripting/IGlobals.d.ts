@@ -1462,11 +1462,10 @@ export interface IGlobalsBase {
     webScripts: {};
 }
 export interface IScripts {
-    dataroid: {
-        clearUserProfile: () => void;
-        setUserProfile: (cid: string, email: string) => void;
-        track: (eventName: string, params: Record<string, null | undefined | string | number | Date | boolean | Array<string> | Array<number>>) => void;
-    };
+    Dataroid: IDataroid;
+}
+export interface IDataroid {
+    track(eventName: string, params?: Record<string, any>): void;
 }
 export interface IGlobalsTS extends IGlobalsBase {
     devex?: IGlobals_devex;
