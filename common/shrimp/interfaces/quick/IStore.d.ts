@@ -33,6 +33,17 @@ export interface IStorageAccess {
     removeItemFromLocalStorage?({ key }: {
         key: string;
     }): void;
+    setEncryptedStorage?({ key, value }: {
+        key: string;
+        value: string;
+    }): void;
+    clearEncryptedStorage?(): void;
+    getItemFromEncryptedStorage?({ key }: {
+        key: string;
+    }): string | null;
+    removeItemFromEncryptedStorage?({ key }: {
+        key: string;
+    }): void;
 }
 export interface IContextTargetInst {
     targetInstance: object | ICompDepTarget;

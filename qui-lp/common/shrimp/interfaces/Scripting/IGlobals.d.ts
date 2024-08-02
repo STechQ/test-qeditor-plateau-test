@@ -1192,6 +1192,48 @@ export interface IGlobals_LocalStorage {
    */
     delete: (key: string) => void;
 }
+export interface IGlobals_EncryptedStorage {
+    /**
+     * Sets a value in the local storage with the provided key.
+     *
+     * @param key - The key for the local storage.
+     * @param value - The value to be set in the local storage.
+     * @returns {void}
+     *
+     * @example
+     * quick.LocalStorage.set('myKey', 'myValue');
+   */
+    set: (key: string, value: string) => void;
+    /**
+     * Gets the value from the local storage associated with the provided key.
+     *
+     * @param key - The key of the local storage to retrieve.
+     * @returns - Returns the value of the local storage or null if not found.
+     *
+     * @example
+     * const myValue = quick.LocalStorage.get('myKey');
+   */
+    get: (key: string) => string | null;
+    /**
+     * Clears all values from the local storage.
+     *
+     * @returns {void}
+     *
+     * @example
+     * quick.LocalStorage.clear();
+   */
+    clear: () => void;
+    /**
+     * Deletes the value from the local storage associated with the provided key.
+     *
+     * @param key - The key of the local storage to delete.
+     * @returns {void}
+     *
+     * @example
+     * quick.LocalStorage.delete('myKey');
+   */
+    delete: (key: string) => void;
+}
 export interface IGlobals_platform {
     /**
      * Returns whether the platform is a mobile platform (Android or iOS).
@@ -1443,6 +1485,7 @@ export interface IGlobalsBase {
     permanentStore: IGlobals_permanentStore;
     cookie: IGlobals_cookie;
     localStorage: IGlobals_LocalStorage;
+    encryptedStorage: IGlobals_EncryptedStorage;
     Url: IGlobals_Url;
     findControl: () => void;
     this: IComponent | null | undefined;

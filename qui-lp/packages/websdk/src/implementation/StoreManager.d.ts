@@ -34,5 +34,16 @@ export declare class StoreManager implements IStoreManager {
     removeItemFromLocalStorage?({ key }: {
         key: string;
     }): void;
+    setEncryptedStorage?({ key, value }: {
+        key: string;
+        value: string;
+    }): void;
+    clearEncryptedStorage?(): void;
+    getItemFromEncryptedStorage?({ key }: {
+        key: string;
+    }): string | null;
+    removeItemFromEncryptedStorage?({ key }: {
+        key: string;
+    }): void;
 }
 //# sourceMappingURL=StoreManager.d.ts.map
