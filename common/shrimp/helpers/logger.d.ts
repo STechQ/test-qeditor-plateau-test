@@ -28,9 +28,9 @@ export declare class Logger implements ILogger {
      * @param timer Seconds of writing down the messages
      * @param callBack Function that handles the messages, comes from shell.
      */
-    static Init({ callBack, clear }: {
+    static Init({ callBack, bulkSize }: {
         callBack?: ((messages: IMessage) => void);
-        clear?: () => void;
+        bulkSize?: number;
     }): void;
     /**
      * Console log function
@@ -59,7 +59,7 @@ export declare class Logger implements ILogger {
      * @param logMessage Message that will be written to the server
      * @param logType Type of log message
      */
-    private static prepareClientLog;
+    static prepareClientLog(logMessage: any, logType: LogType): void;
     /**
      * Can't call Log.calle.caller beacuse of the TypeScript classes are on "strict mode"
      * JS doesn't allow to arguments.callee.caller on strict mode

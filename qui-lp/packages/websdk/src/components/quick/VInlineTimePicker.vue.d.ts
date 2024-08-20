@@ -13,6 +13,7 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     allowedHours: unknown[];
     allowedMinutes: unknown[];
     dense: boolean;
+    rounded: boolean;
     disabled: boolean;
     label: string;
     min: string;

@@ -364,6 +364,9 @@ var componentOptions = {
         placeholder: {
             type: String
         },
+        rounded: {
+            type: Boolean
+        },
         rules: {
             type: "Array<any>"
         },
@@ -4393,6 +4396,15 @@ nextIcon = 'mdi-plus'}`
             editorDefaultValue: "'primary'",
             type: String,
             options: ["'primary'", "'secondary'", "'accent'", "'success'", "'error'", "'info'", "'warning'"]
+        },
+        compareValue: {
+            type: "any"
+        },
+        compareText: {
+            type: String
+        },
+        compareTableValue: {
+            type: String
         },
         dark: {
             type: Boolean

@@ -34,15 +34,15 @@ export declare class StoreManager implements IStoreManager {
     removeItemFromLocalStorage?({ key }: {
         key: string;
     }): void;
-    setEncryptedStorage?({ key, value }: {
+    setSecureStorage?({ key, value }: {
         key: string;
         value: string;
     }): void;
-    clearEncryptedStorage?(): void;
-    getItemFromEncryptedStorage?({ key }: {
+    clearSecureStorage?(): void;
+    getItemFromSecureStorage?({ key }: {
         key: string;
-    }): string | null;
-    removeItemFromEncryptedStorage?({ key }: {
+    }): null;
+    removeItemFromSecureStorage?({ key }: {
         key: string;
     }): void;
 }

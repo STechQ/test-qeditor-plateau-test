@@ -1159,7 +1159,7 @@ export interface IGlobals_LocalStorage {
      * @returns {void}
      *
      * @example
-     * quick.LocalStorage.set('myKey', 'myValue');
+     * quick.localStorage.set('myKey', 'myValue');
    */
     set: (key: string, value: string) => void;
     /**
@@ -1169,7 +1169,7 @@ export interface IGlobals_LocalStorage {
      * @returns - Returns the value of the local storage or null if not found.
      *
      * @example
-     * const myValue = quick.LocalStorage.get('myKey');
+     * const myValue = quick.localStorage.get('myKey');
    */
     get: (key: string) => string | null;
     /**
@@ -1178,7 +1178,7 @@ export interface IGlobals_LocalStorage {
      * @returns {void}
      *
      * @example
-     * quick.LocalStorage.clear();
+     * quick.localStorage.clear();
    */
     clear: () => void;
     /**
@@ -1188,49 +1188,57 @@ export interface IGlobals_LocalStorage {
      * @returns {void}
      *
      * @example
-     * quick.LocalStorage.delete('myKey');
+     * quick.localStorage.delete('myKey');
    */
     delete: (key: string) => void;
 }
-export interface IGlobals_EncryptedStorage {
+export interface IGlobals_SecureStorage {
     /**
-     * Sets a value in the local storage with the provided key.
+     * Only uses for Mobile Apps.
+     * For IOS sets a value in the ios Keychain with the provided key.
+     * For Anroid sets a value in the Anroid EncryptedSharedPreferences with the provided key.
      *
-     * @param key - The key for the local storage.
-     * @param value - The value to be set in the local storage.
+     * @param key - The key for the storage.
+     * @param value - The value to be set in the storage.
      * @returns {void}
      *
      * @example
-     * quick.LocalStorage.set('myKey', 'myValue');
+     * quick.secureStorage.set('myKey', 'myValue');
    */
     set: (key: string, value: string) => void;
     /**
-     * Gets the value from the local storage associated with the provided key.
+     * Only uses for Mobile Apps.
+     * For IOS, gets the value from the ios Keychain associated with the provided key.
+     * For Anroid, gets the value from the Anroid EncryptedSharedPreferences associated with the provided key.
      *
-     * @param key - The key of the local storage to retrieve.
-     * @returns - Returns the value of the local storage or null if not found.
+     * @param key - The key of the storage to retrieve.
+     * @returns Returns the value of the storage or null if not found.
      *
      * @example
-     * const myValue = quick.LocalStorage.get('myKey');
+     * const myValue = quick.secureStorage.get('myKey');
    */
     get: (key: string) => string | null;
     /**
-     * Clears all values from the local storage.
+     * Only uses for Mobile Apps.
+     * For IOS, clears all values from the ios Keychain.
+     * For Anroid, clears all values from the Anroid EncryptedSharedPreferences.
      *
      * @returns {void}
      *
      * @example
-     * quick.LocalStorage.clear();
+     * quick.secureStorage.clear();
    */
     clear: () => void;
     /**
-     * Deletes the value from the local storage associated with the provided key.
+     * Only uses for Mobile Apps.
+     * For IOS, deletes the value from the ios Keychain associated with the provided key.
+     * For Anroid, deletes the value from the Anroid EncryptedSharedPreferences associated with the provided key.
      *
-     * @param key - The key of the local storage to delete.
+     * @param key - The key of the storage to delete.
      * @returns {void}
      *
      * @example
-     * quick.LocalStorage.delete('myKey');
+     * quick.secureStorage.delete('myKey');
    */
     delete: (key: string) => void;
 }
@@ -1485,7 +1493,7 @@ export interface IGlobalsBase {
     permanentStore: IGlobals_permanentStore;
     cookie: IGlobals_cookie;
     localStorage: IGlobals_LocalStorage;
-    encryptedStorage: IGlobals_EncryptedStorage;
+    secureStorage: IGlobals_SecureStorage;
     Url: IGlobals_Url;
     findControl: () => void;
     this: IComponent | null | undefined;
@@ -1526,8 +1534,44 @@ export interface IGlobalsQS extends IGlobalsBase {
     Url: IGlobals_Url;
 }
 export interface IGlobals_cryptography {
+    /**
+    * Hashing transforms specific data into a hash value using a chosen hashing algorithm.
+    *
+    * @param {IHashDataRequest} data - The hash data request
+    * @param {string} data.data - The data to be hashed
+    * @param {HashAlgorithm} data.algorithm  - The hashing algorithm to use. HashAlgorithm { SHA1, SHA256, SHA384, SHA512 }
+    * @returns {IHashDataResponse} Returns the hashedData.
+    *
+    * @example
+    * let hashResponse = await quick.cryptography.hash(hashRequest);
+  */
     hash(data: IHashDataRequest): Promise<IHashDataResponse | undefined>;
+    /**
+    * Encrypts a specific data using the specified encryption algorithm.
+    *
+    * @param {IEncryptDataRequest} data - The Encrypt data request
+    * @param {string} data.data - The data to be encrypted
+    * @param {string} data.key  - The encryption key
+    * @param {EncryptionAlgorithm} data.algorithm  - Specifies which encryption algorithm to use.EncryptionAlgorithm { RSAOAEP, AESCTR, AESCBC, AESGCM }
+    * @returns {IEncryptDataResponse } Returns the encryptedData.
+    *
+    * @example
+    * let responseEncrypt = await quick.cryptography.encrypt(requestEncrypt);
+  */
     encrypt(data: IEncryptDataRequest): Promise<IEncryptDataResponse | undefined>;
+    /**
+    * Decryption is the process of converting encrypted data back to its original, readable form.
+    *
+    * @param {IDecryptDataRequest } data - The Decrypt data request
+    * @param {string} data.encryptedData - The encrypted data
+    * @param {string} data.iv - The initialization vector used during encryption. ( If algorithm is "RSAOAEP", then iv is not used, otherwise it is required. )
+    * @param {string} data.key - The encryption key
+    * @param {EncryptionAlgorithm} data.algorithm  - Specifies which encryption algorithm to use. EncryptionAlgorithm { RSAOAEP, AESCTR, AESCBC, AESGCM }
+    * @returns {IDecryptDataResponse  } Returns the encryptedData.
+    *
+    * @example
+    * let responseDecrypt = await quick.cryptography.decrypt(requestDecrypt);
+  */
     decrypt(data: IDecryptDataRequest): Promise<IDecryptDataResponse | undefined>;
 }
 export interface IGlobals_Bignumber {

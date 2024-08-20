@@ -118,6 +118,7 @@ export declare class ShellConfiguration implements IShellConfiguration {
         compID: string;
     }) => IDomElement;
     getNetworkConnection?: () => boolean;
+    getLogBulkSize?: () => number | undefined;
     constructor();
 }
 //# sourceMappingURL=ShellConfiguration.d.ts.map

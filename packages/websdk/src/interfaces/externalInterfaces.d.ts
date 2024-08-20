@@ -14,6 +14,7 @@ export declare type IAmPopupMessage = {
 } | {
     type: "iamOptions";
     options?: IPlateauUIOptions;
+    parentWindow?: Object;
 };
 export declare function doPostMessage(targetWindow: Window, data: IAmPopupMessage): void;
 //# sourceMappingURL=externalInterfaces.d.ts.map

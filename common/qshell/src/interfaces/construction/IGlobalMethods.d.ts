@@ -74,5 +74,6 @@ export interface IGlobalMethods extends IContextItem {
     }) => IDomElement;
     listenNetworkConnection?: () => void;
     getNetworkConnection?: () => boolean;
+    getLogBulkSize?: () => number | undefined;
 }
 //# sourceMappingURL=IGlobalMethods.d.ts.map
