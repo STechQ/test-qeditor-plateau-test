@@ -78,6 +78,10 @@ export interface IPropertyJson {
      * Handler File. TS 2.0
      */
     HF?: string;
+    /**
+     * Handler language. Should default to QS
+     */
+    HL?: ScriptLang;
 }
 export declare type PTyped = PType | "class" | "text" | "prop" | "attr";
 /**

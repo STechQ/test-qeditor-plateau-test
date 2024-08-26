@@ -23,6 +23,7 @@ export interface IPropExtensionUX {
     MultiLanguageProperty?: boolean;
     propType?: PType;
     isReadOnly?: boolean;
+    Level?: "Basic" | "Advanced";
 }
 export declare enum IPropOverrideType {
     Append = "Append",
@@ -30,4 +31,5 @@ export declare enum IPropOverrideType {
     Replace = "Replace"
 }
 export declare type ComponentOptions = Record<string, Record<string, IPropExtensionUX>>;
+export declare const BasicProps: string[];
 //# sourceMappingURL=IPropExtension.d.ts.map

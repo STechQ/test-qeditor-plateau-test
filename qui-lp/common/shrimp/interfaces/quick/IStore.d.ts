@@ -33,15 +33,15 @@ export interface IStorageAccess {
     removeItemFromLocalStorage?({ key }: {
         key: string;
     }): void;
-    setSecureStorage?({ key, value }: {
+    setEncryptedStorage?({ key, value }: {
         key: string;
         value: string;
     }): void;
-    clearSecureStorage?(): void;
-    getItemFromSecureStorage?({ key }: {
+    clearEncryptedStorage?(): void;
+    getItemFromEncryptedStorage?({ key }: {
         key: string;
     }): string | null;
-    removeItemFromSecureStorage?({ key }: {
+    removeItemFromEncryptedStorage?({ key }: {
         key: string;
     }): void;
 }

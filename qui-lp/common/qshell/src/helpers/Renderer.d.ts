@@ -1,5 +1,5 @@
 import { ITheme } from "@stechquick/algae/lib/quick/ITheme";
-import { ContextManager } from "../../../shrimp/context";
+import { ContextManager, IContextItem } from "../../../shrimp/context";
 import { Hook } from "../../../shrimp/helpers/hook";
 import { ILRID } from "../../../shrimp/interfaces/ComponentInterfaces/ILocalResource";
 import { IQJSon } from "../../../shrimp/interfaces/ComponentInterfaces/IQJson";
@@ -15,7 +15,7 @@ import { PlatformType } from "../../../shrimp/interfaces/quick/IPlatform";
 import { ISiteSettings } from "../../../shrimp/interfaces/quick/ISiteSettings";
 import { DoryRendererChild } from "./RendererChild";
 export declare class Renderer implements IRenderer {
-    context: ContextManager;
+    protected context: ContextManager;
     protected Dory: IDory;
     settingsQJsons: ISettingsQJsonContext;
     readonly BeforeRenderStartHook: Hook<() => void>;
@@ -72,5 +72,6 @@ export declare class Renderer implements IRenderer {
 }
 export declare class DoryRenderer extends Renderer implements IDoryRenderer {
     get DoryInst(): IDory;
+    getContextItem<contextItemType extends IContextItem>(contextItemName: string): contextItemType | undefined;
 }
 //# sourceMappingURL=Renderer.d.ts.map

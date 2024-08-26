@@ -12,7 +12,7 @@ export declare class ComponentManagerImpl implements IComponentManager {
     contextName: string;
     parentInstance: any;
     constructor(contextName: string, parentInstance: any);
-    componentHasProp(componentName: string, propName: string): boolean;
+    componentHasProp(componentName: string, compInstance: IComponent | undefined, propName: string): boolean;
     private compPropModifier;
     createComponent({ componentName, props, events, asChildType, asChildName, slots, scopedSlots, compClass, text, attrs, componentCollection, directives }: {
         componentName: string;
@@ -62,6 +62,7 @@ export declare class ComponentManagerImpl implements IComponentManager {
         childName: string;
     }): void;
     setVisibility(compColl: IComponentCollection, compVisibility: boolean): void;
+    setDisable(compColl: IComponentCollection, compDisable: boolean): void;
     getComponentValue(compColl: IComponentCollection): any;
     setComponentValue(compColl: IComponentCollection, value: string): void;
     getComponentStyle(comp: IComponent): any;
