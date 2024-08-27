@@ -127,7 +127,7 @@ declare const localComponents: {
         loaded: boolean;
         module: undefined;
     };
-    SubElement: {
+    VSubElement: {
         importFunc: () => Promise<void>;
         loaded: boolean;
         module: undefined;
