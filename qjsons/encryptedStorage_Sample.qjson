@@ -92,7 +92,7 @@ let pjson = {
 															},
 															"E": {
 																"click": {
-																	"H": "\r\nquick.secureStorage.set(\"secureStorageKey1\",\"secureStorageValue1\");",
+																	"H": "\r\nquick.encryptedStorage.set(\"encryptedStorageKey1\",\"encryptedStorageValue1\");",
 																	"P": "mouseEvent:unknown | undefined",
 																	"HL": "TS"
 																}
@@ -217,7 +217,7 @@ let pjson = {
 															},
 															"E": {
 																"click": {
-																	"H": "let value = quick.secureStorage.get(\"secureStorageKey1\");\r\ncomponents.EdtrComp_132.text = value;",
+																	"H": "let value = quick.encryptedStorage.get(\"encryptedStorageKey1\");\r\ncomponents.EdtrComp_132.text = value;",
 																	"P": "mouseEvent:unknown | undefined",
 																	"HL": "TS"
 																}
@@ -375,7 +375,7 @@ let pjson = {
 															},
 															"E": {
 																"click": {
-																	"H": "quick.secureStorage.delete(\"secureStorageKey1\");",
+																	"H": "quick.encryptedStorage.delete(\"encryptedStorageKey1\");",
 																	"P": "mouseEvent:unknown | undefined",
 																	"HL": "TS"
 																}
@@ -500,7 +500,7 @@ let pjson = {
 															},
 															"E": {
 																"click": {
-																	"H": "quick.secureStorage.clear();",
+																	"H": "quick.encryptedStorage.clear();",
 																	"P": "mouseEvent:unknown | undefined",
 																	"HL": "TS"
 																}
@@ -684,7 +684,7 @@ let pjson = {
 															},
 															"E": {
 																"click": {
-																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.secureStorage.set(\"secureStorageKey1\", \"secureStorageValue1\");\r\n",
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.encryptedStorage.set(\"encryptedStorageKey1\", \"encryptedStorageValue1\");\r\n",
 																	"P": "mouseEvent:unknown | undefined",
 																	"HL": "JS"
 																}
@@ -813,7 +813,7 @@ let pjson = {
 															},
 															"E": {
 																"click": {
-																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nvar value = quick.secureStorage.get(\"secureStorageKey1\");\r\ncomponents.EdtrComp_132.text = value;\r\n",
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nvar value = quick.encryptedStorage.get(\"encryptedStorageKey1\");\r\ncomponents.EdtrComp_132.text = value;\r\n",
 																	"P": "mouseEvent:unknown | undefined",
 																	"HL": "JS"
 																}
@@ -976,7 +976,7 @@ let pjson = {
 															},
 															"E": {
 																"click": {
-																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.secureStorage.delete(\"secureStorageKey1\");\r\n",
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.encryptedStorage.delete(\"encryptedStorageKey1\");\r\n",
 																	"P": "mouseEvent:unknown | undefined",
 																	"HL": "JS"
 																}
@@ -1105,7 +1105,7 @@ let pjson = {
 															},
 															"E": {
 																"click": {
-																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.secureStorage.clear();\r\n",
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.encryptedStorage.clear();\r\n",
 																	"P": "mouseEvent:unknown | undefined",
 																	"HL": "JS"
 																}

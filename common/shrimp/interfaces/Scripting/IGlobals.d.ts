@@ -1192,7 +1192,7 @@ export interface IGlobals_LocalStorage {
    */
     delete: (key: string) => void;
 }
-export interface IGlobals_SecureStorage {
+export interface IGlobals_EncryptedStorage {
     /**
      * Only uses for Mobile Apps.
      * For IOS sets a value in the ios Keychain with the provided key.
@@ -1203,7 +1203,7 @@ export interface IGlobals_SecureStorage {
      * @returns {void}
      *
      * @example
-     * quick.secureStorage.set('myKey', 'myValue');
+     * quick.encryptedStorage.set('myKey', 'myValue');
    */
     set: (key: string, value: string) => void;
     /**
@@ -1215,7 +1215,7 @@ export interface IGlobals_SecureStorage {
      * @returns Returns the value of the storage or null if not found.
      *
      * @example
-     * const myValue = quick.secureStorage.get('myKey');
+     * const myValue = quick.encryptedStorage.get('myKey');
    */
     get: (key: string) => string | null;
     /**
@@ -1226,7 +1226,7 @@ export interface IGlobals_SecureStorage {
      * @returns {void}
      *
      * @example
-     * quick.secureStorage.clear();
+     * quick.encryptedStorage.clear();
    */
     clear: () => void;
     /**
@@ -1238,7 +1238,7 @@ export interface IGlobals_SecureStorage {
      * @returns {void}
      *
      * @example
-     * quick.secureStorage.delete('myKey');
+     * quick.encryptedStorage.delete('myKey');
    */
     delete: (key: string) => void;
 }
@@ -1507,7 +1507,7 @@ export interface IGlobalsBase {
     permanentStore: IGlobals_permanentStore;
     cookie: IGlobals_cookie;
     localStorage: IGlobals_LocalStorage;
-    secureStorage: IGlobals_SecureStorage;
+    encryptedStorage: IGlobals_EncryptedStorage;
     Url: IGlobals_Url;
     findControl: () => void;
     this: IComponent | null | undefined;
