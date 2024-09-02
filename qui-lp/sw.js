@@ -2284,11 +2284,6 @@ var isStartWithTest = function (uri) {
         return true;
     return false;
 };
-var isStartWithWorkflowTest = function (uri) {
-    if (uri.startsWith("/test-qeditor-workflow-main-merged/"))
-        return true;
-    return false;
-};
 var isStartWithQuiLp = function (uri) {
     if (uri.startsWith("/qui-lp/"))
         return true;
@@ -2298,13 +2293,10 @@ var isStartWithLessSign = function (uri) {
     if (isStartWithQuick(uri)) {
         uri = uri.substring(6, uri.length);
     }
-    else if (isStartWithTest(uri)) {
+    if (isStartWithTest(uri)) {
         uri = uri.substring(26, uri.length);
     }
-    else if (isStartWithWorkflowTest(uri)) {
-        uri = uri.substring(34, uri.length);
-    }
-    else if (isStartWithQuiLp(uri)) {
+    if (isStartWithQuiLp(uri)) {
         uri = uri.substring(7, uri.length);
     }
     if (uri[1] == "<" && uri[2] == "<") {
@@ -2316,13 +2308,10 @@ var parseURI = function (uri) {
     if (isStartWithQuick(uri)) {
         uri = uri.substring(6, uri.length);
     }
-    else if (isStartWithTest(uri)) {
+    if (isStartWithTest(uri)) {
         uri = uri.substring(26, uri.length);
     }
-    else if (isStartWithWorkflowTest(uri)) {
-        uri = uri.substring(34, uri.length);
-    }
-    else if (isStartWithQuiLp(uri)) {
+    if (isStartWithQuiLp(uri)) {
         uri = uri.substring(7, uri.length);
     }
     var colonPos = uri.indexOf(":");

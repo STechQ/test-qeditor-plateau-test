@@ -19,12 +19,6 @@ export default class QJsonRetrieverImpl implements IQJsonRetriever {
     private arrangeQJsonPath;
     SetExternalQJsonRetriever(externalQJsonRetriever: IExternalQJsonRetriever): void;
     private willExternalHandle;
-    retrieveModelAsync({ modelPath, options }: {
-        modelPath: string;
-        options: {
-            disableLoading: boolean;
-        };
-    }): Promise<string | object>;
     retrieveQJsonAsync(qjsonPath: string, options: {
         disableLoading: boolean;
     }): Promise<QJsonRetrievedType>;

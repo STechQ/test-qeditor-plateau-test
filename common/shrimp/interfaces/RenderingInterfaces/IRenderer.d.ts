@@ -13,7 +13,7 @@ import { IDoryJr } from "./IDoryJr";
 import { IHistoryItem } from "./IHistoryItem";
 import { IPageCompletedCb, IPageRenderStartedCb } from "./ILifeCycleCb";
 export interface IRendererChild {
-    Render(options: {
+    Render({ qjson, props, events, compParentInst, storeItems, pageId, pageName }: {
         qjson: IQJSon;
         props?: Record<string, any>;
         events?: Record<string, Function>;
@@ -89,6 +89,5 @@ export interface ISettingsQJsonContext extends IContextItem {
 }
 export interface IDoryRenderer extends IRenderer {
     readonly DoryInst: IDory;
-    getContextItem<contextItemType extends IContextItem>(contextItemName: string): contextItemType | undefined;
 }
 //# sourceMappingURL=IRenderer.d.ts.map

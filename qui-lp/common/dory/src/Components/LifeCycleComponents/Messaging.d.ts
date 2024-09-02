@@ -9,14 +9,13 @@ export default class Messaging extends TSComponentBase {
     private doryLike;
     private context;
     constructor({ props, events, parent, context }: {
-        props: IDictionary<unknown>;
+        props: IDictionary<Object>;
         events: IDictionary<Function>;
         parent: any;
         context: ContextManager;
     });
     Render(): IDomElement;
     resurrect(): void;
-    private setHistoryMaster;
     restored(): void;
 }
 //# sourceMappingURL=Messaging.d.ts.map

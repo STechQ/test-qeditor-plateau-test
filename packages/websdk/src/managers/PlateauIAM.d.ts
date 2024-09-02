@@ -12,6 +12,7 @@ export declare class PlateauIAM implements IPlateauIAM {
         iam: ISettingsIAM["iam"];
         iamV2?: ISettingsIAMV2;
     }): void;
+    private getItemFromCookies;
     private configureNewOAuthSettings;
     private getLocale;
     private replaceSubdomain;

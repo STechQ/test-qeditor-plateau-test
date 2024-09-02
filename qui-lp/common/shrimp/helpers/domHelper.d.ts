@@ -29,7 +29,6 @@ export interface ICreateDivOptions {
     style?: IStyle;
     events?: IEvent;
     attrs?: IAttrs;
-    parent?: HTMLElement;
 }
 export declare class DomHelper {
     static CreateDom<T extends keyof HTMLElementTagNameMap>(tag: T, options?: ICreateDivOptions): HTMLElementTagNameMap[T];

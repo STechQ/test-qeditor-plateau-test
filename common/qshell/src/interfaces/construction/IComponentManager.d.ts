@@ -5,7 +5,7 @@ import { IVnode } from "../../../../shrimp/interfaces/ComponentInterfaces/IVnode
 import { CreateComponentDelegate } from "../../../../shrimp/interfaces/quick/IShellConfiguration";
 export declare const ComponentManagerContextName: string;
 export interface IComponentManager extends IContextItem {
-    componentHasProp(componentName: string, compInstance: IComponent | undefined, propName: string): boolean;
+    componentHasProp(componentName: string, propName: string): boolean;
     coreComponentOverrider?(componentName: string): IComponentClassEngine | null;
     createComponent: CreateComponentDelegate;
     tsComponentWrapper?: Function;
@@ -16,7 +16,6 @@ export interface IComponentManager extends IContextItem {
         pageShift: boolean;
     }): any;
     setVisibility(compCollection: IComponentCollection, compVisibility: boolean): void;
-    setDisable(compColl: IComponentCollection, compDisable: boolean): void;
     getComponentValue(compCollection: IComponentCollection): any;
     setComponentValue(compCollection: IComponentCollection, value: string): void;
     getComponentStyle(comp: IComponent): any;

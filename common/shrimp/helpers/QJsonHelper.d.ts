@@ -27,7 +27,6 @@ export declare class QJsonHelper {
         parentCompJson?: ICompJson;
         compiledJson?: ICompJson;
     }) => boolean, compiledJson?: Array<ICompJson>): void;
-    static findComponentByType(curJson: Array<ICompJson>, type: "RenderingComponent"): ICompJson | undefined;
     /**
      * @deprecated Please use QJsonHelper.FindParentArrayPath
      */

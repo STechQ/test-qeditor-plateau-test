@@ -1192,7 +1192,7 @@ export interface IGlobals_LocalStorage {
    */
     delete: (key: string) => void;
 }
-export interface IGlobals_EncryptedStorage {
+export interface IGlobals_SecureStorage {
     /**
      * Only uses for Mobile Apps.
      * For IOS sets a value in the ios Keychain with the provided key.
@@ -1203,7 +1203,7 @@ export interface IGlobals_EncryptedStorage {
      * @returns {void}
      *
      * @example
-     * quick.encryptedStorage.set('myKey', 'myValue');
+     * quick.secureStorage.set('myKey', 'myValue');
    */
     set: (key: string, value: string) => void;
     /**
@@ -1215,7 +1215,7 @@ export interface IGlobals_EncryptedStorage {
      * @returns Returns the value of the storage or null if not found.
      *
      * @example
-     * const myValue = quick.encryptedStorage.get('myKey');
+     * const myValue = quick.secureStorage.get('myKey');
    */
     get: (key: string) => string | null;
     /**
@@ -1226,7 +1226,7 @@ export interface IGlobals_EncryptedStorage {
      * @returns {void}
      *
      * @example
-     * quick.encryptedStorage.clear();
+     * quick.secureStorage.clear();
    */
     clear: () => void;
     /**
@@ -1238,7 +1238,7 @@ export interface IGlobals_EncryptedStorage {
      * @returns {void}
      *
      * @example
-     * quick.encryptedStorage.delete('myKey');
+     * quick.secureStorage.delete('myKey');
    */
     delete: (key: string) => void;
 }
@@ -1498,7 +1498,6 @@ export interface IGlobalsBase {
     setFormData(compCol: object): void;
     getArrangedNestedData(obj: object, pairChar: string): {};
     getFormData(componentQID?: string): {};
-    setDisable(component: IComponent, value: boolean): void;
     getArrangedFormData(formData: object, pairChar: string): {};
     Quick: IGlobals_Quick;
     containerServices?: IGlobals_ContainerServices;
@@ -1507,7 +1506,7 @@ export interface IGlobalsBase {
     permanentStore: IGlobals_permanentStore;
     cookie: IGlobals_cookie;
     localStorage: IGlobals_LocalStorage;
-    encryptedStorage: IGlobals_EncryptedStorage;
+    secureStorage: IGlobals_SecureStorage;
     Url: IGlobals_Url;
     findControl: () => void;
     this: IComponent | null | undefined;
@@ -1525,17 +1524,6 @@ export interface IGlobalsBase {
     encoding: IGlobals_Encoding;
     integrations: IScripts;
     webScripts: {};
-    workflowStore?: IWorkflowStore;
-}
-export interface IWorkflowStore {
-    context: {
-        dataInstance: any;
-        processInstance: any;
-    };
-    formContext: {
-        task: any;
-        form: any;
-    };
 }
 export interface IScripts {
     Dataroid: IDataroid;

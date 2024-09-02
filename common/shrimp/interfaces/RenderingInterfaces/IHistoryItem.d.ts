@@ -1,5 +1,4 @@
 import { IComponentCollection } from "../ComponentInterfaces/IComponentCollection";
-import { IMasterData } from "./IMasterData";
 import { IRenderingContext } from "./IRenderingContext";
 import { IRenderingManager } from "./IRenderingManager";
 export interface IHistoryItem {
@@ -12,7 +11,5 @@ export interface IHistoryItem {
     readonly pageId: string;
     ReCalculateCompInstDict(): void;
     GetComponentList(): Array<IComponentCollection>;
-    readonly masterData?: IMasterData;
-    setMasterData(masterData: IMasterData): void;
 }
 //# sourceMappingURL=IHistoryItem.d.ts.map

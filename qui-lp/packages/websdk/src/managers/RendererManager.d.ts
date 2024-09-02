@@ -3,7 +3,7 @@ import Vue from "vue";
 import { QShell } from "../../../../common/qshell";
 import { ContextManager } from "../../../../common/shrimp/context";
 import { IDomElement } from "../../../../common/shrimp/interfaces/RenderingInterfaces/IDomElement";
-import { IDoryRenderer, IRenderer } from "../../../../common/shrimp/interfaces/RenderingInterfaces/IRenderer";
+import { IRenderer } from "../../../../common/shrimp/interfaces/RenderingInterfaces/IRenderer";
 import { IRendererConfig } from "../../../../common/shrimp/interfaces/RenderingInterfaces/IRendererConfig";
 import { IContainerServicesWrapper } from "../../../../common/shrimp/interfaces/quick/IContainerServices";
 import { IWebSDKSettingsWrapper } from "../../../../common/shrimp/interfaces/quick/IWebSDK";
@@ -26,7 +26,7 @@ export declare class RendererManager {
         qshell: QShell;
         config?: IRendererConfig;
         windowHistoryManager?: WindowHistoryManager;
-    }): IDoryRenderer;
+    }): IRenderer;
     getLastRenderer(): IRenderer | undefined;
     getDomContainer(renderer: IRenderer): IDomElement;
     getParentInstance(renderer: IRenderer): Vue;

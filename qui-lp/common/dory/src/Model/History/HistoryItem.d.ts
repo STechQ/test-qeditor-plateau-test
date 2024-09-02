@@ -26,10 +26,6 @@ export declare class HistoryItem implements IHistoryItem {
     private renderingContext?;
     compareCompValue: boolean;
     qjsonVersion: number | undefined;
-    private _masterData?;
-    get masterData(): {
-        path: string;
-    } | undefined;
     constructor({ qjson, context, storeItems, pageId, pageName, additionals }: {
         qjson: IQJSon;
         context: ContextManager;
@@ -104,8 +100,5 @@ export declare class HistoryItem implements IHistoryItem {
      */
     private findComparisonCompAndReplace;
     themeConfiguration(context: ContextManager, themeName: string, isLight?: boolean): void;
-    setMasterData(masterData: {
-        path: string;
-    }): void;
 }
 //# sourceMappingURL=HistoryItem.d.ts.map

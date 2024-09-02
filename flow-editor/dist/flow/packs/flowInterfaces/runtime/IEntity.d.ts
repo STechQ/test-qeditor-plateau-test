@@ -1,1 +1,0 @@
-//# sourceMappingURL=IEntity.d.ts.map

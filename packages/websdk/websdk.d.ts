@@ -1,13 +1,13 @@
 import { IPlateauUIOptions } from "@stechquick/algae/lib/quick/IPlateauUI";
 import { IDomElement } from "../../common/shrimp/interfaces/RenderingInterfaces/IDomElement";
-import { IDoryRenderer } from "../../common/shrimp/interfaces/RenderingInterfaces/IRenderer";
+import { IRenderer } from "../../common/shrimp/interfaces/RenderingInterfaces/IRenderer";
 import { IPlateauIAM } from "../../common/shrimp/interfaces/quick/IPlateauIAM";
 import { LivePreviewManager } from "./src/managers/LivePreviewManager";
 declare class PlateauUI {
     private container;
     private renderer;
     mountPoint: HTMLElement;
-    constructor(container: WebsdkContainer, renderer: IDoryRenderer, mountPoint: IDomElement);
+    constructor(container: WebsdkContainer, renderer: IRenderer, mountPoint: IDomElement);
     open(qjsonPath?: string, args?: Record<string, any>): void;
     show(): void;
     hide(): void;
@@ -39,7 +39,7 @@ declare class WebsdkContainer {
     }): Promise<PlateauUI>;
     private initLoadingComponent;
     open({ renderer, qjsonPath, args }: {
-        renderer: IDoryRenderer;
+        renderer: IRenderer;
         qjsonPath?: string;
         args?: Record<string, any>;
     }): Promise<void>;
