@@ -1,0 +1,12 @@
+import { IStoreInParameterMapping as IStoreInParameterMappingRuntime, IStoreMapping as IStoreMappingRuntime, IStoreOutParameterMapping as IStoreOutParameterMappingRuntime, StoreMappingInputExpressionData as StoreMappingInputExpressionDataRuntime, StoreMappingOutputSetExpressionData as StoreMappingOutputSetExpressionDataRuntime } from "../runtimemodels/IStoreMapping";
+export interface IStoreMapping extends IStoreMappingRuntime {
+}
+export interface StoreMappingInputExpressionData extends StoreMappingInputExpressionDataRuntime {
+}
+export interface StoreMappingOutputSetExpressionData extends StoreMappingOutputSetExpressionDataRuntime {
+}
+export interface IStoreInParameterMapping extends IStoreInParameterMappingRuntime {
+}
+export interface IStoreOutParameterMapping extends IStoreOutParameterMappingRuntime {
+}
+//# sourceMappingURL=IStoreMapping.d.ts.map

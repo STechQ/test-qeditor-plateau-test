@@ -16,6 +16,7 @@ export declare class RendererChild implements IRendererChild {
         storeItems?: Record<string, any>;
         pageId?: string;
         pageName?: string;
+        noHistory?: boolean;
     }): Promise<void>;
 }
 export declare class DoryRendererChild extends RendererChild implements IDoryRendererChild {

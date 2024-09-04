@@ -35,7 +35,7 @@ export default class CustomComponent extends TSComponentBase implements IDynamic
         parent: any;
         context: ContextManager;
     });
-    getQJson(): Promise<IQJSon | undefined>;
+    getQJson(doryJr: IDoryJr): Promise<IQJSon | undefined>;
     set QJsonPath(_qjsonPath: string);
     get QJsonPath(): string;
     Render(tsWrapperInstance?: any, pageId?: string, pageName?: string): unknown;

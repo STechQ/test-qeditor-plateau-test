@@ -1,0 +1,18 @@
+@import "../index.css";
+
+.input-flow label {
+    font-weight: 400 !important;
+    font-size: 14px !important;
+    margin-bottom: 4px;
+}
+
+.input-flow input{
+    height: 32px;
+    border: 1px solid #BCBCBC;
+    border-radius: 4px;
+    padding-left: 12px;
+}
+
+.input-flow input::-webkit-input-placeholder {
+    color: #BCBCBC;
+}

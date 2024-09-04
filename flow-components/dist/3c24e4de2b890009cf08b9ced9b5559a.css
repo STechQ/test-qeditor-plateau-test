@@ -1,0 +1,26 @@
+.picker .tree {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.picker .tree .tree-node .tree-row {
+    border: 1px solid #E3E3E3;
+    height: 34px;
+    display: flex;
+    align-items: center;
+}
+
+.picker .tree .tree-node .tree-row.selected {
+    background-color: #D5D5D5;
+}
+
+.picker .tree .tree-node .tree-row .tree-text {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.picker .tree .tree-node .tree-row .tree-text i {
+    font-size: 24px;
+    color: #757575;
+}

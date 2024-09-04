@@ -25,6 +25,7 @@ import { IUrlOptions } from "./IUrl";
 import { IExcel, IExcelList } from "./IExcel";
 import { INavigationOptions } from "./INavigationManager";
 import { IDecryptDataRequest, IDecryptDataResponse, IEncryptDataRequest, IEncryptDataResponse, IHashDataRequest, IHashDataResponse } from "../../helpers/cryptoHelper";
+import { IDoryJr } from "../RenderingInterfaces/IDoryJr";
 export interface IShellConfiguration {
     network: INetwork;
     lridHelper?: (label: string, params: Object) => string;
@@ -80,6 +81,7 @@ export interface IShellConfiguration {
     getCurrentRegion?: () => string | undefined;
     getFormattingDefinitionByCurrentRegion?: () => IFormattingDefinition | undefined;
     setVisibility(compCollection: IComponentCollection, compVisibility: boolean): void;
+    setDisable(compCollection: IComponentCollection, compDisable: boolean): void;
     getComponentValue(compCollection: IComponentCollection): any;
     setComponentValue(compCollection: IComponentCollection, value: string): void;
     getComponentStyle(comp: IComponent): any;
@@ -148,14 +150,20 @@ export declare type CreateComponentDelegate = ({ componentName, props, events, a
     directives?: Array<IDirectiveElement>;
     styles?: StyleValue;
 }) => ICreatedComponent;
-export declare type ComponentHasPropDelegate = ({ componentName, propName }: {
+export interface IQJsonCollectionResult {
+    qjson?: IQJSon;
+    changedPath?: string;
+}
+export declare type ComponentHasPropDelegate = (options: {
     componentName: string;
+    compInstance: IComponent | undefined;
     propName: string;
 }) => boolean;
 export declare type ComponentDomLocator = (compInst: IComponent, childIndex: number) => IDomElement | null;
-export declare type RetrieveCjsonDelegate = ({ qjsonPath, }: {
+export declare type RetrieveCjsonDelegate = (options: {
     qjsonPath: string;
-}) => Promise<IQJSon | undefined>;
+    doryJr?: IDoryJr;
+}) => Promise<IQJsonCollectionResult | undefined>;
 export declare type CreateContainerViewDelegate = (compUID: string) => unknown;
 export declare type UpdateContainerViewDelegate = ({ givenObject, elements, pageShift }: {
     givenObject: unknown;

@@ -22,6 +22,7 @@ export interface IDoryJr extends IContextItem {
         pageId?: string;
         pageName?: string;
         children?: Record<string, Array<unknown>>;
+        noHistory?: boolean;
     }): Promise<void>;
     GetMethods(): IDictionary<Function> | undefined;
     GetProps(): Array<IExternalProp> | undefined;

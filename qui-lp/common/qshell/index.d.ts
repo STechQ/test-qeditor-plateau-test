@@ -2,7 +2,7 @@ import { IContextItem } from "../shrimp/context";
 import { IComponentInstanceTracker } from "../shrimp/interfaces/ComponentInterfaces/IComponentInstanceTracker";
 import { PlatformType } from "../shrimp/interfaces/quick/IPlatform";
 import { IUXManager } from "../shrimp/interfaces/quick/IUXManager";
-import { IRenderer } from "../shrimp/interfaces/RenderingInterfaces/IRenderer";
+import { IDoryRenderer } from "../shrimp/interfaces/RenderingInterfaces/IRenderer";
 import { IRendererConfig } from "../shrimp/interfaces/RenderingInterfaces/IRendererConfig";
 import { IRendererOperatorCollection } from "../shrimp/interfaces/RenderingInterfaces/Operators/IRendererOperatorCollection";
 import { DoryRenderer } from "./src/helpers/Renderer";
@@ -58,7 +58,7 @@ declare class QShell implements IContextItem {
         processManager?: IProcessManager;
         cryptoManager?: ICryptographyManager;
         config?: IRendererConfig;
-    }): IRenderer;
+    }): IDoryRenderer;
     getRender(): DoryRenderer;
     ResetQJsonPool(): void;
 }

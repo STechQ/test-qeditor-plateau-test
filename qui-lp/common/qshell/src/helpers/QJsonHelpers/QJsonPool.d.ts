@@ -2,6 +2,7 @@ import { ContextManager, IContextItem } from "../../../../shrimp/context";
 import { IQJSon } from "../../../../shrimp/interfaces/ComponentInterfaces/IQJson";
 import { MobileAnimation } from "../../../../shrimp/interfaces/quick/INavigationManager";
 import { IDory } from "../../../../shrimp/interfaces/RenderingInterfaces/IDory";
+import { IDoryJr } from "../../../../shrimp/interfaces/RenderingInterfaces/IDoryJr";
 import { IModuleManager } from "../../interfaces/construction/IModuleManager";
 import { IQJsonRetriever } from "../../interfaces/construction/IQJsonRetriever";
 export declare class QJsonPool implements IContextItem {
@@ -22,10 +23,11 @@ export declare class QJsonPool implements IContextItem {
     });
     ResetPool(): void;
     get ModuleManager(): IModuleManager;
-    retrieveAndFillQjsonAsync({ qjson, dory }: {
+    retrieveAndFillQjsonAsync({ qjson, dory, doryJr }: {
         qjson: QjsonData;
         dory: IDory;
-    }): Promise<IQJSon>;
+        doryJr?: IDoryJr;
+    }): Promise<import("../../../../shrimp/interfaces/quick/IShellConfiguration").IQJsonCollectionResult>;
     getCJson(qjsonPath: string): IQJSon | undefined;
 }
 export declare type QjsonData = {

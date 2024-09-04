@@ -1,0 +1,23 @@
+@import "../index.css";
+
+.button-flow {
+    height: 32px;
+    border-radius: 4px;
+}
+
+.button-flow.primary {
+    background-color: #151233;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-flow.secondary {
+    background-color: #FFF;
+    color: #151233;
+    border: 1px solid #151233;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
