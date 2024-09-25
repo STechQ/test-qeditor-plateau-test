@@ -6,14 +6,22 @@ export interface IAmToken {
     token: string;
     info?: KeycloakTokenParsed;
 }
+export interface IGetIAmToken {
+    idToken?: string;
+    refreshToken?: string;
+    token?: string;
+    info?: KeycloakTokenParsed;
+}
 export declare type IAmPopupMessage = {
-    type: "token";
+    type: "setTokens";
     tokenInfo: IAmToken;
 } | {
     type: "iamReady";
 } | {
     type: "iamOptions";
     options?: IPlateauUIOptions;
+    tokens?: IGetIAmToken;
+    sessionStorageNamePrefix?: string;
     parentWindow?: Object;
 };
 export declare function doPostMessage(targetWindow: Window, data: IAmPopupMessage): void;

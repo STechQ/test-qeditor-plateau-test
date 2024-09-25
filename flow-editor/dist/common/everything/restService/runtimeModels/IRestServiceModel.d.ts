@@ -23,7 +23,8 @@ export interface IRestServiceModel extends IModelBaseFields {
         value: ISetExpressionData;
     }>;
     responseStatus?: ISetExpressionData;
-    cachePeriod?: number;
+    cacheRefreshPeriodInMs?: number;
+    cacheValidityDurationInMs?: number;
     mock?: Array<IRestMock>;
     store: Store;
 }

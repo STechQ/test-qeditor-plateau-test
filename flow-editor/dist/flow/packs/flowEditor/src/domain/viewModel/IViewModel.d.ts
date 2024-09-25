@@ -8,6 +8,7 @@ import { INestedStore, Store } from "../../../../../../common/everything/store/d
 import { ISLA } from "../../../../../../common/everything/workflow/runtimemodels/ISLA";
 import { IExecuteFlowByMapping } from "../../../../../../common/everything/workflow/runtimemodels/IWorkflow";
 import { ISwitchCaseExp } from "../../../../../../common/everything/flow/runtimeModels/ISwitch";
+import { FlowExecutionType } from "@stechquick/flow-interfaces/runtime/IFlowModel";
 export interface IConnectionFrom {
     step: string;
     output: string;
@@ -68,6 +69,7 @@ export interface IViewModel {
     fileDownloadFunction?: IExecuteFlowByMapping;
     fileDeleteFunction?: IExecuteFlowByMapping;
     resetHistory: () => IVMHistory;
+    executeType: FlowExecutionType;
 }
 export declare const IViewModel: unique symbol;
 //# sourceMappingURL=IViewModel.d.ts.map

@@ -5098,6 +5098,9 @@ nextIcon = 'mdi-plus'}`
             type: String,
             options: ["'primary'", "'secondary'", "'accent'", "'success'", "'error'", "'info'", "'warning'"]
         },
+        class: {
+            type: String
+        },
         dense: {
             type: Boolean
         },
@@ -5184,7 +5187,8 @@ nextIcon = 'mdi-plus'}`
             type: String
         },
         overflow: {
-            type: String
+            type: String,
+            options: ["'visible'", "'hidden'", "'clip'", "'scroll'" , "'auto'"]
         },
         tagType: {
             type: String,
@@ -5197,14 +5201,17 @@ nextIcon = 'mdi-plus'}`
             note: "Use to set label text of field"
         },
         textOverflow: {
-            type: String
+            type: String,
+            options: ["'ellipsis'", "'clip'",]
         },
         visible: {
             type: Boolean,
             editorDefaultValue: "true"
         },
         whiteSpace: {
-            type: String
+            type: String,
+            options: ["'normal'", "'nowrap'", "'pre'", "'pre-wrap'" , "'pre-line'","'break-spaces'"]
+
         },
         processHtml: {
             type: Boolean,

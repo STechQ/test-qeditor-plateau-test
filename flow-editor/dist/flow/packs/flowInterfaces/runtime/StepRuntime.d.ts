@@ -6,6 +6,7 @@ import { IPlatformServerAdaptor } from "./platform/IPlatformServerAdaptor";
 import { Omit2 } from "./platform/tsHelperTypes";
 import { IPlatformWorkflowAdaptor } from "./platform/IPlatformWorkflowAdaptor";
 import { IFlowInfo } from "./IFlowInfo";
+import { IFlowLogger } from "./IFlowLogger";
 export type RuntimeMessage = {
     input: any;
     vars: Record<string, any>;
@@ -49,6 +50,7 @@ export interface IRuntimeParam<PropType = IPropObject, OutputOptions = string, S
         getClient: () => IPlatformClientAdaptor | undefined;
         getWorkflow: () => IPlatformWorkflowAdaptor | undefined;
         getCommonState: <CommonStateType extends IStateBaseType = IStateBaseType>() => ICommonState<CommonStateType>;
+        logger: IFlowLogger;
     };
     state: {
         readonly values: StateType;

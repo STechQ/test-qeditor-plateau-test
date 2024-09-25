@@ -12,20 +12,15 @@ export interface ITask extends INamedObjectBase {
     statusDescription: string;
     taskGroupId: string;
     userId?: string;
+    userName?: string;
     unitId?: string;
     swimlane: string;
     taskStart: DateTime;
     taskEnd: DateTime;
     sla: ISLA;
     priority?: number;
-    actions: Array<IAction>;
+    actions?: Array<IAction>;
     candidateUnits?: Array<string>;
     candidateUsers?: Array<string>;
-}
-export interface ITaskPMInfo {
-    taskStart: DateTime;
-    taskEnd: DateTime;
-    sla: ISLA;
-    priority?: number;
 }
 //# sourceMappingURL=ITask.d.ts.map

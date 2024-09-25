@@ -2,6 +2,7 @@ import { Store } from "../../../../common/everything/store/designtimemodels/ISto
 import { ISLA } from "../../../../common/everything/workflow/runtimemodels/ISLA";
 import { IExecuteFlowByMapping } from "../../../../common/everything/workflow/runtimemodels/IWorkflow";
 import { IExpressionData } from "../runtime";
+import { FlowExecutionType } from "../runtime/IFlowModel";
 import { IConnectionDesignModel } from "./IConnectionDesignModel";
 import { IRoleDesignModel } from "./IRoleDesignModel";
 import { IStepDesignModel } from "./IStepDesignModel";
@@ -25,5 +26,6 @@ export interface IFlowCopyModel {
     fileUploadFunction?: IExecuteFlowByMapping;
     fileDownloadFunction?: IExecuteFlowByMapping;
     fileDeleteFunction?: IExecuteFlowByMapping;
+    executeType: FlowExecutionType;
 }
 //# sourceMappingURL=IFlowDesignModel.d.ts.map

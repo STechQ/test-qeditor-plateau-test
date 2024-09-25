@@ -33,6 +33,7 @@ export declare const COMPONENT_STYLE_TYPE: {
     "layout-chooser": string;
     "grid-column": string;
     "box-layout": string;
+    "box-layout-2": string;
     "basic-input": string;
     "box-shadow": string;
     slider: string;

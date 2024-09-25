@@ -8,23 +8,33 @@ import { ISLA } from "./ISLA";
 import { IAction } from "../runtimeObjects/IAction";
 export type WorkflowStepName = "start" | "humantask" | "subFlow" | "flow" | "switch" | "end";
 export declare const NamedModels: {
-    getUser: {
-        name: string;
-        type: "flow";
+    readonly getUser: {
+        readonly name: "getUser";
+        readonly type: "flow";
     };
-    notify: {
-        name: string;
-        type: "flow";
+    readonly notify: {
+        readonly name: "notify";
+        readonly type: "flow";
     };
-    preForm: {
-        name: string;
-        type: "qjson";
+    readonly userTaskActivity: {
+        readonly name: "userTaskActivity";
+        readonly type: "flow";
+    };
+    readonly preForm: {
+        readonly name: "TaskPreview";
+        readonly type: "qjson";
+    };
+};
+export declare const RequiredModels: {
+    readonly iPaasEndPoint: {
+        readonly name: "IPaaS_Endpoint";
+        readonly type: "constant";
     };
 };
 export declare const StatusTypes_EN: Record<StatusType, string>;
 export declare const StatusTypes_TR: Record<StatusType, string>;
-export type StatusType = "" | "inProgress" | "waitForApproval" | "completed" | "new" | "returned" | "cancelled" | "waitForControl";
-export type IWorkflowModelNamedModels = Record<keyof typeof NamedModels, string>;
+export type StatusType = "" | "Pending-InProgress" | "Pending-Approval" | "Resolved-Completed" | "New" | "Returned" | "Returned-Originator" | "Returned-Recipient" | "Resolved-Cancelled";
+export type IWorkflowModelNamedModels = Record<keyof typeof NamedModels, string | undefined>;
 export interface IWorkflowModel extends IFlowModelBase {
     type: "workflow";
     label: IExpressionData;

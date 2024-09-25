@@ -34,7 +34,7 @@ export interface IProcessInstance extends INamedObjectBase {
     tasks: Array<ITask>;
     notes: Array<INote>;
     files?: Array<IFile>;
-    appId?: string;
+    appId: string;
     instanceStatus: "none" | "alive" | "finished";
 }
 //# sourceMappingURL=IProcessInstance.d.ts.map
