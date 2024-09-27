@@ -16,6 +16,7 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     changeMenuValue(): void;
     onKeyUp(event: any): void;
     onBlur(event: any): void;
+    onFocus(event: any): void;
     onKeyDown(event: any): void;
     initialize(): void;
     changeValueInternal(newValue: any, oldValue: any): void;
