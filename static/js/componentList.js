@@ -2566,7 +2566,8 @@ nextIcon = 'mdi-plus'}`
             type: Boolean
         },
         fixed: {
-            type: Boolean
+            type: Boolean,
+            editorDefaultValue: "true"
         },
         inset: {
             type: Boolean
