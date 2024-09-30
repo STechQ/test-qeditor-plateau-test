@@ -14,7 +14,7 @@ import { IShell } from "../quick/IShell";
 import { IUrlOptions } from "../quick/IUrl";
 import { IExcel, IExcelList } from "../quick/IExcel";
 import { IDomElement } from "../RenderingInterfaces/IDomElement";
-import { INavigationOptions } from "../quick/INavigationManager";
+import { INavigationOptions, MobileAnimation } from "../quick/INavigationManager";
 import { IPermanentStoreObject, Plateau_UI_PermanentStore_Name } from "../RenderingInterfaces/Operators/IPermanentStoreOperator";
 import { IDecryptDataRequest, IDecryptDataResponse, IEncryptDataRequest, IEncryptDataResponse, IHashDataRequest, IHashDataResponse } from "../../helpers/cryptoHelper";
 export interface IGlobals_Request {
@@ -296,9 +296,10 @@ export interface IGlobals_Quick {
      * quick.Quick.go("<<qjson:d21r0xpa-krke-m6oi-mo8m-bk7whi3b>>", { newTab: true, store: true });
     */
     go: (qjsonPath: string, options?: INavigationOptions) => any;
-    goNative?: ({ code, param }: {
+    goNative?: ({ code, param, transitionStyle }: {
         code: string;
         param?: Record<string, any>;
+        transitionStyle?: MobileAnimation;
     }) => void;
     /**
      * Creates a deep copy of the provided object using a cloning technique.

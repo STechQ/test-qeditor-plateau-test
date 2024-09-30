@@ -6,7 +6,8 @@ export interface INavigationOptions {
 export declare enum MobileAnimation {
     push = "push",
     presentFullScreen = "presentFullScreen",
-    fade = "fade"
+    fade = "fade",
+    present = "present"
 }
 export interface INavigationManager {
     go?: ({ url }: {
