@@ -3,7 +3,7 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     displayDateFormat: string | undefined;
     serviceDateFormat: string | undefined;
     vuetifyDateFormat: string;
-    valueInternal: any;
+    valueInternal: string | string[] | null;
     internalValue: any;
     dateFormatted: string;
     menu1: boolean;

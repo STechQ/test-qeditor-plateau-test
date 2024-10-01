@@ -61,7 +61,7 @@ export interface IShellConfiguration {
     deleteComponent?: (compCollection: IComponentCollection | IDomElement) => void;
     coreComponentOverrider?(componentName: string): IComponentClassEngine | null;
     roleBaseViewHelper?: (key: string) => boolean;
-    resetTimeTextField?: (componentContext: any) => void;
+    resetTextField?: (componentContext: any) => void;
     redirectTo?({ url }: {
         url: string;
     }): void;

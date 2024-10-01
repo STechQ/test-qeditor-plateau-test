@@ -56,7 +56,7 @@ export declare class ShellConfiguration implements IShellConfiguration {
         childName: string;
     }) => void;
     deleteComponent?: (compCollection: IComponentCollection | IDomElement) => void;
-    resetTimeTextField?: (componentContext: any) => void;
+    resetTextField?: (componentContext: any) => void;
     roleBaseViewHelper?: (key: string) => boolean;
     redirectTo?({ url }: {
         url: string;

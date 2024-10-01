@@ -9,6 +9,7 @@ export interface IFlowError {
     readonly stack?: string;
 }
 export declare class FlowError extends Error implements IFlowError {
+    static FlowErrorName: string;
     readonly type: IFlowError["type"];
     readonly category: IFlowError["category"];
     readonly code: IFlowError["code"];
@@ -17,5 +18,6 @@ export declare class FlowError extends Error implements IFlowError {
     readonly detail?: IFlowError["detail"];
     readonly stack?: IFlowError["stack"];
     constructor(errorData: IFlowError);
+    static isFlowError(error: Error | unknown): boolean;
 }
 //# sourceMappingURL=flowError.d.ts.map
