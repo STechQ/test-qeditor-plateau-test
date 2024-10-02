@@ -96,7 +96,7 @@ export declare class HistoryItem implements IHistoryItem {
         compLoc: import("../../../../shrimp/helpers/QJsonHelper").ICompLocation;
         path: import("../../../../shrimp/helpers/QJsonHelper").ICompParentLocation;
     } | null;
-    getComponentSubCollections(): Array<IComponentCollection>;
+    getComponentSubCollections(iterateSubHI?: boolean): Array<IComponentCollection>;
     /**
      * Find comparison component at the current pjson
      * @param pjson Current pjson

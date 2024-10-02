@@ -17,7 +17,7 @@ export declare class ValueContext implements IContextItem {
     private valueContextList;
     private _valueContext;
     getValueContext(): {};
-    getValueContextList(referenceCompId: string): comparedValueType[];
+    getValueContextList(referenceCompId: string, iterateAllSubPages?: boolean): comparedValueType[];
     private getAllChildrenComponentCollection;
     getCustomComponentCollectionsByCompId(customComponentId: string): IComponentCollection[];
 }
