@@ -9,6 +9,8 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     resetValidation(): void;
     validationRefs(): (Element | Vue | Vue[] | Element[])[];
     clickHour(hour: any): void;
+    onKeyDown(event: KeyboardEvent): void;
+    onPaste(event: ClipboardEvent): void;
 }, unknown, {
     allowedHours: unknown[];
     allowedMinutes: unknown[];

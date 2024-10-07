@@ -2865,6 +2865,9 @@ nextIcon = 'mdi-plus'}`
         link: {
             type: Boolean
         },
+        qValue: {
+            type: "any"
+        },
         replace: {
             type: Boolean
         },
