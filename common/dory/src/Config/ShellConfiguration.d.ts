@@ -120,6 +120,8 @@ export declare class ShellConfiguration implements IShellConfiguration {
     }) => IDomElement;
     getNetworkConnection?: () => boolean;
     getLogBulkSize?: () => number | undefined;
+    stringToBase64?: (data: string) => string;
+    base64ToString?: (data: string) => string;
     constructor();
 }
 //# sourceMappingURL=ShellConfiguration.d.ts.map

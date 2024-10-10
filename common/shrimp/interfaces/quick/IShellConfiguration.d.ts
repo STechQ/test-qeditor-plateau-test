@@ -125,6 +125,8 @@ export interface IShellConfiguration {
     }) => IDomElement;
     getNetworkConnection?: () => boolean;
     getLogBulkSize?: () => number | undefined;
+    stringToBase64?: (data: string) => string;
+    base64ToString?: (data: string) => string;
 }
 export interface IHistoryBasedShellConfiguration {
     isEditor: boolean;
