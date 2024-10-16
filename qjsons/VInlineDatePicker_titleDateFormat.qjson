@@ -1,0 +1,639 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "PageComp",
+					"T": "prop"
+				},
+				"triggerOnRestored": {
+					"H": "false",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"PostRender": {
+					"H": "(<any>components.myInlineDatePicker).titleDateFormat = (...params) => {\r\n\r\n    // params = ['2024-10-09'] - selected Date\r\n    let myDate = quick.Quick.toDate(params[0], \"YYYY-MM-DD\");\r\n    let formatDate = quick.Quick.toShortDate(myDate, \"DD.MM.YYYY\");\r\n    return formatDate;\r\n}",
+					"TO": 1,
+					"HL": "TS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child"
+			},
+			"S": {
+				"xs-xl": {
+					"pageBackgroundColor": "#ffffff",
+					"statusBarColor": "#ffffff"
+				}
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "VRowComp",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VInlineDatepicker",
+															"P": {
+																"ID": {
+																	"H": "myInlineDatePicker",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"clearable": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"hideMenu": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "'Pick a date'",
+																	"T": "prop"
+																},
+																"locale": {
+																	"H": "'tr'",
+																	"T": "prop"
+																},
+																"willAttach": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"prependInnerIcon": {
+																	"H": "'mdi-calendar'",
+																	"T": "prop"
+																},
+																"noTitle": {
+																	"H": "false",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"headerColor": {
+																	"H": "'green'",
+																	"T": "prop",
+																	"HL": "QS"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_6"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginLeft": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginTop": "",
+																	"paddingTop": "",
+																	"paddingBottom": "",
+																	"paddingLeft": "",
+																	"paddingRight": "",
+																	"width": "",
+																	"height": "",
+																	"maxWidth": "",
+																	"maxHeight": "",
+																	"minWidth": "",
+																	"minHeight": "",
+																	"unlink": "false",
+																	"unlinkMax": "false",
+																	"unlinkMin": "false",
+																	"isSizeCollapsed": "false",
+																	"dense": "",
+																	"defaultFontColor": "#666666",
+																	"defaultFontFamily": "Roboto",
+																	"defaultFontSize": "16px",
+																	"defaultFontStyle": "normal",
+																	"defaultFontWeight": "400",
+																	"defaultCombinedFont": "Roboto-Regular",
+																	"defaultThemeFont": "Custom",
+																	"PHFontColor": "#9E9E9E",
+																	"PHFontFamily": "Roboto",
+																	"PHFontSize": "16px",
+																	"PHFontStyle": "normal",
+																	"PHFontWeight": "400",
+																	"PHCombinedFont": "Roboto-Regular",
+																	"PHThemeFont": "Custom",
+																	"inputFontColor": "#000",
+																	"inputFontFamily": "Roboto",
+																	"inputFontSize": "16px",
+																	"inputFontStyle": "normal",
+																	"inputFontWeight": "400",
+																	"inputCombinedFont": "Roboto-Regular",
+																	"inputThemeFont": "Custom",
+																	"menuDefaultDateFontColor": "#13BDD7",
+																	"menuDefaultDateFontFamily": "Roboto",
+																	"menuDefaultDateFontSize": "12px",
+																	"menuDefaultDateFontStyle": "normal",
+																	"menuDefaultDateFontWeight": "400",
+																	"menuDateCombinedFont": "Roboto-Regular",
+																	"menuDefaultDateThemeFont": "Custom",
+																	"menuSelectedDateColor": "#000",
+																	"menuSelectedDateFontFamily": "Roboto",
+																	"menuSelectedDateFontSize": "12px",
+																	"menuSelectedDateFontStyle": "normal",
+																	"menuSelectedDateFontWeight": "400",
+																	"menuDateSelectedCombinedFont": "Roboto-Regular",
+																	"menuDateSelectedThemeFont": "Custom",
+																	"menuTitleFontColor": "#000",
+																	"menuTitleFontFamily": "Roboto",
+																	"menuTitleFontSize": "16px",
+																	"menuTitleFontStyle": "normal",
+																	"menuTitleFontWeight": "400",
+																	"menuDateTitleCombinedFont": "Roboto-Regular",
+																	"menuDateTitleThemeFont": "Custom",
+																	"menuContentFontColor": "#000",
+																	"menuContentFontFamily": "Roboto",
+																	"menuContentFontSize": "12px",
+																	"menuContentFontStyle": "normal",
+																	"menuContentFontWeight": "400",
+																	"menuDateContentCombinedFont": "Roboto-Regular",
+																	"menuDateContentThemeFont": "Custom",
+																	"backgroundColor": "#FFFFFF",
+																	"iconColor": "#0000006b",
+																	"activeIconColor": "#1976d2",
+																	"menuBackgroundColor": "#FFFFFF",
+																	"selectedColor": "#00A2BB",
+																	"innerBoxShadow": "",
+																	"menuBoxShadow": "",
+																	"activeBorderColor": "#1976d2",
+																	"innerBoxSizing": "",
+																	"innerBorderTopStyle": "",
+																	"innerBorderRightStyle": "",
+																	"innerBorderBottomStyle": "solid",
+																	"innerBorderLeftStyle": "",
+																	"innerBorderTopLeftRadius": "",
+																	"innerBorderTopRightRadius": "",
+																	"innerBorderBottomLeftRadius": "",
+																	"innerBorderBottomRightRadius": "",
+																	"innerBorderTopWidth": "0px",
+																	"innerBorderRightWidth": "0px",
+																	"innerBorderBottomWidth": "1px",
+																	"innerBorderLeftWidth": "0px",
+																	"defaultBorderColor": "#0000006b",
+																	"innerSides": "Bottom",
+																	"outlined": ""
+																}
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "VColComp",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_3"
+											},
+											"O": {
+												"cType": "slot"
+											},
+											"S": {
+												"xs-xl": {
+													"col": "",
+													"flexDirection": "column",
+													"alignItems": "",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "12px",
+													"paddingBottom": "12px",
+													"paddingLeft": "12px",
+													"paddingRight": "12px",
+													"backgroundColor": "#ffffff",
+													"boxShadow": ""
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "slot"
+							},
+							"S": {
+								"xs-xl": {
+									"marginLeft": "0px",
+									"marginRight": "0px",
+									"marginBottom": "0px",
+									"marginTop": "0px",
+									"paddingTop": "",
+									"paddingBottom": "",
+									"paddingLeft": "",
+									"paddingRight": "",
+									"width": "",
+									"height": "",
+									"backgroundColor": "#ffffff",
+									"boxShadow": ""
+								}
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_5"
+			},
+			"O": {
+				"cType": "slot"
+			},
+			"S": {
+				"xs-xl": {
+					"marginLeft": "",
+					"marginRight": "",
+					"marginBottom": "",
+					"marginTop": "",
+					"paddingTop": "12px",
+					"paddingBottom": "12px",
+					"paddingLeft": "12px",
+					"paddingRight": "12px",
+					"width": "",
+					"height": "",
+					"backgroundColor": "#ffffff",
+					"boxShadow": ""
+				}
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "PageComp",
+					"T": "prop"
+				},
+				"triggerOnRestored": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"PostRender": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ncomponents.myInlineDatePicker.titleDateFormat = function () {\r\n    var params = [];\r\n    for (var _i = 0; _i < arguments.length; _i++) {\r\n        params[_i] = arguments[_i];\r\n    }\r\n    // params = ['2024-10-09'] - selected Date\r\n    var myDate = quick.Quick.toDate(params[0], \"YYYY-MM-DD\");\r\n    var formatDate = quick.Quick.toShortDate(myDate, \"DD.MM.YYYY\");\r\n    return formatDate;\r\n};\r\n",
+					"TO": 1,
+					"HL": "JS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			},
+			"S": {
+				"xs-xl": {
+					"pageBackgroundColor": "#ffffff",
+					"statusBarColor": "#ffffff"
+				}
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "VRowComp",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VInlineDatepicker",
+															"P": {
+																"ID": {
+																	"H": "myInlineDatePicker",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"clearable": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"hideMenu": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "╬'Pick a date'╩╩",
+																	"T": "prop"
+																},
+																"locale": {
+																	"H": "╬'tr'╩╩",
+																	"T": "prop"
+																},
+																"willAttach": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"prependInnerIcon": {
+																	"H": "╬'mdi-calendar'╩╩",
+																	"T": "prop"
+																},
+																"noTitle": {
+																	"H": "╬false╩╩",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"headerColor": {
+																	"H": "╬'green'╩╩",
+																	"T": "prop",
+																	"HL": "QS"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_6"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginLeft": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginTop": "",
+																	"paddingTop": "",
+																	"paddingBottom": "",
+																	"paddingLeft": "",
+																	"paddingRight": "",
+																	"width": "",
+																	"height": "",
+																	"maxWidth": "",
+																	"maxHeight": "",
+																	"minWidth": "",
+																	"minHeight": "",
+																	"unlink": "false",
+																	"unlinkMax": "false",
+																	"unlinkMin": "false",
+																	"isSizeCollapsed": "false",
+																	"dense": "",
+																	"defaultFontColor": "#666666",
+																	"defaultFontFamily": "Roboto",
+																	"defaultFontSize": "16px",
+																	"defaultFontStyle": "normal",
+																	"defaultFontWeight": "400",
+																	"defaultCombinedFont": "Roboto-Regular",
+																	"defaultThemeFont": "Custom",
+																	"PHFontColor": "#9E9E9E",
+																	"PHFontFamily": "Roboto",
+																	"PHFontSize": "16px",
+																	"PHFontStyle": "normal",
+																	"PHFontWeight": "400",
+																	"PHCombinedFont": "Roboto-Regular",
+																	"PHThemeFont": "Custom",
+																	"inputFontColor": "#000",
+																	"inputFontFamily": "Roboto",
+																	"inputFontSize": "16px",
+																	"inputFontStyle": "normal",
+																	"inputFontWeight": "400",
+																	"inputCombinedFont": "Roboto-Regular",
+																	"inputThemeFont": "Custom",
+																	"menuDefaultDateFontColor": "#13BDD7",
+																	"menuDefaultDateFontFamily": "Roboto",
+																	"menuDefaultDateFontSize": "12px",
+																	"menuDefaultDateFontStyle": "normal",
+																	"menuDefaultDateFontWeight": "400",
+																	"menuDateCombinedFont": "Roboto-Regular",
+																	"menuDefaultDateThemeFont": "Custom",
+																	"menuSelectedDateColor": "#000",
+																	"menuSelectedDateFontFamily": "Roboto",
+																	"menuSelectedDateFontSize": "12px",
+																	"menuSelectedDateFontStyle": "normal",
+																	"menuSelectedDateFontWeight": "400",
+																	"menuDateSelectedCombinedFont": "Roboto-Regular",
+																	"menuDateSelectedThemeFont": "Custom",
+																	"menuTitleFontColor": "#000",
+																	"menuTitleFontFamily": "Roboto",
+																	"menuTitleFontSize": "16px",
+																	"menuTitleFontStyle": "normal",
+																	"menuTitleFontWeight": "400",
+																	"menuDateTitleCombinedFont": "Roboto-Regular",
+																	"menuDateTitleThemeFont": "Custom",
+																	"menuContentFontColor": "#000",
+																	"menuContentFontFamily": "Roboto",
+																	"menuContentFontSize": "12px",
+																	"menuContentFontStyle": "normal",
+																	"menuContentFontWeight": "400",
+																	"menuDateContentCombinedFont": "Roboto-Regular",
+																	"menuDateContentThemeFont": "Custom",
+																	"backgroundColor": "#FFFFFF",
+																	"iconColor": "#0000006b",
+																	"activeIconColor": "#1976d2",
+																	"menuBackgroundColor": "#FFFFFF",
+																	"selectedColor": "#00A2BB",
+																	"innerBoxShadow": "",
+																	"menuBoxShadow": "",
+																	"activeBorderColor": "#1976d2",
+																	"innerBoxSizing": "",
+																	"innerBorderTopStyle": "",
+																	"innerBorderRightStyle": "",
+																	"innerBorderBottomStyle": "solid",
+																	"innerBorderLeftStyle": "",
+																	"innerBorderTopLeftRadius": "",
+																	"innerBorderTopRightRadius": "",
+																	"innerBorderBottomLeftRadius": "",
+																	"innerBorderBottomRightRadius": "",
+																	"innerBorderTopWidth": "0px",
+																	"innerBorderRightWidth": "0px",
+																	"innerBorderBottomWidth": "1px",
+																	"innerBorderLeftWidth": "0px",
+																	"defaultBorderColor": "#0000006b",
+																	"innerSides": "Bottom",
+																	"outlined": ""
+																}
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-inline-date-picker-div-class newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "VColComp",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_3"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											},
+											"S": {
+												"xs-xl": {
+													"col": "",
+													"flexDirection": "column",
+													"alignItems": "",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "12px",
+													"paddingBottom": "12px",
+													"paddingLeft": "12px",
+													"paddingRight": "12px",
+													"backgroundColor": "#ffffff",
+													"boxShadow": ""
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							},
+							"S": {
+								"xs-xl": {
+									"marginLeft": "0px",
+									"marginRight": "0px",
+									"marginBottom": "0px",
+									"marginTop": "0px",
+									"paddingTop": "",
+									"paddingBottom": "",
+									"paddingLeft": "",
+									"paddingRight": "",
+									"width": "",
+									"height": "",
+									"backgroundColor": "#ffffff",
+									"boxShadow": ""
+								}
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_5"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container newDropBorder"
+			},
+			"S": {
+				"xs-xl": {
+					"marginLeft": "",
+					"marginRight": "",
+					"marginBottom": "",
+					"marginTop": "",
+					"paddingTop": "12px",
+					"paddingBottom": "12px",
+					"paddingLeft": "12px",
+					"paddingRight": "12px",
+					"width": "",
+					"height": "",
+					"backgroundColor": "#ffffff",
+					"boxShadow": ""
+				}
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"opt": {}
+};
+export default pjson

@@ -1,26 +1,14 @@
 let pjson = {
 	"pJson": [
 		{
-			"T": "QQRCode",
+			"T": "Messaging",
 			"P": {
 				"ID": {
-					"H": "EdtrComp_1",
+					"H": "PageComp",
 					"T": "prop"
 				},
-				"QJsonPath": {
-					"H": "'qjson://QQRCode'",
-					"T": "prop"
-				},
-				"content": {
-					"H": "'https://studio.onplateau.com/quick/'",
-					"T": "prop"
-				},
-				"size": {
-					"H": "10",
-					"T": "prop"
-				},
-				"level": {
-					"H": "'LOW'",
+				"triggerOnRestored": {
+					"H": "false",
 					"T": "prop"
 				}
 			},
@@ -30,33 +18,216 @@ let pjson = {
 				"eID": "EdtrComp_1"
 			},
 			"O": {
-				"cType": "slot",
-				"dynProps": true
+				"cType": "child"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "VRowComp",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QQRCode",
+															"P": {
+																"ID": {
+																	"H": "myQrCode",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"QJsonPath": {
+																	"H": "'qjson://QQRCode'",
+																	"T": "prop"
+																},
+																"content": {
+																	"H": "'https://studio.onplateau.com/quick/'",
+																	"T": "prop"
+																},
+																"size": {
+																	"H": "10",
+																	"T": "prop"
+																},
+																"level": {
+																	"H": "'LOW'",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_8"
+															},
+															"O": {
+																"cType": "slot",
+																"dynProps": true
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "VColComp",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_3"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_5"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_11",
+					"T": "prop"
+				},
+				"color": {
+					"H": "'primary'",
+					"T": "prop"
+				},
+				"depressed": {
+					"H": "true",
+					"T": "prop"
+				},
+				"elevation": {
+					"H": "0",
+					"T": "prop"
+				},
+				"height": {
+					"H": "'40px'",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "(<any>components.myQrCode).setProps({size: 20,content:\"dsad\",level:'LOW'});\r\n\r\n",
+					"P": "mouseEvent:unknown | undefined",
+					"HL": "TS"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_14",
+									"T": "prop"
+								},
+								"text": {
+									"H": "'Set QrCode Props'",
+									"T": "prop",
+									"HL": "QS"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_14"
+							},
+							"O": {
+								"cType": "child"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_11"
+			},
+			"O": {
+				"cType": "slot"
 			}
 		}
 	],
 	"cJson": [
 		{
-			"T": "QQRCode",
+			"T": "Messaging",
 			"P": {
 				"ID": {
-					"H": "EdtrComp_1",
+					"H": "PageComp",
 					"T": "prop"
 				},
-				"QJsonPath": {
-					"H": "╬'qjson://QQRCode'╩╩",
-					"T": "prop"
-				},
-				"content": {
-					"H": "╬'https://studio.onplateau.com/quick/'╩╩",
-					"T": "prop"
-				},
-				"size": {
-					"H": "╬10╩╩",
-					"T": "prop"
-				},
-				"level": {
-					"H": "╬'LOW'╩╩",
+				"triggerOnRestored": {
+					"H": "╬false╩╩",
 					"T": "prop"
 				}
 			},
@@ -66,14 +237,215 @@ let pjson = {
 				"eID": "EdtrComp_1"
 			},
 			"O": {
-				"cType": "slot",
-				"dynProps": true,
+				"cType": "child",
 				"compDomClasses": "newDropBorder"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "VRowComp",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QQRCode",
+															"P": {
+																"ID": {
+																	"H": "myQrCode",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"QJsonPath": {
+																	"H": "╬'qjson://QQRCode'╩╩",
+																	"T": "prop"
+																},
+																"content": {
+																	"H": "╬'https://studio.onplateau.com/quick/'╩╩",
+																	"T": "prop"
+																},
+																"size": {
+																	"H": "╬10╩╩",
+																	"T": "prop"
+																},
+																"level": {
+																	"H": "╬'LOW'╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_8"
+															},
+															"O": {
+																"cType": "slot",
+																"dynProps": true,
+																"compDomClasses": "newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "VColComp",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_3"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												},
+												"compDomClasses": "col d-flex flex-column newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_5"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container newDropBorder"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_11",
+					"T": "prop"
+				},
+				"color": {
+					"H": "╬'primary'╩╩",
+					"T": "prop"
+				},
+				"depressed": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"elevation": {
+					"H": "╬0╩╩",
+					"T": "prop"
+				},
+				"height": {
+					"H": "╬'40px'╩╩",
+					"T": "prop"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ncomponents.myQrCode.setProps({ size: 20, content: \"dsad\", level: 'LOW' });\r\n",
+					"P": "mouseEvent:unknown | undefined",
+					"HL": "JS"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_14",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬'Set QrCode Props'╩╩",
+									"T": "prop",
+									"HL": "QS"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_14"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "q-label newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_11"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--depressed theme--light elevation-0 v-size--default primary newDropBorder"
 			}
 		}
 	],
 	"lrids": {},
 	"clrids": {},
-	"description": {}
+	"opt": {}
 };
 export default pjson

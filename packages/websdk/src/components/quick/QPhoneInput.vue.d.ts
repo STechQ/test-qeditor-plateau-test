@@ -1,8 +1,9 @@
 import Vue from "vue";
+import { CountryCode } from 'libphonenumber-js';
 declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     defaultMask: string;
     isValid: boolean;
-    countryAlpha2Code: string;
+    countryAlpha2Code: CountryCode | undefined;
     allCountries: ({
         name: string;
         international_name: string;
@@ -22,22 +23,24 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
         code: string;
         dial_code: string;
     }[];
-    phoneNumber: string;
+    phoneNumber: string | undefined;
     phoneData: {
         countryPhoneNumber: string;
         phoneNumber: string;
-        maskedPhoneNumber: string;
+        maskedPhoneNumber: string | undefined;
         mask: string;
         isValid: boolean;
-        countryAlpha2Code: string;
-        countryDialCode: string | null;
+        countryAlpha2Code: CountryCode | undefined;
+        countryDialCode: string | null | undefined;
     };
     rules: {
         required: (value: any) => true | "Zorunlu alanı doldurunuz .";
         valid: (value: any) => true | "Lütfen geçerli bir telefon numarası giriniz .";
     };
     uniqueID: string;
+    calculatedMaxLength: string | null;
 }, {
+    setMaxLength(countryCode: CountryCode | undefined): void;
     changePhone(): void;
     changeCountryCode(): void;
     inputPhone(): void;
