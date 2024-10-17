@@ -14,6 +14,7 @@ import { INavigationOptions } from "../../../shrimp/interfaces/quick/INavigation
 import { PlatformType } from "../../../shrimp/interfaces/quick/IPlatform";
 import { ISiteSettings } from "../../../shrimp/interfaces/quick/ISiteSettings";
 import { DoryRendererChild } from "./RendererChild";
+import { ILogParams } from "../../../shrimp/helpers/logger";
 export declare class Renderer implements IRenderer {
     protected context: ContextManager;
     protected Dory: IDory;
@@ -69,6 +70,8 @@ export declare class Renderer implements IRenderer {
     }): void;
     SetThemes(themes: ITheme[]): void;
     SetThemeMode(isLight: boolean): void;
+    SetLogParams(logParams: ILogParams): void;
+    GetLogParams(): ILogParams | undefined;
 }
 export declare class DoryRenderer extends Renderer implements IDoryRenderer {
     get DoryInst(): IDory;

@@ -1,6 +1,7 @@
 import { ITheme } from "@stechquick/algae/lib/quick/ITheme";
 import { ContextManager } from "../../shrimp/context";
 import { Hook } from "../../shrimp/helpers/hook";
+import { ILogParams } from "../../shrimp/helpers/logger";
 import { IComponentCollection } from "../../shrimp/interfaces/ComponentInterfaces/IComponentCollection";
 import { ILRID } from "../../shrimp/interfaces/ComponentInterfaces/ILocalResource";
 import { IQJSon } from "../../shrimp/interfaces/ComponentInterfaces/IQJson";
@@ -59,6 +60,7 @@ export declare class Dory implements IDory {
     assetValues?: IAssetList;
     private themes?;
     private currentTheme?;
+    private logParams?;
     constructor(interDoryContext: ContextManager);
     GetLRType(): string;
     SetLRType(LRType?: string, LRTypeRTL?: boolean): Promise<void>;
@@ -184,11 +186,13 @@ export declare class Dory implements IDory {
         name: string;
     }): void;
     SetThemes(themes: Array<ITheme>): void;
+    GetThemes(): ITheme[] | undefined;
+    SetLogParams(logParams: ILogParams): void;
+    GetLogParams(): ILogParams | undefined;
     GetCurrentTheme(): {
         isLight: boolean;
         name: string;
     } | undefined;
-    GetThemes(): ITheme[] | undefined;
     SetThemeMode(isLight: boolean): void;
 }
 //# sourceMappingURL=Dory.d.ts.map

@@ -2268,7 +2268,6 @@ var run = function (event) { return __awaiter(void 0, void 0, void 0, function (
             case 10:
                 error_1 = _b.sent();
                 console.log(error_1);
-                debugger;
                 throw error_1;
             case 11: return [2 /*return*/];
         }

@@ -12,6 +12,7 @@ import { DisplayHookCb, IDory, PartialDisplayHookCb } from "./IDory";
 import { IDoryJr } from "./IDoryJr";
 import { IHistoryItem } from "./IHistoryItem";
 import { IPageCompletedCb, IPageRenderStartedCb } from "./ILifeCycleCb";
+import { ILogParams } from "../../helpers/logger";
 export interface IRendererChild {
     Render(options: {
         qjson: IQJSon;
@@ -65,6 +66,8 @@ export interface IRenderer {
     GetComponentCollection(): Record<string, IComponentCollection> | null;
     Trigger(eventName: string, parameters?: Record<string, any>): any;
     SetEditMode(state: boolean): void;
+    SetLogParams(logParams: ILogParams): void;
+    GetLogParams(): ILogParams | undefined;
     Hibernate(): void;
     SetConfigValues(configValues?: IConfig[]): void;
     SetThemeName(theme: {

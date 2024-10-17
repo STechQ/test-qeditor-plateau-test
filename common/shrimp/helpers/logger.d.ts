@@ -1,5 +1,10 @@
 import { LogType } from "../interfaces/ComponentInterfaces/ILogger";
 export { LogType };
+export interface ILogParams {
+    yamlLogType?: LogType;
+    minEngineLogLevel?: LogType;
+    logBulkSize?: number;
+}
 interface ILogger {
     Log({ logMessage, logType, error }: {
         logMessage: string;

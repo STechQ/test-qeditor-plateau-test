@@ -1,4 +1,4 @@
-import { IMessage, LogType } from "../../helpers/logger";
+import { IMessage } from "../../helpers/logger";
 import { ElementLocation } from "../ComponentInterfaces/ElementLocation";
 import { CType } from "../ComponentInterfaces/ICompJson";
 import { IComponent, IComponentClassEngine } from "../ComponentInterfaces/IComponent";
@@ -111,11 +111,9 @@ export interface IShellConfiguration {
     setPageTitle?: (value: string) => void;
     copyToClipboard?: (value: string) => void;
     setFavicon?: (favicon: string) => void;
-    getYamlLogType?: () => LogType;
     hash?: (data: IHashDataRequest) => Promise<IHashDataResponse>;
     encrypt?: (data: IEncryptDataRequest) => Promise<IEncryptDataResponse>;
     decrypt?: (data: IDecryptDataRequest) => Promise<IDecryptDataResponse>;
-    getMinEngineLogType?: () => LogType | undefined;
     downloadHandler?: (responseFile: {
         data: string;
         name: string;
@@ -124,7 +122,6 @@ export interface IShellConfiguration {
         compID: string;
     }) => IDomElement;
     getNetworkConnection?: () => boolean;
-    getLogBulkSize?: () => number | undefined;
     stringToBase64?: (data: string) => string;
     base64ToString?: (data: string) => string;
 }

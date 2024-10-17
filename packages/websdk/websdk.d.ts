@@ -29,6 +29,7 @@ declare class WebsdkContainer {
     PlateauIAM: IPlateauIAM | undefined;
     private PlateauUIOptions;
     lpManager?: LivePreviewManager;
+    private initCompleted;
     constructor();
     init({ PlateauUIOptions, environmentInfo }: {
         PlateauUIOptions?: IPlateauUIOptions;
@@ -43,6 +44,7 @@ declare class WebsdkContainer {
         qjsonPath?: string;
         args?: Record<string, any>;
     }): Promise<void>;
+    private handleIAMSettings;
     private setSDKConfig;
     private setSettingsQJsons;
     private LoadObject;
@@ -53,7 +55,7 @@ declare class WebsdkContainer {
     onSWMessage(packId: any): Promise<void>;
     sendMessage(msg: any): void;
 }
-declare function init(PlateauUIOptions?: IPlateauUIOptions, environmentInfo?: string): Promise<WebsdkContainer | undefined>;
+declare function init(PlateauUIOptions?: IPlateauUIOptions, environmentInfo?: string): Promise<WebsdkContainer>;
 declare function createRenderer({ mountPoint }: {
     mountPoint: IDomElement;
 }): Promise<PlateauUI>;

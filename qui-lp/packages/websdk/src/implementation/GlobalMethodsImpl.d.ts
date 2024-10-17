@@ -3,13 +3,13 @@ import { ElementLocation } from "../../../../common/shrimp/interfaces/ComponentI
 import { AlertType, ErrorSource, IActionButton } from "../../../../common/shrimp/interfaces/ComponentInterfaces/IAlert";
 import { IComponent } from "../../../../common/shrimp/interfaces/ComponentInterfaces/IComponent";
 import { IComponentCollection } from "../../../../common/shrimp/interfaces/ComponentInterfaces/IComponentCollection";
+import { IExcel, IExcelList } from "../../../../common/shrimp/interfaces/quick/IExcel";
+import { ILocationPosition } from "../../../../common/shrimp/interfaces/quick/ILocationPosition";
 import { IAlertParameters } from "../../../../common/shrimp/interfaces/quick/IShellGlobalMethods";
 import { IWebSDKSettingsWrapper } from "../../../../common/shrimp/interfaces/quick/IWebSDK";
 import { IDomElement } from "../../../../common/shrimp/interfaces/RenderingInterfaces/IDomElement";
 import { IRenderer } from "../../../../common/shrimp/interfaces/RenderingInterfaces/IRenderer";
 import { IRendererConfig } from "../../../../common/shrimp/interfaces/RenderingInterfaces/IRendererConfig";
-import { ILocationPosition } from "../../../../common/shrimp/interfaces/quick/ILocationPosition";
-import { IExcel, IExcelList } from "../../../../common/shrimp/interfaces/quick/IExcel";
 export declare class GlobalMethodsImpl implements IGlobalMethods {
     contextName: string;
     parentInstance: any;
@@ -77,14 +77,11 @@ export declare class GlobalMethodsImpl implements IGlobalMethods {
     toTop(): void;
     getEnvironmentVariable(): unknown;
     setEnvironment(env: unknown): void;
-    getYamlLogType(): any;
     setYamlLogType(logType: string): void;
     getPageTitle(): string | undefined;
     getFavicon(): string | undefined;
-    getMinEngineLogType(): any;
     getComponent({ compID }: {
         compID: string;
     }): IDomElement;
-    getLogBulkSize(): number | undefined;
 }
 //# sourceMappingURL=GlobalMethodsImpl.d.ts.map

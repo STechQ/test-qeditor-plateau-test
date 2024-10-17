@@ -24,6 +24,7 @@ import { IStore } from "../quick/IStore";
 import { IAssetList } from "../ComponentInterfaces/IStyle";
 import { IConfig } from "../quick/IConfig";
 import { ITheme } from "@stechquick/algae/lib/quick/ITheme";
+import { ILogParams } from "../../helpers/logger";
 export declare type PartialDisplayHookCb = (elements: Array<IDomElement>, pageId?: string, pageName?: string, navigationDirection?: INavigationDemandType, override?: boolean, doryJr?: IDoryJr | undefined, additioanls?: any | undefined) => void;
 export declare type DisplayHookCb = (elements: IDomElement[], pageId?: string, pageName?: string, navigationDirection?: INavigationDemandType, additionals?: any, noHistory?: boolean) => void;
 export interface IGoHistoryOptions {
@@ -86,6 +87,8 @@ export interface IDory extends IContextItem {
     goHistoryBack(options?: IGoHistoryOptions): void;
     goHistoryForward(options?: IGoHistoryOptions): void;
     SetEditMode(state: boolean): void;
+    SetLogParams(logParams: ILogParams): void;
+    GetLogParams(): ILogParams | undefined;
     GetEditMode(): boolean;
     CreateDoryJr(options: {
         context?: ContextManager;

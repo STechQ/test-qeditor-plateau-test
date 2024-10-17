@@ -1,5 +1,4 @@
 import { IContextItem } from "../../../../shrimp/context";
-import { LogType } from "../../../../shrimp/helpers/logger";
 import { ElementLocation } from "../../../../shrimp/interfaces/ComponentInterfaces/ElementLocation";
 import { AlertType, ErrorSource, IActionButton } from "../../../../shrimp/interfaces/ComponentInterfaces/IAlert";
 import { IComponent } from "../../../../shrimp/interfaces/ComponentInterfaces/IComponent";
@@ -63,10 +62,8 @@ export interface IGlobalMethods extends IContextItem {
     XOffset?: () => Number;
     toTop?: () => void;
     getEnvironmentVariable?: () => unknown;
-    getYamlLogType?: () => LogType;
     setEnvironment?: (env: unknown) => void;
     setYamlLogType?: (logType: string) => void;
-    getMinEngineLogType?: () => LogType | undefined;
     downloadHandler?: (responseFile: {
         data: string;
         name: string;
@@ -76,6 +73,5 @@ export interface IGlobalMethods extends IContextItem {
     }) => IDomElement;
     listenNetworkConnection?: () => void;
     getNetworkConnection?: () => boolean;
-    getLogBulkSize?: () => number | undefined;
 }
 //# sourceMappingURL=IGlobalMethods.d.ts.map

@@ -1,5 +1,5 @@
 import { IDecryptDataRequest, IDecryptDataResponse, IEncryptDataRequest, IEncryptDataResponse, IHashDataRequest, IHashDataResponse } from "../../../shrimp/helpers/cryptoHelper";
-import { IMessage, LogType } from "../../../shrimp/helpers/logger";
+import { IMessage } from "../../../shrimp/helpers/logger";
 import { ElementLocation } from "../../../shrimp/interfaces/ComponentInterfaces/ElementLocation";
 import { IComponent, IComponentClassEngine } from "../../../shrimp/interfaces/ComponentInterfaces/IComponent";
 import { IComponentCollection } from "../../../shrimp/interfaces/ComponentInterfaces/IComponentCollection";
@@ -106,11 +106,9 @@ export declare class ShellConfiguration implements IShellConfiguration {
     setPageTitle: (value: string) => void;
     copyToClipboard: (value: string) => void;
     setFavicon: (icon: string) => void;
-    getYamlLogType?: () => LogType;
     hash?: (data: IHashDataRequest) => Promise<IHashDataResponse>;
     encrypt?: (data: IEncryptDataRequest) => Promise<IEncryptDataResponse>;
     decrypt?: (data: IDecryptDataRequest) => Promise<IDecryptDataResponse>;
-    getMinEngineLogType?: () => LogType | undefined;
     downloadHandler?: (responseFile: {
         data: string;
         name: string;
@@ -119,7 +117,6 @@ export declare class ShellConfiguration implements IShellConfiguration {
         compID: string;
     }) => IDomElement;
     getNetworkConnection?: () => boolean;
-    getLogBulkSize?: () => number | undefined;
     stringToBase64?: (data: string) => string;
     base64ToString?: (data: string) => string;
     constructor();
