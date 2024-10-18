@@ -2,7 +2,7 @@ import { IFormattingDefinition } from "../quick/IFormattingDefinition";
 import { ElementLocation } from "../ComponentInterfaces/ElementLocation";
 import { AlertType, ErrorSource, IActionButton } from "../ComponentInterfaces/IAlert";
 import { IComponent } from "../ComponentInterfaces/IComponent";
-import { LogType } from "../ComponentInterfaces/ILogger";
+import { LogType } from "../ComponentInterfaces/ILoggerIntellisense";
 import { IHostResponseData } from "../IHostResponseData";
 import { ILocationPosition } from "../quick/ILocationPosition";
 import { IDownloadRequest, IRequest } from "../NetworkInterfaces/IRequest";

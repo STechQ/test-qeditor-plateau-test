@@ -2566,8 +2566,7 @@ nextIcon = 'mdi-plus'}`
             type: Boolean
         },
         fixed: {
-            type: Boolean,
-            editorDefaultValue: "true"
+            type: Boolean
         },
         inset: {
             type: Boolean
@@ -2864,9 +2863,6 @@ nextIcon = 'mdi-plus'}`
         },
         link: {
             type: Boolean
-        },
-        qValue: {
-            type: "any"
         },
         replace: {
             type: Boolean
@@ -5191,8 +5187,7 @@ nextIcon = 'mdi-plus'}`
             type: String
         },
         overflow: {
-            type: String,
-            options: ["'visible'", "'hidden'", "'clip'", "'scroll'" , "'auto'"]
+            type: String
         },
         tagType: {
             type: String,
@@ -5205,17 +5200,14 @@ nextIcon = 'mdi-plus'}`
             note: "Use to set label text of field"
         },
         textOverflow: {
-            type: String,
-            options: ["'ellipsis'", "'clip'",]
+            type: String
         },
         visible: {
             type: Boolean,
             editorDefaultValue: "true"
         },
         whiteSpace: {
-            type: String,
-            options: ["'normal'", "'nowrap'", "'pre'", "'pre-wrap'" , "'pre-line'","'break-spaces'"]
-
+            type: String
         },
         processHtml: {
             type: Boolean,
