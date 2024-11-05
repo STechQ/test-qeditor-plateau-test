@@ -1,6 +1,6 @@
 import { IDoryRenderer } from "../../../../common/shrimp/interfaces/RenderingInterfaces/IRenderer";
-import { IHistoryItem } from "../../../../common/shrimp/interfaces/RenderingInterfaces/IHistoryItem";
+import { AdditionalType } from "./AdditionalType";
 export declare class AppLayoutManager {
-    static ArrangeAppLayout(vapp: HTMLElement, renderer: IDoryRenderer, historyItem: IHistoryItem | undefined): void;
+    static ArrangeAppLayout(vapp: HTMLElement, renderer: IDoryRenderer, additionals: AdditionalType | undefined): void;
 }
 //# sourceMappingURL=AppLayoutManager.d.ts.map

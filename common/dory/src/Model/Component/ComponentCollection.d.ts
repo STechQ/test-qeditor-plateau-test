@@ -12,7 +12,6 @@ import { IDictionaryNullable } from "../../../../shrimp/interfaces/IDictionaryNu
 import { IDomElement } from "../../../../shrimp/interfaces/RenderingInterfaces/IDomElement";
 import { IDoryJr } from "../../../../shrimp/interfaces/RenderingInterfaces/IDoryJr";
 import { CompGroupType } from "../../../../shrimp/interfaces/quick/IWebSDK";
-import { Dory } from "../../Dory";
 import { HistoryItem } from "../History/HistoryItem";
 export declare class ComponentCollection implements IComponentCollection {
     static IterateToChild(controlListOrItem: Array<IComponentCollection> | IComponentCollection, callback: (item: IComponentCollection) => boolean, options?: {
@@ -62,7 +61,6 @@ export declare class ComponentCollection implements IComponentCollection {
         qjsonVersion?: number;
     });
     get RootHistoryItem(): HistoryItem;
-    getCurrentHistoryItem(): HistoryItem;
     SetChildrenFields({ children, childrenCreators }: {
         children?: IDictionary<Array<IComponentCollection>>;
         childrenCreators?: IDictionaryNullable<ScopedSlotCreatorFunc>;
@@ -73,7 +71,6 @@ export declare class ComponentCollection implements IComponentCollection {
     }): void;
     get componentVisibility(): boolean;
     set componentVisibility(componentVisibility: boolean);
-    getDory(): Dory;
     WatchCreatedFields(cb: CreatedFieldsHook): void;
     SetInitialProps(props: IDictionary<any>): void;
     /**

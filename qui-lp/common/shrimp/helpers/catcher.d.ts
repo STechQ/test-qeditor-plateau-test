@@ -3,5 +3,8 @@ export declare class catcher {
         cb: () => void;
         catchLog?: (err: any) => string;
     }): void;
+    static try<RetType>(cb: () => RetType, params: {
+        catchLog?: (err: Error) => string;
+    }): RetType;
 }
 //# sourceMappingURL=catcher.d.ts.map

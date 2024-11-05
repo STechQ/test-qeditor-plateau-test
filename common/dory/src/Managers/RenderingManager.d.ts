@@ -3,6 +3,8 @@ import { PageScripting } from "../../../shrimp/helpers/scripting/PageScripting";
 import { TypeHelper } from "../../../shrimp/helpers/typeHelper";
 import { CType, ICompJson } from "../../../shrimp/interfaces/ComponentInterfaces/ICompJson";
 import { IComponentCollection } from "../../../shrimp/interfaces/ComponentInterfaces/IComponentCollection";
+import { ICreatedComponent } from "../../../shrimp/interfaces/ComponentInterfaces/ICreatedComponent";
+import { IEventCollection } from "../../../shrimp/interfaces/ComponentInterfaces/IEventCollection";
 import { IDictionary } from "../../../shrimp/interfaces/IDictionary";
 import { IRenderingManager } from "../../../shrimp/interfaces/RenderingInterfaces/IRenderingManager";
 import { ScriptLang } from "../../../shrimp/interfaces/Scripting/scriptLang";
@@ -10,6 +12,16 @@ import { ContextManager } from "../../../shrimp/src/context/contextManager";
 import { BlockInfo } from "../Context/BlockInfo";
 import { ComponentCommunicator } from "../Helpers/ComponentCommunicator";
 import { Evaluator } from "./Evaluator";
+declare type compParams = {
+    componentName: string;
+    ctrl: ICompJson;
+    e: any;
+    props: IDictionary<any>;
+    events: IEventCollection;
+    compCollection: IComponentCollection;
+    parentInstance: any;
+    component: ICreatedComponent | null;
+};
 export declare class RenderingManager implements IRenderingManager {
     static ContextName: string;
     contextName: string;
@@ -91,5 +103,8 @@ export declare class RenderingManager implements IRenderingManager {
      * @param component Wİll be created component instance
      */
     private createErrorComp;
+    private createMobileComp;
+    createCustomComp(params: compParams): void;
 }
+export {};
 //# sourceMappingURL=RenderingManager.d.ts.map

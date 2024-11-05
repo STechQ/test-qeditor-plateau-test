@@ -94,20 +94,14 @@ export declare enum CompGroupType {
     Local = "Local",
     GoldenLayout = "GoldenLayout"
 }
-export interface ICreateRendererResponse {
-    renderer: IRenderer;
-    newMountPoint: HTMLElement;
-}
 export interface IWebSDK {
     CreateRenderer({ mountPoint, config }: {
         mountPoint: IDomElement;
         config?: IRendererConfig;
-    }): ICreateRendererResponse;
+    }): IRenderer;
     GetParentInstance(renderer: IRenderer): any;
     GetDomContainer(renderer: IRenderer): IDomElement;
-    destroyRenderer(renderer: IRenderer): void;
-    destroy(): void;
-    resetQJsonPool(): void;
+    Clear(renderer: IRenderer): void;
     setComponentOverrider(demandComponentCb: (compName: string) => IComponent | null): void;
     GetComponentList(compGroupNameArray: Array<CompGroupType>): Record<CompGroupType, any>;
     setQJsonUrlPrefix(prefix: string): void;
@@ -125,6 +119,5 @@ export interface IWebSDK {
     setEnvironment(env: unknown): void;
     setYamlLogType(logType: string): void;
     migrateLegacySettings(settings: any): IWebSDKSettings;
-    showCssTags(show: boolean): void;
 }
 //# sourceMappingURL=IWebSDK.d.ts.map

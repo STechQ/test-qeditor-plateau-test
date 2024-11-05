@@ -1,4 +1,5 @@
 declare const localComponents: {
+    MobileComponentWrapper: any;
     DError: any;
     TSComponentWrapper: any;
     Ghost: any;
@@ -97,6 +98,7 @@ declare const localComponents: {
     QCaptcha: {};
     QQRCode: {};
     QDynamicFields: {};
+    QPieChart: {};
     QQrReader: {
         importFunc: () => Promise<void>;
         loaded: boolean;

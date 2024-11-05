@@ -5,9 +5,10 @@ import { ScriptLang } from "../../../../shrimp/interfaces/Scripting/scriptLang";
 import { IEvaluator } from "../../../../shrimp/interfaces/Scripting/IEvaluator";
 import { Dory } from "../../Dory";
 import { IQuickFlowModelRuntime } from "../../../../shrimp/interfaces/ComponentInterfaces/ICompJson";
+declare type EventDataType = "event" | "directive";
 export declare class EventData implements IEventData {
     eventName: string;
-    ownerComponent?: IComponentCollection;
+    private ownerComponent?;
     handler: string | IQuickFlowModelRuntime;
     eventParams?: Array<{
         name: string;
@@ -23,7 +24,8 @@ export declare class EventData implements IEventData {
     scopeObject?: Record<string, any>;
     private promisses;
     private promiseCallbacks;
-    constructor({ eventName, handler, context, eventParameters, immediate, customEvent, propertyEvent, triggerOrder, externalVisible, handlerLang, scopeObject }: {
+    private eventType;
+    constructor({ eventName, handler, context, eventParameters, immediate, customEvent, propertyEvent, triggerOrder, externalVisible, handlerLang, scopeObject, eventType }: {
         eventName: string;
         handler: string | IQuickFlowModelRuntime;
         context: ContextManager;
@@ -35,6 +37,7 @@ export declare class EventData implements IEventData {
         externalVisible?: boolean;
         handlerLang?: ScriptLang;
         scopeObject?: Record<string, any>;
+        eventType: EventDataType;
     });
     SetOwner({ ownerComponent }: {
         ownerComponent: IComponentCollection;
@@ -42,7 +45,7 @@ export declare class EventData implements IEventData {
     GetOwner(owners: {
         ownerComponent?: IComponentCollection;
         ownerEvent?: IEventData;
-    }, dory: Dory): Dory;
+    }, dory: Dory): void;
     Trigger({ evaluator, dataSource }: {
         evaluator: IEvaluator;
         dataSource: any;
@@ -50,4 +53,5 @@ export declare class EventData implements IEventData {
     AttachCompletionPromise(prom: Promise<any>): void;
     private awaitAllPromises;
 }
+export {};
 //# sourceMappingURL=EventData.d.ts.map

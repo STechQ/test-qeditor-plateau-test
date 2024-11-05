@@ -18,4 +18,5 @@ export declare const knownComps: {
         };
     };
 };
+export declare const mobileOnlyComponents: string[];
 //# sourceMappingURL=knownComps.d.ts.map

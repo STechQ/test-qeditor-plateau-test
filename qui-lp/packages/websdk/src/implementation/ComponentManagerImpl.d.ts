@@ -1,6 +1,5 @@
 import Vue from "vue";
 import { IComponentManager } from "../../../../common/qshell";
-import { ContextManager } from "../../../../common/shrimp/context";
 import { ElementLocation } from "../../../../common/shrimp/interfaces/ComponentInterfaces/ElementLocation";
 import { CType } from "../../../../common/shrimp/interfaces/ComponentInterfaces/ICompJson";
 import { IComponent } from "../../../../common/shrimp/interfaces/ComponentInterfaces/IComponent";
@@ -44,7 +43,7 @@ export declare class ComponentManagerImpl implements IComponentManager {
         OutBoundEvents(events: any): void;
     }, unknown, {
         _renderingProps: {
-            context: () => ContextManager;
+            context: () => import("../../common/shrimp/context").ContextManager;
             events: () => IDictionary<Function>;
             props: () => IDictionary<Object>;
             targetLocalComponent: () => any;

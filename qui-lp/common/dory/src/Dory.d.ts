@@ -60,7 +60,6 @@ export declare class Dory implements IDory {
     assetValues?: IAssetList;
     private themes?;
     private currentTheme?;
-    private renderTotalCb?;
     private logParams?;
     constructor(interDoryContext: ContextManager);
     GetLRType(): string;
@@ -82,9 +81,9 @@ export declare class Dory implements IDory {
     GetCurrentHistoryItem(): HistoryItem | null | undefined;
     private PageCompleted;
     private innerRender;
+    private resetStyle;
     ReRender(): void;
     CallHibernate(): void;
-    resurrect(): void;
     SetErrorCallBack(callBack: (errors: Array<IQError>) => void): void;
     SetSiteSettings(siteSettings?: ISiteSettings): void;
     SetPlatformType(platformType: PlatformType): void;
@@ -128,10 +127,9 @@ export declare class Dory implements IDory {
      * @param shellConfiguration Configuration to be added into Dory's shellConfiguration field
      */
     SetShellGlobalConfiguration(shellConfigs: IShellConfiguration): void;
-    getRenderer(): import("../../shrimp/interfaces/RenderingInterfaces/IRenderer").IRenderer;
     GetShellConfiguration(): ShellConfiguration;
     Clear(): void;
-    CallRender(historyItem: HistoryItem, olds: Array<HistoryItem>, navigationDirection?: INavigationDemandType, noHistory?: boolean): void;
+    CallRender(historyItem: HistoryItem, navigationDirection?: INavigationDemandType, noHistory?: boolean): void;
     hasHistory(pageId: string, checkExternalRouter?: {
         currPageId: string;
     }): INavigationDemand | null;
@@ -150,10 +148,6 @@ export declare class Dory implements IDory {
     GetEditMode(): boolean;
     SetEditor(editor: IEditorInstance): void;
     GetEditor(): IEditorInstance | undefined;
-    CloneCleanContext({ context, additionalKeys }?: {
-        context?: ContextManager;
-        additionalKeys?: Array<string>;
-    }): ContextManager;
     CreateDoryJr({ context, creatorComp, compUIDPrefix }: {
         context?: ContextManager;
         creatorComp?: IComponentCollection;
@@ -172,10 +166,20 @@ export declare class Dory implements IDory {
         sharedStore: IStore;
     }): void;
     GetPreviousHistory(): HistoryItem | null;
+    GetAdditionals<T>({ targetHistoryItem }: {
+        targetHistoryItem?: "last" | "previous";
+    }): T | undefined;
+    SetAdditionals<T>({ additionals, targetHistoryItem }: {
+        additionals: T;
+        targetHistoryItem?: "last" | "previous";
+    }): void;
     Trigger(eventName: string, parameters?: Record<string, any>): any;
     SetOperatorCollection(operatorCollection: IRendererOperatorCollection): void;
     SetAssetValues(values?: IAssetList): void;
     GetAssetValues(): IAssetList | undefined;
+    ResetStyleDict(): void;
+    clearStyleTag(): void;
+    DeleteStyleSelector(compCollection: IComponentCollection, stylePropName: string, breakPoint?: string): void;
     DeleteStyleCompCollection(compCollection: IComponentCollection): void;
     SetThemeName(theme: {
         isLight: boolean;

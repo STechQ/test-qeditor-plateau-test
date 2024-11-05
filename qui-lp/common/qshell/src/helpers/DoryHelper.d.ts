@@ -15,7 +15,7 @@ export declare class DoryHelper {
     constructor({ doryInstName, context, renderer, operatorCollection, }: {
         doryInstName?: string;
         context: ContextManager;
-        renderer: Renderer;
+        renderer?: Renderer;
         operatorCollection: IRendererOperatorCollection;
     });
     private createDoryInstance;

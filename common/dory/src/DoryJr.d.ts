@@ -32,7 +32,7 @@ export declare class DoryJr implements IDoryJr {
         noHistory?: boolean;
         children?: Record<string, Array<unknown>>;
     }): Promise<void>;
-    CallRender(historyItem: HistoryItem, olds: Array<HistoryItem>, navigationDirection?: INavigationDemandType): void;
+    CallRender(historyItem: HistoryItem, navigationDirection?: INavigationDemandType): void;
     private PageCompleted;
     getComponentCollectionByDom({ element, deep }: {
         element: IDomElement;
@@ -70,6 +70,14 @@ export declare class DoryJr implements IDoryJr {
     GetLastHistory(): HistoryItem | undefined;
     GetComponentList(): IComponentCollection[] | undefined;
     GetComponentCollection(): Record<string, IComponentCollection> | undefined;
-    GetPreviousHistory(): HistoryItem | undefined;
+    private GetPreviousHistory;
+    GetAdditionals<T>({ targetHistoryItem }: {
+        targetHistoryItem?: "last" | "previous";
+    }): T | undefined;
+    SetAdditionals<T>({ additionals, targetHistoryItem }: {
+        additionals: T;
+        targetHistoryItem?: "last" | "previous";
+        merge?: boolean;
+    }): void;
 }
 //# sourceMappingURL=DoryJr.d.ts.map

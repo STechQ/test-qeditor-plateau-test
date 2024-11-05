@@ -1,5 +1,4 @@
-import { IContextItem } from "../../../../common/shrimp/context";
-export declare class DataManager implements IContextItem {
+export declare class DataManager {
     static ContextName: string;
     contextName: string;
     environmentName: string | undefined;

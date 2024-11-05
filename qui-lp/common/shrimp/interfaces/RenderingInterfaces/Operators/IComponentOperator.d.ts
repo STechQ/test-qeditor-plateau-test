@@ -5,7 +5,10 @@ export interface IComponentOperator {
     getClassString(compColl: IComponentCollection): string;
     setTextAndMount?: (compColl: IComponentCollection, text: string) => void;
     getTextString?: (compColl: IComponentCollection) => string | undefined;
-    applyStyle?: (compColl: IComponentCollection) => void;
+    matchComponentStyles?: (compColl: IComponentCollection) => void;
+    resetStyleDict?: () => void;
+    clearStyleTag?: () => void;
+    resetStyleSelector?: (compCollection: IComponentCollection, stylePropName: string, breakPoint?: string) => void;
     resetStyleCompCollection?: (compCollection: IComponentCollection) => void;
 }
 //# sourceMappingURL=IComponentOperator.d.ts.map

@@ -13,7 +13,6 @@ import { ICreatedComponent } from "./ICreatedComponent";
 import { IDirectiveCollection } from "./IDirectiveCollection";
 import { IEventCollection } from "./IEventCollection";
 import { StyleValue } from "./IStyle";
-import { IDory } from "../RenderingInterfaces/IDory";
 export declare type ScopedSlotCreatorFunc = (scopeObject?: IDictionary<any>) => Array<IComponentCollection>;
 export declare type CreatedFieldsHook = (created: ICreatedComponent) => void;
 export declare type styleChildOverride = {
@@ -80,7 +79,5 @@ export interface IComponentCollection extends ILightComponentCollection, IPerfab
     WatchCreatedFields(cb: CreatedFieldsHook): void;
     SetInitialProps(props: IDictionary<any>): void;
     SetComponentStyles(compStyles?: StyleValue): void;
-    getCurrentHistoryItem(): IHistoryItem;
-    getDory(): IDory;
 }
 //# sourceMappingURL=IComponentCollection.d.ts.map

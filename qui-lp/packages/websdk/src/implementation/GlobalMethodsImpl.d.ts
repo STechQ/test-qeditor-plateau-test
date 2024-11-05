@@ -10,7 +10,6 @@ import { IWebSDKSettingsWrapper } from "../../../../common/shrimp/interfaces/qui
 import { IDomElement } from "../../../../common/shrimp/interfaces/RenderingInterfaces/IDomElement";
 import { IRenderer } from "../../../../common/shrimp/interfaces/RenderingInterfaces/IRenderer";
 import { IRendererConfig } from "../../../../common/shrimp/interfaces/RenderingInterfaces/IRendererConfig";
-import { ContextManager } from "../../../../common/shrimp/context";
 export declare class GlobalMethodsImpl implements IGlobalMethods {
     contextName: string;
     parentInstance: any;
@@ -19,14 +18,12 @@ export declare class GlobalMethodsImpl implements IGlobalMethods {
     static renderer?: IRenderer;
     static onCloseIsActive: Boolean;
     static settingsWrapper: IWebSDKSettingsWrapper;
-    private readonly websdkContext;
-    constructor({ contextName, parentInstance, config, errorContainerTarget, settingsWrapper, websdkContext, }: {
+    constructor({ contextName, parentInstance, config, errorContainerTarget, settingsWrapper, }: {
         contextName: string;
         parentInstance: any;
         config?: IRendererConfig;
         errorContainerTarget: IDomElement;
         settingsWrapper: IWebSDKSettingsWrapper;
-        websdkContext: ContextManager;
     });
     setRenderer(renderer: any): void;
     alert(options: {
