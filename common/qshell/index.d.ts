@@ -1,4 +1,3 @@
-import { IContextItem } from "../shrimp/context";
 import { IComponentInstanceTracker } from "../shrimp/interfaces/ComponentInterfaces/IComponentInstanceTracker";
 import { PlatformType } from "../shrimp/interfaces/quick/IPlatform";
 import { IUXManager } from "../shrimp/interfaces/quick/IUXManager";
@@ -22,7 +21,7 @@ import { IProcessManager } from "./src/interfaces/construction/IProcessManager";
 import { IQJsonRetriever } from "./src/interfaces/construction/IQJsonRetriever";
 import { IRegionalManager } from "./src/interfaces/construction/IRegionalManager";
 import { IStoreManager } from "./src/interfaces/construction/IStoreManager";
-declare class QShell implements IContextItem {
+declare class QShell {
     private qjsonRetriever;
     private qjsonPool;
     private network;
@@ -32,9 +31,6 @@ declare class QShell implements IContextItem {
     private hostTriggerer;
     private operatorCollection;
     private platformManager;
-    private qshellRenderer;
-    contextName: string;
-    private context;
     constructor({ qjsonRetriever, moduleManager, network, ux, region, hostTriggerer, platformType, platformManager }: {
         qjsonRetriever: IQJsonRetriever;
         moduleManager: IModuleManager;
@@ -45,6 +41,7 @@ declare class QShell implements IContextItem {
         platformType: PlatformType;
         platformManager: IPlatformManager;
     }, operatorCollection: IRendererOperatorCollection);
+    private createRendererContext;
     CreateRenderer({ componentManager, globalMethods, doryInstanceName, componentInstanceTracker, langExtensions, navigationManager, integrationsManager, storeManager, cookieManager, processManager, cryptoManager, config }: {
         componentManager: IComponentManager;
         globalMethods: IGlobalMethods;
@@ -59,7 +56,6 @@ declare class QShell implements IContextItem {
         cryptoManager?: ICryptographyManager;
         config?: IRendererConfig;
     }): IDoryRenderer;
-    getRender(): DoryRenderer;
     ResetQJsonPool(): void;
 }
 export { INetworkManager, IQJsonRetriever, IComponentManager, IModuleManager, IGlobalMethods, DoryRenderer, QShell, ILanguageExtensions, INavigationManager, RendererChild, IStoreManager, ICookieManager, IRegionalManager, IProcessManager, IHostTriggerer, IPlatformManager, ICryptographyManager };

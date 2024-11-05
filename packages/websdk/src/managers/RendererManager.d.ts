@@ -21,16 +21,21 @@ export declare class RendererManager {
     private globalMethods;
     private storeManager;
     constructor(storeManager: StoreManager, settingsWrapper: IWebSDKSettingsWrapper, servicesWrapper: IContainerServicesWrapper, websdkContext: ContextManager);
-    createRenderer({ mountPoint, qshell, config, windowHistoryManager }: {
+    createRenderer({ mountPoint: oldMountPoint, qshell, config, windowHistoryManager }: {
         mountPoint: IDomElement;
         qshell: QShell;
         config?: IRendererConfig;
         windowHistoryManager?: WindowHistoryManager;
-    }): IDoryRenderer;
+    }): {
+        renderer: IDoryRenderer;
+        newMountPoint: HTMLElement;
+    };
+    private applyStyles;
     getLastRenderer(): IRenderer | undefined;
     getDomContainer(renderer: IRenderer): IDomElement;
     getParentInstance(renderer: IRenderer): Vue;
-    clear(renderer: IRenderer): void;
+    destroy(): void;
+    destroyRenderer(renderer: IRenderer): void;
     setEnvironment(env: any): void;
     setYamlLogType(logType: string): void;
     setThemes(themeSettings: IThemeSettings | undefined): void;

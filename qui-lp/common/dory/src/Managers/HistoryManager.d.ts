@@ -57,8 +57,8 @@ export declare class HistoryManager implements IHistoryManager, IContextItem {
     static traverseUpwards(retVal: Array<string>, historyItem: HistoryItem | null | undefined): Array<string>;
 }
 declare class HistoryLevel {
-    HistoryItems: Array<HistoryItem>;
-    FutureItems: Array<HistoryItem>;
+    private HistoryItems;
+    private FutureItems;
     private MomentaryItem?;
     constructor();
     /**

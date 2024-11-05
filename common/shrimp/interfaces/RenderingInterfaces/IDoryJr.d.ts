@@ -51,14 +51,8 @@ export interface IDoryJr extends IContextItem {
         pageId: string;
     } | null;
     GetLastHistory(): IHistoryItem | undefined;
+    GetPreviousHistory(): IHistoryItem | undefined;
     GetComponentCollection(): Record<string, IComponentCollection> | undefined;
     GetComponentList(): IComponentCollection[] | undefined;
-    GetAdditionals<T>(options: {
-        targetHistoryItem?: "last" | "previous";
-    }): T | undefined;
-    SetAdditionals<T>(options: {
-        additionals: T;
-        targetHistoryItem?: "last" | "previous";
-    }): void;
 }
 //# sourceMappingURL=IDoryJr.d.ts.map

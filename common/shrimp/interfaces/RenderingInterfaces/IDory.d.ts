@@ -18,15 +18,22 @@ import { ScriptLang } from "../Scripting/scriptLang";
 import { IDoryJr } from "./IDoryJr";
 import { IHistoryItem } from "./IHistoryItem";
 import { IPageCompletedCb, IPageRenderStartedCb } from "./ILifeCycleCb";
-import { ISettingsQJsonContext } from "./IRenderer";
+import { IRenderer, ISettingsQJsonContext } from "./IRenderer";
 import { IRendererOperatorCollection } from "./Operators/IRendererOperatorCollection";
 import { IStore } from "../quick/IStore";
 import { IAssetList } from "../ComponentInterfaces/IStyle";
 import { IConfig } from "../quick/IConfig";
 import { ITheme } from "@stechquick/algae/lib/quick/ITheme";
 import { ILogParams } from "../../helpers/logger";
-export declare type PartialDisplayHookCb = (elements: Array<IDomElement>, pageId?: string, pageName?: string, navigationDirection?: INavigationDemandType, override?: boolean, doryJr?: IDoryJr | undefined, additioanls?: any | undefined) => void;
-export declare type DisplayHookCb = (elements: IDomElement[], pageId?: string, pageName?: string, navigationDirection?: INavigationDemandType, additionals?: any, noHistory?: boolean) => void;
+export interface IDisplayCallbackHistory {
+    new: IHistoryItem;
+    /**
+     * old[0] is previously displayed page, others are skipped ones during travel going to new ex -> back(step: 5)
+     */
+    old: Array<IHistoryItem>;
+}
+export declare type PartialDisplayHookCb = (elements: Array<IDomElement>, history: IDisplayCallbackHistory, pageId?: string, pageName?: string, navigationDirection?: INavigationDemandType, override?: boolean, doryJr?: IDoryJr | undefined) => void;
+export declare type DisplayHookCb = (elements: IDomElement[], history: IDisplayCallbackHistory, pageId?: string, pageName?: string, navigationDirection?: INavigationDemandType, noHistory?: boolean) => void;
 export interface IGoHistoryOptions {
     navigationDemand?: INavigationDemand;
 }
@@ -113,6 +120,7 @@ export interface IDory extends IContextItem {
     SetConfigValues(configValues?: IConfig[]): void;
     GetLRType(): string;
     CallHibernate(): void;
+    resurrect(): void;
     SetGlobalLRDict(GlobalLRDict?: ILRID): void;
     SetSiteSettings(siteSettings?: ISiteSettings): void;
     SetPlatformType(platformType: PlatformType): void;
@@ -122,13 +130,6 @@ export interface IDory extends IContextItem {
     SetEditor(instance: IEditorInstance): void;
     GetEditor(): IEditorInstance | undefined;
     GetLastHistory(): IHistoryItem | null;
-    GetAdditionals<T>(options: {
-        targetHistoryItem?: "last" | "previous";
-    }): T | undefined;
-    SetAdditionals<T>(options: {
-        additionals: T;
-        targetHistoryItem?: "last" | "previous";
-    }): void;
     GetPreviousHistory(): IHistoryItem | null;
     Trigger(eventName: string, parameters: Record<string, any>): any;
     SetOperatorCollection(operatorCollection: IRendererOperatorCollection): void;
@@ -137,8 +138,6 @@ export interface IDory extends IContextItem {
     GetShellConfiguration(): IShellConfiguration;
     SetAssetValues(assetValues?: IAssetList): void;
     GetAssetValues(): IAssetList | undefined;
-    ResetStyleDict(): void;
-    DeleteStyleSelector(compCollection: IComponentCollection, stylePropName: string, breakPoint?: string): void;
     DeleteStyleCompCollection(compCollection: IComponentCollection): void;
     SetThemeName(theme: {
         isLight: boolean;
@@ -151,6 +150,7 @@ export interface IDory extends IContextItem {
     } | undefined;
     GetThemes(): Array<ITheme> | undefined;
     SetThemeMode(isLight: boolean): void;
+    getRenderer(): IRenderer;
 }
 export declare const DoryContextName = "Dory";
 //# sourceMappingURL=IDory.d.ts.map
