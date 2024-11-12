@@ -60,7 +60,5 @@ export declare class CryptoHelper {
     private static createFixedLengthArrayBufferFromString;
     static encodeABToBase64(buffer: ArrayBuffer): string;
     static decodeBase64ToAB(base64: string): ArrayBufferLike;
-    static stringToBase64(data: string): string;
-    static base64ToString(data: string): string;
 }
 //# sourceMappingURL=cryptoHelper.d.ts.map

@@ -3519,7 +3519,7 @@ nextIcon = 'mdi-plus'}`
         persistentHint: {
             type: Boolean
         },
-        prependIcon: {
+        prependInnerIcon: {
             type: String
         },
         row: {
@@ -4076,7 +4076,7 @@ nextIcon = 'mdi-plus'}`
             type: "number | string",
             editorDefaultValue: "0"
         },
-        prependIcon: {
+        prependInnerIcon: {
             type: String
         },
         readonly: {
@@ -4442,7 +4442,7 @@ nextIcon = 'mdi-plus'}`
         persistentHint: {
             type: Boolean
         },
-        prependIcon: {
+        prependInnerIcon: {
             type: String
         },
         readonly: {
@@ -5040,8 +5040,7 @@ nextIcon = 'mdi-plus'}`
             type: Boolean
         },
         class: {
-            type: String,
-            editorDefaultValue: "'primary'"
+            type: String
         },
         collapse: {
             type: Boolean
