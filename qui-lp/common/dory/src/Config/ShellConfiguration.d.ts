@@ -117,6 +117,8 @@ export declare class ShellConfiguration implements IShellConfiguration {
         compID: string;
     }) => IDomElement;
     getNetworkConnection?: () => boolean;
+    stringToBase64?: (data: string) => string;
+    base64ToString?: (data: string) => string;
     constructor();
 }
 //# sourceMappingURL=ShellConfiguration.d.ts.map

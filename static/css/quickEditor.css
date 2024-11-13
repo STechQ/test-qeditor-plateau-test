@@ -1245,7 +1245,6 @@
   position: absolute;
   right: 10px;
   top: 10px;
-  display: none;
 }
 
 .quickEditor .tableList ul li i.mobileIcon {
@@ -1255,11 +1254,18 @@
   height: auto;
   margin: 0;
   position: absolute;
-  right: 25px;
   top: 10px;
-  display: none;
 }
 
+.quickEditor .tableList ul li i.monitorIcon {
+  color: #424242;
+  font-size: 100%;
+  width: auto;
+  height: auto;
+  margin: 0;
+  position: absolute;
+  top: 10px;
+}
 
 .quickEditor .cardList ul li i.infoIcn {
   color: #fafbfc;
@@ -1268,7 +1274,7 @@
   height: auto;
   margin: 0;
   position: absolute;
-  right: 8px;
+  right: 10px;
   top: 8px;
 }
 
@@ -2597,5 +2603,19 @@ input[type="checkbox"] {
 .codeAssistant-error-container .explain-header-text {
   color: #FFFFFF;
 }
+.monaco-diff-editor .synthetic-focus,
+.monaco-diff-editor [tabindex="-1"]:focus,
+.monaco-diff-editor [tabindex="0"]:focus,
+.monaco-diff-editor button:focus,
+.monaco-diff-editor input[type=button]:focus,
+.monaco-diff-editor input[type=checkbox]:focus,
+.monaco-diff-editor input[type=search]:focus,
+.monaco-diff-editor input[type=text]:focus,
+.monaco-diff-editor select:focus,
+.monaco-diff-editor textarea:focus,
+.monaco-editor {
+  outline-color: gray !important; 
+}
+
 
 /*  */

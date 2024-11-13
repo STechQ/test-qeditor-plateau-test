@@ -122,6 +122,8 @@ export interface IShellConfiguration {
         compID: string;
     }) => IDomElement;
     getNetworkConnection?: () => boolean;
+    stringToBase64?: (data: string) => string;
+    base64ToString?: (data: string) => string;
 }
 export interface IHistoryBasedShellConfiguration {
     isEditor: boolean;
