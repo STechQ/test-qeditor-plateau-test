@@ -849,6 +849,7 @@ export interface IGlobals_Quick {
             events?: any;
         } | undefined;
     }) => void;
+    closeAlert?: () => void;
     host: {
         trigger: (functionName: string, params: Record<string, any>) => Promise<IHostResponseData> | undefined;
     };

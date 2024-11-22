@@ -18,6 +18,7 @@ export declare class GlobalMethodsImpl implements IGlobalMethods {
     static renderer?: IRenderer;
     static onCloseIsActive: Boolean;
     static settingsWrapper: IWebSDKSettingsWrapper;
+    private childRenderer?;
     constructor({ contextName, parentInstance, config, errorContainerTarget, settingsWrapper, }: {
         contextName: string;
         parentInstance: any;
@@ -38,6 +39,7 @@ export declare class GlobalMethodsImpl implements IGlobalMethods {
         };
     }, parameters: IAlertParameters): void;
     private createAlert;
+    closeAlert(): void;
     private static createLabelComp;
     performance(): number;
     getDeepLinkParams(): Record<string, string | undefined>;

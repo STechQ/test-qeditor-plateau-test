@@ -25,6 +25,7 @@ export interface IRendererChild {
         noHistory?: boolean;
     }): Promise<void>;
     SetCallbackDisplay(callBackFunc: PartialDisplayHookCb): void;
+    Destroy(): void;
 }
 export interface IDoryRendererChild extends IRendererChild {
     readonly DoryJrInst: IDoryJr;
