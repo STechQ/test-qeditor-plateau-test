@@ -21,6 +21,7 @@ import { IHistoryBasedShellConfiguration, IShellConfiguration } from "../../../s
 import { IShellGlobalMethods } from "../../../shrimp/interfaces/quick/IShellGlobalMethods";
 import { IStore } from "../../../shrimp/interfaces/quick/IStore";
 import { IUrlOptions } from "../../../shrimp/interfaces/quick/IUrl";
+import { IRenderer } from "../../../shrimp/interfaces/RenderingInterfaces/IRenderer";
 export declare class ShellConfiguration implements IShellConfiguration {
     network: INetwork;
     lridHelper?: (label: string, dataSource?: object | null) => string;
@@ -119,6 +120,8 @@ export declare class ShellConfiguration implements IShellConfiguration {
     getNetworkConnection?: () => boolean;
     stringToBase64?: (data: string) => string;
     base64ToString?: (data: string) => string;
+    getLogBulkSize?: () => number | undefined;
+    renderer: IRenderer;
     constructor();
 }
 //# sourceMappingURL=ShellConfiguration.d.ts.map

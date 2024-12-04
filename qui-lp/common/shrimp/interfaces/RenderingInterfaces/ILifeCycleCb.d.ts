@@ -1,7 +1,6 @@
 export interface IPageCompletedCb {
     (options: {
         pageId: string;
-        additionals?: any;
     }): void;
 }
 export interface IPageJrCompletedCb {

@@ -4,14 +4,12 @@ import { IComponentCollection } from "../../../../../../common/shrimp/interfaces
 import { IVnode } from "../../../../../../common/shrimp/interfaces/ComponentInterfaces/IVnode";
 import { IWebSDKSettingsWrapper } from "../../../../../../common/shrimp/interfaces/quick/IWebSDK";
 import { IExtensionData } from "./IExtensionData";
-import { QShell } from "../../../../../../common/qshell";
 export declare class VTextFieldFormattingExtensionData implements IExtensionData {
     private settingsWrapper;
     private websdkContext;
-    private qShell;
     private datadata;
     private ibanStructures;
-    constructor(settingsWrapper: IWebSDKSettingsWrapper, websdkContext: ContextManager, qshell: QShell);
+    constructor(settingsWrapper: IWebSDKSettingsWrapper, websdkContext: ContextManager);
     create(compCollection: IComponentCollection, attrs: Record<string, any>): void;
     readonly extensionDictionary: Record<string, (componentCollection: IComponentCollection, attrs: Record<string, any>) => InputMask.Instance>;
     private static createNewInputMask;

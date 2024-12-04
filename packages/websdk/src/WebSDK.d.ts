@@ -10,7 +10,7 @@ import { IRendererConfig } from "../../../common/shrimp/interfaces/RenderingInte
 import { IContainerServices, IContainerServicesWrapper } from "../../../common/shrimp/interfaces/quick/IContainerServices";
 import { IRegionalDefinition } from "../../../common/shrimp/interfaces/quick/IFormattingDefinition";
 import { IPlateauIAM } from "../../../common/shrimp/interfaces/quick/IPlateauIAM";
-import { CompGroupType, IFontSettings, IWebSDK, IWebSDKSettings } from "../../../common/shrimp/interfaces/quick/IWebSDK";
+import { CompGroupType, ICreateRendererResponse, IWebSDK, IWebSDKSettings } from "../../../common/shrimp/interfaces/quick/IWebSDK";
 import { IWebSDKSetingsBus } from "../../../common/shrimp/interfaces/quick/IWebSDKSettingsBus";
 import QJsonRetrieverImpl from './implementation/QJsonRetrieverImpl';
 import { StoreManagerHookCb } from "./implementation/StoreManager";
@@ -35,6 +35,7 @@ export declare class WebSDK implements IWebSDK {
     private languageExtensions;
     private websdkContext;
     private moduleManager;
+    private cssTagManager;
     constructor(settings: IWebSDKSettings, services?: IContainerServices, environmentInfo?: IDictionary<string>);
     UpdateSettings(allSettings: IWebSDKSetingsBus): void;
     static getPlateauIAM(): IPlateauIAM;
@@ -53,11 +54,12 @@ export declare class WebSDK implements IWebSDK {
     CreateRenderer({ mountPoint, config }: {
         mountPoint: IDomElement;
         config?: IRendererConfig;
-    }): IRenderer;
-    GetParentInst(renderer: IRenderer): Vue;
+    }): ICreateRendererResponse;
     GetDomContainer(renderer: IRenderer): IDomElement;
     GetParentInstance(renderer: IRenderer): Vue;
-    Clear(renderer: IRenderer): void;
+    destroyRenderer(renderer: IRenderer): void;
+    destroy(): void;
+    resetQJsonPool(): void;
     setComponentOverrider(cb: (compName: string) => IComponent | null): void;
     GetComponentList(compGroupNameArray: Array<CompGroupType>): Record<CompGroupType, any>;
     /**
@@ -69,7 +71,7 @@ export declare class WebSDK implements IWebSDK {
     setServiceDefaultHeader(header?: string): void;
     setSelectedServiceUrl(url?: string): void;
     setProxySettingsYamlContent(content?: object): void;
-    setSettingFonts(content?: Array<IFontSettings>, isSourceFromPath?: boolean): void;
+    private setSettingFonts;
     setLocalProxyOnClient(content: boolean): void;
     setBackEndInfHeaders(backendInf: any): void;
     setRegionalDefinition(regionalSettings: Array<IRegionalDefinition> | undefined): void;
@@ -80,5 +82,6 @@ export declare class WebSDK implements IWebSDK {
     setFavicon(favicon: string): void;
     getUXManager(): UXManagerImpl;
     migrateLegacySettings(settings: any): IWebSDKSettings;
+    showCssTags(show: boolean): void;
 }
 //# sourceMappingURL=WebSDK.d.ts.map

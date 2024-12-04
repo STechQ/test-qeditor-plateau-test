@@ -1,4 +1,4 @@
-import { ContextManager, IContextItem } from "../../../../shrimp/context";
+import { IContextItem } from "../../../../shrimp/context";
 import { IQJSon } from "../../../../shrimp/interfaces/ComponentInterfaces/IQJson";
 import { MobileAnimation } from "../../../../shrimp/interfaces/quick/INavigationManager";
 import { IDory } from "../../../../shrimp/interfaces/RenderingInterfaces/IDory";
@@ -12,14 +12,9 @@ export declare class QJsonPool implements IContextItem {
     private qjsonRetriever;
     private qjsonCollector;
     private moduleManager;
-    private context;
-    private _Dory;
-    get Dory(): IDory;
-    set Dory(v: IDory);
-    constructor({ qjsonRetriever, moduleManager, context }: {
+    constructor({ qjsonRetriever, moduleManager }: {
         qjsonRetriever: IQJsonRetriever;
         moduleManager: IModuleManager;
-        context: ContextManager;
     });
     ResetPool(): void;
     get ModuleManager(): IModuleManager;

@@ -5,7 +5,7 @@ import { IQJSon } from "../../../../shrimp/interfaces/ComponentInterfaces/IQJson
 import { IDictionary } from "../../../../shrimp/interfaces/IDictionary";
 import { IDomElement } from "../../../../shrimp/interfaces/RenderingInterfaces/IDomElement";
 import { IDoryJr } from "../../../../shrimp/interfaces/RenderingInterfaces/IDoryJr";
-import { IHistoryItem } from "../../../../shrimp/interfaces/RenderingInterfaces/IHistoryItem";
+import { IHistoryAdditionalItem, IHistoryItem, IForeachHistoryItemCbParams } from "../../../../shrimp/interfaces/RenderingInterfaces/IHistoryItem";
 import { ScriptLang } from "../../../../shrimp/interfaces/Scripting/scriptLang";
 import { RenderingContext } from "../../Context/RenderingContext";
 import { DoryJr } from "../../DoryJr";
@@ -20,7 +20,7 @@ export declare class HistoryItem implements IHistoryItem {
     private compIndexedCollection?;
     pageId: string;
     pageName?: string;
-    additionals?: any;
+    private readonly _additionals;
     private indexManager?;
     private pageScripting?;
     private renderingContext?;
@@ -30,14 +30,15 @@ export declare class HistoryItem implements IHistoryItem {
     get masterData(): {
         path: string;
     } | undefined;
-    constructor({ qjson, context, storeItems, pageId, pageName, additionals }: {
+    constructor({ qjson, context, storeItems, pageId, pageName }: {
         qjson: IQJSon;
         context: ContextManager;
         storeItems?: IDictionary<any>;
         pageId: string;
         pageName?: string;
-        additionals?: any;
     });
+    getAdditional<T extends IHistoryAdditionalItem>(key: string): T | undefined;
+    getOrCreateAdditional<T extends IHistoryAdditionalItem>(key: string, creatorCb: () => T): T;
     Render({ compParentInst, noHistory }: {
         compParentInst?: any;
         noHistory?: boolean;
@@ -51,6 +52,8 @@ export declare class HistoryItem implements IHistoryItem {
      */
     GetControlWithTypeName(typeName: string): IComponentCollection | null;
     GetCompCollectionByCompInst(component: IComponent): IComponentCollection | null;
+    foreachHistoryItem(cb: (cbParam: IForeachHistoryItemCbParams) => void): void;
+    findHistoryItem(cb: (cbParam: IForeachHistoryItemCbParams) => boolean, nestLevel?: number): IHistoryItem | undefined;
     getComponentCollectionByIdProperty({ id, deep }: {
         id: string;
         deep: boolean;
@@ -58,9 +61,6 @@ export declare class HistoryItem implements IHistoryItem {
     getComponentCollectionByDom({ element, deep }: {
         element: IDomElement;
         deep: boolean;
-    }): IComponentCollection | undefined;
-    getComponentSubCollectionByID({ id }: {
-        id: string;
     }): IComponentCollection | undefined;
     private iterateSubHistoryItems;
     GetComponentCollectionByUID(compUID: string): IComponentCollection | undefined;
