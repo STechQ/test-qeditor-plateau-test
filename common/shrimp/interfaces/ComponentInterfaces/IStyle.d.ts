@@ -42,6 +42,7 @@ export declare const COMPONENT_STYLE_TYPE: {
     "break-point-picker": string;
     "layout-input": string;
     display: string;
+    "content-direction": string;
     "display-text": string;
 };
 export interface IComponentDefinition {
