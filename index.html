@@ -7,6 +7,18 @@
     <body>
         <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
-        <script src="./standAlone.js"></script>
+        <script>
+            try {
+                debugger;
+                parent.document // can access CORS (prod | new local)
+                if (parent.location.host.indexOf(":") == -1) { throw 0; } // no port (prod)
+                if (parent.location.href.indexOf("/standalone") > -1) { throw 0; } // (standalone)
+                const base = document.createElement("base"); base.href = "/quick/";
+                document.head.appendChild(base);
+            } catch(err){ }
+            const scr = document.createElement("script");
+            scr.src = "./standAlone.js";
+            document.body.appendChild(scr);
+        </script>
     </body>
 </html>
