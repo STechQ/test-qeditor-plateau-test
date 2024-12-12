@@ -15,18 +15,14 @@ export declare class DynamicCompManager {
      * @param historyItem Current history item of the rendering
      * @returns Created component collection
      */
-    static createDynamicComp({ templateCompQID, newCompQID, dataSource, context, historyItem, placeQID, reverseLook }: {
+    static createDynamicComp({ templateCompQID, newCompQID, dataSource, context, historyItem, placeQID }: {
         templateCompQID: string;
         newCompQID?: string;
         dataSource?: any;
         context: ContextManager;
         historyItem: HistoryItem;
         placeQID?: string;
-        reverseLook?: boolean;
-    }): {
-        newComponent: IComponentCollection;
-        parentComp: IComponentCollection | undefined;
-    } | undefined;
+    }): ICreatedDynamicComp | undefined;
     static createDynamicChildren({ parentCompId, templateChildName, newChildName, historyItem, context }: {
         parentCompId: string;
         templateChildName: string;

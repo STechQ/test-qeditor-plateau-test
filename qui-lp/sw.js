@@ -2211,25 +2211,24 @@ function checkBinaryFile(extensionOfFile) {
     return binaryFileTypes.includes(extensionOfFile);
 }
 var run = function (event) { return __awaiter(void 0, void 0, void 0, function () {
-    var url, decodedPath, requestedInfo, _a, imgPromData, imgResp, imgContentType, lottieData, lottieResp, lottieContentType, woffPromData, woffResp, fontContentType, qjsonPromData, qjsonResp, resp, error_1;
+    var url, decodedPath, requestedInfo, _a, imgPromData, imgResp, imgContentType, woffPromData, woffResp, fontContentType, qjsonPromData, qjsonResp, resp, error_1;
     return __generator(this, function (_b) {
         switch (_b.label) {
             case 0:
                 url = new URL(event.request.url);
                 decodedPath = decodeURI(url.pathname);
-                if (!isStartWithLessSign(decodedPath)) return [3 /*break*/, 10];
+                if (!isStartWithLessSign(decodedPath)) return [3 /*break*/, 8];
                 requestedInfo = parseURI(decodedPath);
                 _a = requestedInfo.type;
                 switch (_a) {
                     case "img": return [3 /*break*/, 1];
-                    case "lottie": return [3 /*break*/, 3];
-                    case "woff2": return [3 /*break*/, 5];
-                    case "woff": return [3 /*break*/, 5];
-                    case "ttf": return [3 /*break*/, 5];
-                    case "otf": return [3 /*break*/, 5];
-                    case "qjson": return [3 /*break*/, 7];
+                    case "woff2": return [3 /*break*/, 3];
+                    case "woff": return [3 /*break*/, 3];
+                    case "ttf": return [3 /*break*/, 3];
+                    case "otf": return [3 /*break*/, 3];
+                    case "qjson": return [3 /*break*/, 5];
                 }
-                return [3 /*break*/, 9];
+                return [3 /*break*/, 7];
             case 1:
                 imgPromData = CreatePromiseData(swTimeout);
                 waiters.set(requestedInfo.guid, imgPromData);
@@ -2241,46 +2240,36 @@ var run = function (event) { return __awaiter(void 0, void 0, void 0, function (
                 imgContentType = "image/" + imgResp.resourceType;
                 return [2 /*return*/, new Response(imgResp.resource, { status: 200, headers: { "Content-Type": imgContentType } })];
             case 3:
-                lottieData = CreatePromiseData(swTimeout);
-                waiters.set(requestedInfo.guid, lottieData);
-                sendMessage(event.clientId, requestedInfo.guid);
-                return [4 /*yield*/, lottieData.promise];
-            case 4:
-                lottieResp = _b.sent();
-                waiters.delete(requestedInfo.guid);
-                lottieContentType = "application/json";
-                return [2 /*return*/, new Response(lottieResp.resource, { status: 200, headers: { "Content-Type": lottieContentType } })];
-            case 5:
                 woffPromData = CreatePromiseData(swTimeout);
                 waiters.set(requestedInfo.guid, woffPromData);
                 sendMessage(event.clientId, requestedInfo.guid);
                 return [4 /*yield*/, woffPromData.promise];
-            case 6:
+            case 4:
                 woffResp = _b.sent();
                 waiters.delete(requestedInfo.guid);
                 fontContentType = "application/font-" + woffResp.resourceType;
                 return [2 /*return*/, new Response(woffResp.resource, { status: 200, headers: { "Content-Type": fontContentType } })];
-            case 7:
+            case 5:
                 qjsonPromData = CreatePromiseData(swTimeout);
                 waiters.set(requestedInfo.guid, qjsonPromData);
                 sendMessage(event.clientId, requestedInfo.guid);
                 return [4 /*yield*/, qjsonPromData.promise];
-            case 8:
+            case 6:
                 qjsonResp = _b.sent();
                 waiters.delete(requestedInfo.guid);
                 return [2 /*return*/, new Response(qjsonResp.resource, { status: 200, headers: { "Content-Type": "application/json" } })];
-            case 9: return [3 /*break*/, 10];
-            case 10:
-                _b.trys.push([10, 12, , 13]);
+            case 7: return [3 /*break*/, 8];
+            case 8:
+                _b.trys.push([8, 10, , 11]);
                 return [4 /*yield*/, fetch(event.request)];
-            case 11:
+            case 9:
                 resp = _b.sent();
                 return [2 /*return*/, resp];
-            case 12:
+            case 10:
                 error_1 = _b.sent();
                 console.log(error_1);
                 throw error_1;
-            case 13: return [2 /*return*/];
+            case 11: return [2 /*return*/];
         }
     });
 }); };

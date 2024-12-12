@@ -1864,10 +1864,6 @@
   background-color: #F5F5F5;
 }
 
-.autoTest_sourceCodeMonacoShell {
-  position: absolute;
-}
-
 .monaco-editor-background {
   background-color: #F5F5F5 !important;
 }
@@ -2184,6 +2180,10 @@ input[type="checkbox"] {
 
 .quickEditor.readOnly .autoTest_sourceCodeMonacoShell {
   pointer-events: auto;
+}
+
+.autoTest_sourceCodeMonacoShell {
+  position: absolute;
 }
 
 .quickEditor.readOnly .render-page.autoTest_dropArea div[draggable=true],
@@ -2607,6 +2607,7 @@ input[type="checkbox"] {
 .codeAssistant-error-container .explain-header-text {
   color: #FFFFFF;
 }
+
 .monaco-diff-editor .synthetic-focus,
 .monaco-diff-editor [tabindex="-1"]:focus,
 .monaco-diff-editor [tabindex="0"]:focus,
@@ -2620,6 +2621,4 @@ input[type="checkbox"] {
 .monaco-editor {
   outline-color: transparent !important; 
 }
-
-
 /*  */
