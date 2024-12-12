@@ -5,7 +5,6 @@ import { BooleanType, DateTimeType, EnumType, NumberType, ObjectID, DataType, St
 export type IVariable = IVariableBoolean | IVariableDateTime | IVariableEnum | IVariableNumber | IVariableData | IVariableConstant | IVariableString | IVariableAny;
 export type IVariableBase = {
     name: string;
-    _name: string;
     desc: string;
     type: VariableTypes;
     list?: boolean;
