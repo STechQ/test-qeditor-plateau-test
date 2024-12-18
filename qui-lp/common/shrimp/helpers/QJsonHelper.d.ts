@@ -26,7 +26,7 @@ export declare class QJsonHelper {
         eID: string;
         parentCompJson?: ICompJson;
         compiledJson?: ICompJson;
-    }) => boolean, compiledJson?: Array<ICompJson>): void;
+    }) => boolean, compiledJson?: Array<ICompJson>, reverseLook?: boolean): void;
     static findComponentByType(curJson: Array<ICompJson>, type: "RenderingComponent"): ICompJson | undefined;
     /**
      * @deprecated Please use QJsonHelper.FindParentArrayPath
@@ -50,7 +50,7 @@ export declare class QJsonHelper {
      * @param componentPropertySearchKey Search key
      * @returns ICompLocation or null
      */
-    static FindCompBySearchField(pageJson: Array<ICompJson>, value: string, componentPropertySearchKey?: CompSearchKey): ICompLocation | null;
+    static FindCompBySearchField(pageJson: Array<ICompJson>, value: string, componentPropertySearchKey?: CompSearchKey, reverseLook?: boolean): ICompLocation | null;
     /**
      * Parse event parameters
      * @param eventParameters event parameters QS: x, y, z | TS: x: string, y: {a:number}, z: number
