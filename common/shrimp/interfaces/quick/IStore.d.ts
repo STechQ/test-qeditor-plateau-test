@@ -1,5 +1,6 @@
 import { IContextItem } from "../../src/context/IContextItem";
 import { IComponentCollection } from "../ComponentInterfaces/IComponentCollection";
+import { IDictionary } from "../IDictionary";
 export interface IStore extends IStorageAccess {
     set(name: string, value: any | undefined): void;
     get(name: string): any | undefined;
@@ -56,5 +57,17 @@ export interface IContextDepTarget {
 }
 export interface ICompDepTarget {
     ref: IComponentCollection;
+}
+export interface BaseStoreContext extends IContextItem {
+    contextItems: IDictionary<any>;
+    dependants: Record<string, Record<string, Record<string, IContextDepTarget>>>;
+    addDependant(field: string | number | symbol, pageId: string, propCalcContext: IContextItem): void;
+    getDependants(field: string | number | symbol, pageId: string): Record<string, IContextDepTarget>;
+    set(name: string, value: any | undefined): void;
+    get(name: string): any | undefined;
+    getAll(): any | undefined;
+    delete(name: string): void;
+    deleteAll(): void;
+    clear(): void;
 }
 //# sourceMappingURL=IStore.d.ts.map

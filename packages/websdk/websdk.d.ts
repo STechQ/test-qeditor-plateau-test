@@ -19,6 +19,10 @@ declare class PlateauUI {
         eventName: string;
         parameters: Record<string, any>;
     }): any;
+    getGlobalStore(storeFieldName: string): any;
+}
+export interface IContainerServiceParams {
+    plateauUIRenderer?: PlateauUI;
 }
 declare class WebsdkContainer {
     private enviromentInfo;
@@ -32,6 +36,7 @@ declare class WebsdkContainer {
     private PlateauUIOptions;
     lpManager?: LivePreviewManager;
     private initCompleted;
+    private containerServicesParameter;
     constructor();
     init({ PlateauUIOptions, environmentInfo }: {
         PlateauUIOptions?: IPlateauUIOptions;

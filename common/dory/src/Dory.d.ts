@@ -63,6 +63,7 @@ export declare class Dory implements IDory {
     private renderTotalCb?;
     private logParams?;
     constructor(interDoryContext: ContextManager);
+    GetContext(): ContextManager;
     GetLRType(): string;
     SetLRType(LRType?: string, LRTypeRTL?: boolean): Promise<void>;
     SetConfigValues(configValues?: IConfig[]): void;

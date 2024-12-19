@@ -1389,8 +1389,13 @@ export interface IGlobals_currentPage {
    */
     isRenderCompleted: () => boolean;
 }
+/** To replace extensions interface */
+export interface IGlobals_ContainerServicesExtensions {
+    [key: string]: any;
+}
+/** To replace extensions interface */
 export interface IGlobals_ContainerServices extends IShell {
-    extensions?: Record<string, any>;
+    extensions?: Record<string, any>; /** To replace extensions interface */
 }
 export interface IGlobals_devex {
     /**

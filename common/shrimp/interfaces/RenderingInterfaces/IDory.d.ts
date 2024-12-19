@@ -151,6 +151,7 @@ export interface IDory extends IContextItem {
     GetThemes(): Array<ITheme> | undefined;
     SetThemeMode(isLight: boolean): void;
     getRenderer(): IRenderer;
+    GetContext(): ContextManager;
 }
 export declare const DoryContextName = "Dory";
 //# sourceMappingURL=IDory.d.ts.map
