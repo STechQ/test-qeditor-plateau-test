@@ -530,7 +530,6 @@ export interface IGlobals_Quick {
         place?: ElementLocation;
         placeQID?: string;
         childName?: string;
-        reverseLook?: boolean;
     }) => IComponent | undefined | null;
     /**
      * Finds the desired dynamic component created with a template by giving a child component inside that dynamically created component.
