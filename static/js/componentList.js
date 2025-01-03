@@ -5398,26 +5398,6 @@ nextIcon = 'mdi-plus'}`
             options: ["'left'", "'right'"],
             editorDefaultValue: "'right'"
         },
-        position:{
-            type: String,
-            options: ["'relative'", "'static'", "'absolute'", "'fixed'"],
-            editorDefaultValue: "'relative'"
-        },
-        top:{
-          type: String
-        },
-        bottom:{
-          type: String
-        },
-        left:{
-          type: String
-        },
-        right:{
-          type: String
-        },
-        zIndex:{
-          type: String
-        }
     }
 };
 
