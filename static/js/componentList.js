@@ -3690,6 +3690,9 @@ nextIcon = 'mdi-plus'}`
         qValue: {
             type: Number
         },
+        backgroundColor: {
+            type: String
+        },
         class: {
             type: String
         },
@@ -3698,6 +3701,9 @@ nextIcon = 'mdi-plus'}`
         },
         closeDelay: {
             type: "number | string"
+        },
+        color: {
+            type: String
         },
         dark: {
             type: Boolean
