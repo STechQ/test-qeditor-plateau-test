@@ -1864,10 +1864,6 @@
   background-color: #F5F5F5;
 }
 
-.autoTest_sourceCodeMonacoShell {
-  position: absolute;
-}
-
 .monaco-editor-background {
   background-color: #F5F5F5 !important;
 }
@@ -2212,7 +2208,8 @@ input[type="checkbox"] {
 .quickEditor.readOnly .quickEditor-container td .quickEditor-btn.quickEditor-black,
 .quickEditor.readOnly .quickEditor-container .paleGrayRows i,
 .quickEditor.readOnly .mega_drop_menu .menu_left:nth-of-type(1) .greybox li,
-.quickEditor.readOnly .quickEditor-container div:has(.autoTest_newLRID)>button {
+.quickEditor.readOnly .quickEditor-container div:has(.autoTest_newLRID)>button,
+.quickEditor.readOnly .rightBlock .store-icon-div i {
   pointer-events: none;
   background-color: rgba(230, 230, 230, 0.12) !important;
   color: rgba(0, 0, 0, .26) !important;
@@ -2611,20 +2608,6 @@ input[type="checkbox"] {
 .codeAssistant-error-container .explain-header-text {
   color: #FFFFFF;
 }
-.monaco-diff-editor .synthetic-focus,
-.monaco-diff-editor [tabindex="-1"]:focus,
-.monaco-diff-editor [tabindex="0"]:focus,
-.monaco-diff-editor button:focus,
-.monaco-diff-editor input[type=button]:focus,
-.monaco-diff-editor input[type=checkbox]:focus,
-.monaco-diff-editor input[type=search]:focus,
-.monaco-diff-editor input[type=text]:focus,
-.monaco-diff-editor select:focus,
-.monaco-diff-editor textarea:focus,
-.monaco-editor {
-  outline-color: transparent !important; 
-}
-
 
 .monaco-diff-editor .synthetic-focus,
 .monaco-diff-editor [tabindex="-1"]:focus,
