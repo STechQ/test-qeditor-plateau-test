@@ -1,0 +1,425 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_8w",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"EndRender": {
+					"H": "let store=[{ 'ID': 1, 'Subject': 'Prepare 2013 Financial', 'Status': 5, 'Owner': 1, 'AssignedEmployee': 7, 'OrderIndex': 0, 'Priority': 3 }, { 'ID': 2, 'Subject': 'Prepare 2013 Marketing Plan', 'Status': 5, 'Owner': 1, 'AssignedEmployee': 4, 'OrderIndex': 1, 'Priority': 4 }, { 'ID': 3, 'Subject': 'Update Personnel Files', 'Status': 5, 'Owner': 1, 'AssignedEmployee': 2, 'OrderIndex': 2, 'Priority': 1 }]\r\nlet b=quick.devex.createArrayStore({key:'ID', data:store})\r\nquick.store.set('test', b)\r\ncomponents.EdtrComp_23.dataSource={store:b, reshapeOnPush:true}\r\nquick.Quick.updateComponent(components.EdtrComp_23)",
+					"HL": "TS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_8"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": ""
+			}
+		},
+		{
+			"T": "DxDataGrid",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_23",
+					"T": "prop"
+				},
+				"showBorders": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"Col1": {
+					"c": [],
+					"cType": "scopedSlot"
+				},
+				"Col2": {
+					"c": [],
+					"cType": "scopedSlot"
+				},
+				"default": {
+					"c": [
+						{
+							"T": "DxRowDragging",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_4",
+									"T": "prop"
+								},
+								"allowReordering": {
+									"H": "true",
+									"T": "prop"
+								}
+							},
+							"E": {
+								"onReorder": {
+									"H": "visibleRows = e.component.getVisibleRows()\r\n\r\ntoIndex = EdtrComp_23.dataSource.indexOf(visibleRows[e.toIndex].data)\r\nfromIndex = EdtrComp_23.dataSource.indexOf(e.itemData)\r\n\r\nEdtrComp_23.dataSource.splice(fromIndex, 1)\r\nEdtrComp_23.dataSource.splice(toIndex, 0, e.itemData)\r\n\r\nQuick.updateComponent(EdtrComp_23)",
+									"P": "e",
+									"PE": "true"
+								}
+							},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": ""
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_23"
+			},
+			"O": {
+				"cType": "scopedSlot",
+				"compDomClasses": "dx-widget dx-visibility-change-handler"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_6",
+					"T": "prop"
+				},
+				"color": {
+					"H": "'primary'",
+					"T": "prop"
+				},
+				"regular": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "let store=quick.store.get('test')\r\nlet newData ={ 'ID': 4, 'Subject': 'Review Health Insurance Options Under the Affordable Care Act', 'Status': 1, 'Owner': 1, 'AssignedEmployee': 2, 'OrderIndex': 3, 'Priority': 4 }\r\nstore.push([{type:'insert', data:newData}])\r\n",
+					"P": "mouseEvent:unknown | undefined",
+					"HL": "TS"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_7",
+									"T": "prop"
+								},
+								"text": {
+									"H": "'Add Data'",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_7"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "q-label "
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_6"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				},
+				"color": {
+					"H": "'primary'",
+					"T": "prop"
+				},
+				"regular": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "quick.EM.trace(components.EdtrComp_23.dataSource)",
+					"P": "mouseEvent:unknown | undefined",
+					"HL": "TS"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_2",
+									"T": "prop"
+								},
+								"text": {
+									"H": "'View on Console'",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_2"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "q-label "
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_8w",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"EndRender": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nvar store = [{ 'ID': 1, 'Subject': 'Prepare 2013 Financial', 'Status': 5, 'Owner': 1, 'AssignedEmployee': 7, 'OrderIndex': 0, 'Priority': 3 }, { 'ID': 2, 'Subject': 'Prepare 2013 Marketing Plan', 'Status': 5, 'Owner': 1, 'AssignedEmployee': 4, 'OrderIndex': 1, 'Priority': 4 }, { 'ID': 3, 'Subject': 'Update Personnel Files', 'Status': 5, 'Owner': 1, 'AssignedEmployee': 2, 'OrderIndex': 2, 'Priority': 1 }];\r\nvar b = quick.devex.createArrayStore({ key: 'ID', data: store });\r\nquick.store.set('test', b);\r\ncomponents.EdtrComp_23.dataSource = { store: b, reshapeOnPush: true };\r\nquick.Quick.updateComponent(components.EdtrComp_23);\r\n",
+					"HL": "JS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_8"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			}
+		},
+		{
+			"T": "DxDataGrid",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_23",
+					"T": "prop"
+				},
+				"showBorders": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"Col1": {
+					"c": [],
+					"cType": "scopedSlot"
+				},
+				"Col2": {
+					"c": [],
+					"cType": "scopedSlot"
+				},
+				"default": {
+					"c": [
+						{
+							"T": "DxRowDragging",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_4",
+									"T": "prop"
+								},
+								"allowReordering": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {
+								"onReorder": {
+									"H": "╬=╣visibleRows╩╠()╣.╣.╣e╩╠component╩╩╠getVisibleRows╩╩╩╩╬=╣toIndex╩╠()╣.╣.╣EdtrComp_23╩╠dataSource╩╩╠indexOf╩╩╠.╣[]╣visibleRows╩╠.╣e╩╠toIndex╩╩╩╠data╩╩╩╩╬=╣fromIndex╩╠()╣.╣.╣EdtrComp_23╩╠dataSource╩╩╠indexOf╩╩╠.╣e╩╠itemData╩╩╩╩╬()╣.╣.╣EdtrComp_23╩╠dataSource╩╩╠splice╩╩╠fromIndex╩╠1╩╩╬()╣.╣.╣EdtrComp_23╩╠dataSource╩╩╠splice╩╩╠toIndex╩╠0╩╠.╣e╩╠itemData╩╩╩╬()╣.╣Quick╩╠updateComponent╩╩╠EdtrComp_23╩╩╩",
+									"P": "e",
+									"PE": "true"
+								}
+							},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": ""
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_23"
+			},
+			"O": {
+				"cType": "scopedSlot",
+				"compDomClasses": "dx-widget dx-visibility-change-handler newDropBorder"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_6",
+					"T": "prop"
+				},
+				"color": {
+					"H": "╬'primary'╩╩",
+					"T": "prop"
+				},
+				"regular": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nvar store = quick.store.get('test');\r\nvar newData = { 'ID': 4, 'Subject': 'Review Health Insurance Options Under the Affordable Care Act', 'Status': 1, 'Owner': 1, 'AssignedEmployee': 2, 'OrderIndex': 3, 'Priority': 4 };\r\nstore.push([{ type: 'insert', data: newData }]);\r\n",
+					"P": "mouseEvent:unknown | undefined",
+					"HL": "JS"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_7",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬'Add Data'╩╩",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_7"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "q-label newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_6"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary newDropBorder"
+			}
+		},
+		{
+			"T": "VBtn",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				},
+				"color": {
+					"H": "╬'primary'╩╩",
+					"T": "prop"
+				},
+				"regular": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"click": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.EM.trace(components.EdtrComp_23.dataSource);\r\n",
+					"P": "mouseEvent:unknown | undefined",
+					"HL": "JS"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"C": {},
+							"E": {},
+							"P": {
+								"ID": {
+									"H": "EdtrComp_2",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬'View on Console'╩╩",
+									"T": "prop"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_2"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "q-label newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"description": {},
+	"opt": {}
+};
+export default pjson

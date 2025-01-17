@@ -12,6 +12,7 @@ import { DoryJr } from "../../DoryJr";
 import { HistoryManager } from "../../Managers/HistoryManager";
 import { IRenderingManager } from "../../../../shrimp/interfaces/RenderingInterfaces/IRenderingManager";
 export declare class HistoryItem implements IHistoryItem {
+    private compSearchCache;
     private qjson;
     context: ContextManager;
     controlDict: IDictionary<IComponentCollection>;
@@ -92,10 +93,10 @@ export declare class HistoryItem implements IHistoryItem {
     GetCompInstDict(): Record<string, IComponent>;
     ReCalculateCompInstDict(): void;
     private extractCompInstDictFrom;
-    getComponentJsonByCompId(compId: string): {
-        compLoc: import("../../../../shrimp/helpers/QJsonHelper").ICompLocation;
-        path: import("../../../../shrimp/helpers/QJsonHelper").ICompParentLocation;
-    } | null;
+    getComponentJsonByCompId(compId: string, reverseLook?: boolean): {
+        compLoc: any;
+        path: any;
+    } | null | undefined;
     getComponentSubCollections(iterateSubHI?: boolean): Array<IComponentCollection>;
     /**
      * Find comparison component at the current pjson

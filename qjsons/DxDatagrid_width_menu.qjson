@@ -1,0 +1,1145 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_8w",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"EndRender": {
+					"H": "EdtrComp_23.dataSource=[{ 'ID'= 1, 'Subject'= 'Prepare 2013 Financial', 'Status'= 5, 'Owner'= 1, 'AssignedEmployee'= 7, 'OrderIndex'= 0, 'Priority'= 3 }, { 'ID'= 2, 'Subject'= 'Prepare 2013 Marketing Plan', 'Status'= 5, 'Owner'= 1, 'AssignedEmployee'= 4, 'OrderIndex'= 1, 'Priority'= 4 }, { 'ID'= 3, 'Subject'= 'Update Personnel Files', 'Status'= 5, 'Owner'= 1, 'AssignedEmployee'= 2, 'OrderIndex'= 2, 'Priority'= 1 }]\r\nQuick.updateComponent(EdtrComp_23)"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_8"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": ""
+			}
+		},
+		{
+			"T": "DxDataGrid",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_23",
+					"T": "prop"
+				},
+				"showBorders": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"Col1": {
+					"c": [
+						{
+							"T": "VTextField",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_33",
+									"T": "prop"
+								},
+								"label": {
+									"H": "data.data.ID",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_33"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted"
+							}
+						}
+					],
+					"cType": "scopedSlot"
+				},
+				"Col2": {
+					"c": [
+						{
+							"T": "VTextField",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_3233",
+									"T": "prop"
+								},
+								"label": {
+									"H": "data.data.Subject",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_3233"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted"
+							}
+						}
+					],
+					"cType": "scopedSlot"
+				},
+				"default": {
+					"c": [
+						{
+							"T": "DxColumn",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_24",
+									"T": "prop"
+								},
+								"cellTemplate": {
+									"H": "'Col1'",
+									"T": "prop"
+								},
+								"dataField": {
+									"H": "'Col1'",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_24"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "DxColumn",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_123",
+									"T": "prop"
+								},
+								"cellTemplate": {
+									"H": "'Col2'",
+									"T": "prop"
+								},
+								"dataField": {
+									"H": "'Col2'",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_123"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "DxRowDragging",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_4",
+									"T": "prop"
+								},
+								"allowReordering": {
+									"H": "true",
+									"T": "prop"
+								}
+							},
+							"E": {
+								"onReorder": {
+									"H": "visibleRows = e.component.getVisibleRows()\r\ntoIndex = EdtrComp_23.dataSource.indexOf(visibleRows[e.toIndex].data)\r\nfromIndex = EdtrComp_23.dataSource.indexOf(e.itemData)\r\n\r\nEdtrComp_23.dataSource.splice(fromIndex, 1)\r\nEdtrComp_23.dataSource.splice(toIndex, 0, e.itemData)\r\n\r\nQuick.updateComponent(EdtrComp_23)",
+									"P": "e",
+									"PE": "true"
+								}
+							},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "DxColumn",
+							"P": {
+								"cellTemplate": {
+									"H": "'Edit'",
+									"T": "prop"
+								},
+								"dataField": {
+									"H": "'Edit'",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_28",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_28"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": ""
+							}
+						}
+					],
+					"cType": "slot"
+				},
+				"Edit": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_46",
+									"T": "prop"
+								},
+								"class": {
+									"H": "'d-flex flex-row'",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VMenu",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_31",
+																	"T": "prop"
+																},
+																"eager": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"offsetY": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"closeOnContentClick": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"activator": {
+																	"c": [
+																		{
+																			"T": "VBtn",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_6",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "'primary'",
+																					"T": "prop"
+																				},
+																				"regular": {
+																					"H": "false",
+																					"T": "prop"
+																				},
+																				"outlined": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"icon": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"click": {
+																					"H": "on.click(e)\r\nEdtrComp_31.value=true",
+																					"P": "e"
+																				}
+																			},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VIcon",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_30",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "'mdi-dots-vertical'",
+																									"T": "text"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_30"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"compDomClasses": "v-icon notranslate mdi mdi-dots-vertical theme--light"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_6"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-btn v-btn--depressed v-btn--flat v-btn--icon v-btn--outlined v-btn--round theme--light v-size--default 'secondary'--text"
+																			}
+																		}
+																	],
+																	"cType": "scopedSlot"
+																},
+																"default": {
+																	"c": [
+																		{
+																			"T": "VList",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_32",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VListItemGroup",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_42",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "VListItem",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_35",
+																													"T": "prop"
+																												}
+																											},
+																											"E": {},
+																											"C": {
+																												"default": {
+																													"c": [
+																														{
+																															"T": "VIcon",
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_40",
+																																	"T": "prop"
+																																},
+																																"text": {
+																																	"H": "'mdi-home'",
+																																	"T": "text"
+																																}
+																															},
+																															"E": {},
+																															"C": {},
+																															"_Editor": {
+																																"eID": "EdtrComp_40"
+																															},
+																															"O": {
+																																"cType": "child",
+																																"compDomClasses": "v-icon notranslate mdi mdi-home theme--light"
+																															}
+																														},
+																														{
+																															"T": "QLabel",
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_37",
+																																	"T": "prop"
+																																},
+																																"text": {
+																																	"H": "'home'",
+																																	"T": "prop"
+																																}
+																															},
+																															"E": {},
+																															"C": {},
+																															"_Editor": {
+																																"eID": "EdtrComp_37"
+																															},
+																															"O": {
+																																"cType": "child",
+																																"compDomClasses": "q-label "
+																															}
+																														}
+																													],
+																													"cType": "slot"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_35"
+																											},
+																											"O": {
+																												"cType": "slot",
+																												"compDomClasses": "v-list-item v-list-item--link theme--light"
+																											}
+																										},
+																										{
+																											"T": "VListItem",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_38",
+																													"T": "prop"
+																												}
+																											},
+																											"E": {},
+																											"C": {
+																												"default": {
+																													"c": [
+																														{
+																															"T": "VIcon",
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_41",
+																																	"T": "prop"
+																																},
+																																"text": {
+																																	"H": "'mdi-home'",
+																																	"T": "text"
+																																}
+																															},
+																															"E": {},
+																															"C": {},
+																															"_Editor": {
+																																"eID": "EdtrComp_41"
+																															},
+																															"O": {
+																																"cType": "child",
+																																"compDomClasses": "v-icon notranslate mdi mdi-home theme--light"
+																															}
+																														},
+																														{
+																															"T": "QLabel",
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_39",
+																																	"T": "prop"
+																																},
+																																"text": {
+																																	"H": "'home'",
+																																	"T": "prop"
+																																}
+																															},
+																															"E": {},
+																															"C": {},
+																															"_Editor": {
+																																"eID": "EdtrComp_39"
+																															},
+																															"O": {
+																																"cType": "child",
+																																"compDomClasses": "q-label "
+																															}
+																														}
+																													],
+																													"cType": "slot"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_38"
+																											},
+																											"O": {
+																												"cType": "slot",
+																												"compDomClasses": "v-list-item v-item--active v-list-item--active v-list-item--link theme--light"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_42"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "v-item-group theme--light v-list-item-group"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_32"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-list v-sheet v-sheet--tile theme--light"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_31"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "v-menu"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_88",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_88"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_46"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row d-flex flex-row dx-template-wrapper"
+							}
+						}
+					],
+					"cType": "scopedSlot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_23"
+			},
+			"O": {
+				"cType": "scopedSlot",
+				"compDomClasses": "dx-widget dx-visibility-change-handler"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_8w",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"EndRender": {
+					"H": "╬=╣.╣EdtrComp_23╩╠dataSource╩╩╠[]╠{}╠=╣'ID'╩╠1╩╩╠=╣'Subject'╩╠'Prepare 2013 Financial'╩╩╠=╣'Status'╩╠5╩╩╠=╣'Owner'╩╠1╩╩╠=╣'AssignedEmployee'╩╠7╩╩╠=╣'OrderIndex'╩╠0╩╩╠=╣'Priority'╩╠3╩╩╩╠{}╠=╣'ID'╩╠2╩╩╠=╣'Subject'╩╠'Prepare 2013 Marketing Plan'╩╩╠=╣'Status'╩╠5╩╩╠=╣'Owner'╩╠1╩╩╠=╣'AssignedEmployee'╩╠4╩╩╠=╣'OrderIndex'╩╠1╩╩╠=╣'Priority'╩╠4╩╩╩╠{}╠=╣'ID'╩╠3╩╩╠=╣'Subject'╩╠'Update Personnel Files'╩╩╠=╣'Status'╩╠5╩╩╠=╣'Owner'╩╠1╩╩╠=╣'AssignedEmployee'╩╠2╩╩╠=╣'OrderIndex'╩╠2╩╩╠=╣'Priority'╩╠1╩╩╩╩╩╬()╣.╣Quick╩╠updateComponent╩╩╠EdtrComp_23╩╩╩"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_8"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			}
+		},
+		{
+			"T": "DxDataGrid",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_23",
+					"T": "prop"
+				},
+				"showBorders": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"Col1": {
+					"c": [
+						{
+							"T": "VTextField",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_33",
+									"T": "prop"
+								},
+								"label": {
+									"H": "╬.╣.╣data╩╠data╩╩╠ID╩╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_33"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted undefined newDropBorder"
+							}
+						}
+					],
+					"cType": "scopedSlot"
+				},
+				"Col2": {
+					"c": [
+						{
+							"T": "VTextField",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_3233",
+									"T": "prop"
+								},
+								"label": {
+									"H": "╬.╣.╣data╩╠data╩╩╠Subject╩╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_3233"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted undefined newDropBorder"
+							}
+						}
+					],
+					"cType": "scopedSlot"
+				},
+				"default": {
+					"c": [
+						{
+							"T": "DxColumn",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_24",
+									"T": "prop"
+								},
+								"cellTemplate": {
+									"H": "╬'Col1'╩╩",
+									"T": "prop"
+								},
+								"dataField": {
+									"H": "╬'Col1'╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_24"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "DxColumn",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_123",
+									"T": "prop"
+								},
+								"cellTemplate": {
+									"H": "╬'Col2'╩╩",
+									"T": "prop"
+								},
+								"dataField": {
+									"H": "╬'Col2'╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_123"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "DxRowDragging",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_4",
+									"T": "prop"
+								},
+								"allowReordering": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {
+								"onReorder": {
+									"H": "╬=╣visibleRows╩╠()╣.╣.╣e╩╠component╩╩╠getVisibleRows╩╩╩╩╬=╣toIndex╩╠()╣.╣.╣EdtrComp_23╩╠dataSource╩╩╠indexOf╩╩╠.╣[]╣visibleRows╩╠.╣e╩╠toIndex╩╩╩╠data╩╩╩╩╬=╣fromIndex╩╠()╣.╣.╣EdtrComp_23╩╠dataSource╩╩╠indexOf╩╩╠.╣e╩╠itemData╩╩╩╩╬()╣.╣.╣EdtrComp_23╩╠dataSource╩╩╠splice╩╩╠fromIndex╩╠1╩╩╬()╣.╣.╣EdtrComp_23╩╠dataSource╩╩╠splice╩╩╠toIndex╩╠0╩╠.╣e╩╠itemData╩╩╩╬()╣.╣Quick╩╠updateComponent╩╩╠EdtrComp_23╩╩╩",
+									"P": "e",
+									"PE": "true"
+								}
+							},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": ""
+							}
+						},
+						{
+							"T": "DxColumn",
+							"P": {
+								"cellTemplate": {
+									"H": "╬'Edit'╩╩",
+									"T": "prop"
+								},
+								"dataField": {
+									"H": "╬'Edit'╩╩",
+									"T": "prop"
+								},
+								"ID": {
+									"H": "EdtrComp_28",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_28"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": ""
+							}
+						}
+					],
+					"cType": "slot"
+				},
+				"Edit": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_46",
+									"T": "prop"
+								},
+								"class": {
+									"H": "╬'d-flex flex-row'╩╩",
+									"T": "class"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VMenu",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_31",
+																	"T": "prop"
+																},
+																"eager": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"offsetY": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"closeOnContentClick": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"activator": {
+																	"c": [
+																		{
+																			"T": "VBtn",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_6",
+																					"T": "prop"
+																				},
+																				"color": {
+																					"H": "╬'primary'╩╩",
+																					"T": "prop"
+																				},
+																				"regular": {
+																					"H": "╬false╩╩",
+																					"T": "prop"
+																				},
+																				"outlined": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"icon": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"click": {
+																					"H": "╬()╣.╣on╩╠click╩╩╠e╩╩╬=╣.╣EdtrComp_31╩╠value╩╩╠true╩╩╩",
+																					"P": "e"
+																				}
+																			},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VIcon",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_30",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "╬'mdi-dots-vertical'╩╩",
+																									"T": "text"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_30"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"compDomClasses": "v-icon notranslate mdi mdi-dots-vertical theme--light"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_6"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-btn v-btn--depressed v-btn--flat v-btn--icon v-btn--outlined v-btn--round theme--light v-size--default primary--text"
+																			}
+																		}
+																	],
+																	"cType": "scopedSlot"
+																},
+																"default": {
+																	"c": [
+																		{
+																			"T": "VList",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_32",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VListItemGroup",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_42",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "VListItem",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_35",
+																													"T": "prop"
+																												}
+																											},
+																											"E": {},
+																											"C": {
+																												"default": {
+																													"c": [
+																														{
+																															"T": "VIcon",
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_40",
+																																	"T": "prop"
+																																},
+																																"text": {
+																																	"H": "╬'mdi-home'╩╩",
+																																	"T": "text"
+																																}
+																															},
+																															"E": {},
+																															"C": {},
+																															"_Editor": {
+																																"eID": "EdtrComp_40"
+																															},
+																															"O": {
+																																"cType": "child",
+																																"compDomClasses": "v-icon notranslate mdi mdi-home theme--light"
+																															}
+																														},
+																														{
+																															"T": "QLabel",
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_37",
+																																	"T": "prop"
+																																},
+																																"text": {
+																																	"H": "╬'home'╩╩",
+																																	"T": "prop"
+																																}
+																															},
+																															"E": {},
+																															"C": {},
+																															"_Editor": {
+																																"eID": "EdtrComp_37"
+																															},
+																															"O": {
+																																"cType": "child",
+																																"compDomClasses": "q-label "
+																															}
+																														}
+																													],
+																													"cType": "slot"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_35"
+																											},
+																											"O": {
+																												"cType": "slot",
+																												"compDomClasses": "v-list-item v-list-item--link theme--light"
+																											}
+																										},
+																										{
+																											"T": "VListItem",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_38",
+																													"T": "prop"
+																												}
+																											},
+																											"E": {},
+																											"C": {
+																												"default": {
+																													"c": [
+																														{
+																															"T": "VIcon",
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_41",
+																																	"T": "prop"
+																																},
+																																"text": {
+																																	"H": "╬'mdi-home'╩╩",
+																																	"T": "text"
+																																}
+																															},
+																															"E": {},
+																															"C": {},
+																															"_Editor": {
+																																"eID": "EdtrComp_41"
+																															},
+																															"O": {
+																																"cType": "child",
+																																"compDomClasses": "v-icon notranslate mdi mdi-home theme--light"
+																															}
+																														},
+																														{
+																															"T": "QLabel",
+																															"P": {
+																																"ID": {
+																																	"H": "EdtrComp_39",
+																																	"T": "prop"
+																																},
+																																"text": {
+																																	"H": "╬'home'╩╩",
+																																	"T": "prop"
+																																}
+																															},
+																															"E": {},
+																															"C": {},
+																															"_Editor": {
+																																"eID": "EdtrComp_39"
+																															},
+																															"O": {
+																																"cType": "child",
+																																"compDomClasses": "q-label "
+																															}
+																														}
+																													],
+																													"cType": "slot"
+																												}
+																											},
+																											"_Editor": {
+																												"eID": "EdtrComp_38"
+																											},
+																											"O": {
+																												"cType": "slot",
+																												"compDomClasses": "v-list-item v-list-item--link theme--light"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_42"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "v-item-group theme--light v-list-item-group"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_32"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-list v-sheet theme--light"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_31"
+															},
+															"O": {
+																"cType": "child",
+																"compDomClasses": "v-menu"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_88",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_88"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												},
+												"compDomClasses": "col d-flex flex-column newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_46"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row d-flex flex-row dx-template-wrapper newDropBorder"
+							}
+						}
+					],
+					"cType": "scopedSlot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_23"
+			},
+			"O": {
+				"cType": "scopedSlot",
+				"compDomClasses": "dx-widget dx-visibility-change-handler newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"opt": {}
+};
+export default pjson

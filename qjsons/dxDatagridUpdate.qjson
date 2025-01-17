@@ -10,7 +10,9 @@ let pjson = {
 			},
 			"E": {
 				"click": {
-					"H": "isSecondState=store.get('isSecondState')\r\nEM.trace('isSecondState: ' + isSecondState)\r\nif (isSecondState && isSecondState != null) {\r\n    datagrid.dataSource=[{ezgi='first state'}]\r\n    store.set('isSecondState', false)\r\n} else {\r\n    datagrid.dataSource=[{ezgi='second state'}]\r\n    store.set('isSecondState', true)\r\n}\r\nQuick.updateComponent(datagrid)\r\nEM.trace('dataGrid dataSource: ' + datagrid.dataSource)"
+					"H": "let isSecondState= quick.store.get('isSecondState');\r\ndeclare var data;\r\nquick.EM.trace('isSecondState: ' + isSecondState)\r\nif (isSecondState && isSecondState != null) {\r\n    components.datagrid.dataSource=[{data:'first state'}]\r\n    quick.store.set('isSecondState', false)\r\n} else {\r\n    components.datagrid.dataSource=[{data:'second state'}]\r\n    quick.store.set('isSecondState', true)\r\n}\r\nquick.Quick.updateComponent(components.datagrid)\r\nquick.EM.trace('dataGrid dataSource: ' + components.datagrid.dataSource)",
+					"P": "mouseEvent:unknown | undefined",
+					"HL": "TS"
 				}
 			},
 			"C": {
@@ -56,7 +58,7 @@ let pjson = {
 					"T": "prop"
 				},
 				"dataSource": {
-					"H": "[{ezgi='first state'}]",
+					"H": "[{data='first state'}]",
 					"T": "prop"
 				}
 			},
@@ -82,7 +84,9 @@ let pjson = {
 			},
 			"E": {
 				"click": {
-					"H": "╬=╣isSecondState╩╠()╣.╣store╩╠get╩╩╠'isSecondState'╩╩╩╬()╣.╣EM╩╠trace╩╩╠+╣'isSecondState: '╩╠isSecondState╩╩╩╬if╣&&╣isSecondState╩╠!=╣isSecondState╩╠null╩╩╩╠╬=╣.╣datagrid╩╠dataSource╩╩╠[]╠{}╠=╣ezgi╩╠'first state'╩╩╩╩╩╬()╣.╣store╩╠set╩╩╠'isSecondState'╩╠false╩╩╩╠╬=╣.╣datagrid╩╠dataSource╩╩╠[]╠{}╠=╣ezgi╩╠'second state'╩╩╩╩╩╬()╣.╣store╩╠set╩╩╠'isSecondState'╩╠true╩╩╩╩╬()╣.╣Quick╩╠updateComponent╩╩╠datagrid╩╩╬()╣.╣EM╩╠trace╩╩╠+╣'dataGrid dataSource: '╩╠.╣datagrid╩╠dataSource╩╩╩╩╩"
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nvar isSecondState = quick.store.get('isSecondState');\r\nquick.EM.trace('isSecondState: ' + isSecondState);\r\nif (isSecondState && isSecondState != null) {\r\n    components.datagrid.dataSource = [{ data: 'first state' }];\r\n    quick.store.set('isSecondState', false);\r\n}\r\nelse {\r\n    components.datagrid.dataSource = [{ data: 'second state' }];\r\n    quick.store.set('isSecondState', true);\r\n}\r\nquick.Quick.updateComponent(components.datagrid);\r\nquick.EM.trace('dataGrid dataSource: ' + components.datagrid.dataSource);\r\n",
+					"P": "mouseEvent:unknown | undefined",
+					"HL": "JS"
 				}
 			},
 			"C": {
@@ -106,7 +110,8 @@ let pjson = {
 								"eID": "EdtrComp_8"
 							},
 							"O": {
-								"cType": "child"
+								"cType": "child",
+								"compDomClasses": "q-label newDropBorder"
 							}
 						}
 					],
@@ -117,7 +122,8 @@ let pjson = {
 				"eID": "EdtrComp_7"
 			},
 			"O": {
-				"cType": "slot"
+				"cType": "slot",
+				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default newDropBorder"
 			}
 		},
 		{
@@ -128,7 +134,7 @@ let pjson = {
 					"T": "prop"
 				},
 				"dataSource": {
-					"H": "╬[]╠{}╠=╣ezgi╩╠'first state'╩╩╩╩╩",
+					"H": "╬[]╠{}╠=╣data╩╠'first state'╩╩╩╩╩",
 					"T": "prop"
 				}
 			},
@@ -139,12 +145,14 @@ let pjson = {
 			},
 			"O": {
 				"forceUpdateAfterPropertySetting": true,
-				"cType": "child"
+				"cType": "child",
+				"compDomClasses": "dx-widget dx-visibility-change-handler newDropBorder"
 			}
 		}
 	],
 	"lrids": {},
 	"clrids": {},
-	"description": {}
+	"description": {},
+	"opt": {}
 };
 export default pjson

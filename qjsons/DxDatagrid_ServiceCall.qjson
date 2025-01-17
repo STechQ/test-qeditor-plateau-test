@@ -1,0 +1,411 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_76",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"PostRender": {
+					"H": " const req: IRequest = {\r\n        url: \"https://jsonplaceholder.typicode.com/todos\",\r\n        data: null,\r\n        blockRender: false,\r\n        http: \"get\",\r\n        onFail: null,\r\n        onSuccess: \"successEvent\",\r\n        responseField: \"usersPage\"\r\n    };\r\n    quick.Request.async(req);",
+					"TO": 1,
+					"HL": "TS"
+				},
+				"successEvent": {
+					"H": "debugger;\r\ncomponents.EdtrComp_6.dataSource = response.usersPage;\r\nquick.Quick.updateComponent(components.EdtrComp_6);",
+					"C": true,
+					"HL": "TS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_76"
+			},
+			"O": {
+				"cType": "child"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_81",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "true",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_83",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "DxDataGrid",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_6",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"remoteOperations": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "DxColumn",
+																			"P": {
+																				"cellTemplate": {
+																					"H": "userId",
+																					"T": "prop"
+																				},
+																				"dataField": {
+																					"H": "'userId'",
+																					"T": "prop"
+																				},
+																				"ID": {
+																					"H": "EdtrComp_79",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_79"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		},
+																		{
+																			"T": "DxColumn",
+																			"P": {
+																				"cellTemplate": {
+																					"H": "title",
+																					"T": "prop"
+																				},
+																				"dataField": {
+																					"H": "'title'",
+																					"T": "prop"
+																				},
+																				"ID": {
+																					"H": "EdtrComp_80",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_80"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_27"
+															},
+															"O": {
+																"cType": "scopedSlot",
+																"forceUpdateAfterPropertySetting": true
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_86",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_86"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_83"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_81"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_76",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"PostRender": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nvar req = {\r\n    url: \"https://jsonplaceholder.typicode.com/todos\",\r\n    data: null,\r\n    blockRender: false,\r\n    http: \"get\",\r\n    onFail: null,\r\n    onSuccess: \"successEvent\",\r\n    responseField: \"usersPage\"\r\n};\r\nquick.Request.async(req);\r\n",
+					"TO": 1,
+					"HL": "JS"
+				},
+				"successEvent": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ndebugger;\r\ncomponents.EdtrComp_6.dataSource = response.usersPage;\r\nquick.Quick.updateComponent(components.EdtrComp_6);\r\n",
+					"C": true,
+					"HL": "JS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_76"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_81",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_83",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "DxDataGrid",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_6",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"remoteOperations": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "DxColumn",
+																			"P": {
+																				"cellTemplate": {
+																					"H": "╬userId╩╩",
+																					"T": "prop"
+																				},
+																				"dataField": {
+																					"H": "╬'userId'╩╩",
+																					"T": "prop"
+																				},
+																				"ID": {
+																					"H": "EdtrComp_79",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_79"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": ""
+																			}
+																		},
+																		{
+																			"T": "DxColumn",
+																			"P": {
+																				"cellTemplate": {
+																					"H": "╬title╩╩",
+																					"T": "prop"
+																				},
+																				"dataField": {
+																					"H": "╬'title'╩╩",
+																					"T": "prop"
+																				},
+																				"ID": {
+																					"H": "EdtrComp_80",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_80"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": ""
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_27"
+															},
+															"O": {
+																"cType": "scopedSlot",
+																"forceUpdateAfterPropertySetting": true,
+																"compDomClasses": "dx-widget dx-visibility-change-handler newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_86",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_86"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												},
+												"compDomClasses": "col d-flex flex-column newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_83"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_81"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"opt": {}
+};
+export default pjson

@@ -1,0 +1,519 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "PageComp",
+					"T": "prop"
+				},
+				"triggerOnRestored": {
+					"H": "false",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "VRowComp",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "DxDataGrid",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_6",
+																	"T": "prop"
+																},
+																"dataSource": {
+																	"H": "[{name = 'Frozens Yogurt', calories = 159, fat = '6.0', carbs = 24, protein = '4.0', iron = '1%'},\n{name = 'Ice cream sandwich', calories = 237, fat = '9.0', carbs = 37, protein = '4.3', iron = '1%'},\n{name = 'Eclair', calories = 262, fat = '16.0', carbs = 23, protein = '6.0', iron = '7%'},\n{name = 'Cupcake', calories = 305, fat = '3.7', carbs = 67, protein = '4.3', iron = '8%'},\n{name = 'Gingerbread',calories = 356, fat = '16.0', carbs = 49, protein = '3.9', iron = '16%'},\n{name = 'Jelly bean', calories = 375,  fat = '0.0', carbs = 94, protein = '0.0', iron = '0%'},\n{name = 'Lollipop', calories = 392, fat = '0.2', carbs = 98, protein = '0.0', iron = '2 %'},\n{name = 'Honeycomb', calories = 408, fat = '3.2', carbs = 87, protein = '6.5', iron = '45%'},\n{name = 'Donut', calories = 452, fat = '25.0', carbs = 51, protein = '4.9', iron = '22%'},\n{name = 'KitKat', calories = 518, fat = '26.0', carbs = 65, protein = '7', iron=  '6 %'}]",
+																	"T": "prop"
+																},
+																"showBorders": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "DxColumn",
+																			"P": {
+																				"cellTemplate": {
+																					"H": "name",
+																					"T": "prop"
+																				},
+																				"dataField": {
+																					"H": "'name'",
+																					"T": "prop"
+																				},
+																				"ID": {
+																					"H": "EdtrComp_11",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_11"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		},
+																		{
+																			"T": "DxColumn",
+																			"P": {
+																				"cellTemplate": {
+																					"H": "carbs",
+																					"T": "prop"
+																				},
+																				"dataField": {
+																					"H": "'carbs'",
+																					"T": "prop"
+																				},
+																				"ID": {
+																					"H": "EdtrComp_14",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_14"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		},
+																		{
+																			"T": "DxColumn",
+																			"P": {
+																				"cellTemplate": {
+																					"H": "fat",
+																					"T": "prop"
+																				},
+																				"dataField": {
+																					"H": "'fat'",
+																					"T": "prop"
+																				},
+																				"ID": {
+																					"H": "EdtrComp_17",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_17"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		},
+																		{
+																			"T": "DxRowDragging",
+																			"P": {
+																				"enabled": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"ID": {
+																					"H": "EdtrComp_20",
+																					"T": "prop"
+																				},
+																				"allowReordering": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"onReorder": {
+																					"H": "debugger;\r\nlet visibleRows = draggingParam.component.getVisibleRows();\r\nlet toIndex = components.EdtrComp_6.dataSource.indexOf(visibleRows[draggingParam.toIndex].data);\r\nlet fromIndex = components.EdtrComp_6.dataSource.indexOf(draggingParam.itemData);\r\nlet newData = [...components.EdtrComp_6.dataSource]\r\n\r\nnewData.splice(fromIndex, 1);\r\nnewData.splice(toIndex, 0, draggingParam.itemData);\r\n\r\ncomponents.EdtrComp_6.dataSource = newData\r\nquick.Quick.updateComponent(components.EdtrComp_6);\r\n\r\n",
+																					"PE": true,
+																					"P": "draggingParam:any",
+																					"HL": "TS"
+																				}
+																			},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_20"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_6"
+															},
+															"O": {
+																"cType": "scopedSlot",
+																"forceUpdateAfterPropertySetting": true
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "VColComp",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_3"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_5"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "PageComp",
+					"T": "prop"
+				},
+				"triggerOnRestored": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "VRowComp",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "DxDataGrid",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_6",
+																	"T": "prop"
+																},
+																"dataSource": {
+																	"H": "╬[]╠{}╠=╣name╩╠'Frozens Yogurt'╩╩╠=╣calories╩╠159╩╩╠=╣fat╩╠'6.0'╩╩╠=╣carbs╩╠24╩╩╠=╣protein╩╠'4.0'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Ice cream sandwich'╩╩╠=╣calories╩╠237╩╩╠=╣fat╩╠'9.0'╩╩╠=╣carbs╩╠37╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Eclair'╩╩╠=╣calories╩╠262╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠23╩╩╠=╣protein╩╠'6.0'╩╩╠=╣iron╩╠'7%'╩╩╩╠{}╠=╣name╩╠'Cupcake'╩╩╠=╣calories╩╠305╩╩╠=╣fat╩╠'3.7'╩╩╠=╣carbs╩╠67╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'8%'╩╩╩╠{}╠=╣name╩╠'Gingerbread'╩╩╠=╣calories╩╠356╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠49╩╩╠=╣protein╩╠'3.9'╩╩╠=╣iron╩╠'16%'╩╩╩╠{}╠=╣name╩╠'Jelly bean'╩╩╠=╣calories╩╠375╩╩╠=╣fat╩╠'0.0'╩╩╠=╣carbs╩╠94╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'0%'╩╩╩╠{}╠=╣name╩╠'Lollipop'╩╩╠=╣calories╩╠392╩╩╠=╣fat╩╠'0.2'╩╩╠=╣carbs╩╠98╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'2 %'╩╩╩╠{}╠=╣name╩╠'Honeycomb'╩╩╠=╣calories╩╠408╩╩╠=╣fat╩╠'3.2'╩╩╠=╣carbs╩╠87╩╩╠=╣protein╩╠'6.5'╩╩╠=╣iron╩╠'45%'╩╩╩╠{}╠=╣name╩╠'Donut'╩╩╠=╣calories╩╠452╩╩╠=╣fat╩╠'25.0'╩╩╠=╣carbs╩╠51╩╩╠=╣protein╩╠'4.9'╩╩╠=╣iron╩╠'22%'╩╩╩╠{}╠=╣name╩╠'KitKat'╩╩╠=╣calories╩╠518╩╩╠=╣fat╩╠'26.0'╩╩╠=╣carbs╩╠65╩╩╠=╣protein╩╠'7'╩╩╠=╣iron╩╠'6 %'╩╩╩╩╩",
+																	"T": "prop"
+																},
+																"showBorders": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "DxColumn",
+																			"P": {
+																				"cellTemplate": {
+																					"H": "╬name╩╩",
+																					"T": "prop"
+																				},
+																				"dataField": {
+																					"H": "╬'name'╩╩",
+																					"T": "prop"
+																				},
+																				"ID": {
+																					"H": "EdtrComp_11",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_11"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": ""
+																			}
+																		},
+																		{
+																			"T": "DxColumn",
+																			"P": {
+																				"cellTemplate": {
+																					"H": "╬carbs╩╩",
+																					"T": "prop"
+																				},
+																				"dataField": {
+																					"H": "╬'carbs'╩╩",
+																					"T": "prop"
+																				},
+																				"ID": {
+																					"H": "EdtrComp_14",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_14"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": ""
+																			}
+																		},
+																		{
+																			"T": "DxColumn",
+																			"P": {
+																				"cellTemplate": {
+																					"H": "╬fat╩╩",
+																					"T": "prop"
+																				},
+																				"dataField": {
+																					"H": "╬'fat'╩╩",
+																					"T": "prop"
+																				},
+																				"ID": {
+																					"H": "EdtrComp_17",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_17"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": ""
+																			}
+																		},
+																		{
+																			"T": "DxRowDragging",
+																			"P": {
+																				"enabled": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"ID": {
+																					"H": "EdtrComp_20",
+																					"T": "prop"
+																				},
+																				"allowReordering": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {
+																				"onReorder": {
+																					"H": "var __spreadArrays = (this && this.__spreadArrays) || function () {\r\n    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;\r\n    for (var r = Array(s), k = 0, i = 0; i < il; i++)\r\n        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)\r\n            r[k] = a[j];\r\n    return r;\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\ndebugger;\r\nvar visibleRows = draggingParam.component.getVisibleRows();\r\nvar toIndex = components.EdtrComp_6.dataSource.indexOf(visibleRows[draggingParam.toIndex].data);\r\nvar fromIndex = components.EdtrComp_6.dataSource.indexOf(draggingParam.itemData);\r\nvar newData = __spreadArrays(components.EdtrComp_6.dataSource);\r\nnewData.splice(fromIndex, 1);\r\nnewData.splice(toIndex, 0, draggingParam.itemData);\r\ncomponents.EdtrComp_6.dataSource = newData;\r\nquick.Quick.updateComponent(components.EdtrComp_6);\r\n",
+																					"PE": true,
+																					"P": "draggingParam:any",
+																					"HL": "JS"
+																				}
+																			},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_20"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": ""
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_6"
+															},
+															"O": {
+																"cType": "scopedSlot",
+																"forceUpdateAfterPropertySetting": true,
+																"compDomClasses": "dx-widget dx-visibility-change-handler newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "VColComp",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_3"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												},
+												"compDomClasses": "col d-flex flex-column newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_5"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"opt": {}
+};
+export default pjson

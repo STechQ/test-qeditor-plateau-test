@@ -4,7 +4,7 @@ let pjson = {
 			"T": "Messaging",
 			"P": {
 				"ID": {
-					"H": "MessagingComp",
+					"H": "PageComp",
 					"T": "prop"
 				},
 				"triggerOnRestored": {
@@ -15,10 +15,16 @@ let pjson = {
 			"E": {},
 			"C": {},
 			"_Editor": {
-				"eID": "MessagingComp"
+				"eID": "EdtrComp_1"
 			},
 			"O": {
 				"cType": "child"
+			},
+			"S": {
+				"xs-xl": {
+					"pageBackgroundColor": "#ffffff",
+					"statusBarColor": "#ffffff"
+				}
 			}
 		},
 		{
@@ -29,10 +35,14 @@ let pjson = {
 					"T": "prop"
 				},
 				"class": {
-					"H": "'container container--fluid'",
+					"H": "'container'",
 					"T": "class"
 				},
 				"visible": {
+					"H": "true",
+					"T": "prop"
+				},
+				"eager": {
 					"H": "true",
 					"T": "prop"
 				}
@@ -62,7 +72,7 @@ let pjson = {
 															"T": "DxDataGrid",
 															"P": {
 																"ID": {
-																	"H": "EdtrComp_46",
+																	"H": "EdtrComp_6",
 																	"T": "prop"
 																},
 																"dataSource": {
@@ -70,7 +80,14 @@ let pjson = {
 																	"T": "prop"
 																}
 															},
-															"E": {},
+															"E": {
+																"onExporting": {
+																	"H": "quick.devex.exportDxDataGrid({ options: { dataGridInstance: event.component }, worksheetName: \"My Main Sheet\", fileName: \"DataGrid.xlsx\" });",
+																	"PE": true,
+																	"P": "event:any",
+																	"HL": "TS"
+																}
+															},
 															"C": {
 																"default": {
 																	"c": [
@@ -86,14 +103,14 @@ let pjson = {
 																					"T": "prop"
 																				},
 																				"ID": {
-																					"H": "EdtrComp_59",
+																					"H": "EdtrComp_11",
 																					"T": "prop"
 																				}
 																			},
 																			"E": {},
 																			"C": {},
 																			"_Editor": {
-																				"eID": "EdtrComp_59"
+																				"eID": "EdtrComp_11"
 																			},
 																			"O": {
 																				"cType": "slot"
@@ -104,7 +121,7 @@ let pjson = {
 																}
 															},
 															"_Editor": {
-																"eID": "EdtrComp_46"
+																"eID": "EdtrComp_6"
 															},
 															"O": {
 																"cType": "scopedSlot",
@@ -123,10 +140,28 @@ let pjson = {
 												}
 											},
 											"_Editor": {
-												"eID": "VColComp"
+												"eID": "EdtrComp_3"
 											},
 											"O": {
 												"cType": "slot"
+											},
+											"S": {
+												"xs-xl": {
+													"col": "",
+													"flexDirection": "column",
+													"alignItems": "",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "12px",
+													"paddingBottom": "12px",
+													"paddingLeft": "12px",
+													"paddingRight": "12px",
+													"backgroundColor": "#ffffff",
+													"boxShadow": ""
+												}
 											}
 										}
 									],
@@ -134,10 +169,26 @@ let pjson = {
 								}
 							},
 							"_Editor": {
-								"eID": "VRowComp"
+								"eID": "EdtrComp_4"
 							},
 							"O": {
 								"cType": "slot"
+							},
+							"S": {
+								"xs-xl": {
+									"marginLeft": "0px",
+									"marginRight": "0px",
+									"marginBottom": "0px",
+									"marginTop": "0px",
+									"paddingTop": "",
+									"paddingBottom": "",
+									"paddingLeft": "",
+									"paddingRight": "",
+									"width": "",
+									"height": "",
+									"backgroundColor": "#ffffff",
+									"boxShadow": ""
+								}
 							}
 						}
 					],
@@ -145,10 +196,26 @@ let pjson = {
 				}
 			},
 			"_Editor": {
-				"eID": "VRowComp"
+				"eID": "EdtrComp_5"
 			},
 			"O": {
 				"cType": "slot"
+			},
+			"S": {
+				"xs-xl": {
+					"marginLeft": "",
+					"marginRight": "",
+					"marginBottom": "",
+					"marginTop": "",
+					"paddingTop": "12px",
+					"paddingBottom": "12px",
+					"paddingLeft": "12px",
+					"paddingRight": "12px",
+					"width": "",
+					"height": "",
+					"backgroundColor": "#ffffff",
+					"boxShadow": ""
+				}
 			}
 		}
 	],
@@ -157,7 +224,7 @@ let pjson = {
 			"T": "Messaging",
 			"P": {
 				"ID": {
-					"H": "MessagingComp",
+					"H": "PageComp",
 					"T": "prop"
 				},
 				"triggerOnRestored": {
@@ -168,11 +235,17 @@ let pjson = {
 			"E": {},
 			"C": {},
 			"_Editor": {
-				"eID": "MessagingComp"
+				"eID": "EdtrComp_1"
 			},
 			"O": {
 				"cType": "child",
 				"compDomClasses": "newDropBorder"
+			},
+			"S": {
+				"xs-xl": {
+					"pageBackgroundColor": "#ffffff",
+					"statusBarColor": "#ffffff"
+				}
 			}
 		},
 		{
@@ -183,10 +256,14 @@ let pjson = {
 					"T": "prop"
 				},
 				"class": {
-					"H": "╬'container container--fluid'╩╩",
+					"H": "╬'container'╩╩",
 					"T": "class"
 				},
 				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"eager": {
 					"H": "╬true╩╩",
 					"T": "prop"
 				}
@@ -216,7 +293,7 @@ let pjson = {
 															"T": "DxDataGrid",
 															"P": {
 																"ID": {
-																	"H": "EdtrComp_46",
+																	"H": "EdtrComp_6",
 																	"T": "prop"
 																},
 																"dataSource": {
@@ -224,7 +301,14 @@ let pjson = {
 																	"T": "prop"
 																}
 															},
-															"E": {},
+															"E": {
+																"onExporting": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.devex.exportDxDataGrid({ options: { dataGridInstance: event.component }, worksheetName: \"My Main Sheet\", fileName: \"DataGrid.xlsx\" });\r\n",
+																	"PE": true,
+																	"P": "event:any",
+																	"HL": "JS"
+																}
+															},
 															"C": {
 																"default": {
 																	"c": [
@@ -240,14 +324,14 @@ let pjson = {
 																					"T": "prop"
 																				},
 																				"ID": {
-																					"H": "EdtrComp_59",
+																					"H": "EdtrComp_11",
 																					"T": "prop"
 																				}
 																			},
 																			"E": {},
 																			"C": {},
 																			"_Editor": {
-																				"eID": "EdtrComp_59"
+																				"eID": "EdtrComp_11"
 																			},
 																			"O": {
 																				"cType": "slot",
@@ -259,7 +343,7 @@ let pjson = {
 																}
 															},
 															"_Editor": {
-																"eID": "EdtrComp_46"
+																"eID": "EdtrComp_6"
 															},
 															"O": {
 																"cType": "scopedSlot",
@@ -279,11 +363,29 @@ let pjson = {
 												}
 											},
 											"_Editor": {
-												"eID": "VColComp"
+												"eID": "EdtrComp_3"
 											},
 											"O": {
 												"cType": "slot",
 												"compDomClasses": "col newDropBorder"
+											},
+											"S": {
+												"xs-xl": {
+													"col": "",
+													"flexDirection": "column",
+													"alignItems": "",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "12px",
+													"paddingBottom": "12px",
+													"paddingLeft": "12px",
+													"paddingRight": "12px",
+													"backgroundColor": "#ffffff",
+													"boxShadow": ""
+												}
 											}
 										}
 									],
@@ -291,11 +393,27 @@ let pjson = {
 								}
 							},
 							"_Editor": {
-								"eID": "VRowComp"
+								"eID": "EdtrComp_4"
 							},
 							"O": {
 								"cType": "slot",
 								"compDomClasses": "row newDropBorder"
+							},
+							"S": {
+								"xs-xl": {
+									"marginLeft": "0px",
+									"marginRight": "0px",
+									"marginBottom": "0px",
+									"marginTop": "0px",
+									"paddingTop": "",
+									"paddingBottom": "",
+									"paddingLeft": "",
+									"paddingRight": "",
+									"width": "",
+									"height": "",
+									"backgroundColor": "#ffffff",
+									"boxShadow": ""
+								}
 							}
 						}
 					],
@@ -303,16 +421,32 @@ let pjson = {
 				}
 			},
 			"_Editor": {
-				"eID": "VRowComp"
+				"eID": "EdtrComp_5"
 			},
 			"O": {
 				"cType": "slot",
-				"compDomClasses": "container container--fluid newDropBorder"
+				"compDomClasses": "container newDropBorder"
+			},
+			"S": {
+				"xs-xl": {
+					"marginLeft": "",
+					"marginRight": "",
+					"marginBottom": "",
+					"marginTop": "",
+					"paddingTop": "12px",
+					"paddingBottom": "12px",
+					"paddingLeft": "12px",
+					"paddingRight": "12px",
+					"width": "",
+					"height": "",
+					"backgroundColor": "#ffffff",
+					"boxShadow": ""
+				}
 			}
 		}
 	],
 	"lrids": {},
 	"clrids": {},
-	"description": {}
+	"opt": {}
 };
 export default pjson

@@ -1,14 +1,43 @@
 let pjson = {
 	"pJson": [
 		{
-			"T": "DxDataGrid",
+			"T": "Messaging",
 			"P": {
 				"ID": {
-					"H": "EdtrComp_13",
+					"H": "PageComp",
 					"T": "prop"
 				},
-				"dataSource": {
-					"H": "[{name = 'Frozens Yogurt', calories = 159, fat = '6.0', carbs = 24, protein = '4.0', iron = '1%'},\n{name = 'Ice cream sandwich', calories = 237, fat = '9.0', carbs = 37, protein = '4.3', iron = '1%'},\n{name = 'Eclair', calories = 262, fat = '16.0', carbs = 23, protein = '6.0', iron = '7%'},\n{name = 'Cupcake', calories = 305, fat = '3.7', carbs = 67, protein = '4.3', iron = '8%'},\n{name = 'Gingerbread',calories = 356, fat = '16.0', carbs = 49, protein = '3.9', iron = '16%'},\n{name = 'Jelly bean', calories = 375,  fat = '0.0', carbs = 94, protein = '0.0', iron = '0%'},\n{name = 'Lollipop', calories = 392, fat = '0.2', carbs = 98, protein = '0.0', iron = '2 %'},\n{name = 'Honeycomb', calories = 408, fat = '3.2', carbs = 87, protein = '6.5', iron = '45%'},\n{name = 'Donut', calories = 452, fat = '25.0', carbs = 51, protein = '4.9', iron = '22%'},\n{name = 'KitKat', calories = 518, fat = '26.0', carbs = 65, protein = '7', iron=  '6 %'}]",
+				"triggerOnRestored": {
+					"H": "false",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "true",
 					"T": "prop"
 				}
 			},
@@ -17,36 +46,10 @@ let pjson = {
 				"default": {
 					"c": [
 						{
-							"T": "DxColumn",
-							"P": {
-								"cellTemplate": {
-									"H": "'testColumn'",
-									"T": "prop"
-								},
-								"dataField": {
-									"H": "'testColumn'",
-									"T": "prop"
-								},
-								"ID": {
-									"H": "EdtrComp_14",
-									"T": "prop"
-								}
-							},
-							"E": {},
-							"C": {},
-							"_Editor": {
-								"eID": "EdtrComp_14"
-							},
-							"O": {
-								"cType": "child",
-								"compDomClasses": ""
-							}
-						},
-						{
-							"T": "DxSummary",
+							"T": "VRow",
 							"P": {
 								"ID": {
-									"H": "EdtrComp_17",
+									"H": "VRowComp",
 									"T": "prop"
 								}
 							},
@@ -55,35 +58,143 @@ let pjson = {
 								"default": {
 									"c": [
 										{
-											"T": "DxTotalItem",
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "DxDataGrid",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_8",
+																	"T": "prop"
+																},
+																"dataSource": {
+																	"H": "[{name = 'Frozens Yogurt', calories = 159, fat = '6.0', carbs = 24, protein = '4.0', iron = '1%'},\n{name = 'Ice cream sandwich', calories = 237, fat = '9.0', carbs = 37, protein = '4.3', iron = '1%'},\n{name = 'Eclair', calories = 262, fat = '16.0', carbs = 23, protein = '6.0', iron = '7%'},\n{name = 'Cupcake', calories = 305, fat = '3.7', carbs = 67, protein = '4.3', iron = '8%'},\n{name = 'Gingerbread',calories = 356, fat = '16.0', carbs = 49, protein = '3.9', iron = '16%'},\n{name = 'Jelly bean', calories = 375,  fat = '0.0', carbs = 94, protein = '0.0', iron = '0%'},\n{name = 'Lollipop', calories = 392, fat = '0.2', carbs = 98, protein = '0.0', iron = '2 %'},\n{name = 'Honeycomb', calories = 408, fat = '3.2', carbs = 87, protein = '6.5', iron = '45%'},\n{name = 'Donut', calories = 452, fat = '25.0', carbs = 51, protein = '4.9', iron = '22%'},\n{name = 'KitKat', calories = 518, fat = '26.0', carbs = 65, protein = '7', iron=  '6 %'}]",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "DxColumn",
+																			"P": {
+																				"cellTemplate": {
+																					"H": "name",
+																					"T": "prop"
+																				},
+																				"dataField": {
+																					"H": "'name'",
+																					"T": "prop"
+																				},
+																				"ID": {
+																					"H": "EdtrComp_13",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_13"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		},
+																		{
+																			"T": "DxSummary",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_16",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "DxTotalItem",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_19",
+																									"T": "prop"
+																								},
+																								"column": {
+																									"H": "'name'",
+																									"T": "prop"
+																								},
+																								"summaryType": {
+																									"H": "'count'",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"customizeText": {
+																									"H": "quick.return ((<any>totalVal).value + ' customized text :)')",
+																									"PE": true,
+																									"P": "totalVal:object",
+																									"HL": "TS"
+																								}
+																							},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_19"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_16"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_8"
+															},
+															"O": {
+																"cType": "scopedSlot",
+																"forceUpdateAfterPropertySetting": true
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
 											"P": {
 												"ID": {
-													"H": "EdtrComp_18",
-													"T": "prop"
-												},
-												"column": {
-													"H": "'Test Column'",
-													"T": "prop"
-												},
-												"summaryType": {
-													"H": "'count'",
+													"H": "VColComp",
 													"T": "prop"
 												}
 											},
-											"E": {
-												"customizeText": {
-													"H": "totalVal.value + ' customized text :)'",
-													"PE": true,
-													"P": "totalVal"
-												}
-											},
-											"C": {},
 											"_Editor": {
-												"eID": "EdtrComp_18"
+												"eID": "EdtrComp_3"
 											},
 											"O": {
-												"cType": "child",
-												"compDomClasses": ""
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												}
 											}
 										}
 									],
@@ -91,68 +202,64 @@ let pjson = {
 								}
 							},
 							"_Editor": {
-								"eID": "EdtrComp_17"
+								"eID": "EdtrComp_4"
 							},
 							"O": {
-								"cType": "child",
-								"compDomClasses": ""
+								"cType": "slot"
 							}
 						}
 					],
 					"cType": "slot"
-				},
-				"testColumn": {
-					"c": [
-						{
-							"T": "VTextField",
-							"P": {
-								"ID": {
-									"H": "EdtrComp_16",
-									"T": "prop"
-								},
-								"label": {
-									"H": "data.data.name",
-									"T": "prop"
-								},
-								"regular": {
-									"H": "'true'",
-									"T": "prop"
-								}
-							},
-							"E": {},
-							"C": {},
-							"_Editor": {
-								"eID": "EdtrComp_16"
-							},
-							"O": {
-								"cType": "child",
-								"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted undefined pt-0"
-							}
-						}
-					],
-					"cType": "scopedSlot"
 				}
 			},
 			"_Editor": {
-				"eID": "EdtrComp_13"
+				"eID": "EdtrComp_5"
 			},
 			"O": {
-				"forceUpdateAfterPropertySetting": true,
-				"cType": "child",
-				"compDomClasses": "dx-widget dx-visibility-change-handler"
+				"cType": "slot"
 			}
 		}
 	],
 	"cJson": [
 		{
-			"T": "DxDataGrid",
+			"T": "Messaging",
 			"P": {
 				"ID": {
-					"H": "EdtrComp_13",
+					"H": "PageComp",
 					"T": "prop"
 				},
-				"dataSource": {
-					"H": "╬[]╠{}╠=╣name╩╠'Frozens Yogurt'╩╩╠=╣calories╩╠159╩╩╠=╣fat╩╠'6.0'╩╩╠=╣carbs╩╠24╩╩╠=╣protein╩╠'4.0'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Ice cream sandwich'╩╩╠=╣calories╩╠237╩╩╠=╣fat╩╠'9.0'╩╩╠=╣carbs╩╠37╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Eclair'╩╩╠=╣calories╩╠262╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠23╩╩╠=╣protein╩╠'6.0'╩╩╠=╣iron╩╠'7%'╩╩╩╠{}╠=╣name╩╠'Cupcake'╩╩╠=╣calories╩╠305╩╩╠=╣fat╩╠'3.7'╩╩╠=╣carbs╩╠67╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'8%'╩╩╩╠{}╠=╣name╩╠'Gingerbread'╩╩╠=╣calories╩╠356╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠49╩╩╠=╣protein╩╠'3.9'╩╩╠=╣iron╩╠'16%'╩╩╩╠{}╠=╣name╩╠'Jelly bean'╩╩╠=╣calories╩╠375╩╩╠=╣fat╩╠'0.0'╩╩╠=╣carbs╩╠94╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'0%'╩╩╩╠{}╠=╣name╩╠'Lollipop'╩╩╠=╣calories╩╠392╩╩╠=╣fat╩╠'0.2'╩╩╠=╣carbs╩╠98╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'2 %'╩╩╩╠{}╠=╣name╩╠'Honeycomb'╩╩╠=╣calories╩╠408╩╩╠=╣fat╩╠'3.2'╩╩╠=╣carbs╩╠87╩╩╠=╣protein╩╠'6.5'╩╩╠=╣iron╩╠'45%'╩╩╩╠{}╠=╣name╩╠'Donut'╩╩╠=╣calories╩╠452╩╩╠=╣fat╩╠'25.0'╩╩╠=╣carbs╩╠51╩╩╠=╣protein╩╠'4.9'╩╩╠=╣iron╩╠'22%'╩╩╩╠{}╠=╣name╩╠'KitKat'╩╩╠=╣calories╩╠518╩╩╠=╣fat╩╠'26.0'╩╩╠=╣carbs╩╠65╩╩╠=╣protein╩╠'7'╩╩╠=╣iron╩╠'6 %'╩╩╩╩╩",
+				"triggerOnRestored": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "╬true╩╩",
 					"T": "prop"
 				}
 			},
@@ -161,36 +268,10 @@ let pjson = {
 				"default": {
 					"c": [
 						{
-							"T": "DxColumn",
-							"P": {
-								"cellTemplate": {
-									"H": "╬'testColumn'╩╩",
-									"T": "prop"
-								},
-								"dataField": {
-									"H": "╬'testColumn'╩╩",
-									"T": "prop"
-								},
-								"ID": {
-									"H": "EdtrComp_14",
-									"T": "prop"
-								}
-							},
-							"E": {},
-							"C": {},
-							"_Editor": {
-								"eID": "EdtrComp_14"
-							},
-							"O": {
-								"cType": "child",
-								"compDomClasses": ""
-							}
-						},
-						{
-							"T": "DxSummary",
+							"T": "VRow",
 							"P": {
 								"ID": {
-									"H": "EdtrComp_17",
+									"H": "VRowComp",
 									"T": "prop"
 								}
 							},
@@ -199,35 +280,148 @@ let pjson = {
 								"default": {
 									"c": [
 										{
-											"T": "DxTotalItem",
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "DxDataGrid",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_8",
+																	"T": "prop"
+																},
+																"dataSource": {
+																	"H": "╬[]╠{}╠=╣name╩╠'Frozens Yogurt'╩╩╠=╣calories╩╠159╩╩╠=╣fat╩╠'6.0'╩╩╠=╣carbs╩╠24╩╩╠=╣protein╩╠'4.0'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Ice cream sandwich'╩╩╠=╣calories╩╠237╩╩╠=╣fat╩╠'9.0'╩╩╠=╣carbs╩╠37╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Eclair'╩╩╠=╣calories╩╠262╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠23╩╩╠=╣protein╩╠'6.0'╩╩╠=╣iron╩╠'7%'╩╩╩╠{}╠=╣name╩╠'Cupcake'╩╩╠=╣calories╩╠305╩╩╠=╣fat╩╠'3.7'╩╩╠=╣carbs╩╠67╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'8%'╩╩╩╠{}╠=╣name╩╠'Gingerbread'╩╩╠=╣calories╩╠356╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠49╩╩╠=╣protein╩╠'3.9'╩╩╠=╣iron╩╠'16%'╩╩╩╠{}╠=╣name╩╠'Jelly bean'╩╩╠=╣calories╩╠375╩╩╠=╣fat╩╠'0.0'╩╩╠=╣carbs╩╠94╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'0%'╩╩╩╠{}╠=╣name╩╠'Lollipop'╩╩╠=╣calories╩╠392╩╩╠=╣fat╩╠'0.2'╩╩╠=╣carbs╩╠98╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'2 %'╩╩╩╠{}╠=╣name╩╠'Honeycomb'╩╩╠=╣calories╩╠408╩╩╠=╣fat╩╠'3.2'╩╩╠=╣carbs╩╠87╩╩╠=╣protein╩╠'6.5'╩╩╠=╣iron╩╠'45%'╩╩╩╠{}╠=╣name╩╠'Donut'╩╩╠=╣calories╩╠452╩╩╠=╣fat╩╠'25.0'╩╩╠=╣carbs╩╠51╩╩╠=╣protein╩╠'4.9'╩╩╠=╣iron╩╠'22%'╩╩╩╠{}╠=╣name╩╠'KitKat'╩╩╠=╣calories╩╠518╩╩╠=╣fat╩╠'26.0'╩╩╠=╣carbs╩╠65╩╩╠=╣protein╩╠'7'╩╩╠=╣iron╩╠'6 %'╩╩╩╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "DxColumn",
+																			"P": {
+																				"cellTemplate": {
+																					"H": "╬name╩╩",
+																					"T": "prop"
+																				},
+																				"dataField": {
+																					"H": "╬'name'╩╩",
+																					"T": "prop"
+																				},
+																				"ID": {
+																					"H": "EdtrComp_13",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_13"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": ""
+																			}
+																		},
+																		{
+																			"T": "DxSummary",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_16",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "DxTotalItem",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_19",
+																									"T": "prop"
+																								},
+																								"column": {
+																									"H": "╬'name'╩╩",
+																									"T": "prop"
+																								},
+																								"summaryType": {
+																									"H": "╬'count'╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {
+																								"customizeText": {
+																									"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.return(totalVal.value + ' customized text :)');\r\n",
+																									"PE": true,
+																									"P": "totalVal:object",
+																									"HL": "JS"
+																								}
+																							},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_19"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": ""
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_16"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": ""
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_8"
+															},
+															"O": {
+																"cType": "scopedSlot",
+																"forceUpdateAfterPropertySetting": true,
+																"compDomClasses": "dx-widget dx-visibility-change-handler newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
 											"P": {
 												"ID": {
-													"H": "EdtrComp_18",
-													"T": "prop"
-												},
-												"column": {
-													"H": "╬'Test Column'╩╩",
-													"T": "prop"
-												},
-												"summaryType": {
-													"H": "╬'count'╩╩",
+													"H": "VColComp",
 													"T": "prop"
 												}
 											},
-											"E": {
-												"customizeText": {
-													"H": "╬+╣.╣totalVal╩╠value╩╩╠' customized text :)'╩╩╩",
-													"PE": true,
-													"P": "totalVal"
-												}
-											},
-											"C": {},
 											"_Editor": {
-												"eID": "EdtrComp_18"
+												"eID": "EdtrComp_3"
 											},
 											"O": {
-												"cType": "child",
-												"compDomClasses": ""
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												},
+												"compDomClasses": "col d-flex flex-column newDropBorder"
 											}
 										}
 									],
@@ -235,60 +429,28 @@ let pjson = {
 								}
 							},
 							"_Editor": {
-								"eID": "EdtrComp_17"
+								"eID": "EdtrComp_4"
 							},
 							"O": {
-								"cType": "child",
-								"compDomClasses": ""
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
 							}
 						}
 					],
 					"cType": "slot"
-				},
-				"testColumn": {
-					"c": [
-						{
-							"T": "VTextField",
-							"P": {
-								"ID": {
-									"H": "EdtrComp_16",
-									"T": "prop"
-								},
-								"label": {
-									"H": "╬.╣.╣data╩╠data╩╩╠name╩╩╩",
-									"T": "prop"
-								},
-								"regular": {
-									"H": "╬'true'╩╩",
-									"T": "prop"
-								}
-							},
-							"E": {},
-							"C": {},
-							"_Editor": {
-								"eID": "EdtrComp_16"
-							},
-							"O": {
-								"cType": "child",
-								"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted undefined pt-0"
-							}
-						}
-					],
-					"cType": "scopedSlot"
 				}
 			},
 			"_Editor": {
-				"eID": "EdtrComp_13"
+				"eID": "EdtrComp_5"
 			},
 			"O": {
-				"forceUpdateAfterPropertySetting": true,
-				"cType": "child",
-				"compDomClasses": "dx-widget dx-visibility-change-handler"
+				"cType": "slot",
+				"compDomClasses": "container newDropBorder"
 			}
 		}
 	],
 	"lrids": {},
 	"clrids": {},
-	"description": {}
+	"opt": {}
 };
 export default pjson
