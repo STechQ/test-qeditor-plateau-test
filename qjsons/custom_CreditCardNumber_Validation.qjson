@@ -1,0 +1,799 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "PageComp",
+					"T": "prop"
+				},
+				"triggerOnRestored": {
+					"H": "false",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"PostRender": {
+					"H": "debugger;\r\nfunction isValidCard(cardNumber: string){\r\n    let isValidLuhn =isValidLuhnNumber(cardNumber);\r\n    if(!isValidLuhn){\r\n        return \"lütfen geçerli bir kart numarası giriniz\";\r\n    }\r\n}\r\nfunction isValidLuhnNumber(cardNumber: string): boolean {\r\n    if (!cardNumber || cardNumber.trim() == '') {\r\n        return false;\r\n    }\r\n    cardNumber = cardNumber.replace(/\\s/g, \"\");\r\n    // Tüm karakterlerin sayı olup olmadığını kontrol et\r\n    if (!/^\\d+$/.test(cardNumber)) {\r\n        return false;\r\n    }\r\n\r\n    const digits = cardNumber.split('').map(Number).reverse();\r\n    const sum = digits.reduce((acc, digit, index) => {\r\n        // Çift pozisyondaki rakamları 2 ile çarp ve basamakları ayır\r\n        if (index % 2 === 1) {\r\n            digit *= 2;\r\n            if (digit > 9) {\r\n                digit -= 9;\r\n            }\r\n        }\r\n        return acc + digit;\r\n    }, 0);\r\n\r\n    // Toplam 10'a bölünebiliyorsa geçerlidir\r\n    return sum % 10 === 0;\r\n}\r\ncomponents.creditCard.rules.push(() => isValidCard(components.creditCard.qValue));\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+					"TO": 1,
+					"HL": "TS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child"
+			},
+			"S": {
+				"xs-xl": {
+					"pageBackgroundColor": "#ffffff",
+					"statusBarColor": "#ffffff"
+				}
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container container--fluid'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "VRowComp",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_134",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "'span'",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"processHtml": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "'Kredi Kartı Numarası'",
+																	"T": "prop",
+																	"HL": "QS"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_134"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginTop": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginLeft": "",
+																	"paddingTop": "",
+																	"paddingRight": "",
+																	"paddingBottom": "",
+																	"paddingLeft": "",
+																	"fontColor": "#000000",
+																	"fontFamily": "Arial",
+																	"fontSize": "14px",
+																	"fontStyle": "normal",
+																	"fontWeight": "600",
+																	"combinedFont": "Arial-SemiBold",
+																	"ThemeFont": "Custom",
+																	"lineHeight": "16.1px"
+																}
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_133",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_133"
+											},
+											"O": {
+												"cType": "slot"
+											},
+											"S": {
+												"xs-xl": {
+													"col": "12",
+													"flexDirection": "column",
+													"alignItems": "",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "4px",
+													"marginTop": "",
+													"paddingTop": "0px",
+													"paddingBottom": "0px",
+													"paddingLeft": "0px",
+													"paddingRight": "0px",
+													"backgroundColor": "#ffffff",
+													"boxShadow": ""
+												}
+											}
+										},
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VTextField",
+															"P": {
+																"ID": {
+																	"H": "creditCard",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"hideDetails": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"rules": {
+																	"H": "[Quick.validation.required('Kredi kartı numarasını giriniz.')]",
+																	"T": "prop",
+																	"HL": "GUI"
+																},
+																"format": {
+																	"H": "'creditcard'",
+																	"T": "attr",
+																	"HL": "QS"
+																},
+																"placeholder": {
+																	"H": "'Kredi Kartı Numarası Girin'",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"qValue": {
+																	"H": "workflowStore.context.dataInstance.creditCardNumber",
+																	"T": "prop",
+																	"HL": "QS"
+																}
+															},
+															"E": {
+																"change": {
+																	"H": "\ndebugger;\nquick.workflowStore.context.dataInstance.creditCardNumber = value;\nquick.store.set('$context_a236711b-aa1b-4b42-b336-3bb486ca07cd', quick.workflowStore);\n",
+																	"P": "value:any",
+																	"HL": "TS"
+																}
+															},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_157"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginLeft": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginTop": "",
+																	"paddingTop": "0px",
+																	"paddingBottom": "",
+																	"paddingLeft": "",
+																	"paddingRight": "",
+																	"width": "599px",
+																	"height": "32px",
+																	"maxWidth": "",
+																	"maxHeight": "",
+																	"minWidth": "",
+																	"minHeight": "",
+																	"unlink": "false",
+																	"unlinkMax": "false",
+																	"unlinkMin": "false",
+																	"isSizeCollapsed": "false",
+																	"dense": "",
+																	"labelDefaultFontColor": "#c6c6c6",
+																	"labelDefaultFontFamily": "Arial",
+																	"labelDefaultFontSize": "14px",
+																	"labelDefaultFontStyle": "normal",
+																	"labelDefaultFontWeight": "400",
+																	"labelDefaultCombinedFont": "",
+																	"labelDefaultThemeFont": "Custom",
+																	"prefixFontColor": "#000",
+																	"prefixFontFamily": "Arial",
+																	"prefixFontSize": "14px",
+																	"prefixFontStyle": "normal",
+																	"prefixFontWeight": "400",
+																	"prefixCombinedFont": "Arial-Regular",
+																	"prefixThemeFont": "Custom",
+																	"PHFontColor": "#c6c6c6",
+																	"PHFontFamily": "Arial",
+																	"PHFontSize": "14px",
+																	"PHFontStyle": "normal",
+																	"PHFontWeight": "400",
+																	"PHCombinedFont": "",
+																	"PHThemeFont": "Custom",
+																	"inputFontColor": "#000",
+																	"inputFontFamily": "Roboto",
+																	"inputFontSize": "16px",
+																	"inputFontStyle": "normal",
+																	"inputFontWeight": "400",
+																	"inputCombinedFont": "Roboto-Regular",
+																	"inputDefaultThemeFont": "Custom",
+																	"errorMessageFontColor": "#E96767",
+																	"errorMessageFontFamily": "Roboto",
+																	"errorMessageFontSize": "12px",
+																	"errorMessageFontStyle": "normal",
+																	"errorMessageFontWeight": "400",
+																	"EMCombinedFont": "Roboto-Regular",
+																	"errorMessageThemeFont": "Custom",
+																	"errorMessageLineHeight": "",
+																	"backgroundColor": "#ffffff",
+																	"innerBoxShadow": "",
+																	"activeBorderColor": "#1976d2",
+																	"innerBoxSizing": "",
+																	"innerBorderTopStyle": "solid",
+																	"innerBorderRightStyle": "solid",
+																	"innerBorderBottomStyle": "solid",
+																	"innerBorderLeftStyle": "solid",
+																	"innerBorderTopLeftRadius": "4px",
+																	"innerBorderTopRightRadius": "4px",
+																	"innerBorderBottomLeftRadius": "4px",
+																	"innerBorderBottomRightRadius": "4px",
+																	"innerBorderTopWidth": "1px",
+																	"innerBorderRightWidth": "1px",
+																	"innerBorderBottomWidth": "1px",
+																	"innerBorderLeftWidth": "1px",
+																	"innerDefaultBorderColor": "#c6c6c6",
+																	"innerSides": "Top,Right,Bottom,Left",
+																	"outlined": ""
+																}
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_151",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_151"
+											},
+											"O": {
+												"cType": "slot"
+											},
+											"S": {
+												"xs-xl": {
+													"col": "12",
+													"flexDirection": "column",
+													"alignItems": "",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "20px",
+													"marginTop": "",
+													"paddingTop": "0px",
+													"paddingBottom": "0px",
+													"paddingLeft": "0px",
+													"paddingRight": "0px",
+													"backgroundColor": "#ffffff",
+													"boxShadow": ""
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "slot"
+							},
+							"S": {
+								"xs-xl": {
+									"marginLeft": "0px",
+									"marginRight": "0px",
+									"marginBottom": "0px",
+									"marginTop": "0px",
+									"paddingTop": "20px",
+									"paddingBottom": "20px",
+									"paddingLeft": "20px",
+									"paddingRight": "20px",
+									"width": "",
+									"height": "",
+									"backgroundColor": "#ffffff",
+									"boxShadow": ""
+								}
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_5"
+			},
+			"O": {
+				"cType": "slot"
+			},
+			"S": {
+				"xs-xl": {
+					"marginLeft": "",
+					"marginRight": "",
+					"marginBottom": "",
+					"marginTop": "",
+					"paddingTop": "0px",
+					"paddingBottom": "0px",
+					"paddingLeft": "0px",
+					"paddingRight": "0px",
+					"width": "",
+					"height": "",
+					"backgroundColor": "#ffffff",
+					"boxShadow": ""
+				}
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "PageComp",
+					"T": "prop"
+				},
+				"triggerOnRestored": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"PostRender": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ndebugger;\r\nfunction isValidCard(cardNumber) {\r\n    var isValidLuhn = isValidLuhnNumber(cardNumber);\r\n    if (!isValidLuhn) {\r\n        return \"lütfen geçerli bir kart numarası giriniz\";\r\n    }\r\n}\r\nfunction isValidLuhnNumber(cardNumber) {\r\n    if (!cardNumber || cardNumber.trim() == '') {\r\n        return false;\r\n    }\r\n    cardNumber = cardNumber.replace(/\\s/g, \"\");\r\n    // Tüm karakterlerin sayı olup olmadığını kontrol et\r\n    if (!/^\\d+$/.test(cardNumber)) {\r\n        return false;\r\n    }\r\n    var digits = cardNumber.split('').map(Number).reverse();\r\n    var sum = digits.reduce(function (acc, digit, index) {\r\n        // Çift pozisyondaki rakamları 2 ile çarp ve basamakları ayır\r\n        if (index % 2 === 1) {\r\n            digit *= 2;\r\n            if (digit > 9) {\r\n                digit -= 9;\r\n            }\r\n        }\r\n        return acc + digit;\r\n    }, 0);\r\n    // Toplam 10'a bölünebiliyorsa geçerlidir\r\n    return sum % 10 === 0;\r\n}\r\ncomponents.creditCard.rules.push(function () { return isValidCard(components.creditCard.qValue); });\r\n",
+					"TO": 1,
+					"HL": "JS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			},
+			"S": {
+				"xs-xl": {
+					"pageBackgroundColor": "#ffffff",
+					"statusBarColor": "#ffffff"
+				}
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container container--fluid'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "VRowComp",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_134",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "╬'span'╩╩",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"processHtml": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬'Kredi Kartı Numarası'╩╩",
+																	"T": "prop",
+																	"HL": "QS"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_134"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginTop": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginLeft": "",
+																	"paddingTop": "",
+																	"paddingRight": "",
+																	"paddingBottom": "",
+																	"paddingLeft": "",
+																	"fontColor": "#000000",
+																	"fontFamily": "Arial",
+																	"fontSize": "14px",
+																	"fontStyle": "normal",
+																	"fontWeight": "600",
+																	"combinedFont": "Arial-SemiBold",
+																	"ThemeFont": "Custom",
+																	"lineHeight": "16.1px"
+																}
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "q-label newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_133",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_133"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											},
+											"S": {
+												"xs-xl": {
+													"col": "12",
+													"flexDirection": "column",
+													"alignItems": "",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "4px",
+													"marginTop": "",
+													"paddingTop": "0px",
+													"paddingBottom": "0px",
+													"paddingLeft": "0px",
+													"paddingRight": "0px",
+													"backgroundColor": "#ffffff",
+													"boxShadow": ""
+												}
+											}
+										},
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VTextField",
+															"P": {
+																"ID": {
+																	"H": "creditCard",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"hideDetails": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"rules": {
+																	"H": "╬[]╠()╣.╣.╣Quick╩╠validation╩╩╠required╩╩╠'Kredi kartı numarasını giriniz.'╩╩╩╩",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"format": {
+																	"H": "╬'creditcard'╩╩",
+																	"T": "attr",
+																	"HL": "QS"
+																},
+																"placeholder": {
+																	"H": "╬'Kredi Kartı Numarası Girin'╩╩",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"qValue": {
+																	"H": "╬.╣.╣.╣workflowStore╩╠context╩╩╠dataInstance╩╩╠creditCardNumber╩╩╩",
+																	"T": "prop",
+																	"HL": "QS"
+																}
+															},
+															"E": {
+																"change": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\n\r\ndebugger;\r\nquick.workflowStore.context.dataInstance.creditCardNumber = value;\r\nquick.store.set('$context_a236711b-aa1b-4b42-b336-3bb486ca07cd', quick.workflowStore);\r\n",
+																	"P": "value:any",
+																	"HL": "JS"
+																}
+															},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_157"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginLeft": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginTop": "",
+																	"paddingTop": "0px",
+																	"paddingBottom": "",
+																	"paddingLeft": "",
+																	"paddingRight": "",
+																	"width": "599px",
+																	"height": "32px",
+																	"maxWidth": "",
+																	"maxHeight": "",
+																	"minWidth": "",
+																	"minHeight": "",
+																	"unlink": "false",
+																	"unlinkMax": "false",
+																	"unlinkMin": "false",
+																	"isSizeCollapsed": "false",
+																	"dense": "",
+																	"labelDefaultFontColor": "#c6c6c6",
+																	"labelDefaultFontFamily": "Arial",
+																	"labelDefaultFontSize": "14px",
+																	"labelDefaultFontStyle": "normal",
+																	"labelDefaultFontWeight": "400",
+																	"labelDefaultCombinedFont": "",
+																	"labelDefaultThemeFont": "Custom",
+																	"prefixFontColor": "#000",
+																	"prefixFontFamily": "Arial",
+																	"prefixFontSize": "14px",
+																	"prefixFontStyle": "normal",
+																	"prefixFontWeight": "400",
+																	"prefixCombinedFont": "Arial-Regular",
+																	"prefixThemeFont": "Custom",
+																	"PHFontColor": "#c6c6c6",
+																	"PHFontFamily": "Arial",
+																	"PHFontSize": "14px",
+																	"PHFontStyle": "normal",
+																	"PHFontWeight": "400",
+																	"PHCombinedFont": "",
+																	"PHThemeFont": "Custom",
+																	"inputFontColor": "#000",
+																	"inputFontFamily": "Roboto",
+																	"inputFontSize": "16px",
+																	"inputFontStyle": "normal",
+																	"inputFontWeight": "400",
+																	"inputCombinedFont": "Roboto-Regular",
+																	"inputDefaultThemeFont": "Custom",
+																	"errorMessageFontColor": "#E96767",
+																	"errorMessageFontFamily": "Roboto",
+																	"errorMessageFontSize": "12px",
+																	"errorMessageFontStyle": "normal",
+																	"errorMessageFontWeight": "400",
+																	"EMCombinedFont": "Roboto-Regular",
+																	"errorMessageThemeFont": "Custom",
+																	"errorMessageLineHeight": "",
+																	"backgroundColor": "#ffffff",
+																	"innerBoxShadow": "",
+																	"activeBorderColor": "#1976d2",
+																	"innerBoxSizing": "",
+																	"innerBorderTopStyle": "solid",
+																	"innerBorderRightStyle": "solid",
+																	"innerBorderBottomStyle": "solid",
+																	"innerBorderLeftStyle": "solid",
+																	"innerBorderTopLeftRadius": "4px",
+																	"innerBorderTopRightRadius": "4px",
+																	"innerBorderBottomLeftRadius": "4px",
+																	"innerBorderBottomRightRadius": "4px",
+																	"innerBorderTopWidth": "1px",
+																	"innerBorderRightWidth": "1px",
+																	"innerBorderBottomWidth": "1px",
+																	"innerBorderLeftWidth": "1px",
+																	"innerDefaultBorderColor": "#c6c6c6",
+																	"innerSides": "Top,Right,Bottom,Left",
+																	"outlined": ""
+																}
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted v-text-field--placeholder undefined newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_151",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_151"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											},
+											"S": {
+												"xs-xl": {
+													"col": "12",
+													"flexDirection": "column",
+													"alignItems": "",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "20px",
+													"marginTop": "",
+													"paddingTop": "0px",
+													"paddingBottom": "0px",
+													"paddingLeft": "0px",
+													"paddingRight": "0px",
+													"backgroundColor": "#ffffff",
+													"boxShadow": ""
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							},
+							"S": {
+								"xs-xl": {
+									"marginLeft": "0px",
+									"marginRight": "0px",
+									"marginBottom": "0px",
+									"marginTop": "0px",
+									"paddingTop": "20px",
+									"paddingBottom": "20px",
+									"paddingLeft": "20px",
+									"paddingRight": "20px",
+									"width": "",
+									"height": "",
+									"backgroundColor": "#ffffff",
+									"boxShadow": ""
+								}
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_5"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container container--fluid newDropBorder"
+			},
+			"S": {
+				"xs-xl": {
+					"marginLeft": "",
+					"marginRight": "",
+					"marginBottom": "",
+					"marginTop": "",
+					"paddingTop": "0px",
+					"paddingBottom": "0px",
+					"paddingLeft": "0px",
+					"paddingRight": "0px",
+					"width": "",
+					"height": "",
+					"backgroundColor": "#ffffff",
+					"boxShadow": ""
+				}
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"opt": {
+		"V": 2.2
+	}
+};
+export default pjson

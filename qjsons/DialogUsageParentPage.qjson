@@ -1,0 +1,1096 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "PageComp",
+					"T": "prop"
+				},
+				"triggerOnRestored": {
+					"H": "false",
+					"T": "prop"
+				},
+				"externalEvents": {
+					"H": "[{name='save', params=['param1']}]",
+					"T": "prop",
+					"HL": "QS"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child"
+			},
+			"S": {
+				"xs-xl": {
+					"pageBackgroundColor": "#ffffff",
+					"statusBarColor": "#ffffff"
+				}
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "VRowComp",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_6",
+																	"T": "prop"
+																},
+																"depressed": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "\r\ndebugger;\r\n(<any>components.myDialogBlock).openDialog({callType:\"call1\"});",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "TS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_9",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'Open Dialog call1'",
+																					"T": "prop",
+																					"HL": "QS"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_9"
+																			},
+																			"O": {
+																				"cType": "child"
+																			},
+																			"S": {
+																				"xs-xl": {
+																					"marginTop": "",
+																					"marginRight": "",
+																					"marginBottom": "",
+																					"marginLeft": "",
+																					"paddingTop": "",
+																					"paddingRight": "",
+																					"paddingBottom": "",
+																					"paddingLeft": "",
+																					"fontColor": "#000000",
+																					"fontFamily": "Roboto",
+																					"fontSize": "16px",
+																					"fontStyle": "normal",
+																					"fontWeight": "400",
+																					"combinedFont": "Roboto-Regular",
+																					"ThemeFont": "Custom",
+																					"lineHeight": "20px",
+																					"textAlign": "start",
+																					"textDecorationLine": "none",
+																					"textDecorationStyle": "solid",
+																					"textDecorationColor": "#000000"
+																				}
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_6"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginTop": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginLeft": "",
+																	"paddingTop": "",
+																	"paddingRight": "16px",
+																	"paddingBottom": "",
+																	"paddingLeft": "16px",
+																	"width": "",
+																	"height": "",
+																	"maxWidth": "",
+																	"maxHeight": "",
+																	"minWidth": "",
+																	"minHeight": "",
+																	"unlink": "false",
+																	"unlinkMax": "false",
+																	"unlinkMin": "false",
+																	"isSizeCollapsed": "false",
+																	"fontColor": "#ffffff",
+																	"fontFamily": "Roboto",
+																	"fontSize": "16px",
+																	"fontStyle": "normal",
+																	"fontWeight": "400",
+																	"combinedFont": "Roboto-Regular",
+																	"ThemeFont": "Custom",
+																	"lineHeight": "20px",
+																	"backgroundColor": "#1976D2",
+																	"disabledBackgroundColor": "rgba(0,0,0,.12)",
+																	"boxShadow": "",
+																	"boxSizing": "",
+																	"borderTopStyle": "solid",
+																	"borderRightStyle": "solid",
+																	"borderBottomStyle": "solid",
+																	"borderLeftStyle": "solid",
+																	"borderTopLeftRadius": "4px",
+																	"borderTopRightRadius": "4px",
+																	"borderBottomLeftRadius": "4px",
+																	"borderBottomRightRadius": "4px",
+																	"borderTopWidth": "0px",
+																	"borderRightWidth": "0px",
+																	"borderBottomWidth": "0px",
+																	"borderLeftWidth": "0px",
+																	"defaultBorderColor": "",
+																	"sides": "Top,Right,Bottom,Left"
+																}
+															},
+															"SC": {
+																"fontColor": {
+																	"VIcon": "iconColor",
+																	"QLabel": "fontColor"
+																},
+																"fontStyle": {
+																	"QLabel": "fontStyle"
+																},
+																"fontSize": {
+																	"QLabel": "fontSize"
+																},
+																"fontFamily": {
+																	"QLabel": "fontFamily"
+																},
+																"fontWeight": {
+																	"QLabel": "fontWeight"
+																},
+																"combinedFont": {
+																	"QLabel": "combinedFont"
+																},
+																"lineHeight": {
+																	"QLabel": "lineHeight"
+																},
+																"bacgroundColor": {
+																	"VIcon": "backgroundColor"
+																}
+															},
+															"O": {
+																"cType": "slot"
+															}
+														},
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_13",
+																	"T": "prop"
+																},
+																"depressed": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "\r\ndebugger;\r\n(<any>components.myDialogBlock).openDialog({callType:\"call2\"});",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "TS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_14",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'Open Dialog call2'",
+																					"T": "prop",
+																					"HL": "QS"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_14"
+																			},
+																			"O": {
+																				"cType": "child"
+																			},
+																			"S": {
+																				"xs-xl": {
+																					"marginTop": "",
+																					"marginRight": "",
+																					"marginBottom": "",
+																					"marginLeft": "",
+																					"paddingTop": "",
+																					"paddingRight": "",
+																					"paddingBottom": "",
+																					"paddingLeft": "",
+																					"fontColor": "#000000",
+																					"fontFamily": "Roboto",
+																					"fontSize": "16px",
+																					"fontStyle": "normal",
+																					"fontWeight": "400",
+																					"combinedFont": "Roboto-Regular",
+																					"ThemeFont": "Custom",
+																					"lineHeight": "20px",
+																					"textAlign": "start",
+																					"textDecorationLine": "none",
+																					"textDecorationStyle": "solid",
+																					"textDecorationColor": "#000000"
+																				}
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_13"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginTop": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginLeft": "",
+																	"paddingTop": "",
+																	"paddingRight": "16px",
+																	"paddingBottom": "",
+																	"paddingLeft": "16px",
+																	"width": "",
+																	"height": "",
+																	"maxWidth": "",
+																	"maxHeight": "",
+																	"minWidth": "",
+																	"minHeight": "",
+																	"unlink": "false",
+																	"unlinkMax": "false",
+																	"unlinkMin": "false",
+																	"isSizeCollapsed": "false",
+																	"fontColor": "#ffffff",
+																	"fontFamily": "Roboto",
+																	"fontSize": "16px",
+																	"fontStyle": "normal",
+																	"fontWeight": "400",
+																	"combinedFont": "Roboto-Regular",
+																	"ThemeFont": "Custom",
+																	"lineHeight": "20px",
+																	"backgroundColor": "#1976D2",
+																	"disabledBackgroundColor": "rgba(0,0,0,.12)",
+																	"boxShadow": "",
+																	"boxSizing": "",
+																	"borderTopStyle": "solid",
+																	"borderRightStyle": "solid",
+																	"borderBottomStyle": "solid",
+																	"borderLeftStyle": "solid",
+																	"borderTopLeftRadius": "4px",
+																	"borderTopRightRadius": "4px",
+																	"borderBottomLeftRadius": "4px",
+																	"borderBottomRightRadius": "4px",
+																	"borderTopWidth": "0px",
+																	"borderRightWidth": "0px",
+																	"borderBottomWidth": "0px",
+																	"borderLeftWidth": "0px",
+																	"defaultBorderColor": "",
+																	"sides": "Top,Right,Bottom,Left"
+																}
+															},
+															"SC": {
+																"fontColor": {
+																	"VIcon": "iconColor",
+																	"QLabel": "fontColor"
+																},
+																"fontStyle": {
+																	"QLabel": "fontStyle"
+																},
+																"fontSize": {
+																	"QLabel": "fontSize"
+																},
+																"fontFamily": {
+																	"QLabel": "fontFamily"
+																},
+																"fontWeight": {
+																	"QLabel": "fontWeight"
+																},
+																"combinedFont": {
+																	"QLabel": "combinedFont"
+																},
+																"lineHeight": {
+																	"QLabel": "lineHeight"
+																},
+																"bacgroundColor": {
+																	"VIcon": "backgroundColor"
+																}
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "VColComp",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_3"
+											},
+											"O": {
+												"cType": "slot"
+											},
+											"S": {
+												"xs-xl": {
+													"col": "",
+													"flexDirection": "column",
+													"alignItems": "",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "12px",
+													"paddingBottom": "12px",
+													"paddingLeft": "12px",
+													"paddingRight": "12px",
+													"backgroundColor": "#ffffff",
+													"boxShadow": ""
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "slot"
+							},
+							"S": {
+								"xs-xl": {
+									"marginLeft": "0px",
+									"marginRight": "0px",
+									"marginBottom": "0px",
+									"marginTop": "0px",
+									"paddingTop": "",
+									"paddingBottom": "",
+									"paddingLeft": "",
+									"paddingRight": "",
+									"width": "",
+									"height": "",
+									"backgroundColor": "#ffffff",
+									"boxShadow": ""
+								}
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_5"
+			},
+			"O": {
+				"cType": "slot"
+			},
+			"S": {
+				"xs-xl": {
+					"marginLeft": "",
+					"marginRight": "",
+					"marginBottom": "",
+					"marginTop": "",
+					"paddingTop": "12px",
+					"paddingBottom": "12px",
+					"paddingLeft": "12px",
+					"paddingRight": "12px",
+					"width": "",
+					"height": "",
+					"backgroundColor": "#ffffff",
+					"boxShadow": ""
+				}
+			}
+		},
+		{
+			"T": "CustomComponent",
+			"P": {
+				"ID": {
+					"H": "myDialogBlock",
+					"T": "prop",
+					"HL": "QS"
+				},
+				"QJsonPath": {
+					"H": "'/static/DialogBlockSubPage.qjson'",
+					"T": "prop",
+					"HL": "QS"
+				},
+				"prop1": {
+					"H": "'call1'",
+					"T": "prop",
+					"HL": "QS"
+				}
+			},
+			"E": {
+				"save": {
+					"H": "debugger;\r\ndeclare var param1: string;\r\nlet callType = param1;\r\nquick.EM.trace(\"callType\");\r\nquick.EM.trace(callType);",
+					"C": true,
+					"HL": "TS"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "Ghost",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_12",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_12"
+							},
+							"O": {
+								"cType": "child"
+							}
+						}
+					],
+					"cType": "child"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_10"
+			},
+			"O": {
+				"cType": "child",
+				"dynProps": true
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "PageComp",
+					"T": "prop"
+				},
+				"triggerOnRestored": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				},
+				"externalEvents": {
+					"H": "╬[]╠{}╠=╣name╩╠'save'╩╩╠=╣params╩╠[]╠'param1'╩╩╩╩╩╩",
+					"T": "prop",
+					"HL": "QS"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			},
+			"S": {
+				"xs-xl": {
+					"pageBackgroundColor": "#ffffff",
+					"statusBarColor": "#ffffff"
+				}
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "VRowComp",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_6",
+																	"T": "prop"
+																},
+																"depressed": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ndebugger;\r\ncomponents.myDialogBlock.openDialog({ callType: \"call1\" });\r\n",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "JS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_9",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'Open Dialog call1'╩╩",
+																					"T": "prop",
+																					"HL": "QS"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_9"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "q-label newDropBorder"
+																			},
+																			"S": {
+																				"xs-xl": {
+																					"marginTop": "",
+																					"marginRight": "",
+																					"marginBottom": "",
+																					"marginLeft": "",
+																					"paddingTop": "",
+																					"paddingRight": "",
+																					"paddingBottom": "",
+																					"paddingLeft": "",
+																					"ThemeFont": "Custom",
+																					"textAlign": "start",
+																					"textDecorationLine": "none",
+																					"textDecorationStyle": "solid",
+																					"textDecorationColor": "#000000",
+																					"fontColor": "#ffffff",
+																					"fontStyle": "normal",
+																					"fontSize": "16px",
+																					"fontFamily": "Roboto",
+																					"fontWeight": "400",
+																					"combinedFont": "Roboto-Regular",
+																					"lineHeight": "20px"
+																				}
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_6"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginTop": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginLeft": "",
+																	"paddingTop": "",
+																	"paddingRight": "16px",
+																	"paddingBottom": "",
+																	"paddingLeft": "16px",
+																	"width": "",
+																	"height": "",
+																	"maxWidth": "",
+																	"maxHeight": "",
+																	"minWidth": "",
+																	"minHeight": "",
+																	"unlink": "false",
+																	"unlinkMax": "false",
+																	"unlinkMin": "false",
+																	"isSizeCollapsed": "false",
+																	"fontColor": "#ffffff",
+																	"fontFamily": "Roboto",
+																	"fontSize": "16px",
+																	"fontStyle": "normal",
+																	"fontWeight": "400",
+																	"combinedFont": "Roboto-Regular",
+																	"ThemeFont": "Custom",
+																	"lineHeight": "20px",
+																	"backgroundColor": "#1976D2",
+																	"disabledBackgroundColor": "rgba(0,0,0,.12)",
+																	"boxShadow": "",
+																	"boxSizing": "",
+																	"borderTopStyle": "solid",
+																	"borderRightStyle": "solid",
+																	"borderBottomStyle": "solid",
+																	"borderLeftStyle": "solid",
+																	"borderTopLeftRadius": "4px",
+																	"borderTopRightRadius": "4px",
+																	"borderBottomLeftRadius": "4px",
+																	"borderBottomRightRadius": "4px",
+																	"borderTopWidth": "0px",
+																	"borderRightWidth": "0px",
+																	"borderBottomWidth": "0px",
+																	"borderLeftWidth": "0px",
+																	"defaultBorderColor": "",
+																	"sides": "Top,Right,Bottom,Left"
+																}
+															},
+															"SC": {
+																"fontColor": {
+																	"VIcon": "iconColor",
+																	"QLabel": "fontColor"
+																},
+																"fontStyle": {
+																	"QLabel": "fontStyle"
+																},
+																"fontSize": {
+																	"QLabel": "fontSize"
+																},
+																"fontFamily": {
+																	"QLabel": "fontFamily"
+																},
+																"fontWeight": {
+																	"QLabel": "fontWeight"
+																},
+																"combinedFont": {
+																	"QLabel": "combinedFont"
+																},
+																"lineHeight": {
+																	"QLabel": "lineHeight"
+																},
+																"bacgroundColor": {
+																	"VIcon": "backgroundColor"
+																}
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-btn v-btn--depressed theme--light v-size--default newDropBorder"
+															}
+														},
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_13",
+																	"T": "prop"
+																},
+																"depressed": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ndebugger;\r\ncomponents.myDialogBlock.openDialog({ callType: \"call2\" });\r\n",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "JS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_14",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'Open Dialog call2'╩╩",
+																					"T": "prop",
+																					"HL": "QS"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_14"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "q-label newDropBorder"
+																			},
+																			"S": {
+																				"xs-xl": {
+																					"marginTop": "",
+																					"marginRight": "",
+																					"marginBottom": "",
+																					"marginLeft": "",
+																					"paddingTop": "",
+																					"paddingRight": "",
+																					"paddingBottom": "",
+																					"paddingLeft": "",
+																					"ThemeFont": "Custom",
+																					"textAlign": "start",
+																					"textDecorationLine": "none",
+																					"textDecorationStyle": "solid",
+																					"textDecorationColor": "#000000",
+																					"fontColor": "#ffffff",
+																					"fontStyle": "normal",
+																					"fontSize": "16px",
+																					"fontFamily": "Roboto",
+																					"fontWeight": "400",
+																					"combinedFont": "Roboto-Regular",
+																					"lineHeight": "20px"
+																				}
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_13"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginTop": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginLeft": "",
+																	"paddingTop": "",
+																	"paddingRight": "16px",
+																	"paddingBottom": "",
+																	"paddingLeft": "16px",
+																	"width": "",
+																	"height": "",
+																	"maxWidth": "",
+																	"maxHeight": "",
+																	"minWidth": "",
+																	"minHeight": "",
+																	"unlink": "false",
+																	"unlinkMax": "false",
+																	"unlinkMin": "false",
+																	"isSizeCollapsed": "false",
+																	"fontColor": "#ffffff",
+																	"fontFamily": "Roboto",
+																	"fontSize": "16px",
+																	"fontStyle": "normal",
+																	"fontWeight": "400",
+																	"combinedFont": "Roboto-Regular",
+																	"ThemeFont": "Custom",
+																	"lineHeight": "20px",
+																	"backgroundColor": "#1976D2",
+																	"disabledBackgroundColor": "rgba(0,0,0,.12)",
+																	"boxShadow": "",
+																	"boxSizing": "",
+																	"borderTopStyle": "solid",
+																	"borderRightStyle": "solid",
+																	"borderBottomStyle": "solid",
+																	"borderLeftStyle": "solid",
+																	"borderTopLeftRadius": "4px",
+																	"borderTopRightRadius": "4px",
+																	"borderBottomLeftRadius": "4px",
+																	"borderBottomRightRadius": "4px",
+																	"borderTopWidth": "0px",
+																	"borderRightWidth": "0px",
+																	"borderBottomWidth": "0px",
+																	"borderLeftWidth": "0px",
+																	"defaultBorderColor": "",
+																	"sides": "Top,Right,Bottom,Left"
+																}
+															},
+															"SC": {
+																"fontColor": {
+																	"VIcon": "iconColor",
+																	"QLabel": "fontColor"
+																},
+																"fontStyle": {
+																	"QLabel": "fontStyle"
+																},
+																"fontSize": {
+																	"QLabel": "fontSize"
+																},
+																"fontFamily": {
+																	"QLabel": "fontFamily"
+																},
+																"fontWeight": {
+																	"QLabel": "fontWeight"
+																},
+																"combinedFont": {
+																	"QLabel": "combinedFont"
+																},
+																"lineHeight": {
+																	"QLabel": "lineHeight"
+																},
+																"bacgroundColor": {
+																	"VIcon": "backgroundColor"
+																}
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-btn v-btn--depressed theme--light v-size--default newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "VColComp",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_3"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											},
+											"S": {
+												"xs-xl": {
+													"col": "",
+													"flexDirection": "column",
+													"alignItems": "",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "12px",
+													"paddingBottom": "12px",
+													"paddingLeft": "12px",
+													"paddingRight": "12px",
+													"backgroundColor": "#ffffff",
+													"boxShadow": ""
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							},
+							"S": {
+								"xs-xl": {
+									"marginLeft": "0px",
+									"marginRight": "0px",
+									"marginBottom": "0px",
+									"marginTop": "0px",
+									"paddingTop": "",
+									"paddingBottom": "",
+									"paddingLeft": "",
+									"paddingRight": "",
+									"width": "",
+									"height": "",
+									"backgroundColor": "#ffffff",
+									"boxShadow": ""
+								}
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_5"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container newDropBorder"
+			},
+			"S": {
+				"xs-xl": {
+					"marginLeft": "",
+					"marginRight": "",
+					"marginBottom": "",
+					"marginTop": "",
+					"paddingTop": "12px",
+					"paddingBottom": "12px",
+					"paddingLeft": "12px",
+					"paddingRight": "12px",
+					"width": "",
+					"height": "",
+					"backgroundColor": "#ffffff",
+					"boxShadow": ""
+				}
+			}
+		},
+		{
+			"T": "CustomComponent",
+			"P": {
+				"ID": {
+					"H": "myDialogBlock",
+					"T": "prop",
+					"HL": "QS"
+				},
+				"QJsonPath": {
+					"H": "╬'/static/DialogBlockSubPage.qjson'╩╩",
+					"T": "prop",
+					"HL": "QS"
+				},
+				"prop1": {
+					"H": "╬'call1'╩╩",
+					"T": "prop",
+					"HL": "QS"
+				}
+			},
+			"E": {
+				"save": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ndebugger;\r\nvar callType = param1;\r\nquick.EM.trace(\"callType\");\r\nquick.EM.trace(callType);\r\n",
+					"C": true,
+					"HL": "JS"
+				}
+			},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "Ghost",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_12",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_12"
+							},
+							"O": {
+								"cType": "child",
+								"compDomClasses": "editor-ghost-comp"
+							}
+						}
+					],
+					"cType": "child"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_10"
+			},
+			"O": {
+				"cType": "child",
+				"dynProps": true,
+				"compDomClasses": "newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"opt": {
+		"V": 2.2
+	}
+};
+export default pjson
