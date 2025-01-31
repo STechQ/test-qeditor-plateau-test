@@ -1,12 +1,11 @@
 export declare class StyleDomInteractor {
     private readonly uid;
-    private styleSheet;
+    private styleTag;
     private isAttached;
     private ruleList?;
-    private cssString;
     constructor(uid: string);
     private createStyleTag;
-    attach(styleTag?: CSSStyleSheet): void;
+    attach(styleTag?: HTMLStyleElement): void;
     detach(): void;
     reset(): void;
     clearRule(index: number): void;

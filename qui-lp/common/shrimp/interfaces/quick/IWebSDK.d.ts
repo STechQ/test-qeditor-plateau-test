@@ -10,6 +10,7 @@ import { IContainerServices } from "./IContainerServices";
 import { IRegionalDefinition } from "./IFormattingDefinition";
 import { IUXManager } from "./IUXManager";
 import { IWebSDKSetingsBus } from "./IWebSDKSettingsBus";
+import { INamedCompModel } from "@stechquick/algae/lib/quick/INamedCompModel";
 export interface IWebSDKSettingsWrapper {
     settings: IWebSDKSettings;
 }
@@ -118,6 +119,7 @@ export interface IWebSDK {
     setLocalProxyOnClient(content: boolean): void;
     LoadModuleCompLists(modulePaths: Record<string, string>): Promise<any>;
     setRegionalDefinition(regionalSettings: Array<IRegionalDefinition> | undefined): void;
+    NamedComponentInit(compName: string, compPath: string, compModel?: INamedCompModel): void;
     setBackEndInfHeaders(backendInf: any): void;
     SetExternalQJsonRetriever(externalQJsonRetriever: IExternalQJsonRetriever): void;
     UpdateSettings(allSettings: IWebSDKSetingsBus): void;

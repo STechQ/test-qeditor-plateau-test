@@ -15,6 +15,7 @@ import { IWebSDKSetingsBus } from "../../../common/shrimp/interfaces/quick/IWebS
 import QJsonRetrieverImpl from './implementation/QJsonRetrieverImpl';
 import { StoreManagerHookCb } from "./implementation/StoreManager";
 import { UXManagerImpl } from "./implementation/UXManagerImpl";
+import { INamedCompModel } from "@stechquick/algae/lib/quick/INamedCompModel";
 export declare class WebSDK implements IWebSDK {
     static servicesWrapper: IContainerServicesWrapper;
     config: IRendererConfig;
@@ -38,6 +39,7 @@ export declare class WebSDK implements IWebSDK {
     private cssTagManager;
     constructor(settings: IWebSDKSettings, services?: IContainerServices, environmentInfo?: IDictionary<string>);
     UpdateSettings(allSettings: IWebSDKSetingsBus): void;
+    NamedComponentInit(compName: string, compPath: string, compModel?: INamedCompModel): Promise<void>;
     static getPlateauIAM(): IPlateauIAM;
     SetExternalQJsonRetriever(externalQJsonRetriever: IExternalQJsonRetriever): void;
     subscribeStoreData(name: string, cb: StoreManagerHookCb): void;
