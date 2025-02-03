@@ -18,7 +18,7 @@ export type ICase = ICaseInfo & {
     right: ISwitchExpression;
 };
 export type IDefaultCase = ICaseInfo & {};
-export type Operator = "and" | "or" | "eq" | "ne" | "in" | "nin" | "gt" | "gte" | "lt" | "lte";
+export type Operator = "and" | "or" | "eq" | "ne" | "in" | "nin" | "gt" | "gte" | "lt" | "lte" | "ns";
 export type ISwitchExpression = ISwitchVariableExp | ISwitchCaseExp;
 export type ISwitchExpressionBase = {
     vType: "variable" | "case";

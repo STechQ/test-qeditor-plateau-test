@@ -4,7 +4,7 @@ import * as React from "react";
 import { ISwitchCaseExp } from "../../../../common/everything/flow/runtimeModels/ISwitch";
 import { IVariable } from "../../../../common/everything/dataType/runtimemodels/IVariable";
 import { INestedStore, IStoreModelForFlow, Store } from "../../../../common/everything/store/designtimemodels/IStoreModel";
-import { IStudioUIModelBase, ModelType } from "../../../../common/everything/studio/ui/IStudioUIModelBase";
+import { IStudioUIModelBase } from "../../../../common/everything/studio/ui/IStudioUIModelBase";
 import { IWFModels } from "../../../../common/everything/workflow/runtimemodels/IModel";
 export interface IExpressionInputOptions {
     width?: string;
@@ -32,7 +32,6 @@ export type GetModelBody = (id: string, bodyKey: string) => Promise<IWFModels>;
 export type GetRoles = () => Array<IRoleProp>;
 export type GetSwimlanes = () => Array<ISwimlaneProp>;
 export type SetStoreSchema = (id: string, schema: IStoreModelForFlow) => IStoreModelForFlow;
-export type GetModelListCb = (type: ModelType) => Promise<Array<IStudioUIModelBase>>;
 export { IStudioUIModelBase };
 export interface ISwitchPropCase {
     operator: "==" | "other" | "empty" | "null";
@@ -65,7 +64,6 @@ export interface IEditSectionInput<PropType = IPropObject> {
         ui?: {
             basePath?: string;
             getModelBody?: GetModelBody;
-            getModels?: GetModelListCb;
             getRoles?: GetRoles;
             getSwimlanes?: GetSwimlanes;
             setSchema?: SetStoreSchema;
@@ -80,6 +78,7 @@ export interface IEditSectionInput<PropType = IPropObject> {
         store?: Store;
         nestedStore: INestedStore;
         readOnly: boolean;
+        models: Array<IStudioUIModelBase>;
     };
     react: {
         prop: {

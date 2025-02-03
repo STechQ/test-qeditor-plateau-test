@@ -2,7 +2,7 @@ import { IFlowModel } from "../../runtime/IFlowModel";
 import { IFlowCopyModel, IFlowDesignModel } from "../IFlowDesignModel";
 import { IFlowEditorModel } from "../IFlowEditorModel";
 import { IFlowEditorState } from "../IFlowEditorState";
-import { GetModelBody, GetModelListCb, IStepOptions, SetStoreSchema } from "../IStepOptions";
+import { GetModelBody, IStepOptions, IStudioUIModelBase, SetStoreSchema } from "../IStepOptions";
 import { IModifiedStatus } from "../common/IModifiedStatus";
 import { IWorkflowModel } from "../../../../../common/everything/workflow/runtimemodels/IWorkflow";
 import { IStoreModelForFlow } from "../../../../../common/everything/store/designtimemodels/IStoreModel";
@@ -29,9 +29,9 @@ export interface IInitOptions {
     ui?: {
         onModelBodyRequire?: GetModelBody;
         onStoreSchemaRequire?: SetStoreSchema;
-        onModelListRequire?: GetModelListCb;
         basePath?: string;
     };
+    models: Array<IStudioUIModelBase>;
 }
 export interface IFlowEditorProgram {
     init(options: IInitOptions): Promise<void>;
@@ -48,6 +48,7 @@ export interface IFlowEditorProgram {
     setSchema(schema: IStoreModelForFlow): void;
     setReadonly(readonly: boolean): void;
     setIsWorkFlow(isWorkFlow: boolean): void;
+    setModels(models: Array<IStudioUIModelBase>): void;
     undo(): Promise<boolean>;
     redo(): Promise<boolean>;
 }

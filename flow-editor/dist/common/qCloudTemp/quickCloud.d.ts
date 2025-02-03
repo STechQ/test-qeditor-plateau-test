@@ -2,6 +2,7 @@ import { ObjectID } from "../everything/dataType/runtimemodels/types";
 import { IOrganization, IOrganizationFeatures, IEditorTypes, IOrganizationCloud } from "./membership";
 import { IAppCloud } from "./application";
 import { ContentType, ModelType } from "../everything/studio/ui/IStudioUIModelBase";
+import { ITagValue } from "./tags";
 export declare const DEPENDED_MODEL_KEYS: string[];
 export declare const DEPENDED_IMAGE_KEYS: string[];
 export declare const APP_ITEM_CONTENT_TYPES: string[];
@@ -31,6 +32,7 @@ export declare const UISettingsType: {
     readonly settings: "Settings File";
     readonly localProxy: "Local Proxy File";
     readonly contSvc: "Container Services File";
+    readonly contSvcIntelli: "Container Services Intellisense";
     readonly css: "Style File";
     readonly compList: "Component List";
     readonly globalLocalization: "Global Localization";
@@ -90,6 +92,7 @@ export interface IApplication extends ICloudObject {
     lastPublishDate?: Date;
     mobileUsage?: IUpdateMobileUsage;
     lastReleasedVersion?: string;
+    tags?: Array<ITagValue>;
 }
 export interface IOrganizationData extends IOrganization {
     showOrgInfo: boolean;

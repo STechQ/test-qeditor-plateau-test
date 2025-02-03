@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { Store as StoreModel } from "../../../everything/store/designtimemodels/IStoreModel";
+import { IOption } from "./Select";
 export interface IStoreProps {
     className?: string;
     store: StoreModel;
@@ -8,6 +9,7 @@ export interface IStoreProps {
         ID: string;
         name: string;
     }>;
+    typeSelectOptions?: IOption[];
     workflowDataInstances?: Array<{
         ID: string;
         name: string;

@@ -7,6 +7,7 @@ interface IInputProps {
     disabled?: boolean;
     isDigit?: boolean;
     value: string;
+    validationControl?: (value: string) => string;
     onChange?: (e: string) => void;
     onBlur?: (e: ChangeEvent<HTMLInputElement>) => void;
 }

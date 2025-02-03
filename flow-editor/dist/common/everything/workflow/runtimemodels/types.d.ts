@@ -13,6 +13,7 @@ export declare const ActionTypes: {
     unclaim: string;
     assignToUser: string;
     assignToUnit: string;
+    assignToSwimlane: string;
     save: string;
     function: string;
     trigger: string;

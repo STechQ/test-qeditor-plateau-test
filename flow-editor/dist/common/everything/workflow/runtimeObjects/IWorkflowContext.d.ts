@@ -8,6 +8,6 @@ export interface IWorkflowContext {
     enums?: Array<IEnumModel>;
     dataInstance?: DataInstance;
     processInstance?: IProcessInstance;
-    action: IActionData | undefined;
+    action?: IActionData;
 }
 //# sourceMappingURL=IWorkflowContext.d.ts.map

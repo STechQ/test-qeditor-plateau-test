@@ -1,7 +1,7 @@
 import "reflect-metadata";
 import { IPresentation } from "./domain/presentation/IPresentation";
 import { IStepRepo } from "./domain/useCase/IStepRepo";
-import { IStepOptions } from "../../flowInterfaces/editor/IStepOptions";
+import { IStepOptions, IStudioUIModelBase } from "../../flowInterfaces/editor/IStepOptions";
 import { DependencyContainer } from "./domain/core/diContainer";
 import { IImportExport } from "./domain/useCase/IImportExport";
 import { IHistory } from "./domain/useCase/IHistory";
@@ -41,5 +41,6 @@ export declare class Program implements IFlowEditorProgram {
     setSchema(schema: Store): void;
     undo(): Promise<boolean>;
     redo(): Promise<boolean>;
+    setModels(models: IStudioUIModelBase[]): void;
 }
 //# sourceMappingURL=program.d.ts.map
