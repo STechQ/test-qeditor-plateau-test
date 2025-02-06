@@ -10,6 +10,7 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     pause(): void;
     setSpeedMethod(setSpeedData: number): void;
     setDirectionMethod(direction: "left" | "right"): void;
+    setloopMethod(loopData: boolean): void;
     hibernate(): void;
     resurrect(): void;
 }, {
