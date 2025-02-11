@@ -1,5 +1,5 @@
 import { IStyleChild } from "./ICompJson";
-export declare type StyleValue = Record<string, string | undefined | Record<string, string>>;
+export declare type StyleValue = Record<string, string | boolean | undefined | Record<string, string>>;
 export interface StyleItem {
     [key: string]: StyleValue | undefined;
     default?: StyleValue;
