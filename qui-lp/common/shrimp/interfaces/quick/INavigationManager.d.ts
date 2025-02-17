@@ -5,26 +5,14 @@ export interface INavigationOptions {
 }
 export declare type MobileAnimationType = MobileAnimation<"slideIn"> | MobileAnimation<"slideOut"> | MobileAnimation<"fade"> | MobileAnimation<"instant">;
 export declare type MobileAnimation<T extends keyof MobileAnimationGroupType> = MobileAnimationGroupType[T];
-export declare enum SlideInAnimationType {
-    FromRight = "FromRight",
-    FromLeft = "FromLeft",
-    FromTop = "FromTop",
-    FromBottom = "FromBottom"
-}
-export declare enum SlideOutAnimationType {
-    ToRight = "ToRight",
-    ToLeft = "ToLeft",
-    ToTop = "ToTop",
-    ToBottom = "ToBottom"
-}
 export declare type MobileAnimationGroupType = {
     slideIn: {
         type: "slideIn";
-        slideInType: SlideInAnimationType;
+        slideInType: "fromRight" | "fromLeft" | "fromTop" | "fromBottom";
     };
     slideOut: {
         type: "slideOut";
-        slideOutType: SlideOutAnimationType;
+        slideOutType: "toRight" | "toLeft" | "toTop" | "toBottom";
     };
     fade: {
         type: "fade";
