@@ -1,5 +1,5 @@
 import { IStyleChild } from "./ICompJson";
-export declare type StyleValue = Record<string, string | boolean | undefined | Record<string, string>>;
+export declare type StyleValue = Record<string, string | undefined | Record<string, string>>;
 export interface StyleItem {
     [key: string]: StyleValue | undefined;
     default?: StyleValue;
@@ -28,13 +28,11 @@ export interface IComponentStyleKey {
 export declare const COMPONENT_STYLE_TYPE: {
     "color-picker": string;
     "font-picker": string;
-    "padding-input": string;
     size: string;
     layout: string;
     "layout-chooser": string;
     "grid-column": string;
     "box-layout": string;
-    "inner-box-layout": string;
     "basic-input": string;
     "box-shadow": string;
     slider: string;
@@ -42,8 +40,6 @@ export declare const COMPONENT_STYLE_TYPE: {
     "break-point-picker": string;
     "layout-input": string;
     display: string;
-    "content-direction": string;
-    "display-text": string;
 };
 export interface IComponentDefinition {
     componentStyleList: IComponentStyleInlineInterface;

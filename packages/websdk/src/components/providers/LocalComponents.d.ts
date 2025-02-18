@@ -100,11 +100,6 @@ declare const localComponents: {
     QDynamicFields: {};
     QPieChart: {};
     QQrReader: {};
-    InfiniteScroll: {
-        importFunc: () => Promise<void>;
-        loaded: boolean;
-        module: undefined;
-    };
     QMenu: {
         importFunc: () => Promise<void>;
         loaded: boolean;

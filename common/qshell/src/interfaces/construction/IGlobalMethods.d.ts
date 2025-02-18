@@ -8,7 +8,7 @@ import { IDomElement } from "../../../../shrimp/interfaces/RenderingInterfaces/I
 import { IRenderer } from "../../../../shrimp/interfaces/RenderingInterfaces/IRenderer";
 import { ILocationPosition } from "../../../../shrimp/interfaces/quick/ILocationPosition";
 import { IExcel, IExcelList } from "../../../../shrimp/interfaces/quick/IExcel";
-import { MobileAnimationType } from "../../../../shrimp/interfaces/quick/INavigationManager";
+import { MobileAnimation } from "../../../../shrimp/interfaces/quick/INavigationManager";
 export declare const GlobalMethodsContextName: string;
 /**
  * QShell CreateRenderer (known types, used inside engine equivalent of GO like stuff)
@@ -50,10 +50,10 @@ export interface IGlobalMethods extends IContextItem {
     exportToXlsxHandler?: (excelFile: IExcel | IExcelList) => void;
     setComponentClass?: (compCollection: IComponentCollection, classes: Array<string>) => void;
     setComponentsProperty?: (compCollection: IComponentCollection, propertyName: string, propertyValue: string) => void;
-    goNative?: ({ code, param, mobileAnimation }: {
+    goNative?: ({ code, param, transitionStyle }: {
         code: string;
         param?: Record<string, any>;
-        mobileAnimation?: MobileAnimationType;
+        transitionStyle?: MobileAnimation;
     }) => void;
     setRenderer?: (renderer: IRenderer) => void;
     clearPageClose?: () => void;

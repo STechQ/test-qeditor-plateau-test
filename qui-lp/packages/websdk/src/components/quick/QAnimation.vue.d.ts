@@ -1,27 +1,20 @@
 import Vue from "vue";
-import { AnimationItem } from "lottie-web";
 declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     lottieInstance: import("lottie-web").LottiePlayer;
-    lottieComp: AnimationItem;
 }, {
     loadAnimation(src: string | object): void;
-    play(): void;
-    stop(): void;
-    pause(): void;
-    setSpeedMethod(setSpeedData: number): void;
-    setDirectionMethod(direction: "left" | "right"): void;
-    setloopMethod(loopData: boolean): void;
     hibernate(): void;
     resurrect(): void;
-}, {
-    showTemplate: boolean;
-}, {
-    _renderingProps: any;
-    src: any;
-    loop: boolean;
-    autoplay: boolean;
-    speed: number;
-    direction: string;
+}, unknown, {
+    source: any;
+    height: number;
+    width: number;
+    position: string;
+    top: string | number;
+    right: string | number;
+    bottom: string | number;
+    zIndex: string | number;
+    left: string | number;
 }>;
 export default _default;
 //# sourceMappingURL=QAnimation.vue.d.ts.map

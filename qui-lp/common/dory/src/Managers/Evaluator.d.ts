@@ -15,23 +15,21 @@ export declare class Evaluator implements IEvaluator {
         dataSource?: object | null;
         context: ContextManager;
     }): any;
-    Evaluate({ script, dataSource, context, lang, sourceMap, eventName }: {
+    Evaluate({ script, dataSource, context, lang, sourceMap, }: {
         script?: string | object;
         dataSource?: object | null;
         context: ContextManager;
         lang?: ScriptLang;
         sourceMap?: string;
-        eventName?: string;
     }): any;
     private prepareEvaluationItems;
-    createGlobal({ messagingManager, context, dory, ownerComponent, lastHistory, historyManager, ownerEventName }: {
+    createGlobal({ messagingManager, context, dory, ownerComponent, lastHistory, historyManager }: {
         messagingManager?: MessagingManager;
         context: ContextManager;
         dory: Dory;
         ownerComponent?: IComponentCollection;
         lastHistory?: HistoryItem | null;
         historyManager: HistoryManager;
-        ownerEventName?: string;
     }): IGlobalsQS;
     generateCodeChallenge(codeVerifier: any): Promise<string>;
     generateRandomString(length: any): string;

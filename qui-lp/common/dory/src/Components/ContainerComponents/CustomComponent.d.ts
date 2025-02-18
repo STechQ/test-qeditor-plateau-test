@@ -38,6 +38,7 @@ export default class CustomComponent extends TSComponentBase implements IDynamic
     getQJson(doryJr: IDoryJr): Promise<IQJSon | undefined>;
     set QJsonPath(_qjsonPath: string);
     get QJsonPath(): string;
+    destroyInner(): void;
     Render(tsWrapperInstance?: any, pageId?: string, pageName?: string): unknown;
     private fetchAndRender;
     private OutBoundProps;
