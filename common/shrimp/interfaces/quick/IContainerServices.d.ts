@@ -13,7 +13,7 @@ export interface IRequestOptions {
     timeout?: number;
 }
 export interface INetwork {
-    get<RetType extends string | object | BinaryType>({ url, urlParams, headers, config, options }: {
+    get<RetType extends string | object | BinaryType>({ url, urlParams, headers, config, options, requestCanBeLoggedByName }: {
         url: string;
         urlParams?: object;
         config?: {
@@ -21,8 +21,9 @@ export interface INetwork {
         };
         headers?: IDictionary<string>;
         options?: IRequestOptions;
+        requestCanBeLoggedByName?: boolean;
     }): Promise<INetworkResponse<RetType>>;
-    post<RetType extends string | object | BinaryType>({ url, urlParams, body, headers, config, options }: {
+    post<RetType extends string | object | BinaryType>({ url, urlParams, body, headers, config, options, requestCanBeLoggedByName }: {
         url: string;
         urlParams?: object;
         body?: string | object | BinaryType;
@@ -31,34 +32,39 @@ export interface INetwork {
             responseType: PostResponseType;
         };
         options?: IRequestOptions;
+        requestCanBeLoggedByName?: boolean;
     }): Promise<INetworkResponse<RetType>>;
-    patch<RetType extends string | object | BinaryType>({ url, urlParams, body, headers, options }: {
+    patch<RetType extends string | object | BinaryType>({ url, urlParams, body, headers, options, requestCanBeLoggedByName }: {
         url: string;
         urlParams?: object;
         body?: string | object | BinaryType;
         headers?: IDictionary<string>;
         options?: IRequestOptions;
+        requestCanBeLoggedByName?: boolean;
     }): Promise<INetworkResponse<RetType>>;
-    multipart<RetType extends string | object | BinaryType>({ url, urlParams, body, headers, options }: {
+    multipart<RetType extends string | object | BinaryType>({ url, urlParams, body, headers, options, requestCanBeLoggedByName }: {
         url: string;
         urlParams?: object;
         body?: BinaryType;
         headers?: IDictionary<string>;
         options?: IRequestOptions;
+        requestCanBeLoggedByName?: boolean;
     }): Promise<INetworkResponse<RetType>>;
-    put<RetType extends string | object | BinaryType>({ url, urlParams, body, headers, options }: {
+    put<RetType extends string | object | BinaryType>({ url, urlParams, body, headers, options, requestCanBeLoggedByName }: {
         url: string;
         urlParams?: object;
         body?: string | object | BinaryType;
         headers?: IDictionary<string>;
         options?: IRequestOptions;
+        requestCanBeLoggedByName?: boolean;
     }): Promise<INetworkResponse<RetType>>;
-    delete<RetType extends string | object | BinaryType>({ url, urlParams, body, headers, options }: {
+    delete<RetType extends string | object | BinaryType>({ url, urlParams, body, headers, options, requestCanBeLoggedByName }: {
         url: string;
         urlParams?: object;
         body?: string | object;
         headers?: IDictionary<string>;
         options?: IRequestOptions;
+        requestCanBeLoggedByName?: boolean;
     }): Promise<INetworkResponse<RetType>>;
 }
 export interface IContainerServicesWrapper {

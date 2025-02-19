@@ -4,6 +4,7 @@ declare const _default: {
     data: () => {
         mdiPath: string;
     };
+    mounted(): void;
     created(): void;
     methods: {};
 };
