@@ -3729,6 +3729,9 @@ nextIcon = 'mdi-plus'}`
         large: {
             type: Boolean
         },
+        length: {
+            type: "number | string"
+        },
         openDelay: {
             type: Boolean
         },
