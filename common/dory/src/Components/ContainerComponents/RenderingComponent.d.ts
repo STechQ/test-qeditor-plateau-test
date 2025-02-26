@@ -19,5 +19,6 @@ export declare class RenderingComponent extends CustomComponent {
     } | null | undefined;
     GoHistory(navigationDemand: INavigationDemand): boolean;
     private beforeRootPathChange;
+    protected destroyInner(): void;
 }
 //# sourceMappingURL=RenderingComponent.d.ts.map
