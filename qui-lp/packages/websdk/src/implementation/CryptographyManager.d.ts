@@ -8,5 +8,7 @@ export declare class CryptographyManager implements ICryptographyManager {
     hash(data: IHashDataRequest): Promise<IHashDataResponse>;
     encrypt(data: IEncryptDataRequest): Promise<IEncryptDataResponse>;
     decrypt(data: IDecryptDataRequest): Promise<IDecryptDataResponse>;
+    stringToBase64(data: string): string;
+    base64ToString(data: string): string;
 }
 //# sourceMappingURL=CryptographyManager.d.ts.map

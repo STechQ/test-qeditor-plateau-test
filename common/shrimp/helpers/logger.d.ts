@@ -47,7 +47,7 @@ export declare class Logger implements ILogger {
      * @param yamlLogType
      * @returns void
      */
-    static Log({ logMessage, logType, error, backgroundColor, textColor, additional, source, isClientLog, yamlLogType, minEngineLogLevel, ownerEventName }: {
+    static Log({ logMessage, logType, error, backgroundColor, textColor, additional, source, isClientLog, yamlLogType, minEngineLogLevel }: {
         logMessage: any;
         logType?: LogType;
         error?: unknown;
@@ -58,9 +58,7 @@ export declare class Logger implements ILogger {
         isClientLog?: boolean;
         yamlLogType?: LogType;
         minEngineLogLevel?: LogType;
-        ownerEventName?: string;
     }): void;
-    static checkEventNameIsSpecial(eventName?: string): boolean;
     /**
      * Log messages are controlled by their size and add them to the bulk array with type, date and caller function name
      * @param logMessage Message that will be written to the server
