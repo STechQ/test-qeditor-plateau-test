@@ -1,7 +1,7 @@
 import { AlertType, ErrorSource, IActionButton } from "../ComponentInterfaces/IAlert";
 import { IComponentCollection } from "../ComponentInterfaces/IComponentCollection";
 import { IDictionary } from "../IDictionary";
-import { MobileAnimation } from "./INavigationManager";
+import { MobileAnimationType } from "./INavigationManager";
 import { INetworkResponse } from "./INetworkResponse";
 export interface IAlertParameters {
     ownerComponent?: IComponentCollection;
@@ -22,10 +22,10 @@ export interface IShellGlobalMethods extends IDictionary<any> {
     }, parameters: IAlertParameters) => void;
     closeAlert?: () => void;
     getDeepLinkParams: () => Record<string, string | undefined>;
-    goNative?: ({ code, param, transitionStyle }: {
+    goNative?: ({ code, param, mobileAnimation }: {
         code: string;
         param?: Record<string, any>;
-        transitionStyle?: MobileAnimation;
+        mobileAnimation?: MobileAnimationType;
     }) => void;
 }
 //# sourceMappingURL=IShellGlobalMethods.d.ts.map

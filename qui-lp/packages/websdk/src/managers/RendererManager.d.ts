@@ -30,6 +30,7 @@ export declare class RendererManager {
         renderer: IDoryRenderer;
         newMountPoint: HTMLElement;
     };
+    private appendDomsToShadow;
     private applyStyles;
     getLastRenderer(): IRenderer | undefined;
     getDomContainer(renderer: IRenderer): IDomElement;

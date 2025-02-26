@@ -118,8 +118,6 @@ export declare class ShellConfiguration implements IShellConfiguration {
         compID: string;
     }) => IDomElement;
     getNetworkConnection?: () => boolean;
-    stringToBase64?: (data: string) => string;
-    base64ToString?: (data: string) => string;
     getLogBulkSize?: () => number | undefined;
     renderer: IRenderer;
     constructor();
