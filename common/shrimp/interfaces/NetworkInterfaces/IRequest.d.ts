@@ -17,7 +17,7 @@ export interface IRequest extends IBaseRequest {
 }
 export interface IBaseRequest {
     url: string;
-    http: "GET" | "get" | "POST" | "post" | "MULTIPART" | "multipart" | "PUT" | "put" | "POSTBLOB" | "postblob" | "DELETE" | "delete" | "PATCH" | "patch";
+    http: "GET" | "get" | "POST" | "post" | "MULTIPART" | "multipart" | "PUT" | "put" | "POSTBLOB" | "postblob" | "GETBLOB" | "getblob" | "DELETE" | "delete" | "PATCH" | "patch";
     data: any;
 }
 export interface IDownloadRequest extends IBaseRequest {
