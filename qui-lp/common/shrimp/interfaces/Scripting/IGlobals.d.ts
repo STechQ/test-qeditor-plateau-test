@@ -17,6 +17,7 @@ import { IDomElement } from "../RenderingInterfaces/IDomElement";
 import { INavigationOptions, MobileAnimationType } from "../quick/INavigationManager";
 import { IPermanentStoreObject, Plateau_UI_PermanentStore_Name } from "../RenderingInterfaces/Operators/IPermanentStoreOperator";
 import { IDecryptDataRequest, IDecryptDataResponse, IEncryptDataRequest, IEncryptDataResponse, IHashDataRequest, IHashDataResponse } from "../../helpers/cryptoHelper";
+import { IShareDataRequest } from "../quick/IGeneralMethods";
 export interface IGlobals_Request {
     /**
      * Sends a network request.
@@ -340,6 +341,7 @@ export interface IGlobals_Quick {
         data: string;
         name: string;
     }) => boolean;
+    shareData: (shareDataRequest: IShareDataRequest) => void;
     /**
      * Check if the given input is an object.
      * @param obj - The input to be checked.

@@ -22,6 +22,7 @@ import { IShellGlobalMethods } from "../../../shrimp/interfaces/quick/IShellGlob
 import { IStore } from "../../../shrimp/interfaces/quick/IStore";
 import { IUrlOptions } from "../../../shrimp/interfaces/quick/IUrl";
 import { IRenderer } from "../../../shrimp/interfaces/RenderingInterfaces/IRenderer";
+import { IShareDataRequest } from "../../../shrimp/interfaces/quick/IGeneralMethods";
 export declare class ShellConfiguration implements IShellConfiguration {
     network: INetwork;
     lridHelper?: (label: string, dataSource?: object | null) => string;
@@ -114,6 +115,7 @@ export declare class ShellConfiguration implements IShellConfiguration {
         data: string;
         name: string;
     }) => boolean;
+    shareData?: (shareDataRequest: IShareDataRequest) => void;
     getComponent?: ({ compID }: {
         compID: string;
     }) => IDomElement;
