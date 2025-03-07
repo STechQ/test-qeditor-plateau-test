@@ -1,5 +1,5 @@
-export interface IShareDataRequest {
+export interface ISharedDataInfo {
     data: string;
-    fileName: string;
+    name: string;
 }
 //# sourceMappingURL=IGeneralMethods.d.ts.map
