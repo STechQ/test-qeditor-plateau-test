@@ -5,7 +5,7 @@ import { IRenderingContext } from "./IRenderingContext";
 import { IRenderingManager } from "./IRenderingManager";
 export interface IHistoryAdditionalItem {
     resurrect(): void;
-    hibernate(): void;
+    hibernate(passHibernate?: boolean): void;
     destroy(): void;
 }
 export declare type IForeachHistoryItemCbParams = {
@@ -22,7 +22,7 @@ export interface IHistoryItem {
     getOrCreateAdditional<T extends IHistoryAdditionalItem>(key: string, creatorCb: () => T): T;
     GetRenderingContext(): IRenderingContext;
     GetRenderingManager(): IRenderingManager | undefined;
-    hibernate(): void;
+    hibernate(passHibernate?: boolean): void;
     resurrect(): void;
     readonly pageName?: string;
     readonly pageId: string;

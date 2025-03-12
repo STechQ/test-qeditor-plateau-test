@@ -23,6 +23,7 @@ export default class QTimer extends TSComponentBase {
     set setTimerId(timerId: any);
     set setStatus(status: boolean);
     get getStatus(): boolean;
-    hibernate(): void;
+    hibernate(passHibernate?: boolean): void;
+    destroy(): void;
 }
 //# sourceMappingURL=QTimer.d.ts.map

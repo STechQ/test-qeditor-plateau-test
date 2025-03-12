@@ -70,7 +70,7 @@ export declare class HistoryItem implements IHistoryItem {
     getCompCollectionById(id: string | IComponent): IComponentCollection | undefined;
     destroyComponentCollectionById(Id: string): boolean;
     update(): void;
-    hibernate(): void;
+    hibernate(passHibernate?: boolean): void;
     resurrect(): void;
     destroyCollection(compCollection?: IComponentCollection): void;
     destroy(): void;

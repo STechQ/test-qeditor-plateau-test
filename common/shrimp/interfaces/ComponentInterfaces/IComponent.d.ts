@@ -61,7 +61,7 @@ export interface IComponent extends INativeComponent, IFrameNavigation {
     owner: IComponent;
     $destroy: () => void;
     $forceUpdate: () => void;
-    hibernate: () => void;
+    hibernate: (passHibernate?: boolean) => void;
     resurrect: () => void;
     classes: IDictionary<boolean>;
     $attrs: Record<string, any>;
