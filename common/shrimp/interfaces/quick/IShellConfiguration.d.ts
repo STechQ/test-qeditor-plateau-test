@@ -27,7 +27,6 @@ import { INavigationOptions } from "./INavigationManager";
 import { IDecryptDataRequest, IDecryptDataResponse, IEncryptDataRequest, IEncryptDataResponse, IHashDataRequest, IHashDataResponse } from "../../helpers/cryptoHelper";
 import { IDoryJr } from "../RenderingInterfaces/IDoryJr";
 import { IRenderer } from "../RenderingInterfaces/IRenderer";
-import { ISharedDataInfo } from "./IGeneralMethods";
 export interface IShellConfiguration {
     network: INetwork;
     lridHelper?: (label: string, params: Object) => string;
@@ -120,11 +119,12 @@ export interface IShellConfiguration {
         data: string;
         name: string;
     }) => boolean;
-    shareData?: (sharedDataInfo: ISharedDataInfo) => void;
     getComponent?: ({ compID }: {
         compID: string;
     }) => IDomElement;
     getNetworkConnection?: () => boolean;
+    stringToBase64?: (data: string) => string;
+    base64ToString?: (data: string) => string;
     renderer: IRenderer;
 }
 export interface IHistoryBasedShellConfiguration {

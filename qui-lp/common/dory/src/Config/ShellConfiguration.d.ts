@@ -22,7 +22,6 @@ import { IShellGlobalMethods } from "../../../shrimp/interfaces/quick/IShellGlob
 import { IStore } from "../../../shrimp/interfaces/quick/IStore";
 import { IUrlOptions } from "../../../shrimp/interfaces/quick/IUrl";
 import { IRenderer } from "../../../shrimp/interfaces/RenderingInterfaces/IRenderer";
-import { ISharedDataInfo } from "../../../shrimp/interfaces/quick/IGeneralMethods";
 export declare class ShellConfiguration implements IShellConfiguration {
     network: INetwork;
     lridHelper?: (label: string, dataSource?: object | null) => string;
@@ -115,11 +114,12 @@ export declare class ShellConfiguration implements IShellConfiguration {
         data: string;
         name: string;
     }) => boolean;
-    shareData?: (sharedDataInfo: ISharedDataInfo) => void;
     getComponent?: ({ compID }: {
         compID: string;
     }) => IDomElement;
     getNetworkConnection?: () => boolean;
+    stringToBase64?: (data: string) => string;
+    base64ToString?: (data: string) => string;
     getLogBulkSize?: () => number | undefined;
     renderer: IRenderer;
     constructor();

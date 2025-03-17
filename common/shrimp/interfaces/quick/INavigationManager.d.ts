@@ -1,26 +1,14 @@
 export interface INavigationOptions {
     newTab?: boolean;
     store?: boolean;
-    mobileAnimation?: MobileAnimationType;
+    mobileAnimation?: MobileAnimation;
 }
-export declare type MobileAnimationType = MobileAnimation<"slideIn"> | MobileAnimation<"slideOut"> | MobileAnimation<"fade"> | MobileAnimation<"instant">;
-export declare type MobileAnimation<T extends keyof MobileAnimationGroupType> = MobileAnimationGroupType[T];
-export declare type MobileAnimationGroupType = {
-    slideIn: {
-        type: "slideIn";
-        slideInType: "fromRight" | "fromLeft" | "fromTop" | "fromBottom";
-    };
-    slideOut: {
-        type: "slideOut";
-        slideOutType: "toRight" | "toLeft" | "toTop" | "toBottom";
-    };
-    fade: {
-        type: "fade";
-    };
-    instant: {
-        type: "instant";
-    };
-};
+export declare enum MobileAnimation {
+    push = "push",
+    presentFullScreen = "presentFullScreen",
+    fade = "fade",
+    present = "present"
+}
 export interface INavigationManager {
     go?: ({ url }: {
         url: string;
