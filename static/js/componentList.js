@@ -5407,6 +5407,24 @@ nextIcon = 'mdi-plus'}`
             options: ["'left'", "'right'"],
             editorDefaultValue: "'right'"
         },
+        position: {
+            type: String,
+          },
+          zIndex: {
+            type: String,
+          },
+          top: {
+            type: String,
+          },
+          bottom: {
+            type: String
+          },
+          left: {
+            type: String,
+          },
+          right: {
+            type: String,
+          }
     }
 };
 

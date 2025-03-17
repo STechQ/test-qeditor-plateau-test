@@ -29,6 +29,7 @@ export interface IEncryptDataResponse {
 export interface IEncryptDataRequest {
     data: string;
     key: string;
+    ivKey?: string;
     algorithm: EncryptionAlgorithm;
 }
 export interface IDecryptDataResponse {
@@ -36,8 +37,9 @@ export interface IDecryptDataResponse {
 }
 export interface IDecryptDataRequest {
     encryptedData: string;
-    iv?: string;
     key: string;
+    iv?: string;
+    ivKey?: string;
     algorithm: EncryptionAlgorithm;
 }
 export declare class CryptoHelper {

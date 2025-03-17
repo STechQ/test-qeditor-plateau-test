@@ -2211,7 +2211,7 @@ function checkBinaryFile(extensionOfFile) {
     return binaryFileTypes.includes(extensionOfFile);
 }
 var run = function (event) { return __awaiter(void 0, void 0, void 0, function () {
-    var url, decodedPath, requestedInfo, _a, imgPromData, imgResp, imgContentType, lottieData, lottieResp, lottieContentType, woffPromData, woffResp, fontContentType, qjsonPromData, qjsonResp, resp, error_1;
+    var url, decodedPath, requestedInfo, _a, imgPromData, imgResp, imgContentType, lottieData_1, lottieData, lottieResp, lottieContentType, woffPromData, woffResp, fontContentType, qjsonPromData, qjsonResp, resp, error_1;
     return __generator(this, function (_b) {
         switch (_b.label) {
             case 0:
@@ -2241,8 +2241,11 @@ var run = function (event) { return __awaiter(void 0, void 0, void 0, function (
                 imgContentType = "image/" + imgResp.resourceType;
                 return [2 /*return*/, new Response(imgResp.resource, { status: 200, headers: { "Content-Type": imgContentType } })];
             case 3:
-                lottieData = CreatePromiseData(swTimeout);
-                waiters.set(requestedInfo.guid, lottieData);
+                if (!waiters.has(requestedInfo.guid)) {
+                    lottieData_1 = CreatePromiseData(swTimeout);
+                    waiters.set(requestedInfo.guid, lottieData_1);
+                }
+                lottieData = waiters.get(requestedInfo.guid);
                 sendMessage(event.clientId, requestedInfo.guid);
                 return [4 /*yield*/, lottieData.promise];
             case 4:

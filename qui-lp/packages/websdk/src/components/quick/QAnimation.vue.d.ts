@@ -15,6 +15,14 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     resurrect(): void;
 }, {
     showTemplate: boolean;
+    lottieStyle: {
+        position: "fixed" | "static" | "absolute" | "relative";
+        top: string;
+        bottom: string;
+        left: string;
+        right: string;
+        zIndex: string;
+    };
 }, {
     _renderingProps: any;
     src: any;
@@ -22,6 +30,12 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     autoplay: boolean;
     speed: number;
     direction: string;
+    position: string;
+    zIndex: string;
+    top: string;
+    bottom: string;
+    left: string;
+    right: string;
 }>;
 export default _default;
 //# sourceMappingURL=QAnimation.vue.d.ts.map
