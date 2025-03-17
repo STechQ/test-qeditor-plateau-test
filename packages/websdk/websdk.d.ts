@@ -28,6 +28,7 @@ declare class WebsdkContainer {
     private enviromentInfo;
     private settingsWeb?;
     private assetList?;
+    private appSettings?;
     private SDKInstance?;
     private SDKSettings?;
     private SDKConfiguration?;

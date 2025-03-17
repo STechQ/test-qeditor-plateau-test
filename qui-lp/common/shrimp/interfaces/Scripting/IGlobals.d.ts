@@ -1573,7 +1573,6 @@ export interface IWorkflowStore {
     };
 }
 export interface IScripts {
-    Dataroid: IDataroid;
 }
 export interface IDataroid {
     track(eventName: string, params?: Record<string, any>): void;

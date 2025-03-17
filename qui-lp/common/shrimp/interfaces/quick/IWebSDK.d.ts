@@ -11,6 +11,7 @@ import { IRegionalDefinition } from "./IFormattingDefinition";
 import { IUXManager } from "./IUXManager";
 import { IWebSDKSetingsBus } from "./IWebSDKSettingsBus";
 import { INamedCompModel } from "@stechquick/algae/lib/quick/INamedCompModel";
+import { IIntegrationsManager } from "./IIntegrationsManager";
 export interface IWebSDKSettingsWrapper {
     settings: IWebSDKSettings;
 }
@@ -128,5 +129,6 @@ export interface IWebSDK {
     setYamlLogType(logType: string): void;
     migrateLegacySettings(settings: any): IWebSDKSettings;
     showCssTags(show: boolean): void;
+    integrationsManager: IIntegrationsManager;
 }
 //# sourceMappingURL=IWebSDK.d.ts.map
