@@ -420,10 +420,10 @@ export interface IOrganizationGroup extends ICloudObject {
     description?: string;
     createdBy: string;
     createDate: Date;
+    mainOrganizationId?: IOrganization["id"];
     owners?: Array<string>;
     features?: IOrganizationFeatures;
     applications?: IEditorTypes;
-    mainOrganizationId?: IOrganization["id"];
     mainAppId?: IApplication["ID"];
 }
 export interface ISDActivities {

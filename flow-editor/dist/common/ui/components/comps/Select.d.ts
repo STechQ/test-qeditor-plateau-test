@@ -8,6 +8,7 @@ interface ISelectProps {
     value: string;
     onChange: (value: IOption['value']) => void;
     options: Array<IOption>;
+    searchable?: boolean;
 }
 export interface IOption {
     name: string;
