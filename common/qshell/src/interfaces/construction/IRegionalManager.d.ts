@@ -7,5 +7,6 @@ export interface IRegionalManager extends IContextItem {
     setRegion(currentRegion: string): void;
     getFormattingDefinitionByCurrentRegion(): IFormattingDefinition | undefined;
     onLRChange?: (region?: string) => void;
+    loadMessagesOnce?(): void;
 }
 //# sourceMappingURL=IRegionalManager.d.ts.map

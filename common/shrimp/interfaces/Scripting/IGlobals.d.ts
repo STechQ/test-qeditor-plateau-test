@@ -14,9 +14,10 @@ import { IShell } from "../quick/IShell";
 import { IUrlOptions } from "../quick/IUrl";
 import { IExcel, IExcelList } from "../quick/IExcel";
 import { IDomElement } from "../RenderingInterfaces/IDomElement";
-import { INavigationOptions, MobileAnimation } from "../quick/INavigationManager";
+import { INavigationOptions, MobileAnimationType } from "../quick/INavigationManager";
 import { IPermanentStoreObject, Plateau_UI_PermanentStore_Name } from "../RenderingInterfaces/Operators/IPermanentStoreOperator";
 import { IDecryptDataRequest, IDecryptDataResponse, IEncryptDataRequest, IEncryptDataResponse, IHashDataRequest, IHashDataResponse } from "../../helpers/cryptoHelper";
+import { ISharedDataInfo } from "../quick/IGeneralMethods";
 export interface IGlobals_Request {
     /**
      * Sends a network request.
@@ -289,17 +290,17 @@ export interface IGlobals_Quick {
      * @param options - Optional configuration object for the navigation.
      * @param [options.newTab=false] - If true, opens the specified page in a new tab.
      * @param [options.store=false] - If true, transmits store values to the new tab (valid only if newTab is true).
-     * @param [options.mobileAnimation] - The animation type to use for mobile navigation. Possible values: "push", "presentFullScreen", "fade".
+     * @param [options.mobileAnimation] - The animation type to use for mobile navigation.
      * @returns - Returns the result of the navigation operation.
      *
      * @example
      * quick.Quick.go("<<qjson:d21r0xpa-krke-m6oi-mo8m-bk7whi3b>>", { newTab: true, store: true });
     */
     go: (qjsonPath: string, options?: INavigationOptions) => any;
-    goNative?: ({ code, param, transitionStyle }: {
+    goNative?: ({ code, param, mobileAnimation }: {
         code: string;
         param?: Record<string, any>;
-        transitionStyle?: MobileAnimation;
+        mobileAnimation?: MobileAnimationType;
     }) => void;
     /**
      * Creates a deep copy of the provided object using a cloning technique.
@@ -340,6 +341,19 @@ export interface IGlobals_Quick {
         data: string;
         name: string;
     }) => boolean;
+    /**
+      * Initiates the share of a file using a base64-encoded string or by using a link and specifying the file name.
+      *
+      * @param {ISharedDataInfo} [sharedDataInfo] - Configuration object for the shared data.
+      * @param {string} [sharedDataInfo.data] - The base64-encoded string representing the file content or by using a link.
+      * @param {string} [sharedDataInfo.name] - The name to be used for the shared data.
+      * @returns {void}
+      *
+      * @example
+      * let sharedDataInfo: ISharedDataInfo = { data: "https://developer.mozilla.org", name: "example" }
+      * quick.Quick.shareData(sharedDataInfo);
+     */
+    shareData: (sharedDataInfo: ISharedDataInfo) => void;
     /**
      * Check if the given input is an object.
      * @param obj - The input to be checked.
@@ -1559,7 +1573,6 @@ export interface IWorkflowStore {
     };
 }
 export interface IScripts {
-    Dataroid: IDataroid;
 }
 export interface IDataroid {
     track(eventName: string, params?: Record<string, any>): void;

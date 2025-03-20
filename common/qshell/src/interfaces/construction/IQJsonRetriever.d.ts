@@ -1,5 +1,5 @@
 import { IContextItem } from "../../../../shrimp/context";
-import { MobileAnimation } from "../../../../shrimp/interfaces/quick/INavigationManager";
+import { MobileAnimationType } from "../../../../shrimp/interfaces/quick/INavigationManager";
 export declare const QJsonRetrieverContextName: string;
 export declare type QJsonRetrievedType = string | {
     qjson: string;
@@ -9,7 +9,7 @@ export interface IQJsonRetriever extends IContextItem {
     get disablePagePool(): boolean | undefined;
     retrieveQJsonAsync(qjsonPath: string, options?: {
         disableLoading?: boolean;
-        mobileAnimation?: MobileAnimation;
+        mobileAnimation?: MobileAnimationType;
     }): Promise<QJsonRetrievedType>;
     retrieveModelAsync(data: {
         modelPath: string;
