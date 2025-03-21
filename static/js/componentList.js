@@ -809,6 +809,9 @@ var componentOptions = {
         tag: {
             type: String
         },
+        text: {
+            type: Boolean
+        },
         tile: {
             type: Boolean
         },
