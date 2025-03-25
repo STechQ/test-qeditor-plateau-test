@@ -58,5 +58,5 @@ declare class QShell {
     }): IDoryRenderer;
     ResetQJsonPool(): void;
 }
-export { INetworkManager, IQJsonRetriever, IComponentManager, IModuleManager, IGlobalMethods, DoryRenderer, QShell, ILanguageExtensions, INavigationManager, RendererChild, IStoreManager, ICookieManager, IRegionalManager, IProcessManager, IHostTriggerer, IPlatformManager, ICryptographyManager };
+export { INetworkManager, IQJsonRetriever, IComponentManager, IModuleManager, IGlobalMethods, DoryRenderer, QShell, ILanguageExtensions, INavigationManager, RendererChild, IStoreManager, ICookieManager, IRegionalManager, IProcessManager, IHostTriggerer, IPlatformManager, ICryptographyManager, };
 //# sourceMappingURL=index.d.ts.map

@@ -15,6 +15,5 @@ export declare class RegionalManagerImpl implements IRegionalManager {
     getFormattingDefinitionByCurrentRegion(): IFormattingDefinition | undefined;
     getFormattingDefinitionBySelectedRegion(selectedRegion: string): IFormattingDefinition | undefined;
     onLRChange(language?: string): void;
-    loadMessagesOnce(): void;
 }
 //# sourceMappingURL=RegionalManagerImpl.d.ts.map

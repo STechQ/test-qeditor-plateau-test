@@ -11,7 +11,6 @@ import { IDomElement } from "../../../../common/shrimp/interfaces/RenderingInter
 import { IRenderer } from "../../../../common/shrimp/interfaces/RenderingInterfaces/IRenderer";
 import { IRendererConfig } from "../../../../common/shrimp/interfaces/RenderingInterfaces/IRendererConfig";
 import { ContextManager } from "../../../../common/shrimp/context";
-import { ISharedDataInfo } from "../../../../common/shrimp/interfaces/quick/IGeneralMethods";
 export declare class GlobalMethodsImpl implements IGlobalMethods {
     contextName: string;
     parentInstance: any;
@@ -71,7 +70,6 @@ export declare class GlobalMethodsImpl implements IGlobalMethods {
         data: string;
         name: string;
     }): any;
-    shareData(sharedDataInfo: ISharedDataInfo): void;
     setComponentClass(compCollection: IComponentCollection, classes: Array<string>): void;
     setComponentsProperty(componentCollection: IComponentCollection, propertyName: string, propertyValue: any): void;
     clearPageClose(): void;
