@@ -16,6 +16,6 @@ export declare type matchStyle = {
     selectorValue: string;
     styleValue: string;
     breakPoint?: string;
-    compType: string;
+    compCollection: IComponentCollection;
 };
 //# sourceMappingURL=IStyleManager.d.ts.map
