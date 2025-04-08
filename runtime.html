@@ -10,5 +10,13 @@
     <body>
         <script src="./packages/websdk/websdk.js"></script>
         <script src="./runtime.js"></script>
+        <script>
+            document.addEventListener("keydown", function (event) { 
+                if (event.ctrlKey && (event.key.toLowerCase() === "z" || event.key.toLowerCase() === "y")) { 
+                    event.preventDefault();
+                    window.parent.postMessage({ type: "keydown", key: event.key.toLowerCase(), ctrl: true }, "*"); 
+                } 
+            });
+        </script>
     </body>
 </html>

@@ -18,6 +18,14 @@
             const scr = document.createElement("script");
             scr.src = "./standAlone.js";
             document.body.appendChild(scr);
+            document.addEventListener("keydown", function (event) { 
+                if (event.ctrlKey && (event.key.toLowerCase() === "z" || event.key.toLowerCase() === "y")) { 
+                    event.preventDefault();
+                    window.parent.postMessage({ type: "keydown", key: event.key.toLowerCase(), ctrl: true }, "*"); 
+                } 
+            });
+            window.addEventListener("message", function(event) {
+                 if (window.parent !== window) { window.parent.postMessage(event.data, "*"); } });
         </script>
     </body>
 </html>
