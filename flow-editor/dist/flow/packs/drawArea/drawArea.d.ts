@@ -20,7 +20,7 @@ export declare class DrawArea implements IDrawArea {
     copyObjects(objectIDs: Array<string>): IFlowCopy;
     pasteObjects(copyData: IFlowCopy): Record<string, string>;
     exportObjects(): IFlowExport;
-    importObjects(model: IFlowExport): void;
+    importObjects(model: IFlowExport, undoRedo?: boolean): void;
     getState(): IFlowState;
     setState(state?: IFlowState): void;
     setReadonly(readonly: boolean): void;

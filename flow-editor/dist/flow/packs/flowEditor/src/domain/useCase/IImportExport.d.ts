@@ -4,7 +4,7 @@ export interface IImportOptions {
     resetPanAndZoom?: boolean;
 }
 export interface IImportExport {
-    importModel(model: IFlowDesignModel, options?: IImportOptions): Promise<void>;
+    importModel(model: IFlowDesignModel, options?: IImportOptions, undoRedo?: boolean): Promise<void>;
     paste(copyModel: IFlowCopyModel): Promise<void>;
     exportModel<KType extends keyof IExportTypeMap>(type: KType): IExportTypeMap[KType];
     copy(): IFlowCopyModel;

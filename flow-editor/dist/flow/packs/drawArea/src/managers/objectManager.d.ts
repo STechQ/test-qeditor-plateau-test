@@ -30,14 +30,14 @@ export declare class ObjectManager {
     private addObject;
     getObject<T extends FlowObjectBase = FlowObjectBase>(objectID: string): T;
     getObjectsByType<T extends FlowObjectBase>(field: T["type"]): Array<T>;
-    deleteObjects(objectIDs: Array<string>): void;
+    deleteObjects(objectIDs: Array<string>, undoRedo?: boolean): void;
     deleteAllObjectsForSwitch(): void;
     copyObjects(objectIDs: Array<string>): IFlowCopy;
     exportObjects(): IFlowExport;
     private exportStep;
     private exportConnection;
     pasteObjects(copyData: IFlowCopy): Record<string, string>;
-    importObjects(model: IFlowExport): void;
+    importObjects(model: IFlowExport, undoRedo?: boolean): void;
     private _import;
     setStepOutputs(stepID: string, outputs: Array<string>): void;
     setSwimlaneId(stepID: string, swimlaneId: string): void;

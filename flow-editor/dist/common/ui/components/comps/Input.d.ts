@@ -1,4 +1,4 @@
-import { ChangeEvent, FC } from "react";
+import { FC } from "react";
 import "../assets/css/components/input.css";
 interface IInputProps {
     label?: string;
@@ -9,7 +9,7 @@ interface IInputProps {
     value: string;
     validationControl?: (value: string) => string;
     onChange?: (e: string) => void;
-    onBlur?: (e: ChangeEvent<HTMLInputElement>) => void;
+    onBlur?: (e: string) => void;
 }
 export declare const Input: FC<IInputProps>;
 export {};
