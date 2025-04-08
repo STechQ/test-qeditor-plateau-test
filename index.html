@@ -24,8 +24,11 @@
                     window.parent.postMessage({ type: "keydown", key: event.key.toLowerCase(), ctrl: true }, "*"); 
                 } 
             });
-            window.addEventListener("message", function(event) {
-                 if (window.parent !== window) { window.parent.postMessage(event.data, "*"); } });
+            window.addEventListener("message", function (event) {
+                if (window.parent !== window && event.data.type == "keydown") {
+                     window.parent.postMessage(event.data, "*");
+                }
+            });
         </script>
     </body>
 </html>
