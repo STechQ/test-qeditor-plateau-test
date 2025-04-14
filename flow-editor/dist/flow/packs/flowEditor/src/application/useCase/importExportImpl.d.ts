@@ -7,7 +7,8 @@ import { IHistory } from "../../domain/useCase/IHistory";
 import { IImportExport, IImportOptions } from "../../domain/useCase/IImportExport";
 import { ISelection } from "../../domain/useCase/ISelection";
 import { IStepRepo } from "../../domain/useCase/IStepRepo";
-import { IViewModel } from "../../domain/viewModel/IViewModel";
+import { IStepInstance, IViewModel } from "../../domain/viewModel/IViewModel";
+import { PropValue } from "../../../../flowInterfaces/runtime/IStepModel";
 export declare class ImportExportImpl implements IImportExport {
     private readonly viewModel;
     private readonly stepRepo;
@@ -19,8 +20,13 @@ export declare class ImportExportImpl implements IImportExport {
     importModel(model: IFlowDesignModel, options?: IImportOptions, undoRedo?: boolean): Promise<void>;
     paste(copyModel: IFlowCopyModel): Promise<void>;
     private _import;
-    exportModel<KType extends keyof IExportTypeMap>(type: KType): IExportTypeMap[KType];
+    exportModel<KType extends keyof IExportTypeMap>(type: KType): Promise<IExportTypeMap[KType]>;
     copy(): IFlowCopyModel;
+    setStepPropDict(step: IStepInstance): void;
+    compileCode(label: PropValue, propValue: PropValue): Promise<{
+        compiledCode: string;
+        errors: string[];
+    }>;
     private getCopyModel;
     private exportEditorModel;
     private exportDesignModel;

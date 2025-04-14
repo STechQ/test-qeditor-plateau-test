@@ -20,7 +20,14 @@ export type IStepModel = {
     O: Record<string, Array<IStepTo> | undefined>;
     I: Record<string, Array<IStepFrom> | undefined>;
 };
+export type IPropDefiniton<T> = {
+    [K in keyof T]: {
+        type: "typescript" | "free";
+        defaultValue?: T[K];
+    };
+};
 export interface INodeModel extends IStepModel {
     S: string;
 }
+export declare let stepPropDict: Record<string, Array<string>>;
 //# sourceMappingURL=IStepModel.d.ts.map

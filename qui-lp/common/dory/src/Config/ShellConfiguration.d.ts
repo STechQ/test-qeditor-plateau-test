@@ -95,7 +95,6 @@ export declare class ShellConfiguration implements IShellConfiguration {
     }) => void;
     createComponentQValue?: (compCOllection: IComponentCollection) => void;
     hostTrigger?: (functionName: string, params: Record<string, any>, pageNameArray: Array<string>) => Promise<IHostResponseData>;
-    container?: (functionName: string, params: Record<string, any>) => Promise<IHostResponseData>;
     setDarkTheme?: (compCollection: IComponentCollection, isDark: boolean) => void;
     clearPageClose?: () => void;
     setPageClose?: () => void;
@@ -121,6 +120,8 @@ export declare class ShellConfiguration implements IShellConfiguration {
         compID: string;
     }) => IDomElement;
     getNetworkConnection?: () => boolean;
+    stringToBase64?: (data: string) => string;
+    base64ToString?: (data: string) => string;
     getLogBulkSize?: () => number | undefined;
     renderer: IRenderer;
     onLRChange?: (region: string) => void;

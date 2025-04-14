@@ -1,5 +1,5 @@
 import { IExpressionData } from "../runtime/IExpression";
-import { IPropObject } from "../runtime/IStepModel";
+import { IPropDefiniton, IPropObject } from "../runtime/IStepModel";
 import * as React from "react";
 import { ISwitchCaseExp } from "../../../../common/everything/flow/runtimeModels/ISwitch";
 import { IVariable } from "../../../../common/everything/dataType/runtimemodels/IVariable";
@@ -52,10 +52,14 @@ export interface ISelectedSwitchCase {
     case?: ISwitchCaseExp;
     caseId?: string;
 }
+export interface ICompiledCode {
+    compiledCode: string;
+    errors: Array<string>;
+}
 export interface IEditSectionInput<PropType = IPropObject> {
     propValues: PropType;
     callbacks: {
-        setProp: <TName extends keyof PropType & string>(name: TName, value: PropType[TName]) => void;
+        setProp: <TName extends keyof PropType & string>(name: TName, value: PropType[TName]) => Promise<Array<string> | void>;
         setOutputs: (outputs: Array<string>) => void;
         setSwimlaneName: (name: IExpressionData) => void;
         scope: {
@@ -68,6 +72,7 @@ export interface IEditSectionInput<PropType = IPropObject> {
             getSwimlanes?: GetSwimlanes;
             setSchema?: SetStoreSchema;
             getSelectedSwitchCase?: () => Array<string>;
+            getSelection?: (type: string, cb: (id: string) => void) => void;
         };
         loading: (show: boolean) => void;
         setSwitchArea?: (param: {
@@ -115,6 +120,6 @@ export interface IStepOptions<PropType = IPropObject> {
     icon?: string;
     description?: string;
     editSection?: (options: IEditSectionInput<PropType>) => (ReactEditSection | HTMLElement);
-    defaultProps?: () => PropType;
+    propDefinitons: () => IPropDefiniton<PropType>;
 }
 //# sourceMappingURL=IStepOptions.d.ts.map

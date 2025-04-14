@@ -20,7 +20,7 @@ interface BigIntConstructor {
 
     /**
      * Interprets the low bits of a BigInt as a 2's-complement signed integer.
-     * All higher bits are discarded.
+     * All higher bits are discarded.k
      * @param bits The number of low bits to use
      * @param int The BigInt whose bits to extract
      */

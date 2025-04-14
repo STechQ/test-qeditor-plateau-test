@@ -1,3 +1,4 @@
+import { PropValue } from "@stechquick/flow-interfaces/runtime";
 import { IExpressionData } from "../../../common/everything/dataType/runtimemodels/IExpression";
 import { ISwitchCaseExp } from "../../../common/everything/flow/runtimeModels/ISwitch";
 import { IFlowState } from "../flowInterfaces/editor/IFlowEditorState";
@@ -8,11 +9,13 @@ export interface IFlowStepOptions {
     inputs: Array<IInputInfo>;
     icon?: string;
     color?: string;
+    errors?: PropValue;
 }
 export interface IFlowStepProps {
     label?: IExpressionData;
     description?: string;
     swimlaneId?: string;
+    errors?: Array<string>;
 }
 export interface IFlowStepExport extends IFlowStepProps {
     ID: string;
@@ -53,6 +56,7 @@ export interface IFlowStepUpdate {
     stepId?: string;
     label?: IExpressionData;
     description?: string;
+    errors?: Array<string>;
 }
 export interface IFlowStepEventInfo {
     type: "step" | "connection" | "swimlane" | "operator";

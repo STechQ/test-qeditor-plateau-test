@@ -28,6 +28,10 @@ export interface IStepInstance {
     swimlaneId?: string;
     options: IStepOptions;
     propValues: IStepModel["P"];
+    compiledValues?: {
+        compiledCode: string;
+        errors: Array<string>;
+    };
 }
 export interface ISwimlaneInstance {
     id: string;
@@ -70,6 +74,7 @@ export interface IViewModel {
     fileDeleteFunction?: IExecuteFlowByMapping;
     resetHistory: () => IVMHistory;
     executeType: FlowExecutionType;
+    selectedModelId: string;
 }
 export declare const IViewModel: unique symbol;
 //# sourceMappingURL=IViewModel.d.ts.map

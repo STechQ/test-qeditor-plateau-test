@@ -30,7 +30,7 @@ export declare class Program implements IFlowEditorProgram {
     mount(element: HTMLElement | HTMLIFrameElement): void;
     unmount(): void;
     registerStep(step: IStepOptions | string): void;
-    exportModel<KType extends keyof IExportTypeMap>(type: KType): IExportTypeMap[KType];
+    exportModel<KType extends keyof IExportTypeMap>(type: KType): Promise<IExportTypeMap[KType]>;
     importModel(model: IFlowDesignModel): Promise<void>;
     copy(): IFlowCopyModel;
     paste(model: IFlowCopyModel): Promise<void>;

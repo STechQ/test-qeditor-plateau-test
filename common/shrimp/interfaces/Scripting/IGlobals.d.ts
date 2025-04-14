@@ -14,7 +14,7 @@ import { IShell } from "../quick/IShell";
 import { IUrlOptions } from "../quick/IUrl";
 import { IExcel, IExcelList } from "../quick/IExcel";
 import { IDomElement } from "../RenderingInterfaces/IDomElement";
-import { INavigationOptions, MobileAnimationType } from "../quick/INavigationManager";
+import { INavigationOptions, MobileAnimation } from "../quick/INavigationManager";
 import { IPermanentStoreObject, Plateau_UI_PermanentStore_Name } from "../RenderingInterfaces/Operators/IPermanentStoreOperator";
 import { IDecryptDataRequest, IDecryptDataResponse, IEncryptDataRequest, IEncryptDataResponse, IHashDataRequest, IHashDataResponse } from "../../helpers/cryptoHelper";
 import { ISharedDataInfo } from "../quick/IGeneralMethods";
@@ -290,17 +290,17 @@ export interface IGlobals_Quick {
      * @param options - Optional configuration object for the navigation.
      * @param [options.newTab=false] - If true, opens the specified page in a new tab.
      * @param [options.store=false] - If true, transmits store values to the new tab (valid only if newTab is true).
-     * @param [options.mobileAnimation] - The animation type to use for mobile navigation.
+     * @param [options.mobileAnimation] - The animation type to use for mobile navigation. Possible values: "push", "presentFullScreen", "fade".
      * @returns - Returns the result of the navigation operation.
      *
      * @example
      * quick.Quick.go("<<qjson:d21r0xpa-krke-m6oi-mo8m-bk7whi3b>>", { newTab: true, store: true });
     */
     go: (qjsonPath: string, options?: INavigationOptions) => any;
-    goNative?: ({ code, param, mobileAnimation }: {
+    goNative?: ({ code, param, transitionStyle }: {
         code: string;
         param?: Record<string, any>;
-        mobileAnimation?: MobileAnimationType;
+        transitionStyle?: MobileAnimation;
     }) => void;
     /**
      * Creates a deep copy of the provided object using a cloning technique.
@@ -1550,7 +1550,6 @@ export interface IGlobalsBase {
     webScripts: {};
     workflowStore?: IWorkflowStore;
     workflow?: IGlobals_Workflow; /** !!! DON'T CHANGE */
-    container: {};
 }
 export interface IGlobals_Workflow {
     RunFunction: ({ flowId, input, dataInstance }: {

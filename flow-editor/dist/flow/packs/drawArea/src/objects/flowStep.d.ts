@@ -43,6 +43,7 @@ export declare class FlowStep extends FlowObjectBase {
     private swimlaneId?;
     private label;
     private description;
+    private errors;
     readonly type = "step";
     protected readonly stageType: StageType;
     constructor(id: string, stepName: string, surfacePoint: IPoint, options: IFlowStepOptions, objectManager: ObjectManager, zuiManager: ZuiManager, eventHelper: EventHelper<FlowEvents>, props?: IFlowStepProps);
@@ -60,10 +61,11 @@ export declare class FlowStep extends FlowObjectBase {
     get SwimlaneId(): string | undefined;
     get Label(): IExpressionData | undefined;
     get Description(): string | undefined;
+    get Errors(): Array<string> | undefined;
     get ShapeInfo(): StepShapeInfo | undefined;
     setSwimlaneId(swimlaneId?: string): void;
     mouseDown(surfacePoint: IPoint): MouseDownReturn;
-    protected createSelectionOverlay(): Path[];
+    protected createSelectionOverlay(isErroneous?: boolean): Path[];
     private getBorder;
     moveBy(dVector: Vector, surfacePoint: IPoint): void;
     mouseUp(): void;
@@ -88,6 +90,8 @@ export declare class FlowStep extends FlowObjectBase {
     setOutputs(outputs: Array<string>): void;
     setLabel(label: IExpressionData): void;
     setDescription(description: string): void;
+    setErrors(errors: Array<string>): void;
+    setContainerColor(bgColor: string, borderColor: string): void;
     truncateTextToFit(text: Text, content: string, maxWidth: number): void;
 }
 export {};

@@ -1,4 +1,4 @@
-import { ICounterPropType, StepFlowModelPropType } from "../../../../../common/everything/workflow/runtimemodels/IWorkflow";
+import { IAddActivityProp, ICounterPropType, StepFlowModelPropType } from "../../../../../common/everything/workflow/runtimemodels/IWorkflow";
 import { IWorkflowContext } from "../../../../../common/everything/workflow/runtimeObjects/IWorkflowContext";
 import { IRestServiceCallPropType } from "../../../flowComponents/runtime/restServiceCall";
 export interface IPlatformWorkflowAdaptor {
@@ -21,6 +21,7 @@ export interface IPlatformWorkflowAdaptor {
     };
     constantsWId: Record<string, any>;
     userId: string | undefined;
+    addActivity: (prop: IAddActivityProp) => Promise<void>;
 }
 export interface IPlatformWorkflowServerResponse {
     status: number;

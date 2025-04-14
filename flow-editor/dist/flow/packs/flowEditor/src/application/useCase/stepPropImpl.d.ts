@@ -5,12 +5,14 @@ import { IDrawArea } from "../../domain/infrastructure/IDrawArea";
 import { IHistory } from "../../domain/useCase/IHistory";
 import { IStepProp } from "../../domain/useCase/IStepProp";
 import { IViewModel } from "../../domain/viewModel/IViewModel";
+import { IImportExport } from "../../domain/useCase/IImportExport";
 export declare class StepPropImpl implements IStepProp {
     private readonly viewModel;
     private readonly drawArea;
     private readonly history;
-    constructor(container: DependencyContainer, viewModel?: IViewModel, drawArea?: IDrawArea, history?: IHistory);
-    setStepProp(stepIDs: Array<string>, propName: string, propValue: PropValue): void;
+    private readonly importExport;
+    constructor(container: DependencyContainer, viewModel?: IViewModel, drawArea?: IDrawArea, history?: IHistory, importExport?: () => IImportExport);
+    setStepProp(stepIDs: Array<string>, propName: string, propValue: PropValue): Promise<string[] | undefined>;
     setStepOutputs(stepID: string, outputs: Array<string>): void;
     setSwimlaneName(swimlaneId: string, name: IExpressionData): void;
 }

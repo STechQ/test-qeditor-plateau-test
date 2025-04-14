@@ -7,5 +7,6 @@ export interface IStepDesignModel {
     sp: IPoint;
     props: IStepModel["P"];
     swimlaneId?: string;
+    compiledCode?: string;
 }
 //# sourceMappingURL=IStepDesignModel.d.ts.map

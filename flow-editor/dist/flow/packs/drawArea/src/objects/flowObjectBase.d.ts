@@ -28,9 +28,9 @@ export declare abstract class FlowObjectBase {
     constructor(ID: string, objectManager: ObjectManager, zuiManager: ZuiManager, eventHelper: EventHelper<FlowEvents>);
     draw(): void;
     deleted(): void;
-    drawSelectionOverlay(): void;
+    drawSelectionOverlay(isErroneous?: boolean): void;
     abstract mouseDown(surfacePoint: IPoint): MouseDownReturn;
-    protected abstract createSelectionOverlay(): Array<Shape>;
+    protected abstract createSelectionOverlay(isErroneous?: boolean): Array<Shape>;
     abstract moveBy(dVector: Vector, surfacePoint: IPoint): void;
     abstract mouseUp(): void;
     protected abstract onDeleted(): void;

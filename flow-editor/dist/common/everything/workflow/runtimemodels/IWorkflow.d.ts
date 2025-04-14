@@ -108,4 +108,14 @@ export interface ICounterPropType {
 export interface ObjectWithRoles {
     roles: Array<string>;
 }
+export interface IAddActivityPropType {
+    label: IExpressionData;
+    description: string;
+    descriptionCode: IExpressionData;
+    descriptionActivity: IExpressionData;
+}
+export interface IAddActivityProp {
+    descriptionCode: string;
+    description: string;
+}
 //# sourceMappingURL=IWorkflow.d.ts.map

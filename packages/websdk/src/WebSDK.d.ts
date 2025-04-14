@@ -16,7 +16,6 @@ import QJsonRetrieverImpl from './implementation/QJsonRetrieverImpl';
 import { StoreManagerHookCb } from "./implementation/StoreManager";
 import { UXManagerImpl } from "./implementation/UXManagerImpl";
 import { INamedCompModel } from "@stechquick/algae/lib/quick/INamedCompModel";
-import { IIntegrationsManager } from "../../../common/qshell/src/interfaces/construction/IIntegrationsManager";
 export declare class WebSDK implements IWebSDK {
     static servicesWrapper: IContainerServicesWrapper;
     config: IRendererConfig;
@@ -38,7 +37,6 @@ export declare class WebSDK implements IWebSDK {
     private websdkContext;
     private moduleManager;
     private cssTagManager;
-    integrationsManager: IIntegrationsManager;
     constructor(settings: IWebSDKSettings, services?: IContainerServices, environmentInfo?: IDictionary<string>);
     UpdateSettings(allSettings: IWebSDKSetingsBus): void;
     NamedComponentInit(compName: string, compPath: string, compModel?: INamedCompModel): Promise<void>;

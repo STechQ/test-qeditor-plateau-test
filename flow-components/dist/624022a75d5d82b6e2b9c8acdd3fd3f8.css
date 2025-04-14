@@ -1,0 +1,78 @@
+@import "../index.css";
+
+.select-flow label  {
+    font-weight: 400 !important;
+    font-size: 14px !important;
+    margin-bottom: 4px;
+}
+
+.select-flow input, .select-flow .input-block {
+    height: 32px;
+    border: 1px solid #BCBCBC;
+    border-radius: 4px;
+    padding-left: 12px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.select-flow .input {
+    position: relative;
+}
+.select-flow .input input {
+    padding-right: 25px;
+}
+
+.select-flow .input input, .select-flow .input .input-block {
+    pointer-events: none;
+}
+
+.select-flow .input .mdi-chevron-down {
+    position: absolute;
+    right: 5px;
+    top: 3px;
+    font-size: 20px;
+}
+
+.select-flow .options {
+    position: absolute;
+    left: 0% !important;
+    max-height: 200px;
+    overflow-y: auto;
+    top: calc(100% + 5px) !important;
+    background-color: #FFF;
+    z-index: 1;
+    border: 1px solid rgb(213, 213, 213);
+    background-color: #FFF;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 4px;
+    border-radius: 4px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: -webkit-fill-available;
+}
+
+.select-flow .options ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.select-flow .options ul li{ 
+    padding: 5px 15px !important;
+}
+
+.select-flow .options ul li:hover {
+    background-color: #E2E2E2;
+}
+.select-flow .search-input {
+    margin-left: 15px;
+    margin-right: 15px;
+    width: -webkit-fill-available;
+    margin-bottom: 5px;
+}
+.select-flow .search-input:focus-visible {
+   outline: unset;
+}
+
+

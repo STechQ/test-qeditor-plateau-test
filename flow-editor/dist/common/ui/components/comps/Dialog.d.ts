@@ -8,8 +8,10 @@ interface DialogProps {
     footer?: Array<JSX.Element>;
     type?: "modal" | "dialog";
     position?: {
-        top: number;
+        top?: number;
+        bottom?: number;
     };
+    icon?: JSX.Element;
 }
 export declare const Dialog: FC<DialogProps>;
 export {};
