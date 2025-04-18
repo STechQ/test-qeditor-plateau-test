@@ -59,7 +59,7 @@ export interface ICompiledCode {
 export interface IEditSectionInput<PropType = IPropObject> {
     propValues: PropType;
     callbacks: {
-        setProp: <TName extends keyof PropType & string>(name: TName, value: PropType[TName]) => Promise<Array<string> | void>;
+        setProp: <TName extends keyof PropType & string>(name: TName, value: PropType[TName], data?: Record<string, string>) => Promise<Array<string> | void>;
         setOutputs: (outputs: Array<string>) => void;
         setSwimlaneName: (name: IExpressionData) => void;
         scope: {

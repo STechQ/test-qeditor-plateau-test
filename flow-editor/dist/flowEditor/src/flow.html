@@ -13,12 +13,12 @@
     <body>
         <script src="program.js"></script>
         <script>
-            document.addEventListener("keydown", function (event) {
-              if (event.ctrlKey && (event.key.toLowerCase() === "z" || event.key.toLowerCase() === "y")) {
-                event.preventDefault();
-                window.parent.parent.postMessage({ type: "keydown", key: event.key.toLowerCase(), ctrl: true }, "*");
-              }
-            });
-          </script>
+          document.addEventListener("keydown", function (event) {
+            if ((event.ctrlKey || event.metaKey) && (event.key.toLowerCase() === "z" || event.key.toLowerCase() === "y")) {
+              event.preventDefault();
+              window.parent.parent.postMessage({ type: "keydown", key: event.key.toLowerCase(), ctrl: event.ctrlKey, cmd: event.metaKey }, "*");
+            }
+          });
+        </script>
     </body>
 </html>

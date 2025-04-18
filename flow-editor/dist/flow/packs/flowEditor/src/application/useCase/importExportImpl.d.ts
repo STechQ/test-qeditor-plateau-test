@@ -23,7 +23,7 @@ export declare class ImportExportImpl implements IImportExport {
     exportModel<KType extends keyof IExportTypeMap>(type: KType): Promise<IExportTypeMap[KType]>;
     copy(): IFlowCopyModel;
     setStepPropDict(step: IStepInstance): void;
-    compileCode(label: PropValue, propValue: PropValue): Promise<{
+    compileCode(label: PropValue, propValue: PropValue, data?: Record<string, string>): Promise<{
         compiledCode: string;
         errors: string[];
     }>;

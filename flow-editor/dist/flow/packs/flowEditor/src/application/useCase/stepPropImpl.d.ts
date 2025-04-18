@@ -12,7 +12,7 @@ export declare class StepPropImpl implements IStepProp {
     private readonly history;
     private readonly importExport;
     constructor(container: DependencyContainer, viewModel?: IViewModel, drawArea?: IDrawArea, history?: IHistory, importExport?: () => IImportExport);
-    setStepProp(stepIDs: Array<string>, propName: string, propValue: PropValue): Promise<string[] | undefined>;
+    setStepProp(stepIDs: Array<string>, propName: string, propValue: PropValue, data?: Record<string, string>): Promise<string[] | undefined>;
     setStepOutputs(stepID: string, outputs: Array<string>): void;
     setSwimlaneName(swimlaneId: string, name: IExpressionData): void;
 }
