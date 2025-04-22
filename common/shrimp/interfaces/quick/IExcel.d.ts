@@ -25,4 +25,28 @@ export interface IExcelCellOptions {
     type: ExcelCellType;
     numberFormat?: string;
 }
+export interface IExcelToJsonOptions {
+    /** Output format */
+    header?: "A" | number | string[];
+    /** Override worksheet range */
+    range?: any;
+    /** Include or omit blank lines in the output */
+    blankRows?: boolean;
+    /** Default value for null/undefined values */
+    defaultValue?: any;
+    /** if true, return raw data; if false, return formatted text */
+    raw?: boolean;
+    /** if true, return raw numbers; if false, return formatted numbers */
+    rawNumbers?: boolean;
+    /** Use specified date format */
+    dateFormat?: string | number;
+}
+export interface IExcelToJsonData {
+    excelBuffer: ArrayBuffer;
+    options?: IExcelToJsonOptions;
+}
+export interface IExcelJsonData {
+    sheetName?: string;
+    sheetData?: any[][] | any[];
+}
 //# sourceMappingURL=IExcel.d.ts.map

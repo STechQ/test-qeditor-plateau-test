@@ -10,7 +10,7 @@ import { IHostResponseData } from "../../../shrimp/interfaces/IHostResponseData"
 import { IDomElement } from "../../../shrimp/interfaces/RenderingInterfaces/IDomElement";
 import { INetwork } from "../../../shrimp/interfaces/quick/IContainerServices";
 import { ICookieAccess } from "../../../shrimp/interfaces/quick/ICookieAccess";
-import { IExcel, IExcelList } from "../../../shrimp/interfaces/quick/IExcel";
+import { IExcel, IExcelJsonData, IExcelList, IExcelToJsonData } from "../../../shrimp/interfaces/quick/IExcel";
 import { IFormatConfiguration } from "../../../shrimp/interfaces/quick/IFormatConfiguration";
 import { IFormattingDefinition } from "../../../shrimp/interfaces/quick/IFormattingDefinition";
 import { ILocationPosition } from "../../../shrimp/interfaces/quick/ILocationPosition";
@@ -68,6 +68,7 @@ export declare class ShellConfiguration implements IShellConfiguration {
         noQueryString?: boolean;
     }): string | undefined;
     exportToXlsxHandler?: (excelFile: IExcel | IExcelList) => void;
+    xlsxToJson?: (excelToJsonData: IExcelToJsonData) => IExcelJsonData[];
     setComponentClass?: (compCollection: IComponentCollection, classes: Array<string>) => void;
     setTheme?: (newTheme: string) => void;
     getThemeList?: () => Array<string> | undefined;

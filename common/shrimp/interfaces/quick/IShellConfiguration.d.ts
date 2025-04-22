@@ -22,7 +22,7 @@ import { IProcessManager } from "./IProcessManager";
 import { IShellGlobalMethods } from "./IShellGlobalMethods";
 import { IStorageAccess } from "./IStore";
 import { IUrlOptions } from "./IUrl";
-import { IExcel, IExcelList } from "./IExcel";
+import { IExcel, IExcelJsonData, IExcelList, IExcelToJsonData } from "./IExcel";
 import { INavigationOptions } from "./INavigationManager";
 import { IDecryptDataRequest, IDecryptDataResponse, IEncryptDataRequest, IEncryptDataResponse, IHashDataRequest, IHashDataResponse } from "../../helpers/cryptoHelper";
 import { IDoryJr } from "../RenderingInterfaces/IDoryJr";
@@ -72,6 +72,7 @@ export interface IShellConfiguration {
         noQueryString?: boolean;
     }): string | undefined;
     exportToXlsxHandler?: (excelFile: IExcel | IExcelList) => void;
+    xlsxToJson?: (excelToJsonData: IExcelToJsonData) => IExcelJsonData[];
     setComponentClass?: (componentInstance: IComponentCollection, classes: Array<string>) => void;
     setComponentsProperty?: (componentCollection: IComponentCollection, propertyName: string, propertyValue: any) => void;
     setTheme?: (newTheme: string) => void;

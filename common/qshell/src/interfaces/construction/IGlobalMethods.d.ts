@@ -7,7 +7,7 @@ import { IAlertParameters } from "../../../../shrimp/interfaces/quick/IShellGlob
 import { IDomElement } from "../../../../shrimp/interfaces/RenderingInterfaces/IDomElement";
 import { IRenderer } from "../../../../shrimp/interfaces/RenderingInterfaces/IRenderer";
 import { ILocationPosition } from "../../../../shrimp/interfaces/quick/ILocationPosition";
-import { IExcel, IExcelList } from "../../../../shrimp/interfaces/quick/IExcel";
+import { IExcel, IExcelJsonData, IExcelList, IExcelToJsonData } from "../../../../shrimp/interfaces/quick/IExcel";
 import { MobileAnimation } from "../../../../shrimp/interfaces/quick/INavigationManager";
 import { ISharedDataInfo } from "../../../../shrimp/interfaces/quick/IGeneralMethods";
 export declare const GlobalMethodsContextName: string;
@@ -49,6 +49,7 @@ export interface IGlobalMethods extends IContextItem {
     getPageTitle?: () => void;
     getFavicon?: () => void;
     exportToXlsxHandler?: (excelFile: IExcel | IExcelList) => void;
+    xlsxToJson?: (excelToJsonData: IExcelToJsonData) => IExcelJsonData[];
     setComponentClass?: (compCollection: IComponentCollection, classes: Array<string>) => void;
     setComponentsProperty?: (compCollection: IComponentCollection, propertyName: string, propertyValue: string) => void;
     goNative?: ({ code, param, transitionStyle }: {
