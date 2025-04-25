@@ -64,6 +64,8 @@ export declare class GlobalMethodsImpl implements IGlobalMethods {
     deleteComponent(compCollection: IComponentCollection | IDomElement): void;
     setPageTitle(value: string): void;
     copyToClipboard(value: string): void;
+    initializePositioning(sourcePicker: string, wrapperClass: string): void;
+    cleanupPositioning(sourcePicker: string): void;
     getCurrentPosition(): Promise<ILocationPosition>;
     setFavicon(favicon: string): void;
     exportToXlsxHandler(excelFile: IExcel | IExcelList): void;

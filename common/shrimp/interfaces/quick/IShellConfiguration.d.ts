@@ -113,6 +113,8 @@ export interface IShellConfiguration {
     getFavicon?: () => void;
     setPageTitle?: (value: string) => void;
     copyToClipboard?: (value: string) => void;
+    initializePositioning?: (sourcePicker: string, wrapperClass: string) => void;
+    cleanupPositioning?: (sourcePicker: string) => void;
     setFavicon?: (favicon: string) => void;
     hash?: (data: IHashDataRequest) => Promise<IHashDataResponse>;
     encrypt?: (data: IEncryptDataRequest) => Promise<IEncryptDataResponse>;

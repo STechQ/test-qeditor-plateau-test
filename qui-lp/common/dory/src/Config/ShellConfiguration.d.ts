@@ -96,7 +96,6 @@ export declare class ShellConfiguration implements IShellConfiguration {
     }) => void;
     createComponentQValue?: (compCOllection: IComponentCollection) => void;
     hostTrigger?: (functionName: string, params: Record<string, any>, pageNameArray: Array<string>) => Promise<IHostResponseData>;
-    container?: (functionName: string, params: Record<string, any>) => Promise<IHostResponseData>;
     setDarkTheme?: (compCollection: IComponentCollection, isDark: boolean) => void;
     clearPageClose?: () => void;
     setPageClose?: () => void;
@@ -109,6 +108,8 @@ export declare class ShellConfiguration implements IShellConfiguration {
     getFavicon?: () => void;
     setPageTitle: (value: string) => void;
     copyToClipboard: (value: string) => void;
+    initializePositioning: (sourcePicker: string, wrapperClass: string) => void;
+    cleanupPositioning: (sourcePicker: string) => void;
     setFavicon: (icon: string) => void;
     hash?: (data: IHashDataRequest) => Promise<IHashDataResponse>;
     encrypt?: (data: IEncryptDataRequest) => Promise<IEncryptDataResponse>;

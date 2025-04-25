@@ -98,8 +98,18 @@ declare const localComponents: {
     QCaptcha: {};
     QQRCode: {};
     QDynamicFields: {};
+    InfiniteScroll: {
+        importFunc: () => Promise<void>;
+        loaded: boolean;
+        module: undefined;
+    };
     QPieChart: {};
     QQrReader: {};
+    QAppointmentCalendar: {
+        importFunc: () => Promise<void>;
+        loaded: boolean;
+        module: undefined;
+    };
     QMenu: {
         importFunc: () => Promise<void>;
         loaded: boolean;

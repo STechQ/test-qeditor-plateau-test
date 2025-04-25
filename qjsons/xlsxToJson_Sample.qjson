@@ -19,6 +19,12 @@ let pjson = {
 			},
 			"O": {
 				"cType": "child"
+			},
+			"S": {
+				"xs-xl": {
+					"pageBackgroundColor": "#ffffff",
+					"statusBarColor": "#ffffff"
+				}
 			}
 		},
 		{
@@ -85,14 +91,86 @@ let pjson = {
 															},
 															"E": {
 																"change": {
-																	"H": "quick.EM.trace(components.myFileInput.accept);\r\n\r\nvar reader = new FileReader();\r\nif (components.myFileInput.qValue.type = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet') {\r\n        reader.readAsArrayBuffer(value);\r\n}\r\nreader.onload = () => {\r\n\r\n        let excelToJsonData: IExcelToJsonData = {\r\n                excelBuffer: (<any>reader.result),\r\n                options: {\r\n                        header: 1,\r\n                        raw: false\r\n                }\r\n        }\r\n\r\n        let excelJsonData = quick.Quick.xlsxToJson(excelToJsonData);\r\n        quick.store.set(\"$excelJsonData\", excelJsonData);\r\n        components.EdtrComp_13.text = JSON.stringify(excelJsonData);\r\n\r\n\r\n}\r\n",
+																	"H": "quick.EM.trace(components.myFileInput.accept);\r\n\r\nvar reader = new FileReader();\r\nif (components.myFileInput.qValue.type = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet') {\r\n        reader.readAsArrayBuffer(value);\r\n}\r\nreader.onload = () => {\r\n\r\n        let excelToJsonData: IExcelToJsonData = {\r\n                excelBuffer: (<any>reader.result),\r\n                options: {\r\n                        header: 1,\r\n                        raw: false\r\n                }\r\n        }\r\n\r\n        let excelJsonData = quick.Quick.xlsxToJson(excelToJsonData);\r\n        quick.store.set(\"$excelJsonData\", excelJsonData);\r\n        components.EdtrComp_31.text = JSON.stringify(excelJsonData);\r\n\r\n\r\n}\r\n",
 																	"P": "value:{ lastModified: number; lastModifiedDate: Date; name: string; size: number; type: string; desc: string; }",
 																	"HL": "TS"
 																}
 															},
 															"C": {},
 															"_Editor": {
-																"eID": "EdtrComp_8"
+																"eID": "EdtrComp_24"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginLeft": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginTop": "4px",
+																	"paddingTop": "12px",
+																	"paddingBottom": "",
+																	"paddingLeft": "",
+																	"paddingRight": "",
+																	"inputPaddingTop": "",
+																	"inputPaddingRight": "",
+																	"inputPaddingBottom": "",
+																	"inputPaddingLeft": "",
+																	"width": "",
+																	"height": "",
+																	"maxWidth": "",
+																	"maxHeight": "",
+																	"minWidth": "",
+																	"minHeight": "",
+																	"unlink": "false",
+																	"unlinkMax": "false",
+																	"unlinkMin": "false",
+																	"isSizeCollapsed": "false",
+																	"dense": "",
+																	"defaultFontColor": "#686868",
+																	"defaultFontFamily": "Roboto",
+																	"defaultFontSize": "16px",
+																	"defaultFontStyle": "normal",
+																	"defaultFontWeight": "400",
+																	"defaultCombinedFont": "Roboto-Regular",
+																	"defaultThemeFont": "Custom",
+																	"activeFontColor": "#000000",
+																	"activeFontFamily": "Roboto",
+																	"activeFontSize": "16px",
+																	"activeFontStyle": "normal",
+																	"activeFontWeight": "400",
+																	"activeCombinedFont": "Roboto-Regular",
+																	"activeThemeFont": "Custom",
+																	"errorMessageFontColor": "#E96767",
+																	"errorMessageFontFamily": "Roboto",
+																	"errorMessageFontSize": "12px",
+																	"errorMessageFontStyle": "normal",
+																	"errorMessageFontWeight": "400",
+																	"EMCombinedFont": "Roboto-Regular",
+																	"errorMessageThemeFont": "Custom",
+																	"errorMessageLineHeight": "",
+																	"backgroundColor": "#FFFFFF",
+																	"attachBackgroundColor": "#686868",
+																	"appendIconColor": "#686868",
+																	"prependIconColor": "",
+																	"prependInnerIconColor": "",
+																	"activeBorderColor": "#1976d2",
+																	"innerBoxSizing": "",
+																	"innerBorderTopStyle": "",
+																	"innerBorderRightStyle": "",
+																	"innerBorderBottomStyle": "solid",
+																	"innerBorderLeftStyle": "",
+																	"innerBorderTopLeftRadius": "",
+																	"innerBorderTopRightRadius": "",
+																	"innerBorderBottomLeftRadius": "",
+																	"innerBorderBottomRightRadius": "",
+																	"innerBorderTopWidth": "0px",
+																	"innerBorderRightWidth": "0px",
+																	"innerBorderBottomWidth": "1px",
+																	"innerBorderLeftWidth": "0px",
+																	"innerDefaultBorderColor": "#0000006b",
+																	"innerSides": "Bottom",
+																	"outlined": "",
+																	"innerBoxShadow": ""
+																}
 															},
 															"O": {
 																"cType": "slot"
@@ -113,15 +191,24 @@ let pjson = {
 												"eID": "EdtrComp_3"
 											},
 											"O": {
-												"cType": "slot",
-												"layout": {
-													"dOpt": {
-														"xs": [
-															"d:d-flex",
-															"fd:flex-column"
-														]
-													},
-													"class": "d-flex flex-column"
+												"cType": "slot"
+											},
+											"S": {
+												"xs-xl": {
+													"col": "",
+													"flexDirection": "column",
+													"alignItems": "",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "12px",
+													"paddingBottom": "12px",
+													"paddingLeft": "12px",
+													"paddingRight": "12px",
+													"backgroundColor": "#ffffff",
+													"boxShadow": ""
 												}
 											}
 										}
@@ -134,13 +221,29 @@ let pjson = {
 							},
 							"O": {
 								"cType": "slot"
+							},
+							"S": {
+								"xs-xl": {
+									"marginLeft": "0px",
+									"marginRight": "0px",
+									"marginBottom": "0px",
+									"marginTop": "0px",
+									"paddingTop": "",
+									"paddingBottom": "",
+									"paddingLeft": "",
+									"paddingRight": "",
+									"width": "",
+									"height": "",
+									"backgroundColor": "#ffffff",
+									"boxShadow": ""
+								}
 							}
 						},
 						{
 							"T": "VRow",
 							"P": {
 								"ID": {
-									"H": "EdtrComp_18",
+									"H": "EdtrComp_15",
 									"T": "prop"
 								}
 							},
@@ -157,7 +260,7 @@ let pjson = {
 															"T": "QLabel",
 															"P": {
 																"ID": {
-																	"H": "EdtrComp_13",
+																	"H": "EdtrComp_31",
 																	"T": "prop"
 																},
 																"tagType": {
@@ -165,9 +268,8 @@ let pjson = {
 																	"T": "prop"
 																},
 																"text": {
-																	"H": "''",
-																	"T": "prop",
-																	"HL": "QS"
+																	"H": "'Text'",
+																	"T": "prop"
 																},
 																"visible": {
 																	"H": "true",
@@ -181,7 +283,31 @@ let pjson = {
 															"E": {},
 															"C": {},
 															"_Editor": {
-																"eID": "EdtrComp_13"
+																"eID": "EdtrComp_31"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginTop": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginLeft": "",
+																	"paddingTop": "",
+																	"paddingRight": "",
+																	"paddingBottom": "",
+																	"paddingLeft": "",
+																	"fontColor": "#000000",
+																	"fontFamily": "Roboto",
+																	"fontSize": "16px",
+																	"fontStyle": "normal",
+																	"fontWeight": "400",
+																	"combinedFont": "Roboto-Regular",
+																	"ThemeFont": "Custom",
+																	"lineHeight": "20px",
+																	"textAlign": "start",
+																	"textDecorationLine": "none",
+																	"textDecorationStyle": "solid",
+																	"textDecorationColor": "#000000"
+																}
 															},
 															"O": {
 																"cType": "slot"
@@ -194,23 +320,32 @@ let pjson = {
 											"E": {},
 											"P": {
 												"ID": {
-													"H": "EdtrComp_26",
+													"H": "EdtrComp_16",
 													"T": "prop"
 												}
 											},
 											"_Editor": {
-												"eID": "EdtrComp_26"
+												"eID": "EdtrComp_16"
 											},
 											"O": {
-												"cType": "slot",
-												"layout": {
-													"dOpt": {
-														"xs": [
-															"d:d-flex",
-															"fd:flex-column"
-														]
-													},
-													"class": "d-flex flex-column"
+												"cType": "slot"
+											},
+											"S": {
+												"xs-xl": {
+													"col": "",
+													"flexDirection": "column",
+													"alignItems": "",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "12px",
+													"paddingBottom": "12px",
+													"paddingLeft": "12px",
+													"paddingRight": "12px",
+													"backgroundColor": "#ffffff",
+													"boxShadow": ""
 												}
 											}
 										}
@@ -219,17 +354,33 @@ let pjson = {
 								}
 							},
 							"_Editor": {
-								"eID": "EdtrComp_18"
+								"eID": "EdtrComp_15"
 							},
 							"O": {
 								"cType": "slot"
+							},
+							"S": {
+								"xs-xl": {
+									"marginLeft": "0px",
+									"marginRight": "0px",
+									"marginBottom": "0px",
+									"marginTop": "0px",
+									"paddingTop": "",
+									"paddingBottom": "",
+									"paddingLeft": "",
+									"paddingRight": "",
+									"width": "",
+									"height": "",
+									"backgroundColor": "#ffffff",
+									"boxShadow": ""
+								}
 							}
 						},
 						{
 							"T": "VRow",
 							"P": {
 								"ID": {
-									"H": "EdtrComp_28",
+									"H": "EdtrComp_8",
 									"T": "prop"
 								}
 							},
@@ -246,23 +397,11 @@ let pjson = {
 															"T": "VBtn",
 															"P": {
 																"ID": {
-																	"H": "EdtrComp_48",
-																	"T": "prop"
-																},
-																"color": {
-																	"H": "'primary'",
+																	"H": "EdtrComp_75",
 																	"T": "prop"
 																},
 																"depressed": {
 																	"H": "true",
-																	"T": "prop"
-																},
-																"elevation": {
-																	"H": "0",
-																	"T": "prop"
-																},
-																"height": {
-																	"H": "'40px'",
 																	"T": "prop"
 																},
 																"visible": {
@@ -286,7 +425,7 @@ let pjson = {
 																			"E": {},
 																			"P": {
 																				"ID": {
-																					"H": "EdtrComp_55",
+																					"H": "EdtrComp_82",
 																					"T": "prop"
 																				},
 																				"text": {
@@ -296,10 +435,34 @@ let pjson = {
 																				}
 																			},
 																			"_Editor": {
-																				"eID": "EdtrComp_55"
+																				"eID": "EdtrComp_82"
 																			},
 																			"O": {
 																				"cType": "child"
+																			},
+																			"S": {
+																				"xs-xl": {
+																					"marginTop": "",
+																					"marginRight": "",
+																					"marginBottom": "",
+																					"marginLeft": "",
+																					"paddingTop": "",
+																					"paddingRight": "",
+																					"paddingBottom": "",
+																					"paddingLeft": "",
+																					"fontColor": "#000000",
+																					"fontFamily": "Roboto",
+																					"fontSize": "16px",
+																					"fontStyle": "normal",
+																					"fontWeight": "400",
+																					"combinedFont": "Roboto-Regular",
+																					"ThemeFont": "Custom",
+																					"lineHeight": "20px",
+																					"textAlign": "start",
+																					"textDecorationLine": "none",
+																					"textDecorationStyle": "solid",
+																					"textDecorationColor": "#000000"
+																				}
 																			}
 																		}
 																	],
@@ -307,7 +470,86 @@ let pjson = {
 																}
 															},
 															"_Editor": {
-																"eID": "EdtrComp_48"
+																"eID": "EdtrComp_75"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginTop": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginLeft": "",
+																	"paddingTop": "",
+																	"paddingRight": "16px",
+																	"paddingBottom": "",
+																	"paddingLeft": "16px",
+																	"width": "",
+																	"height": "",
+																	"maxWidth": "",
+																	"maxHeight": "",
+																	"minWidth": "",
+																	"minHeight": "",
+																	"unlink": "false",
+																	"unlinkMax": "false",
+																	"unlinkMin": "false",
+																	"isSizeCollapsed": "false",
+																	"fontColor": "#ffffff",
+																	"fontFamily": "Roboto",
+																	"fontSize": "16px",
+																	"fontStyle": "normal",
+																	"fontWeight": "400",
+																	"combinedFont": "Roboto-Regular",
+																	"ThemeFont": "Custom",
+																	"lineHeight": "20px",
+																	"backgroundColor": "#1976D2",
+																	"disabledBackgroundColor": "rgba(0,0,0,.12)",
+																	"hoverColor": "#000000",
+																	"boxShadow": "",
+																	"boxSizing": "",
+																	"borderTopStyle": "solid",
+																	"borderRightStyle": "solid",
+																	"borderBottomStyle": "solid",
+																	"borderLeftStyle": "solid",
+																	"borderTopLeftRadius": "4px",
+																	"borderTopRightRadius": "4px",
+																	"borderBottomLeftRadius": "4px",
+																	"borderBottomRightRadius": "4px",
+																	"borderTopWidth": "0px",
+																	"borderRightWidth": "0px",
+																	"borderBottomWidth": "0px",
+																	"borderLeftWidth": "0px",
+																	"defaultBorderColor": "",
+																	"sides": "Top,Right,Bottom,Left"
+																}
+															},
+															"SC": {
+																"fontColor": {
+																	"VIcon": "iconColor",
+																	"QLabel": "fontColor"
+																},
+																"fontStyle": {
+																	"QLabel": "fontStyle"
+																},
+																"fontSize": {
+																	"QLabel": "fontSize"
+																},
+																"fontFamily": {
+																	"QLabel": "fontFamily"
+																},
+																"fontWeight": {
+																	"QLabel": "fontWeight"
+																},
+																"combinedFont": {
+																	"QLabel": "combinedFont"
+																},
+																"lineHeight": {
+																	"QLabel": "lineHeight"
+																},
+																"ThemeFont": {
+																	"QLabel": "ThemeFont"
+																},
+																"bacgroundColor": {
+																	"VIcon": "backgroundColor"
+																}
 															},
 															"O": {
 																"cType": "slot"
@@ -351,7 +593,75 @@ let pjson = {
 															"E": {},
 															"C": {},
 															"_Editor": {
-																"eID": "EdtrComp_25"
+																"eID": "EdtrComp_38"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginLeft": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginTop": "",
+																	"paddingTop": "",
+																	"paddingBottom": "",
+																	"paddingLeft": "",
+																	"paddingRight": "",
+																	"width": "",
+																	"height": "",
+																	"maxWidth": "",
+																	"maxHeight": "",
+																	"minWidth": "",
+																	"minHeight": "",
+																	"unlink": "false",
+																	"unlinkMax": "false",
+																	"unlinkMin": "false",
+																	"isSizeCollapsed": "false",
+																	"dense": "",
+																	"headerFontColor": "#686868",
+																	"headerFontFamily": "Roboto",
+																	"headerFontSize": "12px",
+																	"headerFontStyle": "normal",
+																	"headerFontWeight": "400",
+																	"headerCombinedFont": "Roboto-Regular",
+																	"headerThemeFont": "Custom",
+																	"footerText": "#686868",
+																	"footerFontFamily": "Roboto",
+																	"footerFontSize": "12px",
+																	"footerFontStyle": "normal",
+																	"footerFontWeight": "400",
+																	"footerCombinedFont": "Roboto-Regular",
+																	"footerThemeFont": "Custom",
+																	"textColor": "#010101",
+																	"itemFontFamily": "Roboto",
+																	"itemFontSize": "14px",
+																	"itemFontStyle": "normal",
+																	"itemFontWeight": "400",
+																	"itemsCombinedFont": "Roboto-Regular",
+																	"itemsThemeFont": "Custom",
+																	"backgroundColor": "#ffffff",
+																	"hoverColor": "#ffffff",
+																	"footerColor": "#FFFFFF",
+																	"headerColor": "#FFFFFF",
+																	"selectedBackground": "#FFFFFF",
+																	"expandedContent": "#010101",
+																	"lineColor": "#0000001f",
+																	"lineSize": "1",
+																	"boxShadow": "",
+																	"boxSizing": "",
+																	"borderTopStyle": "solid",
+																	"borderRightStyle": "solid",
+																	"borderBottomStyle": "solid",
+																	"borderLeftStyle": "solid",
+																	"borderTopLeftRadius": "4px",
+																	"borderTopRightRadius": "4px",
+																	"borderBottomLeftRadius": "4px",
+																	"borderBottomRightRadius": "4px",
+																	"borderTopWidth": "0px",
+																	"borderRightWidth": "0px",
+																	"borderBottomWidth": "0px",
+																	"borderLeftWidth": "0px",
+																	"defaultBorderColor": "",
+																	"sides": "Top,Right,Bottom,Left"
+																}
 															},
 															"O": {
 																"cType": "scopedSlot"
@@ -364,23 +674,32 @@ let pjson = {
 											"E": {},
 											"P": {
 												"ID": {
-													"H": "EdtrComp_33",
+													"H": "EdtrComp_9",
 													"T": "prop"
 												}
 											},
 											"_Editor": {
-												"eID": "EdtrComp_33"
+												"eID": "EdtrComp_9"
 											},
 											"O": {
-												"cType": "slot",
-												"layout": {
-													"dOpt": {
-														"xs": [
-															"d:d-flex",
-															"fd:flex-column"
-														]
-													},
-													"class": "d-flex flex-column"
+												"cType": "slot"
+											},
+											"S": {
+												"xs-xl": {
+													"col": "",
+													"flexDirection": "column",
+													"alignItems": "",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "12px",
+													"paddingBottom": "12px",
+													"paddingLeft": "12px",
+													"paddingRight": "12px",
+													"backgroundColor": "#ffffff",
+													"boxShadow": ""
 												}
 											}
 										}
@@ -389,10 +708,26 @@ let pjson = {
 								}
 							},
 							"_Editor": {
-								"eID": "EdtrComp_28"
+								"eID": "EdtrComp_8"
 							},
 							"O": {
 								"cType": "slot"
+							},
+							"S": {
+								"xs-xl": {
+									"marginLeft": "0px",
+									"marginRight": "0px",
+									"marginBottom": "0px",
+									"marginTop": "0px",
+									"paddingTop": "",
+									"paddingBottom": "",
+									"paddingLeft": "",
+									"paddingRight": "",
+									"width": "",
+									"height": "",
+									"backgroundColor": "#ffffff",
+									"boxShadow": ""
+								}
 							}
 						}
 					],
@@ -404,6 +739,22 @@ let pjson = {
 			},
 			"O": {
 				"cType": "slot"
+			},
+			"S": {
+				"xs-xl": {
+					"marginLeft": "",
+					"marginRight": "",
+					"marginBottom": "",
+					"marginTop": "",
+					"paddingTop": "12px",
+					"paddingBottom": "12px",
+					"paddingLeft": "12px",
+					"paddingRight": "12px",
+					"width": "",
+					"height": "",
+					"backgroundColor": "#ffffff",
+					"boxShadow": ""
+				}
 			}
 		}
 	],
@@ -428,6 +779,12 @@ let pjson = {
 			"O": {
 				"cType": "child",
 				"compDomClasses": "newDropBorder"
+			},
+			"S": {
+				"xs-xl": {
+					"pageBackgroundColor": "#ffffff",
+					"statusBarColor": "#ffffff"
+				}
 			}
 		},
 		{
@@ -494,14 +851,86 @@ let pjson = {
 															},
 															"E": {
 																"change": {
-																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.EM.trace(components.myFileInput.accept);\r\nvar reader = new FileReader();\r\nif (components.myFileInput.qValue.type = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet') {\r\n    reader.readAsArrayBuffer(value);\r\n}\r\nreader.onload = function () {\r\n    var excelToJsonData = {\r\n        excelBuffer: reader.result,\r\n        options: {\r\n            header: 1,\r\n            raw: false\r\n        }\r\n    };\r\n    var excelJsonData = quick.Quick.xlsxToJson(excelToJsonData);\r\n    quick.store.set(\"$excelJsonData\", excelJsonData);\r\n    components.EdtrComp_13.text = JSON.stringify(excelJsonData);\r\n};\r\n",
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.EM.trace(components.myFileInput.accept);\r\nvar reader = new FileReader();\r\nif (components.myFileInput.qValue.type = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet') {\r\n    reader.readAsArrayBuffer(value);\r\n}\r\nreader.onload = function () {\r\n    var excelToJsonData = {\r\n        excelBuffer: reader.result,\r\n        options: {\r\n            header: 1,\r\n            raw: false\r\n        }\r\n    };\r\n    var excelJsonData = quick.Quick.xlsxToJson(excelToJsonData);\r\n    quick.store.set(\"$excelJsonData\", excelJsonData);\r\n    components.EdtrComp_31.text = JSON.stringify(excelJsonData);\r\n};\r\n",
 																	"P": "value:{ lastModified: number; lastModifiedDate: Date; name: string; size: number; type: string; desc: string; }",
 																	"HL": "JS"
 																}
 															},
 															"C": {},
 															"_Editor": {
-																"eID": "EdtrComp_8"
+																"eID": "EdtrComp_24"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginLeft": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginTop": "4px",
+																	"paddingTop": "12px",
+																	"paddingBottom": "",
+																	"paddingLeft": "",
+																	"paddingRight": "",
+																	"inputPaddingTop": "",
+																	"inputPaddingRight": "",
+																	"inputPaddingBottom": "",
+																	"inputPaddingLeft": "",
+																	"width": "",
+																	"height": "",
+																	"maxWidth": "",
+																	"maxHeight": "",
+																	"minWidth": "",
+																	"minHeight": "",
+																	"unlink": "false",
+																	"unlinkMax": "false",
+																	"unlinkMin": "false",
+																	"isSizeCollapsed": "false",
+																	"dense": "",
+																	"defaultFontColor": "#686868",
+																	"defaultFontFamily": "Roboto",
+																	"defaultFontSize": "16px",
+																	"defaultFontStyle": "normal",
+																	"defaultFontWeight": "400",
+																	"defaultCombinedFont": "Roboto-Regular",
+																	"defaultThemeFont": "Custom",
+																	"activeFontColor": "#000000",
+																	"activeFontFamily": "Roboto",
+																	"activeFontSize": "16px",
+																	"activeFontStyle": "normal",
+																	"activeFontWeight": "400",
+																	"activeCombinedFont": "Roboto-Regular",
+																	"activeThemeFont": "Custom",
+																	"errorMessageFontColor": "#E96767",
+																	"errorMessageFontFamily": "Roboto",
+																	"errorMessageFontSize": "12px",
+																	"errorMessageFontStyle": "normal",
+																	"errorMessageFontWeight": "400",
+																	"EMCombinedFont": "Roboto-Regular",
+																	"errorMessageThemeFont": "Custom",
+																	"errorMessageLineHeight": "",
+																	"backgroundColor": "#FFFFFF",
+																	"attachBackgroundColor": "#686868",
+																	"appendIconColor": "#686868",
+																	"prependIconColor": "",
+																	"prependInnerIconColor": "",
+																	"activeBorderColor": "#1976d2",
+																	"innerBoxSizing": "",
+																	"innerBorderTopStyle": "",
+																	"innerBorderRightStyle": "",
+																	"innerBorderBottomStyle": "solid",
+																	"innerBorderLeftStyle": "",
+																	"innerBorderTopLeftRadius": "",
+																	"innerBorderTopRightRadius": "",
+																	"innerBorderBottomLeftRadius": "",
+																	"innerBorderBottomRightRadius": "",
+																	"innerBorderTopWidth": "0px",
+																	"innerBorderRightWidth": "0px",
+																	"innerBorderBottomWidth": "1px",
+																	"innerBorderLeftWidth": "0px",
+																	"innerDefaultBorderColor": "#0000006b",
+																	"innerSides": "Bottom",
+																	"outlined": "",
+																	"innerBoxShadow": ""
+																}
 															},
 															"O": {
 																"cType": "slot",
@@ -524,16 +953,25 @@ let pjson = {
 											},
 											"O": {
 												"cType": "slot",
-												"layout": {
-													"dOpt": {
-														"xs": [
-															"d:d-flex",
-															"fd:flex-column"
-														]
-													},
-													"class": "d-flex flex-column"
-												},
-												"compDomClasses": "col d-flex flex-column newDropBorder"
+												"compDomClasses": "col newDropBorder"
+											},
+											"S": {
+												"xs-xl": {
+													"col": "",
+													"flexDirection": "column",
+													"alignItems": "",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "12px",
+													"paddingBottom": "12px",
+													"paddingLeft": "12px",
+													"paddingRight": "12px",
+													"backgroundColor": "#ffffff",
+													"boxShadow": ""
+												}
 											}
 										}
 									],
@@ -546,13 +984,29 @@ let pjson = {
 							"O": {
 								"cType": "slot",
 								"compDomClasses": "row newDropBorder"
+							},
+							"S": {
+								"xs-xl": {
+									"marginLeft": "0px",
+									"marginRight": "0px",
+									"marginBottom": "0px",
+									"marginTop": "0px",
+									"paddingTop": "",
+									"paddingBottom": "",
+									"paddingLeft": "",
+									"paddingRight": "",
+									"width": "",
+									"height": "",
+									"backgroundColor": "#ffffff",
+									"boxShadow": ""
+								}
 							}
 						},
 						{
 							"T": "VRow",
 							"P": {
 								"ID": {
-									"H": "EdtrComp_18",
+									"H": "EdtrComp_15",
 									"T": "prop"
 								}
 							},
@@ -569,7 +1023,7 @@ let pjson = {
 															"T": "QLabel",
 															"P": {
 																"ID": {
-																	"H": "EdtrComp_13",
+																	"H": "EdtrComp_31",
 																	"T": "prop"
 																},
 																"tagType": {
@@ -577,9 +1031,8 @@ let pjson = {
 																	"T": "prop"
 																},
 																"text": {
-																	"H": "╬''╩╩",
-																	"T": "prop",
-																	"HL": "QS"
+																	"H": "╬'Text'╩╩",
+																	"T": "prop"
 																},
 																"visible": {
 																	"H": "╬true╩╩",
@@ -593,11 +1046,35 @@ let pjson = {
 															"E": {},
 															"C": {},
 															"_Editor": {
-																"eID": "EdtrComp_13"
+																"eID": "EdtrComp_31"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginTop": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginLeft": "",
+																	"paddingTop": "",
+																	"paddingRight": "",
+																	"paddingBottom": "",
+																	"paddingLeft": "",
+																	"fontColor": "#000000",
+																	"fontFamily": "Roboto",
+																	"fontSize": "16px",
+																	"fontStyle": "normal",
+																	"fontWeight": "400",
+																	"combinedFont": "Roboto-Regular",
+																	"ThemeFont": "Custom",
+																	"lineHeight": "20px",
+																	"textAlign": "start",
+																	"textDecorationLine": "none",
+																	"textDecorationStyle": "solid",
+																	"textDecorationColor": "#000000"
+																}
 															},
 															"O": {
 																"cType": "slot",
-																"compDomClasses": "q-label "
+																"compDomClasses": "q-label newDropBorder"
 															}
 														}
 													],
@@ -607,25 +1084,34 @@ let pjson = {
 											"E": {},
 											"P": {
 												"ID": {
-													"H": "EdtrComp_26",
+													"H": "EdtrComp_16",
 													"T": "prop"
 												}
 											},
 											"_Editor": {
-												"eID": "EdtrComp_26"
+												"eID": "EdtrComp_16"
 											},
 											"O": {
 												"cType": "slot",
-												"layout": {
-													"dOpt": {
-														"xs": [
-															"d:d-flex",
-															"fd:flex-column"
-														]
-													},
-													"class": "d-flex flex-column"
-												},
-												"compDomClasses": "col d-flex flex-column newDropBorder"
+												"compDomClasses": "col newDropBorder"
+											},
+											"S": {
+												"xs-xl": {
+													"col": "",
+													"flexDirection": "column",
+													"alignItems": "",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "12px",
+													"paddingBottom": "12px",
+													"paddingLeft": "12px",
+													"paddingRight": "12px",
+													"backgroundColor": "#ffffff",
+													"boxShadow": ""
+												}
 											}
 										}
 									],
@@ -633,18 +1119,34 @@ let pjson = {
 								}
 							},
 							"_Editor": {
-								"eID": "EdtrComp_18"
+								"eID": "EdtrComp_15"
 							},
 							"O": {
 								"cType": "slot",
 								"compDomClasses": "row newDropBorder"
+							},
+							"S": {
+								"xs-xl": {
+									"marginLeft": "0px",
+									"marginRight": "0px",
+									"marginBottom": "0px",
+									"marginTop": "0px",
+									"paddingTop": "",
+									"paddingBottom": "",
+									"paddingLeft": "",
+									"paddingRight": "",
+									"width": "",
+									"height": "",
+									"backgroundColor": "#ffffff",
+									"boxShadow": ""
+								}
 							}
 						},
 						{
 							"T": "VRow",
 							"P": {
 								"ID": {
-									"H": "EdtrComp_28",
+									"H": "EdtrComp_8",
 									"T": "prop"
 								}
 							},
@@ -661,23 +1163,11 @@ let pjson = {
 															"T": "VBtn",
 															"P": {
 																"ID": {
-																	"H": "EdtrComp_48",
-																	"T": "prop"
-																},
-																"color": {
-																	"H": "╬'primary'╩╩",
+																	"H": "EdtrComp_75",
 																	"T": "prop"
 																},
 																"depressed": {
 																	"H": "╬true╩╩",
-																	"T": "prop"
-																},
-																"elevation": {
-																	"H": "╬0╩╩",
-																	"T": "prop"
-																},
-																"height": {
-																	"H": "╬'40px'╩╩",
 																	"T": "prop"
 																},
 																"visible": {
@@ -701,7 +1191,7 @@ let pjson = {
 																			"E": {},
 																			"P": {
 																				"ID": {
-																					"H": "EdtrComp_55",
+																					"H": "EdtrComp_82",
 																					"T": "prop"
 																				},
 																				"text": {
@@ -711,11 +1201,35 @@ let pjson = {
 																				}
 																			},
 																			"_Editor": {
-																				"eID": "EdtrComp_55"
+																				"eID": "EdtrComp_82"
 																			},
 																			"O": {
 																				"cType": "child",
 																				"compDomClasses": "q-label newDropBorder"
+																			},
+																			"S": {
+																				"xs-xl": {
+																					"marginTop": "",
+																					"marginRight": "",
+																					"marginBottom": "",
+																					"marginLeft": "",
+																					"paddingTop": "",
+																					"paddingRight": "",
+																					"paddingBottom": "",
+																					"paddingLeft": "",
+																					"textAlign": "start",
+																					"textDecorationLine": "none",
+																					"textDecorationStyle": "solid",
+																					"textDecorationColor": "#000000",
+																					"fontColor": "#ffffff",
+																					"fontStyle": "normal",
+																					"fontSize": "16px",
+																					"fontFamily": "Roboto",
+																					"fontWeight": "400",
+																					"combinedFont": "Roboto-Regular",
+																					"lineHeight": "20px",
+																					"ThemeFont": "Custom"
+																				}
 																			}
 																		}
 																	],
@@ -723,11 +1237,90 @@ let pjson = {
 																}
 															},
 															"_Editor": {
-																"eID": "EdtrComp_48"
+																"eID": "EdtrComp_75"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginTop": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginLeft": "",
+																	"paddingTop": "",
+																	"paddingRight": "16px",
+																	"paddingBottom": "",
+																	"paddingLeft": "16px",
+																	"width": "",
+																	"height": "",
+																	"maxWidth": "",
+																	"maxHeight": "",
+																	"minWidth": "",
+																	"minHeight": "",
+																	"unlink": "false",
+																	"unlinkMax": "false",
+																	"unlinkMin": "false",
+																	"isSizeCollapsed": "false",
+																	"fontColor": "#ffffff",
+																	"fontFamily": "Roboto",
+																	"fontSize": "16px",
+																	"fontStyle": "normal",
+																	"fontWeight": "400",
+																	"combinedFont": "Roboto-Regular",
+																	"ThemeFont": "Custom",
+																	"lineHeight": "20px",
+																	"backgroundColor": "#1976D2",
+																	"disabledBackgroundColor": "rgba(0,0,0,.12)",
+																	"hoverColor": "#000000",
+																	"boxShadow": "",
+																	"boxSizing": "",
+																	"borderTopStyle": "solid",
+																	"borderRightStyle": "solid",
+																	"borderBottomStyle": "solid",
+																	"borderLeftStyle": "solid",
+																	"borderTopLeftRadius": "4px",
+																	"borderTopRightRadius": "4px",
+																	"borderBottomLeftRadius": "4px",
+																	"borderBottomRightRadius": "4px",
+																	"borderTopWidth": "0px",
+																	"borderRightWidth": "0px",
+																	"borderBottomWidth": "0px",
+																	"borderLeftWidth": "0px",
+																	"defaultBorderColor": "",
+																	"sides": "Top,Right,Bottom,Left"
+																}
+															},
+															"SC": {
+																"fontColor": {
+																	"VIcon": "iconColor",
+																	"QLabel": "fontColor"
+																},
+																"fontStyle": {
+																	"QLabel": "fontStyle"
+																},
+																"fontSize": {
+																	"QLabel": "fontSize"
+																},
+																"fontFamily": {
+																	"QLabel": "fontFamily"
+																},
+																"fontWeight": {
+																	"QLabel": "fontWeight"
+																},
+																"combinedFont": {
+																	"QLabel": "combinedFont"
+																},
+																"lineHeight": {
+																	"QLabel": "lineHeight"
+																},
+																"ThemeFont": {
+																	"QLabel": "ThemeFont"
+																},
+																"bacgroundColor": {
+																	"VIcon": "backgroundColor"
+																}
 															},
 															"O": {
 																"cType": "slot",
-																"compDomClasses": "v-btn v-btn--depressed theme--light elevation-0 v-size--default primary newDropBorder"
+																"compDomClasses": "v-btn v-btn--depressed theme--light v-size--default newDropBorder"
 															}
 														},
 														{
@@ -768,7 +1361,75 @@ let pjson = {
 															"E": {},
 															"C": {},
 															"_Editor": {
-																"eID": "EdtrComp_25"
+																"eID": "EdtrComp_38"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginLeft": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginTop": "",
+																	"paddingTop": "",
+																	"paddingBottom": "",
+																	"paddingLeft": "",
+																	"paddingRight": "",
+																	"width": "",
+																	"height": "",
+																	"maxWidth": "",
+																	"maxHeight": "",
+																	"minWidth": "",
+																	"minHeight": "",
+																	"unlink": "false",
+																	"unlinkMax": "false",
+																	"unlinkMin": "false",
+																	"isSizeCollapsed": "false",
+																	"dense": "",
+																	"headerFontColor": "#686868",
+																	"headerFontFamily": "Roboto",
+																	"headerFontSize": "12px",
+																	"headerFontStyle": "normal",
+																	"headerFontWeight": "400",
+																	"headerCombinedFont": "Roboto-Regular",
+																	"headerThemeFont": "Custom",
+																	"footerText": "#686868",
+																	"footerFontFamily": "Roboto",
+																	"footerFontSize": "12px",
+																	"footerFontStyle": "normal",
+																	"footerFontWeight": "400",
+																	"footerCombinedFont": "Roboto-Regular",
+																	"footerThemeFont": "Custom",
+																	"textColor": "#010101",
+																	"itemFontFamily": "Roboto",
+																	"itemFontSize": "14px",
+																	"itemFontStyle": "normal",
+																	"itemFontWeight": "400",
+																	"itemsCombinedFont": "Roboto-Regular",
+																	"itemsThemeFont": "Custom",
+																	"backgroundColor": "#ffffff",
+																	"hoverColor": "#ffffff",
+																	"footerColor": "#FFFFFF",
+																	"headerColor": "#FFFFFF",
+																	"selectedBackground": "#FFFFFF",
+																	"expandedContent": "#010101",
+																	"lineColor": "#0000001f",
+																	"lineSize": "1",
+																	"boxShadow": "",
+																	"boxSizing": "",
+																	"borderTopStyle": "solid",
+																	"borderRightStyle": "solid",
+																	"borderBottomStyle": "solid",
+																	"borderLeftStyle": "solid",
+																	"borderTopLeftRadius": "4px",
+																	"borderTopRightRadius": "4px",
+																	"borderBottomLeftRadius": "4px",
+																	"borderBottomRightRadius": "4px",
+																	"borderTopWidth": "0px",
+																	"borderRightWidth": "0px",
+																	"borderBottomWidth": "0px",
+																	"borderLeftWidth": "0px",
+																	"defaultBorderColor": "",
+																	"sides": "Top,Right,Bottom,Left"
+																}
 															},
 															"O": {
 																"cType": "scopedSlot",
@@ -782,25 +1443,34 @@ let pjson = {
 											"E": {},
 											"P": {
 												"ID": {
-													"H": "EdtrComp_33",
+													"H": "EdtrComp_9",
 													"T": "prop"
 												}
 											},
 											"_Editor": {
-												"eID": "EdtrComp_33"
+												"eID": "EdtrComp_9"
 											},
 											"O": {
 												"cType": "slot",
-												"layout": {
-													"dOpt": {
-														"xs": [
-															"d:d-flex",
-															"fd:flex-column"
-														]
-													},
-													"class": "d-flex flex-column"
-												},
-												"compDomClasses": "col d-flex flex-column newDropBorder"
+												"compDomClasses": "col newDropBorder"
+											},
+											"S": {
+												"xs-xl": {
+													"col": "",
+													"flexDirection": "column",
+													"alignItems": "",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "12px",
+													"paddingBottom": "12px",
+													"paddingLeft": "12px",
+													"paddingRight": "12px",
+													"backgroundColor": "#ffffff",
+													"boxShadow": ""
+												}
 											}
 										}
 									],
@@ -808,11 +1478,27 @@ let pjson = {
 								}
 							},
 							"_Editor": {
-								"eID": "EdtrComp_28"
+								"eID": "EdtrComp_8"
 							},
 							"O": {
 								"cType": "slot",
 								"compDomClasses": "row newDropBorder"
+							},
+							"S": {
+								"xs-xl": {
+									"marginLeft": "0px",
+									"marginRight": "0px",
+									"marginBottom": "0px",
+									"marginTop": "0px",
+									"paddingTop": "",
+									"paddingBottom": "",
+									"paddingLeft": "",
+									"paddingRight": "",
+									"width": "",
+									"height": "",
+									"backgroundColor": "#ffffff",
+									"boxShadow": ""
+								}
 							}
 						}
 					],
@@ -825,11 +1511,29 @@ let pjson = {
 			"O": {
 				"cType": "slot",
 				"compDomClasses": "container newDropBorder"
+			},
+			"S": {
+				"xs-xl": {
+					"marginLeft": "",
+					"marginRight": "",
+					"marginBottom": "",
+					"marginTop": "",
+					"paddingTop": "12px",
+					"paddingBottom": "12px",
+					"paddingLeft": "12px",
+					"paddingRight": "12px",
+					"width": "",
+					"height": "",
+					"backgroundColor": "#ffffff",
+					"boxShadow": ""
+				}
 			}
 		}
 	],
 	"lrids": {},
 	"clrids": {},
-	"opt": {}
+	"opt": {
+		"V": 2.2
+	}
 };
 export default pjson

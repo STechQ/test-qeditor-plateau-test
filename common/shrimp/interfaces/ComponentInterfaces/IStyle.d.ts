@@ -43,8 +43,9 @@ export declare const COMPONENT_STYLE_TYPE: {
     "layout-input": string;
     display: string;
     "content-direction": string;
-    "display-text": string;
     "padding-input": string;
+    "display-text-decoration": string;
+    "display-text-align": string;
 };
 export interface IComponentDefinition {
     componentStyleList: IComponentStyleInlineInterface;
