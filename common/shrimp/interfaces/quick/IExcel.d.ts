@@ -1,8 +1,10 @@
 export interface IExcel extends IExcelSheet {
     fileName: string;
+    bookType?: "xlsx" | "csv";
 }
 export interface IExcelList {
     fileName: string;
+    bookType?: "xlsx" | "csv";
     sheetList: Array<IExcelSheet>;
 }
 export interface IExcelSheet {
