@@ -1,5 +1,9 @@
 import Vue from "vue";
+import * as XLSX from "xlsx";
 declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
+    currentXlsxSheet: string;
+    xlsxSheetNames: string[];
+    xlsxData: (string | number)[][];
     show: boolean;
     loadedRatio: number;
     numPages: number;
@@ -16,6 +20,8 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     pdfKey: number;
     currentMinWidth: number;
 }, {
+    loadXlsx(): Promise<void>;
+    renderXlsxSheet(providedWorkbook?: XLSX.WorkBook | null | undefined): Promise<void>;
     createPdf(): void;
     base64ToBlob(base64: any, type?: string): Blob;
     focusSelectedPage(): void;

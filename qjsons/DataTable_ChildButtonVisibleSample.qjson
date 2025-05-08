@@ -1,0 +1,1791 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "PageComp",
+					"T": "prop"
+				},
+				"triggerOnRestored": {
+					"H": "false",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child"
+			},
+			"S": {
+				"xs-xl": {
+					"pageBackgroundColor": "#ffffff",
+					"statusBarColor": "#ffffff"
+				}
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "VRowComp",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VDataTable",
+															"P": {
+																"ID": {
+																	"H": "myDataTable",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"footerProps": {
+																	"H": "{showFirstLastPage = true,\nfirstIcon = 'mdi-arrow-collapse-left',\nlastIcon = 'mdi-arrow-collapse-right',\nprevIcon = 'mdi-minus',\nnextIcon = 'mdi-plus'}",
+																	"T": "prop"
+																},
+																"headers": {
+																	"H": "[{ text = 'Dessert (100g serving)', align= 'start', sortable= false, value= 'name'},\n{ text = 'Calories', value= 'calories', sortable = true },\n{ text = 'Fat (g)', value= 'fat' },\n{ text = 'Carbs (g)', value= 'carbs' },\n{ text = 'Protein (g)', value= 'protein' },\n{ text = 'Iron (%)', value= 'iron' }]",
+																	"T": "prop"
+																},
+																"items": {
+																	"H": "[{name = 'Frozens Yogurt', calories = 159, fat = '6.0', carbs = 24, protein = '4.0', iron = '1%', visibleIron=true},\n{name = 'Ice cream sandwich', calories = 237, fat = '9.0', carbs = 37, protein = '4.3', iron = '1%', visibleIron=false},\n{name = 'Eclair', calories = 262, fat = '16.0', carbs = 23, protein = '6.0', iron = '7%', visibleIron=true},\n{name = 'Cupcake', calories = 305, fat = '3.7', carbs = 67, protein = '4.3', iron = '8%', visibleIron=false},\n{name = 'Gingerbread',calories = 356, fat = '16.0', carbs = 49, protein = '3.9', iron = '16%', visibleIron=true},\n{name = 'Jelly bean', calories = 375,  fat = '0.0', carbs = 94, protein = '0.0', iron = '0%', visibleIron=false},\n{name = 'Lollipop', calories = 392, fat = '0.2', carbs = 98, protein = '0.0', iron = '2 %', visibleIron=true},\n{name = 'Honeycomb', calories = 408, fat = '3.2', carbs = 87, protein = '6.5', iron = '45%', visibleIron=true},\n{name = 'Donut', calories = 452, fat = '25.0', carbs = 51, protein = '4.9', iron = '22%', visibleIron=true},\n{name = 'KitKat', calories = 518, fat = '26.0', carbs = 65, protein = '7', iron=  '6 %', visibleIron=true}]",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"itemsPerPage": {
+																	"H": "10",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"mobileBreakpoint": {
+																	"H": "600",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"item.iron": {
+																	"c": [
+																		{
+																			"T": "VBtn",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_37",
+																					"T": "prop"
+																				},
+																				"depressed": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"Render": {
+																					"H": "item.visibleIron",
+																					"T": "prop",
+																					"HL": "QS"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"C": {},
+																							"E": {},
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_40",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "item.iron",
+																									"T": "prop",
+																									"HL": "QS"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_40"
+																							},
+																							"O": {
+																								"cType": "child"
+																							},
+																							"S": {
+																								"xs-xl": {
+																									"marginTop": "",
+																									"marginRight": "",
+																									"marginBottom": "",
+																									"marginLeft": "",
+																									"paddingTop": "",
+																									"paddingRight": "",
+																									"paddingBottom": "",
+																									"paddingLeft": "",
+																									"fontColor": "#000000",
+																									"fontFamily": "Roboto",
+																									"fontSize": "16px",
+																									"fontStyle": "normal",
+																									"fontWeight": "400",
+																									"combinedFont": "Roboto-Regular",
+																									"ThemeFont": "Custom",
+																									"lineHeight": "20px",
+																									"textAlign": "start",
+																									"textDecorationLine": "none",
+																									"textDecorationStyle": "solid",
+																									"textDecorationColor": "#000000"
+																								}
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_37"
+																			},
+																			"S": {
+																				"xs-xl": {
+																					"marginTop": "",
+																					"marginRight": "",
+																					"marginBottom": "",
+																					"marginLeft": "",
+																					"paddingTop": "",
+																					"paddingRight": "16px",
+																					"paddingBottom": "",
+																					"paddingLeft": "16px",
+																					"width": "",
+																					"height": "",
+																					"maxWidth": "",
+																					"maxHeight": "",
+																					"minWidth": "",
+																					"minHeight": "",
+																					"unlink": "false",
+																					"unlinkMax": "false",
+																					"unlinkMin": "false",
+																					"isSizeCollapsed": "false",
+																					"fontColor": "#ffffff",
+																					"fontFamily": "Roboto",
+																					"fontSize": "16px",
+																					"fontStyle": "normal",
+																					"fontWeight": "400",
+																					"combinedFont": "Roboto-Regular",
+																					"ThemeFont": "Custom",
+																					"lineHeight": "20px",
+																					"backgroundColor": "#1976D2",
+																					"disabledBackgroundColor": "rgba(0,0,0,.12)",
+																					"hoverColor": "#000000",
+																					"boxShadow": "",
+																					"boxSizing": "",
+																					"borderTopStyle": "solid",
+																					"borderRightStyle": "solid",
+																					"borderBottomStyle": "solid",
+																					"borderLeftStyle": "solid",
+																					"borderTopLeftRadius": "4px",
+																					"borderTopRightRadius": "4px",
+																					"borderBottomLeftRadius": "4px",
+																					"borderBottomRightRadius": "4px",
+																					"borderTopWidth": "0px",
+																					"borderRightWidth": "0px",
+																					"borderBottomWidth": "0px",
+																					"borderLeftWidth": "0px",
+																					"defaultBorderColor": "",
+																					"sides": "Top,Right,Bottom,Left"
+																				}
+																			},
+																			"SC": {
+																				"fontColor": {
+																					"VIcon": "iconColor",
+																					"QLabel": "fontColor"
+																				},
+																				"fontStyle": {
+																					"QLabel": "fontStyle"
+																				},
+																				"fontSize": {
+																					"QLabel": "fontSize"
+																				},
+																				"fontFamily": {
+																					"QLabel": "fontFamily"
+																				},
+																				"fontWeight": {
+																					"QLabel": "fontWeight"
+																				},
+																				"combinedFont": {
+																					"QLabel": "combinedFont"
+																				},
+																				"lineHeight": {
+																					"QLabel": "lineHeight"
+																				},
+																				"bacgroundColor": {
+																					"VIcon": "backgroundColor"
+																				}
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "scopedSlot"
+																},
+																"item.calories": {
+																	"c": [
+																		{
+																			"T": "VBtn",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_12",
+																					"T": "prop"
+																				},
+																				"depressed": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"Render": {
+																					"H": "if(item.calories < 300){\r\n false\r\n}\r\nelse{\r\n true\r\n}",
+																					"T": "prop",
+																					"HL": "QS"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"C": {},
+																							"E": {},
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_15",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "item.calories",
+																									"T": "prop",
+																									"HL": "QS"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_15"
+																							},
+																							"O": {
+																								"cType": "child"
+																							},
+																							"S": {
+																								"xs-xl": {
+																									"marginTop": "",
+																									"marginRight": "",
+																									"marginBottom": "",
+																									"marginLeft": "",
+																									"paddingTop": "",
+																									"paddingRight": "",
+																									"paddingBottom": "",
+																									"paddingLeft": "",
+																									"fontColor": "#000000",
+																									"fontFamily": "Roboto",
+																									"fontSize": "16px",
+																									"fontStyle": "normal",
+																									"fontWeight": "400",
+																									"combinedFont": "Roboto-Regular",
+																									"ThemeFont": "Custom",
+																									"lineHeight": "20px",
+																									"textAlign": "start",
+																									"textDecorationLine": "none",
+																									"textDecorationStyle": "solid",
+																									"textDecorationColor": "#000000"
+																								}
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_12"
+																			},
+																			"S": {
+																				"xs-xl": {
+																					"marginTop": "",
+																					"marginRight": "",
+																					"marginBottom": "",
+																					"marginLeft": "",
+																					"paddingTop": "",
+																					"paddingRight": "16px",
+																					"paddingBottom": "",
+																					"paddingLeft": "16px",
+																					"width": "",
+																					"height": "",
+																					"maxWidth": "",
+																					"maxHeight": "",
+																					"minWidth": "",
+																					"minHeight": "",
+																					"unlink": "false",
+																					"unlinkMax": "false",
+																					"unlinkMin": "false",
+																					"isSizeCollapsed": "false",
+																					"fontColor": "#ffffff",
+																					"fontFamily": "Roboto",
+																					"fontSize": "16px",
+																					"fontStyle": "normal",
+																					"fontWeight": "400",
+																					"combinedFont": "Roboto-Regular",
+																					"ThemeFont": "Custom",
+																					"lineHeight": "20px",
+																					"backgroundColor": "#1976D2",
+																					"disabledBackgroundColor": "rgba(0,0,0,.12)",
+																					"hoverColor": "#000000",
+																					"boxShadow": "",
+																					"boxSizing": "",
+																					"borderTopStyle": "solid",
+																					"borderRightStyle": "solid",
+																					"borderBottomStyle": "solid",
+																					"borderLeftStyle": "solid",
+																					"borderTopLeftRadius": "4px",
+																					"borderTopRightRadius": "4px",
+																					"borderBottomLeftRadius": "4px",
+																					"borderBottomRightRadius": "4px",
+																					"borderTopWidth": "0px",
+																					"borderRightWidth": "0px",
+																					"borderBottomWidth": "0px",
+																					"borderLeftWidth": "0px",
+																					"defaultBorderColor": "",
+																					"sides": "Top,Right,Bottom,Left"
+																				}
+																			},
+																			"SC": {
+																				"fontColor": {
+																					"VIcon": "iconColor",
+																					"QLabel": "fontColor"
+																				},
+																				"fontStyle": {
+																					"QLabel": "fontStyle"
+																				},
+																				"fontSize": {
+																					"QLabel": "fontSize"
+																				},
+																				"fontFamily": {
+																					"QLabel": "fontFamily"
+																				},
+																				"fontWeight": {
+																					"QLabel": "fontWeight"
+																				},
+																				"combinedFont": {
+																					"QLabel": "combinedFont"
+																				},
+																				"lineHeight": {
+																					"QLabel": "lineHeight"
+																				},
+																				"bacgroundColor": {
+																					"VIcon": "backgroundColor"
+																				}
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "scopedSlot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_6"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginLeft": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginTop": "",
+																	"paddingTop": "",
+																	"paddingBottom": "",
+																	"paddingLeft": "",
+																	"paddingRight": "",
+																	"width": "",
+																	"height": "",
+																	"maxWidth": "",
+																	"maxHeight": "",
+																	"minWidth": "",
+																	"minHeight": "",
+																	"unlink": "false",
+																	"unlinkMax": "false",
+																	"unlinkMin": "false",
+																	"isSizeCollapsed": "false",
+																	"dense": "",
+																	"headerFontColor": "#686868",
+																	"headerFontFamily": "Roboto",
+																	"headerFontSize": "12px",
+																	"headerFontStyle": "normal",
+																	"headerFontWeight": "400",
+																	"headerCombinedFont": "Roboto-Regular",
+																	"headerThemeFont": "Custom",
+																	"footerText": "#686868",
+																	"footerFontFamily": "Roboto",
+																	"footerFontSize": "12px",
+																	"footerFontStyle": "normal",
+																	"footerFontWeight": "400",
+																	"footerCombinedFont": "Roboto-Regular",
+																	"footerThemeFont": "Custom",
+																	"textColor": "#010101",
+																	"itemFontFamily": "Roboto",
+																	"itemFontSize": "14px",
+																	"itemFontStyle": "normal",
+																	"itemFontWeight": "400",
+																	"itemsCombinedFont": "Roboto-Regular",
+																	"itemsThemeFont": "Custom",
+																	"backgroundColor": "#ffffff",
+																	"hoverColor": "#ffffff",
+																	"footerColor": "#FFFFFF",
+																	"headerColor": "#FFFFFF",
+																	"selectedBackground": "#FFFFFF",
+																	"expandedContent": "#010101",
+																	"lineColor": "#0000001f",
+																	"lineSize": "1",
+																	"boxShadow": "",
+																	"boxSizing": "",
+																	"borderTopStyle": "solid",
+																	"borderRightStyle": "solid",
+																	"borderBottomStyle": "solid",
+																	"borderLeftStyle": "solid",
+																	"borderTopLeftRadius": "4px",
+																	"borderTopRightRadius": "4px",
+																	"borderBottomLeftRadius": "4px",
+																	"borderBottomRightRadius": "4px",
+																	"borderTopWidth": "0px",
+																	"borderRightWidth": "0px",
+																	"borderBottomWidth": "0px",
+																	"borderLeftWidth": "0px",
+																	"defaultBorderColor": "",
+																	"sides": "Top,Right,Bottom,Left"
+																}
+															},
+															"O": {
+																"cType": "scopedSlot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "VColComp",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_3"
+											},
+											"O": {
+												"cType": "slot"
+											},
+											"S": {
+												"xs-xl": {
+													"col": "",
+													"flexDirection": "column",
+													"alignItems": "",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "12px",
+													"paddingBottom": "12px",
+													"paddingLeft": "12px",
+													"paddingRight": "12px",
+													"backgroundColor": "#ffffff",
+													"boxShadow": ""
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "slot"
+							},
+							"S": {
+								"xs-xl": {
+									"marginLeft": "0px",
+									"marginRight": "0px",
+									"marginBottom": "0px",
+									"marginTop": "0px",
+									"paddingTop": "",
+									"paddingBottom": "",
+									"paddingLeft": "",
+									"paddingRight": "",
+									"width": "",
+									"height": "",
+									"backgroundColor": "#ffffff",
+									"boxShadow": ""
+								}
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_57",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_53",
+																	"T": "prop"
+																},
+																"depressed": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "let newItems = [{ name: 'Frozens Yogurt', calories: 100, fat: '6.0', carbs: 24, protein: '4.0', iron: '1%', visibleIron: false },\r\n{ name: 'Ice cream sandwich', calories: 600, fat: '9.0', carbs: 37, protein: '4.3', iron: '1%', visibleIron: true },\r\n{ name: 'Eclair', calories: 500, fat: '16.0', carbs: 23, protein: '6.0', iron: '7%', visibleIron: false },\r\n{ name: 'Cupcake', calories: 50, fat: '3.7', carbs: 67, protein: '4.3', iron: '8%', visibleIron: true },\r\n{ name: 'Gingerbread', calories: 450, fat: '16.0', carbs: 49, protein: '3.9', iron: '16%', visibleIron: false },\r\n{ name: 'Jelly bean', calories: 350, fat: '0.0', carbs: 94, protein: '0.0', iron: '0%', visibleIron: true },\r\n{ name: 'Lollipop', calories: 250, fat: '0.2', carbs: 98, protein: '0.0', iron: '2 %', visibleIron: true },\r\n{ name: 'Honeycomb', calories: 5, fat: '3.2', carbs: 87, protein: '6.5', iron: '45%', visibleIron: false },\r\n{ name: 'Donut', calories: 452, fat: '25.0', carbs: 51, protein: '4.9', iron: '22%', visibleIron: true },\r\n{ name: 'KitKat', calories: 518, fat: '26.0', carbs: 65, protein: '7', iron: '6 %', visibleIron: false }];\r\n\r\ncomponents.myDataTable.items = newItems;",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "TS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_56",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'Set Table New Items'",
+																					"T": "prop",
+																					"HL": "QS"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_56"
+																			},
+																			"O": {
+																				"cType": "child"
+																			},
+																			"S": {
+																				"xs-xl": {
+																					"marginTop": "",
+																					"marginRight": "",
+																					"marginBottom": "",
+																					"marginLeft": "",
+																					"paddingTop": "",
+																					"paddingRight": "",
+																					"paddingBottom": "",
+																					"paddingLeft": "",
+																					"fontColor": "#000000",
+																					"fontFamily": "Roboto",
+																					"fontSize": "16px",
+																					"fontStyle": "normal",
+																					"fontWeight": "400",
+																					"combinedFont": "Roboto-Regular",
+																					"ThemeFont": "Custom",
+																					"lineHeight": "20px",
+																					"textAlign": "start",
+																					"textDecorationLine": "none",
+																					"textDecorationStyle": "solid",
+																					"textDecorationColor": "#000000"
+																				}
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_53"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginTop": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginLeft": "",
+																	"paddingTop": "",
+																	"paddingRight": "16px",
+																	"paddingBottom": "",
+																	"paddingLeft": "16px",
+																	"width": "",
+																	"height": "",
+																	"maxWidth": "",
+																	"maxHeight": "",
+																	"minWidth": "",
+																	"minHeight": "",
+																	"unlink": "false",
+																	"unlinkMax": "false",
+																	"unlinkMin": "false",
+																	"isSizeCollapsed": "false",
+																	"fontColor": "#ffffff",
+																	"fontFamily": "Roboto",
+																	"fontSize": "16px",
+																	"fontStyle": "normal",
+																	"fontWeight": "400",
+																	"combinedFont": "Roboto-Regular",
+																	"ThemeFont": "Custom",
+																	"lineHeight": "20px",
+																	"backgroundColor": "#1976D2",
+																	"disabledBackgroundColor": "rgba(0,0,0,.12)",
+																	"hoverColor": "#000000",
+																	"boxShadow": "",
+																	"boxSizing": "",
+																	"borderTopStyle": "solid",
+																	"borderRightStyle": "solid",
+																	"borderBottomStyle": "solid",
+																	"borderLeftStyle": "solid",
+																	"borderTopLeftRadius": "4px",
+																	"borderTopRightRadius": "4px",
+																	"borderBottomLeftRadius": "4px",
+																	"borderBottomRightRadius": "4px",
+																	"borderTopWidth": "0px",
+																	"borderRightWidth": "0px",
+																	"borderBottomWidth": "0px",
+																	"borderLeftWidth": "0px",
+																	"defaultBorderColor": "",
+																	"sides": "Top,Right,Bottom,Left"
+																}
+															},
+															"SC": {
+																"fontColor": {
+																	"VIcon": "iconColor",
+																	"QLabel": "fontColor"
+																},
+																"fontStyle": {
+																	"QLabel": "fontStyle"
+																},
+																"fontSize": {
+																	"QLabel": "fontSize"
+																},
+																"fontFamily": {
+																	"QLabel": "fontFamily"
+																},
+																"fontWeight": {
+																	"QLabel": "fontWeight"
+																},
+																"combinedFont": {
+																	"QLabel": "combinedFont"
+																},
+																"lineHeight": {
+																	"QLabel": "lineHeight"
+																},
+																"bacgroundColor": {
+																	"VIcon": "backgroundColor"
+																}
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_62",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_62"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												}
+											},
+											"S": {
+												"xs-xl": {
+													"col": "",
+													"flexDirection": "column",
+													"alignItems": "",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "12px",
+													"paddingBottom": "12px",
+													"paddingLeft": "12px",
+													"paddingRight": "12px",
+													"backgroundColor": "",
+													"boxShadow": "",
+													"boxSizing": "",
+													"borderTopStyle": "",
+													"borderRightStyle": "",
+													"borderBottomStyle": "",
+													"borderLeftStyle": "",
+													"borderTopLeftRadius": "",
+													"borderTopRightRadius": "",
+													"borderBottomLeftRadius": "",
+													"borderBottomRightRadius": "",
+													"borderTopWidth": "",
+													"borderRightWidth": "",
+													"borderBottomWidth": "",
+													"borderLeftWidth": "",
+													"defaultBorderColor": "",
+													"sides": ""
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_57"
+							},
+							"S": {
+								"xs-xl": {
+									"marginLeft": "0px",
+									"marginRight": "0px",
+									"marginBottom": "0px",
+									"marginTop": "0px",
+									"paddingTop": "",
+									"paddingBottom": "",
+									"paddingLeft": "",
+									"paddingRight": "",
+									"width": "",
+									"height": "",
+									"maxWidth": "",
+									"maxHeight": "",
+									"minWidth": "",
+									"minHeight": "",
+									"unlink": "false",
+									"unlinkMax": "false",
+									"unlinkMin": "false",
+									"isSizeCollapsed": "false",
+									"backgroundColor": "",
+									"boxShadow": "",
+									"boxSizing": "",
+									"borderTopStyle": "",
+									"borderRightStyle": "",
+									"borderBottomStyle": "",
+									"borderLeftStyle": "",
+									"borderTopLeftRadius": "",
+									"borderTopRightRadius": "",
+									"borderBottomLeftRadius": "",
+									"borderBottomRightRadius": "",
+									"borderTopWidth": "",
+									"borderRightWidth": "",
+									"borderBottomWidth": "",
+									"borderLeftWidth": "",
+									"defaultBorderColor": "",
+									"sides": ""
+								}
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_5"
+			},
+			"O": {
+				"cType": "slot"
+			},
+			"S": {
+				"xs-xl": {
+					"marginLeft": "",
+					"marginRight": "",
+					"marginBottom": "",
+					"marginTop": "",
+					"paddingTop": "12px",
+					"paddingBottom": "12px",
+					"paddingLeft": "12px",
+					"paddingRight": "12px",
+					"width": "",
+					"height": "",
+					"backgroundColor": "#ffffff",
+					"boxShadow": ""
+				}
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "PageComp",
+					"T": "prop"
+				},
+				"triggerOnRestored": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			},
+			"S": {
+				"xs-xl": {
+					"pageBackgroundColor": "#ffffff",
+					"statusBarColor": "#ffffff"
+				}
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "VRowComp",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VDataTable",
+															"P": {
+																"ID": {
+																	"H": "myDataTable",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"footerProps": {
+																	"H": "╬{}╠=╣showFirstLastPage╩╠true╩╩╠=╣firstIcon╩╠'mdi-arrow-collapse-left'╩╩╠=╣lastIcon╩╠'mdi-arrow-collapse-right'╩╩╠=╣prevIcon╩╠'mdi-minus'╩╩╠=╣nextIcon╩╠'mdi-plus'╩╩╩╩",
+																	"T": "prop"
+																},
+																"headers": {
+																	"H": "╬[]╠{}╠=╣text╩╠'Dessert (100g serving)'╩╩╠=╣align╩╠'start'╩╩╠=╣sortable╩╠false╩╩╠=╣value╩╠'name'╩╩╩╠{}╠=╣text╩╠'Calories'╩╩╠=╣value╩╠'calories'╩╩╠=╣sortable╩╠true╩╩╩╠{}╠=╣text╩╠'Fat (g)'╩╩╠=╣value╩╠'fat'╩╩╩╠{}╠=╣text╩╠'Carbs (g)'╩╩╠=╣value╩╠'carbs'╩╩╩╠{}╠=╣text╩╠'Protein (g)'╩╩╠=╣value╩╠'protein'╩╩╩╠{}╠=╣text╩╠'Iron (%)'╩╩╠=╣value╩╠'iron'╩╩╩╩╩",
+																	"T": "prop"
+																},
+																"items": {
+																	"H": "╬[]╠{}╠=╣name╩╠'Frozens Yogurt'╩╩╠=╣calories╩╠159╩╩╠=╣fat╩╠'6.0'╩╩╠=╣carbs╩╠24╩╩╠=╣protein╩╠'4.0'╩╩╠=╣iron╩╠'1%'╩╩╠=╣visibleIron╩╠true╩╩╩╠{}╠=╣name╩╠'Ice cream sandwich'╩╩╠=╣calories╩╠237╩╩╠=╣fat╩╠'9.0'╩╩╠=╣carbs╩╠37╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'1%'╩╩╠=╣visibleIron╩╠false╩╩╩╠{}╠=╣name╩╠'Eclair'╩╩╠=╣calories╩╠262╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠23╩╩╠=╣protein╩╠'6.0'╩╩╠=╣iron╩╠'7%'╩╩╠=╣visibleIron╩╠true╩╩╩╠{}╠=╣name╩╠'Cupcake'╩╩╠=╣calories╩╠305╩╩╠=╣fat╩╠'3.7'╩╩╠=╣carbs╩╠67╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'8%'╩╩╠=╣visibleIron╩╠false╩╩╩╠{}╠=╣name╩╠'Gingerbread'╩╩╠=╣calories╩╠356╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠49╩╩╠=╣protein╩╠'3.9'╩╩╠=╣iron╩╠'16%'╩╩╠=╣visibleIron╩╠true╩╩╩╠{}╠=╣name╩╠'Jelly bean'╩╩╠=╣calories╩╠375╩╩╠=╣fat╩╠'0.0'╩╩╠=╣carbs╩╠94╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'0%'╩╩╠=╣visibleIron╩╠false╩╩╩╠{}╠=╣name╩╠'Lollipop'╩╩╠=╣calories╩╠392╩╩╠=╣fat╩╠'0.2'╩╩╠=╣carbs╩╠98╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'2 %'╩╩╠=╣visibleIron╩╠true╩╩╩╠{}╠=╣name╩╠'Honeycomb'╩╩╠=╣calories╩╠408╩╩╠=╣fat╩╠'3.2'╩╩╠=╣carbs╩╠87╩╩╠=╣protein╩╠'6.5'╩╩╠=╣iron╩╠'45%'╩╩╠=╣visibleIron╩╠true╩╩╩╠{}╠=╣name╩╠'Donut'╩╩╠=╣calories╩╠452╩╩╠=╣fat╩╠'25.0'╩╩╠=╣carbs╩╠51╩╩╠=╣protein╩╠'4.9'╩╩╠=╣iron╩╠'22%'╩╩╠=╣visibleIron╩╠true╩╩╩╠{}╠=╣name╩╠'KitKat'╩╩╠=╣calories╩╠518╩╩╠=╣fat╩╠'26.0'╩╩╠=╣carbs╩╠65╩╩╠=╣protein╩╠'7'╩╩╠=╣iron╩╠'6 %'╩╩╠=╣visibleIron╩╠true╩╩╩╩╩",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"itemsPerPage": {
+																	"H": "╬10╩╩",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"mobileBreakpoint": {
+																	"H": "╬600╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"item.iron": {
+																	"c": [
+																		{
+																			"T": "VBtn",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_37",
+																					"T": "prop"
+																				},
+																				"depressed": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"Render": {
+																					"H": "╬.╣item╩╠visibleIron╩╩╩",
+																					"T": "prop",
+																					"HL": "QS"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"C": {},
+																							"E": {},
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_40",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "╬.╣item╩╠iron╩╩╩",
+																									"T": "prop",
+																									"HL": "QS"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_40"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"compDomClasses": "q-label newDropBorder"
+																							},
+																							"S": {
+																								"xs-xl": {
+																									"marginTop": "",
+																									"marginRight": "",
+																									"marginBottom": "",
+																									"marginLeft": "",
+																									"paddingTop": "",
+																									"paddingRight": "",
+																									"paddingBottom": "",
+																									"paddingLeft": "",
+																									"ThemeFont": "Custom",
+																									"textAlign": "start",
+																									"textDecorationLine": "none",
+																									"textDecorationStyle": "solid",
+																									"textDecorationColor": "#000000",
+																									"fontColor": "#ffffff",
+																									"fontStyle": "normal",
+																									"fontSize": "16px",
+																									"fontFamily": "Roboto",
+																									"fontWeight": "400",
+																									"combinedFont": "Roboto-Regular",
+																									"lineHeight": "20px"
+																								}
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_37"
+																			},
+																			"S": {
+																				"xs-xl": {
+																					"marginTop": "",
+																					"marginRight": "",
+																					"marginBottom": "",
+																					"marginLeft": "",
+																					"paddingTop": "",
+																					"paddingRight": "16px",
+																					"paddingBottom": "",
+																					"paddingLeft": "16px",
+																					"width": "",
+																					"height": "",
+																					"maxWidth": "",
+																					"maxHeight": "",
+																					"minWidth": "",
+																					"minHeight": "",
+																					"unlink": "false",
+																					"unlinkMax": "false",
+																					"unlinkMin": "false",
+																					"isSizeCollapsed": "false",
+																					"fontColor": "#ffffff",
+																					"fontFamily": "Roboto",
+																					"fontSize": "16px",
+																					"fontStyle": "normal",
+																					"fontWeight": "400",
+																					"combinedFont": "Roboto-Regular",
+																					"ThemeFont": "Custom",
+																					"lineHeight": "20px",
+																					"backgroundColor": "#1976D2",
+																					"disabledBackgroundColor": "rgba(0,0,0,.12)",
+																					"hoverColor": "#000000",
+																					"boxShadow": "",
+																					"boxSizing": "",
+																					"borderTopStyle": "solid",
+																					"borderRightStyle": "solid",
+																					"borderBottomStyle": "solid",
+																					"borderLeftStyle": "solid",
+																					"borderTopLeftRadius": "4px",
+																					"borderTopRightRadius": "4px",
+																					"borderBottomLeftRadius": "4px",
+																					"borderBottomRightRadius": "4px",
+																					"borderTopWidth": "0px",
+																					"borderRightWidth": "0px",
+																					"borderBottomWidth": "0px",
+																					"borderLeftWidth": "0px",
+																					"defaultBorderColor": "",
+																					"sides": "Top,Right,Bottom,Left"
+																				}
+																			},
+																			"SC": {
+																				"fontColor": {
+																					"VIcon": "iconColor",
+																					"QLabel": "fontColor"
+																				},
+																				"fontStyle": {
+																					"QLabel": "fontStyle"
+																				},
+																				"fontSize": {
+																					"QLabel": "fontSize"
+																				},
+																				"fontFamily": {
+																					"QLabel": "fontFamily"
+																				},
+																				"fontWeight": {
+																					"QLabel": "fontWeight"
+																				},
+																				"combinedFont": {
+																					"QLabel": "combinedFont"
+																				},
+																				"lineHeight": {
+																					"QLabel": "lineHeight"
+																				},
+																				"bacgroundColor": {
+																					"VIcon": "backgroundColor"
+																				}
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-btn v-btn--depressed theme--light v-size--default newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "scopedSlot"
+																},
+																"item.calories": {
+																	"c": [
+																		{
+																			"T": "VBtn",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_12",
+																					"T": "prop"
+																				},
+																				"depressed": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"visible": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"Render": {
+																					"H": "╬if╣<╣.╣item╩╠calories╩╩╠300╩╩╠╬false╩╩╠╬true╩╩╩╩",
+																					"T": "prop",
+																					"HL": "QS"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"C": {},
+																							"E": {},
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_15",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "╬.╣item╩╠calories╩╩╩",
+																									"T": "prop",
+																									"HL": "QS"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_15"
+																							},
+																							"O": {
+																								"cType": "child",
+																								"compDomClasses": "q-label newDropBorder"
+																							},
+																							"S": {
+																								"xs-xl": {
+																									"marginTop": "",
+																									"marginRight": "",
+																									"marginBottom": "",
+																									"marginLeft": "",
+																									"paddingTop": "",
+																									"paddingRight": "",
+																									"paddingBottom": "",
+																									"paddingLeft": "",
+																									"ThemeFont": "Custom",
+																									"textAlign": "start",
+																									"textDecorationLine": "none",
+																									"textDecorationStyle": "solid",
+																									"textDecorationColor": "#000000",
+																									"fontColor": "#ffffff",
+																									"fontStyle": "normal",
+																									"fontSize": "16px",
+																									"fontFamily": "Roboto",
+																									"fontWeight": "400",
+																									"combinedFont": "Roboto-Regular",
+																									"lineHeight": "20px"
+																								}
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_12"
+																			},
+																			"S": {
+																				"xs-xl": {
+																					"marginTop": "",
+																					"marginRight": "",
+																					"marginBottom": "",
+																					"marginLeft": "",
+																					"paddingTop": "",
+																					"paddingRight": "16px",
+																					"paddingBottom": "",
+																					"paddingLeft": "16px",
+																					"width": "",
+																					"height": "",
+																					"maxWidth": "",
+																					"maxHeight": "",
+																					"minWidth": "",
+																					"minHeight": "",
+																					"unlink": "false",
+																					"unlinkMax": "false",
+																					"unlinkMin": "false",
+																					"isSizeCollapsed": "false",
+																					"fontColor": "#ffffff",
+																					"fontFamily": "Roboto",
+																					"fontSize": "16px",
+																					"fontStyle": "normal",
+																					"fontWeight": "400",
+																					"combinedFont": "Roboto-Regular",
+																					"ThemeFont": "Custom",
+																					"lineHeight": "20px",
+																					"backgroundColor": "#1976D2",
+																					"disabledBackgroundColor": "rgba(0,0,0,.12)",
+																					"hoverColor": "#000000",
+																					"boxShadow": "",
+																					"boxSizing": "",
+																					"borderTopStyle": "solid",
+																					"borderRightStyle": "solid",
+																					"borderBottomStyle": "solid",
+																					"borderLeftStyle": "solid",
+																					"borderTopLeftRadius": "4px",
+																					"borderTopRightRadius": "4px",
+																					"borderBottomLeftRadius": "4px",
+																					"borderBottomRightRadius": "4px",
+																					"borderTopWidth": "0px",
+																					"borderRightWidth": "0px",
+																					"borderBottomWidth": "0px",
+																					"borderLeftWidth": "0px",
+																					"defaultBorderColor": "",
+																					"sides": "Top,Right,Bottom,Left"
+																				}
+																			},
+																			"SC": {
+																				"fontColor": {
+																					"VIcon": "iconColor",
+																					"QLabel": "fontColor"
+																				},
+																				"fontStyle": {
+																					"QLabel": "fontStyle"
+																				},
+																				"fontSize": {
+																					"QLabel": "fontSize"
+																				},
+																				"fontFamily": {
+																					"QLabel": "fontFamily"
+																				},
+																				"fontWeight": {
+																					"QLabel": "fontWeight"
+																				},
+																				"combinedFont": {
+																					"QLabel": "combinedFont"
+																				},
+																				"lineHeight": {
+																					"QLabel": "lineHeight"
+																				},
+																				"bacgroundColor": {
+																					"VIcon": "backgroundColor"
+																				}
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-btn v-btn--depressed theme--light v-size--default newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "scopedSlot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_6"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginLeft": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginTop": "",
+																	"paddingTop": "",
+																	"paddingBottom": "",
+																	"paddingLeft": "",
+																	"paddingRight": "",
+																	"width": "",
+																	"height": "",
+																	"maxWidth": "",
+																	"maxHeight": "",
+																	"minWidth": "",
+																	"minHeight": "",
+																	"unlink": "false",
+																	"unlinkMax": "false",
+																	"unlinkMin": "false",
+																	"isSizeCollapsed": "false",
+																	"dense": "",
+																	"headerFontColor": "#686868",
+																	"headerFontFamily": "Roboto",
+																	"headerFontSize": "12px",
+																	"headerFontStyle": "normal",
+																	"headerFontWeight": "400",
+																	"headerCombinedFont": "Roboto-Regular",
+																	"headerThemeFont": "Custom",
+																	"footerText": "#686868",
+																	"footerFontFamily": "Roboto",
+																	"footerFontSize": "12px",
+																	"footerFontStyle": "normal",
+																	"footerFontWeight": "400",
+																	"footerCombinedFont": "Roboto-Regular",
+																	"footerThemeFont": "Custom",
+																	"textColor": "#010101",
+																	"itemFontFamily": "Roboto",
+																	"itemFontSize": "14px",
+																	"itemFontStyle": "normal",
+																	"itemFontWeight": "400",
+																	"itemsCombinedFont": "Roboto-Regular",
+																	"itemsThemeFont": "Custom",
+																	"backgroundColor": "#ffffff",
+																	"hoverColor": "#ffffff",
+																	"footerColor": "#FFFFFF",
+																	"headerColor": "#FFFFFF",
+																	"selectedBackground": "#FFFFFF",
+																	"expandedContent": "#010101",
+																	"lineColor": "#0000001f",
+																	"lineSize": "1",
+																	"boxShadow": "",
+																	"boxSizing": "",
+																	"borderTopStyle": "solid",
+																	"borderRightStyle": "solid",
+																	"borderBottomStyle": "solid",
+																	"borderLeftStyle": "solid",
+																	"borderTopLeftRadius": "4px",
+																	"borderTopRightRadius": "4px",
+																	"borderBottomLeftRadius": "4px",
+																	"borderBottomRightRadius": "4px",
+																	"borderTopWidth": "0px",
+																	"borderRightWidth": "0px",
+																	"borderBottomWidth": "0px",
+																	"borderLeftWidth": "0px",
+																	"defaultBorderColor": "",
+																	"sides": "Top,Right,Bottom,Left"
+																}
+															},
+															"O": {
+																"cType": "scopedSlot",
+																"compDomClasses": "v-data-table v-data-table--has-bottom theme--light newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "VColComp",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_3"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											},
+											"S": {
+												"xs-xl": {
+													"col": "",
+													"flexDirection": "column",
+													"alignItems": "",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "12px",
+													"paddingBottom": "12px",
+													"paddingLeft": "12px",
+													"paddingRight": "12px",
+													"backgroundColor": "#ffffff",
+													"boxShadow": ""
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							},
+							"S": {
+								"xs-xl": {
+									"marginLeft": "0px",
+									"marginRight": "0px",
+									"marginBottom": "0px",
+									"marginTop": "0px",
+									"paddingTop": "",
+									"paddingBottom": "",
+									"paddingLeft": "",
+									"paddingRight": "",
+									"width": "",
+									"height": "",
+									"backgroundColor": "#ffffff",
+									"boxShadow": ""
+								}
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_57",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_53",
+																	"T": "prop"
+																},
+																"depressed": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nvar newItems = [{ name: 'Frozens Yogurt', calories: 100, fat: '6.0', carbs: 24, protein: '4.0', iron: '1%', visibleIron: false },\r\n    { name: 'Ice cream sandwich', calories: 600, fat: '9.0', carbs: 37, protein: '4.3', iron: '1%', visibleIron: true },\r\n    { name: 'Eclair', calories: 500, fat: '16.0', carbs: 23, protein: '6.0', iron: '7%', visibleIron: false },\r\n    { name: 'Cupcake', calories: 50, fat: '3.7', carbs: 67, protein: '4.3', iron: '8%', visibleIron: true },\r\n    { name: 'Gingerbread', calories: 450, fat: '16.0', carbs: 49, protein: '3.9', iron: '16%', visibleIron: false },\r\n    { name: 'Jelly bean', calories: 350, fat: '0.0', carbs: 94, protein: '0.0', iron: '0%', visibleIron: true },\r\n    { name: 'Lollipop', calories: 250, fat: '0.2', carbs: 98, protein: '0.0', iron: '2 %', visibleIron: true },\r\n    { name: 'Honeycomb', calories: 5, fat: '3.2', carbs: 87, protein: '6.5', iron: '45%', visibleIron: false },\r\n    { name: 'Donut', calories: 452, fat: '25.0', carbs: 51, protein: '4.9', iron: '22%', visibleIron: true },\r\n    { name: 'KitKat', calories: 518, fat: '26.0', carbs: 65, protein: '7', iron: '6 %', visibleIron: false }];\r\ncomponents.myDataTable.items = newItems;\r\n",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "JS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_56",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'Set Table New Items'╩╩",
+																					"T": "prop",
+																					"HL": "QS"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_56"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "q-label newDropBorder"
+																			},
+																			"S": {
+																				"xs-xl": {
+																					"marginTop": "",
+																					"marginRight": "",
+																					"marginBottom": "",
+																					"marginLeft": "",
+																					"paddingTop": "",
+																					"paddingRight": "",
+																					"paddingBottom": "",
+																					"paddingLeft": "",
+																					"ThemeFont": "Custom",
+																					"textAlign": "start",
+																					"textDecorationLine": "none",
+																					"textDecorationStyle": "solid",
+																					"textDecorationColor": "#000000",
+																					"fontColor": "#ffffff",
+																					"fontStyle": "normal",
+																					"fontSize": "16px",
+																					"fontFamily": "Roboto",
+																					"fontWeight": "400",
+																					"combinedFont": "Roboto-Regular",
+																					"lineHeight": "20px"
+																				}
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_53"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginTop": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginLeft": "",
+																	"paddingTop": "",
+																	"paddingRight": "16px",
+																	"paddingBottom": "",
+																	"paddingLeft": "16px",
+																	"width": "",
+																	"height": "",
+																	"maxWidth": "",
+																	"maxHeight": "",
+																	"minWidth": "",
+																	"minHeight": "",
+																	"unlink": "false",
+																	"unlinkMax": "false",
+																	"unlinkMin": "false",
+																	"isSizeCollapsed": "false",
+																	"fontColor": "#ffffff",
+																	"fontFamily": "Roboto",
+																	"fontSize": "16px",
+																	"fontStyle": "normal",
+																	"fontWeight": "400",
+																	"combinedFont": "Roboto-Regular",
+																	"ThemeFont": "Custom",
+																	"lineHeight": "20px",
+																	"backgroundColor": "#1976D2",
+																	"disabledBackgroundColor": "rgba(0,0,0,.12)",
+																	"hoverColor": "#000000",
+																	"boxShadow": "",
+																	"boxSizing": "",
+																	"borderTopStyle": "solid",
+																	"borderRightStyle": "solid",
+																	"borderBottomStyle": "solid",
+																	"borderLeftStyle": "solid",
+																	"borderTopLeftRadius": "4px",
+																	"borderTopRightRadius": "4px",
+																	"borderBottomLeftRadius": "4px",
+																	"borderBottomRightRadius": "4px",
+																	"borderTopWidth": "0px",
+																	"borderRightWidth": "0px",
+																	"borderBottomWidth": "0px",
+																	"borderLeftWidth": "0px",
+																	"defaultBorderColor": "",
+																	"sides": "Top,Right,Bottom,Left"
+																}
+															},
+															"SC": {
+																"fontColor": {
+																	"VIcon": "iconColor",
+																	"QLabel": "fontColor"
+																},
+																"fontStyle": {
+																	"QLabel": "fontStyle"
+																},
+																"fontSize": {
+																	"QLabel": "fontSize"
+																},
+																"fontFamily": {
+																	"QLabel": "fontFamily"
+																},
+																"fontWeight": {
+																	"QLabel": "fontWeight"
+																},
+																"combinedFont": {
+																	"QLabel": "combinedFont"
+																},
+																"lineHeight": {
+																	"QLabel": "lineHeight"
+																},
+																"bacgroundColor": {
+																	"VIcon": "backgroundColor"
+																}
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-btn v-btn--depressed theme--light v-size--default newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_62",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_62"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												},
+												"compDomClasses": "col d-flex flex-column newDropBorder"
+											},
+											"S": {
+												"xs-xl": {
+													"col": "",
+													"flexDirection": "column",
+													"alignItems": "",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "12px",
+													"paddingBottom": "12px",
+													"paddingLeft": "12px",
+													"paddingRight": "12px",
+													"backgroundColor": "",
+													"boxShadow": "",
+													"boxSizing": "",
+													"borderTopStyle": "",
+													"borderRightStyle": "",
+													"borderBottomStyle": "",
+													"borderLeftStyle": "",
+													"borderTopLeftRadius": "",
+													"borderTopRightRadius": "",
+													"borderBottomLeftRadius": "",
+													"borderBottomRightRadius": "",
+													"borderTopWidth": "",
+													"borderRightWidth": "",
+													"borderBottomWidth": "",
+													"borderLeftWidth": "",
+													"defaultBorderColor": "",
+													"sides": ""
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_57"
+							},
+							"S": {
+								"xs-xl": {
+									"marginLeft": "0px",
+									"marginRight": "0px",
+									"marginBottom": "0px",
+									"marginTop": "0px",
+									"paddingTop": "",
+									"paddingBottom": "",
+									"paddingLeft": "",
+									"paddingRight": "",
+									"width": "",
+									"height": "",
+									"maxWidth": "",
+									"maxHeight": "",
+									"minWidth": "",
+									"minHeight": "",
+									"unlink": "false",
+									"unlinkMax": "false",
+									"unlinkMin": "false",
+									"isSizeCollapsed": "false",
+									"backgroundColor": "",
+									"boxShadow": "",
+									"boxSizing": "",
+									"borderTopStyle": "",
+									"borderRightStyle": "",
+									"borderBottomStyle": "",
+									"borderLeftStyle": "",
+									"borderTopLeftRadius": "",
+									"borderTopRightRadius": "",
+									"borderBottomLeftRadius": "",
+									"borderBottomRightRadius": "",
+									"borderTopWidth": "",
+									"borderRightWidth": "",
+									"borderBottomWidth": "",
+									"borderLeftWidth": "",
+									"defaultBorderColor": "",
+									"sides": ""
+								}
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_5"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container newDropBorder"
+			},
+			"S": {
+				"xs-xl": {
+					"marginLeft": "",
+					"marginRight": "",
+					"marginBottom": "",
+					"marginTop": "",
+					"paddingTop": "12px",
+					"paddingBottom": "12px",
+					"paddingLeft": "12px",
+					"paddingRight": "12px",
+					"width": "",
+					"height": "",
+					"backgroundColor": "#ffffff",
+					"boxShadow": ""
+				}
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"opt": {
+		"V": 2.2
+	}
+};
+export default pjson

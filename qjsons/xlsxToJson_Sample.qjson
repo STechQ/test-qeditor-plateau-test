@@ -91,7 +91,7 @@ let pjson = {
 															},
 															"E": {
 																"change": {
-																	"H": "quick.EM.trace(components.myFileInput.accept);\r\n\r\nvar reader = new FileReader();\r\nif (components.myFileInput.qValue.type = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet') {\r\n        reader.readAsArrayBuffer(value);\r\n}\r\nreader.onload = () => {\r\n\r\n        let excelToJsonData: IExcelToJsonData = {\r\n                excelBuffer: (<any>reader.result),\r\n                options: {\r\n                        header: 1,\r\n                        raw: false\r\n                }\r\n        }\r\n\r\n        let excelJsonData = quick.Quick.xlsxToJson(excelToJsonData);\r\n        quick.store.set(\"$excelJsonData\", excelJsonData);\r\n        components.EdtrComp_31.text = JSON.stringify(excelJsonData);\r\n\r\n\r\n}\r\n",
+																	"H": "quick.EM.trace(components.myFileInput.accept);\r\n\r\nvar reader = new FileReader();\r\nreader.readAsArrayBuffer(value);\r\n\r\nreader.onload = () => {\r\n\r\n        let excelToJsonData: IExcelToJsonData = {\r\n                excelData: <ArrayBuffer>reader.result,\r\n                options: {\r\n                        header: 1,\r\n                        raw: false\r\n                }\r\n        }\r\n\r\n        let excelJsonData = quick.Quick.xlsxToJson(excelToJsonData);\r\n        quick.store.set(\"$excelJsonData\", excelJsonData);\r\n        components.EdtrComp_31.text = JSON.stringify(excelJsonData);\r\n\r\n\r\n}\r\n",
 																	"P": "value:{ lastModified: number; lastModifiedDate: Date; name: string; size: number; type: string; desc: string; }",
 																	"HL": "TS"
 																}
@@ -578,8 +578,9 @@ let pjson = {
 																	"HL": "QS"
 																},
 																"itemsPerPage": {
-																	"H": "5",
-																	"T": "prop"
+																	"H": "-1",
+																	"T": "prop",
+																	"HL": "QS"
 																},
 																"mobileBreakpoint": {
 																	"H": "600",
@@ -588,6 +589,11 @@ let pjson = {
 																"visible": {
 																	"H": "true",
 																	"T": "prop"
+																},
+																"hideDefaultFooter": {
+																	"H": "true",
+																	"T": "prop",
+																	"HL": "QS"
 																}
 															},
 															"E": {},
@@ -851,7 +857,7 @@ let pjson = {
 															},
 															"E": {
 																"change": {
-																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.EM.trace(components.myFileInput.accept);\r\nvar reader = new FileReader();\r\nif (components.myFileInput.qValue.type = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet') {\r\n    reader.readAsArrayBuffer(value);\r\n}\r\nreader.onload = function () {\r\n    var excelToJsonData = {\r\n        excelBuffer: reader.result,\r\n        options: {\r\n            header: 1,\r\n            raw: false\r\n        }\r\n    };\r\n    var excelJsonData = quick.Quick.xlsxToJson(excelToJsonData);\r\n    quick.store.set(\"$excelJsonData\", excelJsonData);\r\n    components.EdtrComp_31.text = JSON.stringify(excelJsonData);\r\n};\r\n",
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.EM.trace(components.myFileInput.accept);\r\nvar reader = new FileReader();\r\nreader.readAsArrayBuffer(value);\r\nreader.onload = function () {\r\n    var excelToJsonData = {\r\n        excelData: reader.result,\r\n        options: {\r\n            header: 1,\r\n            raw: false\r\n        }\r\n    };\r\n    var excelJsonData = quick.Quick.xlsxToJson(excelToJsonData);\r\n    quick.store.set(\"$excelJsonData\", excelJsonData);\r\n    components.EdtrComp_31.text = JSON.stringify(excelJsonData);\r\n};\r\n",
 																	"P": "value:{ lastModified: number; lastModifiedDate: Date; name: string; size: number; type: string; desc: string; }",
 																	"HL": "JS"
 																}
@@ -1217,18 +1223,18 @@ let pjson = {
 																					"paddingRight": "",
 																					"paddingBottom": "",
 																					"paddingLeft": "",
+																					"fontColor": "#000000",
+																					"fontFamily": "Roboto",
+																					"fontSize": "16px",
+																					"fontStyle": "normal",
+																					"fontWeight": "400",
+																					"combinedFont": "Roboto-Regular",
+																					"ThemeFont": "Custom",
+																					"lineHeight": "20px",
 																					"textAlign": "start",
 																					"textDecorationLine": "none",
 																					"textDecorationStyle": "solid",
-																					"textDecorationColor": "#000000",
-																					"fontColor": "#ffffff",
-																					"fontStyle": "normal",
-																					"fontSize": "16px",
-																					"fontFamily": "Roboto",
-																					"fontWeight": "400",
-																					"combinedFont": "Roboto-Regular",
-																					"lineHeight": "20px",
-																					"ThemeFont": "Custom"
+																					"textDecorationColor": "#000000"
 																				}
 																			}
 																		}
@@ -1346,8 +1352,9 @@ let pjson = {
 																	"HL": "QS"
 																},
 																"itemsPerPage": {
-																	"H": "╬5╩╩",
-																	"T": "prop"
+																	"H": "╬-╠1╩╩╩",
+																	"T": "prop",
+																	"HL": "QS"
 																},
 																"mobileBreakpoint": {
 																	"H": "╬600╩╩",
@@ -1356,6 +1363,11 @@ let pjson = {
 																"visible": {
 																	"H": "╬true╩╩",
 																	"T": "prop"
+																},
+																"hideDefaultFooter": {
+																	"H": "╬true╩╩",
+																	"T": "prop",
+																	"HL": "QS"
 																}
 															},
 															"E": {},
@@ -1433,7 +1445,7 @@ let pjson = {
 															},
 															"O": {
 																"cType": "scopedSlot",
-																"compDomClasses": "v-data-table v-data-table--has-bottom theme--light newDropBorder"
+																"compDomClasses": "v-data-table theme--light newDropBorder"
 															}
 														}
 													],

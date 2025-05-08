@@ -10,6 +10,7 @@ export declare class ExportManager {
     exportToXlsx(): void;
     private createXlsxSheet;
     private fitToColumn;
+    private base64ToAB;
     xlsxToJson(excelToJsonData: IExcelToJsonData): IExcelJsonData[];
 }
 //# sourceMappingURL=ExportManager.d.ts.map

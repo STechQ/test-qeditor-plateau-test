@@ -44,7 +44,7 @@ export interface IExcelToJsonOptions {
     dateFormat?: string | number;
 }
 export interface IExcelToJsonData {
-    excelBuffer: ArrayBuffer;
+    excelData: ArrayBuffer | string;
     options?: IExcelToJsonOptions;
 }
 export interface IExcelJsonData {
