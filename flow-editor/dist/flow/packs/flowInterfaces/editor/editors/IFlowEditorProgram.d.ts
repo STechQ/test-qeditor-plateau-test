@@ -6,6 +6,7 @@ import { GetModelBody, IStepOptions, IStudioUIModelBase, SetStoreSchema } from "
 import { IModifiedStatus } from "../common/IModifiedStatus";
 import { IWorkflowModel } from "../../../../../common/everything/workflow/runtimemodels/IWorkflow";
 import { IStoreModelForFlow } from "../../../../../common/everything/store/designtimemodels/IStoreModel";
+import { ModelValidatorResult } from "../../../common/ModelValidator";
 export interface IExportTypeMap {
     both: IFlowEditorModel;
     design: IFlowDesignModel;
@@ -52,5 +53,6 @@ export interface IFlowEditorProgram {
     setModels(models: Array<IStudioUIModelBase>): void;
     undo(): Promise<boolean>;
     redo(): Promise<boolean>;
+    validateAndFixModel(): Promise<ModelValidatorResult>;
 }
 //# sourceMappingURL=IFlowEditorProgram.d.ts.map

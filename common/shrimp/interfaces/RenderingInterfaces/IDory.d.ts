@@ -25,7 +25,6 @@ import { IAssetList } from "../ComponentInterfaces/IStyle";
 import { IConfig } from "../quick/IConfig";
 import { ITheme } from "@stechquick/algae/lib/quick/ITheme";
 import { ILogParams } from "../../helpers/logger";
-import { INavigationOptions } from "../quick/INavigationManager";
 export interface IDisplayCallbackHistory {
     new: IHistoryItem;
     /**
@@ -33,8 +32,8 @@ export interface IDisplayCallbackHistory {
      */
     old: Array<IHistoryItem>;
 }
-export declare type PartialDisplayHookCb = (elements: Array<IDomElement>, history: IDisplayCallbackHistory, pageId?: string, pageName?: string, navigationDirection?: INavigationDemandType, override?: boolean, doryJr?: IDoryJr | undefined, additioanls?: any | undefined) => void;
-export declare type DisplayHookCb = (elements: IDomElement[], history: IDisplayCallbackHistory, pageId?: string, pageName?: string, navigationDirection?: INavigationDemandType, noHistory?: boolean, options?: INavigationOptions) => void;
+export declare type PartialDisplayHookCb = (elements: Array<IDomElement>, history: IDisplayCallbackHistory, pageId?: string, pageName?: string, navigationDirection?: INavigationDemandType, override?: boolean, doryJr?: IDoryJr | undefined) => void;
+export declare type DisplayHookCb = (elements: IDomElement[], history: IDisplayCallbackHistory, pageId?: string, pageName?: string, navigationDirection?: INavigationDemandType, noHistory?: boolean) => void;
 export interface IGoHistoryOptions {
     navigationDemand?: INavigationDemand;
 }
@@ -47,7 +46,7 @@ export interface IDory extends IContextItem {
     PageRenderStartedHook: Hook<IPageRenderStartedCb>;
     SettingsQJsonContext: ISettingsQJsonContext;
     platformType: PlatformType;
-    Render({ qjson, compParentInst, storeItems, pageId, pageName, theme, options }: {
+    Render({ qjson, compParentInst, storeItems, pageId, pageName, theme }: {
         qjson: IQJSon;
         compParentInst?: any;
         storeItems?: IDictionary<any>;
@@ -57,7 +56,6 @@ export interface IDory extends IContextItem {
             name: string;
             isLight: boolean;
         };
-        options?: INavigationOptions;
     }): Promise<void>;
     SetDisplayCallBack({ callBackFunc }: {
         callBackFunc: DisplayHookCb;

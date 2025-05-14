@@ -19,6 +19,12 @@ export type FlowConnectionFrom = {
     step: FlowStep;
     output: string;
 };
+type GetPositionOptions = {
+    type: "self" | "group" | "bounding";
+} | {
+    type: "input" | "output";
+    name: string;
+};
 export declare class FlowConnection extends FlowObjectBase {
     readonly from: FlowConnectionFrom;
     private _to;
@@ -27,6 +33,7 @@ export declare class FlowConnection extends FlowObjectBase {
     private lines;
     private arrow?;
     private prevTo;
+    private isSelected;
     private events;
     constructor(id: string, from: FlowConnectionFrom, _to: FlowConnectionTo, objectManager: ObjectManager, zuiManager: ZuiManager, eventHelper: EventHelper<FlowEvents>);
     get to(): FlowConnectionTo;
@@ -37,13 +44,24 @@ export declare class FlowConnection extends FlowObjectBase {
     mouseUp(): void;
     protected onDeleted(): never[];
     reDraw(): void;
+    getPosition(option: GetPositionOptions): Vector | {
+        left: number;
+        top: number;
+        width: number;
+        height: number;
+        right: number;
+        bottom: number;
+    } | null | undefined;
     private createLinesAndArrowPoints;
     private createFromTo;
     private registerToStep;
     private unregisterToStep;
     private registerFromStep;
     private unregisterFromStep;
+    private highlight;
+    unhighlight(): void;
     private mouseEnter;
     private mouseLeave;
 }
+export {};
 //# sourceMappingURL=flowConnection.d.ts.map

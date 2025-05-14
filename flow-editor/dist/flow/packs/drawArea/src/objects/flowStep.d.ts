@@ -11,7 +11,7 @@ import { EventHelper } from "../helper/eventHelper";
 import { Path } from "two.js/src/path";
 import { IExpressionData } from "../../../../../common/everything/dataType/runtimemodels/IExpression";
 type GetPositionOptions = {
-    type: "self" | "group";
+    type: "self" | "group" | "bounding";
 } | {
     type: "input" | "output";
     name: string;
@@ -72,7 +72,7 @@ export declare class FlowStep extends FlowObjectBase {
     protected onDeleted(): void;
     reDraw(): void;
     private reDrawOutConns;
-    getPosition(option: GetPositionOptions): Vector;
+    getPosition(option: GetPositionOptions): any;
     closestInput(surfacePoint: IPoint, discardInputs?: Array<string>): {
         input: string;
         distSq: number;
@@ -86,7 +86,7 @@ export declare class FlowStep extends FlowObjectBase {
     private drawRhombusOutputs;
     private drawIOs;
     private afterDraw;
-    private colorIO;
+    colorIO(outputName: string, conType: "input" | "output", color?: string): void;
     setOutputs(outputs: Array<string>): void;
     setLabel(label: IExpressionData): void;
     setDescription(description: string): void;

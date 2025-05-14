@@ -6,10 +6,5 @@ export declare class ExtensionManager {
     static ManageComponent(compCollection: IComponentCollection, attrs: Record<string, any>, settingsWrapper: IWebSDKSettingsWrapper, websdkContext: ContextManager): void;
     static UpdateComponent(compCollection: IComponentCollection, attrs: Record<string, any>, settingsWrapper: IWebSDKSettingsWrapper, websdkContext: ContextManager): void;
     private static extensionDomLocator;
-    static updateExplictComponents: Record<string, (options?: {
-        domEl?: any;
-        oldCompQUID?: string;
-        compElID?: string;
-    }) => void>;
 }
 //# sourceMappingURL=ExtensionManager.d.ts.map

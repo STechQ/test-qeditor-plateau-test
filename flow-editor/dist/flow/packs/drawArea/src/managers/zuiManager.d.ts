@@ -18,11 +18,22 @@ export declare class ZuiManager {
     private readonly swimlaneStage;
     private readonly connectionStage;
     private readonly operatorStage;
+    private selectionBoxRect;
+    private selectionBoxStart?;
     private readonly two;
     private readonly zui;
     constructor(context: Context, selectionManager?: SelectionManager, eventHelper?: import("../helper/eventHelper").EventHelper<import("../../types").FlowEvents>);
     attach(element: HTMLElement): void;
     detach(): void;
+    startSelectionBox(point: IPoint): void;
+    updateSelectionBox(to: IPoint): void;
+    finishSelectionBox(): {
+        x1: number;
+        y1: number;
+        x2: number;
+        y2: number;
+    } | null;
+    cancelSelectionBox(): void;
     clientToSurface(position: IPoint): IPoint;
     clientToSurfaceD(d: number): number;
     clientToSurfaceDiff(dx: number, dy: number): {

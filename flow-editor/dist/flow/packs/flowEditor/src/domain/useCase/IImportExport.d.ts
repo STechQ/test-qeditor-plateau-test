@@ -11,7 +11,10 @@ export interface IImportExport {
     exportModel<KType extends keyof IExportTypeMap>(type: KType): Promise<IExportTypeMap[KType]>;
     copy(): IFlowCopyModel;
     setStepPropDict(step: IStepInstance): void;
-    compileCode(label: PropValue, propValue: PropValue, data?: Record<string, string>): Promise<{
+    compileCode(label: PropValue, propValue: PropValue, data?: Record<string, string>, compiledValues?: {
+        compiledCode: string;
+        errors: Array<string>;
+    }): Promise<{
         compiledCode: string;
         errors: string[];
     }>;

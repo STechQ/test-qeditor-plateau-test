@@ -9,6 +9,7 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     displayValue: string;
     range: boolean;
 }, {
+    resurrect(): void;
     openTimePickers(): void;
     updateStartTime(newValue: any): void;
     updateEndTime(newValue: any): void;

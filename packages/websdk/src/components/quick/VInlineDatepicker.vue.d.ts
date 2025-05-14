@@ -13,6 +13,7 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     isClickClear: boolean;
     uniqueID: string;
 }, {
+    resurrect(): void;
     changeMenuValue(): void;
     onKeyUp(event: any): void;
     onBlur(event: any): void;
