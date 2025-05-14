@@ -15,8 +15,13 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     pageTitle: string;
     pdfKey: number;
     currentMinWidth: number;
+    dataType: "base64" | "url" | "arrayBuffer";
 }, {
+    isTiffBuffer(buffer: ArrayBuffer): boolean;
+    loadTiff(dataType: "base64" | "arrayBuffer" | "url"): Promise<void>;
     createPdf(): void;
+    downloadTiff(): void;
+    base64ToAB(base64: string): ArrayBufferLike;
     base64ToBlob(base64: any, type?: string): Blob;
     focusSelectedPage(): void;
     zoomIn(): void;
