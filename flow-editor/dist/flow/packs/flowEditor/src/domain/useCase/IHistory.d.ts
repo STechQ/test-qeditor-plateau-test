@@ -2,6 +2,7 @@ import { IVMHistory } from "../../../../flowInterfaces/editor/IFlowEditorState";
 export interface IHistory {
     addHistory(options?: {
         consecutivePreventKey?: string;
+        modelModify?: boolean;
     }): void;
     canUndo(): boolean;
     canRedo(): boolean;
