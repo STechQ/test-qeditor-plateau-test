@@ -96,6 +96,7 @@ export declare class ShellConfiguration implements IShellConfiguration {
     }) => void;
     createComponentQValue?: (compCOllection: IComponentCollection) => void;
     hostTrigger?: (functionName: string, params: Record<string, any>, pageNameArray: Array<string>) => Promise<IHostResponseData>;
+    container?: (functionName: string, params: Record<string, any>) => Promise<IHostResponseData>;
     setDarkTheme?: (compCollection: IComponentCollection, isDark: boolean) => void;
     clearPageClose?: () => void;
     setPageClose?: () => void;

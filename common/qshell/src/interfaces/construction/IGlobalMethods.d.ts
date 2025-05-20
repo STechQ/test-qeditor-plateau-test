@@ -8,7 +8,7 @@ import { IDomElement } from "../../../../shrimp/interfaces/RenderingInterfaces/I
 import { IRenderer } from "../../../../shrimp/interfaces/RenderingInterfaces/IRenderer";
 import { ILocationPosition } from "../../../../shrimp/interfaces/quick/ILocationPosition";
 import { IExcel, IExcelJsonData, IExcelList, IExcelToJsonData } from "../../../../shrimp/interfaces/quick/IExcel";
-import { MobileAnimation } from "../../../../shrimp/interfaces/quick/INavigationManager";
+import { MobileAnimationType } from "../../../../shrimp/interfaces/quick/INavigationManager";
 import { ISharedDataInfo } from "../../../../shrimp/interfaces/quick/IGeneralMethods";
 export declare const GlobalMethodsContextName: string;
 /**
@@ -54,10 +54,10 @@ export interface IGlobalMethods extends IContextItem {
     xlsxToJson?: (excelToJsonData: IExcelToJsonData) => IExcelJsonData[];
     setComponentClass?: (compCollection: IComponentCollection, classes: Array<string>) => void;
     setComponentsProperty?: (compCollection: IComponentCollection, propertyName: string, propertyValue: string) => void;
-    goNative?: ({ code, param, transitionStyle }: {
+    goNative?: ({ code, param, mobileAnimation }: {
         code: string;
         param?: Record<string, any>;
-        transitionStyle?: MobileAnimation;
+        mobileAnimation?: MobileAnimationType;
     }) => void;
     setRenderer?: (renderer: IRenderer) => void;
     clearPageClose?: () => void;
