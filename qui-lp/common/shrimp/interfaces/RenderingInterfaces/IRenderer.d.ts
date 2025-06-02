@@ -14,6 +14,7 @@ import { IDoryJr } from "./IDoryJr";
 import { IHistoryItem } from "./IHistoryItem";
 import { IPageCompletedCb, IPageRenderStartedCb } from "./ILifeCycleCb";
 import { ILogParams } from "../../helpers/logger";
+import { IContainerModel } from "@stechquick/algae/lib/quick/IContainerModel";
 export interface IRendererChild {
     Render(options: {
         qjson: IQJSon;
@@ -50,7 +51,7 @@ export interface IRenderer {
     PageRenderStartedHook: Hook<IPageRenderStartedCb>;
     readonly BeforeRenderStartHook: Hook<() => void>;
     DisplayHook: Hook<DisplayHookCb>;
-    settingsQJsons: ISettingsQJsonContext;
+    settingModels: ISettingModelsContext;
     Render(renderParams: IRendererRenderParams): Promise<void>;
     Back(): void;
     Forward(): void;
@@ -82,7 +83,7 @@ export interface IRenderer {
     SetThemes(themes: Array<ITheme>): void;
     SetThemeMode(isLight: boolean): void;
 }
-export interface ISettingsQJsonContext extends IContextItem {
+export interface ISettingModelsContext extends IContextItem {
     PipelineChangeHook: Hook<() => void>;
     AlertChangeHook: Hook<() => void>;
     SetPipelineQjson(qjson: IQJSon): Promise<void>;
@@ -94,6 +95,8 @@ export interface ISettingsQJsonContext extends IContextItem {
     GetLoadingQjson(): IQJSon | undefined;
     SetLoadingQjson(qjson: IQJSon): void;
     SetGlobalLocalizationQjson(qJson: IQJSon): void;
+    GetHostTriggerModel(): IContainerModel | undefined;
+    SetHostTriggerModel(model: IContainerModel | undefined): void;
 }
 export interface IDoryRenderer extends IRenderer {
     readonly DoryInst: IDory;

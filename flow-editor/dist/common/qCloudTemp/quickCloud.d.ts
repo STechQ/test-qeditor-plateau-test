@@ -23,7 +23,7 @@ export type CreateUIType = "createUI";
 export type UsageType = AppSettingsObjectType | AppAssetObjectType;
 export type ModuleType = "basic";
 export type AllCreateObjectTypes = ModelType | FolderObjectType | ModuleObjectType | CreateUIType;
-export type AppSettingsModelKeys = "settings" | "componentList" | "containerServices" | "pipeline" | "alert" | "loading" | "globalLocalization" | "localProxy" | "style" | "rootqjson" | "asset" | "appSettings" | "containerServIntelli";
+export type AppSettingsModelKeys = "settings" | "componentList" | "containerServices" | "pipeline" | "alert" | "loading" | "globalLocalization" | "localProxy" | "style" | "rootqjson" | "asset" | "appSettings" | "containerServIntelli" | "container";
 export type ExtensionType = "png" | "jpg" | "jpeg" | "svg" | "gif" | "json" | "woff" | "woff2" | "ttf" | "otf";
 export type ModuleShareType = 'reference' | 'version';
 export declare const UISettingsType: {
@@ -38,6 +38,7 @@ export declare const UISettingsType: {
     readonly compList: "componentList";
     readonly globalLocalization: "globalLocalization";
     readonly assetList: "Asset List";
+    readonly container: "container";
     readonly appSettings: "App Settings";
 };
 export type UISettingsType = typeof UISettingsType[keyof typeof UISettingsType];

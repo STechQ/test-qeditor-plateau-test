@@ -10,7 +10,7 @@ export declare class HistoryImpl implements IHistory {
     private readonly state;
     private hm;
     constructor(container: DependencyContainer, viewModel?: IViewModel, importExport?: () => IImportExport, state?: () => IState);
-    addHistory(options: {
+    addHistory(options?: {
         consecutivePreventKey?: string;
         modelModify?: boolean;
     }): void;

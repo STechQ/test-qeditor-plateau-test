@@ -18,7 +18,7 @@ import { ScriptLang } from "../Scripting/scriptLang";
 import { IDoryJr } from "./IDoryJr";
 import { IHistoryItem } from "./IHistoryItem";
 import { IPageCompletedCb, IPageRenderStartedCb } from "./ILifeCycleCb";
-import { IRenderer, ISettingsQJsonContext } from "./IRenderer";
+import { IRenderer, ISettingModelsContext } from "./IRenderer";
 import { IRendererOperatorCollection } from "./Operators/IRendererOperatorCollection";
 import { IStore } from "../quick/IStore";
 import { IAssetList } from "../ComponentInterfaces/IStyle";
@@ -45,7 +45,7 @@ export interface IDory extends IContextItem {
     readonly network: INetwork;
     PageCompletedHook: Hook<IPageCompletedCb>;
     PageRenderStartedHook: Hook<IPageRenderStartedCb>;
-    SettingsQJsonContext: ISettingsQJsonContext;
+    SettingModelsContext: ISettingModelsContext;
     platformType: PlatformType;
     Render({ qjson, compParentInst, storeItems, pageId, pageName, theme, options }: {
         qjson: IQJSon;
@@ -136,7 +136,7 @@ export interface IDory extends IContextItem {
     Trigger(eventName: string, parameters: Record<string, any>): any;
     SetOperatorCollection(operatorCollection: IRendererOperatorCollection): void;
     GetComponentCollectionByUID(compUID: string): IComponentCollection | undefined;
-    GetSettingsQJsonContext(): ISettingsQJsonContext;
+    GetSettingModelsContext(): ISettingModelsContext;
     GetShellConfiguration(): IShellConfiguration;
     SetAssetValues(assetValues?: IAssetList): void;
     GetAssetValues(): IAssetList | undefined;
