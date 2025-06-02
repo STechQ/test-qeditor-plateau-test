@@ -4,7 +4,8 @@ export declare class StyleDomInteractor {
     private isAttached;
     private ruleList?;
     private cssString;
-    constructor(uid: string);
+    private shadowRoot?;
+    constructor(uid: string, shadowRoot?: ShadowRoot);
     private createStyleTag;
     attach(styleTag?: CSSStyleSheet): void;
     detach(): void;
