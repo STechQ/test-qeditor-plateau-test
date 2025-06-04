@@ -4,7 +4,6 @@ import { ElementLocation } from "../../../shrimp/interfaces/ComponentInterfaces/
 import { IComponent, IComponentClassEngine } from "../../../shrimp/interfaces/ComponentInterfaces/IComponent";
 import { IComponentCollection } from "../../../shrimp/interfaces/ComponentInterfaces/IComponentCollection";
 import { IComponentInstanceTracker } from "../../../shrimp/interfaces/ComponentInterfaces/IComponentInstanceTracker";
-import { IVnode } from "../../../shrimp/interfaces/ComponentInterfaces/IVnode";
 import { IDictionary } from "../../../shrimp/interfaces/IDictionary";
 import { IHostResponseData } from "../../../shrimp/interfaces/IHostResponseData";
 import { IDomElement } from "../../../shrimp/interfaces/RenderingInterfaces/IDomElement";
@@ -89,10 +88,10 @@ export declare class ShellConfiguration implements IShellConfiguration {
     getRegionList?: () => Array<string> | undefined;
     getCurrentRegion?: () => string | undefined;
     getFormattingDefinitionByCurrentRegion?: () => IFormattingDefinition | undefined;
-    onComponentDestroy?: ({ parentComponent, childVDomElement, childKey }: {
-        parentComponent: IComponent;
-        childVDomElement: IVnode;
-        childKey: string;
+    onComponentDestroy?: (options: {
+        parentComponent?: IComponent;
+        compColl: IComponentCollection;
+        childKey?: string;
     }) => void;
     createComponentQValue?: (compCOllection: IComponentCollection) => void;
     hostTrigger?: (functionName: string, params: Record<string, any>, pageNameArray: Array<string>) => Promise<IHostResponseData>;

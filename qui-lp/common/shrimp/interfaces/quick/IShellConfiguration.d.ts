@@ -93,10 +93,10 @@ export interface IShellConfiguration {
         url: string;
         options?: IUrlOptions;
     }): void;
-    onComponentDestroy?: ({ parentComponent, childVDomElement, childKey }: {
-        parentComponent: IComponent;
-        childVDomElement: IVnode;
-        childKey: string;
+    onComponentDestroy?: (options: {
+        parentComponent?: IComponent;
+        compColl: IComponentCollection;
+        childKey?: string;
     }) => void;
     createComponentQValue?: (compCollection: IComponentCollection) => void;
     hostTrigger?: (functionName: string, params: Record<string, any>, pageNameArray: Array<string>) => Promise<IHostResponseData> | undefined;

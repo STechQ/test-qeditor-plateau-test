@@ -69,10 +69,10 @@ export declare class ComponentManagerImpl implements IComponentManager {
     setComponentValue(compColl: IComponentCollection, value: string): void;
     getComponentStyle(comp: IComponent): any;
     setComponentStyle(compCollection: IComponentCollection, prop: string, value: string): void;
-    onComponentDestroy({ parentComponent, childVDomElement, childKey }: {
-        parentComponent: IComponent;
-        childVDomElement: IVnode;
-        childKey: string;
+    onComponentDestroy({ parentComponent, compColl, childKey }: {
+        parentComponent?: IComponent;
+        compColl: IComponentCollection;
+        childKey?: string;
     }): void;
     createComponentQValue(compCollection: IComponentCollection): void;
 }

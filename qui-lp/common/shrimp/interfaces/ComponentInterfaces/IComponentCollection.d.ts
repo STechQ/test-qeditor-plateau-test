@@ -82,5 +82,7 @@ export interface IComponentCollection extends ILightComponentCollection, IPerfab
     SetComponentStyles(compStyles?: StyleValue): void;
     getCurrentHistoryItem(): IHistoryItem;
     getDory(): IDory;
+    onDestroy(): void;
+    subscribeOnDestroy(cb: () => void): void;
 }
 //# sourceMappingURL=IComponentCollection.d.ts.map
