@@ -68,7 +68,9 @@ export interface IWebSDKSettings {
 export interface IFontSettings {
     id: string;
     fontName: string;
-    fontWeights: Array<string> | number;
+    fontWeights: {
+        [key: string]: string;
+    };
     path?: string;
     combinedFont?: string;
 }
