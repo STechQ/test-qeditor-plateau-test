@@ -1,4 +1,3 @@
-import { IThemeSettings } from "@stechquick/algae/lib/quick/ITheme";
 import Vue from "vue";
 import { QShell } from "../../../../common/qshell";
 import { ContextManager } from "../../../../common/shrimp/context";
@@ -9,6 +8,7 @@ import { IContainerServicesWrapper } from "../../../../common/shrimp/interfaces/
 import { IWebSDKSettingsWrapper } from "../../../../common/shrimp/interfaces/quick/IWebSDK";
 import { StoreManager } from "../implementation/StoreManager";
 import { WindowHistoryManager } from "./WindowHistoryManager";
+import { IThemeSettingsV2 } from "@stechquick/algae/lib/quick/IThemeV2";
 export declare class RendererManager {
     private static readonly doryPrefix;
     private static doryCounter;
@@ -38,6 +38,6 @@ export declare class RendererManager {
     destroyRenderer(renderer: IRenderer): void;
     setEnvironment(env: any): void;
     setYamlLogType(logType: string): void;
-    setThemes(themeSettings: IThemeSettings | undefined): void;
+    setThemes(themeSettings: IThemeSettingsV2 | undefined): void;
 }
 //# sourceMappingURL=RendererManager.d.ts.map

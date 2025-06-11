@@ -1,4 +1,4 @@
-import { ITheme } from "@stechquick/algae/lib/quick/ITheme";
+import { ITheme } from "@stechquick/algae/lib/quick/IThemeV2";
 import { ContextManager } from "../../shrimp/context";
 import { Hook } from "../../shrimp/helpers/hook";
 import { ILogParams } from "../../shrimp/helpers/logger";
