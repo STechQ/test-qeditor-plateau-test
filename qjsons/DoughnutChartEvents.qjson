@@ -1,0 +1,483 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_3",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container container--fluid'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"P": {
+								"ID": {
+									"H": "doughnutChartLabel",
+									"T": "prop",
+									"HL": "QS"
+								},
+								"tagType": {
+									"H": "'span'",
+									"T": "prop"
+								},
+								"text": {
+									"H": "'Text'",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "true",
+									"T": "prop"
+								},
+								"processHtml": {
+									"H": "false",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_168"
+							},
+							"S": {
+								"xs-xl": {
+									"marginTop": "",
+									"marginRight": "",
+									"marginBottom": "",
+									"marginLeft": "",
+									"paddingTop": "",
+									"paddingRight": "",
+									"paddingBottom": "",
+									"paddingLeft": "",
+									"fontColor": "#000000",
+									"fontFamily": "Roboto",
+									"fontSize": "16px",
+									"fontStyle": "normal",
+									"fontWeight": "400",
+									"combinedFont": "Roboto-Regular",
+									"ThemeFont": "Custom",
+									"lineHeight": "20px",
+									"textAlign": "left",
+									"textDecorationLine": "none",
+									"textDecorationStyle": "solid",
+									"textDecorationColor": "#000000"
+								}
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "Doughnut",
+							"P": {
+								"ID": {
+									"H": "doughnutChart",
+									"T": "prop",
+									"HL": "QS"
+								},
+								"backgroundColor": {
+									"H": "['rgb(255, 99, 132)', 'rgb(255, 159, 64)', 'rgb(255, 205, 86)', 'rgb(75, 192, 192)', 'rgb(54, 162, 235)']",
+									"T": "prop"
+								},
+								"borderColor": {
+									"H": "['rgb(255, 99, 132)', 'rgb(255, 159, 64)', 'rgb(255, 205, 86)', 'rgb(75, 192, 192)', 'rgb(54, 162, 235)']",
+									"T": "prop"
+								},
+								"data": {
+									"H": "[99, 70, 31, 93, 91]",
+									"T": "prop"
+								},
+								"labels": {
+									"H": "['Red', 'Orange', 'Yellow', 'Green','Blue']",
+									"T": "prop"
+								},
+								"cutoutPercentage": {
+									"H": "50",
+									"T": "prop"
+								},
+								"legendPosition": {
+									"H": "'top'",
+									"T": "prop"
+								},
+								"legendDisplay": {
+									"H": "true",
+									"T": "prop"
+								},
+								"legendFontSize": {
+									"H": "12",
+									"T": "prop"
+								},
+								"title": {
+									"H": "'Sample Doughnut Chart'",
+									"T": "prop"
+								},
+								"titleDisplay": {
+									"H": "true",
+									"T": "prop"
+								},
+								"titleFontSize": {
+									"H": "12",
+									"T": "prop"
+								},
+								"labelAlign": {
+									"H": "'center'",
+									"T": "prop"
+								},
+								"labelAnchor": {
+									"H": "'center'",
+									"T": "prop"
+								},
+								"labelBorderRadius": {
+									"H": "0",
+									"T": "prop"
+								},
+								"labelBorderWidth": {
+									"H": "0",
+									"T": "prop"
+								},
+								"labelClamp": {
+									"H": "false",
+									"T": "prop"
+								},
+								"labelClip": {
+									"H": "false",
+									"T": "prop"
+								},
+								"labelDisplay": {
+									"H": "false",
+									"T": "prop"
+								},
+								"labelFontWeight": {
+									"H": "'normal'",
+									"T": "prop"
+								},
+								"labelFontLineHeight": {
+									"H": "'1.2'",
+									"T": "prop"
+								},
+								"labelOffset": {
+									"H": "'4'",
+									"T": "prop"
+								},
+								"labelOpacity": {
+									"H": "1",
+									"T": "prop"
+								},
+								"labelPaddingTop": {
+									"H": "4",
+									"T": "prop"
+								},
+								"labelPaddingRight": {
+									"H": "4",
+									"T": "prop"
+								},
+								"labelPaddingBottom": {
+									"H": "4",
+									"T": "prop"
+								},
+								"labelPaddingLeft": {
+									"H": "4",
+									"T": "prop"
+								},
+								"labelRotation": {
+									"H": "0",
+									"T": "prop"
+								},
+								"labelTextAlign": {
+									"H": "'start'",
+									"T": "prop"
+								},
+								"labelTextStrokeWidth": {
+									"H": "0",
+									"T": "prop"
+								},
+								"labelTextShadowBlur": {
+									"H": "0",
+									"T": "prop"
+								}
+							},
+							"E": {
+								"onClick": {
+									"H": " const index = legendItem[0].index;\r\n // const datasetIndex = legendItem[0].datasetIndex;\r\n const labelValue = (<any>components.doughnutChart.data).labels[index]\r\n \r\n components.doughnutChartLabel.text = labelValue",
+									"PE": true,
+									"P": "event:any,legendItem:any[],legend:any",
+									"HL": "TS"
+								}
+							},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_167"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_3"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_3",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container container--fluid'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"P": {
+								"ID": {
+									"H": "doughnutChartLabel",
+									"T": "prop",
+									"HL": "QS"
+								},
+								"tagType": {
+									"H": "╬'span'╩╩",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬'Text'╩╩",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"processHtml": {
+									"H": "╬false╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_168"
+							},
+							"S": {
+								"xs-xl": {
+									"marginTop": "",
+									"marginRight": "",
+									"marginBottom": "",
+									"marginLeft": "",
+									"paddingTop": "",
+									"paddingRight": "",
+									"paddingBottom": "",
+									"paddingLeft": "",
+									"fontColor": "#000000",
+									"fontFamily": "Roboto",
+									"fontSize": "16px",
+									"fontStyle": "normal",
+									"fontWeight": "400",
+									"combinedFont": "Roboto-Regular",
+									"ThemeFont": "Custom",
+									"lineHeight": "20px",
+									"textAlign": "left",
+									"textDecorationLine": "none",
+									"textDecorationStyle": "solid",
+									"textDecorationColor": "#000000"
+								}
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "q-label "
+							}
+						},
+						{
+							"T": "Doughnut",
+							"P": {
+								"ID": {
+									"H": "doughnutChart",
+									"T": "prop",
+									"HL": "QS"
+								},
+								"backgroundColor": {
+									"H": "╬[]╠'rgb(255, 99, 132)'╩╠'rgb(255, 159, 64)'╩╠'rgb(255, 205, 86)'╩╠'rgb(75, 192, 192)'╩╠'rgb(54, 162, 235)'╩╩╩",
+									"T": "prop"
+								},
+								"borderColor": {
+									"H": "╬[]╠'rgb(255, 99, 132)'╩╠'rgb(255, 159, 64)'╩╠'rgb(255, 205, 86)'╩╠'rgb(75, 192, 192)'╩╠'rgb(54, 162, 235)'╩╩╩",
+									"T": "prop"
+								},
+								"data": {
+									"H": "╬[]╠99╩╠70╩╠31╩╠93╩╠91╩╩╩",
+									"T": "prop"
+								},
+								"labels": {
+									"H": "╬[]╠'Red'╩╠'Orange'╩╠'Yellow'╩╠'Green'╩╠'Blue'╩╩╩",
+									"T": "prop"
+								},
+								"cutoutPercentage": {
+									"H": "╬50╩╩",
+									"T": "prop"
+								},
+								"legendPosition": {
+									"H": "╬'top'╩╩",
+									"T": "prop"
+								},
+								"legendDisplay": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"legendFontSize": {
+									"H": "╬12╩╩",
+									"T": "prop"
+								},
+								"title": {
+									"H": "╬'Sample Doughnut Chart'╩╩",
+									"T": "prop"
+								},
+								"titleDisplay": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"titleFontSize": {
+									"H": "╬12╩╩",
+									"T": "prop"
+								},
+								"labelAlign": {
+									"H": "╬'center'╩╩",
+									"T": "prop"
+								},
+								"labelAnchor": {
+									"H": "╬'center'╩╩",
+									"T": "prop"
+								},
+								"labelBorderRadius": {
+									"H": "╬0╩╩",
+									"T": "prop"
+								},
+								"labelBorderWidth": {
+									"H": "╬0╩╩",
+									"T": "prop"
+								},
+								"labelClamp": {
+									"H": "╬false╩╩",
+									"T": "prop"
+								},
+								"labelClip": {
+									"H": "╬false╩╩",
+									"T": "prop"
+								},
+								"labelDisplay": {
+									"H": "╬false╩╩",
+									"T": "prop"
+								},
+								"labelFontWeight": {
+									"H": "╬'normal'╩╩",
+									"T": "prop"
+								},
+								"labelFontLineHeight": {
+									"H": "╬'1.2'╩╩",
+									"T": "prop"
+								},
+								"labelOffset": {
+									"H": "╬'4'╩╩",
+									"T": "prop"
+								},
+								"labelOpacity": {
+									"H": "╬1╩╩",
+									"T": "prop"
+								},
+								"labelPaddingTop": {
+									"H": "╬4╩╩",
+									"T": "prop"
+								},
+								"labelPaddingRight": {
+									"H": "╬4╩╩",
+									"T": "prop"
+								},
+								"labelPaddingBottom": {
+									"H": "╬4╩╩",
+									"T": "prop"
+								},
+								"labelPaddingLeft": {
+									"H": "╬4╩╩",
+									"T": "prop"
+								},
+								"labelRotation": {
+									"H": "╬0╩╩",
+									"T": "prop"
+								},
+								"labelTextAlign": {
+									"H": "╬'start'╩╩",
+									"T": "prop"
+								},
+								"labelTextStrokeWidth": {
+									"H": "╬0╩╩",
+									"T": "prop"
+								},
+								"labelTextShadowBlur": {
+									"H": "╬0╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {
+								"onClick": {
+									"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nvar index = legendItem[0].index;\r\n// const datasetIndex = legendItem[0].datasetIndex;\r\nvar labelValue = components.doughnutChart.data.labels[index];\r\ncomponents.doughnutChartLabel.text = labelValue;\r\n",
+									"PE": true,
+									"P": "event:any,legendItem:any[],legend:any",
+									"HL": "JS"
+								}
+							},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_167"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": ""
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_3"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container container--fluid"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"opt": {
+		"V": 2.2
+	}
+};
+export default pjson

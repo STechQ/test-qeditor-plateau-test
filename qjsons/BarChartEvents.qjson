@@ -1,0 +1,651 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"P": {
+								"ID": {
+									"H": "barChartLabel",
+									"T": "prop",
+									"HL": "QS"
+								},
+								"tagType": {
+									"H": "'span'",
+									"T": "prop"
+								},
+								"text": {
+									"H": "'Text'",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "true",
+									"T": "prop"
+								},
+								"processHtml": {
+									"H": "false",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_24"
+							},
+							"S": {
+								"xs-xl": {
+									"marginTop": "",
+									"marginRight": "",
+									"marginBottom": "",
+									"marginLeft": "",
+									"paddingTop": "",
+									"paddingRight": "",
+									"paddingBottom": "",
+									"paddingLeft": "",
+									"fontColor": "#000000",
+									"fontFamily": "Roboto",
+									"fontSize": "16px",
+									"fontStyle": "normal",
+									"fontWeight": "400",
+									"combinedFont": "Roboto-Regular",
+									"ThemeFont": "Custom",
+									"lineHeight": "20px",
+									"textAlign": "left",
+									"textDecorationLine": "none",
+									"textDecorationStyle": "solid",
+									"textDecorationColor": "#000000"
+								}
+							},
+							"O": {
+								"cType": "slot"
+							}
+						},
+						{
+							"T": "Bar",
+							"P": {
+								"ID": {
+									"H": "barChart",
+									"T": "prop",
+									"HL": "QS"
+								},
+								"backgroundColor": {
+									"H": "['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)']",
+									"T": "prop"
+								},
+								"borderColor": {
+									"H": "['rgba(255, 99, 132, 1)','rgba(54, 162, 235, 1)','rgba(255, 206, 86, 1)','rgba(75, 192, 192, 1)','rgba(153, 102, 255, 1)','rgba(255, 159, 64, 1)']",
+									"T": "prop"
+								},
+								"borderWidth": {
+									"H": "1",
+									"T": "prop"
+								},
+								"data": {
+									"H": "[12, 19, 3, 5, 2, 3]",
+									"T": "prop"
+								},
+								"label": {
+									"H": "'# of Votes'",
+									"T": "prop"
+								},
+								"indexAxis": {
+									"H": "'x'",
+									"T": "prop"
+								},
+								"labels": {
+									"H": "['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange']",
+									"T": "prop"
+								},
+								"xDrawOnChartArea": {
+									"H": "true",
+									"T": "prop"
+								},
+								"yDrawOnChartArea": {
+									"H": "true",
+									"T": "prop"
+								},
+								"xDisplay": {
+									"H": "true",
+									"T": "prop"
+								},
+								"yDisplay": {
+									"H": "true",
+									"T": "prop"
+								},
+								"xTicksFontSize": {
+									"H": "12",
+									"T": "prop"
+								},
+								"xTicksFontStyle": {
+									"H": "'normal'",
+									"T": "prop"
+								},
+								"xTicksFontWeight": {
+									"H": "'normal'",
+									"T": "prop"
+								},
+								"xTicksFontLineHeight": {
+									"H": "'1.2'",
+									"T": "prop"
+								},
+								"yTicksFontSize": {
+									"H": "12",
+									"T": "prop"
+								},
+								"yTicksFontStyle": {
+									"H": "'normal'",
+									"T": "prop"
+								},
+								"yTicksFontWeight": {
+									"H": "'normal'",
+									"T": "prop"
+								},
+								"yTicksFontLineHeight": {
+									"H": "'1.2'",
+									"T": "prop"
+								},
+								"legendPosition": {
+									"H": "'top'",
+									"T": "prop"
+								},
+								"legendDisplay": {
+									"H": "true",
+									"T": "prop"
+								},
+								"legendFontSize": {
+									"H": "12",
+									"T": "prop"
+								},
+								"title": {
+									"H": "'Sample Bar Chart'",
+									"T": "prop"
+								},
+								"titleDisplay": {
+									"H": "true",
+									"T": "prop"
+								},
+								"titleFontSize": {
+									"H": "12",
+									"T": "prop"
+								},
+								"labelAlign": {
+									"H": "'center'",
+									"T": "prop"
+								},
+								"labelAnchor": {
+									"H": "'center'",
+									"T": "prop"
+								},
+								"labelBorderRadius": {
+									"H": "0",
+									"T": "prop"
+								},
+								"labelBorderWidth": {
+									"H": "0",
+									"T": "prop"
+								},
+								"labelClamp": {
+									"H": "false",
+									"T": "prop"
+								},
+								"labelClip": {
+									"H": "false",
+									"T": "prop"
+								},
+								"labelDisplay": {
+									"H": "false",
+									"T": "prop"
+								},
+								"labelFontWeight": {
+									"H": "'normal'",
+									"T": "prop"
+								},
+								"labelFontLineHeight": {
+									"H": "'1.2'",
+									"T": "prop"
+								},
+								"labelOffset": {
+									"H": "'4'",
+									"T": "prop"
+								},
+								"labelOpacity": {
+									"H": "1",
+									"T": "prop"
+								},
+								"labelPaddingTop": {
+									"H": "4",
+									"T": "prop"
+								},
+								"labelPaddingRight": {
+									"H": "4",
+									"T": "prop"
+								},
+								"labelPaddingBottom": {
+									"H": "4",
+									"T": "prop"
+								},
+								"labelPaddingLeft": {
+									"H": "4",
+									"T": "prop"
+								},
+								"labelRotation": {
+									"H": "0",
+									"T": "prop"
+								},
+								"labelTextAlign": {
+									"H": "'start'",
+									"T": "prop"
+								},
+								"labelTextStrokeWidth": {
+									"H": "0",
+									"T": "prop"
+								},
+								"labelTextShadowBlur": {
+									"H": "0",
+									"T": "prop"
+								},
+								"xTicksDisplay": {
+									"H": "true",
+									"T": "prop"
+								},
+								"yTicksDisplay": {
+									"H": "true",
+									"T": "prop"
+								}
+							},
+							"E": {
+								"onClick": {
+									"H": " const index = legendItem[0].index;\r\n // const datasetIndex = legendItem[0].datasetIndex;\r\n const labelValue = (<any>components.barChart.data).labels[index]\r\n \r\n components.barChartLabel.text = labelValue",
+									"PE": true,
+									"P": "event:any,legendItem:any[],legend:any",
+									"HL": "TS"
+								}
+							},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_20"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_5"
+			},
+			"O": {
+				"cType": "slot"
+			},
+			"S": {
+				"xs-xl": {
+					"marginLeft": "",
+					"marginRight": "",
+					"marginBottom": "",
+					"marginTop": "",
+					"paddingTop": "12px",
+					"paddingBottom": "12px",
+					"paddingLeft": "12px",
+					"paddingRight": "12px",
+					"width": "",
+					"height": "",
+					"backgroundColor": "#ffffff",
+					"boxShadow": ""
+				}
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "QLabel",
+							"P": {
+								"ID": {
+									"H": "barChartLabel",
+									"T": "prop",
+									"HL": "QS"
+								},
+								"tagType": {
+									"H": "╬'span'╩╩",
+									"T": "prop"
+								},
+								"text": {
+									"H": "╬'Text'╩╩",
+									"T": "prop"
+								},
+								"visible": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"processHtml": {
+									"H": "╬false╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_24"
+							},
+							"S": {
+								"xs-xl": {
+									"marginTop": "",
+									"marginRight": "",
+									"marginBottom": "",
+									"marginLeft": "",
+									"paddingTop": "",
+									"paddingRight": "",
+									"paddingBottom": "",
+									"paddingLeft": "",
+									"fontColor": "#000000",
+									"fontFamily": "Roboto",
+									"fontSize": "16px",
+									"fontStyle": "normal",
+									"fontWeight": "400",
+									"combinedFont": "Roboto-Regular",
+									"ThemeFont": "Custom",
+									"lineHeight": "20px",
+									"textAlign": "left",
+									"textDecorationLine": "none",
+									"textDecorationStyle": "solid",
+									"textDecorationColor": "#000000"
+								}
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "q-label "
+							}
+						},
+						{
+							"T": "Bar",
+							"P": {
+								"ID": {
+									"H": "barChart",
+									"T": "prop",
+									"HL": "QS"
+								},
+								"backgroundColor": {
+									"H": "╬[]╠'rgba(255, 99, 132, 0.2)'╩╠'rgba(54, 162, 235, 0.2)'╩╠'rgba(255, 206, 86, 0.2)'╩╠'rgba(75, 192, 192, 0.2)'╩╠'rgba(153, 102, 255, 0.2)'╩╠'rgba(255, 159, 64, 0.2)'╩╩╩",
+									"T": "prop"
+								},
+								"borderColor": {
+									"H": "╬[]╠'rgba(255, 99, 132, 1)'╩╠'rgba(54, 162, 235, 1)'╩╠'rgba(255, 206, 86, 1)'╩╠'rgba(75, 192, 192, 1)'╩╠'rgba(153, 102, 255, 1)'╩╠'rgba(255, 159, 64, 1)'╩╩╩",
+									"T": "prop"
+								},
+								"borderWidth": {
+									"H": "╬1╩╩",
+									"T": "prop"
+								},
+								"data": {
+									"H": "╬[]╠12╩╠19╩╠3╩╠5╩╠2╩╠3╩╩╩",
+									"T": "prop"
+								},
+								"label": {
+									"H": "╬'# of Votes'╩╩",
+									"T": "prop"
+								},
+								"indexAxis": {
+									"H": "╬'x'╩╩",
+									"T": "prop"
+								},
+								"labels": {
+									"H": "╬[]╠'Red'╩╠'Blue'╩╠'Yellow'╩╠'Green'╩╠'Purple'╩╠'Orange'╩╩╩",
+									"T": "prop"
+								},
+								"xDrawOnChartArea": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"yDrawOnChartArea": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"xDisplay": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"yDisplay": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"xTicksFontSize": {
+									"H": "╬12╩╩",
+									"T": "prop"
+								},
+								"xTicksFontStyle": {
+									"H": "╬'normal'╩╩",
+									"T": "prop"
+								},
+								"xTicksFontWeight": {
+									"H": "╬'normal'╩╩",
+									"T": "prop"
+								},
+								"xTicksFontLineHeight": {
+									"H": "╬'1.2'╩╩",
+									"T": "prop"
+								},
+								"yTicksFontSize": {
+									"H": "╬12╩╩",
+									"T": "prop"
+								},
+								"yTicksFontStyle": {
+									"H": "╬'normal'╩╩",
+									"T": "prop"
+								},
+								"yTicksFontWeight": {
+									"H": "╬'normal'╩╩",
+									"T": "prop"
+								},
+								"yTicksFontLineHeight": {
+									"H": "╬'1.2'╩╩",
+									"T": "prop"
+								},
+								"legendPosition": {
+									"H": "╬'top'╩╩",
+									"T": "prop"
+								},
+								"legendDisplay": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"legendFontSize": {
+									"H": "╬12╩╩",
+									"T": "prop"
+								},
+								"title": {
+									"H": "╬'Sample Bar Chart'╩╩",
+									"T": "prop"
+								},
+								"titleDisplay": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"titleFontSize": {
+									"H": "╬12╩╩",
+									"T": "prop"
+								},
+								"labelAlign": {
+									"H": "╬'center'╩╩",
+									"T": "prop"
+								},
+								"labelAnchor": {
+									"H": "╬'center'╩╩",
+									"T": "prop"
+								},
+								"labelBorderRadius": {
+									"H": "╬0╩╩",
+									"T": "prop"
+								},
+								"labelBorderWidth": {
+									"H": "╬0╩╩",
+									"T": "prop"
+								},
+								"labelClamp": {
+									"H": "╬false╩╩",
+									"T": "prop"
+								},
+								"labelClip": {
+									"H": "╬false╩╩",
+									"T": "prop"
+								},
+								"labelDisplay": {
+									"H": "╬false╩╩",
+									"T": "prop"
+								},
+								"labelFontWeight": {
+									"H": "╬'normal'╩╩",
+									"T": "prop"
+								},
+								"labelFontLineHeight": {
+									"H": "╬'1.2'╩╩",
+									"T": "prop"
+								},
+								"labelOffset": {
+									"H": "╬'4'╩╩",
+									"T": "prop"
+								},
+								"labelOpacity": {
+									"H": "╬1╩╩",
+									"T": "prop"
+								},
+								"labelPaddingTop": {
+									"H": "╬4╩╩",
+									"T": "prop"
+								},
+								"labelPaddingRight": {
+									"H": "╬4╩╩",
+									"T": "prop"
+								},
+								"labelPaddingBottom": {
+									"H": "╬4╩╩",
+									"T": "prop"
+								},
+								"labelPaddingLeft": {
+									"H": "╬4╩╩",
+									"T": "prop"
+								},
+								"labelRotation": {
+									"H": "╬0╩╩",
+									"T": "prop"
+								},
+								"labelTextAlign": {
+									"H": "╬'start'╩╩",
+									"T": "prop"
+								},
+								"labelTextStrokeWidth": {
+									"H": "╬0╩╩",
+									"T": "prop"
+								},
+								"labelTextShadowBlur": {
+									"H": "╬0╩╩",
+									"T": "prop"
+								},
+								"xTicksDisplay": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"yTicksDisplay": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {
+								"onClick": {
+									"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nvar index = legendItem[0].index;\r\n// const datasetIndex = legendItem[0].datasetIndex;\r\nvar labelValue = components.barChart.data.labels[index];\r\ncomponents.barChartLabel.text = labelValue;\r\n",
+									"PE": true,
+									"P": "event:any,legendItem:any[],legend:any",
+									"HL": "JS"
+								}
+							},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_20"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": ""
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_5"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container"
+			},
+			"S": {
+				"xs-xl": {
+					"marginLeft": "",
+					"marginRight": "",
+					"marginBottom": "",
+					"marginTop": "",
+					"paddingTop": "12px",
+					"paddingBottom": "12px",
+					"paddingLeft": "12px",
+					"paddingRight": "12px",
+					"width": "",
+					"height": "",
+					"backgroundColor": "#ffffff",
+					"boxShadow": ""
+				}
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"opt": {
+		"V": 2.2
+	}
+};
+export default pjson

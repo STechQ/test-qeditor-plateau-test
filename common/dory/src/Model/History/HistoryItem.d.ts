@@ -65,7 +65,7 @@ export declare class HistoryItem implements IHistoryItem {
     }): IComponentCollection | undefined;
     private iterateSubHistoryItems;
     GetComponentCollectionByUID(compUID: string): IComponentCollection | undefined;
-    GetComponentCollection(): Record<string, IComponentCollection> | null;
+    GetComponentCollection(): Record<string, IComponentCollection>;
     GetComponentList(): Array<IComponentCollection>;
     getCompCollectionById(id: string | IComponent): IComponentCollection | undefined;
     destroyComponentCollectionById(Id: string): boolean;

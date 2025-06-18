@@ -477,26 +477,34 @@ export interface IGlobals_Quick {
      *
      * @param compEID - The ID of the component to validate, which may be an input or a container with inputs.
      * @param displayAlertBox - If true, calls the alert function in UI configuration (or default alert function) and shows an alert box on validation failure.
-     * @param displayError - If true, displays an error message on validation failure.
+     * @param unusedParameter - This parameter is unused.
+     * @param options - Options for validation.
+     * @param options.skipInvisible - Validation will be skipped for the input component if its parent component is not visible.
      * @returns - Returns true if validation is successful; otherwise, returns undefined.
      *
      * @example
      * const validationResult = quick.Quick.validate('exampleComponent', true, true);
      * validationResult ? quick.EM.trace("Validation Success") : quick.EM.trace("Validation Failed");
    */
-    validate: (compEID: string, displayAlertBox: boolean, displayError?: boolean) => true | undefined;
+    validate: (compEID: string, displayAlertBox: boolean, unusedParameter?: boolean, options?: {
+        skipInvisible?: boolean;
+    }) => true | undefined;
     /**
      * Validates all registered inputs in the page.
      *
      * @param displayAlertBox - If true, calls the alert function in UI configuration (or default alert function) and shows an alert box on validation failure.
-     * @param displayError- If true, displays an error message on validation failure.
+     * @param unusedParameter - This parameter is unused.
+     * @param options - Options for validation.
+     * @param options.skipInvisible - Validation will be skipped for the input component if its parent component is not visible.
      * @returns - Returns true if all validations are successful; otherwise, returns undefined.
      *
      * @example
      * const result = quick.Quick.validateAll()
      * quick.EM.trace('isValidationSuccess: ' + result)
    */
-    validateAll: (displayAlertBox: boolean, displayError?: boolean) => true | undefined;
+    validateAll: (displayAlertBox: boolean, unusedParameter?: boolean, options?: {
+        skipInvisible?: boolean;
+    }) => true | undefined;
     /**
      * Only clears validations, it has no effect on other variables.
      * @param compEID - The ID of the component to be reset.
