@@ -1,4 +1,4 @@
-import { ITheme } from "@stechquick/algae/lib/quick/IThemeV2";
+import { ITheme } from "@stechquick/algae/lib/quick/ITheme";
 import { ContextManager, IContextItem } from "../../../shrimp/context";
 import { Hook } from "../../../shrimp/helpers/hook";
 import { ILRID } from "../../../shrimp/interfaces/ComponentInterfaces/ILocalResource";

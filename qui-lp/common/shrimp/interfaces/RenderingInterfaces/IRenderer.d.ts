@@ -1,4 +1,4 @@
-import { ITheme } from "@stechquick/algae/lib/quick/IThemeV2";
+import { ITheme } from "@stechquick/algae/lib/quick/ITheme";
 import { IContextItem } from "../../context";
 import { Hook } from "../../helpers/hook";
 import { IComponentCollection } from "../ComponentInterfaces/IComponentCollection";

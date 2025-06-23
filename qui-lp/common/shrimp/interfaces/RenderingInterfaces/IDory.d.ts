@@ -23,7 +23,7 @@ import { IRendererOperatorCollection } from "./Operators/IRendererOperatorCollec
 import { IStore } from "../quick/IStore";
 import { IAssetList } from "../ComponentInterfaces/IStyle";
 import { IConfig } from "../quick/IConfig";
-import { ITheme } from "@stechquick/algae/lib/quick/IThemeV2";
+import { ITheme } from "@stechquick/algae/lib/quick/ITheme";
 import { ILogParams } from "../../helpers/logger";
 import { INavigationOptions } from "../quick/INavigationManager";
 export interface IDisplayCallbackHistory {
