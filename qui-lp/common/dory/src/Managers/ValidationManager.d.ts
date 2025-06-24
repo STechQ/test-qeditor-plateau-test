@@ -5,10 +5,10 @@ export declare class ValidationManager {
     private historyItemBasedLRManager?;
     constructor(currentContext: ContextManager);
     validate(compId: string, displayAlertBox: boolean, options: {
-        skipInvisible?: boolean;
+        skipIfParentInvisible?: boolean;
     }): true | undefined;
     validateAll(displayAlertBox: boolean, options: {
-        skipInvisible?: boolean;
+        skipIfParentInvisible?: boolean;
     }): true | undefined;
     private getComponentParentVisible;
     resetValidation(compId: string): void;
