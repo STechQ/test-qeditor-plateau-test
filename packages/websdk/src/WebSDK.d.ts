@@ -84,6 +84,6 @@ export declare class WebSDK implements IWebSDK {
     setFavicon(favicon: string): void;
     getUXManager(): UXManagerImpl;
     migrateLegacySettings(settings: any): IWebSDKSettings;
-    showCssTags(show: boolean): void;
+    showCssTags(show: boolean, pageName: string): void;
 }
 //# sourceMappingURL=WebSDK.d.ts.map

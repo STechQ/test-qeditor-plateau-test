@@ -127,6 +127,6 @@ export interface IWebSDK {
     setEnvironment(env: unknown): void;
     setYamlLogType(logType: string): void;
     migrateLegacySettings(settings: any): IWebSDKSettings;
-    showCssTags(show: boolean): void;
+    showCssTags(show: boolean, pageName: string): void;
 }
 //# sourceMappingURL=IWebSDK.d.ts.map

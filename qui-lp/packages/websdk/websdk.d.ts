@@ -4,23 +4,33 @@ import { IDoryRenderer } from "../../common/shrimp/interfaces/RenderingInterface
 import { IPlateauIAM } from "../../common/shrimp/interfaces/quick/IPlateauIAM";
 import { IWebSDK } from "../../common/shrimp/interfaces/quick/IWebSDK";
 import { LivePreviewManager } from "./src/managers/LivePreviewManager";
-declare class PlateauUI {
+declare class PlateauUI implements IPlateauUI {
     private container;
     private renderer;
     mountPoint: HTMLElement;
     private sdkInstance;
     constructor(container: WebsdkContainer, renderer: IDoryRenderer, mountPoint: IDomElement, sdkInstance: IWebSDK);
     open(qjsonPath?: string, args?: Record<string, any>): Promise<void>;
-    show(): void;
-    hide(): void;
-    close(): void;
-    destroy(): void;
+    show(args?: plateauUIPageOptions): void;
+    hide(args?: plateauUIPageOptions): void;
+    close(args?: plateauUIPageOptions): void;
+    destroy(args?: Record<string, any>): void;
     trigger({ eventName, parameters }: {
         eventName: string;
         parameters: Record<string, any>;
     }): any;
     getGlobalStore(storeFieldName: string): any;
 }
+export interface IPlateauUI {
+    open(qjsonPath?: string, args?: Record<string, any>): Promise<void>;
+    show(args?: plateauUIPageOptions): void;
+    hide(args?: plateauUIPageOptions): void;
+    close(args?: plateauUIPageOptions): void;
+    destroy(args?: plateauUIPageOptions): void;
+}
+export declare type plateauUIPageOptions = {
+    pageName: string;
+};
 export interface IContainerServiceParams {
     plateauUIRenderer?: PlateauUI;
 }
