@@ -479,7 +479,7 @@ export interface IGlobals_Quick {
      * @param displayAlertBox - If true, calls the alert function in UI configuration (or default alert function) and shows an alert box on validation failure.
      * @param unusedParameter - This parameter is unused.
      * @param options - Options for validation.
-     * @param options.skipIfParentInvisible - Validation will be skipped for the input component if its parent component is not visible.
+     * @param options.skipChildrenIfInvisible - Validation will be skipped for the input component if its parent component is not visible.
      * @returns - Returns true if validation is successful; otherwise, returns undefined.
      *
      * @example
@@ -487,7 +487,7 @@ export interface IGlobals_Quick {
      * validationResult ? quick.EM.trace("Validation Success") : quick.EM.trace("Validation Failed");
    */
     validate: (compEID: string, displayAlertBox: boolean, unusedParameter?: boolean, options?: {
-        skipIfParentInvisible?: boolean;
+        skipChildrenIfInvisible?: boolean;
     }) => true | undefined;
     /**
      * Validates all registered inputs in the page.
@@ -495,7 +495,7 @@ export interface IGlobals_Quick {
      * @param displayAlertBox - If true, calls the alert function in UI configuration (or default alert function) and shows an alert box on validation failure.
      * @param unusedParameter - This parameter is unused.
      * @param options - Options for validation.
-     * @param options.skipIfParentInvisible - Validation will be skipped for the input component if its parent component is not visible.
+     * @param options.skipChildrenIfInvisible - Validation will be skipped for the input component if its parent component is not visible.
      * @returns - Returns true if all validations are successful; otherwise, returns undefined.
      *
      * @example
@@ -503,7 +503,7 @@ export interface IGlobals_Quick {
      * quick.EM.trace('isValidationSuccess: ' + result)
    */
     validateAll: (displayAlertBox: boolean, unusedParameter?: boolean, options?: {
-        skipIfParentInvisible?: boolean;
+        skipChildrenIfInvisible?: boolean;
     }) => true | undefined;
     /**
      * Only clears validations, it has no effect on other variables.
@@ -1573,7 +1573,6 @@ export interface IGlobalsBase {
     webScripts: {};
     workflowStore?: IWorkflowStore;
     workflow?: IGlobals_Workflow; /** !!! DON'T CHANGE */
-    container: {};
 }
 export interface IGlobals_Workflow {
     RunFunction: ({ flowId, input, dataInstance }: {
