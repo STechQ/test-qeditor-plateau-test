@@ -10,7 +10,7 @@ import { IQJSon } from "../ComponentInterfaces/IQJson";
 import { StyleValue } from "../ComponentInterfaces/IStyle";
 import { IVnode } from "../ComponentInterfaces/IVnode";
 import { IDictionary } from "../IDictionary";
-import { IHostResponseData } from "../IHostResponseData";
+import { IContainerServicesResponseReal, IHostResponseData } from "../IHostResponseData";
 import { IDomElement } from "../RenderingInterfaces/IDomElement";
 import { INetwork } from "./IContainerServices";
 import { ICookieAccess } from "./ICookieAccess";
@@ -100,6 +100,7 @@ export interface IShellConfiguration {
     }) => void;
     createComponentQValue?: (compCollection: IComponentCollection) => void;
     hostTrigger?: (functionName: string, params: Record<string, any>, pageNameArray: Array<string>) => Promise<IHostResponseData> | undefined;
+    containerTrigger?: (functionName: string, params: Record<string, any>, pageNameArray: Array<string>) => Promise<IContainerServicesResponseReal>;
     onLRChange?: (region: string) => void;
     setDarkTheme?: (compCollection: IComponentCollection, isDark: boolean) => void;
     clearPageClose?: () => void;

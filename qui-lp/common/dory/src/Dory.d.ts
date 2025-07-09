@@ -20,7 +20,7 @@ import { IDomElement } from "../../shrimp/interfaces/RenderingInterfaces/IDomEle
 import { DisplayHookCb, IDory, IGoHistoryOptions, PartialDisplayHookCb } from "../../shrimp/interfaces/RenderingInterfaces/IDory";
 import { IDoryJr } from "../../shrimp/interfaces/RenderingInterfaces/IDoryJr";
 import { IPageCompletedCb, IPageRenderStartedCb } from "../../shrimp/interfaces/RenderingInterfaces/ILifeCycleCb";
-import { ISettingsQJsonContext } from "../../shrimp/interfaces/RenderingInterfaces/IRenderer";
+import { ISettingModelsContext } from "../../shrimp/interfaces/RenderingInterfaces/IRenderer";
 import { IRendererOperatorCollection } from "../../shrimp/interfaces/RenderingInterfaces/Operators/IRendererOperatorCollection";
 import { IGlobalsQS } from "../../shrimp/interfaces/Scripting/IGlobals";
 import { ScriptLang } from "../../shrimp/interfaces/Scripting/scriptLang";
@@ -47,7 +47,7 @@ export declare class Dory implements IDory {
     isEditorInEditState: boolean;
     callBackComponentTarget: Function;
     editor: IEditorInstance | undefined;
-    SettingsQJsonContext: ISettingsQJsonContext;
+    SettingModelsContext: ISettingModelsContext;
     private operatorCollection?;
     private _isRenderCompleted;
     get PartialDisplayHook(): Hook<PartialDisplayHookCb>;
@@ -86,7 +86,7 @@ export declare class Dory implements IDory {
     private PageCompleted;
     private innerRender;
     ReRender(): void;
-    CallHibernate(passHibernate?: boolean): void;
+    CallHibernate(passHibernate?: boolean, disableHIhibernate?: boolean): void;
     resurrect(): void;
     SetErrorCallBack(callBack: (errors: Array<IQError>) => void): void;
     SetSiteSettings(siteSettings?: ISiteSettings): void;
@@ -102,7 +102,7 @@ export declare class Dory implements IDory {
     }): void;
     SubscribeComponentVisibility(subscribeFunc: () => void): void;
     RetrieveQJsonforDesignSide(qjsonPath: string): Promise<IQJSon | undefined>;
-    GetSettingsQJsonContext(): ISettingsQJsonContext;
+    GetSettingModelsContext(): ISettingModelsContext;
     get network(): import("../../shrimp/interfaces/quick/IContainerServices").INetwork;
     GetComponentList(): IComponentCollection[] | undefined;
     getComponentCollectionByIdProperty({ id, deep }: {

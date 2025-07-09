@@ -1,7 +1,9 @@
+import { ContextManager } from "../../../../../common/shrimp/context";
 import { IComponentCollection } from "../../../../../common/shrimp/interfaces/ComponentInterfaces/IComponentCollection";
 import { IComponentOperator } from "../../../../../common/shrimp/interfaces/RenderingInterfaces/Operators/IComponentOperator";
 export declare class ComponentOperator implements IComponentOperator {
-    constructor();
+    private readonly websdkContext;
+    constructor(websdkContext: ContextManager);
     compListOfText: string[];
     setClassString(compColl: IComponentCollection, classString: string): void;
     getClassString(compColl: IComponentCollection): string;
