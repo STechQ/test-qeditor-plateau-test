@@ -75,6 +75,7 @@ export declare class RenderingManager implements IRenderingManager {
     private generatePropsFromStyle;
     private getItemValue;
     private GenerateChildren;
+    private changeChildJsonIDs;
     private isEditMode;
     private getComponentParentInstance;
     RenderRoot(): Promise<void>;
