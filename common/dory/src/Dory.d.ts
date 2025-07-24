@@ -86,7 +86,7 @@ export declare class Dory implements IDory {
     private PageCompleted;
     private innerRender;
     ReRender(): void;
-    CallHibernate(passHibernate?: boolean, disableHIhibernate?: boolean): void;
+    CallHibernate(passHibernate?: boolean): void;
     resurrect(): void;
     SetErrorCallBack(callBack: (errors: Array<IQError>) => void): void;
     SetSiteSettings(siteSettings?: ISiteSettings): void;

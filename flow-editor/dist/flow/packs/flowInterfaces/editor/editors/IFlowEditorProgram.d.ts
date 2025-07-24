@@ -6,10 +6,11 @@ import { GetModelBody, IStepOptions, IStudioUIModelBase, SetStoreSchema } from "
 import { IModifiedStatus } from "../common/IModifiedStatus";
 import { IWorkflowModel } from "../../../../../common/everything/workflow/runtimemodels/IWorkflow";
 import { IStoreModelForFlow } from "../../../../../common/everything/store/designtimemodels/IStoreModel";
+import { IWorkflowDesignModel } from "../../../../../common/everything/workflow/designtimemodels/IWorkflowDesignModel";
 import { ModelValidatorResult } from "../../../common/ModelValidator";
 export interface IExportTypeMap {
     both: IFlowEditorModel;
-    design: IFlowDesignModel;
+    design: IFlowDesignModel | IWorkflowDesignModel;
     runtime: IFlowModel | IWorkflowModel;
 }
 export interface IStepRequireInfo {

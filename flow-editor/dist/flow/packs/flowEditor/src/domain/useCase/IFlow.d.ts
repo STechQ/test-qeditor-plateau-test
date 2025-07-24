@@ -7,7 +7,7 @@ export interface IItemInfo {
 }
 export interface IFlow {
     addStep(stepName: string, point: IPoint, version: string): void;
-    stepAdded(stepID: string, stepName: string, stepOptions: IStepOptions, props: IStepInstance["propValues"]): void;
+    stepAdded(stepID: string, stepName: string, stepOptions: IStepOptions, props: IStepInstance["propValues"], swimlane: string, oldCamundaFields?: IStepInstance["oldCamundaFields"]): void;
     stepDeleted(stepIDs: Array<string>): Array<string>;
     connectionAdded(connID: string, from: {
         step: string;

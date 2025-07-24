@@ -5,7 +5,7 @@ interface IButtonProps {
     className?: string;
     color?: "primary" | "secondary";
     disabled?: boolean;
-    onClick: () => void;
+    onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
 export declare const Button: FC<IButtonProps>;
 export {};
