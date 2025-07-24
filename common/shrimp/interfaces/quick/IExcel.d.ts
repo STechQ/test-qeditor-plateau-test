@@ -26,6 +26,7 @@ export interface IExcelHeader {
 export interface IExcelCellOptions {
     type: ExcelCellType;
     numberFormat?: string;
+    style?: any;
 }
 export interface IExcelToJsonOptions {
     /** Output format */
@@ -38,8 +39,6 @@ export interface IExcelToJsonOptions {
     defaultValue?: any;
     /** if true, return raw data; if false, return formatted text */
     raw?: boolean;
-    /** if true, return raw numbers; if false, return formatted numbers */
-    rawNumbers?: boolean;
     /** Use specified date format */
     dateFormat?: string | number;
 }

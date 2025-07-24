@@ -9,6 +9,7 @@ export declare class SettingModelsContext implements ISettingModelsContext, ICon
     contextName: string;
     PipelineChangeHook: Hook<() => void>;
     AlertChangeHook: Hook<() => void>;
+    ContainerConfigurationChangeHook: Hook<() => void>;
     private context;
     private pipelineMethods?;
     private pipelineQjson?;

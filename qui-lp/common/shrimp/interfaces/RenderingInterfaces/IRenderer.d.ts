@@ -86,6 +86,7 @@ export interface IRenderer {
 export interface ISettingModelsContext extends IContextItem {
     PipelineChangeHook: Hook<() => void>;
     AlertChangeHook: Hook<() => void>;
+    ContainerConfigurationChangeHook: Hook<() => void>;
     SetPipelineQjson(qjson: IQJSon): Promise<void>;
     GetPipelineQjson(): IQJSon | undefined;
     TriggerPipeline(methodName: string, methodArgs: Record<string, any>): void;
