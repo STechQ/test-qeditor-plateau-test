@@ -1,12 +1,7 @@
 import { IAddActivityProp, ICounterPropType, StepFlowModelPropType } from "../../../../../common/everything/workflow/runtimemodels/IWorkflow";
 import { IWorkflowContext } from "../../../../../common/everything/workflow/runtimeObjects/IWorkflowContext";
-import { IWorkflowIncomingRequest } from "../../../../../common/everything/workflow/runtimeObjects/IWorkflowIncomingRequest";
-import { IMongoDBTransactionQueue } from "../../../../../common/runtime/infrastructure/mongo/IDataStoreManager";
-import { MongoDBManager } from "../../../../../common/runtime/infrastructure/mongo/mongoDBManager";
 import { IRestServiceCallPropType } from "../../../flowComponents/runtime/restServiceCall";
-import { DataInstance } from "../../../../../common/everything/workflow/runtimeObjects/DataInstance";
-import { IContext } from "../../../../../common/everything/workflow/runtimeObjects/IContext";
-export interface IPlatformWFFAdaptor {
+export interface IPlatformWorkflowAdaptor {
     flowExecutor: (prop: StepFlowModelPropType) => Promise<any>;
     restServiceExecutor: (prop: IRestServiceCallPropType) => Promise<any>;
     soapServiceExecutor: (prop: StepFlowModelPropType) => Promise<any>;
@@ -18,29 +13,15 @@ export interface IPlatformWFFAdaptor {
         };
     };
     context: () => IWorkflowContext | undefined;
-    getIncomingRequest: () => IWorkflowIncomingRequest;
-    getObjectbyCache: <T>(key: String) => Promise<T | undefined>;
+    getIncomingRequest: () => {
+        headers: Record<string, string>;
+        body: {
+            additionalInfo: Record<string, any>;
+        };
+    };
     constantsWId: Record<string, any>;
     userId: string | undefined;
     addActivity: (prop: IAddActivityProp) => Promise<void>;
-    privateOps: {
-        getDb: () => Promise<{
-            trxQueue: IMongoDBTransactionQueue | undefined;
-            dsManager: MongoDBManager;
-        }>;
-    };
-    wfe: {
-        processContext: {
-            retrieveContext: (prop: string) => Promise<IContext>;
-            resumeProcess: (prop: IResumeProcessRequest) => Promise<boolean>;
-        };
-    };
-}
-export interface IResumeProcessRequest {
-    processInstanId: string;
-    taskId: string;
-    dataInstance: DataInstance;
-    customType?: string;
 }
 export interface IPlatformWorkflowServerResponse {
     status: number;

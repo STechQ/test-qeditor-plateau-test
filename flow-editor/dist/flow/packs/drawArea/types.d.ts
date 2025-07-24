@@ -1,4 +1,5 @@
 import { PropValue } from "@stechquick/flow-interfaces/runtime";
+import { IExpressionData } from "../../../common/everything/dataType/runtimemodels/IExpression";
 import { ISwitchCaseExp } from "../../../common/everything/flow/runtimeModels/ISwitch";
 import { IFlowState } from "../flowInterfaces/editor/IFlowEditorState";
 import { IInputInfo } from "../flowInterfaces/editor/IStepOptions";
@@ -11,8 +12,8 @@ export interface IFlowStepOptions {
     errors?: PropValue;
 }
 export interface IFlowStepProps {
-    label?: string;
-    name?: string;
+    label?: IExpressionData;
+    description?: string;
     swimlaneId?: string;
     errors?: Array<string>;
 }
@@ -40,6 +41,7 @@ export interface ISwimlaneExport {
     ID: string;
     name: string;
     type: 'string' | 'literal';
+    version: string;
 }
 export interface IFlowCopy {
     steps: Array<IFlowStepExport>;
@@ -52,7 +54,7 @@ export interface IFlowStepSwimlane {
 }
 export interface IFlowStepUpdate {
     stepId?: string;
-    label?: string;
+    label?: IExpressionData;
     description?: string;
     errors?: Array<string>;
 }
@@ -84,9 +86,9 @@ export interface IDrawArea {
     attach(element: HTMLElement): void;
     detach(): void;
     updateSwimlanes(steps: Array<IFlowStepSwimlane>, swimlanes: Array<ISwimlaneExport>): void;
-    updateSteps(steps: Array<IFlowStepUpdate>): void;
+    updateSteps(steps: Array<IFlowStepSwimlane>): void;
     addAllSwitchCases(switchCase: ISwitchCaseExp): void;
-    addFlowStep(stepName: string, clientPoint: IPoint, options: IFlowStepOptions, props?: IFlowStepProps, id?: string): string;
+    addFlowStep(stepName: string, clientPoint: IPoint, options: IFlowStepOptions, props?: IFlowStepProps): string;
     deleteFlowSteps(stepIDs: Array<string>): void;
     panBy(dx: number, dy: number): void;
     resetPanAndZoom(): void;
@@ -100,6 +102,5 @@ export interface IDrawArea {
     setState(state?: IFlowState): void;
     setReadonly(readonly: boolean): void;
     setStepOutputs(stepID: string, outputs: Array<string>): void;
-    setStepID(oldId: string, newId: string): void;
 }
 //# sourceMappingURL=types.d.ts.map

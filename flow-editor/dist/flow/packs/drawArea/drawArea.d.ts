@@ -11,7 +11,7 @@ export declare class DrawArea implements IDrawArea {
     updateSwimlanes(steps: Array<IFlowStepSwimlane>, swimlanes: Array<ISwimlaneExport>): void;
     updateSteps(steps: Array<IFlowStepUpdate>): void;
     addAllSwitchCases(switchCases: ISwitchCaseExp): void;
-    addFlowStep(stepName: string, clientPoint: IPoint, options: IFlowStepOptions, props: IFlowStepProps, id?: string): string;
+    addFlowStep(stepName: string, clientPoint: IPoint, options: IFlowStepOptions, props: IFlowStepProps): string;
     deleteFlowSteps(stepIDs: Array<string>): void;
     panBy(dx: number, dy: number): void;
     resetPanAndZoom(): void;
@@ -25,6 +25,5 @@ export declare class DrawArea implements IDrawArea {
     setState(state?: IFlowState): void;
     setReadonly(readonly: boolean): void;
     setStepOutputs(stepID: string, outputs: Array<string>): void;
-    setStepID(oldID: string, newID: string): void;
 }
 //# sourceMappingURL=drawArea.d.ts.map

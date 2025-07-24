@@ -6,7 +6,7 @@ interface DialogProps {
     onClose: () => void;
     children?: ReactNode;
     footer?: Array<JSX.Element>;
-    type?: "modal" | "dialog" | "miniDialog";
+    type?: "modal" | "dialog";
     position?: {
         top?: number;
         bottom?: number;

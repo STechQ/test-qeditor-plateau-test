@@ -8,7 +8,6 @@ interface IMappingProps {
     constantsOptions: Array<{
         name: string;
         value: string;
-        tooltip?: string;
     }>;
     readOnly?: boolean;
     onChangeInParamMapping: (inParamMapping: IStoreInParameterMapping[]) => void;

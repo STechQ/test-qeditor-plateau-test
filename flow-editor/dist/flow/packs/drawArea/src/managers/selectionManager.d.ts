@@ -22,6 +22,5 @@ export declare class SelectionManager {
     createInteractiveDropdownMenu(interactiveDropdownItems: Array<InteractiveDropdownItem>): void;
     private removeSelectionDelete;
     private triggerSelectionChange;
-    setStepID(oldID: string, newID: string): void;
 }
 //# sourceMappingURL=selectionManager.d.ts.map

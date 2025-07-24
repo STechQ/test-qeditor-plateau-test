@@ -1,4 +1,4 @@
-import { IExpressionDataFiltered } from "../../../../../../common/everything/dataType/runtimemodels/IExpression";
+import { IExpressionData } from "@stechquick/flow-interfaces/runtime";
 import { PropValue } from "../../../../flowInterfaces/runtime/IStepModel";
 import { DependencyContainer } from "../../domain/core/diContainer";
 import { IDrawArea } from "../../domain/infrastructure/IDrawArea";
@@ -13,9 +13,7 @@ export declare class StepPropImpl implements IStepProp {
     private readonly importExport;
     constructor(container: DependencyContainer, viewModel?: IViewModel, drawArea?: IDrawArea, history?: IHistory, importExport?: () => IImportExport);
     setStepProp(stepIDs: Array<string>, propName: string, propValue: PropValue, data?: Record<string, string>): Promise<string[] | undefined>;
-    setStepID(oldId: string, newId: string): void;
     setStepOutputs(stepID: string, outputs: Array<string>): void;
-    setSwimlaneName(swimlaneId: string, name: IExpressionDataFiltered<"string" | "literal">): void;
-    private setViewModelStepID;
+    setSwimlaneName(swimlaneId: string, name: IExpressionData): void;
 }
 //# sourceMappingURL=stepPropImpl.d.ts.map

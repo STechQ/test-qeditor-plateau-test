@@ -14,15 +14,11 @@ declare class PlateauUI implements IPlateauUI {
     show(args?: plateauUIPageOptions): void;
     hide(args?: plateauUIPageOptions): void;
     close(args?: plateauUIPageOptions): void;
-    destroy(args?: Record<string, any>): Promise<any> | undefined;
+    destroy(args?: Record<string, any>): void;
     trigger({ eventName, parameters }: {
         eventName: string;
         parameters: Record<string, any>;
     }): any;
-    triggerPipeline({ eventName, parameters }: {
-        eventName: string;
-        parameters: Record<string, any>;
-    }): Promise<any> | undefined;
     getGlobalStore(storeFieldName: string): any;
 }
 export interface IPlateauUI {

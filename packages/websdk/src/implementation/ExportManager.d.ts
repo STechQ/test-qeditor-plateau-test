@@ -1,4 +1,4 @@
-import { BookType } from 'xlsx';
+import { BookType } from 'xlsx-color';
 import { IExcel, IExcelList, IExcelSheet, IExcelJsonData, IExcelToJsonData } from '../../../../common/shrimp/interfaces/quick/IExcel';
 export declare class ExportManager {
     sheetList: Array<IExcelSheet>;

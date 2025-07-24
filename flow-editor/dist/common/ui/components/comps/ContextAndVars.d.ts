@@ -4,7 +4,6 @@ interface IContextAndVarsProps {
     dataTypes: Array<{
         ID: string;
         name: string;
-        tooltip?: string;
     }>;
     workflowDataInstances?: Array<{
         ID: string;

@@ -9,7 +9,6 @@ import { ISLA } from "../../../../../../common/everything/workflow/runtimemodels
 import { IExecuteFlowByMapping } from "../../../../../../common/everything/workflow/runtimemodels/IWorkflow";
 import { ISwitchCaseExp } from "../../../../../../common/everything/flow/runtimeModels/ISwitch";
 import { FlowExecutionType } from "@stechquick/flow-interfaces/runtime/IFlowModel";
-import { IExpressionDataFiltered } from "../../../../../../common/everything/dataType/runtimemodels/IExpression";
 export interface IConnectionFrom {
     step: string;
     output: string;
@@ -33,11 +32,10 @@ export interface IStepInstance {
         compiledCode: string;
         errors: Array<string>;
     };
-    oldCamundaFields?: IStepModel["oldCamundaFields"];
 }
 export interface ISwimlaneInstance {
     id: string;
-    name: IExpressionDataFiltered<"string" | "literal">;
+    name: IExpressionData;
 }
 export interface IRoleInstance {
     id: string;
