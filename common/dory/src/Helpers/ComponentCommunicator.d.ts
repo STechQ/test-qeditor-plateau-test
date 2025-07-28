@@ -25,7 +25,6 @@ export declare class ComponentCommunicator {
         directives?: Array<IDirectiveElement>;
         styles?: StyleValue;
     }): ICreatedComponent;
-    private setRenderingProps;
     private setDoryProps;
     private static compCreatePostActions;
     private static injectFields;
