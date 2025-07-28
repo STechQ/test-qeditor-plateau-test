@@ -1,5 +1,6 @@
 import { IComponent } from "../ComponentInterfaces/IComponent";
 import { IDictionary } from "../IDictionary";
+import { IHostResponseData } from "../IHostResponseData";
 import { IDomElement } from "../RenderingInterfaces/IDomElement";
 import { IRenderer } from "../RenderingInterfaces/IRenderer";
 import { INavigationManager } from "./INavigationManager";
@@ -79,6 +80,7 @@ export interface IContainerServices {
     getURL?: (url: string, mode: "ui" | "service") => string | undefined;
     getCompDomLocator?: (componentType: string) => (compInstance: IComponent, childIndex: number) => IDomElement | null;
     activeRendererCb?: () => IRenderer;
+    hostTriggerCb?: (functionName: string, params: Record<string, any>, pageNameArray: Array<string>) => Promise<IHostResponseData>;
     authenticatedCb?: () => boolean;
     resourceCb?: (resource: string) => any;
     callMessageBox?: (messageType: string, messages: string, title: string) => any;

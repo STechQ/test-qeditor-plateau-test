@@ -4,7 +4,6 @@ export declare class HostTriggererImp implements IHostTriggerer {
     servicesWrapper: IContainerServicesWrapper;
     contextName: string;
     constructor(servicesWrapper: IContainerServicesWrapper);
-    hostTrigger(functionName: string, params: Record<string, any>, pageNameArray: Array<string>): any;
-    containerTrigger(functionName: string, params: Record<string, any>, pageNameArray: Array<string>): any;
+    hostTrigger(functionName: string, params: Record<string, any>, pageNameArray: Array<string>): Promise<import("../../common/shrimp/interfaces/IHostResponseData").IHostResponseData> | undefined;
 }
 //# sourceMappingURL=HostTriggerer.d.ts.map

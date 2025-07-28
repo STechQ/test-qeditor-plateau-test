@@ -4,7 +4,6 @@ import { IVnode } from "../ComponentInterfaces/IVnode";
 import { IDictionary } from "../IDictionary";
 import { IDictionaryNullable } from "../IDictionaryNullable";
 import { IDomElement } from "../RenderingInterfaces/IDomElement";
-import { IDory } from "../RenderingInterfaces/IDory";
 import { IDoryJr } from "../RenderingInterfaces/IDoryJr";
 import { IHistoryItem } from "../RenderingInterfaces/IHistoryItem";
 import { CompGroupType } from "../quick/IWebSDK";
@@ -14,6 +13,7 @@ import { ICreatedComponent } from "./ICreatedComponent";
 import { IDirectiveCollection } from "./IDirectiveCollection";
 import { IEventCollection } from "./IEventCollection";
 import { StyleValue } from "./IStyle";
+import { IDory } from "../RenderingInterfaces/IDory";
 export declare type ScopedSlotCreatorFunc = (scopeObject?: IDictionary<any>) => Array<IComponentCollection>;
 export declare type CreatedFieldsHook = (created: ICreatedComponent) => void;
 export declare type styleChildOverride = {

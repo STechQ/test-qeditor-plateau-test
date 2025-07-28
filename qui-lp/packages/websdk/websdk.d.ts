@@ -65,7 +65,7 @@ declare class WebsdkContainer {
     }): Promise<void>;
     private handleIAMSettings;
     private setSDKConfig;
-    private setSettingModels;
+    private setSettingsQJsons;
     private LoadObject;
     private LoadJS;
     private LoadQjson;
