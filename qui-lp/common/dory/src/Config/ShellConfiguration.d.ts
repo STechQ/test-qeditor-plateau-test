@@ -5,7 +5,7 @@ import { IComponent, IComponentClassEngine } from "../../../shrimp/interfaces/Co
 import { IComponentCollection } from "../../../shrimp/interfaces/ComponentInterfaces/IComponentCollection";
 import { IComponentInstanceTracker } from "../../../shrimp/interfaces/ComponentInterfaces/IComponentInstanceTracker";
 import { IDictionary } from "../../../shrimp/interfaces/IDictionary";
-import { IHostResponseData } from "../../../shrimp/interfaces/IHostResponseData";
+import { IContainerServicesResponseReal, IHostResponseData } from "../../../shrimp/interfaces/IHostResponseData";
 import { IDomElement } from "../../../shrimp/interfaces/RenderingInterfaces/IDomElement";
 import { INetwork } from "../../../shrimp/interfaces/quick/IContainerServices";
 import { ICookieAccess } from "../../../shrimp/interfaces/quick/ICookieAccess";
@@ -95,6 +95,8 @@ export declare class ShellConfiguration implements IShellConfiguration {
     }) => void;
     createComponentQValue?: (compCOllection: IComponentCollection) => void;
     hostTrigger?: (functionName: string, params: Record<string, any>, pageNameArray: Array<string>) => Promise<IHostResponseData>;
+    containerTrigger?: (functionName: string, params: Record<string, any>, pageNameArray: Array<string>) => Promise<IContainerServicesResponseReal>;
+    container?: (functionName: string, params: Record<string, any>) => Promise<IHostResponseData>;
     setDarkTheme?: (compCollection: IComponentCollection, isDark: boolean) => void;
     clearPageClose?: () => void;
     setPageClose?: () => void;

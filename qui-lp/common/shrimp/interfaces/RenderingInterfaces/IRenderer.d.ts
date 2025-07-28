@@ -1,5 +1,5 @@
 import { ITheme } from "@stechquick/algae/lib/quick/ITheme";
-import { IContextItem } from "../../context";
+import { ContextManager, IContextItem } from "../../context";
 import { Hook } from "../../helpers/hook";
 import { IComponentCollection } from "../ComponentInterfaces/IComponentCollection";
 import { ILRID } from "../ComponentInterfaces/ILocalResource";
@@ -14,6 +14,7 @@ import { IDoryJr } from "./IDoryJr";
 import { IHistoryItem } from "./IHistoryItem";
 import { IPageCompletedCb, IPageRenderStartedCb } from "./ILifeCycleCb";
 import { ILogParams } from "../../helpers/logger";
+import { IContainerModel } from "@stechquick/algae/lib/quick/IContainerModel";
 export interface IRendererChild {
     Render(options: {
         qjson: IQJSon;
@@ -50,7 +51,7 @@ export interface IRenderer {
     PageRenderStartedHook: Hook<IPageRenderStartedCb>;
     readonly BeforeRenderStartHook: Hook<() => void>;
     DisplayHook: Hook<DisplayHookCb>;
-    settingsQJsons: ISettingsQJsonContext;
+    settingModels: ISettingModelsContext;
     Render(renderParams: IRendererRenderParams): Promise<void>;
     Back(): void;
     Forward(): void;
@@ -72,8 +73,8 @@ export interface IRenderer {
     SetEditMode(state: boolean): void;
     SetLogParams(logParams: ILogParams): void;
     GetLogParams(): ILogParams | undefined;
-    Hibernate(passHibernate?: boolean): void;
-    resurrect(): void;
+    Hibernate(passHibernate?: boolean, historyItem?: boolean): void;
+    resurrect(historyItem?: boolean): void;
     SetConfigValues(configValues?: IConfig[]): void;
     SetThemeName(theme: {
         isLight: boolean;
@@ -82,9 +83,10 @@ export interface IRenderer {
     SetThemes(themes: Array<ITheme>): void;
     SetThemeMode(isLight: boolean): void;
 }
-export interface ISettingsQJsonContext extends IContextItem {
+export interface ISettingModelsContext extends IContextItem {
     PipelineChangeHook: Hook<() => void>;
     AlertChangeHook: Hook<() => void>;
+    ContainerConfigurationChangeHook: Hook<() => void>;
     SetPipelineQjson(qjson: IQJSon): Promise<void>;
     GetPipelineQjson(): IQJSon | undefined;
     TriggerPipeline(methodName: string, methodArgs: Record<string, any>): void;
@@ -94,9 +96,45 @@ export interface ISettingsQJsonContext extends IContextItem {
     GetLoadingQjson(): IQJSon | undefined;
     SetLoadingQjson(qjson: IQJSon): void;
     SetGlobalLocalizationQjson(qJson: IQJSon): void;
+    GetHostTriggerModel(): IContainerModel | undefined;
+    SetHostTriggerModel(model: IContainerModel | undefined): void;
 }
 export interface IDoryRenderer extends IRenderer {
     readonly DoryInst: IDory;
     getContextItem<contextItemType extends IContextItem>(contextItemName: string): contextItemType | undefined;
 }
+export interface IRenderingProps {
+    shellAutoLridActivated?: boolean;
+    contextLridHelper: any;
+    isEditMode: boolean;
+    context: () => ContextManager;
+    events: () => Object;
+    props: () => {};
+    compCollCb: () => IComponentCollection;
+    getEditor: any;
+}
+export interface ICreatedDynamicComp {
+    newComponent: IComponentCollection;
+    parentCompCollection: IComponentCollection | undefined;
+}
+export interface IRendererProps {
+    _renderingProps: IRenderingProps;
+    [key: string]: any;
+}
+export declare type IDynamicChildrenCreator = {
+    parentCompId: string;
+    templateChildName: string;
+    newChildName?: string;
+    historyItem: IHistoryItem;
+    context: ContextManager;
+};
+export declare type IDynamicCompCreator = {
+    templateCompQID: string;
+    newCompID?: string;
+    dataSource?: any;
+    context: ContextManager;
+    historyItem: IHistoryItem;
+    placeQID?: string;
+    reverseLook?: boolean;
+};
 //# sourceMappingURL=IRenderer.d.ts.map

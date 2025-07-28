@@ -4,7 +4,7 @@ import { Hook } from "../../../shrimp/helpers/hook";
 import { ILRID } from "../../../shrimp/interfaces/ComponentInterfaces/ILocalResource";
 import { DisplayHookCb, IDory, PartialDisplayHookCb } from "../../../shrimp/interfaces/RenderingInterfaces/IDory";
 import { IPageCompletedCb, IPageRenderStartedCb } from "../../../shrimp/interfaces/RenderingInterfaces/ILifeCycleCb";
-import { IDoryRenderer, IRenderer, IRendererRenderParams, ISettingsQJsonContext } from "../../../shrimp/interfaces/RenderingInterfaces/IRenderer";
+import { IDoryRenderer, IRenderer, IRendererRenderParams, ISettingModelsContext } from "../../../shrimp/interfaces/RenderingInterfaces/IRenderer";
 import { IRendererOperatorCollection } from "../../../shrimp/interfaces/RenderingInterfaces/Operators/IRendererOperatorCollection";
 import { IConfig } from "../../../shrimp/interfaces/quick/IConfig";
 import { INavigationDemand } from "../../../shrimp/interfaces/quick/INavigationDemand";
@@ -15,7 +15,7 @@ import { ILogParams } from "../../../shrimp/helpers/logger";
 export declare class Renderer implements IRenderer {
     protected context: ContextManager;
     protected Dory: IDory;
-    settingsQJsons: ISettingsQJsonContext;
+    settingModels: ISettingModelsContext;
     readonly BeforeRenderStartHook: Hook<() => void>;
     get PageCompletedHook(): Hook<IPageCompletedCb>;
     get PageRenderStartedHook(): Hook<IPageRenderStartedCb>;
@@ -41,7 +41,7 @@ export declare class Renderer implements IRenderer {
     Back(): void;
     Forward(): void;
     Clear(): void;
-    Hibernate(passHibernate?: boolean): void;
+    Hibernate(passHibernate?: boolean, historyItem?: boolean): void;
     resurrect(): void;
     CheckComponent({ compName }: {
         compName: string;

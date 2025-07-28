@@ -1,11 +1,8 @@
 import { ContextManager } from "../../../shrimp/context";
 import { ElementLocation } from "../../../shrimp/interfaces/ComponentInterfaces/ElementLocation";
 import { IComponentCollection } from "../../../shrimp/interfaces/ComponentInterfaces/IComponentCollection";
+import { ICreatedDynamicComp, IDynamicChildrenCreator, IDynamicCompCreator } from "../../../shrimp/interfaces/RenderingInterfaces/IRenderer";
 import { HistoryItem } from "../Model/History/HistoryItem";
-interface ICreatedDynamicComp {
-    newComponent: IComponentCollection;
-    parentComp: IComponentCollection | undefined;
-}
 export declare class DynamicCompManager {
     static _itemCounter: number;
     static get itemCounter(): number;
@@ -15,25 +12,8 @@ export declare class DynamicCompManager {
      * @param historyItem Current history item of the rendering
      * @returns Created component collection
      */
-    static createDynamicComp({ templateCompQID, newCompQID, dataSource, context, historyItem, placeQID, reverseLook }: {
-        templateCompQID: string;
-        newCompQID?: string;
-        dataSource?: any;
-        context: ContextManager;
-        historyItem: HistoryItem;
-        placeQID?: string;
-        reverseLook?: boolean;
-    }): {
-        newComponent: IComponentCollection;
-        parentComp: IComponentCollection | undefined;
-    } | undefined;
-    static createDynamicChildren({ parentCompId, templateChildName, newChildName, historyItem, context }: {
-        parentCompId: string;
-        templateChildName: string;
-        newChildName?: string;
-        historyItem: HistoryItem;
-        context: ContextManager;
-    }): ICreatedDynamicComp[] | undefined;
+    static createDynamicComp(params: IDynamicCompCreator): ICreatedDynamicComp | undefined;
+    static createDynamicChildren(params: IDynamicChildrenCreator): ICreatedDynamicComp[] | undefined;
     static appendDynamicCreatedComp({ newComponents, parentComp, context, place, historyItem, childName }: {
         newComponents: Array<IComponentCollection>;
         parentComp?: IComponentCollection;
@@ -61,5 +41,4 @@ export declare class DynamicCompManager {
     private static renderedParentComp;
     private static deletePropRender;
 }
-export {};
 //# sourceMappingURL=DynamicCompManager.d.ts.map
