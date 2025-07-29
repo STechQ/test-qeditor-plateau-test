@@ -13,6 +13,7 @@ interface ISelectProps {
 export interface IOption {
     name: string;
     value: string | number;
+    tooltip?: string;
 }
 export declare const Select: FC<ISelectProps>;
 export {};

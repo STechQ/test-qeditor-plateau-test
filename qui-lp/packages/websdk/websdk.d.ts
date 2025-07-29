@@ -14,11 +14,15 @@ declare class PlateauUI implements IPlateauUI {
     show(args?: plateauUIPageOptions): void;
     hide(args?: plateauUIPageOptions): void;
     close(args?: plateauUIPageOptions): void;
-    destroy(args?: Record<string, any>): void;
+    destroy(args?: Record<string, any>): Promise<any> | undefined;
     trigger({ eventName, parameters }: {
         eventName: string;
         parameters: Record<string, any>;
     }): any;
+    triggerPipeline({ eventName, parameters }: {
+        eventName: string;
+        parameters: Record<string, any>;
+    }): Promise<any> | undefined;
     getGlobalStore(storeFieldName: string): any;
 }
 export interface IPlateauUI {
@@ -65,7 +69,7 @@ declare class WebsdkContainer {
     }): Promise<void>;
     private handleIAMSettings;
     private setSDKConfig;
-    private setSettingsQJsons;
+    private setSettingModels;
     private LoadObject;
     private LoadJS;
     private LoadQjson;

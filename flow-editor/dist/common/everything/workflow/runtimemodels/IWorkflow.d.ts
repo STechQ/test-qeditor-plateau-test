@@ -6,7 +6,9 @@ import { IExpressionData } from "../../dataType/runtimemodels/IExpression";
 import { IFlowModelBase } from "@stechquick/flow-interfaces/runtime/IFlowModel";
 import { ISLA } from "./ISLA";
 import { IAction } from "../runtimeObjects/IAction";
+import { OmitTyped } from "../../../helpers/typeHelper";
 export type WorkflowStepName = "start" | "humantask" | "subFlow" | "flow" | "switch" | "end";
+declare const userTaskActivityFieldName = "userTaskActivity";
 export declare const NamedModels: {
     readonly getUser: {
         readonly name: "getUser";
@@ -34,12 +36,15 @@ export declare const RequiredModels: {
 export declare const StatusTypes_EN: Record<StatusType, string>;
 export declare const StatusTypes_TR: Record<StatusType, string>;
 export type StatusType = "" | "Pending-InProgress" | "Pending-Approval" | "Resolved-Completed" | "New" | "Returned" | "Returned-Originator" | "Returned-Recipient" | "Resolved-Cancelled";
-export type IWorkflowModelNamedModels = Record<keyof typeof NamedModels, string | undefined>;
+type NamedModelTypeChecker<K extends keyof typeof NamedModels = keyof typeof NamedModels> = {
+    [P in K]: P extends typeof userTaskActivityFieldName ? string | undefined : string;
+};
+export type IWorkflowModelNamedModels = NamedModelTypeChecker;
 export interface IWorkflowModel extends IFlowModelBase {
     type: "workflow";
     label: IExpressionData;
     description: string;
-    namedModels?: IWorkflowModelNamedModels;
+    namedModels: IWorkflowModelNamedModels;
     name: string;
     _name: string;
     desc: string;
@@ -60,28 +65,46 @@ export interface IWFStepTo extends IStepTo {
 export interface IWFStepFrom extends IStepFrom {
 }
 export interface IWFStepModel extends IStepModel {
-    P?: IWFPropObject;
-    S?: string;
 }
-export type IWFPropObject = IPropObject & {
-    stepId: string;
-    name?: string;
-    version?: string;
-    swimlane: string;
-    props: IWFStepInlineFlowModelProps | IWFStepProps | ISwitchProps;
+export type IExecuteFlowByMapping = {
+    type: "referenced";
+    id: string;
+    mapping?: IStoreMapping;
 };
+export type IForm = ObjectWithRoles & {
+    id: string;
+    readonly?: boolean;
+};
+export interface ObjectWithRoles {
+    roles: Array<string>;
+}
+export interface ICounterPropType extends IPropObject {
+    reset: "never" | "daily" | "monthly" | "yearly";
+    key: IExpressionData;
+    assignTo: ISetExpressionData;
+}
 export type StepFlowModelPropType = IWFStepInlineFlowModelProps | IExecuteFlowByMapping;
 export type IWFStepInlineFlowModelProps = {
     type: 'inline';
     inline: IFlowModel;
     mapping?: IStoreMapping;
 };
-export type IExecuteFlowByMapping = {
-    type: "referenced";
-    id: string;
-    mapping?: IStoreMapping;
+export interface ILegacyWorkflowModelForCamunda extends OmitTyped<IWorkflowModel, "steps"> {
+    steps: Record<string, ILegacyWFStepModelForCamunda>;
+}
+export interface ILegacyWFStepModelForCamunda extends OmitTyped<IStepModel, "P"> {
+    P?: ILegacyWFPropObjectForCamunda;
+    S?: string;
+}
+export type ILegacyWFPropObjectForCamunda = IPropObject & {
+    label: IExpressionData;
+    stepId: string;
+    name?: string;
+    version?: string;
+    swimlane: string;
+    props: IWFStepInlineFlowModelProps | ILegacyWFStepPropsForCamunda | ISwitchProps;
 };
-export type IWFStepProps = {
+export interface ILegacyWFStepPropsForCamunda {
     type: "humanStartEnd";
     label?: IExpressionData;
     taskName?: IExpressionData;
@@ -93,23 +116,8 @@ export type IWFStepProps = {
     actions: Array<IAction>;
     priority?: number;
     sla?: ISLA;
-};
-export type IForm = ObjectWithRoles & {
-    id: string;
-    readonly?: boolean;
-};
-export interface ICounterPropType {
-    label: IExpressionData;
-    description: string;
-    reset: "never" | "daily" | "monthly" | "yearly";
-    key: IExpressionData;
-    assignTo: ISetExpressionData;
 }
-export interface ObjectWithRoles {
-    roles: Array<string>;
-}
-export interface IAddActivityPropType {
-    label: IExpressionData;
+export interface IAddActivityPropType extends IPropObject {
     description: string;
     descriptionCode: IExpressionData;
     descriptionActivity: IExpressionData;
@@ -118,4 +126,15 @@ export interface IAddActivityProp {
     descriptionCode: string;
     description: string;
 }
+export interface IWorkflowEnvironment {
+    constValueWithName: Record<string, any>;
+    constValueWithID: Record<string, any>;
+    constInfoWithID: Record<string, {
+        lastModelUpdate: number;
+        expireTime: number;
+    }>;
+    environment: string;
+    isLocal: boolean;
+}
+export {};
 //# sourceMappingURL=IWorkflow.d.ts.map

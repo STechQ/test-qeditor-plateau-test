@@ -6,5 +6,9 @@ export type NestedUnionKeyof<ObjectType> = ObjectType extends any ? {
 }[keyof ObjectType & (string | number)] : never;
 export type Unpromise<T extends Promise<any>> = T extends Promise<infer U> ? U : never;
 export type UnpromisedReturn<T extends (...args: any) => any> = Unpromise<ReturnType<T>>;
+export type UnionToIntersection<U> = (U extends any ? (k: U) => void : never) extends ((k: infer I) => void) ? I : never;
+export type AtLeastOne<T extends object> = {
+    [K in keyof T]-?: Required<Pick<T, K>> & Partial<Omit<T, K>>;
+}[keyof T];
 export {};
 //# sourceMappingURL=typeHelper.d.ts.map

@@ -8,6 +8,7 @@ export interface IStoreProps {
     dataTypes: Array<{
         ID: string;
         name: string;
+        tooltip?: string;
     }>;
     typeSelectOptions?: IOption[];
     workflowDataInstances?: Array<{

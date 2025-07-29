@@ -1,12 +1,9 @@
 import { FC } from "react";
-import { IExpressionData } from "../../../everything/dataType/runtimemodels/IExpression";
 interface IBoxLabelProps {
     collapsibleLabel?: string;
-    label: IExpressionData;
-    description: string;
+    label: string;
     disabled?: boolean;
-    onChangeLabel: (label: IExpressionData) => void;
-    onChangeDescription: (description: string) => void;
+    onChangeLabel: (label: string) => void;
 }
 export declare const BoxLabel: FC<IBoxLabelProps>;
 export {};

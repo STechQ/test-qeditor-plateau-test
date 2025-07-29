@@ -888,7 +888,13 @@ export interface IGlobals_Quick {
         } | undefined;
     }) => void;
     closeAlert?: () => void;
+    /**
+     * @deprecated host.trigger is depreciated please use "const <yourContainerData> = await quick.container.<functionName>();"
+     */
     host: {
+        /**
+         * @deprecated host.trigger is depreciated please use "const <yourContainerData> = await quick.container.<functionName>();"
+         */
         trigger: (functionName: string, params: Record<string, any>) => Promise<IHostResponseData> | undefined;
     };
     isEditMode: boolean;
@@ -1573,6 +1579,8 @@ export interface IGlobalsBase {
     webScripts: {};
     workflowStore?: IWorkflowStore;
     workflow?: IGlobals_Workflow; /** !!! DON'T CHANGE */
+    getConstant: (constantId: string) => Promise<string | undefined>;
+    container: {};
 }
 export interface IGlobals_Workflow {
     RunFunction: ({ flowId, input, dataInstance }: {

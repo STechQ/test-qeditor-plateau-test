@@ -1,7 +1,7 @@
 export declare const WorkflowModelTypeTag = "workflow";
 export type WorkflowModelType = typeof WorkflowModelTypeTag;
 export type DateTime = string;
-export type ActionAndCustomType = ActionType & "addNote" & "delete";
+export type ActionAndCustomType = Exclude<ActionType, "trigger"> | "addNote" | "finish" | "update" | "updateNote" | "deleteNote" | 'fileUpload' | 'fileDownload' | 'fileDelete' | 'statusChanged' | "threadRetried";
 export declare const ActionTypes_TR: Record<ActionAndCustomType, string>;
 export declare const ActionTypes_EN: Record<ActionAndCustomType, string>;
 export declare const ActionTypes: {
@@ -9,23 +9,22 @@ export declare const ActionTypes: {
     complete: string;
     cancel: string;
     return: string;
-    claim: string;
-    unclaim: string;
     assignToUser: string;
     assignToUnit: string;
     assignToSwimlane: string;
     save: string;
     function: string;
     trigger: string;
+    update: string;
 };
 export type ActionType = keyof typeof ActionTypes;
 export type CustomType = string;
-export declare const UnboundActions: Array<ActionType>;
+export declare const TaskCreated = "Task-Created";
 export declare const Created = "Created";
 export declare const Updated = "Updated";
 export declare const TaskCompleted = "Task-Completed";
 export declare const Finished = "Finished";
-export type NotificationEventTypes = typeof Created | typeof Updated | typeof TaskCompleted | typeof Finished;
+export type NotificationEventTypes = typeof Created | typeof Updated | typeof TaskCompleted | typeof Finished | typeof TaskCreated;
 export declare const initialPriorityForWorkflow = 10;
 export declare const initialPriorityForTask = 10;
 //# sourceMappingURL=types.d.ts.map

@@ -9,7 +9,6 @@ import { FlowEvents, IFlowStepOptions, IFlowStepProps } from "../../types";
 import { FlowConnection } from "./flowConnection";
 import { EventHelper } from "../helper/eventHelper";
 import { Path } from "two.js/src/path";
-import { IExpressionData } from "../../../../../common/everything/dataType/runtimemodels/IExpression";
 type GetPositionOptions = {
     type: "self" | "group" | "bounding";
 } | {
@@ -59,8 +58,8 @@ export declare class FlowStep extends FlowObjectBase {
     createRhombusContainer(x: number, y: number): Path;
     get Options(): IFlowStepOptions;
     get SwimlaneId(): string | undefined;
-    get Label(): IExpressionData | undefined;
-    get Description(): string | undefined;
+    get Label(): string | undefined;
+    get Description(): string;
     get Errors(): Array<string> | undefined;
     get ShapeInfo(): StepShapeInfo | undefined;
     setSwimlaneId(swimlaneId?: string): void;
@@ -88,11 +87,12 @@ export declare class FlowStep extends FlowObjectBase {
     private afterDraw;
     colorIO(outputName: string, conType: "input" | "output", color?: string): void;
     setOutputs(outputs: Array<string>): void;
-    setLabel(label: IExpressionData): void;
+    setLabel(label: string): void;
     setDescription(description: string): void;
     setErrors(errors: Array<string>): void;
     setContainerColor(bgColor: string, borderColor: string): void;
     truncateTextToFit(text: Text, content: string, maxWidth: number): void;
+    changeStepID(newId: string): void;
 }
 export {};
 //# sourceMappingURL=flowStep.d.ts.map
