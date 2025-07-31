@@ -545,7 +545,7 @@ export interface IGlobals_Quick {
      * });
      *
    */
-    createComponent: ({ templateCompQID, newCompQID, dataSource, place, placeQID, childName, }: {
+    createComponent: ({ templateCompQID, newCompQID, dataSource, place, placeQID, childName }: {
         templateCompQID: string;
         newCompQID: string;
         dataSource?: any;
@@ -1579,7 +1579,6 @@ export interface IGlobalsBase {
     webScripts: {};
     workflowStore?: IWorkflowStore;
     workflow?: IGlobals_Workflow; /** !!! DON'T CHANGE */
-    getConstant: (constantId: string) => Promise<string | undefined>;
     container: {};
 }
 export interface IGlobals_Workflow {

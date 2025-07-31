@@ -23,8 +23,7 @@ export declare class ObjectManager {
     private addOperator;
     updateSwimlanes(steps: Array<IFlowStepSwimlane>, swimlanes: Array<ISwimlaneExport>): void;
     updateSteps(steps: Array<IFlowStepUpdate>): void;
-    setStepID(oldID: string, newID: string): void;
-    addFlowStep(stepName: string, surfacePoint: IPoint, options: IFlowStepOptions, props?: IFlowStepProps, id?: string): FlowStep;
+    addFlowStep(stepName: string, surfacePoint: IPoint, options: IFlowStepOptions, props?: IFlowStepProps): FlowStep;
     private _addFlowStep;
     addFlowConnection(from: FlowConnectionFrom, to: FlowConnectionTo, isSwitchCase?: boolean): FlowConnection;
     private _addFlowConnection;

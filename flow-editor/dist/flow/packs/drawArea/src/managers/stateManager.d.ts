@@ -11,6 +11,5 @@ export declare class StateManager {
     setState(state?: IFlowState): void;
     setReadonly(readonly: boolean): void;
     assertEditable(): void;
-    setStepID(oldID: string, newID: string): void;
 }
 //# sourceMappingURL=stateManager.d.ts.map

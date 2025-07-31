@@ -1,8 +1,9 @@
 import { IExpressionData } from "../../dataType/runtimemodels/IExpression";
 export type ISwitchProps = {
-    label: string;
+    label: IExpressionData;
     type: 'switch';
     name: string;
+    description: string;
     cases: Record<string, ISwitchCaseExp | IDefaultCase>;
 };
 export type ICaseInfo = {

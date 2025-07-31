@@ -8,6 +8,5 @@ export interface IStepDesignModel {
     props: IStepModel["P"];
     swimlaneId?: string;
     compiledCode?: string;
-    oldCamundaFields?: IStepModel["oldCamundaFields"];
 }
 //# sourceMappingURL=IStepDesignModel.d.ts.map

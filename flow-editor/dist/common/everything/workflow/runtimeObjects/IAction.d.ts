@@ -11,6 +11,7 @@ export type IActionData = {
 };
 export type IActionProp = {
     uniqueKeys?: Array<string>;
+    userBound?: boolean;
     validation?: IExpressionData;
     function?: StepFlowModelPropType;
 };

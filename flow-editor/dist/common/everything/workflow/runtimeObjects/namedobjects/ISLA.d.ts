@@ -1,5 +1,6 @@
 import { DateTime } from "../../runtimemodels/types";
-export interface ISLA {
+import { INamedObjectBase } from "./INamedObjectBase";
+export interface ISLA extends INamedObjectBase {
     slaDueGoal?: DateTime;
     slaDueDeadline?: DateTime;
     slaDueCritical?: DateTime;

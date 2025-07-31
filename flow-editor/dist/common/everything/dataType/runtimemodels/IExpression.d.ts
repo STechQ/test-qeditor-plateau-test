@@ -7,11 +7,6 @@ export type ISetExpressionData = IExpressionData & {
 export type IExpressionData = {
     type: ExpressionDataTypes;
     value: string;
-    description?: string;
-};
-export type IExpressionDataFiltered<TFilter extends IExpressionData["type"]> = {
-    type: IExpressionDataTypeSelection<TFilter>;
-    value: IExpressionData["value"];
 };
 type ExpressionGetterReturnType = string | number | boolean | RuntimeMessage | undefined;
 export type ExpressionGetter = (expression: IExpressionData, msg: RuntimeMessage, environment: IEnvironment) => Array<ExpressionGetterReturnType> | ExpressionGetterReturnType;

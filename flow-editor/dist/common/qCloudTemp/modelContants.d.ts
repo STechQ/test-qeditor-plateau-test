@@ -1,24 +1,15 @@
 import { ModelType } from "../everything/studio/ui/IStudioUIModelBase";
 import { ModelAdditionals, ModuleObjectType } from "./quickCloud";
-interface IEditorConst {
-    modelKeys: IModelKeys;
-}
-type IModelKeys = ({
-    single: string;
-} | {
-    design: string;
-    runtime: string;
-}) & {
-    view?: string;
-};
 type ValueOf<Type> = Type extends any ? Type[keyof Type] : never;
 type FieldValueOf<Type extends typeof typeSafety, Field extends keyof Type[keyof Type]> = Type[keyof Type][Field];
 export type EditorModelTypes = ValueOf<FieldValueOf<typeof EditorConsts, "modelKeys">>;
-declare let typeSafety: Record<string, IEditorConst>;
+declare let typeSafety: Record<string, {
+    modelKeys: Record<string, string>;
+}>;
 export declare const EditorConsts: {
     readonly quick: {
         readonly modelKeys: {
-            readonly single: "qjson";
+            readonly self: "qjson";
         };
     };
     readonly flow: {
@@ -31,11 +22,6 @@ export declare const EditorConsts: {
         readonly modelKeys: {
             readonly design: "workflow-design";
             readonly runtime: "workflow-runtime";
-        };
-    };
-    readonly certificate: {
-        readonly modelKeys: {
-            readonly single: "certificate";
         };
     };
     readonly dataTypeEditor: {
@@ -53,11 +39,6 @@ export declare const EditorConsts: {
             readonly single: "soapService";
         };
     };
-    readonly themeEditor: {
-        readonly modelKeys: {
-            readonly single: "theme";
-        };
-    };
     readonly enum: {
         readonly modelKeys: {
             readonly single: "enum";
@@ -68,29 +49,6 @@ export declare const EditorConsts: {
             readonly single: "constant";
         };
     };
-    readonly namedComponent: {
-        readonly modelKeys: {
-            readonly design: "pim";
-            readonly runtime: "files";
-            readonly view: "qjson";
-        };
-    };
-    readonly appAssetList: {
-        readonly modelKeys: {
-            readonly single: "yaml";
-            readonly view: "qjson";
-        };
-    };
-    readonly soapEditorV2: {
-        readonly modelKeys: {
-            readonly single: "soapServiceV2";
-        };
-    };
-    readonly jobSchedulerEditor: {
-        readonly modelKeys: {
-            readonly single: "jobScheduler";
-        };
-    };
 };
 interface ModelVisualInfo {
     icon: string;
@@ -98,7 +56,6 @@ interface ModelVisualInfo {
 }
 export declare class ModelContants {
     static getModelVisualInfo(modelType: ModelType | ModuleObjectType | "folder", modelAdditionals: ModelAdditionals | undefined): ModelVisualInfo;
-    static getModelBodyKeys(modelType: ModelType): string | string[] | undefined;
 }
 export {};
 //# sourceMappingURL=modelContants.d.ts.map

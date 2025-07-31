@@ -7,7 +7,6 @@ export interface IFlowError {
     readonly parameters?: Record<string, string>;
     readonly detail?: string;
     readonly stack?: string;
-    readonly statusCode?: number;
 }
 export declare class FlowError extends Error implements IFlowError {
     static FlowErrorName: string;
@@ -16,12 +15,9 @@ export declare class FlowError extends Error implements IFlowError {
     readonly code: IFlowError["code"];
     readonly summary?: IFlowError["summary"];
     readonly parameters?: IFlowError["parameters"];
-    get detail(): string | undefined;
-    private _detail?;
+    readonly detail?: IFlowError["detail"];
     readonly stack?: IFlowError["stack"];
-    readonly statusCode?: IFlowError["statusCode"];
     constructor(errorData: IFlowError);
     static isFlowError(error: Error | unknown): boolean;
-    appendDetail(detail: string): void;
 }
 //# sourceMappingURL=flowError.d.ts.map

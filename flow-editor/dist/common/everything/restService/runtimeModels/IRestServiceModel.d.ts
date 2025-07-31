@@ -1,8 +1,8 @@
 import { IExpressionData, ISetExpressionData } from "../../dataType/runtimemodels/IExpression";
-import { SoapServiceModelType } from "../../soapService/runtimeModels/types";
 import { Store } from "../../store/runtimemodels/IStoreModel";
 import { IModelBaseFields } from "../../workflow/runtimemodels/IModel";
 import { RestServiceModelType } from "./types";
+import { SoapServiceModelType } from "./types";
 export interface IRestServiceModel extends IModelBaseFields {
     type: RestServiceModelType | SoapServiceModelType;
     name: string;

@@ -31,7 +31,7 @@ export declare class SettingModelsContext implements ISettingModelsContext, ICon
     SetGlobalLocalizationQjson(qJson: IQJSon): void;
     SetHostTriggerModel(model: IContainerModel | undefined): void;
     GetHostTriggerModel(): IContainerModel | undefined;
-    TriggerPipeline(methodName: string, methodArgs: Record<string, any>): Promise<any> | undefined;
+    TriggerPipeline(methodName: string, methodArgs: Record<string, any>): Promise<any> | any;
     RerenderPipelineQjson(): Promise<void> | undefined;
 }
 //# sourceMappingURL=SettingModelsContext.d.ts.map
