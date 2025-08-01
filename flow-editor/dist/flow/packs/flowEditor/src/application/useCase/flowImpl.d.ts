@@ -15,7 +15,7 @@ export declare class FlowImpl implements IFlow {
     private readonly history;
     constructor(container: DependencyContainer, viewModel?: IViewModel, drawArea?: IDrawArea, selection?: ISelection, stepRepo?: IStepRepo, history?: IHistory);
     addStep(stepName: string, point: IPoint, version: string): void;
-    stepAdded(stepID: string, stepName: string, stepOptions: IStepOptions, props?: IStepInstance["propValues"], swimlaneId?: string): void;
+    stepAdded(stepID: string, stepName: string, stepOptions: IStepOptions, props: IStepInstance["propValues"], swimlaneId?: string, oldCamundaFields?: IStepInstance["oldCamundaFields"]): void;
     stepDeleted(stepIDs: Array<string>): string[];
     connectionAdded(connID: string, from: {
         step: string;

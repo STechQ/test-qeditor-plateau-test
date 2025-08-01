@@ -1,5 +1,4 @@
-import { INamedObjectBase } from "./INamedObjectBase";
-export interface IUnit extends INamedObjectBase {
+export interface IUnit {
     id: string;
     name: string;
 }

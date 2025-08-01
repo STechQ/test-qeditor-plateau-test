@@ -17,7 +17,7 @@ export type MouseDownReturn = {
     selecteds: Array<FlowObjectBase>;
 };
 export declare abstract class FlowObjectBase {
-    readonly ID: string;
+    ID: string;
     protected readonly objectManager: ObjectManager;
     protected readonly zuiManager: ZuiManager;
     protected readonly eventHelper: EventHelper<FlowEvents>;

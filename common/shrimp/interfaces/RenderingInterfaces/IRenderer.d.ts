@@ -1,5 +1,5 @@
 import { ITheme } from "@stechquick/algae/lib/quick/ITheme";
-import { ContextManager, IContextItem } from "../../context";
+import { IContextItem } from "../../context";
 import { Hook } from "../../helpers/hook";
 import { IComponentCollection } from "../ComponentInterfaces/IComponentCollection";
 import { ILRID } from "../ComponentInterfaces/ILocalResource";
@@ -73,8 +73,8 @@ export interface IRenderer {
     SetEditMode(state: boolean): void;
     SetLogParams(logParams: ILogParams): void;
     GetLogParams(): ILogParams | undefined;
-    Hibernate(passHibernate?: boolean, historyItem?: boolean): void;
-    resurrect(historyItem?: boolean): void;
+    Hibernate(passHibernate?: boolean): void;
+    resurrect(): void;
     SetConfigValues(configValues?: IConfig[]): void;
     SetThemeName(theme: {
         isLight: boolean;
@@ -89,7 +89,7 @@ export interface ISettingModelsContext extends IContextItem {
     ContainerConfigurationChangeHook: Hook<() => void>;
     SetPipelineQjson(qjson: IQJSon): Promise<void>;
     GetPipelineQjson(): IQJSon | undefined;
-    TriggerPipeline(methodName: string, methodArgs: Record<string, any>): void;
+    TriggerPipeline(methodName: string, methodArgs: Record<string, any>): Promise<any> | undefined;
     RerenderPipelineQjson(): Promise<void> | undefined;
     SetAlertQjson(qjson: IQJSon): void;
     GetAlertQjson(): IQJSon | undefined;
@@ -103,38 +103,4 @@ export interface IDoryRenderer extends IRenderer {
     readonly DoryInst: IDory;
     getContextItem<contextItemType extends IContextItem>(contextItemName: string): contextItemType | undefined;
 }
-export interface IRenderingProps {
-    shellAutoLridActivated?: boolean;
-    contextLridHelper: any;
-    isEditMode: boolean;
-    context: () => ContextManager;
-    events: () => Object;
-    props: () => {};
-    compCollCb: () => IComponentCollection;
-    getEditor: any;
-}
-export interface ICreatedDynamicComp {
-    newComponent: IComponentCollection;
-    parentCompCollection: IComponentCollection | undefined;
-}
-export interface IRendererProps {
-    _renderingProps: IRenderingProps;
-    [key: string]: any;
-}
-export declare type IDynamicChildrenCreator = {
-    parentCompId: string;
-    templateChildName: string;
-    newChildName?: string;
-    historyItem: IHistoryItem;
-    context: ContextManager;
-};
-export declare type IDynamicCompCreator = {
-    templateCompQID: string;
-    newCompID?: string;
-    dataSource?: any;
-    context: ContextManager;
-    historyItem: IHistoryItem;
-    placeQID?: string;
-    reverseLook?: boolean;
-};
 //# sourceMappingURL=IRenderer.d.ts.map

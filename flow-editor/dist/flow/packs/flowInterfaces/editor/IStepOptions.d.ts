@@ -6,6 +6,7 @@ import { IVariable } from "../../../../common/everything/dataType/runtimemodels/
 import { INestedStore, IStoreModelForFlow, Store } from "../../../../common/everything/store/designtimemodels/IStoreModel";
 import { IStudioUIModelBase } from "../../../../common/everything/studio/ui/IStudioUIModelBase";
 import { IWFModels } from "../../../../common/everything/workflow/runtimemodels/IModel";
+import { IExpressionDataFiltered } from "../../../../common/everything/dataType/runtimemodels/IExpression";
 export interface IExpressionInputOptions {
     width?: string;
 }
@@ -56,12 +57,13 @@ export interface ICompiledCode {
     compiledCode: string;
     errors: Array<string>;
 }
-export interface IEditSectionInput<PropType = IPropObject> {
+export interface IEditSectionInput<PropType extends IPropObject = IPropObject> {
     propValues: PropType;
     callbacks: {
         setProp: <TName extends keyof PropType & string>(name: TName, value: PropType[TName], data?: Record<string, string>) => Promise<Array<string> | void>;
+        setStepID: (newId: string) => void;
         setOutputs: (outputs: Array<string>) => void;
-        setSwimlaneName: (name: IExpressionData) => void;
+        setSwimlaneName: (name: IExpressionDataFiltered<"literal" | "string">) => void;
         scope: {
             getStore: <TStore extends Store = Store>() => TStore;
         };
@@ -84,6 +86,7 @@ export interface IEditSectionInput<PropType = IPropObject> {
         nestedStore: INestedStore;
         readOnly: boolean;
         models: Array<IStudioUIModelBase>;
+        stepID: string;
     };
     react: {
         prop: {
@@ -109,7 +112,7 @@ export interface IInputInfo {
     name: string;
     color?: string;
 }
-export interface IStepOptions<PropType = IPropObject> {
+export interface IStepOptions<PropType extends IPropObject = IPropObject> {
     name: string;
     panelLabel: string;
     version: string;
@@ -118,7 +121,6 @@ export interface IStepOptions<PropType = IPropObject> {
     autoStarts?: boolean;
     color?: string;
     icon?: string;
-    description?: string;
     editSection?: (options: IEditSectionInput<PropType>) => (ReactEditSection | HTMLElement);
     propDefinitons: () => IPropDefiniton<PropType>;
 }
