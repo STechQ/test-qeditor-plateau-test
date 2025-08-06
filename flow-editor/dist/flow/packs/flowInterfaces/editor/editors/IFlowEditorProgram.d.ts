@@ -55,5 +55,6 @@ export interface IFlowEditorProgram {
     undo(): Promise<boolean>;
     redo(): Promise<boolean>;
     validateAndFixModel(): Promise<ModelValidatorResult>;
+    deleteObjects(): void;
 }
 //# sourceMappingURL=IFlowEditorProgram.d.ts.map

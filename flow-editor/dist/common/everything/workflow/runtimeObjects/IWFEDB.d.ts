@@ -27,8 +27,8 @@ export interface IWFEDBProcessInst {
     version: IProcessInstance["processVersion"];
     clusterId: IProcessInstance["clusterId"];
     initiatorUser: IProcessInstance["initiatorUser"];
-    sla: IWFEDBSLA;
-    priority: IProcessInstance["priority"];
+    sla?: IWFEDBSLA;
+    priority?: IProcessInstance["priority"];
     lastUpdateUser: IProcessInstance["lastUpdateUser"];
     lastUpdateDescriptionCode?: IProcessInstance["lastUpdateDescriptionCode"];
     lastUpdateDescription?: IProcessInstance["lastUpdateDescription"];
@@ -59,7 +59,7 @@ export interface IWFEDBTask {
     userId?: ITask["userId"];
     userName?: ITask["userName"];
     swimlane?: ITask["swimlane"];
-    sla: IWFEDBSLA;
+    sla?: IWFEDBSLA;
     priority?: ITask["priority"];
 }
 export interface IWFEDBTaskHistory extends OmitTyped<OmitTyped<IWFEDBTask, "updatedAt">, "flowThreadId"> {

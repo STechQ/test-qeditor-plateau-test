@@ -17,7 +17,7 @@ export declare class ImportExportImpl implements IImportExport {
     private readonly history;
     private readonly selection;
     constructor(container: DependencyContainer, viewModel?: IViewModel, stepRepo?: IStepRepo, drawArea?: IDrawArea, flow?: IFlow, history?: () => IHistory, selection?: () => ISelection);
-    importModel(model: IFlowDesignModel, options?: IImportOptions, undoRedo?: boolean): Promise<void>;
+    importModel(model: IFlowDesignModel, options?: IImportOptions): Promise<void>;
     paste(copyModel: IFlowCopyModel): Promise<void>;
     private _import;
     exportModel<KType extends keyof IExportTypeMap>(type: KType): Promise<IExportTypeMap[KType]>;
@@ -30,6 +30,7 @@ export declare class ImportExportImpl implements IImportExport {
         compiledCode: string;
         errors: string[];
     }>;
+    deleteObjects(): void;
     private getCopyModel;
     private exportEditorModel;
     private exportDesignModel;

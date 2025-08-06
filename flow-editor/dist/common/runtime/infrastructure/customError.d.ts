@@ -17,18 +17,21 @@ export interface ICustomError {
 }
 export declare class CustomError extends Error implements ICustomError {
     static CustomErrorName: string;
+    static isCustomError(error: unknown): boolean;
     readonly statusCode: ICustomError["statusCode"];
     readonly type: ICustomError["type"];
     readonly category: ICustomError["category"];
     readonly code: ICustomError["code"];
     readonly summary?: ICustomError["summary"];
     readonly parameters?: ICustomError["parameters"];
-    readonly detail?: ICustomError["detail"];
+    get detail(): string | object | undefined;
+    private _detail?;
     readonly stack?: ICustomError["stack"];
     additionals?: Record<string, string>;
     constructor(errorData: ICustomError);
     toJSON(): string;
     getAdditionalSetter<T extends object>(): <TKey extends keyof T>(key: TKey, value: T[TKey]) => void;
+    appendDetail(detail: string): void;
 }
 export declare const ErrorCodes: {
     readonly mainCatch: "ERR_MAIN_CATCH";
@@ -172,5 +175,6 @@ export declare const ErrorCodes: {
     readonly js1001: "JS-1001";
     readonly js1002: "JS-1002";
     readonly js1003: "JS-1003";
+    readonly sla1000: "SLA1000";
 };
 //# sourceMappingURL=customError.d.ts.map

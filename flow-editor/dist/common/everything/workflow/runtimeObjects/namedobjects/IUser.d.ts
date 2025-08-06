@@ -7,7 +7,8 @@ export interface IUser {
     unit: IUnit;
     roles: Array<string>;
     email?: string;
-    swimlanes?: Array<Swimlane>;
+    swimlanes?: Swimlane;
+    isSystemUser?: boolean | false;
 }
 export type Swimlane = Array<string>;
 //# sourceMappingURL=IUser.d.ts.map

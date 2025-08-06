@@ -40,7 +40,10 @@ export interface IPlatformWFEAdaptor {
         gracefulEnd: () => void;
         createDataInstance: () => Promise<DataInstance>;
         generateBusinessKeyWFE: () => Promise<string>;
-        createSLA: (timeStamp: Date, sla: ISLA | undefined) => IWFEDBSLA;
+        createSLA: (slaId: string) => Promise<{
+            sla: IWFEDBSLA;
+            priority: ITask["priority"];
+        }>;
         resolveSwimlane: (swimlaneId: string | undefined) => Promise<string>;
         resolveUser: (userId: string) => Promise<IUser>;
     };
@@ -67,13 +70,13 @@ export interface IPlatformWFEAdaptor {
             ID: string;
             label: string | undefined;
         }): Promise<void>;
-        processCreated: (curStep: IWFEEventStep, processInstance: IProcessInstance, dataInstance: DataInstance) => Promise<void>;
+        processCreated: (curStep: IWFEEventStep, processInstance: IProcessInstance, dataInstance: DataInstance, dbProcess: IWFEDBProcessInst, sla?: ISLA) => Promise<void>;
         userTaskCreated: (task: IWFEDBTask, processInstance: IProcessInstance, dataInstance: DataInstance, lastAction: IActionData, statusChange: {
             oldStatus: IProcessInstance["status"];
-        } | undefined) => Promise<void>;
+        } | undefined, sla?: ISLA) => Promise<void>;
         preUserTaskComplete: (task: IWFEDBTask, taskAction: IAction, processInstance: IProcessInstance, dataInstance: DataInstance) => Promise<void>;
-        userTaskCompleted: (task: IWFEDBTaskHistory, taskAction: IAction, processInstance: IProcessInstance, dataInstance: DataInstance) => Promise<void>;
-        processEnded: (lastAction: IActionData, processInstance: IProcessInstance, dataInstance: DataInstance) => Promise<void>;
+        userTaskCompleted: (task: IWFEDBTaskHistory, taskAction: IAction, processInstance: IProcessInstance, dataInstance: DataInstance, sla?: ISLA) => Promise<void>;
+        processEnded: (lastAction: IActionData, processInstance: IProcessInstance, dataInstance: DataInstance, sla?: ISLA) => Promise<void>;
     };
 }
 //# sourceMappingURL=IPlatformWFEAdaptor.d.ts.map

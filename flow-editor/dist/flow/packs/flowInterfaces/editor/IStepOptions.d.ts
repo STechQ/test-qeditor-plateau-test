@@ -121,6 +121,7 @@ export interface IStepOptions<PropType extends IPropObject = IPropObject> {
     autoStarts?: boolean;
     color?: string;
     icon?: string;
+    deprecated?: boolean;
     editSection?: (options: IEditSectionInput<PropType>) => (ReactEditSection | HTMLElement);
     propDefinitons: () => IPropDefiniton<PropType>;
 }

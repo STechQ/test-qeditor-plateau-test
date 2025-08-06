@@ -4,6 +4,7 @@ interface IBoxLabelProps {
     label: string;
     disabled?: boolean;
     onChangeLabel: (label: string) => void;
+    validationControl?: (value: string) => string;
 }
 export declare const BoxLabel: FC<IBoxLabelProps>;
 export {};

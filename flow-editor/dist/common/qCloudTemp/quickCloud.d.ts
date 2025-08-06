@@ -23,7 +23,7 @@ export type CreateUIType = "createUI";
 export type UsageType = AppSettingsObjectType | AppAssetObjectType;
 export type ModuleType = "basic";
 export type AllCreateObjectTypes = ModelType | FolderObjectType | ModuleObjectType | CreateUIType;
-export type AppSettingsModelKeys = "settings" | "componentList" | "containerServices" | "pipeline" | "alert" | "loading" | "globalLocalization" | "localProxy" | "style" | "rootqjson" | "asset" | "appSettings" | "containerServIntelli" | "theme";
+export type AppSettingsModelKeys = "settings" | "componentList" | "containerServices" | "pipeline" | "alert" | "loading" | "globalLocalization" | "localProxy" | "style" | "rootqjson" | "asset" | "appSettings" | "containerServIntelli" | "theme" | "container";
 export type ExtensionType = "png" | "jpg" | "jpeg" | "svg" | "gif" | "json" | "woff" | "woff2" | "ttf" | "otf";
 export type ModuleShareType = 'reference' | 'version';
 export declare const UISettingsType: {
@@ -40,6 +40,7 @@ export declare const UISettingsType: {
     readonly assetList: "Asset List";
     readonly appSettings: "App Settings";
     readonly theme: "theme";
+    readonly container: "container";
 };
 export type UISettingsType = typeof UISettingsType[keyof typeof UISettingsType];
 export interface ICloudObject {

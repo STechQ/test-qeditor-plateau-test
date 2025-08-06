@@ -6,7 +6,7 @@ import { IStepModel } from "../../../../flowInterfaces/runtime/IStepModel";
 import { IExpressionData } from "@stechquick/flow-interfaces/runtime";
 import { INestedStore, Store } from "../../../../../../common/everything/store/designtimemodels/IStoreModel";
 import { ISLA } from "../../../../../../common/everything/workflow/runtimemodels/ISLA";
-import { IExecuteFlowByMapping } from "../../../../../../common/everything/workflow/runtimemodels/IWorkflow";
+import { IExecuteFlowByMapping, IOldCamundaFieldsForWFModel } from "../../../../../../common/everything/workflow/runtimemodels/IWorkflow";
 import { ISwitchCaseExp } from "../../../../../../common/everything/flow/runtimeModels/ISwitch";
 import { FlowExecutionType } from "@stechquick/flow-interfaces/runtime/IFlowModel";
 import { IExpressionDataFiltered } from "../../../../../../common/everything/dataType/runtimemodels/IExpression";
@@ -66,7 +66,7 @@ export interface IViewModel {
         case: ISwitchCaseExp;
     };
     schema: Store;
-    priority: number;
+    priority?: number;
     sla: ISLA;
     label?: IExpressionData;
     description?: string;
@@ -77,6 +77,7 @@ export interface IViewModel {
     resetHistory: () => IVMHistory;
     executeType: FlowExecutionType;
     selectedModelId: string;
+    oldCamundaFieldsForWFModel?: IOldCamundaFieldsForWFModel;
 }
 export declare const IViewModel: unique symbol;
 //# sourceMappingURL=IViewModel.d.ts.map

@@ -1,11 +1,13 @@
 import { FC } from "react";
 import { ISLA } from "../../../everything/workflow/runtimemodels/ISLA";
 interface ISLAProps {
-    priority?: number;
-    onChangePriority: (priority: number) => void;
     sla?: ISLA;
     readOnly?: boolean;
     onChangeSLA: (sla: ISLA) => void;
+    availableSlaModels: {
+        name: string;
+        value: string;
+    }[];
 }
 export declare const Sla: FC<ISLAProps>;
 export {};

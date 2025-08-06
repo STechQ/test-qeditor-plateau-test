@@ -10,9 +10,10 @@ import { IDirectiveElement } from "../../../../common/shrimp/interfaces/Componen
 import { IVnode } from "../../../../common/shrimp/interfaces/ComponentInterfaces/IVnode";
 import { IDictionary } from "../../../../common/shrimp/interfaces/IDictionary";
 export declare class ComponentManagerImpl implements IComponentManager {
+    private readonly websdkContext;
     contextName: string;
     parentInstance: any;
-    constructor(contextName: string, parentInstance: any);
+    constructor(contextName: string, parentInstance: any, websdkContext: ContextManager);
     componentHasProp(componentName: string, compInstance: IComponent | undefined, propName: string): boolean;
     private compPropModifier;
     createComponent({ componentName, props, events, asChildType, asChildName, slots, scopedSlots, compClass, text, attrs, componentCollection, directives }: {

@@ -17,5 +17,6 @@ export declare abstract class ExecutionContext<TStore extends IExecutionContextS
     createNewStore(scope: "initiation" | undefined): TStore;
     protected abstract createNewStoreForChildren(): TStore;
     abstract collectionOverride(collectionName: CollectionName): Promise<CollectionName>;
+    abstract getExecutionAdditionalLog(): string;
 }
 //# sourceMappingURL=executionContext.d.ts.map

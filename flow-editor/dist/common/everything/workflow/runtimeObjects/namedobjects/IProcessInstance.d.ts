@@ -22,7 +22,7 @@ export interface IProcessInstance {
     processStart: DateTime;
     processEnd: DateTime;
     sla: ISLA;
-    priority: number;
+    priority?: number;
     lastUpdate: DateTime;
     lastUpdateUser: IUser;
     lastUpdateDescriptionCode?: string;

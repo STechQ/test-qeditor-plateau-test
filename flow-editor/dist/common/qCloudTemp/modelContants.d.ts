@@ -21,6 +21,12 @@ export declare const EditorConsts: {
             readonly single: "qjson";
         };
     };
+    readonly container: {
+        readonly modelKeys: {
+            readonly design: "container-design";
+            readonly runtime: "container-runtime";
+        };
+    };
     readonly flow: {
         readonly modelKeys: {
             readonly design: "flow-design";
@@ -91,11 +97,21 @@ export declare const EditorConsts: {
             readonly single: "jobScheduler";
         };
     };
+    readonly slaEditor: {
+        readonly modelKeys: {
+            readonly single: "sla";
+        };
+    };
 };
-interface ModelVisualInfo {
+type ModelVisualInfo = {
+    type: "icon";
     icon: string;
-    color: string;
-}
+    color?: string;
+} | {
+    type: "svg";
+    src: string;
+    activeSrc: string;
+};
 export declare class ModelContants {
     static getModelVisualInfo(modelType: ModelType | ModuleObjectType | "folder", modelAdditionals: ModelAdditionals | undefined): ModelVisualInfo;
     static getModelBodyKeys(modelType: ModelType): string | string[] | undefined;

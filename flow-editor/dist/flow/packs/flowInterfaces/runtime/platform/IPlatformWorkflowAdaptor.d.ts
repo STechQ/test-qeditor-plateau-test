@@ -23,6 +23,7 @@ export interface IPlatformWFFAdaptor {
     constantsWId: Record<string, any>;
     userId: string | undefined;
     addActivity: (prop: IAddActivityProp) => Promise<void>;
+    getConstant: (constantId: string) => Promise<string | undefined>;
     privateOps: {
         getDb: () => Promise<{
             trxQueue: IMongoDBTransactionQueue | undefined;
@@ -32,7 +33,8 @@ export interface IPlatformWFFAdaptor {
     wfe: {
         processContext: {
             retrieveContext: (prop: string) => Promise<IContext>;
-            resumeProcess: (prop: IResumeProcessRequest) => Promise<boolean>;
+            commit: (prop: IResumeProcessRequest) => Promise<boolean>;
+            complete: (prop: IResumeProcessRequest) => Promise<boolean>;
         };
     };
 }
@@ -40,7 +42,6 @@ export interface IResumeProcessRequest {
     processInstanId: string;
     taskId: string;
     dataInstance: DataInstance;
-    customType?: string;
 }
 export interface IPlatformWorkflowServerResponse {
     status: number;

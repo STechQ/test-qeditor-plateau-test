@@ -4,7 +4,7 @@ import { IStoreModelForWorkflow } from "../../store/runtimemodels/IStoreModel";
 import { ISwitchProps } from "../../flow/runtimeModels/ISwitch";
 import { IExpressionData } from "../../dataType/runtimemodels/IExpression";
 import { IFlowModelBase } from "@stechquick/flow-interfaces/runtime/IFlowModel";
-import { ISLA } from "./ISLA";
+import { ILegacySLA, ISLA } from "./ISLA";
 import { IAction } from "../runtimeObjects/IAction";
 import { OmitTyped } from "../../../helpers/typeHelper";
 export type WorkflowStepName = "start" | "humantask" | "subFlow" | "flow" | "switch" | "end";
@@ -40,6 +40,10 @@ type NamedModelTypeChecker<K extends keyof typeof NamedModels = keyof typeof Nam
     [P in K]: P extends typeof userTaskActivityFieldName ? string | undefined : string;
 };
 export type IWorkflowModelNamedModels = NamedModelTypeChecker;
+export interface IOldCamundaFieldsForWFModel {
+    sla: ILegacySLA;
+    priority: number;
+}
 export interface IWorkflowModel extends IFlowModelBase {
     type: "workflow";
     label: IExpressionData;
@@ -49,7 +53,6 @@ export interface IWorkflowModel extends IFlowModelBase {
     _name: string;
     desc: string;
     swimlanes: Record<string, IExpressionData>;
-    priority: number;
     sla: ISLA;
     roles: Record<string, IExpressionData>;
     steps: Record<string, IWFStepModel>;
@@ -59,6 +62,7 @@ export interface IWorkflowModel extends IFlowModelBase {
     fileUploadFunction?: IExecuteFlowByMapping;
     fileDownloadFunction?: IExecuteFlowByMapping;
     fileDeleteFunction?: IExecuteFlowByMapping;
+    oldCamundaFieldsForWFModel?: IOldCamundaFieldsForWFModel;
 }
 export interface IWFStepTo extends IStepTo {
 }
@@ -89,8 +93,10 @@ export type IWFStepInlineFlowModelProps = {
     inline: IFlowModel;
     mapping?: IStoreMapping;
 };
-export interface ILegacyWorkflowModelForCamunda extends OmitTyped<IWorkflowModel, "steps"> {
+export interface ILegacyWorkflowModelForCamunda extends OmitTyped<IWorkflowModel, "steps" | "sla"> {
     steps: Record<string, ILegacyWFStepModelForCamunda>;
+    priority: number;
+    sla: ILegacySLA;
 }
 export interface ILegacyWFStepModelForCamunda extends OmitTyped<IStepModel, "P"> {
     P?: ILegacyWFPropObjectForCamunda;
@@ -115,7 +121,7 @@ export interface ILegacyWFStepPropsForCamunda {
     forms: Array<IForm>;
     actions: Array<IAction>;
     priority?: number;
-    sla?: ISLA;
+    sla?: ILegacySLA;
 }
 export interface IAddActivityPropType extends IPropObject {
     description: string;

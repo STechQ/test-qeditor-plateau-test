@@ -1,7 +1,7 @@
 import { Hook } from "@stechquick/algae/lib/helpers/hook";
 import { UpdateFilter, ClientSession } from "mongodb";
 import { AtLeastOne } from "../../../../common/helpers/typeHelper";
-export type CollectionName = "FM_Users" | "Notifies" | "FM_Models" | "Counters" | "DeploymentLogs" | "PermanentStore" | "ServiceCaches" | "BatchJobs" | "Locks" | "JobExecution" | "Holidays" | "JobExecutionHistory" | "WFE_ProcessInst" | "WFE_ProcessInstHistory" | "WFE_Task" | "WFE_TaskHistory" | "WFE_Activity" | "WFE_ActivityHistory" | "WFE_ThreadState" | "WFE_ThreadStateHistory" | "WFE_Notes" | "WFE_NotesHistory" | "WFE_Files" | "WFE_FilesHistory";
+export type CollectionName = "FM_Users" | "Notifies" | "FM_Models" | "Counters" | "DeploymentLogs" | "PermanentStore" | "ServiceCaches" | "BatchJobs" | "Locks" | "JobExecution" | "Holidays" | "JobExecutionHistory" | "WFE_SlaExecution" | "WFE_SlaExecutionHistory" | "WFE_ProcessInst" | "WFE_ProcessInstHistory" | "WFE_Task" | "WFE_TaskHistory" | "WFE_Activity" | "WFE_ActivityHistory" | "WFE_ThreadState" | "WFE_ThreadStateHistory" | "WFE_Notes" | "WFE_NotesHistory" | "WFE_Files" | "WFE_FilesHistory";
 export type IndexDefinition<T> = {
     name: string;
     keys: AtLeastOne<Record<keyof T, "asc" | "desc">>;
@@ -80,6 +80,19 @@ type GroupFieldType<T> = {
         $last?: any;
     } | string;
 };
+type LookupType = {
+    from: string;
+    localField?: string;
+    foreignField?: string;
+    let?: Record<string, any>;
+    pipeline?: any[];
+    as: string;
+};
+type UnwindType = string | {
+    path: string;
+    includeArrayIndex?: string;
+    preserveNullAndEmptyArrays?: boolean;
+};
 export type AggregateType<T> = {
     $match?: FilterTypeNullable<T> | FilterTypeOrAnd<T>;
     $sort?: ModifyType<T, 1 | -1> | {
@@ -88,6 +101,8 @@ export type AggregateType<T> = {
     $limit?: number;
     $addFields?: AddFieldType<T>;
     $group?: GroupFieldType<T>;
+    $lookup?: LookupType | LookupType[];
+    $unwind?: UnwindType | UnwindType[];
     $out?: string;
 };
 export type DeepKeys<T> = T extends object ? {
@@ -212,6 +227,7 @@ export interface IDataStoreManager {
     DeleteOne<T, TTrx extends IMongoDBTransactionQueue | void = IMongoDBTransactionQueue>(collectionName: CollectionName, filter: FilterTypeNullable<T> | FilterTypeOrAnd<T>, options?: {
         trxQueue?: TTrx;
     }): Promise<GetReturnType<TTrx, number>>;
+    startTransactionQueue(): any;
 }
 export {};
 //# sourceMappingURL=IDataStoreManager.d.ts.map

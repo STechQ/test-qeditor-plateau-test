@@ -43,5 +43,6 @@ export declare class Program implements IFlowEditorProgram {
     redo(): Promise<boolean>;
     setModels(models: IStudioUIModelBase[]): void;
     validateAndFixModel(): Promise<import("../../common/ModelValidator").ModelValidatorResult>;
+    deleteObjects(): void;
 }
 //# sourceMappingURL=program.d.ts.map

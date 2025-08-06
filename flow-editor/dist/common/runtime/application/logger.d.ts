@@ -126,6 +126,19 @@ export declare const LogCodes: {
     readonly js2002: "js-2002";
     readonly js2003: "js-2003";
     readonly js2004: "js-2004";
+    readonly js2005: "js-2005";
+    readonly sla2000: "sla-2000";
+    readonly sla2001: "sla-2001";
+    readonly sla2002: "sla-2002";
+    readonly sla2003: "sla-2003";
+    readonly sla2004: "sla-2004";
+    readonly sla2005: "sla-2005";
+    readonly sla2006: "sla-2006";
+    readonly sla2007: "sla-2007";
+    readonly sla2008: "sla-2008";
+    readonly sla2009: "sla-2009";
+    readonly sla2010: "sla-2010";
+    readonly sla2011: "sla-2011";
 };
 export declare const LogCodesSpecial: {
     readonly IP: "IP";
