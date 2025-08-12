@@ -6,6 +6,7 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     page: number;
     turn: number;
     showToolbar: boolean;
+    tiffLoading: boolean;
     zoomVal: number;
     rotateVal: number;
     loadedPages: number;
@@ -19,6 +20,7 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
 }, {
     isTiffBuffer(buffer: ArrayBuffer): boolean;
     loadTiff(dataType: "base64" | "arrayBuffer" | "url"): Promise<void>;
+    createTiff(UTIF: any, ifds: any, bufferData: any): void;
     createPdf(): void;
     downloadTiff(): void;
     base64ToAB(base64: string): ArrayBufferLike;
