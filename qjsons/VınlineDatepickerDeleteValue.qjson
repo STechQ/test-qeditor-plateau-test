@@ -1,24 +1,158 @@
 let pjson = {
 	"pJson": [
 		{
-			"T": "VInlineDatepicker",
+			"T": "Messaging",
 			"P": {
 				"ID": {
-					"H": "EdtrComp_1",
+					"H": "MessagingComp",
 					"T": "prop"
 				},
-				"label": {
-					"H": "'Pick a date'",
+				"triggerOnRestored": {
+					"H": "false",
 					"T": "prop"
 				}
 			},
 			"E": {},
 			"C": {},
 			"_Editor": {
-				"eID": "EdtrComp_1"
+				"eID": "EdtrComp_21"
 			},
 			"O": {
-				"compDomClasses": "",
+				"cType": "child"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container container--fluid'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "VRowComp",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VInlineDatepicker",
+															"P": {
+																"ID": {
+																	"H": "myInlineDatepicker",
+																	"T": "prop"
+																},
+																"clearable": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"hideMenu": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "'Pick a date'",
+																	"T": "prop"
+																},
+																"locale": {
+																	"H": "'tr'",
+																	"T": "prop"
+																},
+																"willAttach": {
+																	"H": "'true'",
+																	"T": "prop"
+																},
+																"prependInnerIcon": {
+																	"H": "'mdi-calendar'",
+																	"T": "prop"
+																},
+																"dateNow": {
+																	"H": "false",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_32"
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "VColComp",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_27"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_24"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_22"
+			},
+			"O": {
 				"cType": "slot"
 			}
 		},
@@ -26,22 +160,35 @@ let pjson = {
 			"T": "VBtn",
 			"P": {
 				"ID": {
-					"H": "EdtrComp_2",
+					"H": "EdtrComp_3",
 					"T": "prop"
 				},
 				"color": {
 					"H": "'primary'",
 					"T": "prop"
 				},
-				"regular": {
+				"depressed": {
+					"H": "true",
+					"T": "prop"
+				},
+				"elevation": {
+					"H": "0",
+					"T": "prop"
+				},
+				"height": {
+					"H": "'40px'",
+					"T": "prop"
+				},
+				"visible": {
 					"H": "true",
 					"T": "prop"
 				}
 			},
 			"E": {
 				"click": {
-					"H": "EM.trace(EdtrComp_1.value)",
-					"P": "mouseEvent"
+					"H": "quick.EM.trace(components.myInlineDatepicker.qValue);\r\n\r\n(<any>components.myInlineDatepicker).qValue = new Date().toISOString().substr(0, 10);\r\n\r\nsetTimeout(() => {\r\n    (<any>components.myInlineDatepicker).qValue = undefined;\r\n     (<any>components.myInlineDatepicker).valueInternal = undefined; \r\n}, 0);\r\n\r\n",
+					"P": "mouseEvent:unknown | undefined",
+					"HL": "TS"
 				}
 			},
 			"C": {
@@ -53,20 +200,19 @@ let pjson = {
 							"E": {},
 							"P": {
 								"ID": {
-									"H": "EdtrComp_3",
+									"H": "EdtrComp_6",
 									"T": "prop"
 								},
 								"text": {
-									"H": "'Value Değeri'",
+									"H": "'Clear Value'",
 									"T": "prop"
 								}
 							},
 							"_Editor": {
-								"eID": "EdtrComp_3"
+								"eID": "EdtrComp_6"
 							},
 							"O": {
-								"cType": "child",
-								"compDomClasses": "q-label "
+								"cType": "child"
 							}
 						}
 					],
@@ -74,34 +220,45 @@ let pjson = {
 				}
 			},
 			"_Editor": {
-				"eID": "EdtrComp_2"
+				"eID": "EdtrComp_3"
 			},
 			"O": {
-				"cType": "slot",
-				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary"
+				"cType": "slot"
 			}
 		},
 		{
 			"T": "VBtn",
 			"P": {
 				"ID": {
-					"H": "EdtrComp_4",
+					"H": "EdtrComp_11",
 					"T": "prop"
 				},
 				"color": {
 					"H": "'primary'",
 					"T": "prop"
 				},
-				"regular": {
+				"depressed": {
+					"H": "true",
+					"T": "prop"
+				},
+				"elevation": {
+					"H": "0",
+					"T": "prop"
+				},
+				"height": {
+					"H": "'40px'",
+					"T": "prop"
+				},
+				"visible": {
 					"H": "true",
 					"T": "prop"
 				}
 			},
 			"E": {
 				"click": {
-					"H": "EdtrComp_1.qValue=null",
-					"P": "mouseEvent",
-					"HL": "QS"
+					"H": "quick.EM.trace(components.myInlineDatepicker.qValue);",
+					"P": "mouseEvent:unknown | undefined",
+					"HL": "TS"
 				}
 			},
 			"C": {
@@ -113,20 +270,19 @@ let pjson = {
 							"E": {},
 							"P": {
 								"ID": {
-									"H": "EdtrComp_5",
+									"H": "EdtrComp_14",
 									"T": "prop"
 								},
 								"text": {
-									"H": "'Value Sil'",
+									"H": "'Get Value'",
 									"T": "prop"
 								}
 							},
 							"_Editor": {
-								"eID": "EdtrComp_5"
+								"eID": "EdtrComp_14"
 							},
 							"O": {
-								"cType": "child",
-								"compDomClasses": "q-label "
+								"cType": "child"
 							}
 						}
 					],
@@ -134,57 +290,208 @@ let pjson = {
 				}
 			},
 			"_Editor": {
-				"eID": "EdtrComp_4"
+				"eID": "EdtrComp_11"
 			},
 			"O": {
-				"cType": "slot",
-				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary"
+				"cType": "slot"
 			}
 		}
 	],
 	"cJson": [
 		{
-			"T": "VInlineDatepicker",
+			"T": "Messaging",
 			"P": {
 				"ID": {
-					"H": "EdtrComp_1",
+					"H": "MessagingComp",
 					"T": "prop"
 				},
-				"label": {
-					"H": "╬'Pick a date'╩╩",
+				"triggerOnRestored": {
+					"H": "╬false╩╩",
 					"T": "prop"
 				}
 			},
 			"E": {},
 			"C": {},
 			"_Editor": {
-				"eID": "EdtrComp_1"
+				"eID": "EdtrComp_21"
 			},
 			"O": {
-				"compDomClasses": "v-inline-date-picker-div-class",
-				"cType": "slot"
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container container--fluid'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "VRowComp",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VInlineDatepicker",
+															"P": {
+																"ID": {
+																	"H": "myInlineDatepicker",
+																	"T": "prop"
+																},
+																"clearable": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"hideMenu": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"label": {
+																	"H": "╬'Pick a date'╩╩",
+																	"T": "prop"
+																},
+																"locale": {
+																	"H": "╬'tr'╩╩",
+																	"T": "prop"
+																},
+																"willAttach": {
+																	"H": "╬'true'╩╩",
+																	"T": "prop"
+																},
+																"prependInnerIcon": {
+																	"H": "╬'mdi-calendar'╩╩",
+																	"T": "prop"
+																},
+																"dateNow": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_32"
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-inline-date-picker-div-class newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "VColComp",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_27"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												},
+												"compDomClasses": "col d-flex flex-column newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_24"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_22"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container container--fluid newDropBorder"
 			}
 		},
 		{
 			"T": "VBtn",
 			"P": {
 				"ID": {
-					"H": "EdtrComp_2",
+					"H": "EdtrComp_3",
 					"T": "prop"
 				},
 				"color": {
 					"H": "╬'primary'╩╩",
 					"T": "prop"
 				},
-				"regular": {
+				"depressed": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"elevation": {
+					"H": "╬0╩╩",
+					"T": "prop"
+				},
+				"height": {
+					"H": "╬'40px'╩╩",
+					"T": "prop"
+				},
+				"visible": {
 					"H": "╬true╩╩",
 					"T": "prop"
 				}
 			},
 			"E": {
 				"click": {
-					"H": "╬()╣.╣EM╩╠trace╩╩╠.╣EdtrComp_1╩╠value╩╩╩╩",
-					"P": "mouseEvent"
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.EM.trace(components.myInlineDatepicker.qValue);\r\ncomponents.myInlineDatepicker.qValue = new Date().toISOString().substr(0, 10);\r\nsetTimeout(function () {\r\n    components.myInlineDatepicker.qValue = undefined;\r\n    components.myInlineDatepicker.valueInternal = undefined;\r\n}, 0);\r\n",
+					"P": "mouseEvent:unknown | undefined",
+					"HL": "JS"
 				}
 			},
 			"C": {
@@ -196,20 +503,20 @@ let pjson = {
 							"E": {},
 							"P": {
 								"ID": {
-									"H": "EdtrComp_3",
+									"H": "EdtrComp_6",
 									"T": "prop"
 								},
 								"text": {
-									"H": "╬'Value Değeri'╩╩",
+									"H": "╬'Clear Value'╩╩",
 									"T": "prop"
 								}
 							},
 							"_Editor": {
-								"eID": "EdtrComp_3"
+								"eID": "EdtrComp_6"
 							},
 							"O": {
 								"cType": "child",
-								"compDomClasses": "q-label "
+								"compDomClasses": "q-label newDropBorder"
 							}
 						}
 					],
@@ -217,34 +524,46 @@ let pjson = {
 				}
 			},
 			"_Editor": {
-				"eID": "EdtrComp_2"
+				"eID": "EdtrComp_3"
 			},
 			"O": {
 				"cType": "slot",
-				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary"
+				"compDomClasses": "v-btn v-btn--depressed theme--light elevation-0 v-size--default primary newDropBorder"
 			}
 		},
 		{
 			"T": "VBtn",
 			"P": {
 				"ID": {
-					"H": "EdtrComp_4",
+					"H": "EdtrComp_11",
 					"T": "prop"
 				},
 				"color": {
 					"H": "╬'primary'╩╩",
 					"T": "prop"
 				},
-				"regular": {
+				"depressed": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"elevation": {
+					"H": "╬0╩╩",
+					"T": "prop"
+				},
+				"height": {
+					"H": "╬'40px'╩╩",
+					"T": "prop"
+				},
+				"visible": {
 					"H": "╬true╩╩",
 					"T": "prop"
 				}
 			},
 			"E": {
 				"click": {
-					"H": "╬=╣.╣EdtrComp_1╩╠qValue╩╩╠null╩╩╩",
-					"P": "mouseEvent",
-					"HL": "QS"
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.EM.trace(components.myInlineDatepicker.qValue);\r\n",
+					"P": "mouseEvent:unknown | undefined",
+					"HL": "JS"
 				}
 			},
 			"C": {
@@ -256,20 +575,20 @@ let pjson = {
 							"E": {},
 							"P": {
 								"ID": {
-									"H": "EdtrComp_5",
+									"H": "EdtrComp_14",
 									"T": "prop"
 								},
 								"text": {
-									"H": "╬'Value Sil'╩╩",
+									"H": "╬'Get Value'╩╩",
 									"T": "prop"
 								}
 							},
 							"_Editor": {
-								"eID": "EdtrComp_5"
+								"eID": "EdtrComp_14"
 							},
 							"O": {
 								"cType": "child",
-								"compDomClasses": "q-label "
+								"compDomClasses": "q-label newDropBorder"
 							}
 						}
 					],
@@ -277,85 +596,66 @@ let pjson = {
 				}
 			},
 			"_Editor": {
-				"eID": "EdtrComp_4"
+				"eID": "EdtrComp_11"
 			},
 			"O": {
 				"cType": "slot",
-				"compDomClasses": "v-btn v-btn--contained theme--light v-size--default primary"
+				"compDomClasses": "v-btn v-btn--depressed theme--light elevation-0 v-size--default primary newDropBorder"
 			}
 		}
 	],
 	"lrids": {},
 	"clrids": {
 		"tr-TR": {
-			"calendar": "╬'Takvim'╩╩",
-			"permissionRequests": "╬'İzin Taleplerim'╩╩",
-			"annualEarned": "╬'Haklarım'╩╩",
-			"newPermissionRequest": "╬'Yeni İzin Talebi'╩╩",
-			"category": "╬'İzin Kategorisi'╩╩",
-			"type": "╬'İzin Tipi'╩╩",
-			"startDate": "╬'Başlangıç Tarihi'╩╩",
-			"endDate": "╬'Bitiş Tarihi'╩╩",
-			"time": "╬'Saat'╩╩",
-			"balanceLabel": "╬'Kalan İzin :'╩╩",
-			"description": "╬'İzin Açıklaması'╩╩",
-			"cancel": "╬'İptal'╩╩",
-			"save": "╬'Kaydet'╩╩",
-			"select": "╬'Seç'╩╩",
-			"totalMinuteLabel": "╬'Dakika :'╩╩",
-			"clean": "╬'Temizle'╩╩",
-			"search": "╬'Sorgula'╩╩",
-			"day": "╬'Gün'╩╩",
-			"minute": "╬'Dakika'╩╩",
-			"hour": "╬'Saat'╩╩",
-			"startEndTime": "╬'Öğlenden Önce / Sonra'╩╩",
-			"update": "╬'Güncelle'╩╩",
-			"deleteMsg": "╬'İzin kaydı silinecektir, onaylıyor musunuz?'╩╩",
-			"updateMsg": "╬'İzin kaydı güncellenecektir, onaylıyor musunuz?'╩╩",
-			"yes": "╬'Evet'╩╩",
-			"no": "╬'Hayır'╩╩",
-			"year": "╬'Yıl'╩╩",
-			"date": "╬'Tarih'╩╩",
-			"earnedAmount": "╬'Hakedilen Miktar'╩╩",
-			"approver": "╬'Onaylayıcı'╩╩",
-			"totalDayLabel": "╬'Seçilen Toplam Gün :'╩╩",
-			"totalHourLabel": "╬'Seçilen Toplam Saat :'╩╩"
+			"home": "╬'Anasayfa'╩╩",
+			"ann": "╬'Duyurular'╩╩",
+			"pro": "╬'Projelerim'╩╩",
+			"tender": "╬'Teklif Aşamasındaki Projeler'╩╩",
+			"active": "╬'Aktif Projeler'╩╩",
+			"billed": "╬'Faturalanan Projeler'╩╩",
+			"upcoming": "╬'Yaklaşan Ödemeler'╩╩",
+			"overdue": "╬'Geciken Ödemeler'╩╩",
+			"calculator": "╬'Hesaplama Araçları'╩╩",
+			"apply": "╬'Hemen Başvur'╩╩",
+			"policies": "╬'Poliçelerim'╩╩",
+			"guarantees": "╬'Teminatlarım'╩╩",
+			"proforma": "╬'Proformalarım'╩╩",
+			"company": "╬'Firma Bilgilerim'╩╩",
+			"demands": "╬'Taleplerim'╩╩",
+			"contact": "╬'İletişim(Bize Ulaşın)'╩╩",
+			"setting": "╬'Ayarlar'╩╩",
+			"payment": "╬'Ödemelerim'╩╩",
+			"babs": "╬'BA/BS Mutabakat'╩╩",
+			"demand": "╬'Talep İzleme'╩╩",
+			"requests": "╬'Öneri/Talep/Şikayet'╩╩",
+			"logout": "╬'Çıkış Yap'╩╩"
 		},
 		"en-US": {
-			"calendar": "╬'Calendar'╩╩",
-			"permissionRequests": "╬'My Permission Requests'╩╩",
-			"annualEarned": "╬'Annual Earned'╩╩",
-			"newPermissionRequest": "╬'New Permission Request'╩╩",
-			"category": "╬'Permission Category'╩╩",
-			"type": "╬'Permission Type'╩╩",
-			"startDate": "╬'Start Date'╩╩",
-			"endDate": "╬'End Date'╩╩",
-			"time": "╬'Time'╩╩",
-			"balanceLabel": "╬'Balance :'╩╩",
-			"description": "╬'Comment'╩╩",
-			"cancel": "╬'Cancel'╩╩",
-			"save": "╬'Save'╩╩",
-			"select": "╬'Select'╩╩",
-			"totalMinuteLabel": "╬'Minute :'╩╩",
-			"clean": "╬'Clean'╩╩",
-			"search": "╬'Search'╩╩",
-			"day": "╬'Day'╩╩",
-			"minute": "╬'Minute'╩╩",
-			"hour": "╬'Hour'╩╩",
-			"startEndTime": "╬'Before / After Midday'╩╩",
-			"update": "╬'Update'╩╩",
-			"deleteMsg": "╬'Permission record will be deleted, do you confirm?'╩╩",
-			"updateMsg": "╬'Permission record will be updated, do you confirm?'╩╩",
-			"yes": "╬'Yes'╩╩",
-			"no": "╬'No'╩╩",
-			"year": "╬'Year'╩╩",
-			"date": "╬'Date'╩╩",
-			"earnedAmount": "╬'Earned Amount'╩╩",
-			"approver": "╬'Approver'╩╩",
-			"totalDayLabel": "╬'Total Day Selected :'╩╩",
-			"totalHourLabel": "╬'Total Hour Selected :'╩╩"
+			"home": "╬'Homepage'╩╩",
+			"ann": "╬'Announcement'╩╩",
+			"pro": "╬'My Projects'╩╩",
+			"tender": "╬'Projects in Proposal Stage'╩╩",
+			"active": "╬'Projects in Active Stage'╩╩",
+			"billed": "╬'Projects in Billing Stage'╩╩",
+			"upcoming": "╬'Upcoming Payments'╩╩",
+			"overdue": "╬'Overdue Payments'╩╩",
+			"calculator": "╬'Calculation Tools'╩╩",
+			"apply": "╬'Apply Now'╩╩",
+			"policies": "╬'My Policies'╩╩",
+			"guarantees": "╬'My Guarantees'╩╩",
+			"proforma": "╬'My Proforma'╩╩",
+			"company": "╬'My Company Information'╩╩",
+			"demands": "╬'My Demands'╩╩",
+			"contact": "╬'Contact(Contact Us)'╩╩",
+			"setting": "╬'Setting'╩╩",
+			"payment": "╬'My Payments'╩╩",
+			"babs": "╬'BA/BS Reconciliation'╩╩",
+			"demand": "╬'Demand Monitoring'╩╩",
+			"requests": "╬'Suggestion/Request/Complaint'╩╩",
+			"logout": "╬'Log Out'╩╩"
 		}
 	},
-	"description": {}
+	"description": {},
+	"opt": {}
 };
 export default pjson

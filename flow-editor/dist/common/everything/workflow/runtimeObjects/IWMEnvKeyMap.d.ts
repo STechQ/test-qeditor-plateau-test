@@ -5,5 +5,6 @@ export interface IWMEnvKeyMap extends IEnvKeyMap {
     fmClusterId: string;
     wfEnvironmentName: string;
     maxPgLimit?: string;
+    targetTimezone: string;
 }
 //# sourceMappingURL=IWMEnvKeyMap.d.ts.map

@@ -3,6 +3,7 @@ import { UpdateFilter, ReturnDocument, ChangeStreamDocument, Document, ChangeStr
 import { MongoDBTransactionQueue } from "./mongoDBTransactionQueue";
 export declare const MongoDBErrorCodes: {
     duplicateKeyErrorCode: number;
+    IndexOptionsConflict: number;
 };
 export declare class MongoDBManager implements IDataStoreManager {
     private url;

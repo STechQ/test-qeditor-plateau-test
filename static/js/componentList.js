@@ -38,6 +38,10 @@ var componentOptions = {
             options: ["'number'", "'text'", "'password'"],
             editorDefaultValue: "'text'"
         },
+        inputMode: {
+            type: String,
+            options: ["'text'", "'numeric'"]
+        },
         preventPaste: {
             type: Boolean,
             editorDefaultValue: "true"

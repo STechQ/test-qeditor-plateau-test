@@ -17,8 +17,8 @@ export interface IProcessInstance {
     clusterId: string;
     businessKey: string;
     initiatorUser: IUser;
-    initiatorUnit: IUnit;
-    currentUnit: IUnit;
+    initiatorUnit: IUnit | undefined;
+    currentUnit: IUnit | undefined;
     processStart: DateTime;
     processEnd: DateTime;
     sla: ISLA;

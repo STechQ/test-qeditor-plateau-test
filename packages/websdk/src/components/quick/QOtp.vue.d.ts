@@ -24,6 +24,7 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     error: boolean;
     errorMessage: string;
     customClass: string;
+    inputMode: string;
 }>;
 export default _default;
 //# sourceMappingURL=QOtp.vue.d.ts.map

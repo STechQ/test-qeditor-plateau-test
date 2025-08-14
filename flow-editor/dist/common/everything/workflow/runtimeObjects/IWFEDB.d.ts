@@ -27,12 +27,15 @@ export interface IWFEDBProcessInst {
     version: IProcessInstance["processVersion"];
     clusterId: IProcessInstance["clusterId"];
     initiatorUser: IProcessInstance["initiatorUser"];
+    initiatorUnit: IProcessInstance["initiatorUnit"];
+    currentUnit: IProcessInstance["currentUnit"];
     sla?: IWFEDBSLA;
     priority?: IProcessInstance["priority"];
     lastUpdateUser: IProcessInstance["lastUpdateUser"];
     lastUpdateDescriptionCode?: IProcessInstance["lastUpdateDescriptionCode"];
     lastUpdateDescription?: IProcessInstance["lastUpdateDescription"];
     customStatus: IProcessInstance["status"];
+    customStatusDescription: IProcessInstance["statusDescription"];
     wfInput?: Record<string, any>;
     stepStates?: IStepStates;
     dataInstance: {
@@ -61,6 +64,7 @@ export interface IWFEDBTask {
     swimlane?: ITask["swimlane"];
     sla?: IWFEDBSLA;
     priority?: ITask["priority"];
+    currentUnit?: ITask["currentUnit"];
 }
 export interface IWFEDBTaskHistory extends OmitTyped<OmitTyped<IWFEDBTask, "updatedAt">, "flowThreadId"> {
     updatedAt: undefined;
