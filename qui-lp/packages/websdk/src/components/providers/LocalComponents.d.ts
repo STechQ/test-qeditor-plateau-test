@@ -105,11 +105,6 @@ declare const localComponents: {
     };
     QPieChart: {};
     QQrReader: {};
-    QAppointmentCalendar: {
-        importFunc: () => Promise<void>;
-        loaded: boolean;
-        module: undefined;
-    };
     QMenu: {
         importFunc: () => Promise<void>;
         loaded: boolean;

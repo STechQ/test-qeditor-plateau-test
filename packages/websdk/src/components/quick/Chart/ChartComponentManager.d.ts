@@ -14,7 +14,6 @@ export declare class ChartComponentManager {
         retVal: ICreatedComponent;
     };
     private createInnerChart;
-    chartResizer(chart: any, container: any): void;
     private chartOptions;
     private chartYTicksFont;
     private chartYPropSetter;
