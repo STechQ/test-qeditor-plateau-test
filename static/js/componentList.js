@@ -5347,7 +5347,7 @@ nextIcon = 'mdi-plus'}`
             editorDefaultValue: "false"
         },
         src: {
-            default: "",
+            editorDefaultValue: "''",
             type: String
         },
         pdfToolbarBackgroundColor: {
