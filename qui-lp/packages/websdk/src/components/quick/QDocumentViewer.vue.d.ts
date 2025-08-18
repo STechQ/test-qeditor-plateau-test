@@ -17,10 +17,14 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     pdfKey: number;
     currentMinWidth: number;
     dataType: "base64" | "url" | "arrayBuffer";
+    tiffBufferData: ArrayBuffer | null;
+    tifIfds: any[];
 }, {
     isTiffBuffer(buffer: ArrayBuffer): boolean;
     loadTiff(dataType: "base64" | "arrayBuffer" | "url"): Promise<void>;
-    createTiff(UTIF: any, ifds: any, bufferData: any): void;
+    getTiffBuffer(type: string, src: any): Promise<ArrayBuffer>;
+    renderTiffPage(): void;
+    base64ToArrayBuffer(base64: string): ArrayBuffer;
     createPdf(): void;
     downloadTiff(): void;
     base64ToAB(base64: string): ArrayBufferLike;
