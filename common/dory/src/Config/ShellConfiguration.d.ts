@@ -21,7 +21,7 @@ import { IShellGlobalMethods } from "../../../shrimp/interfaces/quick/IShellGlob
 import { IStore } from "../../../shrimp/interfaces/quick/IStore";
 import { IUrlOptions } from "../../../shrimp/interfaces/quick/IUrl";
 import { IRenderer } from "../../../shrimp/interfaces/RenderingInterfaces/IRenderer";
-import { ISharedDataInfo } from "../../../shrimp/interfaces/quick/IGeneralMethods";
+import { IScreenToTopOptions, ISharedDataInfo } from "../../../shrimp/interfaces/quick/IGeneralMethods";
 export declare class ShellConfiguration implements IShellConfiguration {
     network: INetwork;
     lridHelper?: (label: string, dataSource?: object | null) => string;
@@ -103,7 +103,7 @@ export declare class ShellConfiguration implements IShellConfiguration {
     scrollIntoView?: (component: IComponent) => void;
     YOffset?: () => Number;
     XOffset?: () => Number;
-    toTop?: () => void;
+    toTop?: (options?: IScreenToTopOptions) => void;
     getEnvironmentVariable?: () => any;
     getPageTitle?: () => void;
     getFavicon?: () => void;

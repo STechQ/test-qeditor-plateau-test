@@ -11,7 +11,7 @@ import { IDomElement } from "../../../../common/shrimp/interfaces/RenderingInter
 import { IRenderer } from "../../../../common/shrimp/interfaces/RenderingInterfaces/IRenderer";
 import { IRendererConfig } from "../../../../common/shrimp/interfaces/RenderingInterfaces/IRendererConfig";
 import { ContextManager } from "../../../../common/shrimp/context";
-import { ISharedDataInfo } from "../../../../common/shrimp/interfaces/quick/IGeneralMethods";
+import { IScreenToTopOptions, ISharedDataInfo } from "../../../../common/shrimp/interfaces/quick/IGeneralMethods";
 export declare class GlobalMethodsImpl implements IGlobalMethods {
     contextName: string;
     parentInstance: any;
@@ -40,6 +40,10 @@ export declare class GlobalMethodsImpl implements IGlobalMethods {
             errorMessage?: string;
             errorCode?: string;
             errorSource?: keyof typeof ErrorSource;
+        };
+        additionals?: {
+            props?: any;
+            events?: any;
         };
     }, parameters: IAlertParameters): void;
     private createAlert;
@@ -84,7 +88,7 @@ export declare class GlobalMethodsImpl implements IGlobalMethods {
     scrollIntoView(component: IComponent): void;
     YOffset(): number;
     XOffset(): number;
-    toTop(): void;
+    toTop(options?: IScreenToTopOptions): void;
     getEnvironmentVariable(): unknown;
     setEnvironment(env: unknown): void;
     setYamlLogType(logType: string): void;

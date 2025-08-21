@@ -17,7 +17,7 @@ import { IDomElement } from "../RenderingInterfaces/IDomElement";
 import { INavigationOptions, MobileAnimationType } from "../quick/INavigationManager";
 import { IPermanentStoreObject, Plateau_UI_PermanentStore_Name } from "../RenderingInterfaces/Operators/IPermanentStoreOperator";
 import { IDecryptDataRequest, IDecryptDataResponse, IEncryptDataRequest, IEncryptDataResponse, IHashDataRequest, IHashDataResponse } from "../../helpers/cryptoHelper";
-import { ISharedDataInfo } from "../quick/IGeneralMethods";
+import { IScreenToTopOptions, ISharedDataInfo } from "../quick/IGeneralMethods";
 export interface IGlobals_Request {
     /**
      * Sends a network request.
@@ -914,7 +914,7 @@ export interface IGlobals_Quick {
      * const yOffset = quick.Quick.screen.YOffset;
      * const xOffset = quick.Quick.screen.XOffset;
      * quick.Quick.screen.scrollIntoView(someComponent);
-     * quick.Quick.screen.toTop()
+     * quick.Quick.screen.toTop({elementId:htmlElementId})
    */
     screen: {
         /**
@@ -954,8 +954,10 @@ export interface IGlobals_Quick {
          *
          * @function
          * @memberof screen
+         * @param {IScreenToTopOptions} options - Configuration options for scroll into view.
+         * @param options.elementId - The html element ID to scroll into view.
         */
-        toTop?: () => void;
+        toTop?: (options?: IScreenToTopOptions) => void;
     };
     environment: {
         variable: unknown;

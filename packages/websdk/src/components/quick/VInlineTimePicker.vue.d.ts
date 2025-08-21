@@ -39,6 +39,7 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     max: string;
     outlined: boolean;
     readonly: boolean;
+    readonlyTextField: boolean;
     rules: unknown[];
     value: string;
     willAttach: boolean;

@@ -9,7 +9,7 @@ import { IRenderer } from "../../../../shrimp/interfaces/RenderingInterfaces/IRe
 import { ILocationPosition } from "../../../../shrimp/interfaces/quick/ILocationPosition";
 import { IExcel, IExcelJsonData, IExcelList, IExcelToJsonData } from "../../../../shrimp/interfaces/quick/IExcel";
 import { MobileAnimationType } from "../../../../shrimp/interfaces/quick/INavigationManager";
-import { ISharedDataInfo } from "../../../../shrimp/interfaces/quick/IGeneralMethods";
+import { IScreenToTopOptions, ISharedDataInfo } from "../../../../shrimp/interfaces/quick/IGeneralMethods";
 export declare const GlobalMethodsContextName: string;
 /**
  * QShell CreateRenderer (known types, used inside engine equivalent of GO like stuff)
@@ -65,7 +65,7 @@ export interface IGlobalMethods extends IContextItem {
     scrollIntoView?: (component: IComponent) => void;
     YOffset?: () => Number;
     XOffset?: () => Number;
-    toTop?: () => void;
+    toTop?: (options?: IScreenToTopOptions) => void;
     getEnvironmentVariable?: () => unknown;
     setEnvironment?: (env: unknown) => void;
     setYamlLogType?: (logType: string) => void;

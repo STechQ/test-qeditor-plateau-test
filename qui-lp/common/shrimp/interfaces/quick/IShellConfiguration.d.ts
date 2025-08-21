@@ -27,7 +27,7 @@ import { INavigationOptions } from "./INavigationManager";
 import { IDecryptDataRequest, IDecryptDataResponse, IEncryptDataRequest, IEncryptDataResponse, IHashDataRequest, IHashDataResponse } from "../../helpers/cryptoHelper";
 import { IDoryJr } from "../RenderingInterfaces/IDoryJr";
 import { IRenderer } from "../RenderingInterfaces/IRenderer";
-import { ISharedDataInfo } from "./IGeneralMethods";
+import { IScreenToTopOptions, ISharedDataInfo } from "./IGeneralMethods";
 export interface IShellConfiguration {
     network: INetwork;
     lridHelper?: (label: string, params: Object) => string;
@@ -108,7 +108,7 @@ export interface IShellConfiguration {
     scrollIntoView?: (component: IComponent) => void;
     YOffset?: () => Number;
     XOffset?: () => Number;
-    toTop?: () => void;
+    toTop?: (options?: IScreenToTopOptions) => void;
     getEnvironmentVariable?: () => any;
     getPageTitle?: () => void;
     getFavicon?: () => void;
