@@ -8,6 +8,7 @@ import { IWorkflowModel } from "../../../../../common/everything/workflow/runtim
 import { IStoreModelForFlow } from "../../../../../common/everything/store/designtimemodels/IStoreModel";
 import { IWorkflowDesignModel } from "../../../../../common/everything/workflow/designtimemodels/IWorkflowDesignModel";
 import { ModelValidatorResult } from "../../../common/ModelValidator";
+import { IFlowLocationDetail } from "../../../../../common/helpers/modelSearch/flowModelSearch";
 export interface IExportTypeMap {
     both: IFlowEditorModel;
     design: IFlowDesignModel | IWorkflowDesignModel;
@@ -55,6 +56,7 @@ export interface IFlowEditorProgram {
     undo(): Promise<boolean>;
     redo(): Promise<boolean>;
     validateAndFixModel(): Promise<ModelValidatorResult>;
+    referenceSearchResult(result: IFlowLocationDetail): Promise<void>;
     deleteObjects(): void;
 }
 //# sourceMappingURL=IFlowEditorProgram.d.ts.map

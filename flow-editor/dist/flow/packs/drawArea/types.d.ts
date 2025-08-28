@@ -101,5 +101,6 @@ export interface IDrawArea {
     setReadonly(readonly: boolean): void;
     setStepOutputs(stepID: string, outputs: Array<string>): void;
     setStepID(oldId: string, newId: string): void;
+    centerSelectedStep(): void;
 }
 //# sourceMappingURL=types.d.ts.map

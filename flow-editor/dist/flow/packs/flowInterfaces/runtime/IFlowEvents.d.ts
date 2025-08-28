@@ -3,7 +3,7 @@ interface IStepTarget {
     ID: string;
     inputName: string;
 }
-interface IStepExitBase {
+export interface IStepExitBase {
     fromStep: IThreadStepInfo;
     threadId: string;
 }

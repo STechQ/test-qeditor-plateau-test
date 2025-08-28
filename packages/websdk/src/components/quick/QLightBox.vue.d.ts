@@ -1,6 +1,22 @@
 import Vue from "vue";
 declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     element: HTMLDivElement;
+    resizeObserver: ResizeObserver | null;
+    calculatedHeight: string;
+    calculatedWidth: string;
+    calculateTop: string;
+    calculateLeft: string;
+    limitedTop: string | null;
+    limitedLeft: string | null;
+    preFullScreenStyle: any;
+    reachedMinSize: boolean;
+    reachedMaxSize: boolean;
+    minWidth: number;
+    maxWidth: number | undefined;
+    minHeight: number;
+    maxHeight: number | undefined;
+    internalPinned: boolean;
+    internalResizable: boolean;
     pos1: number;
     pos2: number;
     pos3: number;
@@ -21,6 +37,12 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     currentHeight: string;
     insetRight: string;
 }, {
+    doInitialMeasurements(): void;
+    dragMouseDownHandler(e: MouseEvent): void;
+    setDraggableBodyHeight(): void;
+    updateCalculatedSize(): void;
+    observeExternalResize(): void;
+    applyStyleWithImportant(height?: string | null | undefined, width?: string | null | undefined, position?: string | null | undefined, top?: string | null | undefined, left?: string | null | undefined, bottom?: string | null | undefined, right?: string | null | undefined): void;
     closeDragElement(): void;
     elementDrag(mouseEvent: MouseEvent): void;
     elementMobileDrag(mouseEvent: TouchEvent): void;

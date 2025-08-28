@@ -45,5 +45,6 @@ export declare class Evaluator implements IEvaluator {
      * @param ...sources
      */
     private mergeDeep;
+    private triggerChangeEvent;
 }
 //# sourceMappingURL=Evaluator.d.ts.map

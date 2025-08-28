@@ -18,5 +18,6 @@ export declare class StateImpl implements IState {
     setIsWorkFlow(isWorkFlow: boolean): void;
     getEditable(): boolean;
     updateModified(status: IModifiedStatus): void;
+    centerSelectedStep(): void;
 }
 //# sourceMappingURL=stateImpl.d.ts.map

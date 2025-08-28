@@ -1,6 +1,7 @@
 import { FC, ReactNode } from "react";
 import "../assets/css/components/button.css";
 interface IButtonProps {
+    id?: string;
     children: ReactNode;
     className?: string;
     color?: "primary" | "secondary";

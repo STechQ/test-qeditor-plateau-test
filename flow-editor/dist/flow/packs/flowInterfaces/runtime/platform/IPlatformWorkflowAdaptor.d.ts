@@ -6,6 +6,7 @@ import { MongoDBManager } from "../../../../../common/runtime/infrastructure/mon
 import { IRestServiceCallPropType } from "../../../flowComponents/runtime/restServiceCall";
 import { DataInstance } from "../../../../../common/everything/workflow/runtimeObjects/DataInstance";
 import { IContext } from "../../../../../common/everything/workflow/runtimeObjects/IContext";
+import { IDataSearchParams, IDataSearchResult } from "../../../../../process/workflowManager/helpers/DataSearchEngine.js";
 export interface IPlatformWFFAdaptor {
     flowExecutor: (prop: StepFlowModelPropType) => Promise<any>;
     restServiceExecutor: (prop: IRestServiceCallPropType) => Promise<any>;
@@ -37,6 +38,11 @@ export interface IPlatformWFFAdaptor {
             complete: (prop: IResumeProcessRequest) => Promise<boolean>;
         };
     };
+    dataSearch: {
+        searchQuery: (prop: IDataSearchParams) => Promise<IDataSearchResponse>;
+    };
+}
+export interface IDataSearchResponse extends IDataSearchResult {
 }
 export interface IResumeProcessRequest {
     processInstanId: string;

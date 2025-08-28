@@ -522,7 +522,9 @@ export interface IGlobals_Quick {
      * @example
      * quick.Quick.reset("myComponent");
     */
-    reset: (compEID: string) => void;
+    reset: (compEID: string, options?: {
+        triggerChangeEvent?: boolean;
+    }) => void;
     /**
      * Creates a new component based on the provided template component and inserts it into the page at a specified location.
      *
@@ -545,7 +547,7 @@ export interface IGlobals_Quick {
      * });
      *
    */
-    createComponent: ({ templateCompQID, newCompQID, dataSource, place, placeQID, childName }: {
+    createComponent: ({ templateCompQID, newCompQID, dataSource, place, placeQID, childName, }: {
         templateCompQID: string;
         newCompQID: string;
         dataSource?: any;

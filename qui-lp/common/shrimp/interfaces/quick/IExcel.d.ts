@@ -18,6 +18,10 @@ export declare enum ExcelCellType {
     date = "d",
     text = "s"
 }
+export interface IExcelItemStyle {
+    headerValue: string;
+    style: any;
+}
 export interface IExcelHeader {
     text: string;
     value: string;

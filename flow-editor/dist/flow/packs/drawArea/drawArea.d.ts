@@ -26,5 +26,6 @@ export declare class DrawArea implements IDrawArea {
     setReadonly(readonly: boolean): void;
     setStepOutputs(stepID: string, outputs: Array<string>): void;
     setStepID(oldID: string, newID: string): void;
+    centerSelectedStep(): void;
 }
 //# sourceMappingURL=drawArea.d.ts.map

@@ -2,12 +2,13 @@ import { CollectionName } from './mongo/IDataStoreManager';
 export interface IExecutionContextStore {
     tuid: string;
     userId: string | undefined;
+    channel: "online" | "batch" | "console";
+    scope?: "initiation" | undefined;
 }
 export declare abstract class ExecutionContext<TStore extends IExecutionContextStore> {
     private static _currentContext;
     static get isInitted(): boolean;
     static get current(): ExecutionContext<IExecutionContextStore>;
-    private scope;
     private readonly asyncLocalStorage;
     constructor();
     startScope<TScopeRetType>(storeObject: TStore, scope: () => TScopeRetType): TScopeRetType;

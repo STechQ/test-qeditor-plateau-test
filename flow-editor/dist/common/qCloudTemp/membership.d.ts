@@ -55,7 +55,6 @@ export interface IOrganizationFeatures {
     appVersion?: boolean;
     externalIntegration?: boolean;
     copyApp?: boolean;
-    certificate?: boolean;
 }
 export interface IOrganizationCalculatedInfo {
     appCount: number;

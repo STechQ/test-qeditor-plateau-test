@@ -13,6 +13,7 @@ import "./assets/css/main.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { Store } from "../../../../common/everything/store/designtimemodels/IStoreModel";
+import { IFlowLocationDetail } from "../../../../common/helpers/modelSearch/flowModelSearch";
 export declare class Program implements IFlowEditorProgram {
     private readonly container;
     private readonly state;
@@ -44,5 +45,6 @@ export declare class Program implements IFlowEditorProgram {
     setModels(models: IStudioUIModelBase[]): void;
     validateAndFixModel(): Promise<import("../../common/ModelValidator").ModelValidatorResult>;
     deleteObjects(): void;
+    referenceSearchResult(result: IFlowLocationDetail): Promise<void>;
 }
 //# sourceMappingURL=program.d.ts.map

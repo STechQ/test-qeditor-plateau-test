@@ -81,12 +81,14 @@ let pjson = {
 																	"T": "prop"
 																},
 																"headers": {
-																	"H": "[{ text = 'Dessert (100g serving)', align= 'start', sortable= false, value= 'name'},\n{ text = 'Calories', value= 'calories', sortable = true },\n{ text = 'Fat (g)', value= 'fat' },\n{ text = 'Carbs (g)', value= 'carbs' },\n{ text = 'Protein (g)', value= 'protein' },\n{ text = 'Iron (%)', value= 'iron' }]",
-																	"T": "prop"
+																	"H": "[{ text = 'Code', align= 'start', value= 'code'},\n{ text = 'Dessert (100g serving)', align= 'start', sortable= false, value= 'name'},\n{ text = 'Calories', value= 'calories', sortable = true },\n{ text = 'Fat (g)', value= 'fat' },\n{ text = 'Carbs (g)', value= 'carbs' },\n{ text = 'Protein (g)', value= 'protein' },\n{ text = 'Iron (%)', value= 'iron' }]",
+																	"T": "prop",
+																	"HL": "QS"
 																},
 																"items": {
-																	"H": "[{name = 'Frozens Yogurt', calories = 159, fat = '6.0', carbs = 24, protein = '4.0', iron = '1%'},\n{name = 'Ice cream sandwich', calories = 237, fat = '9.0', carbs = 37, protein = '4.3', iron = '1%'},\n{name = 'Eclair', calories = 262, fat = '16.0', carbs = 23, protein = '6.0', iron = '7%'},\n{name = 'Cupcake', calories = 305, fat = '3.7', carbs = 67, protein = '4.3', iron = '8%'},\n{name = 'Gingerbread',calories = 356, fat = '16.0', carbs = 49, protein = '3.9', iron = '16%'},\n{name = 'Jelly bean', calories = 375,  fat = '0.0', carbs = 94, protein = '0.0', iron = '0%'},\n{name = 'Lollipop', calories = 392, fat = '0.2', carbs = 98, protein = '0.0', iron = '2 %'},\n{name = 'Honeycomb', calories = 408, fat = '3.2', carbs = 87, protein = '6.5', iron = '45%'},\n{name = 'Donut', calories = 452, fat = '25.0', carbs = 51, protein = '4.9', iron = '22%'},\n{name = 'KitKat', calories = 518, fat = '26.0', carbs = 65, protein = '7', iron=  '6 %'}]",
-																	"T": "prop"
+																	"H": "[{code = 1278, name = 'Frozens Yogurt', calories = 159, fat = '6.0', carbs = 24, protein = '4.0', iron = '1%'},\n{code = 1278, name = 'Ice cream sandwich', calories = 237, fat = '9.0', carbs = 37, protein = '4.3', iron = '1%'},\n{code = 1278, name = 'Eclair', calories = 262, fat = '16.0', carbs = 23, protein = '6.0', iron = '7%'},\n{code = 1278, name = 'Cupcake', calories = 305, fat = '3.7', carbs = 67, protein = '4.3', iron = '8%'},\n{code = 1278, name = 'Gingerbread',calories = 356, fat = '16.0', carbs = 49, protein = '3.9', iron = '16%'},\n{code = 1278, name = 'Jelly bean', calories = 375,  fat = '0.0', carbs = 94, protein = '0.0', iron = '0%'},\n{code = 1278, name = 'Lollipop', calories = 392, fat = '0.2', carbs = 98, protein = '0.0', iron = '2 %'},\n{code = 1278, name = 'Honeycomb', calories = 408, fat = '3.2', carbs = 87, protein = '6.5', iron = '45%'},\n{code = 1278, name = 'Donut', calories = 452, fat = '25.0', carbs = 51, protein = '4.9', iron = '22%'},\n{code = 1278, name = 'KitKat', calories = 518, fat = '26.0', carbs = 65, protein = '7', iron=  '6 %'}]",
+																	"T": "prop",
+																	"HL": "QS"
 																},
 																"itemsPerPage": {
 																	"H": "5",
@@ -276,7 +278,7 @@ let pjson = {
 															},
 															"E": {
 																"click": {
-																	"H": "\r\nquick.Quick.exportToXlsx({ fileName: 'test', items: components.dataTable.items, headers: components.dataTable.headers });\r\n\r\n\r\n/*\r\nOR\r\nlet headers = [{ value: 'name', text: 'Name' }, { value: 'fat', text: 'Fat (g)' }];\r\nquick.Quick.exportToXlsx({ fileName: 'test', items: components.dataTable.items, headers: headers });\r\n\r\n*/\r\n\r\n\r\n",
+																	"H": "\r\n\r\ndebugger;\r\nquick.Quick.exportToXlsx({ fileName: 'test', items: components.dataTable.items, headers: components.dataTable.headers });\r\n\r\n\r\n/*\r\nOR\r\nlet headers = [{ value: 'name', text: 'Name' }, { value: 'fat', text: 'Fat (g)' }];\r\nquick.Quick.exportToXlsx({ fileName: 'test', items: components.dataTable.items, headers: headers });\r\n\r\n*/\r\n\r\n\r\n",
 																	"P": "mouseEvent:unknown | undefined",
 																	"HL": "TS"
 																}
@@ -700,6 +702,246 @@ let pjson = {
 							},
 							"_Editor": {
 								"eID": "EdtrComp_234"
+							},
+							"O": {
+								"cType": "slot"
+							},
+							"S": {
+								"xs-xl": {
+									"marginLeft": "0px",
+									"marginRight": "0px",
+									"marginBottom": "0px",
+									"marginTop": "0px",
+									"paddingTop": "",
+									"paddingBottom": "",
+									"paddingLeft": "",
+									"paddingRight": "",
+									"width": "",
+									"height": "",
+									"backgroundColor": "#ffffff",
+									"boxShadow": ""
+								}
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_79",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_81",
+																	"T": "prop"
+																},
+																"depressed": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "\r\n// SET header style and all cell items style\r\nlet headerCellOptions: IExcelCellOptions = {\r\n    headerStyle: {\r\n        fill: {\r\n            patternType: \"solid\",\r\n            fgColor: { rgb: \"bcbcbc\" } // gray\r\n        },\r\n        font: {\r\n            bold: true\r\n        }\r\n    },\r\n    itemStyle: {\r\n        fill: {\r\n            patternType: \"solid\",\r\n            fgColor: { rgb: \"FFFF00\" } // Yellow\r\n        },\r\n        font: {\r\n            bold: true\r\n        }\r\n    }\r\n}\r\n\r\nlet headers = (<any[]>components.dataTable.headers).map(header => {\r\n    header[\"cellOptions\"] = headerCellOptions;\r\n    return header;\r\n});\r\n\r\n\r\n// ADD Total row to table\r\nfunction addTotalsRow(items) {\r\n    let totals = {};\r\n    items.forEach(item => {\r\n        totals['calories'] = (totals['calories'] ?? 0) + item.calories;\r\n        totals['carbs'] = (totals['carbs'] ?? 0) + item.carbs;\r\n    });\r\n    totals[\"code\"] = \" \";\r\n    totals[\"name\"] = \"SUM\";\r\n    totals[\"fat\"] = \" \";\r\n    totals[\"protein\"] = \" \";\r\n    totals[\"iron\"] = \" \";\r\n\r\n    return [...items, totals];\r\n}\r\nlet items = addTotalsRow(components.dataTable.items);\r\n\r\n// SET specific style to total row item\r\nlet itemStyle = {\r\n    fill: {\r\n        patternType: \"solid\",\r\n        fgColor: { rgb: \"E9967A\" }\r\n    },\r\n    font: {\r\n        bold: true\r\n    }\r\n};\r\n\r\nlet itemStyleList: IExcelItemStyle[] = [\r\n    { headerValue: \"code\", style: itemStyle },\r\n    { headerValue: \"name\", style: itemStyle },\r\n    { headerValue: \"calories\", style: itemStyle },\r\n    { headerValue: \"carbs\", style: itemStyle },\r\n    { headerValue: \"fat\", style: itemStyle },\r\n    { headerValue: \"protein\", style: itemStyle },\r\n    { headerValue: \"iron\", style: itemStyle }\r\n];\r\n\r\nlet itemCellOptions: IExcelCellOptions = {\r\n    itemStyle: itemStyleList\r\n}\r\n\r\nitems[items.length - 1][\"cellOptions\"] = itemCellOptions;\r\n\r\n// export data to excel\r\nquick.Quick.exportToXlsx({ fileName: 'test', items: items, headers: headers });\r\n\r\n\r\n\r\n",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "TS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_82",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "'Set Specific Item Style'",
+																					"T": "prop",
+																					"HL": "QS"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_82"
+																			},
+																			"O": {
+																				"cType": "child"
+																			},
+																			"S": {
+																				"xs-xl": {
+																					"marginTop": "",
+																					"marginRight": "",
+																					"marginBottom": "",
+																					"marginLeft": "",
+																					"paddingTop": "",
+																					"paddingRight": "",
+																					"paddingBottom": "",
+																					"paddingLeft": "",
+																					"ThemeFont": "Custom",
+																					"textAlign": "start",
+																					"textDecorationLine": "none",
+																					"textDecorationStyle": "solid",
+																					"textDecorationColor": "#000000",
+																					"fontColor": "#ffffff",
+																					"fontStyle": "normal",
+																					"fontSize": "16px",
+																					"fontFamily": "Roboto",
+																					"fontWeight": "400",
+																					"combinedFont": "Roboto-Regular",
+																					"lineHeight": "20px"
+																				},
+																				"inheritedStyle": false
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_81"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginTop": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginLeft": "",
+																	"paddingTop": "",
+																	"paddingRight": "16px",
+																	"paddingBottom": "",
+																	"paddingLeft": "16px",
+																	"width": "",
+																	"height": "",
+																	"maxWidth": "",
+																	"maxHeight": "",
+																	"minWidth": "",
+																	"minHeight": "",
+																	"unlink": "false",
+																	"unlinkMax": "false",
+																	"unlinkMin": "false",
+																	"isSizeCollapsed": "false",
+																	"fontColor": "#ffffff",
+																	"fontFamily": "Roboto",
+																	"fontSize": "16px",
+																	"fontStyle": "normal",
+																	"fontWeight": "400",
+																	"combinedFont": "Roboto-Regular",
+																	"ThemeFont": "Custom",
+																	"lineHeight": "20px",
+																	"backgroundColor": "#1976D2",
+																	"disabledBackgroundColor": "rgba(0,0,0,.12)",
+																	"hoverColor": "#000000",
+																	"boxShadow": "",
+																	"boxSizing": "",
+																	"borderTopStyle": "solid",
+																	"borderRightStyle": "solid",
+																	"borderBottomStyle": "solid",
+																	"borderLeftStyle": "solid",
+																	"borderTopLeftRadius": "4px",
+																	"borderTopRightRadius": "4px",
+																	"borderBottomLeftRadius": "4px",
+																	"borderBottomRightRadius": "4px",
+																	"borderTopWidth": "0px",
+																	"borderRightWidth": "0px",
+																	"borderBottomWidth": "0px",
+																	"borderLeftWidth": "0px",
+																	"defaultBorderColor": "",
+																	"sides": "Top,Right,Bottom,Left"
+																}
+															},
+															"SC": {
+																"fontColor": {
+																	"VIcon": "iconColor",
+																	"QLabel": "fontColor"
+																},
+																"fontStyle": {
+																	"QLabel": "fontStyle"
+																},
+																"fontSize": {
+																	"QLabel": "fontSize"
+																},
+																"fontFamily": {
+																	"QLabel": "fontFamily"
+																},
+																"fontWeight": {
+																	"QLabel": "fontWeight"
+																},
+																"combinedFont": {
+																	"QLabel": "combinedFont"
+																},
+																"lineHeight": {
+																	"QLabel": "lineHeight"
+																},
+																"bacgroundColor": {
+																	"VIcon": "backgroundColor"
+																}
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_80",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_80"
+											},
+											"O": {
+												"cType": "slot"
+											},
+											"S": {
+												"xs-xl": {
+													"col": "",
+													"flexDirection": "column",
+													"alignItems": "",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "12px",
+													"paddingBottom": "12px",
+													"paddingLeft": "12px",
+													"paddingRight": "12px",
+													"backgroundColor": "#ffffff",
+													"boxShadow": ""
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_79"
 							},
 							"O": {
 								"cType": "slot"
@@ -1235,7 +1477,7 @@ let pjson = {
 															},
 															"E": {
 																"click": {
-																	"H": "\r\n//Export object sub member variables to excel \r\n\r\nlet items: object[] = [\r\n    { fat: { a1: { a: \"aa1\" } }, bat: \"b1\" },\r\n    { fat: { a1: { a: \"aa1\" } }, bat: \"b1\" },\r\n    { fat: { a1: { a: \"aa1\" } }, bat: \"b1\" },\r\n    { fat: { a1: { a: \"aa1\" } }, bat: \"b1\" }\r\n]\r\nlet headers: object[] = [{ value: 'fat.a1.a', text: 'Fat (g)' }, { value: 'bat', text: 'bat (g)' }];\r\n\r\ndebugger;\r\nquick.Quick.exportToXlsx({ fileName: \"deneme\", items, headers });\r\n",
+																	"H": "\r\n//Export object sub member variables to excel \r\n\r\nlet items: object[] = [\r\n    { fat: { a1: { a: \"aa1\" } }, bat: \"b1\" },\r\n    { fat: { a1: { a: \"aa1\" } }, bat: \"b1\" },\r\n    { fat: { a1: { a: \"aa1\" } }, bat: \"b1\" },\r\n    { fat: { a1: { a: \"aa1\" } }, bat: \"b1\" }\r\n]\r\n\r\nlet cellOptions: IExcelCellOptions = {\r\n    headerStyle: {\r\n        fill: {\r\n            patternType: \"solid\",\r\n            fgColor: { rgb: \"bcbcbc\" } // gray\r\n        },\r\n        font: {\r\n            bold: true\r\n        }\r\n    },\r\n    itemStyle: {\r\n        fill: {\r\n            patternType: \"solid\",\r\n            fgColor: { rgb: \"FFFF00\" } // Yellow\r\n        },\r\n        font: {\r\n            bold: true\r\n        }\r\n    }\r\n}\r\n\r\nlet headers: object[] = [{ value: 'fat.a1.a', text: 'Fat (g)', cellOptions: cellOptions }, { value: 'bat', text: 'bat (g)', cellOptions: cellOptions }];\r\n\r\n\r\nquick.Quick.exportToXlsx({ fileName: \"deneme\", items, headers });\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
 																	"P": "mouseEvent:unknown | undefined",
 																	"HL": "TS"
 																}
@@ -1789,12 +2031,14 @@ let pjson = {
 																	"T": "prop"
 																},
 																"headers": {
-																	"H": "╬[]╠{}╠=╣text╩╠'Dessert (100g serving)'╩╩╠=╣align╩╠'start'╩╩╠=╣sortable╩╠false╩╩╠=╣value╩╠'name'╩╩╩╠{}╠=╣text╩╠'Calories'╩╩╠=╣value╩╠'calories'╩╩╠=╣sortable╩╠true╩╩╩╠{}╠=╣text╩╠'Fat (g)'╩╩╠=╣value╩╠'fat'╩╩╩╠{}╠=╣text╩╠'Carbs (g)'╩╩╠=╣value╩╠'carbs'╩╩╩╠{}╠=╣text╩╠'Protein (g)'╩╩╠=╣value╩╠'protein'╩╩╩╠{}╠=╣text╩╠'Iron (%)'╩╩╠=╣value╩╠'iron'╩╩╩╩╩",
-																	"T": "prop"
+																	"H": "╬[]╠{}╠=╣text╩╠'Code'╩╩╠=╣align╩╠'start'╩╩╠=╣value╩╠'code'╩╩╩╠{}╠=╣text╩╠'Dessert (100g serving)'╩╩╠=╣align╩╠'start'╩╩╠=╣sortable╩╠false╩╩╠=╣value╩╠'name'╩╩╩╠{}╠=╣text╩╠'Calories'╩╩╠=╣value╩╠'calories'╩╩╠=╣sortable╩╠true╩╩╩╠{}╠=╣text╩╠'Fat (g)'╩╩╠=╣value╩╠'fat'╩╩╩╠{}╠=╣text╩╠'Carbs (g)'╩╩╠=╣value╩╠'carbs'╩╩╩╠{}╠=╣text╩╠'Protein (g)'╩╩╠=╣value╩╠'protein'╩╩╩╠{}╠=╣text╩╠'Iron (%)'╩╩╠=╣value╩╠'iron'╩╩╩╩╩",
+																	"T": "prop",
+																	"HL": "QS"
 																},
 																"items": {
-																	"H": "╬[]╠{}╠=╣name╩╠'Frozens Yogurt'╩╩╠=╣calories╩╠159╩╩╠=╣fat╩╠'6.0'╩╩╠=╣carbs╩╠24╩╩╠=╣protein╩╠'4.0'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Ice cream sandwich'╩╩╠=╣calories╩╠237╩╩╠=╣fat╩╠'9.0'╩╩╠=╣carbs╩╠37╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣name╩╠'Eclair'╩╩╠=╣calories╩╠262╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠23╩╩╠=╣protein╩╠'6.0'╩╩╠=╣iron╩╠'7%'╩╩╩╠{}╠=╣name╩╠'Cupcake'╩╩╠=╣calories╩╠305╩╩╠=╣fat╩╠'3.7'╩╩╠=╣carbs╩╠67╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'8%'╩╩╩╠{}╠=╣name╩╠'Gingerbread'╩╩╠=╣calories╩╠356╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠49╩╩╠=╣protein╩╠'3.9'╩╩╠=╣iron╩╠'16%'╩╩╩╠{}╠=╣name╩╠'Jelly bean'╩╩╠=╣calories╩╠375╩╩╠=╣fat╩╠'0.0'╩╩╠=╣carbs╩╠94╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'0%'╩╩╩╠{}╠=╣name╩╠'Lollipop'╩╩╠=╣calories╩╠392╩╩╠=╣fat╩╠'0.2'╩╩╠=╣carbs╩╠98╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'2 %'╩╩╩╠{}╠=╣name╩╠'Honeycomb'╩╩╠=╣calories╩╠408╩╩╠=╣fat╩╠'3.2'╩╩╠=╣carbs╩╠87╩╩╠=╣protein╩╠'6.5'╩╩╠=╣iron╩╠'45%'╩╩╩╠{}╠=╣name╩╠'Donut'╩╩╠=╣calories╩╠452╩╩╠=╣fat╩╠'25.0'╩╩╠=╣carbs╩╠51╩╩╠=╣protein╩╠'4.9'╩╩╠=╣iron╩╠'22%'╩╩╩╠{}╠=╣name╩╠'KitKat'╩╩╠=╣calories╩╠518╩╩╠=╣fat╩╠'26.0'╩╩╠=╣carbs╩╠65╩╩╠=╣protein╩╠'7'╩╩╠=╣iron╩╠'6 %'╩╩╩╩╩",
-																	"T": "prop"
+																	"H": "╬[]╠{}╠=╣code╩╠1278╩╩╠=╣name╩╠'Frozens Yogurt'╩╩╠=╣calories╩╠159╩╩╠=╣fat╩╠'6.0'╩╩╠=╣carbs╩╠24╩╩╠=╣protein╩╠'4.0'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣code╩╠1278╩╩╠=╣name╩╠'Ice cream sandwich'╩╩╠=╣calories╩╠237╩╩╠=╣fat╩╠'9.0'╩╩╠=╣carbs╩╠37╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'1%'╩╩╩╠{}╠=╣code╩╠1278╩╩╠=╣name╩╠'Eclair'╩╩╠=╣calories╩╠262╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠23╩╩╠=╣protein╩╠'6.0'╩╩╠=╣iron╩╠'7%'╩╩╩╠{}╠=╣code╩╠1278╩╩╠=╣name╩╠'Cupcake'╩╩╠=╣calories╩╠305╩╩╠=╣fat╩╠'3.7'╩╩╠=╣carbs╩╠67╩╩╠=╣protein╩╠'4.3'╩╩╠=╣iron╩╠'8%'╩╩╩╠{}╠=╣code╩╠1278╩╩╠=╣name╩╠'Gingerbread'╩╩╠=╣calories╩╠356╩╩╠=╣fat╩╠'16.0'╩╩╠=╣carbs╩╠49╩╩╠=╣protein╩╠'3.9'╩╩╠=╣iron╩╠'16%'╩╩╩╠{}╠=╣code╩╠1278╩╩╠=╣name╩╠'Jelly bean'╩╩╠=╣calories╩╠375╩╩╠=╣fat╩╠'0.0'╩╩╠=╣carbs╩╠94╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'0%'╩╩╩╠{}╠=╣code╩╠1278╩╩╠=╣name╩╠'Lollipop'╩╩╠=╣calories╩╠392╩╩╠=╣fat╩╠'0.2'╩╩╠=╣carbs╩╠98╩╩╠=╣protein╩╠'0.0'╩╩╠=╣iron╩╠'2 %'╩╩╩╠{}╠=╣code╩╠1278╩╩╠=╣name╩╠'Honeycomb'╩╩╠=╣calories╩╠408╩╩╠=╣fat╩╠'3.2'╩╩╠=╣carbs╩╠87╩╩╠=╣protein╩╠'6.5'╩╩╠=╣iron╩╠'45%'╩╩╩╠{}╠=╣code╩╠1278╩╩╠=╣name╩╠'Donut'╩╩╠=╣calories╩╠452╩╩╠=╣fat╩╠'25.0'╩╩╠=╣carbs╩╠51╩╩╠=╣protein╩╠'4.9'╩╩╠=╣iron╩╠'22%'╩╩╩╠{}╠=╣code╩╠1278╩╩╠=╣name╩╠'KitKat'╩╩╠=╣calories╩╠518╩╩╠=╣fat╩╠'26.0'╩╩╠=╣carbs╩╠65╩╩╠=╣protein╩╠'7'╩╩╠=╣iron╩╠'6 %'╩╩╩╩╩",
+																	"T": "prop",
+																	"HL": "QS"
 																},
 																"itemsPerPage": {
 																	"H": "╬5╩╩",
@@ -1987,7 +2231,7 @@ let pjson = {
 															},
 															"E": {
 																"click": {
-																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.Quick.exportToXlsx({ fileName: 'test', items: components.dataTable.items, headers: components.dataTable.headers });\r\n",
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ndebugger;\r\nquick.Quick.exportToXlsx({ fileName: 'test', items: components.dataTable.items, headers: components.dataTable.headers });\r\n",
 																	"P": "mouseEvent:unknown | undefined",
 																	"HL": "JS"
 																}
@@ -2418,6 +2662,250 @@ let pjson = {
 							},
 							"_Editor": {
 								"eID": "EdtrComp_234"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							},
+							"S": {
+								"xs-xl": {
+									"marginLeft": "0px",
+									"marginRight": "0px",
+									"marginBottom": "0px",
+									"marginTop": "0px",
+									"paddingTop": "",
+									"paddingBottom": "",
+									"paddingLeft": "",
+									"paddingRight": "",
+									"width": "",
+									"height": "",
+									"backgroundColor": "#ffffff",
+									"boxShadow": ""
+								}
+							}
+						},
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_79",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VBtn",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_81",
+																	"T": "prop"
+																},
+																"depressed": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"click": {
+																	"H": "var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {\r\n    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {\r\n        if (ar || !(i in from)) {\r\n            if (!ar) ar = Array.prototype.slice.call(from, 0, i);\r\n            ar[i] = from[i];\r\n        }\r\n    }\r\n    return to.concat(ar || Array.prototype.slice.call(from));\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\n// SET header style and all cell items style\r\nvar headerCellOptions = {\r\n    headerStyle: {\r\n        fill: {\r\n            patternType: \"solid\",\r\n            fgColor: { rgb: \"bcbcbc\" } // gray\r\n        },\r\n        font: {\r\n            bold: true\r\n        }\r\n    },\r\n    itemStyle: {\r\n        fill: {\r\n            patternType: \"solid\",\r\n            fgColor: { rgb: \"FFFF00\" } // Yellow\r\n        },\r\n        font: {\r\n            bold: true\r\n        }\r\n    }\r\n};\r\nvar headers = components.dataTable.headers.map(function (header) {\r\n    header[\"cellOptions\"] = headerCellOptions;\r\n    return header;\r\n});\r\n// ADD Total row to table\r\nfunction addTotalsRow(items) {\r\n    var totals = {};\r\n    items.forEach(function (item) {\r\n        var _a, _b;\r\n        totals['calories'] = ((_a = totals['calories']) !== null && _a !== void 0 ? _a : 0) + item.calories;\r\n        totals['carbs'] = ((_b = totals['carbs']) !== null && _b !== void 0 ? _b : 0) + item.carbs;\r\n    });\r\n    totals[\"code\"] = \" \";\r\n    totals[\"name\"] = \"SUM\";\r\n    totals[\"fat\"] = \" \";\r\n    totals[\"protein\"] = \" \";\r\n    totals[\"iron\"] = \" \";\r\n    return __spreadArray(__spreadArray([], items, true), [totals], false);\r\n}\r\nvar items = addTotalsRow(components.dataTable.items);\r\n// SET specific style to total row item\r\nvar itemStyle = {\r\n    fill: {\r\n        patternType: \"solid\",\r\n        fgColor: { rgb: \"E9967A\" }\r\n    },\r\n    font: {\r\n        bold: true\r\n    }\r\n};\r\nvar itemStyleList = [\r\n    { headerValue: \"code\", style: itemStyle },\r\n    { headerValue: \"name\", style: itemStyle },\r\n    { headerValue: \"calories\", style: itemStyle },\r\n    { headerValue: \"carbs\", style: itemStyle },\r\n    { headerValue: \"fat\", style: itemStyle },\r\n    { headerValue: \"protein\", style: itemStyle },\r\n    { headerValue: \"iron\", style: itemStyle }\r\n];\r\nvar itemCellOptions = {\r\n    itemStyle: itemStyleList\r\n};\r\nitems[items.length - 1][\"cellOptions\"] = itemCellOptions;\r\n// export data to excel\r\nquick.Quick.exportToXlsx({ fileName: 'test', items: items, headers: headers });\r\n",
+																	"P": "mouseEvent:unknown | undefined",
+																	"HL": "JS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "QLabel",
+																			"C": {},
+																			"E": {},
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_82",
+																					"T": "prop"
+																				},
+																				"text": {
+																					"H": "╬'Set Specific Item Style'╩╩",
+																					"T": "prop",
+																					"HL": "QS"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_82"
+																			},
+																			"O": {
+																				"cType": "child",
+																				"compDomClasses": "q-label newDropBorder"
+																			},
+																			"S": {
+																				"xs-xl": {
+																					"marginTop": "",
+																					"marginRight": "",
+																					"marginBottom": "",
+																					"marginLeft": "",
+																					"paddingTop": "",
+																					"paddingRight": "",
+																					"paddingBottom": "",
+																					"paddingLeft": "",
+																					"ThemeFont": "Custom",
+																					"textAlign": "start",
+																					"textDecorationLine": "none",
+																					"textDecorationStyle": "solid",
+																					"textDecorationColor": "#000000",
+																					"fontColor": "#ffffff",
+																					"fontStyle": "normal",
+																					"fontSize": "16px",
+																					"fontFamily": "Roboto",
+																					"fontWeight": "400",
+																					"combinedFont": "Roboto-Regular",
+																					"lineHeight": "20px"
+																				},
+																				"inheritedStyle": false
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_81"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginTop": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginLeft": "",
+																	"paddingTop": "",
+																	"paddingRight": "16px",
+																	"paddingBottom": "",
+																	"paddingLeft": "16px",
+																	"width": "",
+																	"height": "",
+																	"maxWidth": "",
+																	"maxHeight": "",
+																	"minWidth": "",
+																	"minHeight": "",
+																	"unlink": "false",
+																	"unlinkMax": "false",
+																	"unlinkMin": "false",
+																	"isSizeCollapsed": "false",
+																	"fontColor": "#ffffff",
+																	"fontFamily": "Roboto",
+																	"fontSize": "16px",
+																	"fontStyle": "normal",
+																	"fontWeight": "400",
+																	"combinedFont": "Roboto-Regular",
+																	"ThemeFont": "Custom",
+																	"lineHeight": "20px",
+																	"backgroundColor": "#1976D2",
+																	"disabledBackgroundColor": "rgba(0,0,0,.12)",
+																	"hoverColor": "#000000",
+																	"boxShadow": "",
+																	"boxSizing": "",
+																	"borderTopStyle": "solid",
+																	"borderRightStyle": "solid",
+																	"borderBottomStyle": "solid",
+																	"borderLeftStyle": "solid",
+																	"borderTopLeftRadius": "4px",
+																	"borderTopRightRadius": "4px",
+																	"borderBottomLeftRadius": "4px",
+																	"borderBottomRightRadius": "4px",
+																	"borderTopWidth": "0px",
+																	"borderRightWidth": "0px",
+																	"borderBottomWidth": "0px",
+																	"borderLeftWidth": "0px",
+																	"defaultBorderColor": "",
+																	"sides": "Top,Right,Bottom,Left"
+																}
+															},
+															"SC": {
+																"fontColor": {
+																	"VIcon": "iconColor",
+																	"QLabel": "fontColor"
+																},
+																"fontStyle": {
+																	"QLabel": "fontStyle"
+																},
+																"fontSize": {
+																	"QLabel": "fontSize"
+																},
+																"fontFamily": {
+																	"QLabel": "fontFamily"
+																},
+																"fontWeight": {
+																	"QLabel": "fontWeight"
+																},
+																"combinedFont": {
+																	"QLabel": "combinedFont"
+																},
+																"lineHeight": {
+																	"QLabel": "lineHeight"
+																},
+																"bacgroundColor": {
+																	"VIcon": "backgroundColor"
+																}
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-btn v-btn--depressed theme--light v-size--default newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_80",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_80"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											},
+											"S": {
+												"xs-xl": {
+													"col": "",
+													"flexDirection": "column",
+													"alignItems": "",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "12px",
+													"paddingBottom": "12px",
+													"paddingLeft": "12px",
+													"paddingRight": "12px",
+													"backgroundColor": "#ffffff",
+													"boxShadow": ""
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_79"
 							},
 							"O": {
 								"cType": "slot",
@@ -2962,7 +3450,7 @@ let pjson = {
 															},
 															"E": {
 																"click": {
-																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\n//Export object sub member variables to excel \r\nvar items = [\r\n    { fat: { a1: { a: \"aa1\" } }, bat: \"b1\" },\r\n    { fat: { a1: { a: \"aa1\" } }, bat: \"b1\" },\r\n    { fat: { a1: { a: \"aa1\" } }, bat: \"b1\" },\r\n    { fat: { a1: { a: \"aa1\" } }, bat: \"b1\" }\r\n];\r\nvar headers = [{ value: 'fat.a1.a', text: 'Fat (g)' }, { value: 'bat', text: 'bat (g)' }];\r\ndebugger;\r\nquick.Quick.exportToXlsx({ fileName: \"deneme\", items: items, headers: headers });\r\n",
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\n//Export object sub member variables to excel \r\nvar items = [\r\n    { fat: { a1: { a: \"aa1\" } }, bat: \"b1\" },\r\n    { fat: { a1: { a: \"aa1\" } }, bat: \"b1\" },\r\n    { fat: { a1: { a: \"aa1\" } }, bat: \"b1\" },\r\n    { fat: { a1: { a: \"aa1\" } }, bat: \"b1\" }\r\n];\r\nvar cellOptions = {\r\n    headerStyle: {\r\n        fill: {\r\n            patternType: \"solid\",\r\n            fgColor: { rgb: \"bcbcbc\" } // gray\r\n        },\r\n        font: {\r\n            bold: true\r\n        }\r\n    },\r\n    itemStyle: {\r\n        fill: {\r\n            patternType: \"solid\",\r\n            fgColor: { rgb: \"FFFF00\" } // Yellow\r\n        },\r\n        font: {\r\n            bold: true\r\n        }\r\n    }\r\n};\r\nvar headers = [{ value: 'fat.a1.a', text: 'Fat (g)', cellOptions: cellOptions }, { value: 'bat', text: 'bat (g)', cellOptions: cellOptions }];\r\nquick.Quick.exportToXlsx({ fileName: \"deneme\", items: items, headers: headers });\r\n",
 																	"P": "mouseEvent:unknown | undefined",
 																	"HL": "JS"
 																}

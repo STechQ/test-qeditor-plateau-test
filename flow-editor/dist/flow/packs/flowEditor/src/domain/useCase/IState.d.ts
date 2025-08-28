@@ -9,6 +9,7 @@ export interface IState {
     setIsWorkFlow(isWorkFlow: boolean): void;
     getEditable(): boolean;
     updateModified(status: IModifiedStatus): void;
+    centerSelectedStep(): void;
 }
 export declare const IState: unique symbol;
 //# sourceMappingURL=IState.d.ts.map

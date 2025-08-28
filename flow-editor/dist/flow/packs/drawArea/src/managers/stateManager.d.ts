@@ -12,5 +12,6 @@ export declare class StateManager {
     setReadonly(readonly: boolean): void;
     assertEditable(): void;
     setStepID(oldID: string, newID: string): void;
+    centerSelectedStep(): void;
 }
 //# sourceMappingURL=stateManager.d.ts.map

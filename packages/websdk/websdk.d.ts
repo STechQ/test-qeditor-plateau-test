@@ -13,8 +13,8 @@ declare class PlateauUI implements IPlateauUI {
     open(qjsonPath?: string, args?: Record<string, any>): Promise<void>;
     show(args?: plateauUIPageOptions): void;
     hide(args?: plateauUIPageOptions): void;
-    close(args?: plateauUIPageOptions): void;
-    destroy(args?: Record<string, any>): Promise<any> | undefined;
+    close(args?: plateauUIPageOptions): Promise<void>;
+    destroy(args?: Record<string, any>): Promise<void>;
     trigger({ eventName, parameters }: {
         eventName: string;
         parameters: Record<string, any>;
@@ -29,8 +29,8 @@ export interface IPlateauUI {
     open(qjsonPath?: string, args?: Record<string, any>): Promise<void>;
     show(args?: plateauUIPageOptions): void;
     hide(args?: plateauUIPageOptions): void;
-    close(args?: plateauUIPageOptions): void;
-    destroy(args?: plateauUIPageOptions): void;
+    close(args?: plateauUIPageOptions): Promise<void>;
+    destroy(args?: plateauUIPageOptions): Promise<void>;
 }
 export declare type plateauUIPageOptions = {
     pageName: string;

@@ -50,6 +50,7 @@ export declare class ZuiManager {
     subscribeToResize(subscriber: ResizeSubscriber): void;
     getState(): IFlowState["surfaceMatrix"];
     setState(surfaceMatrix: IFlowState["surfaceMatrix"]): void;
+    centerSelectedStep(): void;
     private resizeTo;
     private selectStage;
     interpret(svg: SVGElement): Group | undefined;
