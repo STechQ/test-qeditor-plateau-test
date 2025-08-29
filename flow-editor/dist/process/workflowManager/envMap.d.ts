@@ -10,6 +10,7 @@ declare const _default: {
     nodeIp: string;
     maxPgLimit: string;
     targetTimezone: string;
+    maxBatchJobTryCount: string;
 };
 export default _default;
 //# sourceMappingURL=envMap.d.ts.map

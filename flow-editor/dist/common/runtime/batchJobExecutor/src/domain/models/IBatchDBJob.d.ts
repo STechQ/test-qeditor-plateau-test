@@ -8,5 +8,7 @@ export interface IBatchDBJobBase {
     startDate?: number;
     status: BatchFlowStatus;
     finishDate?: number;
+    uniqueKey?: string;
+    executionId?: string;
 }
 //# sourceMappingURL=IBatchDBJob.d.ts.map

@@ -76,6 +76,7 @@ export interface IViewModel {
     fileDeleteFunction?: IExecuteFlowByMapping;
     resetHistory: () => IVMHistory;
     executeType: FlowExecutionType;
+    uniqueKey?: IExpressionData;
     selectedModelId: string;
     oldCamundaFieldsForWFModel?: IOldCamundaFieldsForWFModel;
 }

@@ -3,6 +3,8 @@ import { IOrganization, IOrganizationFeatures, IEditorTypes, IOrganizationCloud 
 import { IAppCloud } from "./application";
 import { ContentType, ModelType } from "../everything/studio/ui/IStudioUIModelBase";
 import { ITagValue } from "./tags";
+import { IModelOrigInfo, IModuleOrigInfo } from "./applicationCopy";
+import { ICopyApp } from "./symDtoObjects";
 export declare const DEPENDED_MODEL_KEYS: string[];
 export declare const DEPENDED_IMAGE_KEYS: string[];
 export declare const APP_ITEM_CONTENT_TYPES: string[];
@@ -94,6 +96,7 @@ export interface IApplication extends ICloudObject {
     firstPublishDate?: Date;
     lastPublishDate?: Date;
     mobileUsage?: IUpdateMobileUsage;
+    copyApp?: ICopyApp;
     lastReleasedVersion?: string;
     tags?: Array<ITagValue>;
 }
@@ -129,6 +132,7 @@ export interface IModuleBackend extends ICloudObject {
     lastReleasedVersion?: string;
     applicationID?: string;
     ownerOrg?: IModuleOwnerOrgInfo;
+    origInfo?: IModuleOrigInfo;
 }
 export interface IModuleVersion extends ICloudObject {
     moduleID: ObjectID;
@@ -161,6 +165,7 @@ export interface IModelInfo extends ICloudObject {
     checkouts?: Array<IModelCheckout>;
     usageType?: UsageType;
     copyFromInfo?: IModelCopyInfo;
+    origInfo?: IModelOrigInfo;
     size?: number;
     store?: {
         productVerID?: ObjectID;
@@ -359,6 +364,7 @@ export interface ITreeviewItem {
     };
     key?: string;
     migrated?: boolean;
+    origInfo?: IModuleOrigInfo | IModelOrigInfo;
 }
 export interface IScreenItem {
     id: string;

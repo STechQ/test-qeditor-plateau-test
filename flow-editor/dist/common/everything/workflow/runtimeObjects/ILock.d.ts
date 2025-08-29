@@ -1,4 +1,4 @@
-export type LockObjectType = "task" | "wfInst";
+export type LockObjectType = "task" | "wfInst" | "batchJobs";
 export interface ILock {
     lockId: string;
     lockStartTime: number;

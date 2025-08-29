@@ -30,6 +30,7 @@ export interface IFlowCopyModel {
     fileDownloadFunction?: IExecuteFlowByMapping;
     fileDeleteFunction?: IExecuteFlowByMapping;
     executeType: FlowExecutionType;
+    uniqueKey?: IExpressionData;
     oldCamundaFieldsForWFModel?: IOldCamundaFieldsForWFModel;
 }
 //# sourceMappingURL=IFlowDesignModel.d.ts.map

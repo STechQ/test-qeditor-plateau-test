@@ -37,9 +37,9 @@ export interface IPlatformWFFAdaptor {
             commit: (prop: IResumeProcessRequest) => Promise<boolean>;
             complete: (prop: IResumeProcessRequest) => Promise<boolean>;
         };
-    };
-    dataSearch: {
-        searchQuery: (prop: IDataSearchParams) => Promise<IDataSearchResponse>;
+        dataSearch: {
+            searchQuery: (prop: IDataSearchParams) => Promise<IDataSearchResponse>;
+        };
     };
 }
 export interface IDataSearchResponse extends IDataSearchResult {

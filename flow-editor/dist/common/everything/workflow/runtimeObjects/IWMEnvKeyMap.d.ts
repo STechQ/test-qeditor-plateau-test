@@ -6,5 +6,6 @@ export interface IWMEnvKeyMap extends IEnvKeyMap {
     wfEnvironmentName: string;
     maxPgLimit?: string;
     targetTimezone: string;
+    maxBatchJobTryCount?: string;
 }
 //# sourceMappingURL=IWMEnvKeyMap.d.ts.map

@@ -2,6 +2,7 @@ import { IModelBaseFields } from "../../workflow/runtimemodels/IModel";
 import { IVariable } from "./IVariable";
 import { DataTypeModelType, StringType } from "./types";
 import { IStoreModelDBEntity } from "../../store/designtimemodels/IStoreModel";
+import { IExpressionData } from "./IExpression";
 export interface IDataTypeModel extends IModelBaseFields, IDataTypeProperty {
     type: DataTypeModelType;
 }
@@ -27,6 +28,12 @@ export interface IDataTypeSummary {
     display?: boolean;
 }
 export type IQuerySource = "database";
+export interface IAggregation {
+    type: "group" | "project";
+    output: string;
+    operator?: string;
+    attribute: string;
+}
 export type IQueryType = 'INSERT' | 'UPDATE' | 'DELETE' | 'SELECT';
 export interface IQuery {
     id: string;
@@ -35,7 +42,10 @@ export interface IQuery {
     type: IQueryType;
     filter: Record<string, any>;
     filterRuleSet: any;
+    fields: IAggregation[];
     isMultipleResult?: boolean;
     store: IStoreModelDBEntity;
+    limit?: IExpressionData;
+    skip?: IExpressionData;
 }
 //# sourceMappingURL=IDataTypeModel.d.ts.map

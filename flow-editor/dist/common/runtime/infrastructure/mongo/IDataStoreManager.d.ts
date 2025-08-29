@@ -31,6 +31,7 @@ export type FilterTypeNullable<T> = {
         $lte?: T[K];
         $regex?: RegExp;
         $type?: "string" | "array" | "number" | "bool";
+        $exists?: boolean;
     } | FilterElemMatch<T[K]>;
 };
 export type FilterTypeOrAnd<T> = {
