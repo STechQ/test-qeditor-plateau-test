@@ -2,7 +2,7 @@ import { StringTemplates } from "../../../helpers/templates/StringTemplates";
 import { NumberTemplates } from "../../../helpers/templates/NumberTemplates";
 import { IExpressionData } from "./IExpression";
 import { BooleanType, DateTimeType, EnumType, NumberType, ObjectID, DataType, StringType, ConstantType, VariableTypes, AnyType } from "./types";
-export type IVariable = IVariableBoolean | IVariableDateTime | IVariableEnum | IVariableNumber | IVariableData | IVariableConstant | IVariableString | IVariableAny;
+export type IVariable = IVariableBoolean | IVariableDateTime | IVariableNumber | IVariableData | IVariableConstant | IVariableString | IVariableAny;
 export type IVariableBase = {
     name: string;
     desc: string;

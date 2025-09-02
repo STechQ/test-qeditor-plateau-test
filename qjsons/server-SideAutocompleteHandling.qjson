@@ -1,0 +1,1389 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "PageComp",
+					"T": "prop"
+				},
+				"triggerOnRestored": {
+					"H": "false",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"EndRender": {
+					"H": "// Sample-1\r\nquick.store.set(\"autocompleteSource\", Array.from({ length: 10000 }, (_, i) => ({\r\n  text: `test${i + 1}`,\r\n  value: i + 1\r\n})));\r\n\r\ncomponents.autoComplete_Sample1.items = [];\r\n\r\n// Sample-2\r\n// Başlangıçta (örneğin page load'da)\r\nconst allItems = Array.from({ length: 10000 }, (_, i) => ({\r\n  text: `test${i + 1}`,\r\n  value: i + 1\r\n}));\r\n\r\n// İlk 100 ve tamamını ayrı ayrı store'a kaydet\r\ncomponents.autoComplete_Sample2.items = allItems.slice(0, 100)\r\nquick.store.set(\"autocompleteSource\", allItems);\r\n",
+					"HL": "TS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child"
+			},
+			"S": {
+				"xs-xl": {
+					"pageBackgroundColor": "#ffffff",
+					"statusBarColor": "#ffffff"
+				}
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "VRowComp",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_10",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "'span'",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"text": {
+																	"H": "'In this autocomplete component, no data is preloaded initially. The search is triggered only after the user enters at least <b>4 characters</b>, and a filtered result set is displayed. This threshold helps prevent system overload in large datasets by avoiding filtering on every keystroke. Especially in early input stages (less than 3–4 characters), too many matches could lead to performance issues. The result list will appear empty until the first valid query is entered.'",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"processHtml": {
+																	"H": "true",
+																	"T": "prop",
+																	"HL": "QS"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_10"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginTop": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginLeft": "",
+																	"paddingTop": "",
+																	"paddingRight": "",
+																	"paddingBottom": "",
+																	"paddingLeft": "",
+																	"fontColor": "#000000",
+																	"fontFamily": "Roboto",
+																	"fontSize": "16px",
+																	"fontStyle": "normal",
+																	"fontWeight": "400",
+																	"combinedFont": "Roboto-Regular",
+																	"ThemeFont": "Custom",
+																	"lineHeight": "20px",
+																	"textAlign": "left",
+																	"textDecorationLine": "none",
+																	"textDecorationStyle": "solid",
+																	"textDecorationColor": "#000000"
+																}
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_7",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_7"
+											},
+											"O": {
+												"cType": "slot"
+											},
+											"S": {
+												"xs-xl": {
+													"col": "12",
+													"flexDirection": "column",
+													"alignItems": "",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "12px",
+													"paddingBottom": "12px",
+													"paddingLeft": "12px",
+													"paddingRight": "12px",
+													"backgroundColor": "#ffffff",
+													"boxShadow": ""
+												}
+											}
+										},
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VAutocomplete",
+															"P": {
+																"ID": {
+																	"H": "autoComplete_Sample1",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"eager": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"hideDetails": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"itemText": {
+																	"H": "'text'",
+																	"T": "prop"
+																},
+																"itemValue": {
+																	"H": "'value'",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"noFilter": {
+																	"H": "true",
+																	"T": "prop",
+																	"HL": "QS"
+																}
+															},
+															"E": {
+																"update:search-input": {
+																	"H": "debugger;\r\nconst comp = components.autoComplete_Sample1;\r\nconst allItems = quick.store.get(\"autocompleteSource\") || [];\r\nconst val = comp.internalSearch || \"\";\r\n\r\n// Filtering should be triggered only after the user's input reaches at least 3–5 characters in length to ensure better performance.\r\n// In large datasets (e.g., 5,000 to 10,000+ records), running a search on every keystroke can cause significant slowdowns and even browser freezes.\r\n// Therefore, starting the search only when a meaningful query is entered (e.g., 3 characters or more) helps preserve system resources and provides a smoother user experience.\r\nif (typeof val === \"string\" && val.length >= 4) {\r\n  const filtered = allItems.filter(item =>\r\n    item.text.toLowerCase().includes(val.toLowerCase())\r\n  ).slice(0, 100);\r\n\r\n  if (Array.isArray(filtered)) {\r\n    comp.items = filtered;\r\n  }\r\n\r\n  quick.EM.trace('if');\r\n} else {\r\n  quick.EM.trace('else');\r\n}\r\n\r\n",
+																	"HL": "TS"
+																}
+															},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_6"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginTop": "4px",
+																	"legendMarginLeft": "0px",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginLeft": "",
+																	"paddingTop": "12px",
+																	"paddingRight": "",
+																	"paddingBottom": "",
+																	"paddingLeft": "",
+																	"inputPaddingTop": "",
+																	"inputPaddingRight": "",
+																	"inputPaddingBottom": "",
+																	"inputPaddingLeft": "",
+																	"width": "",
+																	"height": "",
+																	"maxWidth": "",
+																	"maxHeight": "",
+																	"minWidth": "",
+																	"minHeight": "",
+																	"unlink": "false",
+																	"unlinkMax": "false",
+																	"unlinkMin": "false",
+																	"isSizeCollapsed": "false",
+																	"dense": "",
+																	"defaultFontColor": "#666666",
+																	"defaultFontFamily": "Roboto",
+																	"defaultFontSize": "16px",
+																	"defaultFontStyle": "normal",
+																	"defaultFontWeight": "400",
+																	"defaultCombinedFont": "Roboto-Regular",
+																	"deafultThemeFont": "Custom",
+																	"PHFontColor": "#9E9E9E",
+																	"PHFontFamily": "Roboto",
+																	"PHFontSize": "16px",
+																	"PHFontStyle": "normal",
+																	"PHFontWeight": "400",
+																	"PHCombinedFont": "Roboto-Regular",
+																	"PHThemeFont": "Custom",
+																	"inputFontColor": "#000",
+																	"inputFontFamily": "Roboto",
+																	"inputFontSize": "16px",
+																	"inputFontStyle": "normal",
+																	"inputFontWeight": "400",
+																	"inputCombinedFont": "Roboto-Regular",
+																	"inputThemeFont": "Custom",
+																	"menuFontColor": "#000",
+																	"menuFontFamily": "Roboto",
+																	"menuFontSize": "16px",
+																	"menuFontStyle": "normal",
+																	"menuFontWeight": "400",
+																	"menuCombinedFont": "Roboto-Regular",
+																	"menuThemeFont": "Custom",
+																	"errorMessageFontColor": "#E96767",
+																	"errorMessageFontFamily": "Roboto",
+																	"errorMessageFontSize": "12px",
+																	"errorMessageFontStyle": "normal",
+																	"errorMessageFontWeight": "400",
+																	"EMCombinedFont": "Roboto-Regular",
+																	"errorMessageThemeFont": "Custom",
+																	"errorMessageLineHeight": "",
+																	"backgroundColor": "#FFFFFF",
+																	"menuBackgroundColor": "#FFFFFF",
+																	"menuDefaultHoverColor": "#000000de",
+																	"menuActiveHoverColor": "#1976d2",
+																	"appendIconColor": "",
+																	"appendOuterIconColor": "",
+																	"prependIconColor": "",
+																	"prependInnerIconColor": "",
+																	"innerBoxShadow": "",
+																	"menuBoxShadow": "",
+																	"activeBorderColor": "#1976d2",
+																	"innerBoxSizing": "",
+																	"innerBorderTopStyle": "solid",
+																	"innerBorderRightStyle": "solid",
+																	"innerBorderBottomStyle": "solid",
+																	"innerBorderLeftStyle": "solid",
+																	"innerBorderTopLeftRadius": "",
+																	"innerBorderTopRightRadius": "",
+																	"innerBorderBottomLeftRadius": "",
+																	"innerBorderBottomRightRadius": "",
+																	"innerBorderTopWidth": "1px",
+																	"innerBorderRightWidth": "1px",
+																	"innerBorderBottomWidth": "1px",
+																	"innerBorderLeftWidth": "1px",
+																	"innerDefaultBorderColor": "#0000006b",
+																	"innerSides": "Top,Right,Bottom,Left",
+																	"outlined": ""
+																}
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "VColComp",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_3"
+											},
+											"O": {
+												"cType": "slot"
+											},
+											"S": {
+												"xs-xl": {
+													"col": "",
+													"flexDirection": "column",
+													"alignItems": "",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "12px",
+													"paddingBottom": "12px",
+													"paddingLeft": "12px",
+													"paddingRight": "12px",
+													"backgroundColor": "#ffffff",
+													"boxShadow": ""
+												}
+											}
+										},
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_19",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "'span'",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "'This autocomplete component is preloaded with <b>100 records</b> at initialization. When the user opens the component, commonly used or top-listed entries are immediately visible. When the user starts searching, filtering is performed across the entire dataset. However, to preserve performance, the filtering process begins <b>only after 3 or more characters</b> are entered. This threshold prevents filtering on every keystroke, ensuring a smooth and responsive user experience. The number of initially displayed records can be configured between <b>50 and 200</b>, depending on the use case.(The default is <b>100</b>, which is generally recommended.)'",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"processHtml": {
+																	"H": "true",
+																	"T": "prop",
+																	"HL": "QS"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_19"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginTop": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginLeft": "",
+																	"paddingTop": "",
+																	"paddingRight": "",
+																	"paddingBottom": "",
+																	"paddingLeft": "",
+																	"fontColor": "#000000",
+																	"fontFamily": "Roboto",
+																	"fontSize": "16px",
+																	"fontStyle": "normal",
+																	"fontWeight": "400",
+																	"combinedFont": "Roboto-Regular",
+																	"ThemeFont": "Custom",
+																	"lineHeight": "20px",
+																	"textAlign": "left",
+																	"textDecorationLine": "none",
+																	"textDecorationStyle": "solid",
+																	"textDecorationColor": "#000000"
+																}
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_2",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_2"
+											},
+											"O": {
+												"cType": "slot"
+											},
+											"S": {
+												"xs-xl": {
+													"col": "12",
+													"flexDirection": "column",
+													"alignItems": "",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "12px",
+													"paddingBottom": "12px",
+													"paddingLeft": "12px",
+													"paddingRight": "12px",
+													"backgroundColor": "#ffffff",
+													"boxShadow": ""
+												}
+											}
+										},
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VAutocomplete",
+															"P": {
+																"ID": {
+																	"H": "autoComplete_Sample2",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"eager": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"hideDetails": {
+																	"H": "false",
+																	"T": "prop"
+																},
+																"itemText": {
+																	"H": "'text'",
+																	"T": "prop"
+																},
+																"itemValue": {
+																	"H": "'value'",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"noFilter": {
+																	"H": "true",
+																	"T": "prop",
+																	"HL": "QS"
+																}
+															},
+															"E": {
+																"update:search-input": {
+																	"H": "debugger;\r\nconst comp = components.autoComplete_Sample2;\r\nconst allItems = quick.store.get(\"autocompleteSource\") || [];\r\nconst val = comp.internalSearch || \"\";\r\n\r\n// Filtering should be triggered only after the user's input reaches at least 3–5 characters in length to ensure better performance.\r\n// In large datasets (e.g., 5,000 to 10,000+ records), running a search on every keystroke can cause significant slowdowns and even browser freezes.\r\n// Therefore, starting the search only when a meaningful query is entered (e.g., 3 characters or more) helps preserve system resources and provides a smoother user experience.\r\nif (typeof val === \"string\" && val.length >= 4) {\r\n  const filtered = allItems.filter(item =>\r\n    item.text.toLowerCase().includes(val.toLowerCase())\r\n  ).slice(0, 100);\r\n\r\n  if (Array.isArray(filtered)) {\r\n    comp.items = filtered;\r\n  }\r\n\r\n  quick.EM.trace('if');\r\n} else {\r\n  quick.EM.trace('else');\r\n}\r\n\r\n",
+																	"HL": "TS"
+																}
+															},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_9"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginTop": "4px",
+																	"legendMarginLeft": "0px",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginLeft": "",
+																	"paddingTop": "12px",
+																	"paddingRight": "",
+																	"paddingBottom": "",
+																	"paddingLeft": "",
+																	"inputPaddingTop": "",
+																	"inputPaddingRight": "",
+																	"inputPaddingBottom": "",
+																	"inputPaddingLeft": "",
+																	"width": "",
+																	"height": "",
+																	"maxWidth": "",
+																	"maxHeight": "",
+																	"minWidth": "",
+																	"minHeight": "",
+																	"unlink": "false",
+																	"unlinkMax": "false",
+																	"unlinkMin": "false",
+																	"isSizeCollapsed": "false",
+																	"dense": "",
+																	"defaultFontColor": "#666666",
+																	"defaultFontFamily": "Roboto",
+																	"defaultFontSize": "16px",
+																	"defaultFontStyle": "normal",
+																	"defaultFontWeight": "400",
+																	"defaultCombinedFont": "Roboto-Regular",
+																	"deafultThemeFont": "Custom",
+																	"PHFontColor": "#9E9E9E",
+																	"PHFontFamily": "Roboto",
+																	"PHFontSize": "16px",
+																	"PHFontStyle": "normal",
+																	"PHFontWeight": "400",
+																	"PHCombinedFont": "Roboto-Regular",
+																	"PHThemeFont": "Custom",
+																	"inputFontColor": "#000",
+																	"inputFontFamily": "Roboto",
+																	"inputFontSize": "16px",
+																	"inputFontStyle": "normal",
+																	"inputFontWeight": "400",
+																	"inputCombinedFont": "Roboto-Regular",
+																	"inputThemeFont": "Custom",
+																	"menuFontColor": "#000",
+																	"menuFontFamily": "Roboto",
+																	"menuFontSize": "16px",
+																	"menuFontStyle": "normal",
+																	"menuFontWeight": "400",
+																	"menuCombinedFont": "Roboto-Regular",
+																	"menuThemeFont": "Custom",
+																	"errorMessageFontColor": "#E96767",
+																	"errorMessageFontFamily": "Roboto",
+																	"errorMessageFontSize": "12px",
+																	"errorMessageFontStyle": "normal",
+																	"errorMessageFontWeight": "400",
+																	"EMCombinedFont": "Roboto-Regular",
+																	"errorMessageThemeFont": "Custom",
+																	"errorMessageLineHeight": "",
+																	"backgroundColor": "#FFFFFF",
+																	"menuBackgroundColor": "#FFFFFF",
+																	"menuDefaultHoverColor": "#000000de",
+																	"menuActiveHoverColor": "#1976d2",
+																	"appendIconColor": "",
+																	"appendOuterIconColor": "",
+																	"prependIconColor": "",
+																	"prependInnerIconColor": "",
+																	"innerBoxShadow": "",
+																	"menuBoxShadow": "",
+																	"activeBorderColor": "#1976d2",
+																	"innerBoxSizing": "",
+																	"innerBorderTopStyle": "solid",
+																	"innerBorderRightStyle": "solid",
+																	"innerBorderBottomStyle": "solid",
+																	"innerBorderLeftStyle": "solid",
+																	"innerBorderTopLeftRadius": "",
+																	"innerBorderTopRightRadius": "",
+																	"innerBorderBottomLeftRadius": "",
+																	"innerBorderBottomRightRadius": "",
+																	"innerBorderTopWidth": "1px",
+																	"innerBorderRightWidth": "1px",
+																	"innerBorderBottomWidth": "1px",
+																	"innerBorderLeftWidth": "1px",
+																	"innerDefaultBorderColor": "#0000006b",
+																	"innerSides": "Top,Right,Bottom,Left",
+																	"outlined": ""
+																}
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_8",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_8"
+											},
+											"O": {
+												"cType": "slot"
+											},
+											"S": {
+												"xs-xl": {
+													"col": "12",
+													"flexDirection": "column",
+													"alignItems": "",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "12px",
+													"paddingBottom": "12px",
+													"paddingLeft": "12px",
+													"paddingRight": "12px",
+													"backgroundColor": "#ffffff",
+													"boxShadow": ""
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "slot"
+							},
+							"S": {
+								"xs-xl": {
+									"marginLeft": "0px",
+									"marginRight": "0px",
+									"marginBottom": "0px",
+									"marginTop": "0px",
+									"paddingTop": "",
+									"paddingBottom": "",
+									"paddingLeft": "",
+									"paddingRight": "",
+									"width": "",
+									"height": "",
+									"backgroundColor": "#ffffff",
+									"boxShadow": ""
+								}
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_5"
+			},
+			"O": {
+				"cType": "slot"
+			},
+			"S": {
+				"xs-xl": {
+					"marginLeft": "",
+					"marginRight": "",
+					"marginBottom": "",
+					"marginTop": "",
+					"paddingTop": "12px",
+					"paddingBottom": "12px",
+					"paddingLeft": "12px",
+					"paddingRight": "12px",
+					"width": "",
+					"height": "",
+					"backgroundColor": "#ffffff",
+					"boxShadow": ""
+				}
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "PageComp",
+					"T": "prop"
+				},
+				"triggerOnRestored": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"EndRender": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\n; // Sample-1\r\nquick.store.set(\"autocompleteSource\", Array.from({ length: 10000 }, function (_, i) { return ({\r\n    text: \"test\" + (i + 1),\r\n    value: i + 1\r\n}); }));\r\ncomponents.autoComplete_Sample1.items = [];\r\n// Sample-2\r\n// Başlangıçta (örneğin page load'da)\r\nvar allItems = Array.from({ length: 10000 }, function (_, i) { return ({\r\n    text: \"test\" + (i + 1),\r\n    value: i + 1\r\n}); });\r\n// İlk 100 ve tamamını ayrı ayrı store'a kaydet\r\ncomponents.autoComplete_Sample2.items = allItems.slice(0, 100);\r\nquick.store.set(\"autocompleteSource\", allItems);\r\n",
+					"HL": "JS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			},
+			"S": {
+				"xs-xl": {
+					"pageBackgroundColor": "#ffffff",
+					"statusBarColor": "#ffffff"
+				}
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "VRowComp",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_10",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "╬'span'╩╩",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"text": {
+																	"H": "╬'In this autocomplete component, no data is preloaded initially. The search is triggered only after the user enters at least <b>4 characters</b>, and a filtered result set is displayed. This threshold helps prevent system overload in large datasets by avoiding filtering on every keystroke. Especially in early input stages (less than 3–4 characters), too many matches could lead to performance issues. The result list will appear empty until the first valid query is entered.'╩╩",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"processHtml": {
+																	"H": "╬true╩╩",
+																	"T": "prop",
+																	"HL": "QS"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_10"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginTop": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginLeft": "",
+																	"paddingTop": "",
+																	"paddingRight": "",
+																	"paddingBottom": "",
+																	"paddingLeft": "",
+																	"fontColor": "#000000",
+																	"fontFamily": "Roboto",
+																	"fontSize": "16px",
+																	"fontStyle": "normal",
+																	"fontWeight": "400",
+																	"combinedFont": "Roboto-Regular",
+																	"ThemeFont": "Custom",
+																	"lineHeight": "20px",
+																	"textAlign": "left",
+																	"textDecorationLine": "none",
+																	"textDecorationStyle": "solid",
+																	"textDecorationColor": "#000000"
+																}
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "q-label newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_7",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_7"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											},
+											"S": {
+												"xs-xl": {
+													"col": "12",
+													"flexDirection": "column",
+													"alignItems": "",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "12px",
+													"paddingBottom": "12px",
+													"paddingLeft": "12px",
+													"paddingRight": "12px",
+													"backgroundColor": "#ffffff",
+													"boxShadow": ""
+												}
+											}
+										},
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VAutocomplete",
+															"P": {
+																"ID": {
+																	"H": "autoComplete_Sample1",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"eager": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"hideDetails": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"itemText": {
+																	"H": "╬'text'╩╩",
+																	"T": "prop"
+																},
+																"itemValue": {
+																	"H": "╬'value'╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"noFilter": {
+																	"H": "╬true╩╩",
+																	"T": "prop",
+																	"HL": "QS"
+																}
+															},
+															"E": {
+																"update:search-input": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\n;\r\ndebugger;\r\nvar comp = components.autoComplete_Sample1;\r\nvar allItems = quick.store.get(\"autocompleteSource\") || [];\r\nvar val = comp.internalSearch || \"\";\r\n// Filtering should be triggered only after the user's input reaches at least 3–5 characters in length to ensure better performance.\r\n// In large datasets (e.g., 5,000 to 10,000+ records), running a search on every keystroke can cause significant slowdowns and even browser freezes.\r\n// Therefore, starting the search only when a meaningful query is entered (e.g., 3 characters or more) helps preserve system resources and provides a smoother user experience.\r\nif (typeof val === \"string\" && val.length >= 4) {\r\n    var filtered = allItems.filter(function (item) {\r\n        return item.text.toLowerCase().includes(val.toLowerCase());\r\n    }).slice(0, 100);\r\n    if (Array.isArray(filtered)) {\r\n        comp.items = filtered;\r\n    }\r\n    quick.EM.trace('if');\r\n}\r\nelse {\r\n    quick.EM.trace('else');\r\n}\r\n",
+																	"HL": "JS"
+																}
+															},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_6"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginTop": "4px",
+																	"legendMarginLeft": "0px",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginLeft": "",
+																	"paddingTop": "12px",
+																	"paddingRight": "",
+																	"paddingBottom": "",
+																	"paddingLeft": "",
+																	"inputPaddingTop": "",
+																	"inputPaddingRight": "",
+																	"inputPaddingBottom": "",
+																	"inputPaddingLeft": "",
+																	"width": "",
+																	"height": "",
+																	"maxWidth": "",
+																	"maxHeight": "",
+																	"minWidth": "",
+																	"minHeight": "",
+																	"unlink": "false",
+																	"unlinkMax": "false",
+																	"unlinkMin": "false",
+																	"isSizeCollapsed": "false",
+																	"dense": "",
+																	"defaultFontColor": "#666666",
+																	"defaultFontFamily": "Roboto",
+																	"defaultFontSize": "16px",
+																	"defaultFontStyle": "normal",
+																	"defaultFontWeight": "400",
+																	"defaultCombinedFont": "Roboto-Regular",
+																	"deafultThemeFont": "Custom",
+																	"PHFontColor": "#9E9E9E",
+																	"PHFontFamily": "Roboto",
+																	"PHFontSize": "16px",
+																	"PHFontStyle": "normal",
+																	"PHFontWeight": "400",
+																	"PHCombinedFont": "Roboto-Regular",
+																	"PHThemeFont": "Custom",
+																	"inputFontColor": "#000",
+																	"inputFontFamily": "Roboto",
+																	"inputFontSize": "16px",
+																	"inputFontStyle": "normal",
+																	"inputFontWeight": "400",
+																	"inputCombinedFont": "Roboto-Regular",
+																	"inputThemeFont": "Custom",
+																	"menuFontColor": "#000",
+																	"menuFontFamily": "Roboto",
+																	"menuFontSize": "16px",
+																	"menuFontStyle": "normal",
+																	"menuFontWeight": "400",
+																	"menuCombinedFont": "Roboto-Regular",
+																	"menuThemeFont": "Custom",
+																	"errorMessageFontColor": "#E96767",
+																	"errorMessageFontFamily": "Roboto",
+																	"errorMessageFontSize": "12px",
+																	"errorMessageFontStyle": "normal",
+																	"errorMessageFontWeight": "400",
+																	"EMCombinedFont": "Roboto-Regular",
+																	"errorMessageThemeFont": "Custom",
+																	"errorMessageLineHeight": "",
+																	"backgroundColor": "#FFFFFF",
+																	"menuBackgroundColor": "#FFFFFF",
+																	"menuDefaultHoverColor": "#000000de",
+																	"menuActiveHoverColor": "#1976d2",
+																	"appendIconColor": "",
+																	"appendOuterIconColor": "",
+																	"prependIconColor": "",
+																	"prependInnerIconColor": "",
+																	"innerBoxShadow": "",
+																	"menuBoxShadow": "",
+																	"activeBorderColor": "#1976d2",
+																	"innerBoxSizing": "",
+																	"innerBorderTopStyle": "solid",
+																	"innerBorderRightStyle": "solid",
+																	"innerBorderBottomStyle": "solid",
+																	"innerBorderLeftStyle": "solid",
+																	"innerBorderTopLeftRadius": "",
+																	"innerBorderTopRightRadius": "",
+																	"innerBorderBottomLeftRadius": "",
+																	"innerBorderBottomRightRadius": "",
+																	"innerBorderTopWidth": "1px",
+																	"innerBorderRightWidth": "1px",
+																	"innerBorderBottomWidth": "1px",
+																	"innerBorderLeftWidth": "1px",
+																	"innerDefaultBorderColor": "#0000006b",
+																	"innerSides": "Top,Right,Bottom,Left",
+																	"outlined": ""
+																}
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted v-select v-autocomplete undefined newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "VColComp",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_3"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											},
+											"S": {
+												"xs-xl": {
+													"col": "",
+													"flexDirection": "column",
+													"alignItems": "",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "12px",
+													"paddingBottom": "12px",
+													"paddingLeft": "12px",
+													"paddingRight": "12px",
+													"backgroundColor": "#ffffff",
+													"boxShadow": ""
+												}
+											}
+										},
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_19",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "╬'span'╩╩",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬'This autocomplete component is preloaded with <b>100 records</b> at initialization. When the user opens the component, commonly used or top-listed entries are immediately visible. When the user starts searching, filtering is performed across the entire dataset. However, to preserve performance, the filtering process begins <b>only after 3 or more characters</b> are entered. This threshold prevents filtering on every keystroke, ensuring a smooth and responsive user experience. The number of initially displayed records can be configured between <b>50 and 200</b>, depending on the use case.(The default is <b>100</b>, which is generally recommended.)'╩╩",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"processHtml": {
+																	"H": "╬true╩╩",
+																	"T": "prop",
+																	"HL": "QS"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_19"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginTop": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginLeft": "",
+																	"paddingTop": "",
+																	"paddingRight": "",
+																	"paddingBottom": "",
+																	"paddingLeft": "",
+																	"fontColor": "#000000",
+																	"fontFamily": "Roboto",
+																	"fontSize": "16px",
+																	"fontStyle": "normal",
+																	"fontWeight": "400",
+																	"combinedFont": "Roboto-Regular",
+																	"ThemeFont": "Custom",
+																	"lineHeight": "20px",
+																	"textAlign": "left",
+																	"textDecorationLine": "none",
+																	"textDecorationStyle": "solid",
+																	"textDecorationColor": "#000000"
+																}
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "q-label newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_2",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_2"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											},
+											"S": {
+												"xs-xl": {
+													"col": "12",
+													"flexDirection": "column",
+													"alignItems": "",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "12px",
+													"paddingBottom": "12px",
+													"paddingLeft": "12px",
+													"paddingRight": "12px",
+													"backgroundColor": "#ffffff",
+													"boxShadow": ""
+												}
+											}
+										},
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VAutocomplete",
+															"P": {
+																"ID": {
+																	"H": "autoComplete_Sample2",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"eager": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"hideDetails": {
+																	"H": "╬false╩╩",
+																	"T": "prop"
+																},
+																"itemText": {
+																	"H": "╬'text'╩╩",
+																	"T": "prop"
+																},
+																"itemValue": {
+																	"H": "╬'value'╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"noFilter": {
+																	"H": "╬true╩╩",
+																	"T": "prop",
+																	"HL": "QS"
+																}
+															},
+															"E": {
+																"update:search-input": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\n;\r\ndebugger;\r\nvar comp = components.autoComplete_Sample2;\r\nvar allItems = quick.store.get(\"autocompleteSource\") || [];\r\nvar val = comp.internalSearch || \"\";\r\n// Filtering should be triggered only after the user's input reaches at least 3–5 characters in length to ensure better performance.\r\n// In large datasets (e.g., 5,000 to 10,000+ records), running a search on every keystroke can cause significant slowdowns and even browser freezes.\r\n// Therefore, starting the search only when a meaningful query is entered (e.g., 3 characters or more) helps preserve system resources and provides a smoother user experience.\r\nif (typeof val === \"string\" && val.length >= 4) {\r\n    var filtered = allItems.filter(function (item) {\r\n        return item.text.toLowerCase().includes(val.toLowerCase());\r\n    }).slice(0, 100);\r\n    if (Array.isArray(filtered)) {\r\n        comp.items = filtered;\r\n    }\r\n    quick.EM.trace('if');\r\n}\r\nelse {\r\n    quick.EM.trace('else');\r\n}\r\n",
+																	"HL": "JS"
+																}
+															},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_9"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginTop": "4px",
+																	"legendMarginLeft": "0px",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginLeft": "",
+																	"paddingTop": "12px",
+																	"paddingRight": "",
+																	"paddingBottom": "",
+																	"paddingLeft": "",
+																	"inputPaddingTop": "",
+																	"inputPaddingRight": "",
+																	"inputPaddingBottom": "",
+																	"inputPaddingLeft": "",
+																	"width": "",
+																	"height": "",
+																	"maxWidth": "",
+																	"maxHeight": "",
+																	"minWidth": "",
+																	"minHeight": "",
+																	"unlink": "false",
+																	"unlinkMax": "false",
+																	"unlinkMin": "false",
+																	"isSizeCollapsed": "false",
+																	"dense": "",
+																	"defaultFontColor": "#666666",
+																	"defaultFontFamily": "Roboto",
+																	"defaultFontSize": "16px",
+																	"defaultFontStyle": "normal",
+																	"defaultFontWeight": "400",
+																	"defaultCombinedFont": "Roboto-Regular",
+																	"deafultThemeFont": "Custom",
+																	"PHFontColor": "#9E9E9E",
+																	"PHFontFamily": "Roboto",
+																	"PHFontSize": "16px",
+																	"PHFontStyle": "normal",
+																	"PHFontWeight": "400",
+																	"PHCombinedFont": "Roboto-Regular",
+																	"PHThemeFont": "Custom",
+																	"inputFontColor": "#000",
+																	"inputFontFamily": "Roboto",
+																	"inputFontSize": "16px",
+																	"inputFontStyle": "normal",
+																	"inputFontWeight": "400",
+																	"inputCombinedFont": "Roboto-Regular",
+																	"inputThemeFont": "Custom",
+																	"menuFontColor": "#000",
+																	"menuFontFamily": "Roboto",
+																	"menuFontSize": "16px",
+																	"menuFontStyle": "normal",
+																	"menuFontWeight": "400",
+																	"menuCombinedFont": "Roboto-Regular",
+																	"menuThemeFont": "Custom",
+																	"errorMessageFontColor": "#E96767",
+																	"errorMessageFontFamily": "Roboto",
+																	"errorMessageFontSize": "12px",
+																	"errorMessageFontStyle": "normal",
+																	"errorMessageFontWeight": "400",
+																	"EMCombinedFont": "Roboto-Regular",
+																	"errorMessageThemeFont": "Custom",
+																	"errorMessageLineHeight": "",
+																	"backgroundColor": "#FFFFFF",
+																	"menuBackgroundColor": "#FFFFFF",
+																	"menuDefaultHoverColor": "#000000de",
+																	"menuActiveHoverColor": "#1976d2",
+																	"appendIconColor": "",
+																	"appendOuterIconColor": "",
+																	"prependIconColor": "",
+																	"prependInnerIconColor": "",
+																	"innerBoxShadow": "",
+																	"menuBoxShadow": "",
+																	"activeBorderColor": "#1976d2",
+																	"innerBoxSizing": "",
+																	"innerBorderTopStyle": "solid",
+																	"innerBorderRightStyle": "solid",
+																	"innerBorderBottomStyle": "solid",
+																	"innerBorderLeftStyle": "solid",
+																	"innerBorderTopLeftRadius": "",
+																	"innerBorderTopRightRadius": "",
+																	"innerBorderBottomLeftRadius": "",
+																	"innerBorderBottomRightRadius": "",
+																	"innerBorderTopWidth": "1px",
+																	"innerBorderRightWidth": "1px",
+																	"innerBorderBottomWidth": "1px",
+																	"innerBorderLeftWidth": "1px",
+																	"innerDefaultBorderColor": "#0000006b",
+																	"innerSides": "Top,Right,Bottom,Left",
+																	"outlined": ""
+																}
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted v-select v-autocomplete undefined newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_8",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_8"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											},
+											"S": {
+												"xs-xl": {
+													"col": "12",
+													"flexDirection": "column",
+													"alignItems": "",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "12px",
+													"paddingBottom": "12px",
+													"paddingLeft": "12px",
+													"paddingRight": "12px",
+													"backgroundColor": "#ffffff",
+													"boxShadow": ""
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							},
+							"S": {
+								"xs-xl": {
+									"marginLeft": "0px",
+									"marginRight": "0px",
+									"marginBottom": "0px",
+									"marginTop": "0px",
+									"paddingTop": "",
+									"paddingBottom": "",
+									"paddingLeft": "",
+									"paddingRight": "",
+									"width": "",
+									"height": "",
+									"backgroundColor": "#ffffff",
+									"boxShadow": ""
+								}
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_5"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container newDropBorder"
+			},
+			"S": {
+				"xs-xl": {
+					"marginLeft": "",
+					"marginRight": "",
+					"marginBottom": "",
+					"marginTop": "",
+					"paddingTop": "12px",
+					"paddingBottom": "12px",
+					"paddingLeft": "12px",
+					"paddingRight": "12px",
+					"width": "",
+					"height": "",
+					"backgroundColor": "#ffffff",
+					"boxShadow": ""
+				}
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"opt": {
+		"V": 2.2
+	}
+};
+export default pjson

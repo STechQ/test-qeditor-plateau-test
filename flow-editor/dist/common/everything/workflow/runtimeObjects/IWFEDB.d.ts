@@ -25,6 +25,7 @@ export interface IWFEDBProcessInst {
     businessKey: IProcessInstance["businessKey"];
     name: IProcessInstance["processName"];
     version: IProcessInstance["processVersion"];
+    label: IProcessInstance["processLabel"];
     clusterId: IProcessInstance["clusterId"];
     initiatorUser: IProcessInstance["initiatorUser"];
     initiatorUnit: IProcessInstance["initiatorUnit"];

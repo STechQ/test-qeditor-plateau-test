@@ -24,7 +24,7 @@ export type BooleanType = typeof BooleanType;
 export type DataType = typeof DataType;
 export type ConstantType = typeof ConstantType;
 export type AnyType = typeof AnyType;
-export type VariableTypes = StringType | NumberType | DateTimeType | EnumType | BooleanType | DataType | ConstantType | AnyType;
+export type VariableTypes = StringType | NumberType | DateTimeType | /*EnumType |*/ BooleanType | DataType | ConstantType | AnyType;
 export declare const allVariableTypes: VariableTypes[];
 export declare const ContextType = "context";
 export declare const InputType = "input";

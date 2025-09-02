@@ -1,0 +1,1481 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"EndRender": {
+					"H": "type Node = {\r\n  name: string;\r\n  id: number;\r\n  children?: Node[];\r\n};\r\n\r\nconst prefixes = ['oto', 'car', 'truck', 'plane', 'boat', 'bike', 'metro', 'train', 'taxi', 'van'];\r\nlet globalId = 1;\r\n\r\nfunction generateNodes(count: number, maxDepth = 3, currentDepth = 0): Node[] {\r\n  const nodes: Node[] = [];\r\n\r\n  for (let i = 0; i < count; i++) {\r\n    const prefix = prefixes[Math.floor(Math.random() * prefixes.length)];\r\n    const node: Node = {\r\n      name: `${prefix}-${globalId}`,\r\n      id: globalId++\r\n    };\r\n\r\n    if (currentDepth < maxDepth && Math.random() < 0.4) {\r\n      const childrenCount = Math.floor(Math.random() * 3) + 1;\r\n      node.children = generateNodes(childrenCount, maxDepth, currentDepth + 1);\r\n    }\r\n\r\n    nodes.push(node);\r\n  }\r\n\r\n  return nodes;\r\n}\r\nconst fullData: Node[] = generateNodes(500);\r\nconst initialData: Node[] = fullData.slice(0, 100);\r\n\r\nquick.store.set(\"treeFullData\", fullData);\r\nquick.store.set(\"treeInitialData\", initialData);\r\n\r\ncomponents.myTreeview.items = initialData;\r\n\r\n",
+					"HL": "TS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_2",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "true",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_4",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_6",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "'span'",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "'Only the first 100 nodes are initially loaded into the Treeview to ensure fast rendering and maintain performance. Searching is triggered when the user inputs at least 5 characters, preventing unnecessary filtering on short queries. A debounce is applied to delay the search until typing pauses, reducing system load. During search, recursive filtering runs across the full dataset, automatically expanding branches with matches. This approach optimizes performance and user experience in large, deep tree structures.'",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"processHtml": {
+																	"H": "true",
+																	"T": "prop",
+																	"HL": "QS"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_6"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginTop": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginLeft": "",
+																	"paddingTop": "",
+																	"paddingRight": "",
+																	"paddingBottom": "",
+																	"paddingLeft": "",
+																	"fontColor": "#000000",
+																	"fontFamily": "Roboto",
+																	"fontSize": "16px",
+																	"fontStyle": "normal",
+																	"fontWeight": "400",
+																	"combinedFont": "Roboto-Regular",
+																	"ThemeFont": "Custom",
+																	"lineHeight": "20px",
+																	"textAlign": "left",
+																	"textDecorationLine": "none",
+																	"textDecorationStyle": "solid",
+																	"textDecorationColor": "#000000"
+																}
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_15",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_15"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column",
+															"c:col-12"
+														]
+													},
+													"class": "d-flex flex-column col-12"
+												}
+											},
+											"S": {
+												"xs-xl": {
+													"col": "",
+													"flexDirection": "column",
+													"alignItems": "",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "12px",
+													"paddingBottom": "12px",
+													"paddingLeft": "12px",
+													"paddingRight": "12px",
+													"backgroundColor": "",
+													"boxShadow": "",
+													"boxSizing": "",
+													"borderTopStyle": "",
+													"borderRightStyle": "",
+													"borderBottomStyle": "",
+													"borderLeftStyle": "",
+													"borderTopLeftRadius": "",
+													"borderTopRightRadius": "",
+													"borderBottomLeftRadius": "",
+													"borderBottomRightRadius": "",
+													"borderTopWidth": "",
+													"borderRightWidth": "",
+													"borderBottomWidth": "",
+													"borderLeftWidth": "",
+													"defaultBorderColor": "",
+													"sides": ""
+												}
+											}
+										},
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VCard",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_8",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VRow",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_21",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VCol",
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "VTextField",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_166",
+																													"T": "prop"
+																												},
+																												"label": {
+																													"H": "'Search Category'",
+																													"T": "prop",
+																													"HL": "QS"
+																												},
+																												"hideDetails": {
+																													"H": "true",
+																													"T": "prop",
+																													"HL": "QS"
+																												}
+																											},
+																											"E": {
+																												"input": {
+																													"H": "debugger;\r\nfunction onInput(value, caseSensitive) {\r\n  const comp = components.myTreeview as any;\r\n  const searchValueRaw = (value || \"\").trim();\r\n\r\n  clearTimeout(comp._debounceTimeout);\r\n\r\n  comp._debounceTimeout = setTimeout(() => {\r\n    const allData = quick.store.get(\"treeFullData\") || [];\r\n    const initial = quick.store.get(\"treeInitialData\") || [];\r\n\r\n    if (searchValueRaw.length >= 5) {\r\n      const openIds = [];\r\n      const filtered = filterTreeWithOpenIds(allData, searchValueRaw, caseSensitive, openIds);\r\n\r\n      if (filtered.length > 0) {\r\n        comp.items = filtered;\r\n        comp.open = openIds;\r\n      } else {\r\n        // Eşleşme yoksa: caseSensitive ise başlangıç verisini göster\r\n        comp.items = caseSensitive ? initial : [];\r\n        comp.open = [];\r\n        comp.search = \"\";\r\n      }\r\n    } else {\r\n      comp.items = initial;\r\n      comp.open = [];\r\n      comp.search = \"\";\r\n    }\r\n  }, 300);\r\n}\r\n\r\n\r\n\r\nfunction filterTreeWithOpenIds(nodes, search, caseSensitive, openIds) {\r\n  const filteredNodes = [];\r\n\r\n  for (const node of nodes) {\r\n    const nameRaw = node.name || \"\";\r\n    const name = caseSensitive ? nameRaw : nameRaw.toLowerCase();\r\n    const searchVal = caseSensitive ? search : search.toLowerCase();\r\n\r\n    const children = node.children || [];\r\n    const filteredChildren = filterTreeWithOpenIds(children, search, caseSensitive, openIds);\r\n\r\n    const selfMatch = name.includes(searchVal);\r\n\r\n    if (selfMatch || filteredChildren.length > 0) {\r\n      if (filteredChildren.length > 0) {\r\n        openIds.push(node.id); // child match varsa node'u aç\r\n      }\r\n      filteredNodes.push({\r\n        ...node,\r\n        children: filteredChildren.length > 0 ? filteredChildren : undefined\r\n      });\r\n    }\r\n  }\r\n\r\n  return filteredNodes;\r\n}\r\n\r\n\r\nonInput(value, components.caseSensitiveCheckboxValue.qValue);",
+																													"P": "value:any",
+																													"HL": "TS"
+																												}
+																											},
+																											"C": {},
+																											"_Editor": {
+																												"eID": "EdtrComp_166"
+																											},
+																											"O": {
+																												"cType": "slot",
+																												"compDomClasses": "v-input theme--light v-text-field v-text-field--is-booted"
+																											},
+																											"S": {
+																												"xs-xl": {
+																													"innerSides": "Top,Right,Bottom,Left",
+																													"innerBorderTopStyle": "solid",
+																													"innerBorderBottomStyle": "solid",
+																													"innerBorderLeftStyle": "solid",
+																													"innerBorderRightStyle": "solid",
+																													"outlined": "true",
+																													"minHeight": "56px",
+																													"innerBorderTopLeftRadius": "5px",
+																													"innerBorderTopRightRadius": "5px",
+																													"innerBorderBottomLeftRadius": "5px",
+																													"inputPaddingLeft": "12px",
+																													"inputPaddingRight": "12px",
+																													"legendMarginLeft": "0px",
+																													"innerBorderBottomRightRadius": "5px",
+																													"innerBorderTopWidth": "1px",
+																													"innerBorderBottomWidth": "1px",
+																													"innerBorderLeftWidth": "1px",
+																													"innerBorderRightWidth": "1px",
+																													"innerDefaultBorderColor": "#ffffff28",
+																													"backgroundColor": "#ffffff28",
+																													"PHFontColor": "#ffffff",
+																													"PHCombinedFont": "Roboto-",
+																													"PHFontFamily": "",
+																													"PHFontSize": "undefinedpx",
+																													"PHFontStyle": "normal",
+																													"PHFontWeight": "undefined",
+																													"PHThemeFont": "Custom",
+																													"labelDefaultFontColor": "#ffffff99",
+																													"labelDefaultCombinedFont": "Roboto-",
+																													"labelDefaultFontFamily": "",
+																													"labelDefaultFontSize": "undefinedundefinedpx",
+																													"labelDefaultFontStyle": "normal",
+																													"labelDefaultFontWeight": "undefined",
+																													"labelDefaultThemeFont": "Custom"
+																												}
+																											}
+																										},
+																										{
+																											"T": "VCheckbox",
+																											"P": {
+																												"ID": {
+																													"H": "caseSensitiveCheckboxValue",
+																													"T": "prop",
+																													"HL": "QS"
+																												},
+																												"hideDetails": {
+																													"H": "false",
+																													"T": "prop"
+																												},
+																												"label": {
+																													"H": "'Case sensitive search'",
+																													"T": "prop",
+																													"HL": "QS"
+																												},
+																												"visible": {
+																													"H": "true",
+																													"T": "prop"
+																												}
+																											},
+																											"E": {},
+																											"C": {},
+																											"_Editor": {
+																												"eID": "EdtrComp_3"
+																											},
+																											"S": {
+																												"xs-xl": {
+																													"marginLeft": "",
+																													"marginRight": "",
+																													"marginBottom": "",
+																													"marginTop": "16px",
+																													"paddingTop": "4px",
+																													"paddingBottom": "",
+																													"paddingLeft": "",
+																													"paddingRight": "",
+																													"width": "",
+																													"height": "",
+																													"maxWidth": "",
+																													"maxHeight": "",
+																													"minWidth": "",
+																													"minHeight": "",
+																													"unlink": "false",
+																													"unlinkMax": "false",
+																													"unlinkMin": "false",
+																													"isSizeCollapsed": "false",
+																													"dense": "",
+																													"fontColor": "#ffffff99",
+																													"fontFamily": "Roboto",
+																													"fontSize": "16px",
+																													"fontStyle": "normal",
+																													"fontWeight": "400",
+																													"combinedFont": "Roboto-Regular",
+																													"ThemeFont": "Custom",
+																													"errorMessageFontColor": "#E96767",
+																													"errorMessageFontFamily": "Roboto",
+																													"errorMessageFontSize": "12px",
+																													"errorMessageFontStyle": "normal",
+																													"errorMessageFontWeight": "400",
+																													"EMCombinedFont": "Roboto-Regular",
+																													"errorMessageThemeFont": "Custom",
+																													"errorMessageLineHeight": "",
+																													"imageSize": "24px",
+																													"backgroundColor": "#fffff",
+																													"defaultBorderColor": "#ffffff",
+																													"selectedBorderColor": "#686868",
+																													"boxShadow": "",
+																													"boxSizing": "",
+																													"borderTopStyle": "",
+																													"borderRightStyle": "",
+																													"borderBottomStyle": "",
+																													"borderLeftStyle": "",
+																													"borderTopLeftRadius": "",
+																													"borderTopRightRadius": "",
+																													"borderBottomLeftRadius": "",
+																													"borderBottomRightRadius": "",
+																													"borderTopWidth": "",
+																													"borderRightWidth": "",
+																													"borderBottomWidth": "",
+																													"borderLeftWidth": "",
+																													"outerBorderColor": "",
+																													"sides": ""
+																												}
+																											},
+																											"O": {
+																												"cType": "slot"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"E": {},
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_26",
+																									"T": "prop"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_26"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"layout": {
+																									"dOpt": {
+																										"xs": [
+																											"d:d-flex",
+																											"fd:flex-column"
+																										]
+																									},
+																									"class": "d-flex flex-column"
+																								}
+																							},
+																							"S": {
+																								"xs-xl": {
+																									"col": "",
+																									"flexDirection": "column",
+																									"alignItems": "",
+																									"justifyContent": "",
+																									"marginLeft": "",
+																									"marginRight": "",
+																									"marginBottom": "",
+																									"marginTop": "",
+																									"paddingTop": "12px",
+																									"paddingBottom": "12px",
+																									"paddingLeft": "12px",
+																									"paddingRight": "12px",
+																									"backgroundColor": "",
+																									"boxShadow": "",
+																									"boxSizing": "",
+																									"borderTopStyle": "",
+																									"borderRightStyle": "",
+																									"borderBottomStyle": "",
+																									"borderLeftStyle": "",
+																									"borderTopLeftRadius": "",
+																									"borderTopRightRadius": "",
+																									"borderBottomLeftRadius": "",
+																									"borderBottomRightRadius": "",
+																									"borderTopWidth": "",
+																									"borderRightWidth": "",
+																									"borderBottomWidth": "",
+																									"borderLeftWidth": "",
+																									"defaultBorderColor": "",
+																									"sides": ""
+																								}
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_21"
+																			},
+																			"S": {
+																				"xs-xl": {
+																					"marginLeft": "0px",
+																					"marginRight": "0px",
+																					"marginBottom": "0px",
+																					"marginTop": "0px",
+																					"paddingTop": "",
+																					"paddingBottom": "",
+																					"paddingLeft": "",
+																					"paddingRight": "",
+																					"width": "",
+																					"height": "",
+																					"maxWidth": "",
+																					"maxHeight": "",
+																					"minWidth": "",
+																					"minHeight": "",
+																					"unlink": "false",
+																					"unlinkMax": "false",
+																					"unlinkMin": "false",
+																					"isSizeCollapsed": "false",
+																					"backgroundColor": "",
+																					"boxShadow": "",
+																					"boxSizing": "",
+																					"borderTopStyle": "",
+																					"borderRightStyle": "",
+																					"borderBottomStyle": "",
+																					"borderLeftStyle": "",
+																					"borderTopLeftRadius": "",
+																					"borderTopRightRadius": "",
+																					"borderBottomLeftRadius": "",
+																					"borderBottomRightRadius": "",
+																					"borderTopWidth": "",
+																					"borderRightWidth": "",
+																					"borderBottomWidth": "",
+																					"borderLeftWidth": "",
+																					"defaultBorderColor": "",
+																					"sides": ""
+																				}
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_8"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginLeft": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginTop": "",
+																	"paddingTop": "",
+																	"paddingBottom": "",
+																	"paddingLeft": "",
+																	"paddingRight": "",
+																	"width": "500px",
+																	"height": "124px",
+																	"maxWidth": "",
+																	"maxHeight": "",
+																	"minWidth": "",
+																	"minHeight": "",
+																	"unlink": "false",
+																	"unlinkMax": "false",
+																	"unlinkMin": "false",
+																	"isSizeCollapsed": "false",
+																	"backgroundColor": "#1867c0",
+																	"position": "relative",
+																	"top": "",
+																	"bottom": "",
+																	"left": "",
+																	"right": "",
+																	"zIndex": "",
+																	"boxShadow": "0px 3px 1px -2px #00000033,0px 2px 2px 0px #00000024,0px 1px 5px 0px #0000001f",
+																	"boxSizing": "",
+																	"borderTopStyle": "solid",
+																	"borderRightStyle": "solid",
+																	"borderBottomStyle": "solid",
+																	"borderLeftStyle": "solid",
+																	"borderTopLeftRadius": "4px",
+																	"borderTopRightRadius": "4px",
+																	"borderBottomLeftRadius": "4px",
+																	"borderBottomRightRadius": "4px",
+																	"borderTopWidth": "0px",
+																	"borderRightWidth": "0px",
+																	"borderBottomWidth": "0px",
+																	"borderLeftWidth": "0px",
+																	"defaultBorderColor": "#ffffff",
+																	"sides": "Top,Right,Bottom,Left"
+																}
+															},
+															"O": {
+																"cType": "slot"
+															}
+														},
+														{
+															"T": "VCard",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_266",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VTreeview",
+																			"P": {
+																				"ID": {
+																					"H": "myTreeview",
+																					"T": "prop",
+																					"HL": "QS"
+																				},
+																				"color": {
+																					"H": "'primary'",
+																					"T": "prop"
+																				},
+																				"selectedColor": {
+																					"H": "'primary'",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_165"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-treeview theme--light"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_266"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginLeft": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginTop": "",
+																	"paddingTop": "",
+																	"paddingBottom": "",
+																	"paddingLeft": "",
+																	"paddingRight": "",
+																	"width": "500px",
+																	"height": "",
+																	"maxWidth": "",
+																	"maxHeight": "",
+																	"minWidth": "",
+																	"minHeight": "",
+																	"unlink": "false",
+																	"unlinkMax": "false",
+																	"unlinkMin": "false",
+																	"isSizeCollapsed": "false",
+																	"backgroundColor": "#ffffff",
+																	"position": "relative",
+																	"top": "",
+																	"bottom": "",
+																	"left": "",
+																	"right": "",
+																	"zIndex": "",
+																	"boxShadow": "0px 3px 1px -2px #00000033,0px 2px 2px 0px #00000024,0px 1px 5px 0px #0000001f",
+																	"boxSizing": "",
+																	"borderTopStyle": "solid",
+																	"borderRightStyle": "solid",
+																	"borderBottomStyle": "solid",
+																	"borderLeftStyle": "solid",
+																	"borderTopLeftRadius": "4px",
+																	"borderTopRightRadius": "4px",
+																	"borderBottomLeftRadius": "4px",
+																	"borderBottomRightRadius": "4px",
+																	"borderTopWidth": "0px",
+																	"borderRightWidth": "0px",
+																	"borderBottomWidth": "0px",
+																	"borderLeftWidth": "0px",
+																	"defaultBorderColor": "#ffffff",
+																	"sides": "Top,Right,Bottom,Left"
+																}
+															},
+															"O": {
+																"cType": "slot"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_7",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_7"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												}
+											},
+											"S": {
+												"xs-xl": {
+													"col": "",
+													"flexDirection": "column",
+													"alignItems": "center",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "12px",
+													"paddingBottom": "12px",
+													"paddingLeft": "12px",
+													"paddingRight": "12px",
+													"backgroundColor": "",
+													"boxShadow": "",
+													"boxSizing": "",
+													"borderTopStyle": "",
+													"borderRightStyle": "",
+													"borderBottomStyle": "",
+													"borderLeftStyle": "",
+													"borderTopLeftRadius": "",
+													"borderTopRightRadius": "",
+													"borderBottomLeftRadius": "",
+													"borderBottomRightRadius": "",
+													"borderTopWidth": "",
+													"borderRightWidth": "",
+													"borderBottomWidth": "",
+													"borderLeftWidth": "",
+													"defaultBorderColor": "",
+													"sides": ""
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_2"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_1",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"EndRender": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\n;\r\nvar prefixes = ['oto', 'car', 'truck', 'plane', 'boat', 'bike', 'metro', 'train', 'taxi', 'van'];\r\nvar globalId = 1;\r\nfunction generateNodes(count, maxDepth, currentDepth) {\r\n    if (maxDepth === void 0) { maxDepth = 3; }\r\n    if (currentDepth === void 0) { currentDepth = 0; }\r\n    var nodes = [];\r\n    for (var i = 0; i < count; i++) {\r\n        var prefix = prefixes[Math.floor(Math.random() * prefixes.length)];\r\n        var node = {\r\n            name: prefix + \"-\" + globalId,\r\n            id: globalId++\r\n        };\r\n        if (currentDepth < maxDepth && Math.random() < 0.4) {\r\n            var childrenCount = Math.floor(Math.random() * 3) + 1;\r\n            node.children = generateNodes(childrenCount, maxDepth, currentDepth + 1);\r\n        }\r\n        nodes.push(node);\r\n    }\r\n    return nodes;\r\n}\r\nvar fullData = generateNodes(500);\r\nvar initialData = fullData.slice(0, 100);\r\nquick.store.set(\"treeFullData\", fullData);\r\nquick.store.set(\"treeInitialData\", initialData);\r\ncomponents.myTreeview.items = initialData;\r\n",
+					"HL": "JS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_2",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_4",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "QLabel",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_6",
+																	"T": "prop"
+																},
+																"tagType": {
+																	"H": "╬'span'╩╩",
+																	"T": "prop"
+																},
+																"text": {
+																	"H": "╬'Only the first 100 nodes are initially loaded into the Treeview to ensure fast rendering and maintain performance. Searching is triggered when the user inputs at least 5 characters, preventing unnecessary filtering on short queries. A debounce is applied to delay the search until typing pauses, reducing system load. During search, recursive filtering runs across the full dataset, automatically expanding branches with matches. This approach optimizes performance and user experience in large, deep tree structures.'╩╩",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"processHtml": {
+																	"H": "╬true╩╩",
+																	"T": "prop",
+																	"HL": "QS"
+																}
+															},
+															"E": {},
+															"C": {},
+															"_Editor": {
+																"eID": "EdtrComp_6"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginTop": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginLeft": "",
+																	"paddingTop": "",
+																	"paddingRight": "",
+																	"paddingBottom": "",
+																	"paddingLeft": "",
+																	"fontColor": "#000000",
+																	"fontFamily": "Roboto",
+																	"fontSize": "16px",
+																	"fontStyle": "normal",
+																	"fontWeight": "400",
+																	"combinedFont": "Roboto-Regular",
+																	"ThemeFont": "Custom",
+																	"lineHeight": "20px",
+																	"textAlign": "left",
+																	"textDecorationLine": "none",
+																	"textDecorationStyle": "solid",
+																	"textDecorationColor": "#000000"
+																}
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "q-label newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_15",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_15"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column",
+															"c:col-12"
+														]
+													},
+													"class": "d-flex flex-column col-12"
+												},
+												"compDomClasses": "col d-flex flex-column col-12 newDropBorder"
+											},
+											"S": {
+												"xs-xl": {
+													"col": "",
+													"flexDirection": "column",
+													"alignItems": "",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "12px",
+													"paddingBottom": "12px",
+													"paddingLeft": "12px",
+													"paddingRight": "12px",
+													"backgroundColor": "",
+													"boxShadow": "",
+													"boxSizing": "",
+													"borderTopStyle": "",
+													"borderRightStyle": "",
+													"borderBottomStyle": "",
+													"borderLeftStyle": "",
+													"borderTopLeftRadius": "",
+													"borderTopRightRadius": "",
+													"borderBottomLeftRadius": "",
+													"borderBottomRightRadius": "",
+													"borderTopWidth": "",
+													"borderRightWidth": "",
+													"borderBottomWidth": "",
+													"borderLeftWidth": "",
+													"defaultBorderColor": "",
+													"sides": ""
+												}
+											}
+										},
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VCard",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_8",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VRow",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_21",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "VCol",
+																							"C": {
+																								"default": {
+																									"c": [
+																										{
+																											"T": "VTextField",
+																											"P": {
+																												"ID": {
+																													"H": "EdtrComp_166",
+																													"T": "prop"
+																												},
+																												"label": {
+																													"H": "╬'Search Category'╩╩",
+																													"T": "prop",
+																													"HL": "QS"
+																												},
+																												"hideDetails": {
+																													"H": "╬true╩╩",
+																													"T": "prop",
+																													"HL": "QS"
+																												}
+																											},
+																											"E": {
+																												"input": {
+																													"H": "var __assign = (this && this.__assign) || function () {\r\n    __assign = Object.assign || function(t) {\r\n        for (var s, i = 1, n = arguments.length; i < n; i++) {\r\n            s = arguments[i];\r\n            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))\r\n                t[p] = s[p];\r\n        }\r\n        return t;\r\n    };\r\n    return __assign.apply(this, arguments);\r\n};\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\ndebugger;\r\nfunction onInput(value, caseSensitive) {\r\n    var comp = components.myTreeview;\r\n    var searchValueRaw = (value || \"\").trim();\r\n    clearTimeout(comp._debounceTimeout);\r\n    comp._debounceTimeout = setTimeout(function () {\r\n        var allData = quick.store.get(\"treeFullData\") || [];\r\n        var initial = quick.store.get(\"treeInitialData\") || [];\r\n        if (searchValueRaw.length >= 5) {\r\n            var openIds = [];\r\n            var filtered = filterTreeWithOpenIds(allData, searchValueRaw, caseSensitive, openIds);\r\n            if (filtered.length > 0) {\r\n                comp.items = filtered;\r\n                comp.open = openIds;\r\n            }\r\n            else {\r\n                // Eşleşme yoksa: caseSensitive ise başlangıç verisini göster\r\n                comp.items = caseSensitive ? initial : [];\r\n                comp.open = [];\r\n                comp.search = \"\";\r\n            }\r\n        }\r\n        else {\r\n            comp.items = initial;\r\n            comp.open = [];\r\n            comp.search = \"\";\r\n        }\r\n    }, 300);\r\n}\r\nfunction filterTreeWithOpenIds(nodes, search, caseSensitive, openIds) {\r\n    var filteredNodes = [];\r\n    for (var _i = 0, nodes_1 = nodes; _i < nodes_1.length; _i++) {\r\n        var node = nodes_1[_i];\r\n        var nameRaw = node.name || \"\";\r\n        var name = caseSensitive ? nameRaw : nameRaw.toLowerCase();\r\n        var searchVal = caseSensitive ? search : search.toLowerCase();\r\n        var children = node.children || [];\r\n        var filteredChildren = filterTreeWithOpenIds(children, search, caseSensitive, openIds);\r\n        var selfMatch = name.includes(searchVal);\r\n        if (selfMatch || filteredChildren.length > 0) {\r\n            if (filteredChildren.length > 0) {\r\n                openIds.push(node.id); // child match varsa node'u aç\r\n            }\r\n            filteredNodes.push(__assign(__assign({}, node), { children: filteredChildren.length > 0 ? filteredChildren : undefined }));\r\n        }\r\n    }\r\n    return filteredNodes;\r\n}\r\nonInput(value, components.caseSensitiveCheckboxValue.qValue);\r\n",
+																													"P": "value:any",
+																													"HL": "JS"
+																												}
+																											},
+																											"C": {},
+																											"_Editor": {
+																												"eID": "EdtrComp_166"
+																											},
+																											"O": {
+																												"cType": "slot",
+																												"compDomClasses": "v-input v-input--hide-details theme--light v-text-field v-text-field--is-booted v-text-field--enclosed v-text-field--outlined undefined newDropBorder"
+																											},
+																											"S": {
+																												"xs-xl": {
+																													"innerSides": "Top,Right,Bottom,Left",
+																													"innerBorderTopStyle": "solid",
+																													"innerBorderBottomStyle": "solid",
+																													"innerBorderLeftStyle": "solid",
+																													"innerBorderRightStyle": "solid",
+																													"outlined": "true",
+																													"minHeight": "56px",
+																													"innerBorderTopLeftRadius": "5px",
+																													"innerBorderTopRightRadius": "5px",
+																													"innerBorderBottomLeftRadius": "5px",
+																													"inputPaddingLeft": "12px",
+																													"inputPaddingRight": "12px",
+																													"legendMarginLeft": "0px",
+																													"innerBorderBottomRightRadius": "5px",
+																													"innerBorderTopWidth": "1px",
+																													"innerBorderBottomWidth": "1px",
+																													"innerBorderLeftWidth": "1px",
+																													"innerBorderRightWidth": "1px",
+																													"innerDefaultBorderColor": "#ffffff28",
+																													"backgroundColor": "#ffffff28",
+																													"PHFontColor": "#ffffff",
+																													"PHCombinedFont": "Roboto-",
+																													"PHFontFamily": "",
+																													"PHFontSize": "undefinedpx",
+																													"PHFontStyle": "normal",
+																													"PHFontWeight": "undefined",
+																													"PHThemeFont": "Custom",
+																													"labelDefaultFontColor": "#ffffff99",
+																													"labelDefaultCombinedFont": "Roboto-",
+																													"labelDefaultFontFamily": "",
+																													"labelDefaultFontSize": "undefinedundefinedpx",
+																													"labelDefaultFontStyle": "normal",
+																													"labelDefaultFontWeight": "undefined",
+																													"labelDefaultThemeFont": "Custom"
+																												}
+																											}
+																										},
+																										{
+																											"T": "VCheckbox",
+																											"P": {
+																												"ID": {
+																													"H": "caseSensitiveCheckboxValue",
+																													"T": "prop",
+																													"HL": "QS"
+																												},
+																												"hideDetails": {
+																													"H": "╬false╩╩",
+																													"T": "prop"
+																												},
+																												"label": {
+																													"H": "╬'Case sensitive search'╩╩",
+																													"T": "prop",
+																													"HL": "QS"
+																												},
+																												"visible": {
+																													"H": "╬true╩╩",
+																													"T": "prop"
+																												}
+																											},
+																											"E": {},
+																											"C": {},
+																											"_Editor": {
+																												"eID": "EdtrComp_3"
+																											},
+																											"S": {
+																												"xs-xl": {
+																													"marginLeft": "",
+																													"marginRight": "",
+																													"marginBottom": "",
+																													"marginTop": "16px",
+																													"paddingTop": "4px",
+																													"paddingBottom": "",
+																													"paddingLeft": "",
+																													"paddingRight": "",
+																													"width": "",
+																													"height": "",
+																													"maxWidth": "",
+																													"maxHeight": "",
+																													"minWidth": "",
+																													"minHeight": "",
+																													"unlink": "false",
+																													"unlinkMax": "false",
+																													"unlinkMin": "false",
+																													"isSizeCollapsed": "false",
+																													"dense": "",
+																													"fontColor": "#ffffff99",
+																													"fontFamily": "Roboto",
+																													"fontSize": "16px",
+																													"fontStyle": "normal",
+																													"fontWeight": "400",
+																													"combinedFont": "Roboto-Regular",
+																													"ThemeFont": "Custom",
+																													"errorMessageFontColor": "#E96767",
+																													"errorMessageFontFamily": "Roboto",
+																													"errorMessageFontSize": "12px",
+																													"errorMessageFontStyle": "normal",
+																													"errorMessageFontWeight": "400",
+																													"EMCombinedFont": "Roboto-Regular",
+																													"errorMessageThemeFont": "Custom",
+																													"errorMessageLineHeight": "",
+																													"imageSize": "24px",
+																													"backgroundColor": "#fffff",
+																													"defaultBorderColor": "#ffffff",
+																													"selectedBorderColor": "#686868",
+																													"boxShadow": "",
+																													"boxSizing": "",
+																													"borderTopStyle": "",
+																													"borderRightStyle": "",
+																													"borderBottomStyle": "",
+																													"borderLeftStyle": "",
+																													"borderTopLeftRadius": "",
+																													"borderTopRightRadius": "",
+																													"borderBottomLeftRadius": "",
+																													"borderBottomRightRadius": "",
+																													"borderTopWidth": "",
+																													"borderRightWidth": "",
+																													"borderBottomWidth": "",
+																													"borderLeftWidth": "",
+																													"outerBorderColor": "",
+																													"sides": ""
+																												}
+																											},
+																											"O": {
+																												"cType": "slot",
+																												"compDomClasses": "v-input theme--light v-input--selection-controls v-input--checkbox newDropBorder"
+																											}
+																										}
+																									],
+																									"cType": "slot"
+																								}
+																							},
+																							"E": {},
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_26",
+																									"T": "prop"
+																								}
+																							},
+																							"_Editor": {
+																								"eID": "EdtrComp_26"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"layout": {
+																									"dOpt": {
+																										"xs": [
+																											"d:d-flex",
+																											"fd:flex-column"
+																										]
+																									},
+																									"class": "d-flex flex-column"
+																								},
+																								"compDomClasses": "col d-flex flex-column newDropBorder"
+																							},
+																							"S": {
+																								"xs-xl": {
+																									"col": "",
+																									"flexDirection": "column",
+																									"alignItems": "",
+																									"justifyContent": "",
+																									"marginLeft": "",
+																									"marginRight": "",
+																									"marginBottom": "",
+																									"marginTop": "",
+																									"paddingTop": "12px",
+																									"paddingBottom": "12px",
+																									"paddingLeft": "12px",
+																									"paddingRight": "12px",
+																									"backgroundColor": "",
+																									"boxShadow": "",
+																									"boxSizing": "",
+																									"borderTopStyle": "",
+																									"borderRightStyle": "",
+																									"borderBottomStyle": "",
+																									"borderLeftStyle": "",
+																									"borderTopLeftRadius": "",
+																									"borderTopRightRadius": "",
+																									"borderBottomLeftRadius": "",
+																									"borderBottomRightRadius": "",
+																									"borderTopWidth": "",
+																									"borderRightWidth": "",
+																									"borderBottomWidth": "",
+																									"borderLeftWidth": "",
+																									"defaultBorderColor": "",
+																									"sides": ""
+																								}
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_21"
+																			},
+																			"S": {
+																				"xs-xl": {
+																					"marginLeft": "0px",
+																					"marginRight": "0px",
+																					"marginBottom": "0px",
+																					"marginTop": "0px",
+																					"paddingTop": "",
+																					"paddingBottom": "",
+																					"paddingLeft": "",
+																					"paddingRight": "",
+																					"width": "",
+																					"height": "",
+																					"maxWidth": "",
+																					"maxHeight": "",
+																					"minWidth": "",
+																					"minHeight": "",
+																					"unlink": "false",
+																					"unlinkMax": "false",
+																					"unlinkMin": "false",
+																					"isSizeCollapsed": "false",
+																					"backgroundColor": "",
+																					"boxShadow": "",
+																					"boxSizing": "",
+																					"borderTopStyle": "",
+																					"borderRightStyle": "",
+																					"borderBottomStyle": "",
+																					"borderLeftStyle": "",
+																					"borderTopLeftRadius": "",
+																					"borderTopRightRadius": "",
+																					"borderBottomLeftRadius": "",
+																					"borderBottomRightRadius": "",
+																					"borderTopWidth": "",
+																					"borderRightWidth": "",
+																					"borderBottomWidth": "",
+																					"borderLeftWidth": "",
+																					"defaultBorderColor": "",
+																					"sides": ""
+																				}
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "row newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_8"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginLeft": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginTop": "",
+																	"paddingTop": "",
+																	"paddingBottom": "",
+																	"paddingLeft": "",
+																	"paddingRight": "",
+																	"width": "500px",
+																	"height": "124px",
+																	"maxWidth": "",
+																	"maxHeight": "",
+																	"minWidth": "",
+																	"minHeight": "",
+																	"unlink": "false",
+																	"unlinkMax": "false",
+																	"unlinkMin": "false",
+																	"isSizeCollapsed": "false",
+																	"backgroundColor": "#1867c0",
+																	"position": "relative",
+																	"top": "",
+																	"bottom": "",
+																	"left": "",
+																	"right": "",
+																	"zIndex": "",
+																	"boxShadow": "0px 3px 1px -2px #00000033,0px 2px 2px 0px #00000024,0px 1px 5px 0px #0000001f",
+																	"boxSizing": "",
+																	"borderTopStyle": "solid",
+																	"borderRightStyle": "solid",
+																	"borderBottomStyle": "solid",
+																	"borderLeftStyle": "solid",
+																	"borderTopLeftRadius": "4px",
+																	"borderTopRightRadius": "4px",
+																	"borderBottomLeftRadius": "4px",
+																	"borderBottomRightRadius": "4px",
+																	"borderTopWidth": "0px",
+																	"borderRightWidth": "0px",
+																	"borderBottomWidth": "0px",
+																	"borderLeftWidth": "0px",
+																	"defaultBorderColor": "#ffffff",
+																	"sides": "Top,Right,Bottom,Left"
+																}
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-card v-sheet theme--light newDropBorder"
+															}
+														},
+														{
+															"T": "VCard",
+															"P": {
+																"ID": {
+																	"H": "EdtrComp_266",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "VTreeview",
+																			"P": {
+																				"ID": {
+																					"H": "myTreeview",
+																					"T": "prop",
+																					"HL": "QS"
+																				},
+																				"color": {
+																					"H": "╬'primary'╩╩",
+																					"T": "prop"
+																				},
+																				"selectedColor": {
+																					"H": "╬'primary'╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_165"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "v-treeview theme--light newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_266"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginLeft": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginTop": "",
+																	"paddingTop": "",
+																	"paddingBottom": "",
+																	"paddingLeft": "",
+																	"paddingRight": "",
+																	"width": "500px",
+																	"height": "",
+																	"maxWidth": "",
+																	"maxHeight": "",
+																	"minWidth": "",
+																	"minHeight": "",
+																	"unlink": "false",
+																	"unlinkMax": "false",
+																	"unlinkMin": "false",
+																	"isSizeCollapsed": "false",
+																	"backgroundColor": "#ffffff",
+																	"position": "relative",
+																	"top": "",
+																	"bottom": "",
+																	"left": "",
+																	"right": "",
+																	"zIndex": "",
+																	"boxShadow": "0px 3px 1px -2px #00000033,0px 2px 2px 0px #00000024,0px 1px 5px 0px #0000001f",
+																	"boxSizing": "",
+																	"borderTopStyle": "solid",
+																	"borderRightStyle": "solid",
+																	"borderBottomStyle": "solid",
+																	"borderLeftStyle": "solid",
+																	"borderTopLeftRadius": "4px",
+																	"borderTopRightRadius": "4px",
+																	"borderBottomLeftRadius": "4px",
+																	"borderBottomRightRadius": "4px",
+																	"borderTopWidth": "0px",
+																	"borderRightWidth": "0px",
+																	"borderBottomWidth": "0px",
+																	"borderLeftWidth": "0px",
+																	"defaultBorderColor": "#ffffff",
+																	"sides": "Top,Right,Bottom,Left"
+																}
+															},
+															"O": {
+																"cType": "slot",
+																"compDomClasses": "v-card v-sheet theme--light newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_7",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_7"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												},
+												"compDomClasses": "col d-flex flex-column newDropBorder"
+											},
+											"S": {
+												"xs-xl": {
+													"col": "",
+													"flexDirection": "column",
+													"alignItems": "center",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "12px",
+													"paddingBottom": "12px",
+													"paddingLeft": "12px",
+													"paddingRight": "12px",
+													"backgroundColor": "",
+													"boxShadow": "",
+													"boxSizing": "",
+													"borderTopStyle": "",
+													"borderRightStyle": "",
+													"borderBottomStyle": "",
+													"borderLeftStyle": "",
+													"borderTopLeftRadius": "",
+													"borderTopRightRadius": "",
+													"borderBottomLeftRadius": "",
+													"borderBottomRightRadius": "",
+													"borderTopWidth": "",
+													"borderRightWidth": "",
+													"borderBottomWidth": "",
+													"borderLeftWidth": "",
+													"defaultBorderColor": "",
+													"sides": ""
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_2"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"opt": {
+		"V": 2.2
+	}
+};
+export default pjson

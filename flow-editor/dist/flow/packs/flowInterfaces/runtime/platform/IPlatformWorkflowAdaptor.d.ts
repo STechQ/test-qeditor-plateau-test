@@ -7,6 +7,7 @@ import { IRestServiceCallPropType } from "../../../flowComponents/runtime/restSe
 import { DataInstance } from "../../../../../common/everything/workflow/runtimeObjects/DataInstance";
 import { IContext } from "../../../../../common/everything/workflow/runtimeObjects/IContext";
 import { IDataSearchParams, IDataSearchResult } from "../../../../../process/workflowManager/helpers/DataSearchEngine.js";
+import { CustomType } from "../../../../../common/everything/workflow/runtimemodels/types";
 export interface IPlatformWFFAdaptor {
     flowExecutor: (prop: StepFlowModelPropType) => Promise<any>;
     restServiceExecutor: (prop: IRestServiceCallPropType) => Promise<any>;
@@ -42,12 +43,15 @@ export interface IPlatformWFFAdaptor {
         };
     };
 }
+export type CompleteActionType = "complete" | "cancel" | "return";
 export interface IDataSearchResponse extends IDataSearchResult {
 }
 export interface IResumeProcessRequest {
-    processInstanId: string;
+    processInstanceId: string;
     taskId: string;
     dataInstance: DataInstance;
+    actionType?: CompleteActionType;
+    customType?: CustomType;
 }
 export interface IPlatformWorkflowServerResponse {
     status: number;

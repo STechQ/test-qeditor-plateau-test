@@ -2,7 +2,7 @@ import { CollectionName } from './mongo/IDataStoreManager';
 export interface IExecutionContextStore {
     tuid: string;
     userId?: string;
-    clientId?: string;
+    lpLogClientId?: string;
     channel: "online" | "batch" | "console";
     scope?: "initiation" | undefined;
 }

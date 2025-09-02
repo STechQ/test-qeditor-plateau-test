@@ -7,6 +7,7 @@ export interface IBatchDBJobBase {
     createDate: number;
     startDate?: number;
     status: BatchFlowStatus;
+    errorMsg?: string;
     finishDate?: number;
     uniqueKey?: string;
     executionId?: string;
