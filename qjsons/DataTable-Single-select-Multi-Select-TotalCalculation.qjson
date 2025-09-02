@@ -1,0 +1,883 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "PageComp",
+					"T": "prop"
+				},
+				"triggerOnRestored": {
+					"H": "false",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"EndRender": {
+					"H": "quick.store.delete('&tooltipStatement');\r\nquick.store.delete('&amountStatement');\r\nquick.store.delete('&lastSelectedId');\r\nquick.store.delete('&selectedValues');\r\nquick.store.delete('&selectedRowIds');\r\n\r\nconst items = [\r\n  {\r\n    id: 1,\r\n    transactionDate: \"2025-08-01\",\r\n    bankArrivalDate: \"2025-08-02\",\r\n    description: \"POS Transaction\",\r\n    amount: 150.75,\r\n    transactionCode: \"TRX001\",\r\n    categoryCode: \"CAT01\"\r\n  },\r\n  {\r\n    id: 2,\r\n    transactionDate: \"2025-08-05\",\r\n    bankArrivalDate: \"2025-08-06\",\r\n    description: \"Online Payment\",\r\n    amount: 299.99,\r\n    transactionCode: \"TRX002\",\r\n    categoryCode: \"CAT02\"\r\n  },\r\n  {\r\n    id: 3,\r\n    transactionDate: \"2025-08-10\",\r\n    bankArrivalDate: \"2025-08-11\",\r\n    description: \"Refund\",\r\n    amount: -120.0,\r\n    transactionCode: \"TRX003\",\r\n    categoryCode: \"CAT03\"\r\n  },\r\n  {\r\n    id: 4,\r\n    transactionDate: \"2025-08-15\",\r\n    bankArrivalDate: \"2025-08-16\",\r\n    description: \"Wire Transfer\",\r\n    amount: 5000.0,\r\n    transactionCode: \"TRX004\",\r\n    categoryCode: \"CAT04\"\r\n  },\r\n  {\r\n    id: 5,\r\n    transactionDate: \"2025-08-20\",\r\n    bankArrivalDate: \"2025-08-21\",\r\n    description: \"POS Installment Payment\",\r\n    amount: 1200.5,\r\n    transactionCode: \"TRX005\",\r\n    categoryCode: \"CAT05\"\r\n  },\r\n  {\r\n    id: 6,\r\n    transactionDate: \"2025-08-22\",\r\n    bankArrivalDate: \"2025-08-23\",\r\n    description: \"Invoice Payment\",\r\n    amount: 450.25,\r\n    transactionCode: \"TRX006\",\r\n    categoryCode: \"CAT06\"\r\n  },\r\n  {\r\n    id: 7,\r\n    transactionDate: \"2025-08-23\",\r\n    bankArrivalDate: \"2025-08-24\",\r\n    description: \"Credit Card Payment\",\r\n    amount: -750.0,\r\n    transactionCode: \"TRX007\",\r\n    categoryCode: \"CAT07\"\r\n  },\r\n  {\r\n    id: 8,\r\n    transactionDate: \"2025-08-24\",\r\n    bankArrivalDate: \"2025-08-25\",\r\n    description: \"Salary Deposit\",\r\n    amount: 15000.0,\r\n    transactionCode: \"TRX008\",\r\n    categoryCode: \"CAT08\"\r\n  },\r\n  {\r\n    id: 9,\r\n    transactionDate: \"2025-08-25\",\r\n    bankArrivalDate: \"2025-08-26\",\r\n    description: \"Grocery Shopping\",\r\n    amount: 350.75,\r\n    transactionCode: \"TRX009\",\r\n    categoryCode: \"CAT09\"\r\n  },\r\n  {\r\n    id: 10,\r\n    transactionDate: \"2025-08-26\",\r\n    bankArrivalDate: \"2025-08-27\",\r\n    description: \"Restaurant Payment\",\r\n    amount: 220.0,\r\n    transactionCode: \"TRX010\",\r\n    categoryCode: \"CAT10\"\r\n  },\r\n  {\r\n    id: 11,\r\n    transactionDate: \"2025-08-27\",\r\n    bankArrivalDate: \"2025-08-28\",\r\n    description: \"Electricity Bill\",\r\n    amount: -300.0,\r\n    transactionCode: \"TRX011\",\r\n    categoryCode: \"CAT11\"\r\n  },\r\n  {\r\n    id: 12,\r\n    transactionDate: \"2025-08-28\",\r\n    bankArrivalDate: \"2025-08-29\",\r\n    description: \"Water Bill\",\r\n    amount: -120.5,\r\n    transactionCode: \"TRX012\",\r\n    categoryCode: \"CAT12\"\r\n  },\r\n  {\r\n    id: 13,\r\n    transactionDate: \"2025-08-29\",\r\n    bankArrivalDate: \"2025-08-30\",\r\n    description: \"Internet Payment\",\r\n    amount: -200.0,\r\n    transactionCode: \"TRX013\",\r\n    categoryCode: \"CAT13\"\r\n  },\r\n  {\r\n    id: 14,\r\n    transactionDate: \"2025-08-30\",\r\n    bankArrivalDate: \"2025-08-31\",\r\n    description: \"Rent Payment\",\r\n    amount: -4500.0,\r\n    transactionCode: \"TRX014\",\r\n    categoryCode: \"CAT14\"\r\n  },\r\n  {\r\n    id: 15,\r\n    transactionDate: \"2025-08-31\",\r\n    bankArrivalDate: \"2025-09-01\",\r\n    description: \"Car Insurance\",\r\n    amount: -1750.0,\r\n    transactionCode: \"TRX015\",\r\n    categoryCode: \"CAT15\"\r\n  }\r\n];\r\n\r\n\r\n\r\ncomponents.ledgerTable.items= items;",
+					"HL": "TS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child"
+			},
+			"S": {
+				"pageBackgroundColor": "#ffffff",
+				"statusBarColor": "#ffffff"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_140",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "true",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container container--fluid'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_142",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VDataTable",
+															"P": {
+																"ID": {
+																	"H": "ledgerTable",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"footerProps": {
+																	"H": "{itemsPerPageText = '',\nitemsPerPageAllText = 'Tümü',\nshowFirstLastPage = true,\nfirstIcon = 'mdi-page-first',\nlastIcon = 'mdi-page-last',\nprevIcon = 'mdi-chevron-left',\nnextIcon = 'mdi-chevron-right'}",
+																	"T": "prop"
+																},
+																"headers": {
+																	"H": "[{ text= 'Transaction Date', align= 'start', sortable= true, value= 'transactionDate' },\n{ text= 'Bank Arrival Date', align= 'start', sortable= true, value= 'bankArrivalDate' },\n{ text= 'Description', value= 'description', sortable= true },\n{ text= 'Amount', value= 'amount', sortable= true },\n{ text= 'Transaction Code', value= 'transactionCode', sortable= true },\n{ text= 'Category Code', value= 'categoryCode', sortable= true }]",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"itemsPerPage": {
+																	"H": "10",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"mobileBreakpoint": {
+																	"H": "600",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"dense": {
+																	"H": "true",
+																	"T": "prop"
+																},
+																"noDataText": {
+																	"H": "'Aradığınız kritere uygun kayıt bulunamamıştır.'",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"itemKey": {
+																	"H": "'id'",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"loadingText": {
+																	"H": "'Veri Yükleniyor...'",
+																	"T": "prop",
+																	"HL": "QS"
+																}
+															},
+															"E": {
+																"click:row": {
+																	"H": "\r\nlet lastSelectedId = quick.store.get('&lastSelectedId') || null;\r\nlet selectedValues = quick.store.get('&selectedValues') || [];\r\nlet selectedRowIds = quick.store.get('&selectedRowIds');\r\nif (!Array.isArray(selectedRowIds)) selectedRowIds = [];\r\n\r\n// Check if Ctrl key is pressed\r\ndeclare var event;\r\nconst ctrlPressed = event.ctrlKey || false;\r\n// Column to sum\r\nconst targetColumn = 'amount';\r\n// DataTable items\r\nconst items = components.ledgerTable.items;\r\n// Clicked row id\r\nconst clickedId = row.item.id;\r\n// Existing totals from store\r\nlet currentAmount = quick.store.get('&amountStatement') || [];\r\n\r\n// --- Shift+Click / multiple row selection ---\r\nif (ctrlPressed && lastSelectedId !== null) {\r\n    // Determine start and end index for range selection\r\n    const startIndex = items.findIndex(item => item.id === lastSelectedId);\r\n    const endIndex = items.findIndex(item => item.id === clickedId);\r\n\r\n    if (startIndex !== -1 && endIndex !== -1) {\r\n        const start = Math.min(startIndex, endIndex);\r\n        const end = Math.max(startIndex, endIndex);\r\n\r\n        selectedValues = [];\r\n        for (let i = start; i <= end; i++) {\r\n            const item = items[i];\r\n            const itemId = item.id;\r\n\r\n            const val = typeof item[targetColumn] === \"string\"\r\n                ? parseFloat(item[targetColumn].replace(/\\./g, '').replace(',', '.'))\r\n                : Number(item[targetColumn]) || 0;\r\n\r\n            // Add to totals only if not already selected\r\n            if (selectedRowIds.indexOf(itemId) === -1) {\r\n                currentAmount.push(val);\r\n                selectedRowIds.push(itemId);\r\n                selectedValues.push(val);\r\n                // Select the row visually\r\n                (<any>components.ledgerTable).select(item);\r\n            }\r\n        }\r\n    }\r\n} else {\r\n    // Single row click\r\n    if (selectedRowIds.indexOf(clickedId) === -1) {\r\n        const clickedAmount = typeof row.item[targetColumn] === \"string\"\r\n            ? parseFloat(row.item[targetColumn].replace(/\\./g, '').replace(',', '.'))\r\n            : Number(row.item[targetColumn]) || 0;\r\n\r\n        currentAmount.push(clickedAmount);\r\n        selectedRowIds.push(clickedId);\r\n        selectedValues.push(clickedAmount);\r\n        // Select the clicked row visually\r\n        let selectedRow = row;\r\n        selectedRow.select(true);\r\n    }\r\n}\r\n\r\n// Recalculate the total sum\r\nconst totalSum = currentAmount.reduce((acc, val) => acc + val, 0);\r\n\r\n// Save updated totals and selected rows in store\r\nquick.store.set('&amountStatement', currentAmount);\r\nquick.store.set('&tooltipStatement', totalSum);\r\nquick.store.set('&selectedRowIds', selectedRowIds);\r\nquick.store.set('&selectedValues', selectedValues);\r\nquick.store.set('&lastSelectedId', clickedId);\r\n\r\n// Update components\r\nquick.Quick.updateComponent(components.EdtrComp_65);\r\nquick.Quick.updateComponent(components.ledgerTable);\r\n\r\n\r\n",
+																	"P": "index:any,row:IVDataTableClickRow",
+																	"HL": "TS"
+																}
+															},
+															"C": {
+																"item.amount": {
+																	"c": [
+																		{
+																			"T": "Tooltip",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_65",
+																					"T": "prop"
+																				},
+																				"toolTipContent": {
+																					"H": "store.get('&tooltipStatement')",
+																					"T": "prop",
+																					"HL": "QS"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_66",
+																									"T": "prop"
+																								},
+																								"tagType": {
+																									"H": "'span'",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "item.amount",
+																									"T": "prop",
+																									"HL": "QS"
+																								},
+																								"visible": {
+																									"H": "true",
+																									"T": "prop",
+																									"HL": "QS"
+																								},
+																								"processHtml": {
+																									"H": "false",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_66"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_65"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "scopedSlot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_282"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginLeft": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginTop": "",
+																	"paddingTop": "",
+																	"paddingBottom": "",
+																	"paddingLeft": "10px",
+																	"paddingRight": "",
+																	"maxWidth": "1445px",
+																	"maxHeight": "528px",
+																	"minWidth": "",
+																	"minHeight": "",
+																	"unlink": "false",
+																	"unlinkMax": "true",
+																	"unlinkMin": "false",
+																	"isSizeCollapsed": "true",
+																	"selectedBackground": "#d9d9d9"
+																},
+																"headerFontColor": "#757575",
+																"headerFontFamily": "Roboto",
+																"headerFontSize": "12px",
+																"headerFontStyle": "normal",
+																"headerFontWeight": 700,
+																"headerCombinedFont": "Roboto-",
+																"footerText": "#616161",
+																"footerFontFamily": "Roboto",
+																"footerFontSize": "12px",
+																"footerFontStyle": "normal",
+																"footerFontWeight": "400",
+																"footerCombinedFont": "Roboto-",
+																"textColor": "#616161",
+																"itemFontFamily": "Roboto",
+																"itemFontSize": "12px",
+																"itemFontStyle": "normal",
+																"itemFontWeight": "400",
+																"itemsCombinedFont": "Roboto-",
+																"backgroundColor": "#ffffff",
+																"hoverColor": "#ffffff",
+																"footerColor": "#FFFFFF",
+																"headerColor": "#FFFFFF",
+																"expandedContent": "#010101",
+																"lineColor": "#0000001f",
+																"lineSize": "1",
+																"boxShadow": "",
+																"sides": "Top,Right,Bottom,Left",
+																"borderTopWidth": "1px",
+																"borderTopStyle": "solid",
+																"borderBottomWidth": "1px",
+																"borderBottomStyle": "solid",
+																"borderLeftWidth": "1px",
+																"borderLeftStyle": "solid",
+																"borderRightWidth": "1px",
+																"borderRightStyle": "solid",
+																"defaultBorderColor": "#e0e0e0"
+															},
+															"O": {
+																"cType": "scopedSlot"
+															},
+															"D": {
+																"click-outside": {
+																	"handler": {
+																		"H": "quick.store.delete('&tooltipStatement');\r\nquick.store.delete('&amountStatement');\r\nquick.store.delete('&lastSelectedId');\r\nquick.store.delete('&selectedValues');\r\nquick.store.delete('&selectedRowIds');\r\n\r\nconst selection = (<any>components.ledgerTable).selection;\r\nconst selectedItems: any[] = [];\r\n\r\nfor (const key of Object.keys(selection)) {\r\n    selectedItems.push(selection[key]);\r\n}\r\n\r\nfor (const item of selectedItems) {\r\n    (<any>components.ledgerTable).select(item, false);\r\n}\r\n\r\nquick.Quick.updateComponent(components.ledgerTable);\r\n",
+																		"L": "handler",
+																		"HL": "TS",
+																		"P": "e:any"
+																	}
+																}
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_145",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_145"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												}
+											},
+											"S": {
+												"xs-xl": {
+													"col": "12",
+													"flexDirection": "column",
+													"alignItems": "center",
+													"justifyContent": "center",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "12px",
+													"paddingBottom": "12px",
+													"paddingLeft": "12px",
+													"paddingRight": "12px",
+													"backgroundColor": "",
+													"boxShadow": "",
+													"boxSizing": "",
+													"borderTopStyle": "",
+													"borderRightStyle": "",
+													"borderBottomStyle": "",
+													"borderLeftStyle": "",
+													"borderTopLeftRadius": "",
+													"borderTopRightRadius": "",
+													"borderBottomLeftRadius": "",
+													"borderBottomRightRadius": "",
+													"borderTopWidth": "",
+													"borderRightWidth": "",
+													"borderBottomWidth": "",
+													"borderLeftWidth": "",
+													"defaultBorderColor": "",
+													"sides": ""
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_142"
+							},
+							"S": {
+								"xs-xl": {
+									"marginLeft": "0px",
+									"marginRight": "0px",
+									"marginBottom": "0px",
+									"marginTop": "0px",
+									"paddingTop": "",
+									"paddingBottom": "",
+									"paddingLeft": "",
+									"paddingRight": "",
+									"width": "",
+									"height": "",
+									"maxWidth": "",
+									"maxHeight": "",
+									"minWidth": "",
+									"minHeight": "",
+									"unlink": "false",
+									"unlinkMax": "false",
+									"unlinkMin": "false",
+									"isSizeCollapsed": "false",
+									"backgroundColor": "",
+									"boxShadow": "",
+									"boxSizing": "",
+									"borderTopStyle": "",
+									"borderRightStyle": "",
+									"borderBottomStyle": "",
+									"borderLeftStyle": "",
+									"borderTopLeftRadius": "",
+									"borderTopRightRadius": "",
+									"borderBottomLeftRadius": "",
+									"borderBottomRightRadius": "",
+									"borderTopWidth": "",
+									"borderRightWidth": "",
+									"borderBottomWidth": "",
+									"borderLeftWidth": "",
+									"defaultBorderColor": "",
+									"sides": ""
+								}
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_140"
+			},
+			"S": {
+				"xs-xl": {
+					"marginLeft": "",
+					"marginRight": "",
+					"marginBottom": "",
+					"marginTop": "",
+					"paddingTop": "12px",
+					"paddingBottom": "12px",
+					"paddingLeft": "12px",
+					"paddingRight": "12px",
+					"width": "100%",
+					"height": "100%",
+					"maxWidth": "",
+					"maxHeight": "",
+					"minWidth": "",
+					"minHeight": "",
+					"unlink": "false",
+					"unlinkMax": "false",
+					"unlinkMin": "false",
+					"isSizeCollapsed": "false",
+					"backgroundColor": "",
+					"boxShadow": "",
+					"boxSizing": "",
+					"borderTopStyle": "",
+					"borderRightStyle": "",
+					"borderBottomStyle": "",
+					"borderLeftStyle": "",
+					"borderTopLeftRadius": "",
+					"borderTopRightRadius": "",
+					"borderBottomLeftRadius": "",
+					"borderBottomRightRadius": "",
+					"borderTopWidth": "",
+					"borderRightWidth": "",
+					"borderBottomWidth": "",
+					"borderLeftWidth": "",
+					"defaultBorderColor": "",
+					"sides": ""
+				}
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "PageComp",
+					"T": "prop"
+				},
+				"triggerOnRestored": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"EndRender": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\n;\r\nquick.store.delete('&tooltipStatement');\r\nquick.store.delete('&amountStatement');\r\nquick.store.delete('&lastSelectedId');\r\nquick.store.delete('&selectedValues');\r\nquick.store.delete('&selectedRowIds');\r\nvar items = [\r\n    {\r\n        id: 1,\r\n        transactionDate: \"2025-08-01\",\r\n        bankArrivalDate: \"2025-08-02\",\r\n        description: \"POS Transaction\",\r\n        amount: 150.75,\r\n        transactionCode: \"TRX001\",\r\n        categoryCode: \"CAT01\"\r\n    },\r\n    {\r\n        id: 2,\r\n        transactionDate: \"2025-08-05\",\r\n        bankArrivalDate: \"2025-08-06\",\r\n        description: \"Online Payment\",\r\n        amount: 299.99,\r\n        transactionCode: \"TRX002\",\r\n        categoryCode: \"CAT02\"\r\n    },\r\n    {\r\n        id: 3,\r\n        transactionDate: \"2025-08-10\",\r\n        bankArrivalDate: \"2025-08-11\",\r\n        description: \"Refund\",\r\n        amount: -120.0,\r\n        transactionCode: \"TRX003\",\r\n        categoryCode: \"CAT03\"\r\n    },\r\n    {\r\n        id: 4,\r\n        transactionDate: \"2025-08-15\",\r\n        bankArrivalDate: \"2025-08-16\",\r\n        description: \"Wire Transfer\",\r\n        amount: 5000.0,\r\n        transactionCode: \"TRX004\",\r\n        categoryCode: \"CAT04\"\r\n    },\r\n    {\r\n        id: 5,\r\n        transactionDate: \"2025-08-20\",\r\n        bankArrivalDate: \"2025-08-21\",\r\n        description: \"POS Installment Payment\",\r\n        amount: 1200.5,\r\n        transactionCode: \"TRX005\",\r\n        categoryCode: \"CAT05\"\r\n    },\r\n    {\r\n        id: 6,\r\n        transactionDate: \"2025-08-22\",\r\n        bankArrivalDate: \"2025-08-23\",\r\n        description: \"Invoice Payment\",\r\n        amount: 450.25,\r\n        transactionCode: \"TRX006\",\r\n        categoryCode: \"CAT06\"\r\n    },\r\n    {\r\n        id: 7,\r\n        transactionDate: \"2025-08-23\",\r\n        bankArrivalDate: \"2025-08-24\",\r\n        description: \"Credit Card Payment\",\r\n        amount: -750.0,\r\n        transactionCode: \"TRX007\",\r\n        categoryCode: \"CAT07\"\r\n    },\r\n    {\r\n        id: 8,\r\n        transactionDate: \"2025-08-24\",\r\n        bankArrivalDate: \"2025-08-25\",\r\n        description: \"Salary Deposit\",\r\n        amount: 15000.0,\r\n        transactionCode: \"TRX008\",\r\n        categoryCode: \"CAT08\"\r\n    },\r\n    {\r\n        id: 9,\r\n        transactionDate: \"2025-08-25\",\r\n        bankArrivalDate: \"2025-08-26\",\r\n        description: \"Grocery Shopping\",\r\n        amount: 350.75,\r\n        transactionCode: \"TRX009\",\r\n        categoryCode: \"CAT09\"\r\n    },\r\n    {\r\n        id: 10,\r\n        transactionDate: \"2025-08-26\",\r\n        bankArrivalDate: \"2025-08-27\",\r\n        description: \"Restaurant Payment\",\r\n        amount: 220.0,\r\n        transactionCode: \"TRX010\",\r\n        categoryCode: \"CAT10\"\r\n    },\r\n    {\r\n        id: 11,\r\n        transactionDate: \"2025-08-27\",\r\n        bankArrivalDate: \"2025-08-28\",\r\n        description: \"Electricity Bill\",\r\n        amount: -300.0,\r\n        transactionCode: \"TRX011\",\r\n        categoryCode: \"CAT11\"\r\n    },\r\n    {\r\n        id: 12,\r\n        transactionDate: \"2025-08-28\",\r\n        bankArrivalDate: \"2025-08-29\",\r\n        description: \"Water Bill\",\r\n        amount: -120.5,\r\n        transactionCode: \"TRX012\",\r\n        categoryCode: \"CAT12\"\r\n    },\r\n    {\r\n        id: 13,\r\n        transactionDate: \"2025-08-29\",\r\n        bankArrivalDate: \"2025-08-30\",\r\n        description: \"Internet Payment\",\r\n        amount: -200.0,\r\n        transactionCode: \"TRX013\",\r\n        categoryCode: \"CAT13\"\r\n    },\r\n    {\r\n        id: 14,\r\n        transactionDate: \"2025-08-30\",\r\n        bankArrivalDate: \"2025-08-31\",\r\n        description: \"Rent Payment\",\r\n        amount: -4500.0,\r\n        transactionCode: \"TRX014\",\r\n        categoryCode: \"CAT14\"\r\n    },\r\n    {\r\n        id: 15,\r\n        transactionDate: \"2025-08-31\",\r\n        bankArrivalDate: \"2025-09-01\",\r\n        description: \"Car Insurance\",\r\n        amount: -1750.0,\r\n        transactionCode: \"TRX015\",\r\n        categoryCode: \"CAT15\"\r\n    }\r\n];\r\ncomponents.ledgerTable.items = items;\r\n",
+					"HL": "JS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			},
+			"S": {
+				"pageBackgroundColor": "#ffffff",
+				"statusBarColor": "#ffffff"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "EdtrComp_140",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container container--fluid'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_142",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "VDataTable",
+															"P": {
+																"ID": {
+																	"H": "ledgerTable",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"footerProps": {
+																	"H": "╬{}╠=╣itemsPerPageText╩╠''╩╩╠=╣itemsPerPageAllText╩╠'Tümü'╩╩╠=╣showFirstLastPage╩╠true╩╩╠=╣firstIcon╩╠'mdi-page-first'╩╩╠=╣lastIcon╩╠'mdi-page-last'╩╩╠=╣prevIcon╩╠'mdi-chevron-left'╩╩╠=╣nextIcon╩╠'mdi-chevron-right'╩╩╩╩",
+																	"T": "prop"
+																},
+																"headers": {
+																	"H": "╬[]╠{}╠=╣text╩╠'Transaction Date'╩╩╠=╣align╩╠'start'╩╩╠=╣sortable╩╠true╩╩╠=╣value╩╠'transactionDate'╩╩╩╠{}╠=╣text╩╠'Bank Arrival Date'╩╩╠=╣align╩╠'start'╩╩╠=╣sortable╩╠true╩╩╠=╣value╩╠'bankArrivalDate'╩╩╩╠{}╠=╣text╩╠'Description'╩╩╠=╣value╩╠'description'╩╩╠=╣sortable╩╠true╩╩╩╠{}╠=╣text╩╠'Amount'╩╩╠=╣value╩╠'amount'╩╩╠=╣sortable╩╠true╩╩╩╠{}╠=╣text╩╠'Transaction Code'╩╩╠=╣value╩╠'transactionCode'╩╩╠=╣sortable╩╠true╩╩╩╠{}╠=╣text╩╠'Category Code'╩╩╠=╣value╩╠'categoryCode'╩╩╠=╣sortable╩╠true╩╩╩╩╩",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"itemsPerPage": {
+																	"H": "╬10╩╩",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"mobileBreakpoint": {
+																	"H": "╬600╩╩",
+																	"T": "prop"
+																},
+																"visible": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"dense": {
+																	"H": "╬true╩╩",
+																	"T": "prop"
+																},
+																"noDataText": {
+																	"H": "╬'Aradığınız kritere uygun kayıt bulunamamıştır.'╩╩",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"itemKey": {
+																	"H": "╬'id'╩╩",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"loadingText": {
+																	"H": "╬'Veri Yükleniyor...'╩╩",
+																	"T": "prop",
+																	"HL": "QS"
+																}
+															},
+															"E": {
+																"click:row": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nvar lastSelectedId = quick.store.get('&lastSelectedId') || null;\r\nvar selectedValues = quick.store.get('&selectedValues') || [];\r\nvar selectedRowIds = quick.store.get('&selectedRowIds');\r\nif (!Array.isArray(selectedRowIds))\r\n    selectedRowIds = [];\r\nvar ctrlPressed = event.ctrlKey || false;\r\n// Column to sum\r\nvar targetColumn = 'amount';\r\n// DataTable items\r\nvar items = components.ledgerTable.items;\r\n// Clicked row id\r\nvar clickedId = row.item.id;\r\n// Existing totals from store\r\nvar currentAmount = quick.store.get('&amountStatement') || [];\r\n// --- Shift+Click / multiple row selection ---\r\nif (ctrlPressed && lastSelectedId !== null) {\r\n    // Determine start and end index for range selection\r\n    var startIndex = items.findIndex(function (item) { return item.id === lastSelectedId; });\r\n    var endIndex = items.findIndex(function (item) { return item.id === clickedId; });\r\n    if (startIndex !== -1 && endIndex !== -1) {\r\n        var start = Math.min(startIndex, endIndex);\r\n        var end = Math.max(startIndex, endIndex);\r\n        selectedValues = [];\r\n        for (var i = start; i <= end; i++) {\r\n            var item = items[i];\r\n            var itemId = item.id;\r\n            var val = typeof item[targetColumn] === \"string\"\r\n                ? parseFloat(item[targetColumn].replace(/\\./g, '').replace(',', '.'))\r\n                : Number(item[targetColumn]) || 0;\r\n            // Add to totals only if not already selected\r\n            if (selectedRowIds.indexOf(itemId) === -1) {\r\n                currentAmount.push(val);\r\n                selectedRowIds.push(itemId);\r\n                selectedValues.push(val);\r\n                // Select the row visually\r\n                components.ledgerTable.select(item);\r\n            }\r\n        }\r\n    }\r\n}\r\nelse {\r\n    // Single row click\r\n    if (selectedRowIds.indexOf(clickedId) === -1) {\r\n        var clickedAmount = typeof row.item[targetColumn] === \"string\"\r\n            ? parseFloat(row.item[targetColumn].replace(/\\./g, '').replace(',', '.'))\r\n            : Number(row.item[targetColumn]) || 0;\r\n        currentAmount.push(clickedAmount);\r\n        selectedRowIds.push(clickedId);\r\n        selectedValues.push(clickedAmount);\r\n        // Select the clicked row visually\r\n        var selectedRow = row;\r\n        selectedRow.select(true);\r\n    }\r\n}\r\n// Recalculate the total sum\r\nvar totalSum = currentAmount.reduce(function (acc, val) { return acc + val; }, 0);\r\n// Save updated totals and selected rows in store\r\nquick.store.set('&amountStatement', currentAmount);\r\nquick.store.set('&tooltipStatement', totalSum);\r\nquick.store.set('&selectedRowIds', selectedRowIds);\r\nquick.store.set('&selectedValues', selectedValues);\r\nquick.store.set('&lastSelectedId', clickedId);\r\n// Update components\r\nquick.Quick.updateComponent(components.EdtrComp_65);\r\nquick.Quick.updateComponent(components.ledgerTable);\r\n",
+																	"P": "index:any,row:IVDataTableClickRow",
+																	"HL": "JS"
+																}
+															},
+															"C": {
+																"item.amount": {
+																	"c": [
+																		{
+																			"T": "Tooltip",
+																			"P": {
+																				"ID": {
+																					"H": "EdtrComp_65",
+																					"T": "prop"
+																				},
+																				"toolTipContent": {
+																					"H": "╬()╣.╣store╩╠get╩╩╠'&tooltipStatement'╩╩╩",
+																					"T": "prop",
+																					"HL": "QS"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "QLabel",
+																							"P": {
+																								"ID": {
+																									"H": "EdtrComp_66",
+																									"T": "prop"
+																								},
+																								"tagType": {
+																									"H": "╬'span'╩╩",
+																									"T": "prop"
+																								},
+																								"text": {
+																									"H": "╬.╣item╩╠amount╩╩╩",
+																									"T": "prop",
+																									"HL": "QS"
+																								},
+																								"visible": {
+																									"H": "╬true╩╩",
+																									"T": "prop",
+																									"HL": "QS"
+																								},
+																								"processHtml": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_66"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": "q-label newDropBorder"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_65"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": "tooltip-div-class newDropBorder"
+																			}
+																		}
+																	],
+																	"cType": "scopedSlot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_282"
+															},
+															"S": {
+																"xs-xl": {
+																	"marginLeft": "",
+																	"marginRight": "",
+																	"marginBottom": "",
+																	"marginTop": "",
+																	"paddingTop": "",
+																	"paddingBottom": "",
+																	"paddingLeft": "10px",
+																	"paddingRight": "",
+																	"maxWidth": "1445px",
+																	"maxHeight": "528px",
+																	"minWidth": "",
+																	"minHeight": "",
+																	"unlink": "false",
+																	"unlinkMax": "true",
+																	"unlinkMin": "false",
+																	"isSizeCollapsed": "true",
+																	"selectedBackground": "#d9d9d9"
+																},
+																"headerFontColor": "#757575",
+																"headerFontFamily": "Roboto",
+																"headerFontSize": "12px",
+																"headerFontStyle": "normal",
+																"headerFontWeight": 700,
+																"headerCombinedFont": "Roboto-",
+																"footerText": "#616161",
+																"footerFontFamily": "Roboto",
+																"footerFontSize": "12px",
+																"footerFontStyle": "normal",
+																"footerFontWeight": "400",
+																"footerCombinedFont": "Roboto-",
+																"textColor": "#616161",
+																"itemFontFamily": "Roboto",
+																"itemFontSize": "12px",
+																"itemFontStyle": "normal",
+																"itemFontWeight": "400",
+																"itemsCombinedFont": "Roboto-",
+																"backgroundColor": "#ffffff",
+																"hoverColor": "#ffffff",
+																"footerColor": "#FFFFFF",
+																"headerColor": "#FFFFFF",
+																"expandedContent": "#010101",
+																"lineColor": "#0000001f",
+																"lineSize": "1",
+																"boxShadow": "",
+																"sides": "Top,Right,Bottom,Left",
+																"borderTopWidth": "1px",
+																"borderTopStyle": "solid",
+																"borderBottomWidth": "1px",
+																"borderBottomStyle": "solid",
+																"borderLeftWidth": "1px",
+																"borderLeftStyle": "solid",
+																"borderRightWidth": "1px",
+																"borderRightStyle": "solid",
+																"defaultBorderColor": "#e0e0e0"
+															},
+															"O": {
+																"cType": "scopedSlot",
+																"compDomClasses": "v-data-table v-data-table--dense v-data-table--has-bottom theme--light newDropBorder"
+															},
+															"D": {
+																"click-outside": {
+																	"handler": {
+																		"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\nquick.store.delete('&tooltipStatement');\r\nquick.store.delete('&amountStatement');\r\nquick.store.delete('&lastSelectedId');\r\nquick.store.delete('&selectedValues');\r\nquick.store.delete('&selectedRowIds');\r\nvar selection = components.ledgerTable.selection;\r\nvar selectedItems = [];\r\nfor (var _i = 0, _a = Object.keys(selection); _i < _a.length; _i++) {\r\n    var key = _a[_i];\r\n    selectedItems.push(selection[key]);\r\n}\r\nfor (var _b = 0, selectedItems_1 = selectedItems; _b < selectedItems_1.length; _b++) {\r\n    var item = selectedItems_1[_b];\r\n    components.ledgerTable.select(item, false);\r\n}\r\nquick.Quick.updateComponent(components.ledgerTable);\r\n",
+																		"L": "handler",
+																		"HL": "JS",
+																		"P": "e:any"
+																	}
+																}
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "EdtrComp_145",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_145"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												},
+												"compDomClasses": "col d-flex flex-column newDropBorder"
+											},
+											"S": {
+												"xs-xl": {
+													"col": "12",
+													"flexDirection": "column",
+													"alignItems": "center",
+													"justifyContent": "center",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "12px",
+													"paddingBottom": "12px",
+													"paddingLeft": "12px",
+													"paddingRight": "12px",
+													"backgroundColor": "",
+													"boxShadow": "",
+													"boxSizing": "",
+													"borderTopStyle": "",
+													"borderRightStyle": "",
+													"borderBottomStyle": "",
+													"borderLeftStyle": "",
+													"borderTopLeftRadius": "",
+													"borderTopRightRadius": "",
+													"borderBottomLeftRadius": "",
+													"borderBottomRightRadius": "",
+													"borderTopWidth": "",
+													"borderRightWidth": "",
+													"borderBottomWidth": "",
+													"borderLeftWidth": "",
+													"defaultBorderColor": "",
+													"sides": ""
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_142"
+							},
+							"S": {
+								"xs-xl": {
+									"marginLeft": "0px",
+									"marginRight": "0px",
+									"marginBottom": "0px",
+									"marginTop": "0px",
+									"paddingTop": "",
+									"paddingBottom": "",
+									"paddingLeft": "",
+									"paddingRight": "",
+									"width": "",
+									"height": "",
+									"maxWidth": "",
+									"maxHeight": "",
+									"minWidth": "",
+									"minHeight": "",
+									"unlink": "false",
+									"unlinkMax": "false",
+									"unlinkMin": "false",
+									"isSizeCollapsed": "false",
+									"backgroundColor": "",
+									"boxShadow": "",
+									"boxSizing": "",
+									"borderTopStyle": "",
+									"borderRightStyle": "",
+									"borderBottomStyle": "",
+									"borderLeftStyle": "",
+									"borderTopLeftRadius": "",
+									"borderTopRightRadius": "",
+									"borderBottomLeftRadius": "",
+									"borderBottomRightRadius": "",
+									"borderTopWidth": "",
+									"borderRightWidth": "",
+									"borderBottomWidth": "",
+									"borderLeftWidth": "",
+									"defaultBorderColor": "",
+									"sides": ""
+								}
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_140"
+			},
+			"S": {
+				"xs-xl": {
+					"marginLeft": "",
+					"marginRight": "",
+					"marginBottom": "",
+					"marginTop": "",
+					"paddingTop": "12px",
+					"paddingBottom": "12px",
+					"paddingLeft": "12px",
+					"paddingRight": "12px",
+					"width": "100%",
+					"height": "100%",
+					"maxWidth": "",
+					"maxHeight": "",
+					"minWidth": "",
+					"minHeight": "",
+					"unlink": "false",
+					"unlinkMax": "false",
+					"unlinkMin": "false",
+					"isSizeCollapsed": "false",
+					"backgroundColor": "",
+					"boxShadow": "",
+					"boxSizing": "",
+					"borderTopStyle": "",
+					"borderRightStyle": "",
+					"borderBottomStyle": "",
+					"borderLeftStyle": "",
+					"borderTopLeftRadius": "",
+					"borderTopRightRadius": "",
+					"borderBottomLeftRadius": "",
+					"borderBottomRightRadius": "",
+					"borderTopWidth": "",
+					"borderRightWidth": "",
+					"borderBottomWidth": "",
+					"borderLeftWidth": "",
+					"defaultBorderColor": "",
+					"sides": ""
+				}
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container container--fluid newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"opt": {
+		"V": 2.2
+	}
+};
+export default pjson
