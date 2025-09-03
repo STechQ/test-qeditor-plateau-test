@@ -547,7 +547,7 @@ export interface IGlobals_Quick {
      * });
      *
    */
-    createComponent: ({ templateCompQID, newCompQID, dataSource, place, placeQID, childName, }: {
+    createComponent: ({ templateCompQID, newCompQID, dataSource, place, placeQID, childName }: {
         templateCompQID: string;
         newCompQID: string;
         dataSource?: any;

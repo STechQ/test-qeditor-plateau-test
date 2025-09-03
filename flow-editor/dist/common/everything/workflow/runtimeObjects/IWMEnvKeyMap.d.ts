@@ -7,5 +7,6 @@ export interface IWMEnvKeyMap extends IEnvKeyMap {
     maxPgLimit?: string;
     targetTimezone: string;
     maxBatchJobTryCount?: string;
+    failedJobRetryDelayMs?: string;
 }
 //# sourceMappingURL=IWMEnvKeyMap.d.ts.map

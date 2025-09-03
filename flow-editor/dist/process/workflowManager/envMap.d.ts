@@ -11,6 +11,7 @@ declare const _default: {
     maxPgLimit: string;
     targetTimezone: string;
     maxBatchJobTryCount: string;
+    failedJobRetryDelayMs: string;
 };
 export default _default;
 //# sourceMappingURL=envMap.d.ts.map
