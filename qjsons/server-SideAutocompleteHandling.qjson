@@ -14,7 +14,7 @@ let pjson = {
 			},
 			"E": {
 				"EndRender": {
-					"H": "// Sample-1\r\nquick.store.set(\"autocompleteSource\", Array.from({ length: 10000 }, (_, i) => ({\r\n  text: `test${i + 1}`,\r\n  value: i + 1\r\n})));\r\n\r\ncomponents.autoComplete_Sample1.items = [];\r\n\r\n// Sample-2\r\n// Başlangıçta (örneğin page load'da)\r\nconst allItems = Array.from({ length: 10000 }, (_, i) => ({\r\n  text: `test${i + 1}`,\r\n  value: i + 1\r\n}));\r\n\r\n// İlk 100 ve tamamını ayrı ayrı store'a kaydet\r\ncomponents.autoComplete_Sample2.items = allItems.slice(0, 100)\r\nquick.store.set(\"autocompleteSource\", allItems);\r\n",
+					"H": "quick.store.delete(\"autocompleteSource\");\r\n// Sample-1\r\nquick.store.set(\"autocompleteSource\", Array.from({ length: 10000 }, (_, i) => ({\r\n  text: `test${i + 1}`,\r\n  value: i + 1\r\n})));\r\n\r\ncomponents.autoComplete_Sample1.items = [];\r\n\r\n// Sample-2\r\n// Başlangıçta (örneğin page load'da)\r\nconst allItems = Array.from({ length: 1000 }, (_, i) => ({\r\n  text: `test${i + 1}`,\r\n  value: i + 1\r\n}));\r\n\r\n// İlk 100 itemı componente setle,  datanın tamamını store'a kaydet\r\ncomponents.autoComplete_Sample2.items = allItems.slice(0, 100);\r\nquick.store.set(\"autocompleteSource\", allItems);\r\n\r\n\r\n",
 					"HL": "TS"
 				}
 			},
@@ -92,7 +92,8 @@ let pjson = {
 																},
 																"visible": {
 																	"H": "true",
-																	"T": "prop"
+																	"T": "prop",
+																	"HL": "QS"
 																},
 																"processHtml": {
 																	"H": "true",
@@ -200,7 +201,8 @@ let pjson = {
 																},
 																"visible": {
 																	"H": "true",
-																	"T": "prop"
+																	"T": "prop",
+																	"HL": "QS"
 																},
 																"noFilter": {
 																	"H": "true",
@@ -210,7 +212,7 @@ let pjson = {
 															},
 															"E": {
 																"update:search-input": {
-																	"H": "debugger;\r\nconst comp = components.autoComplete_Sample1;\r\nconst allItems = quick.store.get(\"autocompleteSource\") || [];\r\nconst val = comp.internalSearch || \"\";\r\n\r\n// Filtering should be triggered only after the user's input reaches at least 3–5 characters in length to ensure better performance.\r\n// In large datasets (e.g., 5,000 to 10,000+ records), running a search on every keystroke can cause significant slowdowns and even browser freezes.\r\n// Therefore, starting the search only when a meaningful query is entered (e.g., 3 characters or more) helps preserve system resources and provides a smoother user experience.\r\nif (typeof val === \"string\" && val.length >= 4) {\r\n  const filtered = allItems.filter(item =>\r\n    item.text.toLowerCase().includes(val.toLowerCase())\r\n  ).slice(0, 100);\r\n\r\n  if (Array.isArray(filtered)) {\r\n    comp.items = filtered;\r\n  }\r\n\r\n  quick.EM.trace('if');\r\n} else {\r\n  quick.EM.trace('else');\r\n}\r\n\r\n",
+																	"H": "debugger;\r\nconst comp = components.autoComplete_Sample1;\r\nconst allItems = quick.store.get(\"autocompleteSource\") || [];\r\nconst val = comp.internalSearch || \"\";\r\n\r\n// Filtering should be triggered only after the user's input reaches at least 3–5 characters in length to ensure better performance.\r\n// In large datasets (e.g., 5,000 to 10,000+ records), running a search on every keystroke can cause significant slowdowns and even browser freezes.\r\n// Therefore, starting the search only when a meaningful query is entered (e.g., 3 characters or more) helps preserve system resources and provides a smoother user experience.\r\nif (typeof val === \"string\" && val.length >= 4) {\r\n  const filtered = allItems\r\n    .filter(item => item.text.toLowerCase().includes(val.toLowerCase()))\r\n    .slice(0, 100);\r\n\r\n  if (Array.isArray(filtered)) {\r\n    // async update with setTimeout → avoids crash\r\n    setTimeout(() => {\r\n      comp.items = filtered;\r\n\r\n      if (\r\n        comp.qValue != null &&\r\n        !filtered.some(x => x.value === comp.qValue)\r\n      ) {\r\n        comp.qValue = null;\r\n      }\r\n    }, 10);\r\n  }\r\n\r\n} else {\r\n  setTimeout(() => {\r\n    comp.items = allItems.slice(0, 100);\r\n  }, 10);\r\n\r\n}\r\n",
 																	"HL": "TS"
 																}
 															},
@@ -372,7 +374,8 @@ let pjson = {
 																},
 																"visible": {
 																	"H": "true",
-																	"T": "prop"
+																	"T": "prop",
+																	"HL": "QS"
 																},
 																"processHtml": {
 																	"H": "true",
@@ -463,8 +466,9 @@ let pjson = {
 																	"HL": "QS"
 																},
 																"eager": {
-																	"H": "true",
-																	"T": "prop"
+																	"H": "false",
+																	"T": "prop",
+																	"HL": "QS"
 																},
 																"hideDetails": {
 																	"H": "false",
@@ -490,7 +494,7 @@ let pjson = {
 															},
 															"E": {
 																"update:search-input": {
-																	"H": "debugger;\r\nconst comp = components.autoComplete_Sample2;\r\nconst allItems = quick.store.get(\"autocompleteSource\") || [];\r\nconst val = comp.internalSearch || \"\";\r\n\r\n// Filtering should be triggered only after the user's input reaches at least 3–5 characters in length to ensure better performance.\r\n// In large datasets (e.g., 5,000 to 10,000+ records), running a search on every keystroke can cause significant slowdowns and even browser freezes.\r\n// Therefore, starting the search only when a meaningful query is entered (e.g., 3 characters or more) helps preserve system resources and provides a smoother user experience.\r\nif (typeof val === \"string\" && val.length >= 4) {\r\n  const filtered = allItems.filter(item =>\r\n    item.text.toLowerCase().includes(val.toLowerCase())\r\n  ).slice(0, 100);\r\n\r\n  if (Array.isArray(filtered)) {\r\n    comp.items = filtered;\r\n  }\r\n\r\n  quick.EM.trace('if');\r\n} else {\r\n  quick.EM.trace('else');\r\n}\r\n\r\n",
+																	"H": "debugger;\r\nconst comp = components.autoComplete_Sample2;\r\nconst allItems = quick.store.get(\"autocompleteSource\") || [];\r\nconst val = comp.internalSearch || \"\";\r\n\r\nif (typeof val === \"string\" && val.length >= 4) {\r\n  let filtered = allItems\r\n    .filter(item =>\r\n      item.text.toLowerCase().includes(val.toLowerCase())\r\n    )\r\n    .slice(0, 100);\r\n\r\n  // async update with setTimeout → avoids crash\r\n  setTimeout(() => {\r\n    comp.items = filtered;\r\n\r\n    \r\n    if (\r\n      comp.qValue != null &&\r\n      !filtered.some(x => x.value === comp.qValue)\r\n    ) {\r\n      comp.qValue = null;\r\n    }\r\n  },10);\r\n} else {\r\n  \r\n  setTimeout(() => {\r\n    comp.items = allItems.slice(0, 100);\r\n  },10);\r\n}\r\n\r\n\r\n",
 																	"HL": "TS"
 																}
 															},
@@ -677,7 +681,7 @@ let pjson = {
 					"paddingLeft": "12px",
 					"paddingRight": "12px",
 					"width": "",
-					"height": "",
+					"height": "800px",
 					"backgroundColor": "#ffffff",
 					"boxShadow": ""
 				}
@@ -699,7 +703,7 @@ let pjson = {
 			},
 			"E": {
 				"EndRender": {
-					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\n; // Sample-1\r\nquick.store.set(\"autocompleteSource\", Array.from({ length: 10000 }, function (_, i) { return ({\r\n    text: \"test\" + (i + 1),\r\n    value: i + 1\r\n}); }));\r\ncomponents.autoComplete_Sample1.items = [];\r\n// Sample-2\r\n// Başlangıçta (örneğin page load'da)\r\nvar allItems = Array.from({ length: 10000 }, function (_, i) { return ({\r\n    text: \"test\" + (i + 1),\r\n    value: i + 1\r\n}); });\r\n// İlk 100 ve tamamını ayrı ayrı store'a kaydet\r\ncomponents.autoComplete_Sample2.items = allItems.slice(0, 100);\r\nquick.store.set(\"autocompleteSource\", allItems);\r\n",
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\n;\r\nquick.store.delete(\"autocompleteSource\");\r\n// Sample-1\r\nquick.store.set(\"autocompleteSource\", Array.from({ length: 10000 }, function (_, i) { return ({\r\n    text: \"test\" + (i + 1),\r\n    value: i + 1\r\n}); }));\r\ncomponents.autoComplete_Sample1.items = [];\r\n// Sample-2\r\n// Başlangıçta (örneğin page load'da)\r\nvar allItems = Array.from({ length: 1000 }, function (_, i) { return ({\r\n    text: \"test\" + (i + 1),\r\n    value: i + 1\r\n}); });\r\n// İlk 100 itemı componente setle,  datanın tamamını store'a kaydet\r\ncomponents.autoComplete_Sample2.items = allItems.slice(0, 100);\r\nquick.store.set(\"autocompleteSource\", allItems);\r\n",
 					"HL": "JS"
 				}
 			},
@@ -778,7 +782,8 @@ let pjson = {
 																},
 																"visible": {
 																	"H": "╬true╩╩",
-																	"T": "prop"
+																	"T": "prop",
+																	"HL": "QS"
 																},
 																"processHtml": {
 																	"H": "╬true╩╩",
@@ -888,7 +893,8 @@ let pjson = {
 																},
 																"visible": {
 																	"H": "╬true╩╩",
-																	"T": "prop"
+																	"T": "prop",
+																	"HL": "QS"
 																},
 																"noFilter": {
 																	"H": "╬true╩╩",
@@ -898,7 +904,7 @@ let pjson = {
 															},
 															"E": {
 																"update:search-input": {
-																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\n;\r\ndebugger;\r\nvar comp = components.autoComplete_Sample1;\r\nvar allItems = quick.store.get(\"autocompleteSource\") || [];\r\nvar val = comp.internalSearch || \"\";\r\n// Filtering should be triggered only after the user's input reaches at least 3–5 characters in length to ensure better performance.\r\n// In large datasets (e.g., 5,000 to 10,000+ records), running a search on every keystroke can cause significant slowdowns and even browser freezes.\r\n// Therefore, starting the search only when a meaningful query is entered (e.g., 3 characters or more) helps preserve system resources and provides a smoother user experience.\r\nif (typeof val === \"string\" && val.length >= 4) {\r\n    var filtered = allItems.filter(function (item) {\r\n        return item.text.toLowerCase().includes(val.toLowerCase());\r\n    }).slice(0, 100);\r\n    if (Array.isArray(filtered)) {\r\n        comp.items = filtered;\r\n    }\r\n    quick.EM.trace('if');\r\n}\r\nelse {\r\n    quick.EM.trace('else');\r\n}\r\n",
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\n;\r\ndebugger;\r\nvar comp = components.autoComplete_Sample1;\r\nvar allItems = quick.store.get(\"autocompleteSource\") || [];\r\nvar val = comp.internalSearch || \"\";\r\n// Filtering should be triggered only after the user's input reaches at least 3–5 characters in length to ensure better performance.\r\n// In large datasets (e.g., 5,000 to 10,000+ records), running a search on every keystroke can cause significant slowdowns and even browser freezes.\r\n// Therefore, starting the search only when a meaningful query is entered (e.g., 3 characters or more) helps preserve system resources and provides a smoother user experience.\r\nif (typeof val === \"string\" && val.length >= 4) {\r\n    var filtered_1 = allItems\r\n        .filter(function (item) { return item.text.toLowerCase().includes(val.toLowerCase()); })\r\n        .slice(0, 100);\r\n    if (Array.isArray(filtered_1)) {\r\n        // async update with setTimeout → avoids crash\r\n        setTimeout(function () {\r\n            comp.items = filtered_1;\r\n            if (comp.qValue != null &&\r\n                !filtered_1.some(function (x) { return x.value === comp.qValue; })) {\r\n                comp.qValue = null;\r\n            }\r\n        }, 10);\r\n    }\r\n}\r\nelse {\r\n    setTimeout(function () {\r\n        comp.items = allItems.slice(0, 100);\r\n    }, 10);\r\n}\r\n",
 																	"HL": "JS"
 																}
 															},
@@ -1062,7 +1068,8 @@ let pjson = {
 																},
 																"visible": {
 																	"H": "╬true╩╩",
-																	"T": "prop"
+																	"T": "prop",
+																	"HL": "QS"
 																},
 																"processHtml": {
 																	"H": "╬true╩╩",
@@ -1155,8 +1162,9 @@ let pjson = {
 																	"HL": "QS"
 																},
 																"eager": {
-																	"H": "╬true╩╩",
-																	"T": "prop"
+																	"H": "╬false╩╩",
+																	"T": "prop",
+																	"HL": "QS"
 																},
 																"hideDetails": {
 																	"H": "╬false╩╩",
@@ -1182,7 +1190,7 @@ let pjson = {
 															},
 															"E": {
 																"update:search-input": {
-																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\n;\r\ndebugger;\r\nvar comp = components.autoComplete_Sample2;\r\nvar allItems = quick.store.get(\"autocompleteSource\") || [];\r\nvar val = comp.internalSearch || \"\";\r\n// Filtering should be triggered only after the user's input reaches at least 3–5 characters in length to ensure better performance.\r\n// In large datasets (e.g., 5,000 to 10,000+ records), running a search on every keystroke can cause significant slowdowns and even browser freezes.\r\n// Therefore, starting the search only when a meaningful query is entered (e.g., 3 characters or more) helps preserve system resources and provides a smoother user experience.\r\nif (typeof val === \"string\" && val.length >= 4) {\r\n    var filtered = allItems.filter(function (item) {\r\n        return item.text.toLowerCase().includes(val.toLowerCase());\r\n    }).slice(0, 100);\r\n    if (Array.isArray(filtered)) {\r\n        comp.items = filtered;\r\n    }\r\n    quick.EM.trace('if');\r\n}\r\nelse {\r\n    quick.EM.trace('else');\r\n}\r\n",
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\n;\r\ndebugger;\r\nvar comp = components.autoComplete_Sample2;\r\nvar allItems = quick.store.get(\"autocompleteSource\") || [];\r\nvar val = comp.internalSearch || \"\";\r\nif (typeof val === \"string\" && val.length >= 4) {\r\n    var filtered_1 = allItems\r\n        .filter(function (item) {\r\n        return item.text.toLowerCase().includes(val.toLowerCase());\r\n    })\r\n        .slice(0, 100);\r\n    // async update with setTimeout → avoids crash\r\n    setTimeout(function () {\r\n        comp.items = filtered_1;\r\n        if (comp.qValue != null &&\r\n            !filtered_1.some(function (x) { return x.value === comp.qValue; })) {\r\n            comp.qValue = null;\r\n        }\r\n    }, 10);\r\n}\r\nelse {\r\n    setTimeout(function () {\r\n        comp.items = allItems.slice(0, 100);\r\n    }, 10);\r\n}\r\n",
 																	"HL": "JS"
 																}
 															},
@@ -1373,7 +1381,7 @@ let pjson = {
 					"paddingLeft": "12px",
 					"paddingRight": "12px",
 					"width": "",
-					"height": "",
+					"height": "800px",
 					"backgroundColor": "#ffffff",
 					"boxShadow": ""
 				}

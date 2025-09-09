@@ -1,6 +1,6 @@
 /// <reference types="react" />
 import { IVMHistory } from "../../../../flowInterfaces/editor/IFlowEditorState";
-import { IStepOptions } from "../../../../flowInterfaces/editor/IStepOptions";
+import { IFindReferenceInCode, IStepOptions } from "../../../../flowInterfaces/editor/IStepOptions";
 import { IInitOptions } from "../../../../flowInterfaces/editor/editors/IFlowEditorProgram";
 import { IStepModel } from "../../../../flowInterfaces/runtime/IStepModel";
 import { IExpressionData } from "@stechquick/flow-interfaces/runtime";
@@ -79,6 +79,7 @@ export interface IViewModel {
     uniqueKey?: IExpressionData;
     selectedModelId: string;
     oldCamundaFieldsForWFModel?: IOldCamundaFieldsForWFModel;
+    findReferenceInCode?: IFindReferenceInCode;
 }
 export declare const IViewModel: unique symbol;
 //# sourceMappingURL=IViewModel.d.ts.map
