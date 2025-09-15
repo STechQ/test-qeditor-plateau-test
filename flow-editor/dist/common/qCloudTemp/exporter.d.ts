@@ -1,7 +1,7 @@
 import { FileUrlCreationRuleName } from "../../jobs/src/application/shared/fileUrlCreator";
 import { IModel, IModule, IWorkflowExportItem } from "../../ui/src/domain/model/models";
 import { IOrganization, IOrganizationCloud } from "./membership";
-import { IApplication, IModelBodyObject, IOrganizationActions, UsageType } from "./quickCloud";
+import { IApplication, IDependentModel, IModelBodyObject, IOrganizationActions, UsageType } from "./quickCloud";
 export interface IQCloudBaseResponse<T extends Record<string, any> | void> {
     status: "success" | "customerror" | "permissionError" | "error";
     data: T;
@@ -51,12 +51,13 @@ export interface IGetExportModelsRequest {
         id: IExportItem["id"];
         ver: IExportItem["ver"];
     }>;
-    modelKey?: "container-runtime";
+    modelKey?: "container-runtime" | "files";
 }
 export interface IModelBodyResponse extends IModelBodyObject {
     id: IExportItem["id"];
     createDate: Date;
     updateDate?: Date;
+    dependentModels?: Array<IDependentModel>;
 }
 export interface IGetExportModelsResponse {
     models: Array<IModelBodyResponse>;
@@ -75,6 +76,7 @@ export interface IExportItem {
     entityGenerationDomain?: IOrganizationActions["entityGenerationDomain"];
     createDate?: Date;
     updateDate?: Date;
+    dependentModels?: Array<IDependentModel>;
 }
 export type JobType = "export" | "deploy" | "pack" | "appmanagement" | "organizationManagement" | "workflowExport";
 export type JobCauseType = "download" | "publish";

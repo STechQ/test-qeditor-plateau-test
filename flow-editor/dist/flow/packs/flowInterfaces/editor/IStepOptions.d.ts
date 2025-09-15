@@ -57,6 +57,12 @@ export interface ICompiledCode {
     compiledCode: string;
     errors: Array<string>;
 }
+export interface IFindReferenceInCode {
+    startLine: number;
+    startColumn: number;
+    endLine: number;
+    endColumn: number;
+}
 export interface IEditSectionInput<PropType extends IPropObject = IPropObject> {
     propValues: PropType;
     callbacks: {
@@ -87,6 +93,10 @@ export interface IEditSectionInput<PropType extends IPropObject = IPropObject> {
         readOnly: boolean;
         models: Array<IStudioUIModelBase>;
         stepID: string;
+        findReferenceInCode?: {
+            get: () => IFindReferenceInCode | undefined;
+            set: (val: IFindReferenceInCode | undefined) => void;
+        };
     };
     react: {
         prop: {
