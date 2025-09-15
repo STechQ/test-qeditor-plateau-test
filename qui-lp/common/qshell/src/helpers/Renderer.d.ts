@@ -41,7 +41,7 @@ export declare class Renderer implements IRenderer {
     Back(): void;
     Forward(): void;
     Clear(): void;
-    Hibernate(passHibernate?: boolean): void;
+    Hibernate(passHibernate?: boolean, historyItem?: boolean): void;
     resurrect(): void;
     CheckComponent({ compName }: {
         compName: string;

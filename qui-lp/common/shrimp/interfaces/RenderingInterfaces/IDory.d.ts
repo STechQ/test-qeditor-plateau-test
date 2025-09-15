@@ -121,7 +121,7 @@ export interface IDory extends IContextItem {
     SetLRType(LRType?: string, LRTypeRTL?: boolean): void;
     SetConfigValues(configValues?: IConfig[]): void;
     GetLRType(): string;
-    CallHibernate(passHibernate?: boolean): void;
+    CallHibernate(passHibernate?: boolean, historyItem?: boolean): void;
     resurrect(): void;
     SetGlobalLRDict(GlobalLRDict?: ILRID): void;
     SetSiteSettings(siteSettings?: ISiteSettings): void;
