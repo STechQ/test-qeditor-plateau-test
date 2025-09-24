@@ -5300,6 +5300,9 @@ nextIcon = 'mdi-plus'}`
         },
         tabindex: {
             type: "number | string"
+        },
+        readonly: {
+            type: Boolean
         }
     },
     QDynamicFields: {

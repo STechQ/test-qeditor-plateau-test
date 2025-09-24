@@ -17,6 +17,7 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     initEvent({ editor }: {
         editor: any;
     }): void;
+    applyReadOnly(): void;
     getElementFromString(content: string): HTMLDivElement;
     insertContent(content: string): void;
 }, unknown, {
@@ -25,6 +26,7 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     ToolBarcolor: string;
     disabled: boolean;
     buttonsHide: boolean;
+    readonly: boolean;
 }>;
 export default _default;
 //# sourceMappingURL=QRichText.vue.d.ts.map

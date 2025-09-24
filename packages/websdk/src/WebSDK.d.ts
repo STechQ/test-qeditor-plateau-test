@@ -1,4 +1,5 @@
 import { IExternalQJsonRetriever } from "@stechquick/algae/lib/quick/IExternalQJsonRetriever";
+import { INamedCompModel } from "@stechquick/algae/lib/quick/INamedCompModel";
 import Vue from "vue";
 import "../../../common/shrimp/helpers/urlHelper";
 import { IComponent } from "../../../common/shrimp/interfaces/ComponentInterfaces/IComponent";
@@ -15,7 +16,6 @@ import { IWebSDKSetingsBus } from "../../../common/shrimp/interfaces/quick/IWebS
 import QJsonRetrieverImpl from './implementation/QJsonRetrieverImpl';
 import { StoreManagerHookCb } from "./implementation/StoreManager";
 import { UXManagerImpl } from "./implementation/UXManagerImpl";
-import { INamedCompModel } from "@stechquick/algae/lib/quick/INamedCompModel";
 export declare class WebSDK implements IWebSDK {
     static servicesWrapper: IContainerServicesWrapper;
     config: IRendererConfig;

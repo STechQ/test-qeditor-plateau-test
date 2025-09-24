@@ -6,6 +6,7 @@ import { ICreatedComponent } from "../../../../common/shrimp/interfaces/Componen
 import { IDictionary } from "../../../../common/shrimp/interfaces/IDictionary";
 import { IContainerServicesWrapper } from "../../../../common/shrimp/interfaces/quick/IContainerServices";
 import { IWebSDKSettingsWrapper } from "../../../../common/shrimp/interfaces/quick/IWebSDK";
+import { VTextFieldFormattingExtensionData } from "../managers/extension/extensionData/VTextFieldFormattingExtensionData";
 export declare class ComponentInstanceTracker implements IComponentInstanceTracker {
     contextName: string;
     private servicesWrapper;
@@ -25,6 +26,7 @@ export declare class ComponentInstanceTracker implements IComponentInstanceTrack
         props: IDictionary<any>;
     }): void;
     private newCompInstanceAndDomTracker;
+    private setShadowRootToDomElement;
     /**
      * Look child component slotType and fix it to the right place where it's needed to be real place which can be found in vnode.data.slot
      * @param compInstance Component instance that will be looked on its children
@@ -35,6 +37,6 @@ export declare class ComponentInstanceTracker implements IComponentInstanceTrack
      * Listen component dom changes on this method
      * @returns key fields
      */
-    static componentDOMListeners(): Record<string, (componentCollection: IComponentCollection) => void>;
+    static componentDOMListeners(extensionData: VTextFieldFormattingExtensionData): Record<string, (componentCollection: IComponentCollection) => void>;
 }
 //# sourceMappingURL=ComponentInstanceTrackerImpl.d.ts.map

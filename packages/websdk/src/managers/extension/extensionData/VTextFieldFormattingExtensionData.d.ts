@@ -11,12 +11,12 @@ export declare class VTextFieldFormattingExtensionData implements IExtensionData
     constructor(settingsWrapper: IWebSDKSettingsWrapper, websdkContext: ContextManager);
     create(compCollection: IComponentCollection, attrs: Record<string, any>): void;
     readonly extensionDictionary: Record<string, (componentCollection: IComponentCollection, attrs: Record<string, any>) => void>;
-    private static createNewInputMask;
+    private createNewInputMask;
     private initialize;
     private setDefaultConfigurations;
-    private static maskComplete;
-    private static beforePaste;
-    static findInputDOM(componentCollection: IComponentCollection): IVnode | undefined;
-    private static getComponentHtmlElement;
+    private maskComplete;
+    private beforePaste;
+    findInputDOM(componentCollection: IComponentCollection): IVnode | undefined;
+    private getComponentHtmlElement;
 }
 //# sourceMappingURL=VTextFieldFormattingExtensionData.d.ts.map

@@ -18,6 +18,7 @@ export declare class ChartComponentManager {
     private chartOptions;
     private chartYTicksFont;
     private chartYPropSetter;
+    private chartY1PropSetter;
     private chartXTicksFont;
     private chartXPropSetter;
     private chartXTimePropSetter;

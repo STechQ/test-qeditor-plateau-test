@@ -64,6 +64,7 @@ export interface IWebSDKSettings {
     disablePagePool?: boolean;
     blockFontRequest?: boolean;
     logBulkSize?: number;
+    useShadowDOM?: boolean;
 }
 export interface IFontSettings {
     id: string;
