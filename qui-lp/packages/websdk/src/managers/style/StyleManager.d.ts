@@ -9,6 +9,7 @@ export declare class StyleManager implements IStyleManager {
     private index;
     private cssIndexDict;
     private domInteractor;
+    private isShadowDOMEnabled;
     constructor(uid: any, websdkContext: ContextManager);
     attach(): void;
     detach(): void;

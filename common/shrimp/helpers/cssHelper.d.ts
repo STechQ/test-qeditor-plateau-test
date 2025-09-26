@@ -1,6 +1,6 @@
 declare global {
     interface Document {
-        getPlateauShadowRoot: () => ShadowRoot | undefined;
+        getPlateauShadowRoot: (returnValue?: any) => ShadowRoot | any;
     }
 }
 export declare class CssHelper {

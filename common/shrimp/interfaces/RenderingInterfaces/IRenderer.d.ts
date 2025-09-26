@@ -73,8 +73,8 @@ export interface IRenderer {
     SetEditMode(state: boolean): void;
     SetLogParams(logParams: ILogParams): void;
     GetLogParams(): ILogParams | undefined;
-    Hibernate(passHibernate?: boolean, historyItem?: boolean): void;
-    resurrect(historyItem?: boolean): void;
+    Hibernate(passHibernate?: boolean): void;
+    resurrect(): void;
     SetConfigValues(configValues?: IConfig[]): void;
     SetThemeName(theme: {
         isLight: boolean;
