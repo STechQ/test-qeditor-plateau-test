@@ -30,7 +30,6 @@ export declare class ComponentManagerImpl implements IComponentManager {
         componentCollection: ILightComponentCollection;
         directives?: Array<IDirectiveElement>;
     }): ICreatedComponent;
-    private setShadowRootToDomElement;
     private createChartComp;
     createContainerView(compUID: string): HTMLDivElement;
     updateContainerView({ givenObject, elements }: {

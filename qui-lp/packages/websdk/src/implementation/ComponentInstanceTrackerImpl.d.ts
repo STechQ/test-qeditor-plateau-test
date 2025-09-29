@@ -26,7 +26,6 @@ export declare class ComponentInstanceTracker implements IComponentInstanceTrack
         props: IDictionary<any>;
     }): void;
     private newCompInstanceAndDomTracker;
-    private setShadowRootToDomElement;
     /**
      * Look child component slotType and fix it to the right place where it's needed to be real place which can be found in vnode.data.slot
      * @param compInstance Component instance that will be looked on its children
