@@ -29,6 +29,7 @@ export interface IInitOptions {
         paste?: boolean;
     }) => void;
     onModifiedStatus?: (status: IModifiedStatus) => void;
+    onOpenModelInNewTab?: (modelID: string) => void;
     ui?: {
         onModelBodyRequire?: GetModelBody;
         onOpenConstantPanel?: (type: string, cb: (id: string) => void) => void;

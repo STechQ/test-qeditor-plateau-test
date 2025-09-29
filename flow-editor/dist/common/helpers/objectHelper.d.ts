@@ -8,4 +8,6 @@ export declare function filterNulls<TItem>(array: Array<TItem | undefined>): Arr
  * 2> { key: number | undefined }   -> Object.values(...).forEach(item: number | undefined => ...)
  */
 export declare function objectValues<T extends object>(obj: T): Array<Extract<T[keyof T], unknown>>;
+export declare function getIdByName(dict: Map<string, string>, name: string): string | undefined;
+export declare function getNameById(dict: Map<string, string>, id: string): string | undefined;
 //# sourceMappingURL=objectHelper.d.ts.map

@@ -13,6 +13,7 @@ interface IMappingProps {
     readOnly?: boolean;
     onChangeInParamMapping: (inParamMapping: IStoreInParameterMapping[]) => void;
     onChangeOutParamMapping: (outParamMapping: IStoreOutParameterMapping[]) => void;
+    openModelInNewTab: (modelID: string) => void;
 }
 export declare const Mapping: FC<IMappingProps>;
 export {};

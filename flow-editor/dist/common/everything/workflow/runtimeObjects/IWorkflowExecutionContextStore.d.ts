@@ -2,7 +2,7 @@ import { EnvManager } from "../../../runtime/application/envManager";
 import { IExecutionContextStore } from "../../../runtime/infrastructure/executionContext";
 import { MongoDBManager } from "../../../runtime/infrastructure/mongo/mongoDBManager";
 import { IDataTypeModel } from "../../dataType/runtimemodels/IDataTypeModel";
-import { ILegacyWorkflowModelForCamunda, IWorkflowModel } from "../runtimemodels/IWorkflow";
+import { ILegacyWorkflowModelForCamunda, IWorkflowModel, StatusType } from "../runtimemodels/IWorkflow";
 import { DataInstance } from "./DataInstance";
 import { IActionData } from "./IAction";
 import { IContext } from "./IContext";
@@ -40,6 +40,9 @@ export interface IWorkflowExecutionContextStore extends IExecutionContextStore {
         trxQueue?: IMongoDBTransactionQueue;
         lockMap?: Record<string, ILockParam>;
         lastCompletedTask?: IWFEDBTaskHistory;
+        jumpToStepId?: string;
+        jumpToStepName?: string;
+        status?: StatusType;
     };
 }
 //# sourceMappingURL=IWorkflowExecutionContextStore.d.ts.map

@@ -19,16 +19,22 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     dataType: "base64" | "url" | "arrayBuffer";
     tiffBufferData: ArrayBuffer | null;
     tifIfds: any[];
+    blocked: boolean;
+    internalErrorMessage: string;
 }, {
+    fetchPdfBytes(src: string): Promise<ArrayBuffer>;
+    scanForJS(content: ArrayBuffer | string, type: 'pdf' | 'html'): boolean;
     isTiffBuffer(buffer: ArrayBuffer): boolean;
     loadTiff(dataType: "base64" | "arrayBuffer" | "url"): Promise<void>;
     getTiffBuffer(type: string, src: any): Promise<ArrayBuffer>;
+    escapeHTML(str: string): string;
     renderTiffPage(): void;
     base64ToArrayBuffer(base64: string): ArrayBuffer;
-    createPdf(): void;
+    createPdf(): Promise<void>;
+    handleHtml(): Promise<void>;
     downloadTiff(): void;
     base64ToAB(base64: string): ArrayBufferLike;
-    base64ToBlob(base64: any, type?: string): Blob;
+    base64ToBlob(base64: string, type?: string): Blob;
     focusSelectedPage(): void;
     zoomIn(): void;
     zoomOut(): void;
@@ -68,6 +74,8 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     fileDescription: string;
     showPrint: boolean;
     _renderingProps: any;
+    securityErrorMessage: string;
+    securityErrorMessageIcon: string;
 }>;
 export default _default;
 //# sourceMappingURL=QDocumentViewer.vue.d.ts.map
