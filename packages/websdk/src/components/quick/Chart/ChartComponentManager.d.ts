@@ -19,7 +19,6 @@ export declare class ChartComponentManager {
     isShadowDOMEnabled(): boolean | undefined;
     chartResizer(chart: any, container: any): void;
     private chartOptions;
-    private applyPointPropsToDataset;
     private chartYTicksFont;
     private chartYPropSetter;
     private chartY1PropSetter;
@@ -29,7 +28,6 @@ export declare class ChartComponentManager {
     private chartXTimeDisplayFormatsPropSetter;
     private chartDataLabelsPropSetter;
     private chartDataLabelsPaddingPropSetter;
-    private buildLegendFontSpec;
     private chartDataLabelsFontPropSetter;
     private chartPropSetter;
     private getDoughnutInsideTextPlugin;

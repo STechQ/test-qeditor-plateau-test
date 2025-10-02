@@ -21,6 +21,7 @@ export interface IMobileDeviceInfo {
     deviceName?: string;
     deviceModel?: string;
     deviceManufacturer?: string;
+    isNfcSupported?: boolean;
 }
 export interface IMobileAppInfo {
     appName?: string;

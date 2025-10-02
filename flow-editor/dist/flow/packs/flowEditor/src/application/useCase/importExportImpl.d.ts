@@ -35,7 +35,7 @@ export declare class ImportExportImpl implements IImportExport {
     private exportEditorModel;
     private exportDesignModel;
     private updateRuntimeObject;
-    private generateFlowIntelli;
+    private generateFlowIntellisense;
     private exportRuntimeFlowModel;
     private exportRuntimeWorkFlowModel;
     private exportDesignWorkflowModel;

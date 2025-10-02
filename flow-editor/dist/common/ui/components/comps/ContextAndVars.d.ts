@@ -14,7 +14,6 @@ interface IContextAndVarsProps {
     schema: Store;
     readonly?: boolean;
     onChange: (store: Store) => void;
-    openModelInNewTab?: (modelID: string) => void;
 }
 export declare const ContextAndVars: FC<IContextAndVarsProps>;
 export {};

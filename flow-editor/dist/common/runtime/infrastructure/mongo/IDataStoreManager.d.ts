@@ -1,7 +1,7 @@
 import { Hook } from "@stechquick/algae/lib/helpers/hook";
-import { UpdateFilter, ClientSession, Document } from "mongodb";
+import { UpdateFilter, ClientSession } from "mongodb";
 import { AtLeastOne } from "../../../../common/helpers/typeHelper";
-export type CollectionName = "FM_Users" | "Notifies" | "FM_Models" | "Counters" | "DeploymentLogs" | "PermanentStore" | "ServiceCaches" | "BatchJobs" | "BatchJobsHistory" | "Locks" | "CacheInvalidations" | "JobExecution" | "Holidays" | "JobExecutionHistory" | "WFE_SlaExecution" | "WFE_SlaExecutionHistory" | "WFE_ProcessInst" | "WFE_ProcessInstHistory" | "WFE_Task" | "WFE_TaskHistory" | "WFE_Activity" | "WFE_ActivityHistory" | "WFE_ThreadState" | "WFE_ThreadStateHistory" | "WFE_Notes" | "WFE_NotesHistory" | "WFE_Files" | "WFE_FilesHistory";
+export type CollectionName = "FM_Users" | "Notifies" | "FM_Models" | "Counters" | "DeploymentLogs" | "PermanentStore" | "ServiceCaches" | "BatchJobs" | "Locks" | "CacheInvalidations" | "JobExecution" | "Holidays" | "JobExecutionHistory" | "WFE_SlaExecution" | "WFE_SlaExecutionHistory" | "WFE_ProcessInst" | "WFE_ProcessInstHistory" | "WFE_Task" | "WFE_TaskHistory" | "WFE_Activity" | "WFE_ActivityHistory" | "WFE_ThreadState" | "WFE_ThreadStateHistory" | "WFE_Notes" | "WFE_NotesHistory" | "WFE_Files" | "WFE_FilesHistory";
 export type IndexDefinition<T> = {
     name: string;
     keys: AtLeastOne<Record<keyof T, "asc" | "desc">>;
@@ -74,19 +74,12 @@ type GroupFieldType<T> = {
         $sum?: number;
         $avg?: number;
         $min?: number;
-        $max?: any;
+        $max?: number;
         $push?: any;
         $addToSet?: any;
         $first?: any;
         $last?: any;
     } | string;
-};
-type MergeType<T> = {
-    into: string;
-    on?: string;
-    whenMatched?: "replace" | "merge" | "keepExisting" | "fail";
-    whenNotMatched?: "insert" | "discard";
-    let?: Record<string, any>;
 };
 type LookupType = {
     from: string;
@@ -116,7 +109,6 @@ export type AggregateType<T> = {
     $lookup?: LookupType | LookupType[];
     $unwind?: UnwindType | UnwindType[];
     $out?: string;
-    $merge?: MergeType<T>;
     $unionWith?: UnionType;
     $project?: any;
 };
@@ -157,7 +149,6 @@ export declare const trxFuncDict: {
     UpdateAsNative: "UpdateAsNative";
     Delete: "Delete";
     DeleteOne: "DeleteOne";
-    GetAndUpdateNative: "GetAndUpdateNative";
 };
 export declare const queryFuncDict: {
     List: "List";
@@ -167,12 +158,10 @@ export declare const queryFuncDict: {
     Count: "Count";
     Aggregate: "Aggregate";
     GetDistinct: "GetDistinct";
-    GetAndUpdateNative: "GetAndUpdateNative";
 };
 export interface IMongoDBConnectionManager {
     getConnection(url: string, options: {
         maxPoolSize: number;
-        serverSelectionTimeoutMS: number;
     }): Promise<object>;
 }
 export type OnCommitCallback = () => void;
@@ -229,11 +218,6 @@ export interface IDataStoreManager {
     UpdateAsNative<T, TTrx extends IMongoDBTransactionQueue | void = IMongoDBTransactionQueue>(collectionName: CollectionName, filter: FilterTypeNullable<T> | FilterTypeOrAnd<T>, update: UpdateFilter<T> | Partial<T>, options?: {
         trxQueue?: TTrx;
     }): Promise<GetReturnType<TTrx, UpdateResult>>;
-    GetAndUpdateNative<T, TTrx extends IMongoDBTransactionQueue | void = IMongoDBTransactionQueue>(collectionName: CollectionName, filter: FilterTypeNullable<T> | FilterTypeOrAnd<T>, update: UpdateFilter<any>, options?: {
-        upsert?: boolean;
-        returnDocument?: "before" | "after";
-        trxQueue?: TTrx;
-    }): Promise<T | undefined>;
     Delete<T, TTrx extends IMongoDBTransactionQueue | void = IMongoDBTransactionQueue>(collectionName: CollectionName, filter: FilterTypeNullable<T> | FilterTypeOrAnd<T>, options: {
         trxQueue?: TTrx;
     }): Promise<GetReturnType<TTrx, number>>;
@@ -246,19 +230,11 @@ export interface IDataStoreManager {
     GetDistinct<T, TTrx extends IMongoDBTransactionQueue | void = IMongoDBTransactionQueue>(collectionName: CollectionName, key: string, filter?: FilterTypeNullable<T> | FilterTypeOrAnd<T>, options?: {
         trxQueue?: TTrx;
     }): Promise<T | undefined>;
-    CreateIndexes<T>(collectionName: CollectionName, indexDefinitions: IndexDefinitions<T>, options?: {
-        force?: boolean;
-    }): Promise<void>;
+    CreateIndexes<T>(collectionName: CollectionName, indexDefinitions: IndexDefinitions<T>): Promise<void>;
     DeleteOne<T, TTrx extends IMongoDBTransactionQueue | void = IMongoDBTransactionQueue>(collectionName: CollectionName, filter: FilterTypeNullable<T> | FilterTypeOrAnd<T>, options?: {
         trxQueue?: TTrx;
     }): Promise<GetReturnType<TTrx, number>>;
     startTransactionQueue(): any;
-    UpdateManyRaw<T, TTrx extends IMongoDBTransactionQueue | void = IMongoDBTransactionQueue>(collectionName: CollectionName, filter: FilterTypeNullable<T> | FilterTypeOrAnd<T>, update: UpdateFilter<Document>, options?: {
-        upsert?: boolean;
-        trxQueue?: TTrx;
-        ignoreUndefined?: boolean;
-    }): Promise<GetReturnType<TTrx, UpdateResult>>;
-    getAllCollections(): Promise<CollectionName[]>;
 }
 export {};
 //# sourceMappingURL=IDataStoreManager.d.ts.map

@@ -7,9 +7,9 @@ export declare class EnvManager<TEnvKeyMap extends IEnvKeyMap> {
         envKeyMap: TEnvKeyMap;
     }): EnvManager<TEnvKeyMap>;
     private constructor();
-    getEnvValue<T extends keyof TEnvKeyMap>(key: T): TEnvKeyMap[T];
+    getEnvValue<T extends keyof TEnvKeyMap>(key: T): Promise<TEnvKeyMap[T]>;
     getEnvMapKey<T extends keyof TEnvKeyMap>(key: T): string;
     private port?;
-    getEnvPort(): number;
+    getEnvPort(): Promise<number>;
 }
 //# sourceMappingURL=envManager.d.ts.map

@@ -5,7 +5,6 @@ export declare class MongoDBConnectionManager implements IMongoDBConnectionManag
     constructor();
     getConnection(url: string, options: {
         maxPoolSize: number;
-        serverSelectionTimeoutMS: number;
     }): Promise<MongoClient>;
     private closeAll;
 }

@@ -88,7 +88,6 @@ export interface IEditSectionInput<PropType extends IPropObject = IPropObject> {
             caseId: string;
         }) => void;
         selectedSwitchCase?: (cb: (param?: ISelectedSwitchCase) => void) => ISelectedSwitchCase | undefined;
-        openModelInNewTab: (modelID: string) => void;
         store?: Store;
         nestedStore: INestedStore;
         readOnly: boolean;
@@ -134,6 +133,6 @@ export interface IStepOptions<PropType extends IPropObject = IPropObject> {
     icon?: string;
     deprecated?: boolean;
     editSection?: (options: IEditSectionInput<PropType>) => (ReactEditSection | HTMLElement);
-    propDefinitions: () => IPropDefiniton<PropType>;
+    propDefinitons: () => IPropDefiniton<PropType>;
 }
 //# sourceMappingURL=IStepOptions.d.ts.map

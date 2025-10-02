@@ -9,11 +9,10 @@ interface IExpressionProps {
     disabled?: boolean;
     types: Array<IExpressionData["type"]>;
     expression: IExpressionData;
-    store: INestedStore;
     constantsOptions?: Array<IOption>;
     onChange?: (value: IExpressionData) => void;
     onBlur?: (value: IExpressionData) => void;
-    openModelInNewTab?: (modelID: string) => void;
+    store: INestedStore;
 }
 export declare const Expression: FC<IExpressionProps>;
 export {};

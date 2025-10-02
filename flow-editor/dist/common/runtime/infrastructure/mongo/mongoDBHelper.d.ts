@@ -6,7 +6,7 @@ export declare class MongoDBSortHelper {
     convertToSortedTuple(items: Array<SortObject>): Array<[sortField: string, direction: 1 | -1]>;
 }
 export declare class MongoDBHelper {
-    static createClient(envManager: EnvManager<IEnvKeyMap>, dbName: string): MongoDBManager;
+    static createClient(envManager: EnvManager<IEnvKeyMap>, dbName: string): Promise<MongoDBManager>;
     static startupIndexCreator(dsManager: IDataStoreManager, options: {
         pidSeperated: false;
     } | {
