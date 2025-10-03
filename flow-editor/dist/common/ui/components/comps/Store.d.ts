@@ -17,6 +17,7 @@ export interface IStoreProps {
     }>;
     readOnly?: boolean;
     onChange: (store: StoreModel) => void;
+    openModelInNewTab?: (modelID: string) => void;
 }
 export declare function mountStore(element: HTMLElement, props: IStoreProps): {
     unmount: () => void;

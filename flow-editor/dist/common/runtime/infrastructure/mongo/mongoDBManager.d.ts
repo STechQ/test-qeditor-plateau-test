@@ -4,6 +4,7 @@ import { MongoDBTransactionQueue } from "./mongoDBTransactionQueue";
 export declare const MongoDBErrorCodes: {
     duplicateKeyErrorCode: number;
     IndexOptionsConflict: number;
+    IndexKeySpecsConflict: number;
 };
 export declare class MongoDBManager implements IDataStoreManager {
     private url;
@@ -57,10 +58,20 @@ export declare class MongoDBManager implements IDataStoreManager {
     } | {
         upsert?: false;
     })): Promise<GetReturnType<TTrx, UpdateResult>>;
+    UpdateManyRaw<T, TTrx extends IMongoDBTransactionQueue | void = IMongoDBTransactionQueue>(collectionName: CollectionName, filter: FilterTypeNullable<T> | FilterTypeOrAnd<T>, update: UpdateFilter<Document>, options?: {
+        upsert: boolean;
+        trxQueue?: TTrx;
+        ignoreUndefined?: boolean;
+    }): Promise<GetReturnType<TTrx, UpdateResult>>;
     UpdateAsNative<T, TTrx extends IMongoDBTransactionQueue | void = IMongoDBTransactionQueue>(collectionName: CollectionName, filter: FilterTypeNullable<T> | FilterTypeOrAnd<T>, update: UpdateFilter<T> | Partial<T>, options?: {
         trxQueue?: TTrx;
         upsert?: boolean;
     }): Promise<GetReturnType<TTrx, UpdateResult>>;
+    GetAndUpdateNative<T = Document, TTrx extends IMongoDBTransactionQueue | void = IMongoDBTransactionQueue>(collectionName: CollectionName, filter: FilterTypeNullable<T> | FilterTypeOrAnd<T>, update: UpdateFilter<any>, options?: {
+        trxQueue?: TTrx;
+        upsert?: boolean;
+        returnDocument?: ReturnDocument;
+    }): Promise<T | undefined>;
     Delete<T, TTrx extends IMongoDBTransactionQueue | void = IMongoDBTransactionQueue>(collectionName: CollectionName, filter: FilterTypeNullable<T> | FilterTypeOrAnd<T>, options: {
         trxQueue?: TTrx;
     }): Promise<GetReturnType<TTrx, number>>;
@@ -73,10 +84,13 @@ export declare class MongoDBManager implements IDataStoreManager {
     Aggregate<T, RetT = T, TTrx extends IMongoDBTransactionQueue | void = IMongoDBTransactionQueue>(collectionName: CollectionName, pipeline: Array<AggregateType<T>>, options?: {
         trxQueue?: TTrx;
     }): Promise<Array<RetT>>;
-    CreateIndexes<T>(collectionName: CollectionName, indexDefinitions: IndexDefinitions<T>): Promise<void>;
+    CreateIndexes<T>(collectionName: CollectionName, indexDefinitions: IndexDefinitions<T>, options?: {
+        force?: boolean;
+    }): Promise<void>;
     changeStream<T extends Document>(collectionName: CollectionName, cb: (result: ChangeStreamResult<T>) => Promise<void>, options?: {
         fullDocument?: boolean;
     }): Promise<ChangeStream<T, ChangeStreamDocument<T>>>;
+    getAllCollections(): Promise<CollectionName[]>;
 }
 export interface ChangeStreamResult<T extends Document> {
     operationType: "insert" | "update";

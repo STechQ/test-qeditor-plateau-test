@@ -14,6 +14,7 @@ export declare class Decimal implements ICompositor {
     private setMinValueOnBlur;
     private changeValue;
     private formatValue;
+    private normalizeLocaleDecimal;
     private compareNumbers;
     getUnmaskedValue(): string;
     private unMask;

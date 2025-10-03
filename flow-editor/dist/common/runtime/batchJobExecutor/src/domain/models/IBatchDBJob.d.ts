@@ -12,4 +12,6 @@ export interface IBatchDBJobBase {
     uniqueKey?: string;
     executionId?: string;
 }
+export interface IBatchDBJobBaseHistory extends IBatchDBJobBase {
+}
 //# sourceMappingURL=IBatchDBJob.d.ts.map

@@ -77,6 +77,7 @@ export interface IPlatformWFEAdaptor {
         preUserTaskComplete: (task: IWFEDBTask, taskAction: IAction, processInstance: IProcessInstance, dataInstance: DataInstance) => Promise<void>;
         userTaskCompleted: (task: IWFEDBTaskHistory, taskAction: IAction, processInstance: IProcessInstance, dataInstance: DataInstance, sla?: ISLA) => Promise<void>;
         processEnded: (lastAction: IActionData, processInstance: IProcessInstance, dataInstance: DataInstance, sla?: ISLA) => Promise<void>;
+        onBeforeProcessEnded: (lastAction: IActionData, descriptionCode: string, description: string) => Promise<void>;
     };
 }
 //# sourceMappingURL=IPlatformWFEAdaptor.d.ts.map

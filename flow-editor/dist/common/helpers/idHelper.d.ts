@@ -1,7 +1,7 @@
 import { ModelType } from "../everything/studio/ui/IStudioUIModelBase";
 export declare class IdHelper {
     static extractId(str: string): string;
-    static extractIdType(str: string): {
+    static extractIdType(str: string | boolean): {
         modelType: string;
         id: string;
     } | undefined;

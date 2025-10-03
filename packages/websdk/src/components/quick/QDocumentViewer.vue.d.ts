@@ -31,7 +31,6 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     renderTiffPage(): void;
     base64ToArrayBuffer(base64: string): ArrayBuffer;
     createPdf(): Promise<void>;
-    handleHtml(): Promise<void>;
     downloadTiff(): void;
     base64ToAB(base64: string): ArrayBufferLike;
     base64ToBlob(base64: string, type?: string): Blob;

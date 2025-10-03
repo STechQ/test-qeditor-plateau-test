@@ -6,10 +6,11 @@ interface ISelectProps {
     placeholder?: string;
     disabled?: boolean;
     value: string;
-    onChange: (value: IOption['value']) => void;
     options: Array<IOption>;
     searchable?: boolean;
     unselect?: boolean;
+    onChange: (value: IOption['value']) => void;
+    openModelInNewTab?: (modelID: string) => void;
 }
 export interface IOption {
     name: string;

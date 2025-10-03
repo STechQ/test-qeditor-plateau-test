@@ -74,6 +74,7 @@ declare class WebsdkContainer {
     private LoadJS;
     private LoadQjson;
     private configureLivePreview;
+    private getBuildVersion;
     private registerServiceWorker;
     onSWMessage(packId: any): Promise<void>;
     sendMessage(msg: any): void;

@@ -13,5 +13,6 @@ export interface IQuickInputFormatOptions {
     preventPaste: boolean | undefined;
     regex: string | undefined;
     selectAllOnClick: boolean | undefined;
+    formatType: 'tr-TR' | 'en-US' | undefined;
 }
 //# sourceMappingURL=externalInterfaces.d.ts.map
