@@ -5379,12 +5379,12 @@ nextIcon = 'mdi-plus'}`
             type: "number | string"
         },
         securityErrorMessage: {
-            editorDefaultValue: "'securityErrorMessage'",
+            editorDefaultValue: "",
             type: String,
         },
         securityErrorMessageIcon: {
             type: String,
-            editorDefaultValue: "'mdi-home'"
+            editorDefaultValue: "'mdi-alert'"
         },
     },
     DxPaging: {
