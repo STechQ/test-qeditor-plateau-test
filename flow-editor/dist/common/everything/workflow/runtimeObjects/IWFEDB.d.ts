@@ -16,7 +16,7 @@ export type DBReturn<T> = T & {
 export type IWFEDBSLA = {
     [K in keyof ISLA]: K extends "slaDueGoal" | "slaDueCritical" | "slaDueDeadline" ? DBDateEPOC : never;
 };
-export type ISystemStatus = "alive" | "completed" | "aborted";
+export type ISystemStatus = "alive" | "completed" | "terminated";
 export interface IWFEDBProcessInst {
     processInstanceId: string;
     appId: string;
@@ -46,7 +46,7 @@ export interface IWFEDBProcessInst {
     systemStatus: ISystemStatus;
 }
 export interface IWFEDBProcessInstHistory extends OmitTyped<IWFEDBProcessInst, "stepStates"> {
-    systemStatus: "completed" | "aborted";
+    systemStatus: "completed" | "terminated";
     endDate: DBDateEPOC;
 }
 export declare const flowThreadIdField: "flowThreadId";
