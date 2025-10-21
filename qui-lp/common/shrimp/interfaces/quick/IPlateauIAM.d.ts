@@ -5,8 +5,8 @@ export interface IPlateauIAM {
         iam: ISettingsIAM["iam"];
         iamV2?: ISettingsIAMV2;
     }): void;
-    isAuthenticated(): boolean;
-    init(PlateauUIOptions?: IPlateauUIOptions): Promise<void>;
+    isAuthenticated(): true | undefined;
+    init(callback: Function, PlateauUIOptions?: IPlateauUIOptions): Promise<void>;
     logout(): void;
     getToken: () => string | undefined;
     getInfo: () => object | undefined;
