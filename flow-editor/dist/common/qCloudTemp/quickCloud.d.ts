@@ -25,7 +25,7 @@ export type CreateUIType = "createUI";
 export type UsageType = AppSettingsObjectType | AppAssetObjectType;
 export type ModuleType = "basic";
 export type AllCreateObjectTypes = ModelType | FolderObjectType | ModuleObjectType | CreateUIType;
-export type AppSettingsModelKeys = "settings" | "componentList" | "containerServices" | "pipeline" | "alert" | "loading" | "globalLocalization" | "localProxy" | "style" | "rootqjson" | "asset" | "appSettings" | "containerServIntelli" | "theme" | "container";
+export type AppSettingsModelKeys = "settings" | "componentList" | "containerServices" | "pipeline" | "alert" | "loading" | "globalLocalization" | "localProxy" | "style" | "rootqjson" | "asset" | "appSettings" | "containerServIntelli" | "theme" | "container" | "constant";
 export type ExtensionType = "png" | "jpg" | "jpeg" | "svg" | "gif" | "json" | "woff" | "woff2" | "ttf" | "otf";
 export type ModuleShareType = 'reference' | 'version';
 export declare const UISettingsType: {
@@ -429,6 +429,9 @@ export interface IAppToken {
 export interface ITags extends ICloudObject {
     description?: string;
 }
+export interface IOrganizationGroupConfigs {
+    environments?: Array<string>;
+}
 export interface IOrganizationGroup extends ICloudObject {
     description?: string;
     createdBy: string;
@@ -438,6 +441,7 @@ export interface IOrganizationGroup extends ICloudObject {
     features?: IOrganizationFeatures;
     applications?: IEditorTypes;
     mainAppId?: IApplication["ID"];
+    configs?: IOrganizationGroupConfigs;
 }
 export interface ISDActivities {
     ID: ObjectID;
