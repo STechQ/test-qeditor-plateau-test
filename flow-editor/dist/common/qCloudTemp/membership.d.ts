@@ -1,5 +1,5 @@
 import { IUser_SUSI } from "./authentication";
-import { IOrganizationActions, ITags, IOrganizationGroupConfigs } from "./quickCloud";
+import { IOrganizationActions, ITags } from "./quickCloud";
 export interface IOrganizationCloud {
     azure?: {
         resourceGroupID?: string;
@@ -11,9 +11,6 @@ export interface IOrganizationCloud {
     plateauGCP?: {
         environmentPrefix?: string;
     };
-}
-export interface IOrganizationConfigs {
-    environments?: IOrganizationGroupConfigs['environments'];
 }
 export interface IOrganization {
     id: string;
@@ -35,7 +32,6 @@ export interface IOrganization {
     tags?: Array<ITags['ID']>;
     organizationGroupId?: string;
     calculatedInfo?: IOrganizationCalculatedInfo;
-    configs?: IOrganizationConfigs;
 }
 export interface IEditorTypes {
     quick?: boolean;
@@ -50,7 +46,6 @@ export interface IEditorTypes {
     store?: boolean;
     certificate?: boolean;
     container?: boolean;
-    constant?: boolean;
 }
 export interface IOrganizationFeatures {
     multipleCss?: boolean;
@@ -60,7 +55,6 @@ export interface IOrganizationFeatures {
     appVersion?: boolean;
     externalIntegration?: boolean;
     copyApp?: boolean;
-    certificate?: boolean;
 }
 export interface IOrganizationCalculatedInfo {
     appCount: number;
