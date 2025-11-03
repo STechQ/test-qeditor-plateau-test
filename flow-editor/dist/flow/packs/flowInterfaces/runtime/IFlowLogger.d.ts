@@ -10,9 +10,4 @@ export interface IFlowLogItem {
     message: string;
     additionals?: Array<object> | object;
 }
-export declare const LogCodesSpecial: {
-    readonly ReqBERest: "Rest -->";
-    readonly ResBERest: "Rest <--";
-    readonly ResBEMock: "<-- (M)";
-};
 //# sourceMappingURL=IFlowLogger.d.ts.map
