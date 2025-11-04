@@ -11,7 +11,6 @@ export interface IComponentInternalSI {
     groupName?: string;
     groupContent: Array<IGroupContent>;
     showComponent?: boolean;
-    inheritedStyle?: boolean;
 }
 export interface IGroupContent {
     styleKey: Array<IComponentStyleKey>;
