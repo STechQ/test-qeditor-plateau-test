@@ -1097,9 +1097,6 @@ var componentOptions = {
         height: {
             type: String
         },
-        hover: {
-            type: Boolean
-        },
         href: {
             type: "string | object"
         },
