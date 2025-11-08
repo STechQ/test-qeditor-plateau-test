@@ -723,7 +723,7 @@ export interface IGlobals_Quick {
      * @returns  - The formatted long date string.
      *
      * @example
-     * const longDate = quick.Quick.toLongDate(new Date(), 'DD.MM.YYYY HH:MM')
+     * const longDate = quick.Quick.toLongDate(new Date(), 'DD.MM.YYYY HH:mm')
    */
     toLongDate: (date: Date, formatType?: string) => string;
     /**
@@ -745,7 +745,7 @@ export interface IGlobals_Quick {
      * @returns - The formatted long time string.
      *
      * @example
-     * const longTime = quick.Quick.toLongTime(new Date(), 'HH:MM:SS');
+     * const longTime = quick.Quick.toLongTime(new Date(), 'HH:mm:ss');
    */
     toLongTime: (date: Date, formatType?: string) => string;
     /**
@@ -756,7 +756,7 @@ export interface IGlobals_Quick {
      * @returns - The formatted short time string.
      *
      * @example
-     * const shortTime = quick.Quick.toShortTime(new Date(), 'HH:MM');
+     * const shortTime = quick.Quick.toShortTime(new Date(), 'HH:mm');
    */
     toShortTime: (date: Date, formatType?: string) => string;
     /**

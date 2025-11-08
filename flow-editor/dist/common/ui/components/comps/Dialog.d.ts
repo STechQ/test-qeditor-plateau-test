@@ -10,6 +10,7 @@ interface DialogProps {
     position?: {
         top?: number;
         bottom?: number;
+        left?: number;
     };
     icon?: JSX.Element;
 }
