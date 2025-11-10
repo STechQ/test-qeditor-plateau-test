@@ -184,6 +184,7 @@ export interface IModule extends IObject {
     lastReleasedVersion?: string;
     ownerOrg?: IModuleOwnerOrgInfo;
     origInfo?: IModuleOrigInfo;
+    modifyDate?: Date;
 }
 export interface IGetModuleResponse extends IModule {
     versionID?: IModuleVersion["ID"];
