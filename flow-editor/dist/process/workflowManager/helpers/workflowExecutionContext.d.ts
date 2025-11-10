@@ -26,7 +26,6 @@ export declare class WorkflowExecutionContext extends ExecutionContext<IWorkflow
             lastAction?: import("../../../common/everything/workflow/runtimeObjects/IAction").IActionData | undefined;
             infoList?: import("../../../common/everything/workflow/runtimeObjects/IContextInfo").IContextInfo[] | undefined;
             flowThreadId?: string | undefined;
-            trxQueue?: import("../../../common/runtime/infrastructure/mongo/IDataStoreManager").IMongoDBTransactionQueue | undefined;
             lockMap?: Record<string, import("../../../common/everything/workflow/runtimeObjects/ILock").ILockParam> | undefined;
             lastCompletedTask?: import("../../../common/everything/workflow/runtimeObjects/IWFEDB").IWFEDBTaskHistory | undefined;
             jumpToStepId?: string | undefined;
