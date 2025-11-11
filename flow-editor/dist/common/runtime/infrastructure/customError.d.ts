@@ -145,6 +145,8 @@ export declare const ErrorCodes: {
     readonly wm3060: "WM-3060";
     readonly wm3061: "WM-3061";
     readonly wm3062: "WM-3062";
+    readonly wm3063: "WM-3063";
+    readonly wm3064: "WM-3064";
     readonly wm3081: "WM-3081";
     readonly wm3082: "WM-3082";
     readonly wm3083: "WM-3083";
