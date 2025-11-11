@@ -8,8 +8,6 @@ import { IFlowLogger } from "../../flowInterfaces/runtime/IFlowLogger";
 import { IFlowEvents } from "@stechquick/flow-interfaces/runtime/IFlowEvents";
 import { IStepStates } from "../../../../common/everything/flow/runtimeObjects/IStepStates";
 import { StepRepo } from "./manager/stepRepo";
-import { RequestCacheOptions } from "../../../../common/runtime/infrastructure/cache/IServiceCacheRequest";
-import { IRequest, IResponse } from "../../../../common/everything/flow/runtimeObjects/INetwork";
 export declare const flowBatchOn: "on" | "off";
 export interface IRuntimeOptions {
     debug?: boolean;
@@ -27,7 +25,6 @@ export interface IRuntimeOptions {
     stepStates?: IStepStates;
     stepRepo?: StepRepo;
     isKnownError?: (error: Error, detail: string) => boolean;
-    network: <TReqBody, TRespBody>(cacheOptions: RequestCacheOptions<TRespBody>, requestOptions: IRequest<TReqBody>) => Promise<IResponse<TRespBody>>;
 }
 export interface IFlowExecutionResult {
     executedType: FlowExecutionType;
