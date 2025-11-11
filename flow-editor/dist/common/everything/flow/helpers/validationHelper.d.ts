@@ -1,5 +1,5 @@
-import { IVariable } from "../everything/dataType/runtimemodels/IVariable";
-import { Store } from "../everything/store/runtimemodels/IStoreModel";
+import { IVariable } from "../../dataType/runtimemodels/IVariable";
+import { Store } from "../../store/runtimemodels/IStoreModel";
 type IVariableWithUnderscoreName = IVariable & {
     _name?: string;
 };
