@@ -102,6 +102,11 @@ export declare const EditorConsts: {
             readonly single: "sla";
         };
     };
+    readonly decisionTable: {
+        readonly modelKeys: {
+            readonly single: "decisionTable";
+        };
+    };
 };
 type ModelVisualInfo = {
     type: "icon";

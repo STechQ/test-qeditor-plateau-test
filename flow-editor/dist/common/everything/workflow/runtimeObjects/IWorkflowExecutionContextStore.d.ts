@@ -28,6 +28,7 @@ export interface IWorkflowExecutionContextStore extends IExecutionContextStore {
     user?: IUser;
     initialContext?: IContext;
     envManager: EnvManager<IWMEnvKeyMap>;
+    trxQueue?: IMongoDBTransactionQueue;
     wfEngineOnUs?: {
         workflowModel?: IWorkflowModel;
         dataInstance?: DataInstance;
@@ -37,7 +38,6 @@ export interface IWorkflowExecutionContextStore extends IExecutionContextStore {
         lastAction?: IActionData;
         infoList?: Array<IContextInfo>;
         flowThreadId?: string;
-        trxQueue?: IMongoDBTransactionQueue;
         lockMap?: Record<string, ILockParam>;
         lastCompletedTask?: IWFEDBTaskHistory;
         jumpToStepId?: string;
