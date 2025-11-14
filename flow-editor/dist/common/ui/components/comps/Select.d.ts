@@ -9,6 +9,7 @@ interface ISelectProps {
     options: Array<IOption>;
     searchable?: boolean;
     unselect?: boolean;
+    errorMessage?: string;
     onChange: (value: IOption['value']) => void;
     openModelInNewTab?: (modelID: string) => void;
 }
