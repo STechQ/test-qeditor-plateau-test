@@ -7,7 +7,6 @@ interface IInputProps {
     disabled?: boolean;
     isDigit?: boolean;
     value: string;
-    errorMessage?: string;
     validationControl?: (value: string) => string;
     onChange?: (e: string) => void;
     onBlur?: (e: string) => void;

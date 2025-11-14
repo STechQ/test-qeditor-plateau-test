@@ -65,7 +65,7 @@ export interface IGetExportModelsResponse {
 export interface IExportItem {
     id: string;
     ver: string;
-    type: "settings_yaml" | "alert_qjson" | "pipeline_qjson" | "localProxy_yaml" | "globalLocalization_qjson" | "loading_qjson" | "componentList_js" | "namedComps" | "qjsons" | "css" | "containerServices_js" | "bpmn" | "process" | "entityDesigner" | "flow" | "assetList_js" | /*"flowEntity" //FLOW ENTITY IS GOING BYE BYE (perhaps 🤔) |*/ "lottie" | "appSettings" | "png" | "jpg" | "jpeg" | "svg" | "gif" | "woff" | "woff2" | "ttf" | "otf" | "certificate" | "containerServIntelli_ts" | "theme" | "container";
+    type: "settings_yaml" | "alert_qjson" | "pipeline_qjson" | "localProxy_yaml" | "globalLocalization_qjson" | "loading_qjson" | "componentList_js" | "namedComps" | "qjsons" | "css" | "containerServices_js" | "bpmn" | "process" | "entityDesigner" | "flow" | "assetList_js" | /*"flowEntity" //FLOW ENTITY IS GOING BYE BYE (perhaps 🤔) |*/ "lottie" | "appSettings" | "png" | "jpg" | "jpeg" | "svg" | "gif" | "woff" | "woff2" | "ttf" | "otf" | "certificate" | "constant" | "containerServIntelli_ts" | "theme" | "container";
     size?: number;
     path: string;
     name: string;

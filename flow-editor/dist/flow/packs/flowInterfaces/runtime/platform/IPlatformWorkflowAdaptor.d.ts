@@ -10,6 +10,8 @@ import { IDataSearchParams, IDataSearchResult } from "../../../../../process/wor
 import { CustomType } from "../../../../../common/everything/workflow/runtimemodels/types";
 import { IFile } from "../../../../../common/everything/workflow/runtimeObjects/namedobjects/IFile";
 import { IActionData } from "../../../../../common/everything/workflow/runtimeObjects/IAction";
+import { IModelForWorkflow } from "../../../../../common/qCloudTemp/quickCloud";
+import { IServiceCacheRequest } from "../../../../../common/runtime/infrastructure/cache/IServiceCacheRequest";
 export interface IPlatformWFFAdaptor {
     flowExecutor: (prop: StepFlowModelPropType) => Promise<any>;
     soapServiceExecutor: (prop: StepFlowModelPropType) => Promise<any>;
@@ -50,6 +52,8 @@ export interface IPlatformWFFAdaptor {
         };
     };
     log: (message: string, ...optionalParams: Array<any>) => void;
+    getModelbyID: (key: string) => Promise<IModelForWorkflow>;
+    getServiceResponseWithCacheControl: <TReturn>(options: IServiceCacheRequest<TReturn>) => Promise<TReturn>;
 }
 export type CompleteActionType = "complete" | "cancel" | "return";
 export interface IDataSearchResponse extends IDataSearchResult {

@@ -1,19 +1,17 @@
 import { CollectionName, IDataStoreManager } from "../../../../common/runtime/infrastructure/mongo/IDataStoreManager";
-import { IResponse } from "../../../everything/flow/runtimeObjects/INetwork";
 /**
  * Generic cache-aware request configuration.
  */
-export interface IServiceCacheRequest<TRespBody> {
+export interface IServiceCacheRequest<TReturn> {
     times: {
         refreshPeriodInMs?: number;
         validityDurationInMs?: number;
     };
     key: string;
-    getResponseCb: () => Promise<IResponse<TRespBody>>;
+    getResponseCb: () => Promise<TReturn>;
     dsManager: IDataStoreManager;
     cacheConfig?: IRestCacheConfig | ISoapCacheConfig;
 }
-export type RequestCacheOptions<TRespBody> = Omit<Omit<IServiceCacheRequest<TRespBody>, "getResponseCb">, "dsManager">;
 interface ICacheConfigBase {
     timeoutInMs?: number;
     collectionName?: CollectionName;
