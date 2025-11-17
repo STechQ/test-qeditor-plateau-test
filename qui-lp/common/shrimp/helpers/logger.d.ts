@@ -17,7 +17,6 @@ export interface IMessage {
     type: string;
     time: string;
     caller: string;
-    isClientLog?: boolean;
 }
 export declare class Logger implements ILogger {
     constructor();
@@ -67,7 +66,7 @@ export declare class Logger implements ILogger {
      * @param logMessage Message that will be written to the server
      * @param logType Type of log message
      */
-    static prepareClientLog(logMessage: any, logType: LogType, isClientLog?: boolean): void;
+    static prepareClientLog(logMessage: any, logType: LogType): void;
     /**
      * Can't call Log.calle.caller beacuse of the TypeScript classes are on "strict mode"
      * JS doesn't allow to arguments.callee.caller on strict mode
