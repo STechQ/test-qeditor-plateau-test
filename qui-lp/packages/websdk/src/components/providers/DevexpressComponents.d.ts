@@ -154,6 +154,11 @@ declare const devExpressLibrary: {
         loaded: boolean;
         module: undefined;
     };
+    DxTagBox: {
+        importFunc: () => Promise<void>;
+        loaded: boolean;
+        module: undefined;
+    };
 };
 export { devExpressLibrary };
 //# sourceMappingURL=DevexpressComponents.d.ts.map
