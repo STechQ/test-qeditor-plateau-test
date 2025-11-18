@@ -1,0 +1,615 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "PageComp",
+					"T": "prop"
+				},
+				"triggerOnRestored": {
+					"H": "false",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child"
+			},
+			"S": {
+				"xs-xl": {
+					"pageBackgroundColor": "#ffffff",
+					"statusBarColor": "#ffffff"
+				}
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "Line",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_30",
+									"T": "prop"
+								},
+								"backgroundColor": {
+									"H": "'rgb(255, 99, 132)'",
+									"T": "prop"
+								},
+								"borderColor": {
+									"H": "'rgb(255, 99, 132)'",
+									"T": "prop"
+								},
+								"data": {
+									"H": "[99, 70, 31, 93, 91]",
+									"T": "prop"
+								},
+								"fill": {
+									"H": "false",
+									"T": "prop"
+								},
+								"tension": {
+									"H": "'0'",
+									"T": "prop"
+								},
+								"label": {
+									"H": "'# of Votes'",
+									"T": "prop"
+								},
+								"labels": {
+									"H": "['Red', 'Orange', 'Yellow', 'Green','Blue']",
+									"T": "prop"
+								},
+								"xDrawOnChartArea": {
+									"H": "true",
+									"T": "prop"
+								},
+								"yDrawOnChartArea": {
+									"H": "true",
+									"T": "prop"
+								},
+								"xDisplay": {
+									"H": "true",
+									"T": "prop"
+								},
+								"yDisplay": {
+									"H": "true",
+									"T": "prop"
+								},
+								"xReverse": {
+									"H": "false",
+									"T": "prop"
+								},
+								"yReverse": {
+									"H": "false",
+									"T": "prop"
+								},
+								"xTicksFontSize": {
+									"H": "12",
+									"T": "prop"
+								},
+								"yTicksFontSize": {
+									"H": "12",
+									"T": "prop"
+								},
+								"xTicksFontStyle": {
+									"H": "'normal'",
+									"T": "prop"
+								},
+								"yTicksFontStyle": {
+									"H": "'normal'",
+									"T": "prop"
+								},
+								"xTicksFontWeight": {
+									"H": "'normal'",
+									"T": "prop"
+								},
+								"yTicksFontWeight": {
+									"H": "'normal'",
+									"T": "prop"
+								},
+								"xTicksFontLineHeight": {
+									"H": "'1.2'",
+									"T": "prop"
+								},
+								"yTicksFontLineHeight": {
+									"H": "'1.2'",
+									"T": "prop"
+								},
+								"legendPosition": {
+									"H": "'top'",
+									"T": "prop"
+								},
+								"legendDisplay": {
+									"H": "true",
+									"T": "prop"
+								},
+								"legendFontSize": {
+									"H": "12",
+									"T": "prop"
+								},
+								"title": {
+									"H": "'Sample Line Chart'",
+									"T": "prop"
+								},
+								"titleDisplay": {
+									"H": "true",
+									"T": "prop"
+								},
+								"titleFontSize": {
+									"H": "12",
+									"T": "prop"
+								},
+								"labelAlign": {
+									"H": "'center'",
+									"T": "prop"
+								},
+								"labelAnchor": {
+									"H": "'center'",
+									"T": "prop"
+								},
+								"labelBorderRadius": {
+									"H": "0",
+									"T": "prop"
+								},
+								"labelBorderWidth": {
+									"H": "0",
+									"T": "prop"
+								},
+								"labelClamp": {
+									"H": "false",
+									"T": "prop"
+								},
+								"labelClip": {
+									"H": "false",
+									"T": "prop"
+								},
+								"labelDisplay": {
+									"H": "false",
+									"T": "prop"
+								},
+								"labelFontWeight": {
+									"H": "'normal'",
+									"T": "prop"
+								},
+								"labelFontLineHeight": {
+									"H": "'1.2'",
+									"T": "prop"
+								},
+								"labelOffset": {
+									"H": "'4'",
+									"T": "prop"
+								},
+								"labelOpacity": {
+									"H": "1",
+									"T": "prop"
+								},
+								"labelPaddingTop": {
+									"H": "4",
+									"T": "prop"
+								},
+								"labelPaddingRight": {
+									"H": "4",
+									"T": "prop"
+								},
+								"labelPaddingBottom": {
+									"H": "4",
+									"T": "prop"
+								},
+								"labelPaddingLeft": {
+									"H": "4",
+									"T": "prop"
+								},
+								"labelRotation": {
+									"H": "0",
+									"T": "prop"
+								},
+								"labelTextAlign": {
+									"H": "'start'",
+									"T": "prop"
+								},
+								"labelTextStrokeWidth": {
+									"H": "0",
+									"T": "prop"
+								},
+								"labelTextShadowBlur": {
+									"H": "0",
+									"T": "prop"
+								},
+								"xTicksDisplay": {
+									"H": "true",
+									"T": "prop"
+								},
+								"yTicksDisplay": {
+									"H": "true",
+									"T": "prop"
+								}
+							},
+							"E": {
+								"yTicksCallback": {
+									"H": "debugger;\r\nlet v = value;\r\nlet i = index;\r\nlet tickList = ticks;\r\nif (value == 0 || value == 10 || value == 20 || value == 30 || value == 40 || value == 50) {\r\n    quick.return(\"\");\r\n}\r\nelse {\r\n    quick.return(value + \" TL\");\r\n}",
+									"PE": true,
+									"P": "value:any,index:number,ticks:any[]",
+									"HL": "TS"
+								},
+								"xTicksCallback": {
+									"H": "debugger;\r\nlet v = value;\r\nlet i = index;\r\nlet tickList = ticks;\r\nif (value == 0 || value == 1 || value == 2) {\r\n    quick.return(\"\");\r\n}\r\nelse {\r\n    quick.return(value + \" Birim\");\r\n}",
+									"PE": true,
+									"P": "value:any,index:number,ticks:any[]",
+									"HL": "TS"
+								}
+							},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_30"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_5"
+			},
+			"O": {
+				"cType": "slot"
+			},
+			"S": {
+				"xs-xl": {
+					"marginLeft": "",
+					"marginRight": "",
+					"marginBottom": "",
+					"marginTop": "",
+					"paddingTop": "12px",
+					"paddingBottom": "12px",
+					"paddingLeft": "12px",
+					"paddingRight": "12px",
+					"width": "",
+					"height": "",
+					"backgroundColor": "#ffffff",
+					"boxShadow": ""
+				}
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "PageComp",
+					"T": "prop"
+				},
+				"triggerOnRestored": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			},
+			"S": {
+				"xs-xl": {
+					"pageBackgroundColor": "#ffffff",
+					"statusBarColor": "#ffffff"
+				}
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "Line",
+							"P": {
+								"ID": {
+									"H": "EdtrComp_30",
+									"T": "prop"
+								},
+								"backgroundColor": {
+									"H": "╬'rgb(255, 99, 132)'╩╩",
+									"T": "prop"
+								},
+								"borderColor": {
+									"H": "╬'rgb(255, 99, 132)'╩╩",
+									"T": "prop"
+								},
+								"data": {
+									"H": "╬[]╠99╩╠70╩╠31╩╠93╩╠91╩╩╩",
+									"T": "prop"
+								},
+								"fill": {
+									"H": "╬false╩╩",
+									"T": "prop"
+								},
+								"tension": {
+									"H": "╬'0'╩╩",
+									"T": "prop"
+								},
+								"label": {
+									"H": "╬'# of Votes'╩╩",
+									"T": "prop"
+								},
+								"labels": {
+									"H": "╬[]╠'Red'╩╠'Orange'╩╠'Yellow'╩╠'Green'╩╠'Blue'╩╩╩",
+									"T": "prop"
+								},
+								"xDrawOnChartArea": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"yDrawOnChartArea": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"xDisplay": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"yDisplay": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"xReverse": {
+									"H": "╬false╩╩",
+									"T": "prop"
+								},
+								"yReverse": {
+									"H": "╬false╩╩",
+									"T": "prop"
+								},
+								"xTicksFontSize": {
+									"H": "╬12╩╩",
+									"T": "prop"
+								},
+								"yTicksFontSize": {
+									"H": "╬12╩╩",
+									"T": "prop"
+								},
+								"xTicksFontStyle": {
+									"H": "╬'normal'╩╩",
+									"T": "prop"
+								},
+								"yTicksFontStyle": {
+									"H": "╬'normal'╩╩",
+									"T": "prop"
+								},
+								"xTicksFontWeight": {
+									"H": "╬'normal'╩╩",
+									"T": "prop"
+								},
+								"yTicksFontWeight": {
+									"H": "╬'normal'╩╩",
+									"T": "prop"
+								},
+								"xTicksFontLineHeight": {
+									"H": "╬'1.2'╩╩",
+									"T": "prop"
+								},
+								"yTicksFontLineHeight": {
+									"H": "╬'1.2'╩╩",
+									"T": "prop"
+								},
+								"legendPosition": {
+									"H": "╬'top'╩╩",
+									"T": "prop"
+								},
+								"legendDisplay": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"legendFontSize": {
+									"H": "╬12╩╩",
+									"T": "prop"
+								},
+								"title": {
+									"H": "╬'Sample Line Chart'╩╩",
+									"T": "prop"
+								},
+								"titleDisplay": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"titleFontSize": {
+									"H": "╬12╩╩",
+									"T": "prop"
+								},
+								"labelAlign": {
+									"H": "╬'center'╩╩",
+									"T": "prop"
+								},
+								"labelAnchor": {
+									"H": "╬'center'╩╩",
+									"T": "prop"
+								},
+								"labelBorderRadius": {
+									"H": "╬0╩╩",
+									"T": "prop"
+								},
+								"labelBorderWidth": {
+									"H": "╬0╩╩",
+									"T": "prop"
+								},
+								"labelClamp": {
+									"H": "╬false╩╩",
+									"T": "prop"
+								},
+								"labelClip": {
+									"H": "╬false╩╩",
+									"T": "prop"
+								},
+								"labelDisplay": {
+									"H": "╬false╩╩",
+									"T": "prop"
+								},
+								"labelFontWeight": {
+									"H": "╬'normal'╩╩",
+									"T": "prop"
+								},
+								"labelFontLineHeight": {
+									"H": "╬'1.2'╩╩",
+									"T": "prop"
+								},
+								"labelOffset": {
+									"H": "╬'4'╩╩",
+									"T": "prop"
+								},
+								"labelOpacity": {
+									"H": "╬1╩╩",
+									"T": "prop"
+								},
+								"labelPaddingTop": {
+									"H": "╬4╩╩",
+									"T": "prop"
+								},
+								"labelPaddingRight": {
+									"H": "╬4╩╩",
+									"T": "prop"
+								},
+								"labelPaddingBottom": {
+									"H": "╬4╩╩",
+									"T": "prop"
+								},
+								"labelPaddingLeft": {
+									"H": "╬4╩╩",
+									"T": "prop"
+								},
+								"labelRotation": {
+									"H": "╬0╩╩",
+									"T": "prop"
+								},
+								"labelTextAlign": {
+									"H": "╬'start'╩╩",
+									"T": "prop"
+								},
+								"labelTextStrokeWidth": {
+									"H": "╬0╩╩",
+									"T": "prop"
+								},
+								"labelTextShadowBlur": {
+									"H": "╬0╩╩",
+									"T": "prop"
+								},
+								"xTicksDisplay": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								},
+								"yTicksDisplay": {
+									"H": "╬true╩╩",
+									"T": "prop"
+								}
+							},
+							"E": {
+								"yTicksCallback": {
+									"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ndebugger;\r\nvar v = value;\r\nvar i = index;\r\nvar tickList = ticks;\r\nif (value == 0 || value == 10 || value == 20 || value == 30 || value == 40 || value == 50) {\r\n    quick.return(\"\");\r\n}\r\nelse {\r\n    quick.return(value + \" TL\");\r\n}\r\n",
+									"PE": true,
+									"P": "value:any,index:number,ticks:any[]",
+									"HL": "JS"
+								},
+								"xTicksCallback": {
+									"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ndebugger;\r\nvar v = value;\r\nvar i = index;\r\nvar tickList = ticks;\r\nif (value == 0 || value == 1 || value == 2) {\r\n    quick.return(\"\");\r\n}\r\nelse {\r\n    quick.return(value + \" Birim\");\r\n}\r\n",
+									"PE": true,
+									"P": "value:any,index:number,ticks:any[]",
+									"HL": "JS"
+								}
+							},
+							"C": {},
+							"_Editor": {
+								"eID": "EdtrComp_30"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_5"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container newDropBorder"
+			},
+			"S": {
+				"xs-xl": {
+					"marginLeft": "",
+					"marginRight": "",
+					"marginBottom": "",
+					"marginTop": "",
+					"paddingTop": "12px",
+					"paddingBottom": "12px",
+					"paddingLeft": "12px",
+					"paddingRight": "12px",
+					"width": "",
+					"height": "",
+					"backgroundColor": "#ffffff",
+					"boxShadow": ""
+				}
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"opt": {
+		"V": 2.2
+	}
+};
+export default pjson

@@ -9,6 +9,8 @@ import { IFlowInfo } from "./IFlowInfo";
 import { IFlowLogger } from "./IFlowLogger";
 import { IPlatformWFEAdaptor } from "./platform/IPlatformWFEAdaptor";
 import { FlowError } from "./flowError";
+import { IRequest, IResponse } from "../../../../common/everything/flow/runtimeObjects/INetwork";
+import { RequestCacheOptions } from "../../../../common/runtime/infrastructure/cache/IServiceCacheRequest";
 export type RuntimeMessage = {
     input: any;
     vars: Record<string, any>;
@@ -74,6 +76,7 @@ export interface IRuntimeParam<PropType = IPropObject, OutputOptions = string, S
         getWFE: () => IPlatformWFEAdaptor | undefined;
         getCommonState: <CommonStateType extends IStateBaseType = IStateBaseType>() => ICommonState<CommonStateType>;
         logger: IFlowLogger;
+        network: <TReqBody, TRespBody>(cacheOptions: RequestCacheOptions<TRespBody>, requestOptions: IRequest<TReqBody>) => Promise<IResponse<TRespBody>>;
     };
     state: {
         readonly values: StateType;

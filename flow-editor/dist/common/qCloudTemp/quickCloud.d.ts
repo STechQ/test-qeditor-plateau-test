@@ -106,6 +106,8 @@ export interface IOrganizationData extends IOrganization {
 export interface IModuleRelatedApplicationItem {
     applicationID: ObjectID;
     importedVersion?: string;
+    importedBy?: string;
+    importedDate?: Date;
 }
 export interface IModuleRelatedModelItem {
     modelID: ObjectID;

@@ -2,11 +2,12 @@ import { FC, ReactNode } from "react";
 import "../assets/css/components/button.css";
 interface IButtonProps {
     id?: string;
+    type?: "button" | "submit" | "reset";
     children: ReactNode;
     className?: string;
     color?: "primary" | "secondary";
     disabled?: boolean;
-    onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+    onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
 export declare const Button: FC<IButtonProps>;
 export {};
