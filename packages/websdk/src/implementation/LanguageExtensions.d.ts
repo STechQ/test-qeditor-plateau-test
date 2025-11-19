@@ -9,6 +9,8 @@ export declare class LanguageExtensions implements ILanguageExtensions {
     constructor(servicesWrapper: IContainerServicesWrapper);
     manageShellObject(): void;
     createOsGlobalObjects(): IDictionary<any>;
+    private createGetLoader;
+    private createPostLoader;
     private createOsGlobalObjectsInternal;
 }
 //# sourceMappingURL=LanguageExtensions.d.ts.map

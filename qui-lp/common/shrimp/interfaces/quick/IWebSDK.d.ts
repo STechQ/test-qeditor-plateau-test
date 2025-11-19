@@ -1,5 +1,5 @@
 import { IExternalQJsonRetriever } from "@stechquick/algae/lib/quick/IExternalQJsonRetriever";
-import { IAppSettings } from "@stechquick/algae/lib/quick/IPlateauUI";
+import { IAppSettings, ISettingsIAMV2 } from "@stechquick/algae/lib/quick/IPlateauUI";
 import { IComponent } from "../ComponentInterfaces/IComponent";
 import { IVersion } from "../ComponentInterfaces/IVersion";
 import { IDomElement } from "../RenderingInterfaces/IDomElement";
@@ -65,6 +65,7 @@ export interface IWebSDKSettings {
     blockFontRequest?: boolean;
     logBulkSize?: number;
     useShadowDOM?: boolean;
+    iamV2?: ISettingsIAMV2;
 }
 export interface IFontSettings {
     id: string;
