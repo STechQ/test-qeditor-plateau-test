@@ -7,8 +7,6 @@ import { IContainerModel } from "@stechquick/algae/lib/quick/IContainerModel";
 export declare class SettingModelsContext implements ISettingModelsContext, IContextItem {
     static ContextName: string;
     contextName: string;
-    PipelineChangeHook: Hook<() => void>;
-    AlertChangeHook: Hook<() => void>;
     ContainerConfigurationChangeHook: Hook<() => void>;
     private context;
     private pipelineMethods?;
