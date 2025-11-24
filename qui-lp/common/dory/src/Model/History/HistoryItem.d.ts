@@ -74,6 +74,7 @@ export declare class HistoryItem implements IHistoryItem {
     resurrect(): void;
     destroyCollection(compCollection?: IComponentCollection): void;
     destroy(): void;
+    private clearHistoryItems;
     /**
      * Do not use. -> destroyCollection or destroy
      */
