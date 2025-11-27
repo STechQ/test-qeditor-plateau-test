@@ -45,6 +45,10 @@ export interface ILightComponentCollection {
 export interface qjsonCollectionInfo {
     ver?: number;
 }
+export declare type IScrollRef = {
+    parent?: () => ILightComponentCollection;
+    newCompID: number;
+};
 export interface IComponentCollection extends ILightComponentCollection, IPerfable {
     domElement?: IDomElement;
     vDomElement?: IVnode;
@@ -69,6 +73,7 @@ export interface IComponentCollection extends ILightComponentCollection, IPerfab
     compStyleValues?: StyleValue;
     qjsonInfo: qjsonCollectionInfo;
     styledComponent?: string;
+    scrollRef?: IScrollRef;
     SetChildrenFields({ children, childrenCreators }: {
         children?: IDictionary<Array<IComponentCollection>>;
         childrenCreators?: IDictionaryNullable<ScopedSlotCreatorFunc>;

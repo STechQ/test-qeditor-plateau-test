@@ -26,7 +26,7 @@ export declare class OidcClientPlateauIAM implements IPlateauIAM {
     login(PlateauUIOptions?: IPlateauUIOptions): Promise<void>;
     getToken: () => string | undefined;
     getInfo: () => object | undefined;
-    refreshPromise(minValiditySeconds?: number): Promise<boolean | undefined>;
+    refreshPromise(): Promise<boolean | undefined>;
     logout(): void;
     private deriveAuthority;
     private constructIAMPlateau;
