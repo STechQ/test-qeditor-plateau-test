@@ -1,7 +1,7 @@
 import { ContextManager } from "../../../../shrimp/context";
 import { CTyped, ICompJson } from "../../../../shrimp/interfaces/ComponentInterfaces/ICompJson";
 import { IComponent } from "../../../../shrimp/interfaces/ComponentInterfaces/IComponent";
-import { CreatedFieldsHook, IComponentCollection, IScrollRef, ScopedSlotCreatorFunc, qjsonCollectionInfo } from "../../../../shrimp/interfaces/ComponentInterfaces/IComponentCollection";
+import { CreatedFieldsHook, IComponentCollection, ScopedSlotCreatorFunc, qjsonCollectionInfo } from "../../../../shrimp/interfaces/ComponentInterfaces/IComponentCollection";
 import { ICreatedComponent } from "../../../../shrimp/interfaces/ComponentInterfaces/ICreatedComponent";
 import { IDirectiveCollection } from "../../../../shrimp/interfaces/ComponentInterfaces/IDirectiveCollection";
 import { IEventCollection } from "../../../../shrimp/interfaces/ComponentInterfaces/IEventCollection";
@@ -51,8 +51,7 @@ export declare class ComponentCollection implements IComponentCollection {
     compStyleValues?: StyleValue;
     qjsonInfo: qjsonCollectionInfo;
     private destroySubs;
-    scrollRef?: IScrollRef;
-    constructor({ compJson, context, asChildType, asChildName, asChildIndex, parentCompCollection, compareComponent, dynamicCompIdSuffix, qjsonVersion, scrollRef }: {
+    constructor({ compJson, context, asChildType, asChildName, asChildIndex, parentCompCollection, compareComponent, dynamicCompIdSuffix, qjsonVersion }: {
         compJson?: ICompJson;
         context: ContextManager;
         asChildType?: CTyped;
@@ -62,7 +61,6 @@ export declare class ComponentCollection implements IComponentCollection {
         compareComponent?: boolean;
         dynamicCompIdSuffix?: string;
         qjsonVersion?: number;
-        scrollRef?: IScrollRef;
     });
     get RootHistoryItem(): HistoryItem;
     getCurrentHistoryItem(): HistoryItem;

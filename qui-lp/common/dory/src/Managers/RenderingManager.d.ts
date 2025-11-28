@@ -2,7 +2,7 @@ import { QJsonManagerForAIService } from "../../../shrimp/helpers/AIServiceHelpe
 import { PageScripting } from "../../../shrimp/helpers/scripting/PageScripting";
 import { TypeHelper } from "../../../shrimp/helpers/typeHelper";
 import { CType, ICompJson } from "../../../shrimp/interfaces/ComponentInterfaces/ICompJson";
-import { IComponentCollection, IScrollRef } from "../../../shrimp/interfaces/ComponentInterfaces/IComponentCollection";
+import { IComponentCollection } from "../../../shrimp/interfaces/ComponentInterfaces/IComponentCollection";
 import { ICreatedComponent } from "../../../shrimp/interfaces/ComponentInterfaces/ICreatedComponent";
 import { IEventCollection } from "../../../shrimp/interfaces/ComponentInterfaces/IEventCollection";
 import { IDictionary } from "../../../shrimp/interfaces/IDictionary";
@@ -43,8 +43,7 @@ export declare class RenderingManager implements IRenderingManager {
     private pageScrtipting?;
     private qjsonVersion?;
     QJsonManagerForAIService: QJsonManagerForAIService | undefined;
-    private scrollRef?;
-    constructor({ pjson, context, dataItem, asChildType, asChildName, controlDict, qLang, parentCompCollection, compareCompValue, dynamicCompIDSuffix, pageScripting, qjsonVersion, scrollRef }: {
+    constructor({ pjson, context, dataItem, asChildType, asChildName, controlDict, qLang, parentCompCollection, compareCompValue, dynamicCompIDSuffix, pageScripting, qjsonVersion }: {
         pjson: Array<ICompJson | null>;
         context: ContextManager;
         dataItem?: object | null;
@@ -57,7 +56,6 @@ export declare class RenderingManager implements IRenderingManager {
         dynamicCompIDSuffix?: string;
         pageScripting?: PageScripting;
         qjsonVersion?: number;
-        scrollRef?: IScrollRef;
     });
     private getLang;
     private WillRender;
