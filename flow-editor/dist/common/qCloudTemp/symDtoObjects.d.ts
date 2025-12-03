@@ -1,3 +1,4 @@
+/// <reference types="node" />
 import { IApplication, IFolder, IModel, IWorkflowExportItem } from "../../ui/src/domain/model/models";
 import { IUserMainInfo, IUser_SUSI } from "./authentication";
 import { IFeedbackAttachment, IUserFeedback } from "./feedback";
@@ -14,6 +15,7 @@ import { ITemplateInfo } from "./template";
 import { IInvitationBase } from "./invitation";
 import { IAnnouncementDataObj, IAnnouncementServiceObj } from "./announcement";
 import { ICodeAssistantResponse } from "@stechquick/algae/lib/qCloudTemp/AIService/codeAssistant";
+import { UUID } from "crypto";
 import { IExternalToken } from "./externalToken";
 import { IAppCloud } from "./application";
 import { AzureBlobContentType } from "./azureTypes";
@@ -668,11 +670,19 @@ export interface IGenerateTokenResponse {
 }
 export interface IDeleteTokenRequest {
     appID: ObjectID;
-    token: string;
+    token: UUID;
 }
 export interface IDeleteTokenResponse {
     ID: ObjectID;
     deleted: boolean;
+}
+export interface IValidateTokenRequest {
+    appID: ObjectID;
+    token: UUID;
+}
+export interface IValidateTokenResponse {
+    valid: boolean;
+    pairingToken?: UUID;
 }
 export interface IGetAppInfoWtihTokenRequest {
     token?: string;
