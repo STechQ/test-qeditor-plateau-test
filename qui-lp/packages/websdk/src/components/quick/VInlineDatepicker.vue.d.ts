@@ -12,6 +12,7 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     monthFormat: string;
     isClickClear: boolean;
     uniqueID: string;
+    textFieldClass: string;
 }, {
     resurrect(): void;
     changeMenuValue(): void;
@@ -70,7 +71,6 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     locale: string;
     dense: boolean;
     filled: boolean;
-    textFieldClass: string;
     separateChar: string;
     height: string | number;
     tabindex: string | number;
