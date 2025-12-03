@@ -104,6 +104,61 @@ declare const devExpressLibrary: {
         loaded: boolean;
         module: undefined;
     };
+    DxTextBox: {
+        importFunc: () => Promise<void>;
+        loaded: boolean;
+        module: undefined;
+    };
+    DxBox: {
+        importFunc: () => Promise<void>;
+        loaded: boolean;
+        module: undefined;
+    };
+    DxItem: {
+        importFunc: () => Promise<void>;
+        loaded: boolean;
+        module: undefined;
+    };
+    DxTextArea: {
+        importFunc: () => Promise<void>;
+        loaded: boolean;
+        module: undefined;
+    };
+    DxDateBox: {
+        importFunc: () => Promise<void>;
+        loaded: boolean;
+        module: undefined;
+    };
+    DxNumberBox: {
+        importFunc: () => Promise<void>;
+        loaded: boolean;
+        module: undefined;
+    };
+    DxSelectBox: {
+        importFunc: () => Promise<void>;
+        loaded: boolean;
+        module: undefined;
+    };
+    DxCheckBox: {
+        importFunc: () => Promise<void>;
+        loaded: boolean;
+        module: undefined;
+    };
+    DxFileUploader: {
+        importFunc: () => Promise<void>;
+        loaded: boolean;
+        module: undefined;
+    };
+    DxGallery: {
+        importFunc: () => Promise<void>;
+        loaded: boolean;
+        module: undefined;
+    };
+    DxTagBox: {
+        importFunc: () => Promise<void>;
+        loaded: boolean;
+        module: undefined;
+    };
 };
 export { devExpressLibrary };
 //# sourceMappingURL=DevexpressComponents.d.ts.map
