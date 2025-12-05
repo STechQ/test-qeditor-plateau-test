@@ -31,6 +31,7 @@ declare class QShell {
     private hostTriggerer;
     private operatorCollection;
     private platformManager;
+    private modelDictCache;
     constructor({ qjsonRetriever, moduleManager, network, ux, region, hostTriggerer, platformType, platformManager }: {
         qjsonRetriever: IQJsonRetriever;
         moduleManager: IModuleManager;

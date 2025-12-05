@@ -1,6 +1,6 @@
 import { IExternalQJsonRetriever } from "@stechquick/algae/lib/quick/IExternalQJsonRetriever";
 import { IQJsonRetriever } from "../../../../common/qshell";
-import { QJsonRetrievedType } from "../../../../common/qshell/src/interfaces/construction/IQJsonRetriever";
+import { IRetrieveModels, QJsonRetrievedType } from "../../../../common/qshell/src/interfaces/construction/IQJsonRetriever";
 import { IWebSDKSettingsWrapper } from "../../../../common/shrimp/interfaces/quick/IWebSDK";
 import NetworkManagerImpl from "./NetworkManagerImpl";
 export default class QJsonRetrieverImpl implements IQJsonRetriever {
@@ -25,6 +25,9 @@ export default class QJsonRetrieverImpl implements IQJsonRetriever {
             disableLoading: boolean;
         };
     }): Promise<string | object>;
+    retrieveModelsAsync(modelPaths: Array<IRetrieveModels>, options: {
+        disableLoading: boolean;
+    }): Promise<any>;
     retrieveQJsonAsync(qjsonPath: string, options: {
         disableLoading: boolean;
     }): Promise<QJsonRetrievedType>;

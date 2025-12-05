@@ -165,6 +165,9 @@ export interface IGlobals_EM {
     }) => void;
 }
 export interface IGlobals_Quick {
+    dx: {
+        getDxCustomStore: (options?: any) => any;
+    };
     /**
      * Provides methods for managing regions within the application.
      *

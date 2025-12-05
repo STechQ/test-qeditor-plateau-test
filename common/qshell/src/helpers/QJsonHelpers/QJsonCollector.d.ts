@@ -5,15 +5,26 @@ import { ScriptLang } from "../../../../shrimp/interfaces/Scripting/scriptLang";
 import { IModuleManager } from "../../interfaces/construction/IModuleManager";
 import { IDoryJr } from "../../../../shrimp/interfaces/RenderingInterfaces/IDoryJr";
 import { IQJsonCollectionResult } from "../../../../shrimp/interfaces/quick/IShellConfiguration";
+import { IModelCacheItem, ModelDictCache } from "../../../../qshell/src/helpers/ModelDictCache";
+export interface IModelDependentModel {
+    raw: IModelCacheItem["raw"];
+    type: IModelCacheItem["type"];
+    id: IModelCacheItem["id"];
+}
+export declare type IQjsonPoolItem = {
+    qjson: IQJSon;
+    dm: Array<IModelDependentModel>;
+};
 export declare type justQJsonCPart = {
     cJson: Array<ICompJson>;
 };
 export declare class QJsonCollector {
     moduleManager: IModuleManager;
+    testData: Array<string>;
     constructor({ moduleManager }: {
         moduleManager: IModuleManager;
     });
-    collectQJson(qjson: IQJSon, qjsonPath: string | undefined, dory: IDory, qjsonRetrieve: (qJsonPath: string) => Promise<IQJSon>, doryJr: IDoryJr | undefined, options: {
+    collectQJson(qjsonPoolItem: IQjsonPoolItem, qjsonPath: string | undefined, dory: IDory, qjsonRetrieve: (qJsonPath: string) => Promise<IQjsonPoolItem>, cacheDict: ModelDictCache, doryJr: IDoryJr | undefined, options: {
         qLang?: ScriptLang;
         level?: number;
     }): Promise<IQJsonCollectionResult>;
