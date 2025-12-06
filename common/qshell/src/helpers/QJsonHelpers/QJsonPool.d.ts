@@ -12,11 +12,9 @@ export declare class QJsonPool implements IContextItem {
     private qjsonRetriever;
     private qjsonCollector;
     private moduleManager;
-    private cacheDict;
-    constructor({ qjsonRetriever, moduleManager, cacheDict }: {
+    constructor({ qjsonRetriever, moduleManager }: {
         qjsonRetriever: IQJsonRetriever;
         moduleManager: IModuleManager;
-        cacheDict: any;
     });
     ResetPool(): void;
     get ModuleManager(): IModuleManager;
