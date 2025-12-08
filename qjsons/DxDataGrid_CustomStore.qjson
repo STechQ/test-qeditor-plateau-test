@@ -1,0 +1,535 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "PageComp",
+					"T": "prop"
+				},
+				"triggerOnRestored": {
+					"H": "false",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"EndRender": {
+					"H": "\r\nquick.store.set(\"$dxFilters\", undefined);\r\nquick.store.set('$dxSortOrder', undefined);\r\n\r\nlet dxOptions = {\r\n  key: 'id',\r\n  load: () => {\r\n    debugger\r\n    // Pagination\r\n    // https://jsonplaceholder.typicode.com/posts?_page=1&_limit=10\r\n\r\n    // Filter + Pagination\r\n    // https://jsonplaceholder.typicode.com/posts?userId=1&_page=1&_limit=10;\r\n\r\n\r\n\r\n\r\n    debugger;\r\n    let page = Number(components.myDxPaging.pageIndex) ?? 0;\r\n    let pageRowSize = 10;\r\n    let apiUrl = \"https://jsonplaceholder.typicode.com/posts?_page=\" + (page + 1) + \"&_limit=\" + pageRowSize;\r\n\r\n    let dxFilters = <{ columnIndex: number, filterValue: string }[]>quick.store.get(\"$dxFilters\");\r\n    if (dxFilters && Array.isArray(dxFilters) && dxFilters.length > 0) {\r\n      let filterString = \"\";\r\n      dxFilters.forEach(item => {\r\n        filterString += \"&\" + item.filterValue;\r\n      });\r\n      apiUrl += filterString;\r\n    }\r\n\r\n    // sıralama için API yapısına göre kurgulanabilir.\r\n    let dxSortOrder = <{ columnIndex: number, sortOrder: string }[]>quick.store.get(\"$dxSortOrder\");\r\n\r\n\r\n    return quick.Request.async({\r\n      url: apiUrl,\r\n      data: null,\r\n      http: 'GET',\r\n      onFail: null,\r\n      onSuccess: null,\r\n      responseField: null,\r\n      blockRender: false,\r\n      headers: { \"Content-Type\": \"application/json\" }\r\n    })\r\n      ?.then((data) => {\r\n\r\n        let listDetail = retrieveListDetails(data);\r\n        let totalCount = parseInt(data.headers[\"x-total-count\"]);\r\n\r\n        return { data: listDetail, totalCount: totalCount }\r\n      })\r\n  }\r\n};\r\nconst dxStore = quick.Quick.dx.getDxCustomStore(dxOptions);\r\nlet myDxDataGridInstance = (<any>components.dxDataGrid).instance;\r\nmyDxDataGridInstance.option('dataSource', dxStore);\r\n\r\n\r\nfunction retrieveListDetails(data) {\r\n\r\n  return data.data;\r\n\r\n}\r\n\r\n\r\n\r\n\r\n/*\r\nMOCK Response Data:\r\n[\r\n  {\r\n    \"userId\": 1,\r\n    \"id\": 1,\r\n    \"title\": \"sunt aut facere repellat provident occaecati excepturi optio reprehenderit\",\r\n    \"body\": \"quia et suscipit\\nsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut quas totam\\nnostrum rerum est autem sunt rem eveniet architecto\"\r\n  },\r\n  {\r\n    \"userId\": 1,\r\n    \"id\": 2,\r\n    \"title\": \"qui est esse\",\r\n    \"body\": \"est rerum tempore vitae\\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\\nqui aperiam non debitis possimus qui neque nisi nulla\"\r\n  },\r\n  {\r\n    \"userId\": 1,\r\n    \"id\": 3,\r\n    \"title\": \"ea molestias quasi exercitationem repellat qui ipsa sit aut\",\r\n    \"body\": \"et iusto sed quo iure\\nvoluptatem occaecati omnis eligendi aut ad\\nvoluptatem doloribus vel accusantium quis pariatur\\nmolestiae porro eius odio et labore et velit aut\"\r\n  },\r\n  {\r\n    \"userId\": 1,\r\n    \"id\": 4,\r\n    \"title\": \"eum et est occaecati\",\r\n    \"body\": \"ullam et saepe reiciendis voluptatem adipisci\\nsit amet autem assumenda provident rerum culpa\\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\\nquis sunt voluptatem rerum illo velit\"\r\n  },\r\n  {\r\n    \"userId\": 1,\r\n    \"id\": 5,\r\n    \"title\": \"nesciunt quas odio\",\r\n    \"body\": \"repudiandae veniam quaerat sunt sed\\nalias aut fugiat sit autem sed est\\nvoluptatem omnis possimus esse voluptatibus quis\\nest aut tenetur dolor neque\"\r\n  },\r\n  {\r\n    \"userId\": 1,\r\n    \"id\": 6,\r\n    \"title\": \"dolorem eum magni eos aperiam quia\",\r\n    \"body\": \"ut aspernatur corporis harum nihil quis provident sequi\\nmollitia nobis aliquid molestiae\\nperspiciatis et ea nemo ab reprehenderit accusantium quas\\nvoluptate dolores velit et doloremque molestiae\"\r\n  },\r\n  {\r\n    \"userId\": 1,\r\n    \"id\": 7,\r\n    \"title\": \"magnam facilis autem\",\r\n    \"body\": \"dolore placeat quibusdam ea quo vitae\\nmagni quis enim qui quis quo nemo aut saepe\\nquidem repellat excepturi ut quia\\nsunt ut sequi eos ea sed quas\"\r\n  },\r\n  {\r\n    \"userId\": 1,\r\n    \"id\": 8,\r\n    \"title\": \"dolorem dolore est ipsam\",\r\n    \"body\": \"dignissimos aperiam dolorem qui eum\\nfacilis quibusdam animi sint suscipit qui sint possimus cum\\nquaerat magni maiores excepturi\\nipsam ut commodi dolor voluptatum modi aut vitae\"\r\n  },\r\n  {\r\n    \"userId\": 1,\r\n    \"id\": 9,\r\n    \"title\": \"nesciunt iure omnis dolorem tempora et accusantium\",\r\n    \"body\": \"consectetur animi nesciunt iure dolore\\nenim quia ad\\nveniam autem ut quam aut nobis\\net est aut quod aut provident voluptas autem voluptas\"\r\n  },\r\n  {\r\n    \"userId\": 1,\r\n    \"id\": 10,\r\n    \"title\": \"optio molestias id quia eum\",\r\n    \"body\": \"quo et expedita modi cum officia vel magni\\ndoloribus qui repudiandae\\nvero nisi sit\\nquos veniam quod sed accusamus veritatis error\"\r\n  }\r\n] */\r\n\r\n",
+					"HL": "TS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child"
+			},
+			"S": {
+				"xs-xl": {
+					"pageBackgroundColor": "#ffffff",
+					"statusBarColor": "#ffffff"
+				}
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "VRowComp",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "DxDataGrid",
+															"P": {
+																"ID": {
+																	"H": "dxDataGrid",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"remoteOperations": {
+																	"H": "true",
+																	"T": "prop",
+																	"HL": "QS"
+																}
+															},
+															"E": {
+																"onOptionChanged": {
+																	"H": "debugger;\r\nif (event.fullName === 'paging.pageIndex') {\r\n  components.myDxPaging.pageIndex = event.value;\r\n}\r\nif (event.fullName === 'paging.pageSize') {\r\n  components.myDxPaging.pageSize = event.value;\r\n}\r\n\r\n\r\nif (event.name == 'columns') {\r\n  debugger;\r\n  let columnIndex;\r\n  let match;\r\n  // Kolon filtreleme işlemleri yapılıyor.\r\n  if (event.fullName &&\r\n    (event.fullName.indexOf('filterValue') > -1 || event.fullName.indexOf('selectedFilterOperation') > -1)) {\r\n\r\n    match = event.fullName.match(/\\[(\\d+)\\]/);\r\n    if (match) {\r\n      columnIndex = parseInt(match[1], 10);\r\n      const filterColumn = event.component.columnOption(columnIndex);\r\n\r\n      let filterOperation = filterColumn?.selectedFilterOperation ?? filterColumn?.defaultFilterOperation;\r\n      filterOperation = \"=\";  //Bu örnekte sadece = için yapıldı. Sizin API servisinize göre kurgulmanız gereklidir.\r\n      /*\r\n      Desteklenen filterOperations değerleri\r\n      “contains” – metin içinde geçen değerleri bulur.\r\n      “notcontains” – metin içinde geçmeyenleri bulur.\r\n      “startswith” – belirli bir değerle başlayanları bulur.\r\n      “endswith” – belirli bir değerle bitenleri bulur.\r\n      “=” – eşit olanları bulur.\r\n      “<>” – eşit olmayanları bulur.\r\n      “>” – büyük olanları bulur.\r\n      “>=” – büyük veya eşit olanları bulur.\r\n      “<” – küçük olanları bulur.\r\n      “<=” – küçük veya eşit olanları bulur.\r\n      “between” – iki değer arasındakileri bulur (özellikle tarih/sayı için). \r\n      */\r\n\r\n      quick.EM.trace(\"columnIndex:\" + columnIndex.toString());\r\n      quick.EM.trace(\"Filtrelenen kolon:\" + filterColumn.dataField);\r\n      quick.EM.trace(\"Yeni filtre değeri:\" + event.value);\r\n      quick.EM.trace(\"Filtre operasyonu :\" + filterOperation); // = , <>, contains, notcontains\r\n\r\n\r\n      let dxFilters = <{ columnIndex: number, filterValue: string }[]>(quick.store.get('$dxFilters') || []);\r\n      // dxFilters = [ { columnIndex:1, filterValue:\"userId=1\" }, { columnIndex:2, filterValue:\"id=1\" }  ]\r\n      if (dxFilters.length > 0) {\r\n        let findItem = dxFilters.find(item => item.columnIndex == columnIndex);\r\n        if (findItem) {\r\n          // bu kolon için mevcutta bir filtre eklenmişti, onun değerini değiştir\r\n          if (event.value) {\r\n            // filtre için yeni değer girilmiş.\r\n            findItem.filterValue = filterColumn.dataField + filterOperation + event.value;\r\n          }\r\n          else {\r\n            // filtre değeri silinmiş. filtereden kaldır.\r\n            const index = dxFilters.indexOf(findItem);\r\n            if (index !== -1) {\r\n              dxFilters.splice(index, 1);\r\n            }\r\n          }\r\n        }\r\n        else if (event.value) {\r\n          //bu kolon için hiç filtre yoktu. Filtre ekle\r\n          dxFilters.push({ columnIndex: columnIndex, filterValue: filterColumn.dataField + filterOperation + event.value });\r\n        }\r\n      } else if (event.value) {\r\n        //bu kolon için hiç filtre yoktu. Filtre ekle\r\n        dxFilters.push({ columnIndex: columnIndex, filterValue: filterColumn.dataField + filterOperation + event.value });\r\n      }\r\n\r\n\r\n      quick.store.set('$dxFilters', dxFilters);\r\n\r\n    }\r\n\r\n  }\r\n\r\n  // Sıralama değişikliklerini yakala\r\n  if (event.fullName && event.fullName.indexOf(\"sortOrder\") > -1) {\r\n    // Hangi kolon değiştiğini bul\r\n    match = event.fullName.match(/\\[(\\d+)\\]/);\r\n    if (match) {\r\n      columnIndex = parseInt(match[1], 10);\r\n      const sortedColumn = event.component.columnOption(columnIndex);\r\n\r\n      quick.EM.trace(\"Sıralama değişen kolon indexi:\" + columnIndex.toString());\r\n      quick.EM.trace(\"Sıralanan kolon:\" + sortedColumn.dataField);\r\n      quick.EM.trace(\"Yeni sıralama yönü:\" + event.value); // \"asc\" veya \"desc\" ya da undefined\r\n\r\n\r\n      let dxSortOrder = <{ columnIndex: number, sortOrder: string }[]>(quick.store.get('$dxSortOrder') || []);\r\n      // dxFilters = [ { columnIndex:1, sortOrder:\"userId=asc\" }, { columnIndex:2, sortOrder:\"id=desc\" }  ]\r\n      if (dxSortOrder.length > 0) {\r\n        let findItem = dxSortOrder.find(item => item.columnIndex == columnIndex);\r\n        if (findItem) {\r\n          // bu kolon için mevcutta bir sıralama eklenmişti, onun değerini değiştir\r\n          if (event.value) {\r\n            // sıralama için yeni değer girilmiş.\r\n            findItem.sortOrder = sortedColumn.dataField + \"=\" + event.value;\r\n          }\r\n          else {\r\n            // sıralama değeri silinmiş. sıralamadan kaldır.\r\n            const index = dxSortOrder.indexOf(findItem);\r\n            if (index !== -1) {\r\n              dxSortOrder.splice(index, 1);\r\n            }\r\n          }\r\n        }\r\n        else if (event.value) {\r\n          //bu kolon için hiç sıralama yoktu. sıralama ekle\r\n          dxSortOrder.push({ columnIndex: columnIndex, sortOrder: sortedColumn.dataField + \"=\" + event.value });\r\n        }\r\n      } else if (event.value) {\r\n        //bu kolon için hiç sıralama yoktu. sıralama ekle\r\n        dxSortOrder.push({ columnIndex: columnIndex, sortOrder: sortedColumn.dataField + \"=\" + event.value });\r\n      }\r\n\r\n\r\n      quick.store.set('$dxSortOrder', dxSortOrder);\r\n\r\n    }\r\n\r\n\r\n  }\r\n}\r\n\r\n\r\n\r\n\r\n",
+																	"PE": true,
+																	"P": "event:any",
+																	"HL": "TS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "DxFilterRow",
+																			"P": {
+																				"visible": {
+																					"H": "'showFilterRow'",
+																					"T": "prop"
+																				},
+																				"applyFilter": {
+																					"H": "'currentFilter'",
+																					"T": "prop"
+																				},
+																				"ID": {
+																					"H": "EdtrComp_9",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_9"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		},
+																		{
+																			"T": "DxPaging",
+																			"P": {
+																				"pageSize": {
+																					"H": "10",
+																					"T": "prop",
+																					"HL": "QS"
+																				},
+																				"ID": {
+																					"H": "myDxPaging",
+																					"T": "prop",
+																					"HL": "QS"
+																				},
+																				"pageIndex": {
+																					"H": "0",
+																					"T": "prop",
+																					"HL": "QS"
+																				},
+																				"enabled": {
+																					"H": "true",
+																					"T": "prop",
+																					"HL": "QS"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_11"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_6"
+															},
+															"O": {
+																"cType": "scopedSlot",
+																"forceUpdateAfterPropertySetting": true
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "VColComp",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_3"
+											},
+											"O": {
+												"cType": "slot"
+											},
+											"S": {
+												"xs-xl": {
+													"col": "",
+													"flexDirection": "column",
+													"alignItems": "",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "12px",
+													"paddingBottom": "12px",
+													"paddingLeft": "12px",
+													"paddingRight": "12px",
+													"backgroundColor": "#ffffff",
+													"boxShadow": ""
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "slot"
+							},
+							"S": {
+								"xs-xl": {
+									"marginLeft": "0px",
+									"marginRight": "0px",
+									"marginBottom": "0px",
+									"marginTop": "0px",
+									"paddingTop": "",
+									"paddingBottom": "",
+									"paddingLeft": "",
+									"paddingRight": "",
+									"width": "",
+									"height": "",
+									"backgroundColor": "#ffffff",
+									"boxShadow": ""
+								}
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_5"
+			},
+			"O": {
+				"cType": "slot"
+			},
+			"S": {
+				"xs-xl": {
+					"marginLeft": "",
+					"marginRight": "",
+					"marginBottom": "",
+					"marginTop": "",
+					"paddingTop": "12px",
+					"paddingBottom": "12px",
+					"paddingLeft": "12px",
+					"paddingRight": "12px",
+					"width": "",
+					"height": "",
+					"backgroundColor": "#ffffff",
+					"boxShadow": ""
+				}
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "PageComp",
+					"T": "prop"
+				},
+				"triggerOnRestored": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"EndRender": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\n;\r\nquick.store.set(\"$dxFilters\", undefined);\r\nquick.store.set('$dxSortOrder', undefined);\r\nvar dxOptions = {\r\n    key: 'id',\r\n    load: function () {\r\n        var _a, _b;\r\n        debugger;\r\n        // Pagination\r\n        // https://jsonplaceholder.typicode.com/posts?_page=1&_limit=10\r\n        // Filter + Pagination\r\n        // https://jsonplaceholder.typicode.com/posts?userId=1&_page=1&_limit=10;\r\n        debugger;\r\n        var page = (_a = Number(components.myDxPaging.pageIndex)) !== null && _a !== void 0 ? _a : 0;\r\n        var pageRowSize = 10;\r\n        var apiUrl = \"https://jsonplaceholder.typicode.com/posts?_page=\" + (page + 1) + \"&_limit=\" + pageRowSize;\r\n        var dxFilters = quick.store.get(\"$dxFilters\");\r\n        if (dxFilters && Array.isArray(dxFilters) && dxFilters.length > 0) {\r\n            var filterString_1 = \"\";\r\n            dxFilters.forEach(function (item) {\r\n                filterString_1 += \"&\" + item.filterValue;\r\n            });\r\n            apiUrl += filterString_1;\r\n        }\r\n        // sıralama için API yapısına göre kurgulanabilir.\r\n        var dxSortOrder = quick.store.get(\"$dxSortOrder\");\r\n        return (_b = quick.Request.async({\r\n            url: apiUrl,\r\n            data: null,\r\n            http: 'GET',\r\n            onFail: null,\r\n            onSuccess: null,\r\n            responseField: null,\r\n            blockRender: false,\r\n            headers: { \"Content-Type\": \"application/json\" }\r\n        })) === null || _b === void 0 ? void 0 : _b.then(function (data) {\r\n            var listDetail = retrieveListDetails(data);\r\n            var totalCount = parseInt(data.headers[\"x-total-count\"]);\r\n            return { data: listDetail, totalCount: totalCount };\r\n        });\r\n    }\r\n};\r\nvar dxStore = quick.Quick.dx.getDxCustomStore(dxOptions);\r\nvar myDxDataGridInstance = components.dxDataGrid.instance;\r\nmyDxDataGridInstance.option('dataSource', dxStore);\r\nfunction retrieveListDetails(data) {\r\n    return data.data;\r\n}\r\n",
+					"HL": "JS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			},
+			"S": {
+				"xs-xl": {
+					"pageBackgroundColor": "#ffffff",
+					"statusBarColor": "#ffffff"
+				}
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "VRowComp",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "DxDataGrid",
+															"P": {
+																"ID": {
+																	"H": "dxDataGrid",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"remoteOperations": {
+																	"H": "╬true╩╩",
+																	"T": "prop",
+																	"HL": "QS"
+																}
+															},
+															"E": {
+																"onOptionChanged": {
+																	"H": "var _a;\r\nObject.defineProperty(exports, \"__esModule\", { value: true });\r\ndebugger;\r\nif (event.fullName === 'paging.pageIndex') {\r\n    components.myDxPaging.pageIndex = event.value;\r\n}\r\nif (event.fullName === 'paging.pageSize') {\r\n    components.myDxPaging.pageSize = event.value;\r\n}\r\nif (event.name == 'columns') {\r\n    debugger;\r\n    var columnIndex_1;\r\n    var match = void 0;\r\n    // Kolon filtreleme işlemleri yapılıyor.\r\n    if (event.fullName &&\r\n        (event.fullName.indexOf('filterValue') > -1 || event.fullName.indexOf('selectedFilterOperation') > -1)) {\r\n        match = event.fullName.match(/\\[(\\d+)\\]/);\r\n        if (match) {\r\n            columnIndex_1 = parseInt(match[1], 10);\r\n            var filterColumn = event.component.columnOption(columnIndex_1);\r\n            var filterOperation = (_a = filterColumn === null || filterColumn === void 0 ? void 0 : filterColumn.selectedFilterOperation) !== null && _a !== void 0 ? _a : filterColumn === null || filterColumn === void 0 ? void 0 : filterColumn.defaultFilterOperation;\r\n            filterOperation = \"=\"; //Bu örnekte sadece = için yapıldı. Sizin API servisinize göre kurgulmanız gereklidir.\r\n            /*\r\n            Desteklenen filterOperations değerleri\r\n            “contains” – metin içinde geçen değerleri bulur.\r\n            “notcontains” – metin içinde geçmeyenleri bulur.\r\n            “startswith” – belirli bir değerle başlayanları bulur.\r\n            “endswith” – belirli bir değerle bitenleri bulur.\r\n            “=” – eşit olanları bulur.\r\n            “<>” – eşit olmayanları bulur.\r\n            “>” – büyük olanları bulur.\r\n            “>=” – büyük veya eşit olanları bulur.\r\n            “<” – küçük olanları bulur.\r\n            “<=” – küçük veya eşit olanları bulur.\r\n            “between” – iki değer arasındakileri bulur (özellikle tarih/sayı için).\r\n            */\r\n            quick.EM.trace(\"columnIndex:\" + columnIndex_1.toString());\r\n            quick.EM.trace(\"Filtrelenen kolon:\" + filterColumn.dataField);\r\n            quick.EM.trace(\"Yeni filtre değeri:\" + event.value);\r\n            quick.EM.trace(\"Filtre operasyonu :\" + filterOperation); // = , <>, contains, notcontains\r\n            var dxFilters = (quick.store.get('$dxFilters') || []);\r\n            // dxFilters = [ { columnIndex:1, filterValue:\"userId=1\" }, { columnIndex:2, filterValue:\"id=1\" }  ]\r\n            if (dxFilters.length > 0) {\r\n                var findItem = dxFilters.find(function (item) { return item.columnIndex == columnIndex_1; });\r\n                if (findItem) {\r\n                    // bu kolon için mevcutta bir filtre eklenmişti, onun değerini değiştir\r\n                    if (event.value) {\r\n                        // filtre için yeni değer girilmiş.\r\n                        findItem.filterValue = filterColumn.dataField + filterOperation + event.value;\r\n                    }\r\n                    else {\r\n                        // filtre değeri silinmiş. filtereden kaldır.\r\n                        var index = dxFilters.indexOf(findItem);\r\n                        if (index !== -1) {\r\n                            dxFilters.splice(index, 1);\r\n                        }\r\n                    }\r\n                }\r\n                else if (event.value) {\r\n                    //bu kolon için hiç filtre yoktu. Filtre ekle\r\n                    dxFilters.push({ columnIndex: columnIndex_1, filterValue: filterColumn.dataField + filterOperation + event.value });\r\n                }\r\n            }\r\n            else if (event.value) {\r\n                //bu kolon için hiç filtre yoktu. Filtre ekle\r\n                dxFilters.push({ columnIndex: columnIndex_1, filterValue: filterColumn.dataField + filterOperation + event.value });\r\n            }\r\n            quick.store.set('$dxFilters', dxFilters);\r\n        }\r\n    }\r\n    // Sıralama değişikliklerini yakala\r\n    if (event.fullName && event.fullName.indexOf(\"sortOrder\") > -1) {\r\n        // Hangi kolon değiştiğini bul\r\n        match = event.fullName.match(/\\[(\\d+)\\]/);\r\n        if (match) {\r\n            columnIndex_1 = parseInt(match[1], 10);\r\n            var sortedColumn = event.component.columnOption(columnIndex_1);\r\n            quick.EM.trace(\"Sıralama değişen kolon indexi:\" + columnIndex_1.toString());\r\n            quick.EM.trace(\"Sıralanan kolon:\" + sortedColumn.dataField);\r\n            quick.EM.trace(\"Yeni sıralama yönü:\" + event.value); // \"asc\" veya \"desc\" ya da undefined\r\n            var dxSortOrder = (quick.store.get('$dxSortOrder') || []);\r\n            // dxFilters = [ { columnIndex:1, sortOrder:\"userId=asc\" }, { columnIndex:2, sortOrder:\"id=desc\" }  ]\r\n            if (dxSortOrder.length > 0) {\r\n                var findItem = dxSortOrder.find(function (item) { return item.columnIndex == columnIndex_1; });\r\n                if (findItem) {\r\n                    // bu kolon için mevcutta bir sıralama eklenmişti, onun değerini değiştir\r\n                    if (event.value) {\r\n                        // sıralama için yeni değer girilmiş.\r\n                        findItem.sortOrder = sortedColumn.dataField + \"=\" + event.value;\r\n                    }\r\n                    else {\r\n                        // sıralama değeri silinmiş. sıralamadan kaldır.\r\n                        var index = dxSortOrder.indexOf(findItem);\r\n                        if (index !== -1) {\r\n                            dxSortOrder.splice(index, 1);\r\n                        }\r\n                    }\r\n                }\r\n                else if (event.value) {\r\n                    //bu kolon için hiç sıralama yoktu. sıralama ekle\r\n                    dxSortOrder.push({ columnIndex: columnIndex_1, sortOrder: sortedColumn.dataField + \"=\" + event.value });\r\n                }\r\n            }\r\n            else if (event.value) {\r\n                //bu kolon için hiç sıralama yoktu. sıralama ekle\r\n                dxSortOrder.push({ columnIndex: columnIndex_1, sortOrder: sortedColumn.dataField + \"=\" + event.value });\r\n            }\r\n            quick.store.set('$dxSortOrder', dxSortOrder);\r\n        }\r\n    }\r\n}\r\n",
+																	"PE": true,
+																	"P": "event:any",
+																	"HL": "JS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "DxFilterRow",
+																			"P": {
+																				"visible": {
+																					"H": "╬'showFilterRow'╩╩",
+																					"T": "prop"
+																				},
+																				"applyFilter": {
+																					"H": "╬'currentFilter'╩╩",
+																					"T": "prop"
+																				},
+																				"ID": {
+																					"H": "EdtrComp_9",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_9"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": ""
+																			}
+																		},
+																		{
+																			"T": "DxPaging",
+																			"P": {
+																				"pageSize": {
+																					"H": "╬10╩╩",
+																					"T": "prop",
+																					"HL": "QS"
+																				},
+																				"ID": {
+																					"H": "myDxPaging",
+																					"T": "prop",
+																					"HL": "QS"
+																				},
+																				"pageIndex": {
+																					"H": "╬0╩╩",
+																					"T": "prop",
+																					"HL": "QS"
+																				},
+																				"enabled": {
+																					"H": "╬true╩╩",
+																					"T": "prop",
+																					"HL": "QS"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_11"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": ""
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_6"
+															},
+															"O": {
+																"cType": "scopedSlot",
+																"forceUpdateAfterPropertySetting": true,
+																"compDomClasses": "dx-widget dx-visibility-change-handler newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "VColComp",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_3"
+											},
+											"O": {
+												"cType": "slot",
+												"compDomClasses": "col newDropBorder"
+											},
+											"S": {
+												"xs-xl": {
+													"col": "",
+													"flexDirection": "column",
+													"alignItems": "",
+													"justifyContent": "",
+													"marginLeft": "",
+													"marginRight": "",
+													"marginBottom": "",
+													"marginTop": "",
+													"paddingTop": "12px",
+													"paddingBottom": "12px",
+													"paddingLeft": "12px",
+													"paddingRight": "12px",
+													"backgroundColor": "#ffffff",
+													"boxShadow": ""
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							},
+							"S": {
+								"xs-xl": {
+									"marginLeft": "0px",
+									"marginRight": "0px",
+									"marginBottom": "0px",
+									"marginTop": "0px",
+									"paddingTop": "",
+									"paddingBottom": "",
+									"paddingLeft": "",
+									"paddingRight": "",
+									"width": "",
+									"height": "",
+									"backgroundColor": "#ffffff",
+									"boxShadow": ""
+								}
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_5"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container newDropBorder"
+			},
+			"S": {
+				"xs-xl": {
+					"marginLeft": "",
+					"marginRight": "",
+					"marginBottom": "",
+					"marginTop": "",
+					"paddingTop": "12px",
+					"paddingBottom": "12px",
+					"paddingLeft": "12px",
+					"paddingRight": "12px",
+					"width": "",
+					"height": "",
+					"backgroundColor": "#ffffff",
+					"boxShadow": ""
+				}
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"opt": {
+		"V": 2.2
+	}
+};
+export default pjson

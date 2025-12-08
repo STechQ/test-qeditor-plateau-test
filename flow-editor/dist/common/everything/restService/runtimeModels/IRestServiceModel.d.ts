@@ -9,7 +9,7 @@ export interface IRestServiceModel extends IModelBaseFields {
     _name: string;
     desc: string;
     httpMethod: Array<HttpMethod>;
-    contentType?: ContentType_ApplicationJson;
+    contentType?: ContentType_ApplicationJson | ContentType_urlencoded;
     hostKey: IExpressionData;
     requestHeader?: Record<string, IExpressionData>;
     requestUrl?: Array<IRestUrlParam>;
@@ -30,9 +30,11 @@ export interface IRestServiceModel extends IModelBaseFields {
 }
 export declare const ContentTypes: {
     readonly applicationJson: "application/json";
+    readonly urlencoded: "application/x-www-form-urlencoded";
 };
 export type HttpMethod = 'GET' | 'POST';
 export type ContentType_ApplicationJson = typeof ContentTypes.applicationJson;
+export type ContentType_urlencoded = typeof ContentTypes.urlencoded;
 export type IRestUrlParam = IRestPathVariable | IRestQueryParams;
 export interface IRestUrlParamBase {
     type: "PATH" | "QUERY";
