@@ -1,5 +1,5 @@
 import { ITheme } from "@stechquick/algae/lib/quick/ITheme";
-import { ContextManager } from "../../shrimp/context";
+import { ContextManager, IContextItem } from "../../shrimp/context";
 import { Hook } from "../../shrimp/helpers/hook";
 import { ILogParams } from "../../shrimp/helpers/logger";
 import { IComponentCollection } from "../../shrimp/interfaces/ComponentInterfaces/IComponentCollection";
@@ -66,6 +66,7 @@ export declare class Dory implements IDory {
     constructor(interDoryContext: ContextManager);
     GetContext(): ContextManager;
     GetLRType(): string;
+    RegisterExternalContextItem(item: IContextItem): void;
     SetLRType(LRType?: string, LRTypeRTL?: boolean): Promise<void>;
     SetConfigValues(configValues?: IConfig[]): void;
     GetConfigValues(key: string): IConfig | undefined;
