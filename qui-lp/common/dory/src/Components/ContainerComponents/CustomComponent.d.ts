@@ -5,13 +5,15 @@ import { IExternalProp } from "../../../../shrimp/interfaces/ComponentInterfaces
 import { IQJSon } from "../../../../shrimp/interfaces/ComponentInterfaces/IQJson";
 import { TSComponentBase } from "../../../../shrimp/interfaces/ComponentInterfaces/TSComponentBase";
 import { IDictionary } from "../../../../shrimp/interfaces/IDictionary";
+import { IContextTargetInst } from "../../../../shrimp/interfaces/quick/IStore";
 import { PartialDisplayHookCb } from "../../../../shrimp/interfaces/RenderingInterfaces/IDory";
 import { IDoryJr } from "../../../../shrimp/interfaces/RenderingInterfaces/IDoryJr";
 import { RenderingContext } from "../../Context/RenderingContext";
 import { Dory } from "../../Dory";
-import { IContextTargetInst } from "../../../../shrimp/interfaces/quick/IStore";
 export default class CustomComponent extends TSComponentBase implements IDynamicPropComponent {
     protected qJsonPath: string;
+    protected readonly: boolean;
+    protected disabled: boolean;
     protected props: IDictionary<any>;
     protected events: IDictionary<Function>;
     protected parentInstance: any;
@@ -38,10 +40,13 @@ export default class CustomComponent extends TSComponentBase implements IDynamic
     getQJson(doryJr: IDoryJr): Promise<IQJSon | undefined>;
     set QJsonPath(_qjsonPath: string);
     get QJsonPath(): string;
+    setReadOnly(v: boolean): void;
+    setDisabled(v: boolean): void;
     protected destroyInner(): void;
     Render(tsWrapperInstance?: any, pageId?: string, pageName?: string): unknown;
     private fetchAndRender;
     private OutBoundProps;
+    private applyPropertyToChildComponents;
     private innerRender;
     GetProps(propsCB: (props?: Array<IExternalProp>) => void): Promise<void>;
     GetEvents(eventsCB: (events?: Array<IExternalEvents>) => void): Promise<void>;

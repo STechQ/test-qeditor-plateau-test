@@ -84,7 +84,6 @@ export interface IShellConfiguration {
     getCurrentRegion?: () => string | undefined;
     getFormattingDefinitionByCurrentRegion?: () => IFormattingDefinition | undefined;
     setVisibility(compCollection: IComponentCollection, compVisibility: boolean): void;
-    setDisable(compCollection: IComponentCollection, compDisable: boolean): void;
     getComponentValue(compCollection: IComponentCollection): any;
     setComponentValue(compCollection: IComponentCollection, value: string): void;
     getComponentStyle(comp: IComponent): any;

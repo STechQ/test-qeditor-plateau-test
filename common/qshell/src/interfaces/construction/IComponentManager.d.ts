@@ -15,7 +15,6 @@ export interface IComponentManager extends IContextItem {
         pageShift: boolean;
     }): any;
     setVisibility(compCollection: IComponentCollection, compVisibility: boolean): void;
-    setDisable(compColl: IComponentCollection, compDisable: boolean): void;
     getComponentValue(compCollection: IComponentCollection): any;
     setComponentValue(compCollection: IComponentCollection, value: string): void;
     getComponentStyle(comp: IComponent): any;

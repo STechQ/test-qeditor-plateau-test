@@ -80,7 +80,7 @@ export declare class GlobalMethodsImpl implements IGlobalMethods {
     }): any;
     shareData(sharedDataInfo: ISharedDataInfo): void;
     setComponentClass(compCollection: IComponentCollection, classes: Array<string>): void;
-    setComponentsProperty(componentCollection: IComponentCollection, propertyName: string, propertyValue: any): void;
+    setComponentsProperty(componentCollection: IComponentCollection, propertyName: string, propertyValue: any, isRecursive?: boolean): void;
     clearPageClose(): void;
     setPageClose(): void;
     listenNetworkConnection(): void;

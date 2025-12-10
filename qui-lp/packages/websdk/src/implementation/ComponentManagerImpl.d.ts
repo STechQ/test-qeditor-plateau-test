@@ -64,7 +64,6 @@ export declare class ComponentManagerImpl implements IComponentManager {
         childName: string;
     }): void;
     setVisibility(compColl: IComponentCollection, compVisibility: boolean): void;
-    setDisable(compColl: IComponentCollection, compDisable: boolean): void;
     getComponentValue(compColl: IComponentCollection): any;
     setComponentValue(compColl: IComponentCollection, value: string): void;
     getComponentStyle(comp: IComponent): any;

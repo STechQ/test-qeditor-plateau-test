@@ -83,7 +83,7 @@ export declare class ShellConfiguration implements IShellConfiguration {
     setComponentValue: (compCollection: IComponentCollection, value: string) => void;
     getComponentStyle: (comp: IComponent) => any;
     setComponentStyle: (compCollection: IComponentCollection, prop?: string, value?: string) => void;
-    setComponentsProperty?: (componentCollection: IComponentCollection, propertyName: string, propertyValue: any) => void;
+    setComponentsProperty?: (componentCollection: IComponentCollection, propertyName: string, propertyValue: any, isRecursive?: boolean) => void;
     setRegion?: (regionName: string) => void;
     getRegionList?: () => Array<string> | undefined;
     getCurrentRegion?: () => string | undefined;
