@@ -21,6 +21,8 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     tifIfds: any[];
     blocked: boolean;
     internalErrorMessage: string;
+    scrollEndTriggered: boolean;
+    lastScrollTop: number;
 }, {
     fetchPdfBytes(src: string): Promise<ArrayBuffer>;
     scanForJS(content: ArrayBuffer | string, type: 'pdf' | 'html'): boolean;
