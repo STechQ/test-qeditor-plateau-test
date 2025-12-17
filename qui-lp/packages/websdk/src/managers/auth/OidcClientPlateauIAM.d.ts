@@ -18,6 +18,7 @@ export declare class OidcClientPlateauIAM implements IPlateauIAM {
     private getRealm;
     private getSubdomain;
     private replaceSubdomain;
+    private normalizeAuthBaseUrl;
     isAuthenticated(): true | undefined;
     private isAuthCallbackUrl;
     private cleanCallbackParams;
