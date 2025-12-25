@@ -4,6 +4,7 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     otp: any[];
     valid: boolean;
     firstClick: boolean;
+    outsideClickListener: ((e: Event) => void) | null;
 }, {
     handleInput(index: any, event: any): void;
     handleDelete(index: any): void;

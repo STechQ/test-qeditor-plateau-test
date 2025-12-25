@@ -23,6 +23,7 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     internalErrorMessage: string;
     scrollEndTriggered: boolean;
     lastScrollTop: number;
+    scrolledToBottomListener: ((e: MessageEvent) => void) | null;
 }, {
     fetchPdfBytes(src: string): Promise<ArrayBuffer>;
     scanForJS(content: ArrayBuffer | string, type: 'pdf' | 'html'): boolean;
