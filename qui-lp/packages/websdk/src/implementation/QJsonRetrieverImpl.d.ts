@@ -25,7 +25,7 @@ export default class QJsonRetrieverImpl implements IQJsonRetriever {
             disableLoading: boolean;
         };
     }): Promise<string | object>;
-    retrieveModelsAsync(modelPaths: Array<IRetrieveModels>, options: {
+    getMultipleModels(modelPaths: Array<IRetrieveModels>, options: {
         disableLoading: boolean;
     }): Promise<any>;
     retrieveQJsonAsync(qjsonPath: string, options: {

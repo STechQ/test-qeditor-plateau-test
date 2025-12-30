@@ -20,7 +20,6 @@ export declare type justQJsonCPart = {
 };
 export declare class QJsonCollector {
     moduleManager: IModuleManager;
-    testData: Array<string>;
     constructor({ moduleManager }: {
         moduleManager: IModuleManager;
     });

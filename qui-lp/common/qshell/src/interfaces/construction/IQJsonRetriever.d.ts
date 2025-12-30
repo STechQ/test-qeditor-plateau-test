@@ -24,7 +24,7 @@ export interface IQJsonRetriever extends IContextItem {
             disableLoading: boolean;
         };
     }): Promise<ModelRetrievedType>;
-    retrieveModelsAsync(modelPaths: Array<IRetrieveModels>, options: {
+    getMultipleModels(modelPaths: Array<IRetrieveModels>, options: {
         disableLoading: boolean;
     }): Promise<RetrieveModelsReturnType | undefined>;
 }
