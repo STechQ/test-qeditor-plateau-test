@@ -8,6 +8,7 @@ export declare class VTextFieldFormattingExtensionData implements IExtensionData
     private websdkContext;
     private datadata;
     private ibanStructures;
+    private ibanMaskMap;
     constructor(settingsWrapper: IWebSDKSettingsWrapper, websdkContext: ContextManager);
     create(compCollection: IComponentCollection, attrs: Record<string, any>): void;
     readonly extensionDictionary: Record<string, (componentCollection: IComponentCollection, attrs: Record<string, any>) => void>;
