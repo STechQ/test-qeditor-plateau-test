@@ -146,7 +146,7 @@ export interface IWFEDBNotes {
 }
 export interface IWFEDBNotesHistory extends IWFEDBNotes {
 }
-export interface IWFEDBFiles {
+export interface IWFEDBFiles extends INamedObjectBase {
     id: IFile["id"];
     processInstanceId: string;
     businessKey: IWFEDBProcessInst["businessKey"];
@@ -160,5 +160,6 @@ export interface IWFEDBFiles {
 export interface IWFEDBFilesHistory extends IWFEDBFiles {
 }
 import { CollectionName, IndexDefinitions } from "../../../runtime/infrastructure/mongo/IDataStoreManager";
+import { INamedObjectBase } from "./namedobjects/INamedObjectBase";
 export declare const collIndexDict: Partial<Record<CollectionName, IndexDefinitions<any> | undefined>>;
 //# sourceMappingURL=IWFEDB.d.ts.map

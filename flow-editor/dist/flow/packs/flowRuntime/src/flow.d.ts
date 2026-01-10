@@ -27,7 +27,7 @@ export interface IRuntimeOptions {
     stepStates?: IStepStates;
     stepRepo?: StepRepo;
     isKnownError?: (error: Error, detail: string) => boolean;
-    network: <TReqBody, TRespBody>(cacheOptions: RequestCacheOptions<TRespBody>, requestOptions: IRequest<TReqBody>) => Promise<IResponse<TRespBody>>;
+    network: <TReqBody, TRespBody>(requestOptions: IRequest<TReqBody>, cacheOptions?: RequestCacheOptions<TRespBody>) => Promise<IResponse<TRespBody>>;
 }
 export interface IFlowExecutionResult {
     executedType: FlowExecutionType;

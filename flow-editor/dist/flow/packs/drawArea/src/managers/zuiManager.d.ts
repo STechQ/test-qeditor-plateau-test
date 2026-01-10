@@ -34,6 +34,9 @@ export declare class ZuiManager {
         y2: number;
     } | null;
     cancelSelectionBox(): void;
+    surfaceToClient(point: IPoint): IPoint;
+    getCanvasBoundingRect(): DOMRect;
+    getScale(): number;
     clientToSurface(position: IPoint): IPoint;
     clientToSurfaceD(d: number): number;
     clientToSurfaceDiff(dx: number, dy: number): {

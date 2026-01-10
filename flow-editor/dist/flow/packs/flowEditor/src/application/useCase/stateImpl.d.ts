@@ -15,7 +15,7 @@ export declare class StateImpl implements IState {
     setState(state?: IFlowEditorState): void;
     setSchema(schema: Store): void;
     setReadonly(readonly: boolean): void;
-    setIsWorkFlow(isWorkFlow: boolean): void;
+    setFuncType(funcType: "flow" | "workflow" | "befunc"): void;
     getEditable(): boolean;
     updateModified(status: IModifiedStatus): void;
     centerSelectedStep(): void;

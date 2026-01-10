@@ -6,10 +6,13 @@ import { IMongoDBTransactionQueue } from "../../../../../common/runtime/infrastr
 import { MongoDBManager } from "../../../../../common/runtime/infrastructure/mongo/mongoDBManager";
 import { DataInstance } from "../../../../../common/everything/workflow/runtimeObjects/DataInstance";
 import { IContext } from "../../../../../common/everything/workflow/runtimeObjects/IContext";
-import { IDataSearchParams, IDataSearchResult } from "../../../../../process/workflowManager/helpers/DataSearchEngine.js";
+import { IDataSearchParams, IDataSearchResult } from "../../../../../common/everything/workflow/runtimeObjects/IDataSearch";
 import { CustomType } from "../../../../../common/everything/workflow/runtimemodels/types";
 import { IFile } from "../../../../../common/everything/workflow/runtimeObjects/namedobjects/IFile";
 import { IActionData } from "../../../../../common/everything/workflow/runtimeObjects/IAction";
+type ConvertToDataSet<T extends string> = {
+    [K in T]: K;
+};
 export interface IPlatformWFFAdaptor {
     flowExecutor: (prop: StepFlowModelPropType) => Promise<any>;
     soapServiceExecutor: (prop: StepFlowModelPropType) => Promise<any>;
@@ -27,13 +30,14 @@ export interface IPlatformWFFAdaptor {
     userId: string | undefined;
     addActivity: (prop: IAddActivityProp) => Promise<void>;
     getConstant: (constantId: string) => Promise<string | undefined>;
+    getDataSet: (dataSetId: string) => Promise<ConvertToDataSet<string> | undefined>;
     privateOps: {
-        getDb: () => Promise<{
+        getDb: () => {
             dsManager: MongoDBManager;
-        }>;
-        getTransactionQueue: () => Promise<{
+        };
+        getTransactionQueue: () => {
             trxQueue: IMongoDBTransactionQueue | undefined;
-        }>;
+        };
     };
     wfe: {
         processContext: {
@@ -72,4 +76,5 @@ export interface IPlatformWorkflowServerRequest {
     headers?: Record<string, string>;
     body?: any;
 }
+export {};
 //# sourceMappingURL=IPlatformWorkflowAdaptor.d.ts.map

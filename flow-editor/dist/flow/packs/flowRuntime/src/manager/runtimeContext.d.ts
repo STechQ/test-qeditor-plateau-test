@@ -29,7 +29,7 @@ export declare class RuntimeContext {
     readonly environment: IEnvironment;
     readonly logger: IFlowLogger["log"];
     readonly isKnownError: (error: Error, detail: string) => boolean;
-    readonly network: <TReqBody, TRespBody>(cacheOptions: RequestCacheOptions<TRespBody>, requestOptions: IRequest<TReqBody>) => Promise<IResponse<TRespBody>>;
+    readonly network: <TReqBody, TRespBody>(requestOptions: IRequest<TReqBody>, cacheOptions?: RequestCacheOptions<TRespBody>) => Promise<IResponse<TRespBody>>;
     private static stepRepo?;
     private static modelRepo;
     readonly returnValue: ReturnValue;
@@ -39,7 +39,7 @@ export declare class RuntimeContext {
     readonly runtime: Runtime;
     readonly events?: IFlowEvents;
     private readonly stepRepo;
-    constructor(flow: IFlowModelBase, msg: RuntimeMessage, runtimeCtor: IRuntimeConstructor, stepRepo: StepRepo | undefined, _onEnd: (returnValue: IFlowExecutionResult) => void, _onFail: (err: Error) => void, origStepRetriever: StepRetriever, modelRetriever: ModelRetriever, environment: IEnvironment, logger: IFlowLogger["log"], isKnownError: (error: Error, detail: string) => boolean, network: <TReqBody, TRespBody>(cacheOptions: RequestCacheOptions<TRespBody>, requestOptions: IRequest<TReqBody>) => Promise<IResponse<TRespBody>>, events?: IFlowEvents, stepStates?: IStepStates);
+    constructor(flow: IFlowModelBase, msg: RuntimeMessage, runtimeCtor: IRuntimeConstructor, stepRepo: StepRepo | undefined, _onEnd: (returnValue: IFlowExecutionResult) => void, _onFail: (err: Error) => void, origStepRetriever: StepRetriever, modelRetriever: ModelRetriever, environment: IEnvironment, logger: IFlowLogger["log"], isKnownError: (error: Error, detail: string) => boolean, network: <TReqBody, TRespBody>(requestOptions: IRequest<TReqBody>, cacheOptions?: RequestCacheOptions<TRespBody>) => Promise<IResponse<TRespBody>>, events?: IFlowEvents, stepStates?: IStepStates);
     getStepFromRepo(stepName: string, version: string): Promise<import("../../../flowInterfaces/runtime/StepRuntime").StepRuntime<import("@stechquick/flow-interfaces/runtime").IPropObject, string, import("../../../flowInterfaces/runtime/StepRuntime").StateValues>>;
     getModelFromRepo(entityPath: string): Promise<IModel>;
     private startGatherStepRuntimes;

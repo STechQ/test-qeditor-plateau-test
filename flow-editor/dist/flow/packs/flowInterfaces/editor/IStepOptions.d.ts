@@ -63,13 +63,23 @@ export interface IFindReferenceInCode {
     endLine: number;
     endColumn: number;
 }
+export interface IEditOutput {
+    outputName: string;
+    position?: {
+        x: number;
+        y: number;
+    };
+}
+type UnionKeys<T> = T extends any ? keyof T : never;
+type ValueOf<T, K extends PropertyKey> = T extends any ? (K extends keyof T ? T[K] : never) : never;
 export interface IEditSectionInput<PropType extends IPropObject = IPropObject> {
     propValues: PropType;
     callbacks: {
-        setProp: <TName extends keyof PropType & string>(name: TName, value: PropType[TName], data?: Record<string, string>) => Promise<Array<string> | void>;
+        setProp: <K extends UnionKeys<PropType> & string>(name: K, value?: ValueOf<PropType, K>, data?: Record<string, string>) => Promise<Array<string> | void>;
         setStepID: (newId: string) => void;
         setOutputs: (outputs: Array<string>) => void;
         setSwimlaneName: (name: IExpressionDataFiltered<"literal" | "string">) => void;
+        changeOutputName: (oldName: string, newName: string) => void;
         scope: {
             getStore: <TStore extends Store = Store>() => TStore;
         };
@@ -106,6 +116,12 @@ export interface IEditSectionInput<PropType extends IPropObject = IPropObject> {
         };
         ExpressionComp: (options: IExpressionOptions) => JSX.Element;
     };
+    trigger: {
+        editOutput?: {
+            get: () => IEditOutput | undefined;
+            delete: () => void;
+        };
+    };
 }
 export interface IStepStyle {
     /**
@@ -135,5 +151,6 @@ export interface IStepOptions<PropType extends IPropObject = IPropObject> {
     deprecated?: boolean;
     editSection?: (options: IEditSectionInput<PropType>) => (ReactEditSection | HTMLElement);
     propDefinitions: () => IPropDefiniton<PropType>;
+    changeOutputName?: (props: PropType, oldName: string, newName: string) => PropType;
 }
 //# sourceMappingURL=IStepOptions.d.ts.map

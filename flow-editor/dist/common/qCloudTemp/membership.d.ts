@@ -51,6 +51,7 @@ export interface IEditorTypes {
     certificate?: boolean;
     container?: boolean;
     constant?: boolean;
+    backend?: boolean;
 }
 export interface IOrganizationFeatures {
     multipleCss?: boolean;

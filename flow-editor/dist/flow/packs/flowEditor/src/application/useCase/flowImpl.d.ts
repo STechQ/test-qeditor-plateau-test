@@ -25,5 +25,8 @@ export declare class FlowImpl implements IFlow {
         input: string;
     }): void;
     connectionDeleted(connIDs: Array<string>): string[];
+    changeOutputName(stepId: string, oldName: string, newName: string): void;
+    changeOutput(connectionId: string, outputName: string): void;
+    editOutput(stepId: string, outputName: string, x: number, y: number): void;
 }
 //# sourceMappingURL=flowImpl.d.ts.map

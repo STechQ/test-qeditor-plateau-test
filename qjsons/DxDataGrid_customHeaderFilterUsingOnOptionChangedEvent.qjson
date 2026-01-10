@@ -1,0 +1,737 @@
+let pjson = {
+	"pJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "PageComp",
+					"T": "prop"
+				},
+				"triggerOnRestored": {
+					"H": "false",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"getHeaderFilter": {
+					"H": "\r\ndebugger;\r\nlet myRequest: IRequest = {\r\n    url: \"https://jsonplaceholder.typicode.com/posts\",\r\n    data: null,\r\n    http: 'GET',\r\n    onFail: null,\r\n    onSuccess: \"getHeaderFilterSuccess\",\r\n    responseField: \"headerFilter\",\r\n    blockRender: false,\r\n    headers: { \"Content-Type\": \"application/json\" }\r\n};\r\n\r\nquick.Request.async(myRequest);\r\n\r\n",
+					"C": true,
+					"HL": "TS"
+				},
+				"PreRender": {
+					"H": "quick.Quick.bind({ bindedObject: \"store\", fields: [\"testField\"] });\r\nquick.store.set('testField', \"Field 1 \");",
+					"I": true,
+					"HL": "TS"
+				},
+				"PostRender": {
+					"H": "quick.MM.trigger('getDataSource',[{filterValue:undefined}]);\r\n",
+					"TO": 1,
+					"HL": "TS"
+				},
+				"getHeaderFilterSuccess": {
+					"H": "debugger;\r\nconst distinctItems = response.headerFilter.filter((item, i, arr) => i === arr.findIndex(x => x.userId === item.userId))\r\n    .map(item => ({ text: item.userId, value: item.userId }));\r\n\r\nquick.store.set('testField', distinctItems);\r\nquick.Quick.updateComponent(components.dxDataGrid);\r\n",
+					"C": true,
+					"HL": "TS"
+				},
+				"getDataSource": {
+					"H": "declare var filterValue;\r\n\r\ndebugger;\r\nlet urlLink = \"https://jsonplaceholder.typicode.com/posts\"\r\n\r\nif (filterValue) {\r\n    if (filterValue.length > 0) {\r\n        urlLink += \"?\" + filterValue[0].filterValue;\r\n    }\r\n}\r\nelse {\r\n    quick.MM.trigger('getHeaderFilter');\r\n}\r\n\r\nlet myRequest: IRequest = {\r\n    url: urlLink,\r\n    data: null,\r\n    http: 'GET',\r\n    onFail: null,\r\n    onSuccess: \"getDataSourceSuccess\",\r\n    responseField: \"responseData\",\r\n    blockRender: false,\r\n    headers: { \"Content-Type\": \"application/json\" }\r\n};\r\n\r\nquick.Request.async(myRequest);",
+					"C": true,
+					"HL": "TS"
+				},
+				"getDataSourceSuccess": {
+					"H": "debugger;\r\nlet dataSource = response.responseData;\r\nquick.store.set(\"$dataSourceAll\", dataSource);\r\n\r\ncomponents.dxDataGrid.dataSource = dataSource;\r\nquick.Quick.updateComponent(components.dxDataGrid);\r\n\r\n\r\n\r\n",
+					"C": true,
+					"HL": "TS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "'container'",
+					"T": "class"
+				},
+				"visible": {
+					"H": "true",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "true",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "VRowComp",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "DxDataGrid",
+															"P": {
+																"ID": {
+																	"H": "dxDataGrid",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"dataSource": {
+																	"H": "[]",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"onOptionChanged": {
+																	"H": "debugger;\r\nquick.EM.trace(\"onOptionChanged\");\r\nquick.EM.trace(event);\r\n\r\nif (event.name == 'columns' && event.fullName && event.fullName.indexOf('filterValues') > -1) {\r\n    let filterListValue = \"\";\r\n    let columnIndex;\r\n    let match = event.fullName.match(/\\[(\\d+)\\]/);\r\n    if (match) {\r\n        debugger;\r\n        columnIndex = parseInt(match[1], 10);\r\n        const filterColumn = event.component.columnOption(columnIndex);\r\n        let filterOperation = \"=\";\r\n        let dxFilters = <{ columnIndex: number, filterValue: string }[]>(quick.store.get('$dxFilters') || []);\r\n        // dxFilters = [ { columnIndex:1, filterValue:\"userId=1\" }, { columnIndex:2, filterValue:\"id=1\" }  ]\r\n        if (dxFilters.length > 0) {\r\n            let findItem = dxFilters.find(item => item.columnIndex == columnIndex);\r\n            if (findItem) {\r\n                // bu kolon için mevcutta bir filtre eklenmişti, onun değerini değiştir\r\n                if (event.value) {\r\n                    // filtre için yeni değer girilmiş.\r\n                    event.value.forEach((filterValue => {\r\n                        filterListValue +=  filterColumn.dataField + filterOperation + filterValue + \"&\";\r\n                    }));\r\n                    findItem.filterValue = filterListValue;\r\n                }\r\n                else {\r\n                    // filtre değeri silinmiş. filtereden kaldır.\r\n                    const index = dxFilters.indexOf(findItem);\r\n                    if (index !== -1) {\r\n                        dxFilters.splice(index, 1);\r\n                    }\r\n                }\r\n            }\r\n            else if (event.value) {\r\n                //bu kolon için hiç filtre yoktu. Filtre ekle\r\n                event.value.forEach((filterValue => {\r\n                    filterListValue += filterColumn.dataField + filterOperation + filterValue  + \"&\";\r\n                }));\r\n                dxFilters.push({ columnIndex: columnIndex, filterValue: filterListValue });\r\n            }\r\n        } else if (event.value && Array.isArray(event.value)) {\r\n            //bu kolon için hiç filtre yoktu. Filtre ekle\r\n            event.value.forEach((filterValue => {\r\n                filterListValue +=  filterColumn.dataField + filterOperation + filterValue  + \"&\";\r\n            }));\r\n\r\n            dxFilters.push({ columnIndex: columnIndex, filterValue: filterListValue });\r\n        }\r\n\r\n        quick.store.set(\"filterDone\", false);\r\n        quick.store.set('$dxFilters', dxFilters);\r\n        quick.MM.trigger(\"getDataSource\", [{ filterValue: dxFilters }]);\r\n    }\r\n\r\n\r\n\r\n\r\n    // if (event.value) {\r\n    //     quick.store.set(\"filterDone\", false);\r\n\r\n    //     quick.MM.trigger(\"getDataSource\", [{ filterValue: \"\" }]);\r\n    // }\r\n    // else {\r\n    //     // tüm listeyi setle\r\n    //     let dataSourceAll = quick.store.get(\"$dataSourceAll\");\r\n    //     components.dxDataGrid.dataSource = dataSourceAll;\r\n    //     quick.Quick.updateComponent(components.dxDataGrid);\r\n\r\n    // }\r\n}\r\n\r\n\r\n\r\n\r\n",
+																	"PE": true,
+																	"P": "event:any",
+																	"HL": "TS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "DxColumn",
+																			"P": {
+																				"cellTemplate": {
+																					"H": "id",
+																					"T": "prop",
+																					"HL": "QS"
+																				},
+																				"dataField": {
+																					"H": "'id'",
+																					"T": "prop",
+																					"HL": "QS"
+																				},
+																				"ID": {
+																					"H": "EdtrComp_188",
+																					"T": "prop"
+																				},
+																				"allowFiltering": {
+																					"H": "false",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_188"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		},
+																		{
+																			"T": "DxHeaderFilter",
+																			"P": {
+																				"visible": {
+																					"H": "'showFilterRow'",
+																					"T": "prop"
+																				},
+																				"allowSearch": {
+																					"H": "false",
+																					"T": "prop"
+																				},
+																				"ID": {
+																					"H": "EdtrComp_149",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_149"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		},
+																		{
+																			"T": "DxColumn",
+																			"P": {
+																				"cellTemplate": {
+																					"H": "userId",
+																					"T": "prop",
+																					"HL": "QS"
+																				},
+																				"dataField": {
+																					"H": "'userId'",
+																					"T": "prop",
+																					"HL": "QS"
+																				},
+																				"ID": {
+																					"H": "EdtrComp_106",
+																					"T": "prop"
+																				},
+																				"allowFiltering": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"allowHeaderFiltering": {
+																					"H": "true",
+																					"T": "prop"
+																				},
+																				"headerFilter": {
+																					"H": "true",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "DxHeaderFilter",
+																							"P": {
+																								"visible": {
+																									"H": "'showFilterRow'",
+																									"T": "prop"
+																								},
+																								"allowSearch": {
+																									"H": "false",
+																									"T": "prop"
+																								},
+																								"ID": {
+																									"H": "EdtrComp_103",
+																									"T": "prop"
+																								},
+																								"dataSource": {
+																									"H": "//await(MM.getHeaderFilter())\r\n//await(MM.trigger('getHeaderFilter'))\r\nstore.get('testField')",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_103"
+																							},
+																							"O": {
+																								"cType": "slot"
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_106"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		},
+																		{
+																			"T": "DxColumn",
+																			"P": {
+																				"cellTemplate": {
+																					"H": "title",
+																					"T": "prop"
+																				},
+																				"dataField": {
+																					"H": "'title'",
+																					"T": "prop"
+																				},
+																				"ID": {
+																					"H": "EdtrComp_7",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_7"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		},
+																		{
+																			"T": "DxColumn",
+																			"P": {
+																				"cellTemplate": {
+																					"H": "body",
+																					"T": "prop"
+																				},
+																				"dataField": {
+																					"H": "'body'",
+																					"T": "prop"
+																				},
+																				"ID": {
+																					"H": "EdtrComp_10",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_10"
+																			},
+																			"O": {
+																				"cType": "slot"
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_93"
+															},
+															"O": {
+																"cType": "scopedSlot",
+																"forceUpdateAfterPropertySetting": true
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "VColComp",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_3"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												}
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "slot"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_5"
+			},
+			"O": {
+				"cType": "slot"
+			}
+		}
+	],
+	"cJson": [
+		{
+			"T": "Messaging",
+			"P": {
+				"ID": {
+					"H": "PageComp",
+					"T": "prop"
+				},
+				"triggerOnRestored": {
+					"H": "╬false╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {
+				"getHeaderFilter": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\n;\r\ndebugger;\r\nvar myRequest = {\r\n    url: \"https://jsonplaceholder.typicode.com/posts\",\r\n    data: null,\r\n    http: 'GET',\r\n    onFail: null,\r\n    onSuccess: \"getHeaderFilterSuccess\",\r\n    responseField: \"headerFilter\",\r\n    blockRender: false,\r\n    headers: { \"Content-Type\": \"application/json\" }\r\n};\r\nquick.Request.async(myRequest);\r\n",
+					"C": true,
+					"HL": "JS"
+				},
+				"PreRender": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\n;\r\nquick.Quick.bind({ bindedObject: \"store\", fields: [\"testField\"] });\r\nquick.store.set('testField', \"Field 1 \");\r\n",
+					"I": true,
+					"HL": "JS"
+				},
+				"PostRender": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\n;\r\nquick.MM.trigger('getDataSource', [{ filterValue: undefined }]);\r\n",
+					"TO": 1,
+					"HL": "JS"
+				},
+				"getHeaderFilterSuccess": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\n;\r\ndebugger;\r\nvar distinctItems = response.headerFilter.filter(function (item, i, arr) { return i === arr.findIndex(function (x) { return x.userId === item.userId; }); })\r\n    .map(function (item) { return ({ text: item.userId, value: item.userId }); });\r\nquick.store.set('testField', distinctItems);\r\nquick.Quick.updateComponent(components.dxDataGrid);\r\n",
+					"C": true,
+					"HL": "JS"
+				},
+				"getDataSource": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\n;\r\ndebugger;\r\nvar urlLink = \"https://jsonplaceholder.typicode.com/posts\";\r\nif (filterValue) {\r\n    if (filterValue.length > 0) {\r\n        urlLink += \"?\" + filterValue[0].filterValue;\r\n    }\r\n}\r\nelse {\r\n    quick.MM.trigger('getHeaderFilter');\r\n}\r\nvar myRequest = {\r\n    url: urlLink,\r\n    data: null,\r\n    http: 'GET',\r\n    onFail: null,\r\n    onSuccess: \"getDataSourceSuccess\",\r\n    responseField: \"responseData\",\r\n    blockRender: false,\r\n    headers: { \"Content-Type\": \"application/json\" }\r\n};\r\nquick.Request.async(myRequest);\r\n",
+					"C": true,
+					"HL": "JS"
+				},
+				"getDataSourceSuccess": {
+					"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\n;\r\ndebugger;\r\nvar dataSource = response.responseData;\r\nquick.store.set(\"$dataSourceAll\", dataSource);\r\ncomponents.dxDataGrid.dataSource = dataSource;\r\nquick.Quick.updateComponent(components.dxDataGrid);\r\n",
+					"C": true,
+					"HL": "JS"
+				}
+			},
+			"C": {},
+			"_Editor": {
+				"eID": "EdtrComp_1"
+			},
+			"O": {
+				"cType": "child",
+				"compDomClasses": "newDropBorder"
+			}
+		},
+		{
+			"T": "VContainer",
+			"P": {
+				"ID": {
+					"H": "VContainerComp",
+					"T": "prop"
+				},
+				"class": {
+					"H": "╬'container'╩╩",
+					"T": "class"
+				},
+				"visible": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				},
+				"eager": {
+					"H": "╬true╩╩",
+					"T": "prop"
+				}
+			},
+			"E": {},
+			"C": {
+				"default": {
+					"c": [
+						{
+							"T": "VRow",
+							"P": {
+								"ID": {
+									"H": "VRowComp",
+									"T": "prop"
+								}
+							},
+							"E": {},
+							"C": {
+								"default": {
+									"c": [
+										{
+											"T": "VCol",
+											"C": {
+												"default": {
+													"c": [
+														{
+															"T": "DxDataGrid",
+															"P": {
+																"ID": {
+																	"H": "dxDataGrid",
+																	"T": "prop",
+																	"HL": "QS"
+																},
+																"dataSource": {
+																	"H": "╬[]╩╩",
+																	"T": "prop"
+																}
+															},
+															"E": {
+																"onOptionChanged": {
+																	"H": "Object.defineProperty(exports, \"__esModule\", { value: true });\r\ndebugger;\r\nquick.EM.trace(\"onOptionChanged\");\r\nquick.EM.trace(event);\r\nif (event.name == 'columns' && event.fullName && event.fullName.indexOf('filterValues') > -1) {\r\n    var filterListValue_1 = \"\";\r\n    var columnIndex_1;\r\n    var match = event.fullName.match(/\\[(\\d+)\\]/);\r\n    if (match) {\r\n        debugger;\r\n        columnIndex_1 = parseInt(match[1], 10);\r\n        var filterColumn_1 = event.component.columnOption(columnIndex_1);\r\n        var filterOperation_1 = \"=\";\r\n        var dxFilters = (quick.store.get('$dxFilters') || []);\r\n        // dxFilters = [ { columnIndex:1, filterValue:\"userId=1\" }, { columnIndex:2, filterValue:\"id=1\" }  ]\r\n        if (dxFilters.length > 0) {\r\n            var findItem = dxFilters.find(function (item) { return item.columnIndex == columnIndex_1; });\r\n            if (findItem) {\r\n                // bu kolon için mevcutta bir filtre eklenmişti, onun değerini değiştir\r\n                if (event.value) {\r\n                    // filtre için yeni değer girilmiş.\r\n                    event.value.forEach((function (filterValue) {\r\n                        filterListValue_1 += filterColumn_1.dataField + filterOperation_1 + filterValue + \"&\";\r\n                    }));\r\n                    findItem.filterValue = filterListValue_1;\r\n                }\r\n                else {\r\n                    // filtre değeri silinmiş. filtereden kaldır.\r\n                    var index = dxFilters.indexOf(findItem);\r\n                    if (index !== -1) {\r\n                        dxFilters.splice(index, 1);\r\n                    }\r\n                }\r\n            }\r\n            else if (event.value) {\r\n                //bu kolon için hiç filtre yoktu. Filtre ekle\r\n                event.value.forEach((function (filterValue) {\r\n                    filterListValue_1 += filterColumn_1.dataField + filterOperation_1 + filterValue + \"&\";\r\n                }));\r\n                dxFilters.push({ columnIndex: columnIndex_1, filterValue: filterListValue_1 });\r\n            }\r\n        }\r\n        else if (event.value && Array.isArray(event.value)) {\r\n            //bu kolon için hiç filtre yoktu. Filtre ekle\r\n            event.value.forEach((function (filterValue) {\r\n                filterListValue_1 += filterColumn_1.dataField + filterOperation_1 + filterValue + \"&\";\r\n            }));\r\n            dxFilters.push({ columnIndex: columnIndex_1, filterValue: filterListValue_1 });\r\n        }\r\n        quick.store.set(\"filterDone\", false);\r\n        quick.store.set('$dxFilters', dxFilters);\r\n        quick.MM.trigger(\"getDataSource\", [{ filterValue: dxFilters }]);\r\n    }\r\n    // if (event.value) {\r\n    //     quick.store.set(\"filterDone\", false);\r\n    //     quick.MM.trigger(\"getDataSource\", [{ filterValue: \"\" }]);\r\n    // }\r\n    // else {\r\n    //     // tüm listeyi setle\r\n    //     let dataSourceAll = quick.store.get(\"$dataSourceAll\");\r\n    //     components.dxDataGrid.dataSource = dataSourceAll;\r\n    //     quick.Quick.updateComponent(components.dxDataGrid);\r\n    // }\r\n}\r\n",
+																	"PE": true,
+																	"P": "event:any",
+																	"HL": "JS"
+																}
+															},
+															"C": {
+																"default": {
+																	"c": [
+																		{
+																			"T": "DxColumn",
+																			"P": {
+																				"cellTemplate": {
+																					"H": "╬id╩╩",
+																					"T": "prop",
+																					"HL": "QS"
+																				},
+																				"dataField": {
+																					"H": "╬'id'╩╩",
+																					"T": "prop",
+																					"HL": "QS"
+																				},
+																				"ID": {
+																					"H": "EdtrComp_188",
+																					"T": "prop"
+																				},
+																				"allowFiltering": {
+																					"H": "╬false╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_188"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": ""
+																			}
+																		},
+																		{
+																			"T": "DxHeaderFilter",
+																			"P": {
+																				"visible": {
+																					"H": "╬'showFilterRow'╩╩",
+																					"T": "prop"
+																				},
+																				"allowSearch": {
+																					"H": "╬false╩╩",
+																					"T": "prop"
+																				},
+																				"ID": {
+																					"H": "EdtrComp_149",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_149"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": ""
+																			}
+																		},
+																		{
+																			"T": "DxColumn",
+																			"P": {
+																				"cellTemplate": {
+																					"H": "╬userId╩╩",
+																					"T": "prop",
+																					"HL": "QS"
+																				},
+																				"dataField": {
+																					"H": "╬'userId'╩╩",
+																					"T": "prop",
+																					"HL": "QS"
+																				},
+																				"ID": {
+																					"H": "EdtrComp_106",
+																					"T": "prop"
+																				},
+																				"allowFiltering": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"allowHeaderFiltering": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				},
+																				"headerFilter": {
+																					"H": "╬true╩╩",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {
+																				"default": {
+																					"c": [
+																						{
+																							"T": "DxHeaderFilter",
+																							"P": {
+																								"visible": {
+																									"H": "╬'showFilterRow'╩╩",
+																									"T": "prop"
+																								},
+																								"allowSearch": {
+																									"H": "╬false╩╩",
+																									"T": "prop"
+																								},
+																								"ID": {
+																									"H": "EdtrComp_103",
+																									"T": "prop"
+																								},
+																								"dataSource": {
+																									"H": "╬()╣.╣store╩╠get╩╩╠'testField'╩╩╩",
+																									"T": "prop"
+																								}
+																							},
+																							"E": {},
+																							"C": {},
+																							"_Editor": {
+																								"eID": "EdtrComp_103"
+																							},
+																							"O": {
+																								"cType": "slot",
+																								"compDomClasses": ""
+																							}
+																						}
+																					],
+																					"cType": "slot"
+																				}
+																			},
+																			"_Editor": {
+																				"eID": "EdtrComp_106"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": ""
+																			}
+																		},
+																		{
+																			"T": "DxColumn",
+																			"P": {
+																				"cellTemplate": {
+																					"H": "╬title╩╩",
+																					"T": "prop"
+																				},
+																				"dataField": {
+																					"H": "╬'title'╩╩",
+																					"T": "prop"
+																				},
+																				"ID": {
+																					"H": "EdtrComp_7",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_7"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": ""
+																			}
+																		},
+																		{
+																			"T": "DxColumn",
+																			"P": {
+																				"cellTemplate": {
+																					"H": "╬body╩╩",
+																					"T": "prop"
+																				},
+																				"dataField": {
+																					"H": "╬'body'╩╩",
+																					"T": "prop"
+																				},
+																				"ID": {
+																					"H": "EdtrComp_10",
+																					"T": "prop"
+																				}
+																			},
+																			"E": {},
+																			"C": {},
+																			"_Editor": {
+																				"eID": "EdtrComp_10"
+																			},
+																			"O": {
+																				"cType": "slot",
+																				"compDomClasses": ""
+																			}
+																		}
+																	],
+																	"cType": "slot"
+																}
+															},
+															"_Editor": {
+																"eID": "EdtrComp_93"
+															},
+															"O": {
+																"cType": "scopedSlot",
+																"forceUpdateAfterPropertySetting": true,
+																"compDomClasses": "dx-widget dx-visibility-change-handler newDropBorder"
+															}
+														}
+													],
+													"cType": "slot"
+												}
+											},
+											"E": {},
+											"P": {
+												"ID": {
+													"H": "VColComp",
+													"T": "prop"
+												}
+											},
+											"_Editor": {
+												"eID": "EdtrComp_3"
+											},
+											"O": {
+												"cType": "slot",
+												"layout": {
+													"dOpt": {
+														"xs": [
+															"d:d-flex",
+															"fd:flex-column"
+														]
+													},
+													"class": "d-flex flex-column"
+												},
+												"compDomClasses": "col d-flex flex-column newDropBorder"
+											}
+										}
+									],
+									"cType": "slot"
+								}
+							},
+							"_Editor": {
+								"eID": "EdtrComp_4"
+							},
+							"O": {
+								"cType": "slot",
+								"compDomClasses": "row newDropBorder"
+							}
+						}
+					],
+					"cType": "slot"
+				}
+			},
+			"_Editor": {
+				"eID": "EdtrComp_5"
+			},
+			"O": {
+				"cType": "slot",
+				"compDomClasses": "container newDropBorder"
+			}
+		}
+	],
+	"lrids": {},
+	"clrids": {},
+	"opt": {}
+};
+export default pjson

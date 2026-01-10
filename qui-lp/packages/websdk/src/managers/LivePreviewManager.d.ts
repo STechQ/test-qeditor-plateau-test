@@ -6,7 +6,7 @@ export declare class LivePreviewManager {
     constructor();
     isItLivePreview(): Promise<string | false>;
     getLivePreviewSettings(): Promise<any | undefined>;
-    sendSwMessage(packId: any): Promise<{
+    sendSwMessage(packId: string): Promise<{
         type: "lpServiceWorkerRequestResponse";
         resourceModel: string;
         resourceId: string;

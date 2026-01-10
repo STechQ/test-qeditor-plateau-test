@@ -102,9 +102,25 @@ export declare const EditorConsts: {
             readonly single: "sla";
         };
     };
+    readonly endpointEditor: {
+        readonly modelKeys: {
+            readonly single: "endpoint";
+        };
+    };
+    readonly backendFuncEditor: {
+        readonly modelKeys: {
+            readonly design: "befunc-design";
+            readonly runtime: "befunc-runtime";
+        };
+    };
     readonly decisionTable: {
         readonly modelKeys: {
             readonly single: "decisionTable";
+        };
+    };
+    readonly dataSetEditor: {
+        readonly modelKeys: {
+            readonly single: "dataSet";
         };
     };
 };

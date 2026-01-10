@@ -78,6 +78,9 @@ export type FlowEvents = {
     onMoveSteps(movedSteps: Array<string>): void;
     onPan(): void;
     onZoom(): void;
+    onRename(stepId: string, oldName: string, newName: string): void;
+    changeOutput(connectionId: string, outputName: string): void;
+    editOutput(stepId: string, outputName: string, x: number, y: number): void;
 };
 export interface IDrawArea {
     readonly rootElement: HTMLElement;
@@ -102,5 +105,6 @@ export interface IDrawArea {
     setStepOutputs(stepID: string, outputs: Array<string>): void;
     setStepID(oldId: string, newId: string): void;
     centerSelectedStep(): void;
+    changeOutputName(stepId: string, oldName: string, newName: string): void;
 }
 //# sourceMappingURL=types.d.ts.map

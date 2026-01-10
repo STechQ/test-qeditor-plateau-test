@@ -141,6 +141,15 @@ export interface IWorkflowEnvironment {
     }>;
     environment: string;
     isLocal: boolean;
+    dataSetValueWithName: Record<string, ConvertToDataSet<string>>;
+    dataSetValueWithID: Record<string, ConvertToDataSet<string>>;
+    dataSetInfoWithID: Record<string, {
+        lastModelUpdate: number;
+        expireTime: number;
+    }>;
 }
+export type ConvertToDataSet<T extends string> = {
+    [K in T]: K;
+};
 export {};
 //# sourceMappingURL=IWorkflow.d.ts.map

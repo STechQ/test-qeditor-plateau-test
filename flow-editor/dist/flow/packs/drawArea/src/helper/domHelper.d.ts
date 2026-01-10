@@ -1,10 +1,5 @@
 export interface IDomCreateOptions {
-    style?: {
-        position?: string;
-        zIndex?: string;
-        top?: string;
-        display?: string;
-    };
+    style?: Partial<CSSStyleDeclaration>;
     events?: {
         click?: (ev: MouseEvent) => any;
     };

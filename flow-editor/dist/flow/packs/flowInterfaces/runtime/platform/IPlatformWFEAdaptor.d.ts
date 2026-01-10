@@ -28,6 +28,7 @@ export interface IWFExecutionParams {
 export interface IPlatformWFEAdaptor {
     runFunctionWithProps: (props: StepFlowModelPropType) => Promise<any>;
     getConstant: (modelId: string) => Promise<any> | any;
+    getDataSet: (dataSetId: string) => Promise<any> | any;
     wfExecutionContext: () => IWorkflowExecutionContext;
     wffContext: () => IWorkflowContext;
     wffContextNoProcessInstance(): IWorkflowContext;

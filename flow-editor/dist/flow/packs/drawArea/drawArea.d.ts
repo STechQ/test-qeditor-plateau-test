@@ -25,6 +25,7 @@ export declare class DrawArea implements IDrawArea {
     setState(state?: IFlowState): void;
     setReadonly(readonly: boolean): void;
     setStepOutputs(stepID: string, outputs: Array<string>): void;
+    changeOutputName(stepId: string, oldName: string, newName: string): void;
     setStepID(oldID: string, newID: string): void;
     centerSelectedStep(): void;
 }

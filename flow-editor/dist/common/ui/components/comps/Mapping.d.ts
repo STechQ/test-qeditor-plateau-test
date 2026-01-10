@@ -11,6 +11,10 @@ interface IMappingProps {
         tooltip?: string;
     }>;
     readOnly?: boolean;
+    show?: {
+        inParam: boolean;
+        outParam: boolean;
+    };
     onChangeInParamMapping: (inParamMapping: IStoreInParameterMapping[]) => void;
     onChangeOutParamMapping: (outParamMapping: IStoreOutParameterMapping[]) => void;
     openModelInNewTab: (modelID: string) => void;

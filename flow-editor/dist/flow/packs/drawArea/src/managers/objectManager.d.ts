@@ -7,6 +7,7 @@ import { FlowEvents, IFlowCopy, IFlowExport, IFlowStepOptions, IFlowStepProps, I
 import { SelectionManager } from "./selectionManager";
 import { EventHelper } from "../helper/eventHelper";
 import { ISwitchCaseExp } from "../../../../../common/everything/flow/runtimeModels/ISwitch";
+import { StateManager } from "./stateManager";
 export declare class ObjectManager {
     private readonly zuiManager;
     private readonly selectionManager;
@@ -15,6 +16,7 @@ export declare class ObjectManager {
     private readonly switchIdCreator;
     private pasteOffset;
     private objects;
+    stateManager?: StateManager;
     constructor(zuiManager: ZuiManager, selectionManager: SelectionManager, eventHelper: EventHelper<FlowEvents>);
     private addSwitchCase;
     private counterSwitchCaseChild;
@@ -26,13 +28,13 @@ export declare class ObjectManager {
     setStepID(oldID: string, newID: string): void;
     addFlowStep(stepName: string, surfacePoint: IPoint, options: IFlowStepOptions, props?: IFlowStepProps, id?: string): FlowStep;
     private _addFlowStep;
-    addFlowConnection(from: FlowConnectionFrom, to: FlowConnectionTo, isSwitchCase?: boolean): FlowConnection;
+    addFlowConnection(from: FlowConnectionFrom, to: FlowConnectionTo, isSwitchCase?: boolean, outputNames?: Array<string>): FlowConnection;
     private _addFlowConnection;
     private addObject;
     getObject<T extends FlowObjectBase = FlowObjectBase>(objectID: string): T;
     getObjectsByType<T extends FlowObjectBase>(field: T["type"]): Array<T>;
     deleteObjects(objectIDs: Array<string>, undoRedo?: boolean): void;
-    deleteAllObjectsForSwitch(): void;
+    private deleteAllObjectsForSwitch;
     copyObjects(objectIDs: Array<string>): IFlowCopy;
     exportObjects(): IFlowExport;
     private exportStep;
@@ -42,5 +44,6 @@ export declare class ObjectManager {
     private _import;
     setStepOutputs(stepID: string, outputs: Array<string>): void;
     setSwimlaneId(stepID: string, swimlaneId: string): void;
+    changeOutputName(stepId: string, oldName: string, newName: string): void;
 }
 //# sourceMappingURL=objectManager.d.ts.map

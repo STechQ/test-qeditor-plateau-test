@@ -17,6 +17,9 @@ export interface IFlow {
         input: string;
     }): void;
     connectionDeleted(connIDs: Array<string>): Array<string>;
+    changeOutputName(stepId: string, oldName: string, newName: string): void;
+    changeOutput(connectionId: string, outputName: string): void;
+    editOutput(stepId: string, outputName: string, x: number, y: number): void;
 }
 export declare const IFlow: unique symbol;
 //# sourceMappingURL=IFlow.d.ts.map

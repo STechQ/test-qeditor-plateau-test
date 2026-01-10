@@ -1,9 +1,10 @@
-import { IContextItem, ContextManager } from "../../../../common/shrimp/context";
+import { IContextItem } from "../../../../common/shrimp/context";
 import { IWebSDKSettingsWrapper } from "../../../../common/shrimp/interfaces/quick/IWebSDK";
+import { IRendererConfig } from "../../../../common/shrimp/interfaces/RenderingInterfaces/IRendererConfig";
 import { CssOrderManager, CssOrderManagerWithShadow } from "./style/cssOrderManager";
 export declare class ShadowDOMManager implements IContextItem {
     private readonly settingsWrapper;
-    private readonly websdkContext?;
+    private readonly config;
     static ContextName: string;
     contextName: string;
     private _shadowContainer;
@@ -16,7 +17,7 @@ export declare class ShadowDOMManager implements IContextItem {
     outerMountPoint: HTMLElement;
     rootInstance: Vue;
     newMountPoint: HTMLElement;
-    constructor(outerMountPoint: HTMLElement, settingsWrapper: IWebSDKSettingsWrapper, websdkContext?: ContextManager | undefined);
+    constructor(outerMountPoint: HTMLElement, settingsWrapper: IWebSDKSettingsWrapper, config: IRendererConfig);
     isShadowDOMEnabled(): boolean | undefined;
     private getWindowFromParent;
     private enhanceDocumentWithShadowRoot;

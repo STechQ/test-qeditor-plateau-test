@@ -1,9 +1,28 @@
 import { IExpressionData } from "../../dataType/runtimemodels/IExpression";
-export type ISwitchProps = {
+import { IStoreMapping } from "../../store/runtimemodels/IStoreMapping";
+export type SwitchType = "decisionTree" | "decisionTable" | "expression";
+export type ISwitchProps = ISwitchExpressionProps | ISwitchTableProps | ISwitchTreeProps;
+export type ISwitchBaseProps = {
     label: string;
-    type: 'switch';
     name: string;
+};
+export type ISwitchCase = {
+    name: string;
+    value: string;
+};
+export type ISwitchTreeProps = ISwitchBaseProps & {
+    switchType: "decisionTree";
     cases: Record<string, ISwitchCaseExp | IDefaultCase>;
+};
+export type ISwitchTableProps = ISwitchBaseProps & {
+    switchType: "decisionTable";
+    mapping: IStoreMapping;
+    decisionTableId: string;
+    cases: Record<string, ISwitchCase>;
+};
+export type ISwitchExpressionProps = ISwitchBaseProps & {
+    switchType: "expression";
+    cases: Record<string, ISwitchCase>;
 };
 export type ICaseInfo = {
     props?: {

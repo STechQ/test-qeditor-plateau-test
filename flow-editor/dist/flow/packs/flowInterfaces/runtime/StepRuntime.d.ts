@@ -76,7 +76,7 @@ export interface IRuntimeParam<PropType = IPropObject, OutputOptions = string, S
         getWFE: () => IPlatformWFEAdaptor | undefined;
         getCommonState: <CommonStateType extends IStateBaseType = IStateBaseType>() => ICommonState<CommonStateType>;
         logger: IFlowLogger;
-        network: <TReqBody, TRespBody>(cacheOptions: RequestCacheOptions<TRespBody>, requestOptions: IRequest<TReqBody>) => Promise<IResponse<TRespBody>>;
+        network: <TReqBody, TRespBody>(requestOptions: IRequest<TReqBody>, cacheOptions?: RequestCacheOptions<TRespBody>) => Promise<IResponse<TRespBody>>;
     };
     state: {
         readonly values: StateType;

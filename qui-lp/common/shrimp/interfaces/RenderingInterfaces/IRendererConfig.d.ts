@@ -36,5 +36,8 @@ export interface IRendererConfig {
     navigationManager?: INavigationManager;
     platform?: PlatformType;
     configValues?: IConfig[];
+    shadowDomOptions?: {
+        removeStyles?: boolean;
+    };
 }
 //# sourceMappingURL=IRendererConfig.d.ts.map

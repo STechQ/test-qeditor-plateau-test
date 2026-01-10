@@ -1,5 +1,6 @@
 import { FC } from "react";
 import "../assets/css/components/select.css";
+import { VariableTypes } from "../../../everything/dataType/runtimemodels/types";
 interface ISelectProps {
     label?: string;
     className?: string;
@@ -8,6 +9,7 @@ interface ISelectProps {
     value: string;
     options: Array<IOption>;
     searchable?: boolean;
+    sortable?: boolean;
     unselect?: boolean;
     errorMessage?: string;
     onChange: (value: IOption['value']) => void;
@@ -17,6 +19,7 @@ export interface IOption {
     name: string;
     value: string | number;
     tooltip?: string;
+    type?: VariableTypes;
 }
 export declare const Select: FC<ISelectProps>;
 export {};

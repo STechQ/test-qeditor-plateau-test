@@ -1,6 +1,6 @@
 export type LogLevel = "debug" | "log" | "warning" | "error";
 export declare class Logger {
-    static log(item: ILogItem): void;
+    static log(item: ILogItem, color?: string): void;
     static mask: {
         mongoConnString(connectionString: string | undefined): string | undefined;
     };
@@ -52,6 +52,7 @@ export declare const LogCodes: {
     readonly l2007: "l-2007";
     readonly l2008: "l-2008";
     readonly l2009: "l-2009";
+    readonly l2012: "l-2012";
     readonly l2013: "l-2013";
     readonly l2014: "l-2014";
     readonly l2015: "l-2015";
@@ -75,6 +76,8 @@ export declare const LogCodes: {
     readonly fm2002: "fm-2002";
     readonly fm2003: "fm-2003";
     readonly fm2004: "fm-2004";
+    readonly fm2005: "fm-2005";
+    readonly fm2006: "fm-2006";
     readonly wm2000: "wm-2000";
     readonly wm2001: "wm-2001";
     readonly wm2003: "wm-2003";
@@ -158,6 +161,8 @@ export declare const LogCodesSpecial: {
     readonly ResBEPM: "PM   <--";
     readonly ReqBEWM: "WM   -->";
     readonly ResBEWM: "WM   <--";
+    readonly ReqBE: "BE   -->";
+    readonly ResBE: "BE   <--";
     readonly ReqBEIPAS: "IPAS -->";
     readonly ResBEIPAS: "IPAS <--";
     readonly ResBEMock: "<-- (M)";

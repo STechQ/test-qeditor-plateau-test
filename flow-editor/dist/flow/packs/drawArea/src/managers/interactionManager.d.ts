@@ -11,7 +11,6 @@ export declare class InteractionManager {
     attach(element: HTMLElement): void;
     detach(): void;
     private mouse?;
-    private preventContext;
     private itemsMoved;
     private interactiveDropdownItems;
     private mouseDown;

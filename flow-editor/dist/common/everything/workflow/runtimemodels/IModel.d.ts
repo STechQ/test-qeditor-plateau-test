@@ -6,8 +6,9 @@ import { IWorkflowModel } from "./IWorkflow";
 import { IConstantModel } from "../../dataType/runtimemodels/IConstantModel";
 import { ISoapServiceModel, ISoapServiceV2Model } from "../../soapService/runtimeModels/ISoapServiceModel";
 import { IDecisionTableModel } from "../../decisionTable/runtimeModels/IDecisionTableModel";
+import { IDataSetModel } from "../../dataSet/runtimemodels/IDataSetModel";
 export type IModelBaseFields = {
     id: string;
 };
-export type IWFModels = IDataTypeModel | IEnumModel | IRestServiceModel | ISoapServiceModel | IFlowModel | IWorkflowModel | IConstantModel | ISoapServiceV2Model | IDecisionTableModel;
+export type IWFModels = IDataTypeModel | IEnumModel | IRestServiceModel | ISoapServiceModel | IFlowModel | IWorkflowModel | IConstantModel | ISoapServiceV2Model | IDecisionTableModel | IDataSetModel;
 //# sourceMappingURL=IModel.d.ts.map

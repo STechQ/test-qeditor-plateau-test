@@ -1,4 +1,4 @@
-import { FC } from "react";
+/// <reference types="react" />
 import "../assets/css/components/input.css";
 interface IInputProps {
     label?: string;
@@ -12,6 +12,6 @@ interface IInputProps {
     onChange?: (e: string) => void;
     onBlur?: (e: string) => void;
 }
-export declare const Input: FC<IInputProps>;
+export declare const Input: import("react").ForwardRefExoticComponent<IInputProps & import("react").RefAttributes<HTMLInputElement>>;
 export {};
 //# sourceMappingURL=Input.d.ts.map

@@ -52,7 +52,7 @@ export interface IFlowEditorProgram {
     setState(state?: IFlowEditorState): void;
     setSchema(schema: IStoreModelForFlow): void;
     setReadonly(readonly: boolean): void;
-    setIsWorkFlow(isWorkFlow: boolean): void;
+    setFuncType(flowType: "flow" | "workflow" | "befunc"): void;
     setModels(models: Array<IStudioUIModelBase>): void;
     undo(): Promise<boolean>;
     redo(): Promise<boolean>;

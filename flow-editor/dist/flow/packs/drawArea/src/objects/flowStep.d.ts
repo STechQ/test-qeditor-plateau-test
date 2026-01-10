@@ -62,6 +62,7 @@ export declare class FlowStep extends FlowObjectBase {
     get Description(): string;
     get Errors(): Array<string> | undefined;
     get ShapeInfo(): StepShapeInfo | undefined;
+    getAvailableOutputs(currentConn?: FlowConnection, currentOutput?: string): Array<string>;
     setSwimlaneId(swimlaneId?: string): void;
     mouseDown(surfacePoint: IPoint): MouseDownReturn;
     protected createSelectionOverlay(isErroneous?: boolean): Path[];
@@ -82,8 +83,10 @@ export declare class FlowStep extends FlowObjectBase {
     getConnectionsTo(output: string, toStep: FlowStep): Array<FlowConnection>;
     private drawInputs;
     private drawOutputs;
+    changeOutputName(oldName: string, newName: string): void;
     private drawRhombusOutputs;
     private drawIOs;
+    private bringShapeToFront;
     private afterDraw;
     colorIO(outputName: string, conType: "input" | "output", color?: string): void;
     setOutputs(outputs: Array<string>): void;

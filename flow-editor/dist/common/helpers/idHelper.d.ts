@@ -12,5 +12,6 @@ export declare class IdHelper {
         modelId: string;
         modelType: ModelType | undefined;
     };
+    private static appIdFormatError;
 }
 //# sourceMappingURL=idHelper.d.ts.map

@@ -18,8 +18,7 @@ export declare class SelectionManager {
     iterate(cb: (selected: FlowObjectBase) => void): void;
     getSelecteds(): FlowObjectBase[];
     redrawSelections(): void;
-    private interactiveDropdownHandle?;
-    createInteractiveDropdownMenu(interactiveDropdownItems: Array<InteractiveDropdownItem>): void;
+    createInteractiveDropdownMenu(event: MouseEvent, interactiveDropdownItems: Array<InteractiveDropdownItem>): void;
     private removeSelectionDelete;
     private triggerSelectionChange;
     setStepID(oldID: string, newID: string): void;
