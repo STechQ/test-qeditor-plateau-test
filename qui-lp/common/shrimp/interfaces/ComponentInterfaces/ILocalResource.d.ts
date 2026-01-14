@@ -1,4 +1,4 @@
-export declare type ILRID = Record<string, Record<string, string>>;
+export type ILRID = Record<string, Record<string, string>>;
 export interface ILocalResource {
     LRTypes?: Array<string>;
     LRs: ILRID;

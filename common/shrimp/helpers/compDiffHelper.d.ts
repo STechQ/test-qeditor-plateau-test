@@ -22,7 +22,7 @@ export declare enum ComparisonEnum {
     compareTableValue = "compareTableValue",
     tooltipCompType = "Tooltip"
 }
-export declare type CompComparisonType = {
+export type CompComparisonType = {
     labelField: ComparisonEnum.labelField | string;
     valueField: ComparisonEnum.valueField | string;
     classCompare?: boolean;

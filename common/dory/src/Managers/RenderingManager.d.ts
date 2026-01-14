@@ -12,7 +12,7 @@ import { ContextManager } from "../../../shrimp/src/context/contextManager";
 import { BlockInfo } from "../Context/BlockInfo";
 import { ComponentCommunicator } from "../Helpers/ComponentCommunicator";
 import { Evaluator } from "./Evaluator";
-declare type compParams = {
+type compParams = {
     componentName: string;
     ctrl: ICompJson;
     e: any;

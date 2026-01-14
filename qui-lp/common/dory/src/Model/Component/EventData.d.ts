@@ -5,7 +5,7 @@ import { ScriptLang } from "../../../../shrimp/interfaces/Scripting/scriptLang";
 import { IEvaluator } from "../../../../shrimp/interfaces/Scripting/IEvaluator";
 import { Dory } from "../../Dory";
 import { IQuickFlowModelRuntime } from "../../../../shrimp/interfaces/ComponentInterfaces/ICompJson";
-declare type EventDataType = "event" | "directive";
+type EventDataType = "event" | "directive";
 export declare class EventData implements IEventData {
     eventName: string;
     private ownerComponent?;

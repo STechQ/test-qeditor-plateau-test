@@ -9,7 +9,7 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     leftSubtitle: string;
 }, {
     switchContent(): void;
-    getHeaderClass(): string;
+    getHeaderClass(): "toggle-header";
     resetForm(): void;
     disableForm(state: boolean): void;
     arrangeChildElements(componentCollection: IComponentCollection, type: string, state: boolean): void;

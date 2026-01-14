@@ -3,9 +3,9 @@ export interface INavigationOptions {
     store?: boolean;
     mobileAnimation?: MobileAnimationType;
 }
-export declare type MobileAnimationType = MobileAnimation<"slideIn"> | MobileAnimation<"slideOut"> | MobileAnimation<"fade"> | MobileAnimation<"instant">;
-export declare type MobileAnimation<T extends keyof MobileAnimationGroupType> = MobileAnimationGroupType[T];
-export declare type MobileAnimationGroupType = {
+export type MobileAnimationType = MobileAnimation<"slideIn"> | MobileAnimation<"slideOut"> | MobileAnimation<"fade"> | MobileAnimation<"instant">;
+export type MobileAnimation<T extends keyof MobileAnimationGroupType> = MobileAnimationGroupType[T];
+export type MobileAnimationGroupType = {
     slideIn: {
         type: "slideIn";
         slideType: "fromRight" | "fromLeft" | "fromTop" | "fromBottom";

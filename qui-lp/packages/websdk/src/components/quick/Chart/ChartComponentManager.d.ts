@@ -9,7 +9,7 @@ export declare class ChartComponentManager {
     constructor(websdkContext: ContextManager);
     createChildTypeChartComponent(props: IDictionary<any>, target: ComponentTarget, componentName: string, parentInstance: any): {
         instance: any;
-        el: import("../../common/shrimp/interfaces/RenderingInterfaces/IDomElement").IDomElement;
+        el: import("../../../../../../common/shrimp/interfaces/RenderingInterfaces/IDomElement").IDomElement;
     };
     createSlotTypeChartComponent(props: IDictionary<any>, target: ComponentTarget, componentName: string, retVal: ICreatedComponent, parentInstance: any): {
         createdComp: IComponent;

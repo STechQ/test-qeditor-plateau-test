@@ -1,2 +1,2 @@
-export declare type SimpleCallBack = () => void;
+export type SimpleCallBack = () => void;
 //# sourceMappingURL=SimpleCallBack.d.ts.map

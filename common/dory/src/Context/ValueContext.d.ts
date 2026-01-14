@@ -1,7 +1,7 @@
 import { ContextManager, IContextItem } from "../../../shrimp/context";
 import { ValueStatus } from "../../../shrimp/helpers/compDiffHelper";
 import { IComponentCollection } from "../../../shrimp/interfaces/ComponentInterfaces/IComponentCollection";
-export declare type comparedValueType = {
+export type comparedValueType = {
     label: string;
     value: string;
     compareValue: string;
