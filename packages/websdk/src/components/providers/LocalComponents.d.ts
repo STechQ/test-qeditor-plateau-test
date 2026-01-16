@@ -42,11 +42,6 @@ declare const localComponents: {
         loaded: boolean;
         module: undefined;
     };
-    DataGrid: {
-        importFunc: () => Promise<void>;
-        loaded: boolean;
-        module: undefined;
-    };
     CustomAvatarComp: {
         importFunc: () => Promise<void>;
         loaded: boolean;

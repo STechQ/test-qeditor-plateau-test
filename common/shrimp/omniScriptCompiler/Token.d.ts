@@ -1,4 +1,4 @@
-export declare type TokenType = (typeof Token.Types)[keyof typeof Token.Types];
+export type TokenType = (typeof Token.Types)[keyof typeof Token.Types];
 export interface IPosition {
     line: number;
     column: number;

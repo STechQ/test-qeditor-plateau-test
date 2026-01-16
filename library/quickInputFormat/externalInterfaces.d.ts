@@ -1,4 +1,4 @@
-export declare type CompositorTypes = "decimal" | "regex";
+export type CompositorTypes = "decimal" | "regex";
 export interface IQuickInputFormatOptions {
     alias: CompositorTypes;
     groupSeparator: string | undefined;

@@ -1,5 +1,5 @@
 export declare class ArrayHelper {
-    static findAndRet<T, R>(array: Array<T>, predicate: (item: T, index: number, array: Array<T>) => R | undefined): R | undefined;
+    static findAndRet<T, R>(array: Array<T>, predicate: (item: T, index: number, array: Array<T>) => R | undefined): (R & ({} | null)) | undefined;
     static InitArray(size: number): number[];
     static InitEmptyArray(size: number): any[];
     /**

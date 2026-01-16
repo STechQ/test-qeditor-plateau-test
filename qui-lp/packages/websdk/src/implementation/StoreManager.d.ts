@@ -1,5 +1,5 @@
 import { IStoreManager } from "../../../../common/qshell";
-export declare type StoreManagerHookCb = (oldValue: any, newValue: any) => void;
+export type StoreManagerHookCb = (oldValue: any, newValue: any) => void;
 export declare class StoreManager implements IStoreManager {
     contextName: string;
     private dataStore;

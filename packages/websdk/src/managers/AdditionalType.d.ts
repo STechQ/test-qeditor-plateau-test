@@ -1,8 +1,8 @@
 import { IHistoryAdditionalItem } from "../../../../common/shrimp/interfaces/RenderingInterfaces/IHistoryItem";
 export declare class NextSiblingAdditional implements IHistoryAdditionalItem {
-    nextSiblingList?: ChildNode[] | undefined;
+    nextSiblingList?: Array<ChildNode> | undefined;
     static additionalName: string;
-    constructor(nextSiblingList?: ChildNode[] | undefined);
+    constructor(nextSiblingList?: Array<ChildNode> | undefined);
     destroy(): void;
     hibernate(): void;
     resurrect(): void;

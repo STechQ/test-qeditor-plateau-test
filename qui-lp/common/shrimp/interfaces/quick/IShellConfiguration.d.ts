@@ -140,7 +140,7 @@ export interface IHistoryBasedShellConfiguration {
     createContainerView?: CreateContainerViewDelegate;
     updateContainerView?: UpdateContainerViewDelegate;
 }
-export declare type CreateComponentDelegate = ({ componentName, props, events, asChildType, asChildName, slots, scopedSlots, compClass, text, attrs, pageName, componentCollection, directives, styles, }: {
+export type CreateComponentDelegate = ({ componentName, props, events, asChildType, asChildName, slots, scopedSlots, compClass, text, attrs, pageName, componentCollection, directives, styles, }: {
     componentName: string;
     props: IDictionary<any>;
     events: IDictionary<Function>;
@@ -160,18 +160,18 @@ export interface IQJsonCollectionResult {
     qjson?: IQJSon;
     changedPath?: string;
 }
-export declare type ComponentHasPropDelegate = (options: {
+export type ComponentHasPropDelegate = (options: {
     componentName: string;
     compInstance: IComponent | undefined;
     propName: string;
 }) => boolean;
-export declare type ComponentDomLocator = (compInst: IComponent, childIndex: number) => IDomElement | null;
-export declare type RetrieveCjsonDelegate = (options: {
+export type ComponentDomLocator = (compInst: IComponent, childIndex: number) => IDomElement | null;
+export type RetrieveCjsonDelegate = (options: {
     qjsonPath: string;
     doryJr?: IDoryJr;
 }) => Promise<IQJsonCollectionResult | undefined>;
-export declare type CreateContainerViewDelegate = (compUID: string) => unknown;
-export declare type UpdateContainerViewDelegate = ({ givenObject, elements, pageShift }: {
+export type CreateContainerViewDelegate = (compUID: string) => unknown;
+export type UpdateContainerViewDelegate = ({ givenObject, elements, pageShift }: {
     givenObject: unknown;
     elements?: Array<unknown> | string;
     pageShift: boolean;

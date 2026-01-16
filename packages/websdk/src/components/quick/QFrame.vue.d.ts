@@ -8,7 +8,7 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     createBlobUrl(url: string): string | null;
     updateIframeSrc(): void;
     base64ToBlob(base64: any, type?: string): Blob;
-    post(url: string, params: any, enctype?: string | undefined): void;
+    post(url: string, params: any, enctype?: string): void;
     onLoad(): void;
 }, {
     style: string;

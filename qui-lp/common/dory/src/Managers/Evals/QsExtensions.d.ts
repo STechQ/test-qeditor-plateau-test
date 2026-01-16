@@ -28,7 +28,7 @@ export declare class QsExtensions {
         };
         Number: {
             toString(number: Number): string;
-            toFormattedString: (number: Number, formatType: string, opt?: Intl.NumberFormatOptions | undefined) => string;
+            toFormattedString: (number: Number, formatType: string, opt?: Intl.NumberFormatOptions) => string;
             fixed: (number: number, digits: number) => string;
         };
     };

@@ -14,9 +14,9 @@ import { ICreatedComponent } from "./ICreatedComponent";
 import { IDirectiveCollection } from "./IDirectiveCollection";
 import { IEventCollection } from "./IEventCollection";
 import { StyleValue } from "./IStyle";
-export declare type ScopedSlotCreatorFunc = (scopeObject?: IDictionary<any>) => Array<IComponentCollection>;
-export declare type CreatedFieldsHook = (created: ICreatedComponent) => void;
-export declare type styleChildOverride = {
+export type ScopedSlotCreatorFunc = (scopeObject?: IDictionary<any>) => Array<IComponentCollection>;
+export type CreatedFieldsHook = (created: ICreatedComponent) => void;
+export type styleChildOverride = {
     iterateCount: number;
     subComponents: IStyleChild;
 };
@@ -45,7 +45,7 @@ export interface ILightComponentCollection {
 export interface qjsonCollectionInfo {
     ver?: number;
 }
-export declare type IScrollRef = {
+export type IScrollRef = {
     parent?: () => ILightComponentCollection;
     newCompID: number;
 };

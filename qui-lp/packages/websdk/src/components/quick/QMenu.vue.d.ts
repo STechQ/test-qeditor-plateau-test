@@ -28,7 +28,7 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     clickRow(item: Object, index: Number): void;
     calculatePadding(index: number, item: any): Number;
     collapseAll(activeList?: any): void;
-    updateMini(isMini?: boolean | undefined): void;
+    updateMini(isMini?: boolean): void;
     onClickGroup(): void;
 }, unknown, {
     activeColor: string;

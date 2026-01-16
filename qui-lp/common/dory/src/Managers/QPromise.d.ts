@@ -1,4 +1,4 @@
-export declare type QPromiseInterractionCb = (prom: QPromise<any>) => void;
+export type QPromiseInterractionCb = (prom: QPromise<any>) => void;
 export interface IQPromiseInterractionCollection {
     onThen?: QPromiseInterractionCb;
     onCatch?: QPromiseInterractionCb;
@@ -10,7 +10,7 @@ export declare class QPromise<T> implements Promise<T> {
     private static noop;
     private static directCreate;
     static all<T>(values: readonly (T | PromiseLike<T>)[]): Promise<T[]>;
-    static race<T>(values: readonly T[]): Promise<T extends PromiseLike<infer U> ? U : T>;
+    static race<T>(values: readonly T[]): Promise<Awaited<T>>;
     static reject<T = never>(reason?: any): Promise<T>;
     static resolve<T>(value?: T | PromiseLike<T>): Promise<T | void>;
     static readonly [Symbol.species]: PromiseConstructor;
