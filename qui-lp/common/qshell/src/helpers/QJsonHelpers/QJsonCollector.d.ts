@@ -11,11 +11,11 @@ export interface IModelDependentModel {
     type: IModelCacheItem["type"];
     id: IModelCacheItem["id"];
 }
-export type IQjsonPoolItem = {
+export declare type IQjsonPoolItem = {
     qjson: IQJSon;
     dm: Array<IModelDependentModel>;
 };
-export type justQJsonCPart = {
+export declare type justQJsonCPart = {
     cJson: Array<ICompJson>;
 };
 export declare class QJsonCollector {

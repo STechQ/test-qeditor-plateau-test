@@ -27,7 +27,7 @@ export declare class QJsonPool implements IContextItem {
     }): Promise<import("../../../../shrimp/interfaces/quick/IShellConfiguration").IQJsonCollectionResult>;
     getCJson(qjsonPath: string): IQJSon | undefined;
 }
-export type QjsonData = {
+export declare type QjsonData = {
     type: "content";
     content: IQJSon;
     options?: {

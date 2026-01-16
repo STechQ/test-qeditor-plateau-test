@@ -2,11 +2,11 @@ import { IContextItem } from "../../../../shrimp/context";
 import { MobileAnimationType } from "../../../../shrimp/interfaces/quick/INavigationManager";
 import { IModelCacheItem } from "../../helpers/ModelDictCache";
 export declare const QJsonRetrieverContextName: string;
-export type QJsonRetrievedType = string | {
+export declare type QJsonRetrievedType = string | {
     qjson: string;
 };
-export type ModelRetrievedType = object | string;
-export type RetrieveModelsReturnType = Array<IModelCacheItem>;
+export declare type ModelRetrievedType = object | string;
+export declare type RetrieveModelsReturnType = Array<IModelCacheItem>;
 export interface IRetrieveModels {
     type: IModelCacheItem["type"];
     id: IModelCacheItem["id"];

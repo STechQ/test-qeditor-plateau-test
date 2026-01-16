@@ -2,7 +2,7 @@ export interface IPlatform {
     getDeviceId?: () => string | undefined;
     getClientInfo?: () => IClientInfo | undefined;
 }
-export type PlatformType = "Web" | "iOS" | "Android" | "ATM";
+export declare type PlatformType = "Web" | "iOS" | "Android" | "ATM";
 export interface IClientInfo {
     webInfo?: IWebInfo;
     mobileAppInfo?: IMobileAppInfo;

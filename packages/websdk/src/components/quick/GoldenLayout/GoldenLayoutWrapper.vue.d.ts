@@ -42,8 +42,8 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     changeTitle(childName: string, newTitle: string): void;
     removePane(paneName: string): void;
     addItem({ childName, config }: {
-        childName?: string;
-        config?: GoldenLayout.ContentItem | GoldenLayout.ItemConfigType;
+        childName?: string | undefined;
+        config?: GoldenLayout.ContentItem | GoldenLayout.ItemConfigType | undefined;
     }): any;
     goldenLayoutInit(stateChangedForDesign: boolean): void;
     removeItem(deletedChildNames: Array<string>): void;

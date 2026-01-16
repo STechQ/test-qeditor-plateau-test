@@ -33,8 +33,8 @@ export interface IDisplayCallbackHistory {
      */
     old: Array<IHistoryItem>;
 }
-export type PartialDisplayHookCb = (elements: Array<IDomElement>, history: IDisplayCallbackHistory, pageId?: string, pageName?: string, navigationDirection?: INavigationDemandType, override?: boolean, doryJr?: IDoryJr | undefined, additioanls?: any | undefined) => void;
-export type DisplayHookCb = (elements: IDomElement[], history: IDisplayCallbackHistory, pageId?: string, pageName?: string, navigationDirection?: INavigationDemandType, noHistory?: boolean, options?: INavigationOptions) => void;
+export declare type PartialDisplayHookCb = (elements: Array<IDomElement>, history: IDisplayCallbackHistory, pageId?: string, pageName?: string, navigationDirection?: INavigationDemandType, override?: boolean, doryJr?: IDoryJr | undefined, additioanls?: any | undefined) => void;
+export declare type DisplayHookCb = (elements: IDomElement[], history: IDisplayCallbackHistory, pageId?: string, pageName?: string, navigationDirection?: INavigationDemandType, noHistory?: boolean, options?: INavigationOptions) => void;
 export interface IGoHistoryOptions {
     navigationDemand?: INavigationDemand;
 }

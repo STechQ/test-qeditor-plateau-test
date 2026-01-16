@@ -6,7 +6,7 @@ export interface IPropExtension extends IPropExtensionUX {
 }
 export interface IPropExtensionUX {
     required?: boolean;
-    type?: ITypePim | ITypePim[];
+    type?: StringConstructor | BooleanConstructor | NumberConstructor | ObjectConstructor | FunctionConstructor | ArrayConstructor | undefined | null | string;
     showInEditor?: boolean;
     editorDefaultValue?: string;
     runTimeDefaultValue?: string | number | boolean;
@@ -30,7 +30,6 @@ export declare enum IPropOverrideType {
     Override = "Override",
     Replace = "Replace"
 }
-export type ITypePim = StringConstructor | BooleanConstructor | NumberConstructor | ObjectConstructor | FunctionConstructor | ArrayConstructor | undefined | null | string;
-export type ComponentOptions = Record<string, Record<string, IPropExtensionUX>>;
+export declare type ComponentOptions = Record<string, Record<string, IPropExtensionUX>>;
 export declare const BasicProps: string[];
 //# sourceMappingURL=IPropExtension.d.ts.map

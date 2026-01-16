@@ -16,7 +16,7 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
 }, {
     showTemplate: boolean;
     lottieStyle: {
-        position: "static" | "absolute" | "relative" | "fixed";
+        position: "fixed" | "static" | "absolute" | "relative";
         top: string;
         bottom: string;
         left: string;

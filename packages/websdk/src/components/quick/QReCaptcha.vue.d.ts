@@ -1,5 +1,5 @@
 import Vue from "vue";
-export type Size = "normal" | "compact" | "invisible";
+export declare type Size = "normal" | "compact" | "invisible";
 declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     captchaKeys: String;
     language: string;

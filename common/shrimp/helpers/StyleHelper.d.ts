@@ -8,6 +8,6 @@ export declare class StyleHelper {
     static matchSizeValue(sizeString?: string): number;
     static additionalPropsFromStyle: propsFromStyleType;
 }
-export type propStyleArray = Record<string, Array<string>>;
-export type propsFromStyleType = Record<string, propStyleArray>;
+export declare type propStyleArray = Record<string, Array<string>>;
+export declare type propsFromStyleType = Record<string, propStyleArray>;
 //# sourceMappingURL=StyleHelper.d.ts.map

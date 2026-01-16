@@ -18,14 +18,14 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
         autoConnect: string;
     };
 }, {
-    Send(message?: Object | string, urlParams?: Object): void;
-    SendMessage(connectionReason?: String, message?: Object | string, urlParams?: Object): void;
+    Send(message?: string | Object | undefined, urlParams?: Object | undefined): void;
+    SendMessage(connectionReason?: String | undefined, message?: string | Object | undefined, urlParams?: Object | undefined): void;
     Close(): void;
-    _connect(connectionReason?: String, sendMessage?: () => void, urlParams?: Object): void;
+    _connect(connectionReason?: String | undefined, sendMessage?: (() => void) | undefined, urlParams?: Object | undefined): void;
     _regulateUrl(): void;
     _setUrlParams(): void;
     _calculateReconnectInterval(intervalCounter: number): number;
-    _reConnect(reconnectReason?: String): void;
+    _reConnect(reconnectReason?: String | undefined): void;
 }, {
     message: any;
     urlParams: any;

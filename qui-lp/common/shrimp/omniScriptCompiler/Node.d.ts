@@ -1,5 +1,5 @@
 import { Token } from "./Token";
-export type Forest = Array<node>;
+export declare type Forest = Array<node>;
 declare class node {
     token: Token;
     left: node | Array<Forest | null> | Forest | null;

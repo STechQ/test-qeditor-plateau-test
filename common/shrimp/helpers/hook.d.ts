@@ -1,4 +1,4 @@
-type HookCallBack = (...args: Array<any>) => void;
+declare type HookCallBack = (...args: Array<any>) => void;
 export declare class Hook<T extends HookCallBack> {
     private subscribers;
     private postSubscribers?;

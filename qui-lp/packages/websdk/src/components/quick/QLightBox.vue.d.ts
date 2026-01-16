@@ -42,7 +42,7 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     setDraggableBodyHeight(): void;
     updateCalculatedSize(): void;
     observeExternalResize(): void;
-    applyStyleWithImportant(height?: string | null, width?: string | null, position?: string | null, top?: string | null, left?: string | null, bottom?: string | null, right?: string | null): void;
+    applyStyleWithImportant(height?: string | null | undefined, width?: string | null | undefined, position?: string | null | undefined, top?: string | null | undefined, left?: string | null | undefined, bottom?: string | null | undefined, right?: string | null | undefined): void;
     closeDragElement(): void;
     elementDrag(mouseEvent: MouseEvent): void;
     elementMobileDrag(mouseEvent: TouchEvent): void;

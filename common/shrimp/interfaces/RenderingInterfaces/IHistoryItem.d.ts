@@ -8,7 +8,7 @@ export interface IHistoryAdditionalItem {
     hibernate(passHibernate?: boolean): void;
     destroy(): void;
 }
-export type IForeachHistoryItemCbParams = {
+export declare type IForeachHistoryItemCbParams = {
     nestLevel: number;
 } & ({
     isRendered: true;

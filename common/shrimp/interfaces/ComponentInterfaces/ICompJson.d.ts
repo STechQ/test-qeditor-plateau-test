@@ -83,7 +83,7 @@ export interface IPropertyJson {
      */
     HL?: ScriptLang;
 }
-export type PTyped = PType | "class" | "text" | "prop" | "attr";
+export declare type PTyped = PType | "class" | "text" | "prop" | "attr";
 /**
  * C type of component
  */
@@ -112,7 +112,7 @@ export interface IOptJson {
     compDomClasses?: string;
     layout?: ILayoutJson;
 }
-export type CTyped = CType | "child" | "slot" | "scopedSlot";
+export declare type CTyped = CType | "child" | "slot" | "scopedSlot";
 export interface IChildJson {
     cType: CTyped;
     c: Array<ICompJson>;
@@ -140,10 +140,10 @@ export interface ILayoutJson {
     dOpt: IDictionary<Array<string>>;
     class: string;
 }
-export type IStyleChild = {
+export declare type IStyleChild = {
     [key: string]: overrideDictionary;
 };
-export type overrideDictionary = {
+export declare type overrideDictionary = {
     [key: string]: string;
 };
 //# sourceMappingURL=ICompJson.d.ts.map

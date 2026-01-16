@@ -119,14 +119,14 @@ export interface IRendererProps {
     _renderingProps: IRenderingProps;
     [key: string]: any;
 }
-export type IDynamicChildrenCreator = {
+export declare type IDynamicChildrenCreator = {
     parentCompId: string;
     templateChildName: string;
     newChildName?: string;
     historyItem: IHistoryItem;
     context: ContextManager;
 };
-export type IDynamicCompCreator = {
+export declare type IDynamicCompCreator = {
     templateCompQID: string;
     newCompID?: string;
     dataSource?: any;

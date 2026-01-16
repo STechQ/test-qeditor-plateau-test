@@ -11,7 +11,7 @@ export declare class StringHelper {
      * Returns a random string
      * @param length Length of generated random string
      */
-    static randomStringGenerator(length: number): string;
+    static randomStringGenerator(length: Number): string;
     static capitalizeString(input: string): string;
     /**
      * Change char in string

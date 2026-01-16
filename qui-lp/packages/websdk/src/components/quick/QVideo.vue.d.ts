@@ -3,10 +3,10 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, unknown, {
     play(): void;
     pause(): void;
     load(): void;
-    currentTime(second?: number): number | undefined;
+    currentTime(second?: number | undefined): number | undefined;
     duration(): number;
     currentSrc(): string;
-    volume(volume?: number): number | undefined;
+    volume(volume?: number | undefined): number | undefined;
     ended(): void;
     durationChange(): void;
     onPlay(): void;

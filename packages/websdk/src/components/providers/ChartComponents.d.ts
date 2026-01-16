@@ -1,8 +1,7 @@
-import Chart from 'chart.js/auto';
 declare const chartLibrary: {
-    Doughnut: typeof Chart;
-    Bar: typeof Chart;
-    Line: typeof Chart;
+    Doughnut: any;
+    Bar: any;
+    Line: any;
 };
 export { chartLibrary };
 //# sourceMappingURL=ChartComponents.d.ts.map

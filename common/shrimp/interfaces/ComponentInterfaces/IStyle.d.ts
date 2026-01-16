@@ -1,5 +1,5 @@
 import { IStyleChild } from "./ICompJson";
-export type StyleValue = Record<string, string | boolean | undefined | Record<string, string>>;
+export declare type StyleValue = Record<string, string | boolean | undefined | Record<string, string>>;
 export interface StyleItem {
     [key: string]: StyleValue | undefined;
     default?: StyleValue;
@@ -56,5 +56,5 @@ export interface IComponentDefinition {
     hideStyledCompField?: boolean;
     parentListToBlockStyle?: Array<string>;
 }
-export type IAssetList = Record<string, Record<string, Record<string, string | StyleValue | undefined>>>;
+export declare type IAssetList = Record<string, Record<string, Record<string, string | StyleValue | undefined>>>;
 //# sourceMappingURL=IStyle.d.ts.map

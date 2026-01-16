@@ -2,8 +2,8 @@ export interface IHostResponseData {
     isSuccess: boolean;
     retVal: any;
 }
-export type IContainerServicesResponseReal = any;
-export type IContainerResponseData = {
+export declare type IContainerServicesResponseReal = any;
+export declare type IContainerResponseData = {
     isSuccess: true;
     retVal: {
         funcRetVal: IContainerServicesResponseReal;

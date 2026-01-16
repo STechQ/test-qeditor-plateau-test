@@ -12,7 +12,7 @@ export interface IGetIAmToken {
     token?: string;
     info?: KeycloakTokenParsed;
 }
-export type IAmPopupMessage = {
+export declare type IAmPopupMessage = {
     type: "setTokens";
     tokenInfo: IAmToken;
 } | {

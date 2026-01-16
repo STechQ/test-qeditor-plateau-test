@@ -1,8 +1,7 @@
 import { ContextManager } from "../../../../../common/shrimp/context";
 import { IComponentCollection } from "../../../../../common/shrimp/interfaces/ComponentInterfaces/IComponentCollection";
-import { IAttachable } from "../../../../../common/shrimp/interfaces/RenderingInterfaces/IAttachable";
 import { IStyleManager, matchStyle } from "./IStyleManager";
-export declare class StyleManager implements IStyleManager, IAttachable {
+export declare class StyleManager implements IStyleManager {
     readonly uid: any;
     private readonly websdkContext;
     static AdditionalName: "StyleManager";

@@ -32,7 +32,7 @@ export interface IPlateauUI {
     close(args?: plateauUIPageOptions): Promise<void>;
     destroy(args?: plateauUIPageOptions): Promise<void>;
 }
-export type plateauUIPageOptions = {
+export declare type plateauUIPageOptions = {
     pageName: string;
 };
 export interface IContainerServiceParams {

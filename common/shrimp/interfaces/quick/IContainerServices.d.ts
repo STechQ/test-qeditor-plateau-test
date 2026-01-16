@@ -5,7 +5,7 @@ import { IRenderer } from "../RenderingInterfaces/IRenderer";
 import { INavigationManager } from "./INavigationManager";
 import { INetworkResponse } from "./INetworkResponse";
 import { ICustomerContext, IUserContext } from "./IUserContext";
-export type PostResponseType = 'arraybuffer' | 'blob' | 'document' | 'json' | 'text' | 'stream';
+export declare type PostResponseType = 'arraybuffer' | 'blob' | 'document' | 'json' | 'text' | 'stream';
 export interface IRequestOptions {
     disableLoading?: boolean;
     withCredentials?: boolean;

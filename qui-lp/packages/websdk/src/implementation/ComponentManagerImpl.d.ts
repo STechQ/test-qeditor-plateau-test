@@ -37,7 +37,20 @@ export declare class ComponentManagerImpl implements IComponentManager {
         elements?: string | any[] | undefined;
         pageShift: boolean;
     }): void;
-    tsComponentWrapper(): import("vue").VueConstructor<Vue>;
+    tsComponentWrapper(): import("vue/types/vue").ExtendedVue<Vue, unknown, {
+        GetProps(propsCB: (props?: import("../../common/shrimp/interfaces/ComponentInterfaces/IExternalProp").IExternalProp[] | undefined) => void): any;
+        GetEvents(eventsCB: (events?: import("../../common/shrimp/interfaces/ComponentInterfaces/IExternalEvents").IExternalEvents[] | undefined) => void): any;
+        GetQJson(): any;
+        OutBoundProps(props: IDictionary<any>): void;
+        OutBoundEvents(events: any): void;
+    }, unknown, {
+        _renderingProps: {
+            context: () => ContextManager;
+            events: () => IDictionary<Function>;
+            props: () => IDictionary<Object>;
+            targetLocalComponent: () => any;
+        };
+    }>;
     /**
      * Add new slot(VDomElement) to the parent component and mount it
      * @param parentCompCollection Parent component collection created new component

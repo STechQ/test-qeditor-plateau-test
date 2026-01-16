@@ -22,7 +22,7 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     mouseMove(event: any): void;
     mouseLeave(): void;
     imageClick(): void;
-    rotate(angle?: 0 | 90 | 180 | 270 | 360 | -90 | -180 | -270 | -360): void;
+    rotate(angle?: 0 | 90 | 180 | 270 | 360 | -90 | -180 | -270 | -360 | undefined): void;
     zoomTypeOn(x: number, y: number): void;
     zoomTypeNextTo(x: number, y: number): void;
 }, {
