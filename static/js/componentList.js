@@ -3731,7 +3731,8 @@ nextIcon = 'mdi-plus'}`
             type: Boolean
         },
         length: {
-            type: "number | string"
+            type: "number | string",
+            editorDefaultValue: "5"
         },
         openDelay: {
             type: Boolean
