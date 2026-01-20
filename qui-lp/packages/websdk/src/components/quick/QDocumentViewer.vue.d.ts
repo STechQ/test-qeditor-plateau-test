@@ -12,6 +12,8 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     loadedPages: number;
     docType: undefined;
     url: any;
+    renderPdfUrl: string;
+    pdfLoadToken: number;
     localLanguage: string;
     pageTitle: string;
     pdfKey: number;
