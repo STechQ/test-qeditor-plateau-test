@@ -26,6 +26,6 @@ export interface IQJsonRetriever extends IContextItem {
     }): Promise<ModelRetrievedType>;
     getMultipleModels(modelPaths: Array<IRetrieveModels>, options: {
         disableLoading: boolean;
-    }): Promise<RetrieveModelsReturnType | undefined>;
+    }): Promise<string | undefined>;
 }
 //# sourceMappingURL=IQJsonRetriever.d.ts.map
