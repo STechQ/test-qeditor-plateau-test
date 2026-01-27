@@ -88,6 +88,7 @@ export declare class ShellConfiguration implements IShellConfiguration {
     getRegionList?: () => Array<string> | undefined;
     getCurrentRegion?: () => string | undefined;
     getFormattingDefinitionByCurrentRegion?: () => IFormattingDefinition | undefined;
+    getValidateSkipChildrenIfInvisible?: () => boolean | undefined;
     onComponentDestroy?: (options: {
         parentComponent?: IComponent;
         compColl: IComponentCollection;

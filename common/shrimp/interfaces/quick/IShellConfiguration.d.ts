@@ -83,6 +83,7 @@ export interface IShellConfiguration {
     getRegionList?: () => Array<string> | undefined;
     getCurrentRegion?: () => string | undefined;
     getFormattingDefinitionByCurrentRegion?: () => IFormattingDefinition | undefined;
+    getValidateSkipChildrenIfInvisible?: () => boolean | undefined;
     setVisibility(compCollection: IComponentCollection, compVisibility: boolean): void;
     getComponentValue(compCollection: IComponentCollection): any;
     setComponentValue(compCollection: IComponentCollection, value: string): void;

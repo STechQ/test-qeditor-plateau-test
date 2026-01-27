@@ -79,5 +79,6 @@ export interface IGlobalMethods extends IContextItem {
     }) => IDomElement;
     listenNetworkConnection?: () => void;
     getNetworkConnection?: () => boolean;
+    getValidateSkipChildrenIfInvisible?: () => boolean | undefined;
 }
 //# sourceMappingURL=IGlobalMethods.d.ts.map

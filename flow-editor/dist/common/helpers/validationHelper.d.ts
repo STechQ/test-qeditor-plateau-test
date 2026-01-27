@@ -8,6 +8,10 @@ export declare class ValidationHelper {
     static validateVariableName(name: string): string;
     static validateParameterValue(name: string): string;
     static migrateVariableModel(variables: IVariables): IVariables;
+    static sanitize(value: string): {
+        value: string;
+        hasWarning: boolean;
+    };
 }
 export {};
 //# sourceMappingURL=validationHelper.d.ts.map

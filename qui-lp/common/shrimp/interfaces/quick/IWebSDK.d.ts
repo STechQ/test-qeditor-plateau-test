@@ -66,6 +66,7 @@ export interface IWebSDKSettings {
     logBulkSize?: number;
     useShadowDOM?: boolean;
     iamV2?: ISettingsIAMV2;
+    validateSkipChildrenIfInvisible?: boolean;
 }
 export interface IFontSettings {
     id: string;

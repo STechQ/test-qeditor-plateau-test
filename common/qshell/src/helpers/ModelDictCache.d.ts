@@ -1,5 +1,5 @@
 import { IContextItem } from "../../../shrimp/context";
-import { IQJsonRetriever, QJsonRetrievedType } from "../interfaces/construction/IQJsonRetriever";
+import { IQJsonRetriever } from "../interfaces/construction/IQJsonRetriever";
 import { IModelDependentModel } from "./QJsonHelpers/QJsonCollector";
 export interface IModelCacheItem {
     raw: string;
@@ -16,9 +16,9 @@ export declare class ModelDictCache implements IContextItem {
         qjsonRetriever?: IQJsonRetriever;
     });
     cacheItems(constIds: Array<IModelDependentModel>): Promise<void>;
+    removeCache(): void;
     getModel(constantId: string): string | IModelCacheItem | object | undefined;
     private addCache;
-    private getRawStringQjson;
-    extractDependentIds(rawQjson: QJsonRetrievedType): Array<IModelDependentModel>;
+    extractDependentIds(rawQjson: any): Array<IModelDependentModel>;
 }
 //# sourceMappingURL=ModelDictCache.d.ts.map

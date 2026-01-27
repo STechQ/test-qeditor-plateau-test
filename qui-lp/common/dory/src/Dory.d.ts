@@ -67,6 +67,7 @@ export declare class Dory implements IDory {
     GetContext(): ContextManager;
     GetLRType(): string;
     RegisterExternalContextItem(item: IContextItem): void;
+    RemoveModelDictCache(): void;
     SetLRType(LRType?: string, LRTypeRTL?: boolean): Promise<void>;
     SetConfigValues(configValues?: IConfig[]): void;
     GetConfigValues(key: string): IConfig | undefined;
