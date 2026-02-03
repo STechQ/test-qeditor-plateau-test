@@ -3,6 +3,9 @@ declare const localComponents: {
     DError: any;
     TSComponentWrapper: any;
     Ghost: any;
+    GhostEditMode: any;
+    VDialogEditMode: any;
+    VBottomSheetEditMode: any;
     GroupBox: {
         importFunc: () => Promise<void>;
         loaded: boolean;
