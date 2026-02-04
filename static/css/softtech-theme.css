@@ -3,46 +3,6 @@
 /*    PDS CSS CODE VERSION: 3.1    */
 /* ------------------------------- */
 
-
-/* PROJECT SPECIFIC VALUES: END */
-
-/* STANDARD CODE FOR EVERY PLATEAU PROJECT: START */
-#first-div .v-application,
-#first-div .v-application input,
-#first-div .v-application select,
-#first-div .v-application textarea {
-  font-family: 'Roboto', sans-serif !important;
-  font-size: 16px !important;
-}
-
-#first-div .v-application .text-h1,
-#first-div .v-application .text-h2,
-#first-div .v-application .text-h3,
-#first-div .v-application .text-h4,
-#first-div .v-application .text-h5,
-#first-div .v-application .text-h6,
-#first-div .v-application .text-display-4,
-#first-div .v-application .text-display-3,
-#first-div .v-application .text-display-2,
-#first-div .v-application .text-display-1,
-#first-div .v-application .text-headline,
-#first-div .v-application .text-title,
-#first-div .v-application .text-subtitle-1,
-#first-div .v-application .text-subtitle-2,
-#first-div .v-application .text-body-1,
-#first-div .v-application .text-body-2,
-#first-div .v-application .text-caption,
-#first-div .v-application .text-overline {
-  font-family: 'Roboto', sans-serif !important;
-  line-height: normal !important;
-}
-
-/* V2.1 Changes */
-/* Vuetify text field Turkish character issue */
-.v-messages__message {
-  line-height: inherit;
-}
-
 /* V3.0 Changes */
 /* Class Name: devx-ellipsis-qlabel */
 /* Components: QLabel */
@@ -104,74 +64,13 @@
   font-size: 12px !important;
 }
 
-/* Class Name: tab-dense */
-/* Components: v-tab */
-/* Aciklama: v-tab yüksekliğini 36 pixel yapmak için */
-.tab-dense .v-tabs-bar {
-  height: 36px !important;
-}
 
-/* Class Name: tab-header-border-radius-left */
-/* Components: v-tab */
-/* Aciklama: vtab'ın sol kenarlarına radius vermek için */
-.tab-header-border-radius-left {
-  border-radius: 4px 0 0 4px !important;
-}
-
-/* Class Name: tab-header-border-radius-right */
-/* Components: v-tab */
-/* Aciklama: vtab'ın sağ kenarlarına radius vermek için */
-.tab-header-border-radius-right {
-  border-radius: 0 4px 4px 0 !important;
-}
-
-/* Overright (No Class) */
-/* Components: v-tab */
-/* Aciklama: vtab'ın aktif halinde yazının beyaz olması için */
-.v-tab-active-text--white.v-tab--active {
-  color: white !important;
-}
-
-.v-tabs.v-tab-order-tabs .v-tab:not(.v-tab--active) {
-  background-color: #eeeeee;
-}
-
-.v-tabs.v-tab-order-tabs .v-tab:not(.v-tab--active) .q-label {
-  color: #9b9b9b !important;
-}
 
 /* Class Name: qlightbox-BG-Color */
 /* Components: qlightbox */
 /* Aciklama: qlightbox pencerelerinin arka planını saydam yerine gri yapar */
 .qlightbox-BG-Color {
   background-color: var(--qlightbox-bg-color) !important;
-}
-
-/* Class Name: v-table-denser */
-/* Components: v-data-table */
-/* Aciklama: Table td yüksekliği */
-.v-table-denser.v-data-table>.v-data-table__wrapper>table>tbody>tr>td {
-  height: 24px;
-}
-
-.v-table-denser.v-data-table>.v-data-table__wrapper>table>tbody>tr>td {
-  font-size: 0.75rem;
-}
-
-/* Class Name: v-table-border-b-hidden */
-/* Components: v-data-table */
-/* Aciklama: Table sütunlar için border'ın kaldırılması */
-.v-table-border-b-hidden.v-data-table>.v-data-table__wrapper>table>tbody>tr:not(:last-child)>td:not(.v-data-table__mobile-row),
-.v-table-border-b-hidden.v-data-table>.v-data-table__wrapper>table>thead>tr:last-child>th,
-.v-table-border-b-hidden.v-data-table .v-data-footer {
-  border: none;
-}
-
-/* Class Name: v-table-hover-hidden */
-/* Components: v-data-table */
-/* Aciklama: Table satırlardaki hover efektinin kaldırılması */
-.v-table-hover-hidden.v-data-table tbody tr:hover:not(.v-data-table__expanded__content):not(.v-data-table__empty-wrapper) {
-  background: transparent !important;
 }
 
 /* Overright (No Class) */
@@ -261,13 +160,6 @@ ul.lm_tabs li .lm_close_tab {
   vertical-align: middle !important;
 }
 
-#first-div .v-application .v-tabs {
-  caret-color: rgb(0, 0, 0) !important;
- }
- 
-/* tabs içindeki vCombobox item listin ekranın aşağısına doğru tam açılması için */
-.v-tabs > .v-window {overflow: initial !important;}
-
 
 /* V3.1 Changes */
 
@@ -305,7 +197,8 @@ ul.lm_tabs li .lm_close_tab {
 /* Legend Component Start */
 .sftt-value-none.v-text-field fieldset,
 .sftt-value-none.v-text-field--outlined fieldset {
-  border: 5px solid #CFD8DC !important; /*  blue-grey-lighten-4 https://vuetifyjs.com/en/styles/colors/#material-colors */
+  border: 5px solid #CFD8DC !important;
+  /*  blue-grey-lighten-4 https://vuetifyjs.com/en/styles/colors/#material-colors */
   border-radius: 5px !important;
 }
 
@@ -380,7 +273,6 @@ ul.lm_tabs li .lm_close_tab {
   width: inherit;
 }
 
-
 .sftt-value-none.v-text-field--rounded fieldset,
 .sftt-value-saved.v-text-field--rounded fieldset,
 .sftt-value-updated.v-text-field--rounded fieldset,
@@ -394,17 +286,17 @@ ul.lm_tabs li .lm_close_tab {
 ::-webkit-scrollbar {
   width: 12px;
   height: 12px;
-  }
-  
+}
+
 ::-webkit-scrollbar-track {
   background: #EEEEEE !important;
-  }
-  
+}
+
 ::-webkit-scrollbar-thumb {
   background: #BDBDBD;
   border-radius: 8px;
   border: 4px solid #EEEEEE !important;
   background-clip: padding-box;
-  }
+}
 
 /* STANDARD CODE FOR EVERY PLATEAU PROJECT: END */
