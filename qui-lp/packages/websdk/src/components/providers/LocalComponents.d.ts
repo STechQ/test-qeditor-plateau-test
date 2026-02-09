@@ -60,6 +60,11 @@ declare const localComponents: {
         loaded: boolean;
         module: undefined;
     };
+    QRichContent: {
+        importFunc: () => Promise<void>;
+        loaded: boolean;
+        module: undefined;
+    };
     Tooltip: {
         importFunc: () => Promise<void>;
         loaded: boolean;
