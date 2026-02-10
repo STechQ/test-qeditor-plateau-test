@@ -37,7 +37,7 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     addTable(): void;
     confirmAddTable(): void;
 }, {
-    modelContent: string;
+    content: string;
 }, {
     height: string;
     minHeight: string;
@@ -46,7 +46,6 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     buttonsHide: boolean;
     readonly: boolean;
     value: string;
-    content: string;
 }>;
 export default _default;
 //# sourceMappingURL=QRichContent.vue.d.ts.map
