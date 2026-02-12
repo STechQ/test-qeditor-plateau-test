@@ -20,6 +20,7 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
         alt: string;
     };
 }, {
+    toggleTextAlign(alignment: string): void;
     initEditor(): void;
     blurEvent(): void;
     focusEvent(): void;
