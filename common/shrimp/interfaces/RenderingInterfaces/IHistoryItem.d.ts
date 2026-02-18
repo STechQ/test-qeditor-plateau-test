@@ -17,6 +17,7 @@ export type IForeachHistoryItemCbParams = {
     isRendered: false;
 });
 export interface IHistoryItem {
+    GetComponentCollection(): Record<string, IComponentCollection>;
     GetControlWithTypeName(typeName: string): IComponentCollection | null;
     getAdditional<T extends IHistoryAdditionalItem>(key: string): T | undefined;
     getOrCreateAdditional<T extends IHistoryAdditionalItem>(key: string, creatorCb: () => T): T;
