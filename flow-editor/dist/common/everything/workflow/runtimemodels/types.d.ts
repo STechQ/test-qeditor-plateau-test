@@ -17,6 +17,7 @@ export declare const ActionTypes: {
     trigger: string;
     update: string;
     terminate: string;
+    changeStep: string;
 };
 export type ActionType = keyof typeof ActionTypes;
 export type CustomType = string;

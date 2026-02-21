@@ -217,7 +217,6 @@ export interface IUpdateModelRequest {
     appID?: string;
     checkin?: boolean;
     publish?: boolean;
-    fix?: boolean;
     release?: boolean;
     shortComment?: string;
     comment?: string;
@@ -367,6 +366,7 @@ export interface IRelaseModuleRequest {
         version: string;
     }>;
     basedVersion?: string;
+    unreleased?: boolean;
 }
 export interface IAppendOuterOrg {
     outerOrgId?: string;
@@ -376,6 +376,7 @@ export interface IAttachModuleToAppRequest extends IAppendOuterOrg {
     moduleID: ObjectID;
     outerOrgId?: NonNullable<IAppendOuterOrg["outerOrgId"]>;
     version?: string;
+    updateStrategy?: string;
 }
 export interface ICheckExistenceOfModuleVersionResponse {
     majorExist: boolean;
@@ -723,10 +724,26 @@ export interface IGetAppVersionArtifactInfoWithTokenRequest {
 export interface IGetAppVersionArtifactInfoWithTokenResponse {
     artifactUrl: string;
 }
+export interface IUpdateStrategyInfo {
+    moduleId: string;
+    moduleName: string;
+    moduleStrategy: string;
+    moduleVersion: string;
+}
 export interface ICreateWorkflowExportJobRequest {
     jobID: string;
     appID: string;
     items: Array<IWorkflowExportItem>;
+    updateStrategyInfos?: Array<IUpdateStrategyInfo>;
+}
+export interface IModuleExportItem {
+    ID: string;
+    version: string;
+}
+export interface ICreateWorkflowModuleExportJobRequest {
+    jobID: string;
+    appID: string;
+    module: IModuleExportItem;
 }
 export interface IGetFileSystemModelsRequest {
     fileSystemIds: Array<string | {

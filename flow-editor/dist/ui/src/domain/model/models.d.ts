@@ -185,6 +185,7 @@ export interface IModule extends IObject {
     ownerOrg?: IModuleOwnerOrgInfo;
     origInfo?: IModuleOrigInfo;
     modifyDate?: Date;
+    unreleased?: boolean;
 }
 export interface IGetModuleResponse extends IModule {
     versionID?: IModuleVersion["ID"];
@@ -194,9 +195,9 @@ export interface IGetModuleResponse extends IModule {
 export interface IModuleVersion extends ICloudObject {
     moduleID: ObjectID;
     version: string;
-    relatedApplications?: Array<IModuleRelatedApplicationItem>;
     relatedModelHistories: Array<IModuleRelatedModelItem>;
     description?: string;
+    unreleased?: boolean;
 }
 export interface IApplicationDetails {
     moduleCount: number;
@@ -322,7 +323,7 @@ export interface IExportJobArtifactInfoItem {
     source: "minio";
     details: IArtifactMinioDetails;
 }
-export type ModelHistoryType = "update" | "delete" | "checkin" | "publish" | "ownerItemDelete" | "fix";
+export type ModelHistoryType = "update" | "delete" | "checkin" | "publish" | "ownerItemDelete";
 export interface IModelCheckout {
     user: string;
     date: Date;
