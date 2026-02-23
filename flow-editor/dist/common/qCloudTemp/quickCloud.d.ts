@@ -10,7 +10,7 @@ export declare const DEPENDED_IMAGE_KEYS: string[];
 export declare const APP_ITEM_CONTENT_TYPES: string[];
 export { ObjectID };
 export type AuthenticationType = "QCLOUDAUTH" | "ADFS";
-export type ModelHistoryType = "update" | "delete" | "checkin" | "publish" | "ownerItemDelete";
+export type ModelHistoryType = "update" | "delete" | "checkin" | "publish" | "ownerItemDelete" | "fix";
 export type DomainObjectType = "domain";
 export type OrgGroupObjectType = "orgGroup";
 export type ApplicationObjectType = "application";
@@ -108,8 +108,6 @@ export interface IModuleRelatedApplicationItem {
     importedVersion?: string;
     importedBy?: string;
     importedDate?: Date;
-    updateStrategy?: string;
-    unreleased?: boolean;
 }
 export interface IModuleRelatedModelItem {
     modelID: ObjectID;
@@ -134,7 +132,6 @@ export interface IModuleBackend extends ICloudObject {
     shareType?: ModuleShareType;
     currentVersion?: string;
     lastReleasedVersion?: string;
-    unreleased?: boolean;
     applicationID?: string;
     ownerOrg?: IModuleOwnerOrgInfo;
     origInfo?: IModuleOrigInfo;
@@ -142,9 +139,9 @@ export interface IModuleBackend extends ICloudObject {
 export interface IModuleVersion extends ICloudObject {
     moduleID: ObjectID;
     version: string;
+    relatedApplications?: Array<IModuleRelatedApplicationItem>;
     relatedModelHistories: Array<IModuleRelatedModelItem>;
     description?: string;
-    unreleased?: boolean;
 }
 export interface IModelCopyInfo {
     sourceModelID: ObjectID;
@@ -223,13 +220,7 @@ export type IModelForWorkflow = {
     appId: string;
     version: string | undefined;
     live?: boolean;
-    overridden?: boolean;
-    owner?: IOwner;
 };
-export interface IOwner {
-    ownerType: ApplicationObjectType | ModuleObjectType;
-    ownerItem: ObjectID;
-}
 export interface IModelCheckout {
     user: string;
     date: Date;
@@ -365,7 +356,6 @@ export interface ITreeviewItem {
     moduleShareType?: ModuleShareType;
     currentModuleVersion?: string;
     currentModelVersion?: string;
-    unreleased?: boolean;
     lastReleasedModuleVersion?: string;
     modelID?: string;
     ownerOrg?: IModuleOwnerOrgInfo;
@@ -477,11 +467,5 @@ export interface IOrganizationActiveGroups {
     appCount: number;
     licensed: boolean;
     joinDate: Date;
-}
-export interface IModule {
-    moduleId: string;
-    appId: string;
-    moduleStrategy: string;
-    moduleVersion: string;
 }
 //# sourceMappingURL=quickCloud.d.ts.map

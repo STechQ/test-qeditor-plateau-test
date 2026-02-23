@@ -1597,16 +1597,10 @@ export interface IGlobalsBase {
     container: {};
 }
 export interface IGlobals_Workflow {
-    RunFunction: ({ flowId, input, dataInstance, consumer, externalConsumerProps }: {
+    RunFunction: ({ flowId, input, dataInstance }: {
         flowId: string;
         input?: Record<string, any>;
         dataInstance?: Record<string, any>;
-        consumer?: "ui" | "externalWithProcess" | "externalWithoutProcess";
-        externalConsumerProps?: {
-            processInstanceId: string;
-            appId: string;
-            userId: string;
-        };
     }) => Promise<{
         output: Record<string, any>;
     }>;

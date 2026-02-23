@@ -14,7 +14,6 @@ interface IExpressionProps {
     onChange?: (value: IExpressionData) => void;
     onBlur?: (value: IExpressionData) => void;
     openModelInNewTab?: (modelID: string) => void;
-    layout?: "stack" | "inline";
 }
 export declare const Expression: FC<IExpressionProps>;
 export {};

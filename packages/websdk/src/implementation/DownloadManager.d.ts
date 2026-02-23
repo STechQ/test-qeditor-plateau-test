@@ -4,6 +4,6 @@ export declare class DownloadManager {
     generalDownload: Download;
     RequestHandler(request: IDownloadRequest): void;
     extractFileNameFromHeader(headers: Object): string | null;
-    download(data: string, fileName: string): any;
+    download(data: any, fileName: String): any;
 }
 //# sourceMappingURL=DownloadManager.d.ts.map

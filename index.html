@@ -5,8 +5,15 @@
                 const base = document.createElement("base"); base.href = "/quick/";
                 document.head.appendChild(base);
             } catch(err){ }
+            // CRITICAL: Initialize quickVersions BEFORE standAlone.js loads!
+            // runtime.html accesses window.parent.quickVersions immediately on load.
+            window.quickVersions = window.quickVersions || {};
+            window.quickVersions["@stechquick/qeditor"] = { 
+                version: "3.1.6-5", 
+                date: new Date().toString() 
+            };
             const scr = document.createElement("script");
-            scr.src = "./standAlone.js?ver=3.1.7-0";
+            scr.src = "./standAlone.js?ver=3.1.6-5";
             document.body.appendChild(scr);
             document.addEventListener("keydown", function (event) { 
                 if ((event.ctrlKey || event.metaKey) && (event.key.toLowerCase() === "z" || event.key.toLowerCase() === "y")) {

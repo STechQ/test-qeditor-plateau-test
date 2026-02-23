@@ -34,12 +34,7 @@ export interface IAggregation {
     operator?: string;
     attribute: string;
 }
-export type IQueryType = 'INSERT' | 'INSERT MANY' | 'UPDATE' | 'DELETE' | 'SELECT' | 'COUNT';
-export declare const INSERT_MANY_QUERY_NAME = "insertManyQuery";
-export interface IQuerySort {
-    type: "asc" | "desc";
-    field: string;
-}
+export type IQueryType = 'INSERT' | 'UPDATE' | 'DELETE' | 'SELECT';
 export interface IQuery {
     id: string;
     name: string;
@@ -52,6 +47,5 @@ export interface IQuery {
     store: IStoreModelDBEntity;
     limit?: IExpressionData;
     skip?: IExpressionData;
-    sort?: IQuerySort[];
 }
 //# sourceMappingURL=IDataTypeModel.d.ts.map

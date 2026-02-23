@@ -1,5 +1,5 @@
 import { AggregateType, CollectionName, FilterTypeNullable, FilterTypeOrAnd, GetLastOptions, GetOptions, GetReturnType, IDataStoreManager, IMongoDBTransactionQueue, IndexDefinitions, ListOptions, UpdateResult, UpdateTypeNullable } from "./IDataStoreManager";
-import { UpdateFilter, ReturnDocument, ChangeStreamDocument, Document, ChangeStream, AnyBulkWriteOperation } from "mongodb";
+import { UpdateFilter, ReturnDocument, ChangeStreamDocument, Document, ChangeStream } from "mongodb";
 import { MongoDBTransactionQueue } from "./mongoDBTransactionQueue";
 export declare const MongoDBErrorCodes: {
     duplicateKeyErrorCode: number;
@@ -52,7 +52,6 @@ export declare class MongoDBManager implements IDataStoreManager {
     Update<T, TTrx extends IMongoDBTransactionQueue | void = IMongoDBTransactionQueue>(collectionName: CollectionName, filter: FilterTypeNullable<T> | FilterTypeOrAnd<T>, updateValue: UpdateTypeNullable<T>, options?: {
         trxQueue?: TTrx;
         ignoreUndefined?: boolean;
-        unset?: (keyof T)[];
     } & ({
         upsert: true;
         setOnInsert?: UpdateTypeNullable<T>;
@@ -92,10 +91,6 @@ export declare class MongoDBManager implements IDataStoreManager {
         fullDocument?: boolean;
     }): Promise<ChangeStream<T, ChangeStreamDocument<T>>>;
     getAllCollections(): Promise<CollectionName[]>;
-    BulkWrite<T, TTrx extends IMongoDBTransactionQueue | void = IMongoDBTransactionQueue>(collectionName: CollectionName, operations: AnyBulkWriteOperation<any>[], options?: {
-        ordered?: boolean;
-        trxQueue?: TTrx;
-    }): Promise<any>;
 }
 export interface ChangeStreamResult<T extends Document> {
     operationType: "insert" | "update";

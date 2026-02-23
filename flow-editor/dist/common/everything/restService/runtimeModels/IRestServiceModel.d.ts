@@ -27,7 +27,6 @@ export interface IRestServiceModel extends IModelBaseFields {
     cacheValidityDurationInMs?: number;
     mock?: Array<IRestMock>;
     store: Store;
-    timeout?: number;
 }
 export declare const ContentTypes: {
     readonly applicationJson: "application/json";

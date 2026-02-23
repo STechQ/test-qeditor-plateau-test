@@ -48,7 +48,6 @@ export declare class FlowConnection extends FlowObjectBase {
     private isSelected;
     private text;
     private readonly;
-    private _bringingToFront;
     private events;
     constructor(id: string, from: FlowConnectionFrom, _to: FlowConnectionTo, objectManager: ObjectManager, zuiManager: ZuiManager, eventHelper: EventHelper<FlowEvents>, readonly?: boolean, outputOpt?: Array<string>);
     get to(): FlowConnectionTo;

@@ -1,7 +1,7 @@
 import { Hook } from "@stechquick/algae/lib/helpers/hook";
-import { UpdateFilter, ClientSession, Document, AnyBulkWriteOperation } from "mongodb";
+import { UpdateFilter, ClientSession, Document } from "mongodb";
 import { AtLeastOne } from "../../../../common/helpers/typeHelper";
-export type CollectionName = "FM_Users" | "Notifies" | "FM_Models" | "Modules" | "Counters" | "DeploymentLogs" | "PermanentStore" | "ServiceCaches" | "BatchJobs" | "BatchJobsHistory" | "Locks" | "CacheInvalidations" | "JobExecution" | "Holidays" | "JobExecutionHistory" | "WFE_SlaExecution" | "WFE_SlaExecutionHistory" | "WFE_ProcessInst" | "WFE_ProcessInstHistory" | "WFE_Task" | "WFE_TaskHistory" | "WFE_Activity" | "WFE_ActivityHistory" | "WFE_ThreadState" | "WFE_ThreadStateHistory" | "WFE_Notes" | "WFE_NotesHistory" | "WFE_Files" | "WFE_FilesHistory" | "WFE_BrokenThreads" | "WFE_BrokenThreadsHistory";
+export type CollectionName = "FM_Users" | "Notifies" | "FM_Models" | "Counters" | "DeploymentLogs" | "PermanentStore" | "ServiceCaches" | "BatchJobs" | "BatchJobsHistory" | "Locks" | "CacheInvalidations" | "JobExecution" | "Holidays" | "JobExecutionHistory" | "WFE_SlaExecution" | "WFE_SlaExecutionHistory" | "WFE_ProcessInst" | "WFE_ProcessInstHistory" | "WFE_Task" | "WFE_TaskHistory" | "WFE_Activity" | "WFE_ActivityHistory" | "WFE_ThreadState" | "WFE_ThreadStateHistory" | "WFE_Notes" | "WFE_NotesHistory" | "WFE_Files" | "WFE_FilesHistory";
 export type IndexDefinition<T> = {
     name: string;
     keys: AtLeastOne<Record<keyof T, "asc" | "desc">>;
@@ -24,7 +24,6 @@ export type FilterElemMatch<T> = T extends (Array<any> | undefined) ? {
 export type FilterTypeNullable<T> = {
     [K in keyof T]?: T[K] | {
         $in?: Array<T[K]> | T[K];
-        $nin?: Array<T[K]> | T[K];
         $ne?: T[K];
         $gt?: T[K];
         $gte?: T[K];
@@ -154,13 +153,11 @@ export declare const trxFuncDict: {
     Insert: "Insert";
     InsertMany: "InsertMany";
     UpdateMany: "UpdateMany";
-    UpdateManyRaw: "UpdateManyRaw";
     Update: "Update";
     UpdateAsNative: "UpdateAsNative";
     Delete: "Delete";
     DeleteOne: "DeleteOne";
     GetAndUpdateNative: "GetAndUpdateNative";
-    BulkWrite: "BulkWrite";
 };
 export declare const queryFuncDict: {
     List: "List";
@@ -262,10 +259,6 @@ export interface IDataStoreManager {
         ignoreUndefined?: boolean;
     }): Promise<GetReturnType<TTrx, UpdateResult>>;
     getAllCollections(): Promise<CollectionName[]>;
-    BulkWrite<T, TTrx extends IMongoDBTransactionQueue | void = IMongoDBTransactionQueue>(collectionName: CollectionName, operations: AnyBulkWriteOperation<any>[], options?: {
-        ordered?: boolean;
-        trxQueue?: TTrx;
-    }): Promise<any>;
 }
 export {};
 //# sourceMappingURL=IDataStoreManager.d.ts.map

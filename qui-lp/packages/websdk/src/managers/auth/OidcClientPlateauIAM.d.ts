@@ -5,7 +5,6 @@ export declare class OidcClientPlateauIAM implements IPlateauIAM {
     private initOptions;
     private authOptions;
     private sessionStorageNamePrefix;
-    private refreshInFlight?;
     private userManager?;
     private user;
     private iamPlateau;
@@ -24,27 +23,14 @@ export declare class OidcClientPlateauIAM implements IPlateauIAM {
     private isAuthCallbackUrl;
     private cleanCallbackParams;
     private toAbsoluteUrl;
-    private pathJoin;
-    private setQueryOrFragment;
-    private readPrefixedTokens;
-    private persistTokens;
-    private storeOidcUserFromTokenInfo;
-    private decodeJwtPayload;
-    private tryReadJwtExp;
-    private hydrateUserFromPrefixedTokens;
-    private handleIAMPopup;
-    private handleInPopup;
     init(callback: Function, PlateauUIOptions?: IPlateauUIOptions): Promise<void>;
     login(PlateauUIOptions?: IPlateauUIOptions): Promise<void>;
     getToken: () => string | undefined;
     getInfo: () => object | undefined;
     refreshPromise(minValiditySeconds?: number): Promise<boolean | undefined>;
-    private refreshPromiseInternal;
-    private clearPrefixedTokens;
-    logout(): Promise<void>;
+    logout(): void;
     private deriveAuthority;
     private constructIAMPlateau;
     private maybePersistTokens;
-    private persistOidcRuntimeConfig;
 }
 //# sourceMappingURL=OidcClientPlateauIAM.d.ts.map
