@@ -7,6 +7,6 @@ export declare class IntegrationsManagerImpl implements IIntegrationsManager {
         contextName: string;
         settingsWrapper: IWebSDKSettingsWrapper;
     });
-    customIntegrationEventTrigger(name: string, params: any[]): void;
+    customIntegrationEventTrigger(name: string, params: any[], quick?: any): Promise<any>;
 }
 //# sourceMappingURL=IntegrationsManagerImpl.d.ts.map
