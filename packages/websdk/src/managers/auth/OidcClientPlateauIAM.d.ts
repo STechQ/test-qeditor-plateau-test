@@ -4,10 +4,12 @@ export declare class OidcClientPlateauIAM implements IPlateauIAM {
     settingsIAM: ISettingsIAM | undefined;
     private initOptions;
     private authOptions;
-    private sessionStorageNamePrefix;
     private userManager?;
     private user;
+    private authority;
+    private oidcClientId;
     private iamPlateau;
+    private popupSessionStoragePrefix;
     setOptions({ iam, iamV2 }: {
         iam: ISettingsIAM["iam"];
         iamV2?: ISettingsIAMV2;
@@ -22,15 +24,23 @@ export declare class OidcClientPlateauIAM implements IPlateauIAM {
     isAuthenticated(): true | undefined;
     private isAuthCallbackUrl;
     private cleanCallbackParams;
-    private toAbsoluteUrl;
-    init(callback: Function, PlateauUIOptions?: IPlateauUIOptions): Promise<void>;
+    private setQueryOrFragment;
+    private pathJoin;
+    private getStableRedirectUri;
+    init(callback: Function, PlateauUIOptions?: IPlateauUIOptions, forceFullLogin?: boolean): Promise<void>;
+    private handleIAMPopup;
+    private handleInPopup;
+    private storePopupTokens;
+    private bootstrapUserFromToken;
+    private getCurrentTokensForPopup;
+    private getStaticPrimitiveAttributes;
     login(PlateauUIOptions?: IPlateauUIOptions): Promise<void>;
     getToken: () => string | undefined;
     getInfo: () => object | undefined;
-    refreshPromise(minValiditySeconds?: number): Promise<boolean | undefined>;
+    refreshPromise(): Promise<boolean | undefined>;
     logout(): void;
+    private buildLogoutRedirectUri;
     private deriveAuthority;
     private constructIAMPlateau;
-    private maybePersistTokens;
 }
 //# sourceMappingURL=OidcClientPlateauIAM.d.ts.map

@@ -71,7 +71,7 @@ export interface IWFEDBTask {
 }
 export interface IWFEDBTaskHistory extends OmitTyped<OmitTyped<IWFEDBTask, "updatedAt">, "flowThreadId"> {
     updatedAt: undefined;
-    status: "completed";
+    status: "completed" | "failed" | "suspended" | "stepChanged";
     action?: IActionData;
     performerUserId: string;
     endDate: DBDateEPOC;
@@ -158,6 +158,23 @@ export interface IWFEDBFiles extends INamedObjectBase {
     fileType?: undefined;
 }
 export interface IWFEDBFilesHistory extends IWFEDBFiles {
+}
+export interface IWFEBrokenThreads {
+    flowThreadId: string;
+    processId: string;
+    processInstanceId: string;
+    createDate: DBDateEPOC;
+    updateDate: DBDateEPOC;
+    errMsg: string;
+    businessKey?: IWFEDBProcessInst["businessKey"];
+    stepId?: string;
+    stepName?: string;
+    stepLabel?: string;
+    action?: IActionData;
+    user?: IUser;
+}
+export interface IWFEBrokenThreadsHistory extends OmitTyped<IWFEBrokenThreads, "user" | "updateDate" | "createDate"> {
+    createDate: DBDateEPOC;
 }
 import { CollectionName, IndexDefinitions } from "../../../runtime/infrastructure/mongo/IDataStoreManager";
 import { INamedObjectBase } from "./namedobjects/INamedObjectBase";

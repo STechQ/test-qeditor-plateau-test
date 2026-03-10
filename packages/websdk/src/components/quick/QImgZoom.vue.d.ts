@@ -26,6 +26,7 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     zoomTypeOn(x: number, y: number): void;
     zoomTypeNextTo(x: number, y: number): void;
 }, {
+    normalizedSrc: string;
     imageStyle: any;
     divStyle: any;
 }, {

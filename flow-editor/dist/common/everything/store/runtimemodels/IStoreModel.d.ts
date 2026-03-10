@@ -12,6 +12,7 @@ export type IStoreModelForFlow = IStoreModelBase<IStoreContextForFlow> & {
     vars?: Record<string, IVariable>;
 };
 export type IStoreModelDBEntity = IStoreModelBase<IStoreContextForDBEntity> & {};
+export type IStoreModelSla = IStoreModelBase<IStoreContextForSla> & {};
 export type StoreContextKeys = keyof IStoreContextForService | keyof IStoreContextForWorkflow | keyof IStoreContextForFlow;
 export type IStoreContextBase = {};
 export type IStoreContextForService = IStoreContextBase & {
@@ -25,6 +26,12 @@ export type IStoreContextForWorkflow = IStoreContextBase & {
 };
 export type IStoreContextForFlow = IStoreContextBase & {};
 export type IStoreContextForDBEntity = IStoreContextBase & {
+    processInstance?: IVariableData;
+    dataInstance?: IVariableData | undefined;
+    action?: IActionData;
+    currentUser?: IVariable;
+};
+export type IStoreContextForSla = IStoreContextBase & {
     processInstance?: IVariableData;
     dataInstance?: IVariableData | undefined;
     action?: IActionData;

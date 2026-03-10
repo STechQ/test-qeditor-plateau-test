@@ -226,6 +226,7 @@ export declare const ErrorCodes: {
     readonly wm3151: "WM-3151";
     readonly wm3152: "WM-3152";
     readonly wm3153: "WM-3153";
+    readonly wm3154: "WM-3154";
     readonly js1000: "JS-1000";
     readonly js1001: "JS-1001";
     readonly js1002: "JS-1002";

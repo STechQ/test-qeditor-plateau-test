@@ -23,6 +23,7 @@ export declare const LogCodes: {
     readonly bj1501: "bj-1501";
     readonly bj1502: "bj-1502";
     readonly bj1503: "bj-1503";
+    readonly bj1504: "bj-1504";
     readonly e3000: "e-3000";
     readonly e3001: "e-3001";
     readonly e3002: "e-3002";
@@ -123,6 +124,8 @@ export declare const LogCodes: {
     readonly wm2201: "wm-2201";
     readonly wm2202: "wm-2202";
     readonly wm2203: "wm-2203";
+    readonly wm2204: "wm-2204";
+    readonly wm2205: "wm-2205";
     readonly wfe001: "wfe-001";
     readonly wfe002: "wfe-002";
     readonly wfe003: "wfe-003";

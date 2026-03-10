@@ -132,6 +132,10 @@ export interface IAddActivityProp {
     descriptionCode: string;
     description: string;
 }
+export interface IHandleSlaUpdatesProp {
+    type: "workflow" | "userTask";
+    inputs?: Record<string, IExpressionData>;
+}
 export interface IWorkflowEnvironment {
     constValueWithName: Record<string, any>;
     constValueWithID: Record<string, any>;

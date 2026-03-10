@@ -30,6 +30,7 @@ export interface IServerAdaptor extends Omit2<IPlatformServerAdaptor, "getEnvVar
 }
 export type IJumpParam = IStepTo & {
     flowThreadId?: string;
+    jumpType?: string;
 };
 export interface IRuntimeParam<PropType = IPropObject, OutputOptions = string, StateType = StateValues> {
     entryInfo: {

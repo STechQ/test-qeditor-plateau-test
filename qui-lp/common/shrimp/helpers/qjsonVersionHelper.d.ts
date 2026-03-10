@@ -7,11 +7,12 @@ export declare class qjsonVersionHelper {
      * 4. normal file path like "/static/inbox.qjson" → returns null (no ID match)
      */
     static extractFileMapId(url: string): string | null;
-    static traversePageVersions(url: string, pageVersions: Record<string, Date | unknown>, fileMap?: Array<{
+    static traversePageVersions(url: string, pageVersions: Record<string, Date | unknown>): Date;
+    static traverseFileMapVersions(url: string, fileMap?: Array<{
         id: string;
         path: string;
         name: string;
         version: string;
-    }>): Date;
+    }>): string;
 }
 //# sourceMappingURL=qjsonVersionHelper.d.ts.map

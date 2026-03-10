@@ -48,6 +48,7 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     goToPage(pageNumber: number): void;
     downloadPdf(): void;
     printPdf(): void;
+    detectTypeFromBuffer(buffer: ArrayBuffer): "img" | "tiff" | "pdf" | undefined;
     getType(): any;
     onFrameScrollBottom(): void;
     handleScroll({ target: { scrollTop, clientHeight, scrollHeight, lastChild: { offsetHeight }, }, }: {

@@ -1,5 +1,5 @@
 /// <reference types="node" />
-import { IAddActivityProp, ICounterPropType, StepFlowModelPropType } from "../../../../../common/everything/workflow/runtimemodels/IWorkflow";
+import { IAddActivityProp, ICounterPropType, IHandleSlaUpdatesProp, StepFlowModelPropType } from "../../../../../common/everything/workflow/runtimemodels/IWorkflow";
 import { IWorkflowContext } from "../../../../../common/everything/workflow/runtimeObjects/IWorkflowContext";
 import { IWorkflowIncomingRequest } from "../../../../../common/everything/workflow/runtimeObjects/IWorkflowIncomingRequest";
 import { IMongoDBTransactionQueue } from "../../../../../common/runtime/infrastructure/mongo/IDataStoreManager";
@@ -10,6 +10,7 @@ import { IDataSearchParams, IDataSearchResult } from "../../../../../common/ever
 import { CustomType } from "../../../../../common/everything/workflow/runtimemodels/types";
 import { IFile } from "../../../../../common/everything/workflow/runtimeObjects/namedobjects/IFile";
 import { IActionData } from "../../../../../common/everything/workflow/runtimeObjects/IAction";
+import { IProcessInstance } from "../../../../../common/everything/workflow/runtimeObjects/namedobjects/IProcessInstance";
 type ConvertToDataSet<T extends string> = {
     [K in T]: K;
 };
@@ -44,6 +45,7 @@ export interface IPlatformWFFAdaptor {
             retrieveContext: (prop: string) => Promise<IContext>;
             commit: (prop: IResumeProcessRequest) => Promise<boolean>;
             complete: (prop: IResumeProcessRequest) => Promise<boolean>;
+            handleSlaUpdates: (prop: IHandleSlaUpdatesProp) => Promise<void>;
         };
         dataSearch: {
             searchQuery: (prop: IDataSearchParams) => Promise<IDataSearchResponse>;
@@ -51,6 +53,9 @@ export interface IPlatformWFFAdaptor {
         file: {
             upload: (fileBody: string | Blob | Uint8Array | Buffer, fileName: string, label: string, action: IActionData) => Promise<IFile>;
             delete: (storageHandle: string, action: IActionData) => Promise<void>;
+        };
+        thread: {
+            retryBrokenThread: (threadId: string, processInstanceId: string) => Promise<IProcessInstance>;
         };
     };
     log: (message: string, ...optionalParams: Array<any>) => void;
