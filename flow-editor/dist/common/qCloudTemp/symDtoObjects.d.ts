@@ -217,6 +217,7 @@ export interface IUpdateModelRequest {
     appID?: string;
     checkin?: boolean;
     publish?: boolean;
+    fix?: boolean;
     release?: boolean;
     shortComment?: string;
     comment?: string;
