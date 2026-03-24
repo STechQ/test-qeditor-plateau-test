@@ -18,6 +18,7 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     backSizeY: number;
     mouseX: number;
     mouseY: number;
+    tiffUrlData: string;
 }, {
     mouseMove(event: any): void;
     mouseLeave(): void;
@@ -25,6 +26,8 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     rotate(angle?: 0 | 90 | 180 | 270 | 360 | -90 | -180 | -270 | -360): void;
     zoomTypeOn(x: number, y: number): void;
     zoomTypeNextTo(x: number, y: number): void;
+    encodeABToBase64(buffer: ArrayBuffer): string;
+    getTiffBuffer(src: any): Promise<ArrayBuffer>;
 }, {
     normalizedSrc: string;
     imageStyle: any;

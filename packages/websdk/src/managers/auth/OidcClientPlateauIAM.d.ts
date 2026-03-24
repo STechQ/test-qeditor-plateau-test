@@ -26,7 +26,6 @@ export declare class OidcClientPlateauIAM implements IPlateauIAM {
     private cleanCallbackParams;
     private setQueryOrFragment;
     private pathJoin;
-    private getStableRedirectUri;
     init(callback: Function, PlateauUIOptions?: IPlateauUIOptions, forceFullLogin?: boolean): Promise<void>;
     private handleIAMPopup;
     private handleInPopup;

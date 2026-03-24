@@ -6,7 +6,7 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
         "--height": string;
         "--minHeight": string;
     };
-    internalContent: string;
+    contentOnFocus: string;
     tableDialog: boolean;
     tableParams: {
         rows: number;
@@ -22,11 +22,8 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
 }, {
     toggleTextAlign(alignment: string): void;
     initEditor(): void;
-    blurEvent(): void;
-    focusEvent(): void;
-    inputEvent(): void;
     getHTML(): string;
-    setContent(htmlContent: string): void;
+    setContent(htmlContent: string, emitUpdate?: boolean): void;
     insertContent(htmlContent: string): void;
     applyReadOnly(): void;
     addImage(): void;
@@ -37,16 +34,15 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     processFile(file: File): void;
     addTable(): void;
     confirmAddTable(): void;
-}, {
-    content: string;
-}, {
+}, unknown, {
     height: string;
+    width: string;
     minHeight: string;
-    ToolBarcolor: string;
+    ToolbarColor: string;
     disabled: boolean;
     buttonsHide: boolean;
     readonly: boolean;
-    value: string;
+    content: string;
 }>;
 export default _default;
 //# sourceMappingURL=QRichContent.vue.d.ts.map

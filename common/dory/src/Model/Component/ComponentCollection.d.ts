@@ -41,8 +41,11 @@ export declare class ComponentCollection implements IComponentCollection {
     lockedFields?: Record<string, boolean>;
     private createdFieldsHook;
     private _componentVisibility;
+    private _visibilityApplied;
     private _componentDisabled;
     private _componentReadonly;
+    private _domCleanupRegistered;
+    private _styleFieldsInitialized;
     private compInstanceSetCb?;
     asChildIndex: number;
     compareComponent: boolean;

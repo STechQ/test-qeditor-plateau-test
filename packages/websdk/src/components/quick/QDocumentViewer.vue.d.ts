@@ -12,6 +12,7 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     loadedPages: number;
     docType: undefined;
     url: any;
+    normalizedSrc: any;
     renderPdfUrl: string;
     pdfLoadToken: number;
     localLanguage: string;
@@ -48,7 +49,7 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     goToPage(pageNumber: number): void;
     downloadPdf(): void;
     printPdf(): void;
-    detectTypeFromBuffer(buffer: ArrayBuffer): "img" | "tiff" | "pdf" | undefined;
+    getSrcWithMimeType(): any;
     getType(): any;
     onFrameScrollBottom(): void;
     handleScroll({ target: { scrollTop, clientHeight, scrollHeight, lastChild: { offsetHeight }, }, }: {
@@ -79,6 +80,7 @@ declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
     fileDescription: string;
     showPrint: boolean;
     _renderingProps: any;
+    enableSecurityScan: boolean;
     securityErrorMessage: string;
     securityErrorMessageIcon: string;
 }>;
