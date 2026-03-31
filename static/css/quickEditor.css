@@ -2209,12 +2209,17 @@ input[type="checkbox"] {
 .quickEditor.readOnly .quickEditor-container .paleGrayRows i,
 .quickEditor.readOnly .mega_drop_menu .menu_left:nth-of-type(1) .greybox li,
 .quickEditor.readOnly .quickEditor-container div:has(.autoTest_newLRID)>button,
-.quickEditor.readOnly .rightBlock .store-icon-div i {
+.quickEditor.readOnly .rightBlock .store-icon-div i,
+.quickEditor.readOnly .rightBlock .inputWrapper .deleteOutline {
   pointer-events: none;
   background-color: rgba(230, 230, 230, 0.12) !important;
   color: rgba(0, 0, 0, .26) !important;
   border-color: rgba(161, 161, 161, 0.3) !important;
 }
+.quickEditor.readOnly .rightBlock .inputWrapper .deleteOutline {
+  border: 1px solid rgba(161, 161, 161, 0.3) !important;
+}
+
 .quickEditor.readOnly .rightBlock .select-master-page-wrapper button {
   pointer-events: none;
   background: #151233 !important;
@@ -2234,7 +2239,8 @@ input[type="checkbox"] {
 .quickEditor.readOnly .rightBlock #settings-editor,
 .quickEditor.readOnly .rightBlock .eventButtons li,
 .quickEditor.readOnly .rightBlock .autoTest_saveCodeEditor,
-.quickEditor.readOnly .overlayPopup .autoTest_saveCodeEditor {
+.quickEditor.readOnly .overlayPopup .autoTest_saveCodeEditor,
+.quickEditor.readOnly .rightBlock .inputWrapper .deleteOutline {
   /* cursor: url('https://stechq.github.io/cdn/Idetemplates/disabled_visible.svg') 5 5, auto; */
   cursor: not-allowed;
 }
