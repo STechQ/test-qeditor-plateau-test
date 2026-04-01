@@ -12,6 +12,7 @@ export declare class ComponentDOMAttrsHelper {
      * @param compCollection Component collection that attributes will be set on its instance
      */
     static createDOMAttrsOnCompInstance(compCollection: IComponentCollection): void;
+    private static getSrcValue;
     static convertTiffToImage(attribute: string): string;
     static AvoidClearableTabIndex(compCollection: any): void;
 }
