@@ -34,5 +34,6 @@ export interface IHistoryItem {
     foreachHistoryItem(cb: (cbParam: IForeachHistoryItemCbParams) => void): void;
     findHistoryItem(cb: (cbParam: IForeachHistoryItemCbParams) => boolean, nestLevel?: number): IHistoryItem | undefined;
     getCompCollectionById(id: string | IComponent): IComponentCollection | undefined;
+    getOtelStr(): string | undefined;
 }
 //# sourceMappingURL=IHistoryItem.d.ts.map
