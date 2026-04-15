@@ -33,7 +33,7 @@ export declare const ContentTypes: {
     readonly applicationJson: "application/json";
     readonly urlencoded: "application/x-www-form-urlencoded";
 };
-export type HttpMethod = 'GET' | 'POST';
+export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
 export type ContentType_ApplicationJson = typeof ContentTypes.applicationJson;
 export type ContentType_urlencoded = typeof ContentTypes.urlencoded;
 export type IRestUrlParam = IRestPathVariable | IRestQueryParams;

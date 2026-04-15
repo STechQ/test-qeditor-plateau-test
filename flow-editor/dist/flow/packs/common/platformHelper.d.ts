@@ -3,6 +3,7 @@ import { IPlatformServerAdaptor } from "@stechquick/flow-interfaces/runtime/plat
 import { IPlatformWFFAdaptor } from "@stechquick/flow-interfaces/runtime/platform/IPlatformWorkflowAdaptor";
 import { IRuntimeParam } from "@stechquick/flow-interfaces/runtime/StepRuntime";
 import { IStoreMapping } from "../../../common/everything/store/runtimemodels/IStoreMapping";
+import { CollectionName } from "../../../common/runtime/infrastructure/mongo/IDataStoreManager";
 export type RuntimePlatform = {
     platformName: "workflow";
     platformInstance: IPlatformWFFAdaptor;
@@ -14,6 +15,7 @@ export type IDBEntityPropType = IPropObject & {
     id: string;
     queryId: string;
     mapping: IStoreMapping;
+    collectionName?: CollectionName;
 };
 interface IEnvironment {
     workflow?: IPlatformWFFAdaptor;

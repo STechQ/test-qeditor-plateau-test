@@ -4,7 +4,7 @@ import { IUserMainInfo, IUser_SUSI } from "../../../../common/qCloudTemp/authent
 import { IRole } from "../../../../common/qCloudTemp/authorization";
 import { IArtifactInfoDBItem, IArtifactMinioDetails, IQcloudJob } from "../../../../common/qCloudTemp/exporter";
 import { IOrganization } from "../../../../common/qCloudTemp/membership";
-import { ExtensionType, IApplicationLogoInfo, IEntityDesignerAddtionals, IModelBodyObject, IModelInfo, IModuleOwnerOrgInfo, IModuleRelatedApplicationItem, IModuleRelatedModelItem, IProcessWizardAdditionals, IQJsonAdditionals, ITreeviewItem, ModelAdditionals, ModuleShareType, ObjectID, UsageType } from "../../../../common/qCloudTemp/quickCloud";
+import { ExtensionType, IApplicationLogoInfo, IEntityDesignerAddtionals, IModelBodyObject, IModelInfo, IModuleOwnerOrgInfo, IModuleRelatedApplicationItem, IModuleRelatedModelItem, IProcessWizardAdditionals, IQJsonAdditionals, ITreeviewItem, ModelAdditionals, ModuleShareScope, ModuleShareType, ObjectID, UsageType } from "../../../../common/qCloudTemp/quickCloud";
 import { ICopyApp, IGetOrganizaionGroupDetailsByUserTypeResponse, IListInvitationsResponseItem, ISignInResponse, IUpdateMobileUsage } from "../../../../common/qCloudTemp/symDtoObjects";
 import { IUserPreferences } from "../../../../common/qCloudTemp/userPreference";
 import { ICloudObject, IObject } from "./IObject";
@@ -37,6 +37,9 @@ interface IModelCtorInitials {
     checkedOut?: IModel["checkedOut"];
     checkoutInfo?: IModel["checkoutInfo"];
     version?: IModel["version"];
+    editingVer?: IModel["editingVer"];
+    unversioned?: IModel["unversioned"];
+    hasHistory?: IModel["hasHistory"];
     size?: IModel["size"];
     isUnmodifiable?: IModel["isUnmodifiable"];
     isUnmodifiableFileType?: IModel["isUnmodifiableFileType"];
@@ -75,6 +78,9 @@ export declare class Model implements IModel, IStudioUIModelBase {
     checkedOut?: IModel["checkedOut"];
     checkoutInfo?: IModel["checkoutInfo"];
     version?: IModel["version"];
+    editingVer?: IModel["editingVer"];
+    unversioned?: IModel["unversioned"];
+    hasHistory?: IModel["hasHistory"];
     size?: IModel["size"];
     isUnmodifiable?: IModel["isUnmodifiable"];
     isUnmodifiableFileType?: IModel["isUnmodifiableFileType"];
@@ -151,6 +157,9 @@ export interface IModel extends IObject, IStudioUIModelBase {
     checkedOut?: boolean;
     checkoutInfo?: ICheckoutInfo;
     version?: string;
+    editingVer?: string;
+    unversioned?: boolean;
+    hasHistory?: boolean;
     size?: number;
     isUnmodifiable?: boolean;
     isUnmodifiableFileType?: boolean;
@@ -186,6 +195,7 @@ export interface IModule extends IObject {
     origInfo?: IModuleOrigInfo;
     modifyDate?: Date;
     unreleased?: boolean;
+    shareScope?: ModuleShareScope;
 }
 export interface IGetModuleResponse extends IModule {
     versionID?: IModuleVersion["ID"];
@@ -210,6 +220,8 @@ export interface IApplicationDetails {
 export interface IUploadedFile {
     name: string;
     content: string;
+    isSameId: boolean;
+    existingModelsIds: string[];
 }
 export interface IApplication extends IObject {
     objectType: "application";
@@ -350,6 +362,35 @@ export interface IExtendedModuleItem extends IModule {
 export interface IWorkflowExportItem {
     ID: string;
     version: string;
+}
+export type CompareStatus = "changed" | "new" | "deleted";
+export interface ICompareSideItem {
+    version: string;
+    createdBy: string | null;
+    createDate: string | Date | null;
+}
+export interface ICompareDetailPair {
+    s: ICompareSideItem | null;
+    t: ICompareSideItem | null;
+}
+export interface ICompareRow {
+    modelID: string;
+    modelName: string | null;
+    sourceTop: ICompareSideItem | null;
+    targetTop: ICompareSideItem | null;
+    details: ICompareDetailPair[];
+    status: CompareStatus;
+    badgeCount: number;
+}
+export interface ICompareSummary {
+    sourceModelCount: number;
+    targetModelCount: number;
+    newCount: number;
+    deletedCount: number;
+}
+export interface ICompareResponse {
+    summary: ICompareSummary;
+    rows: ICompareRow[];
 }
 export {};
 //# sourceMappingURL=models.d.ts.map

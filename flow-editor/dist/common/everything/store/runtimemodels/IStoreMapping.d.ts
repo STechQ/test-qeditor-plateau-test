@@ -8,6 +8,9 @@ export type IStoreMapping = {
 export declare const HttpMethods: {
     GET: string;
     POST: string;
+    PUT: string;
+    DELETE: string;
+    PATCH: string;
 };
 export type IHttpMethodType = keyof typeof HttpMethods;
 export type IStorePropType = {

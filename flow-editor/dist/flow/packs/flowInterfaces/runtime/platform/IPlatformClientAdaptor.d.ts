@@ -4,7 +4,7 @@ export interface IPlatformClientResponse {
     body?: any;
 }
 export interface IPlatformClientRequest {
-    method: "get" | "post";
+    method: "get" | "post" | "put" | "delete" | "patch";
     url: string;
     queryString?: Record<string, string>;
     headers?: Record<string, string>;

@@ -1,5 +1,5 @@
 import { IFlowModel } from "../../runtime/IFlowModel";
-import { IFlowCopyModel, IFlowDesignModel } from "../IFlowDesignModel";
+import { IFlowCoreModel, IFlowDesignModel } from "../IFlowDesignModel";
 import { IFlowEditorModel } from "../IFlowEditorModel";
 import { IFlowEditorState } from "../IFlowEditorState";
 import { GetModelBody, IStepOptions, IStudioUIModelBase, SetStoreSchema } from "../IStepOptions";
@@ -46,8 +46,8 @@ export interface IFlowEditorProgram {
     registerStep(step: IStepOptions | string): void;
     exportModel<KType extends keyof IExportTypeMap>(type: KType): Promise<IExportTypeMap[KType]>;
     importModel(model: IFlowDesignModel): Promise<void>;
-    copy(): IFlowCopyModel;
-    paste(model: IFlowCopyModel): Promise<void>;
+    copy(): IFlowCoreModel;
+    paste(model: IFlowCoreModel): Promise<void>;
     getState(): IFlowEditorState;
     setState(state?: IFlowEditorState): void;
     setSchema(schema: IStoreModelForFlow): void;

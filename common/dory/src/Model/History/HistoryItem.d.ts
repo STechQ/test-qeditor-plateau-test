@@ -81,7 +81,8 @@ export declare class HistoryItem implements IHistoryItem {
     remount(): void;
     registerDoryJr(doryJr: IDoryJr): void;
     getQLang(): ScriptLang | undefined;
-    getOtelStr(): string | undefined;
+    getOtelDiag(): string | undefined;
+    getOtelChannel(): string | undefined;
     GetRenderingContext(): RenderingContext;
     GetDoryJrs(): DoryJr[] | null;
     GetRenderingManager(): IRenderingManager | undefined;

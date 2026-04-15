@@ -1,5 +1,5 @@
 /// <reference types="node" />
-import { IAddActivityProp, ICounterPropType, IHandleSlaUpdatesProp, StepFlowModelPropType } from "../../../../../common/everything/workflow/runtimemodels/IWorkflow";
+import { IAddActivityProp, ICounterPropType, IHandleSlaUpdatesProp, StepFlowModelPropType, StatusType } from "../../../../../common/everything/workflow/runtimemodels/IWorkflow";
 import { IWorkflowContext } from "../../../../../common/everything/workflow/runtimeObjects/IWorkflowContext";
 import { IWorkflowIncomingRequest } from "../../../../../common/everything/workflow/runtimeObjects/IWorkflowIncomingRequest";
 import { IMongoDBTransactionQueue } from "../../../../../common/runtime/infrastructure/mongo/IDataStoreManager";
@@ -11,6 +11,7 @@ import { CustomType } from "../../../../../common/everything/workflow/runtimemod
 import { IFile } from "../../../../../common/everything/workflow/runtimeObjects/namedobjects/IFile";
 import { IActionData } from "../../../../../common/everything/workflow/runtimeObjects/IAction";
 import { IProcessInstance } from "../../../../../common/everything/workflow/runtimeObjects/namedobjects/IProcessInstance";
+import { IWFEDBProcessInst } from "../../../../../common/everything/workflow/runtimeObjects/IWFEDB";
 type ConvertToDataSet<T extends string> = {
     [K in T]: K;
 };
@@ -46,6 +47,10 @@ export interface IPlatformWFFAdaptor {
             commit: (prop: IResumeProcessRequest) => Promise<boolean>;
             complete: (prop: IResumeProcessRequest) => Promise<boolean>;
             handleSlaUpdates: (prop: IHandleSlaUpdatesProp) => Promise<void>;
+            changeStep: (prop: IChangeStepParams) => Promise<IProcessInstance>;
+            start: (prop: IStartWorkflowParams) => Promise<{
+                processInstance: IProcessInstance;
+            }>;
         };
         dataSearch: {
             searchQuery: (prop: IDataSearchParams) => Promise<IDataSearchResponse>;
@@ -76,10 +81,22 @@ export interface IPlatformWorkflowServerResponse {
     data: any;
 }
 export interface IPlatformWorkflowServerRequest {
-    method: "GET" | "POST";
+    method: "GET" | "POST" | "PUT" | "DELETE" | "PATCH";
     url: string;
     headers?: Record<string, string>;
     body?: any;
+}
+export interface IChangeStepParams {
+    processInstanceId: string;
+    dataInstance?: DataInstance;
+    status?: StatusType;
+    stepId?: string;
+}
+export interface IStartWorkflowParams {
+    appId: string;
+    processId: string;
+    input?: IWFEDBProcessInst["wfInput"];
+    initiatorUserId?: string;
 }
 export {};
 //# sourceMappingURL=IPlatformWorkflowAdaptor.d.ts.map

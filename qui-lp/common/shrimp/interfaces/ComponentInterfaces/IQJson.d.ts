@@ -7,7 +7,8 @@ export interface IQJsonOptions {
      */
     QL?: ScriptLang;
     V?: number;
-    otelStr?: string;
+    otelDiag?: string;
+    otelChannel?: string;
 }
 export interface IQView {
     pJson?: Array<ICompJson>;

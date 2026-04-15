@@ -8,6 +8,7 @@ export declare class InteractionManager {
     private element?;
     private events;
     constructor(context: Context, objectManager?: import("./objectManager").ObjectManager, zuiManager?: import("./zuiManager").ZuiManager, selectionManager?: import("./selectionManager").SelectionManager, eventHelper?: import("../helper/eventHelper").EventHelper<import("../../types").FlowEvents>, stateManager?: () => import("./stateManager").StateManager);
+    private documentMouseDown;
     attach(element: HTMLElement): void;
     detach(): void;
     private mouse?;

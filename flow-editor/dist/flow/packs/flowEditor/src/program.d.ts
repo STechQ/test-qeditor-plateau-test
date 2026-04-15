@@ -5,7 +5,7 @@ import { IStepOptions, IStudioUIModelBase } from "../../flowInterfaces/editor/IS
 import { DependencyContainer } from "./domain/core/diContainer";
 import { IImportExport } from "./domain/useCase/IImportExport";
 import { IHistory } from "./domain/useCase/IHistory";
-import { IFlowCopyModel, IFlowDesignModel } from "../../flowInterfaces/editor/IFlowDesignModel";
+import { IFlowCoreModel, IFlowDesignModel } from "../../flowInterfaces/editor/IFlowDesignModel";
 import { IFlowEditorState } from "../../flowInterfaces/editor/IFlowEditorState";
 import { IState } from "./domain/useCase/IState";
 import { IExportTypeMap, IFlowEditorProgram, IInitOptions } from "../../flowInterfaces/editor/editors/IFlowEditorProgram";
@@ -33,8 +33,8 @@ export declare class Program implements IFlowEditorProgram {
     registerStep(step: IStepOptions | string): void;
     exportModel<KType extends keyof IExportTypeMap>(type: KType): Promise<IExportTypeMap[KType]>;
     importModel(model: IFlowDesignModel): Promise<void>;
-    copy(): IFlowCopyModel;
-    paste(model: IFlowCopyModel): Promise<void>;
+    copy(): IFlowCoreModel;
+    paste(model: IFlowCoreModel): Promise<void>;
     getState(): IFlowEditorState;
     setState(state?: IFlowEditorState): void;
     setReadonly(readonly: boolean): void;

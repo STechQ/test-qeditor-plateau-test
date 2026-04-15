@@ -47,6 +47,7 @@ export interface IPlatformWFEAdaptor {
         }>;
         resolveSwimlane: (swimlaneId: string | undefined) => Promise<string>;
         resolveUser: (userId: string) => Promise<IUser>;
+        updateDBProcessInstance: (processInstance: IWFEDBProcessInst) => Promise<void>;
     };
     converters: {
         convertToIProcessInstAndIDataInst: (pi: IWFEDBProcessInst | IWFEDBProcessInstHistory) => Promise<{

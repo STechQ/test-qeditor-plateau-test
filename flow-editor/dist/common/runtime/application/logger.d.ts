@@ -116,6 +116,7 @@ export declare const LogCodes: {
     readonly wm2040: "wm-2040";
     readonly wm2041: "wm-2041";
     readonly wm2042: "wm-2042";
+    readonly wm2043: "wm-2043";
     readonly wm2100: "wm-2100";
     readonly wm2101: "wm-2101";
     readonly wm2102: "wm-2102";
@@ -151,6 +152,11 @@ export declare const LogCodes: {
     readonly sla2009: "sla-2009";
     readonly sla2010: "sla-2010";
     readonly sla2011: "sla-2011";
+    readonly rdbms2000: "rdbms-2000";
+    readonly rdbms2001: "rdbms-2001";
+    readonly rdbms2002: "rdbms-2002";
+    readonly rdbms2003: "rdbms-2003";
+    readonly rdbms2004: "rdbms-2004";
 };
 export declare const LogCodesSpecial: {
     readonly IP: "IP";
@@ -171,5 +177,6 @@ export declare const LogCodesSpecial: {
     readonly ResBEMock: "<-- (M)";
     readonly BGScopeStart: "BG ->";
     readonly BGScopeEnd: "BG <-";
+    readonly DBLOG: "DB-LOG";
 };
 //# sourceMappingURL=logger.d.ts.map

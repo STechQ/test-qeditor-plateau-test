@@ -90,6 +90,7 @@ export declare class MongoDBManager implements IDataStoreManager {
     }): Promise<void>;
     changeStream<T extends Document>(collectionName: CollectionName, cb: (result: ChangeStreamResult<T>) => Promise<void>, options?: {
         fullDocument?: boolean;
+        isPidSeperated?: boolean;
     }): Promise<ChangeStream<T, ChangeStreamDocument<T>>>;
     getAllCollections(): Promise<CollectionName[]>;
     BulkWrite<T, TTrx extends IMongoDBTransactionQueue | void = IMongoDBTransactionQueue>(collectionName: CollectionName, operations: AnyBulkWriteOperation<any>[], options?: {

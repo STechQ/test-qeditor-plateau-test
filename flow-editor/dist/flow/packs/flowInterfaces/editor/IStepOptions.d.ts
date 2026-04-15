@@ -7,6 +7,7 @@ import { INestedStore, IStoreModelForFlow, Store } from "../../../../common/ever
 import { IStudioUIModelBase } from "../../../../common/everything/studio/ui/IStudioUIModelBase";
 import { IWFModels } from "../../../../common/everything/workflow/runtimemodels/IModel";
 import { IExpressionDataFiltered } from "../../../../common/everything/dataType/runtimemodels/IExpression";
+import { ValidationErrorHelper } from "../../common/ValidationErrorHelper";
 export interface IExpressionInputOptions {
     width?: string;
 }
@@ -76,7 +77,7 @@ export interface IEditSectionInput<PropType extends IPropObject = IPropObject> {
     propValues: PropType;
     callbacks: {
         setProp: <K extends UnionKeys<PropType> & string>(name: K, value?: ValueOf<PropType, K>, data?: Record<string, string>) => Promise<Array<string> | void>;
-        setStepID: (newId: string) => void;
+        setStepID: (newId: string) => ValidationErrorHelper | null;
         setOutputs: (outputs: Array<string>) => void;
         setSwimlaneName: (name: IExpressionDataFiltered<"literal" | "string">) => void;
         changeOutputName: (oldName: string, newName: string) => void;

@@ -68,14 +68,7 @@ export declare class FlowConnection extends FlowObjectBase {
     private cancelEditing;
     private createOrUpdateLabel;
     updateOutputOptions(options: Array<string>): void;
-    getPosition(option: GetPositionOptions): Vector | {
-        left: number;
-        top: number;
-        width: number;
-        height: number;
-        right: number;
-        bottom: number;
-    } | null | undefined;
+    getPosition(option: GetPositionOptions): any;
     private createLinesAndArrowPoints;
     private createFromTo;
     private registerToStep;

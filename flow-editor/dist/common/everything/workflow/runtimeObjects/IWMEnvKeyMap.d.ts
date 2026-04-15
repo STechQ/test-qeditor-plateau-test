@@ -9,5 +9,14 @@ export interface IWMEnvKeyMap extends IEnvKeyMap {
     maxBatchJobTryCount?: string;
     failedJobRetryDelayMs?: string;
     nodeType?: string;
+    reportMode?: string;
+    dbType?: string;
+    dbTechnicalIdKey?: string;
+    maxTableNameLen?: string;
+    maxConstraintNameLen?: string;
+    maxTokenLen?: string;
+    dbConnectionString?: string;
+    dbUser?: string;
+    dbPassword?: string;
 }
 //# sourceMappingURL=IWMEnvKeyMap.d.ts.map

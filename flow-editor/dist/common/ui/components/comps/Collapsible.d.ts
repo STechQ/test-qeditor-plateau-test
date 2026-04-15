@@ -5,6 +5,7 @@ export interface ICollapsibleProps {
     children?: ReactNode;
     isKeepOpen?: boolean;
     onAddButton?: (e: React.MouseEvent<HTMLElement, MouseEvent>) => void;
+    listStyle?: React.CSSProperties;
 }
 export declare const Collapsible: FC<ICollapsibleProps>;
 //# sourceMappingURL=Collapsible.d.ts.map
