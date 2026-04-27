@@ -156,6 +156,7 @@ export interface IDory extends IContextItem {
     GetContext(): ContextManager;
     RegisterExternalContextItem(item: IContextItem): void;
     RemoveModelDictCache(): void;
+    ReRender(): void;
 }
 export declare const DoryContextName = "Dory";
 //# sourceMappingURL=IDory.d.ts.map
