@@ -1652,7 +1652,7 @@ export interface IGlobals_cryptography {
     *
     * @param {IHashDataRequest} data - The hash data request
     * @param {string} data.data - The data to be hashed
-    * @param {HashAlgorithm} data.algorithm  - The hashing algorithm to use. HashAlgorithm { SHA1, SHA256, SHA384, SHA512 }
+    * @param {HashAlgorithm} data.algorithm  - The hashing algorithm to use. HashAlgorithm for Web { SHA1, SHA256, SHA384, SHA512 }, HashAlgorithm for Mobile { SHA256, SHA384, SHA512 }
     * @returns {IHashDataResponse} Returns the hashedData.
     *
     * @example
@@ -1665,7 +1665,7 @@ export interface IGlobals_cryptography {
     * @param {IEncryptDataRequest} data - The Encrypt data request
     * @param {string} data.data - The data to be encrypted
     * @param {string} data.key  - The encryption key
-    * @param {EncryptionAlgorithm} data.algorithm  - Specifies which encryption algorithm to use.EncryptionAlgorithm { RSAOAEP, AESCTR, AESCBC, AESGCM }
+    * @param {EncryptionAlgorithm} data.algorithm  - Specifies which encryption algorithm to use. EncryptionAlgorithm for Web { RSAOAEP, AESCTR, AESCBC, AESGCM }, EncryptionAlgorithm for Mobil { RSAOAEP, AESGCM }
     * @returns {IEncryptDataResponse } Returns the encryptedData.
     *
     * @example
@@ -1679,7 +1679,7 @@ export interface IGlobals_cryptography {
     * @param {string} data.encryptedData - The encrypted data
     * @param {string} data.iv - The initialization vector used during encryption. ( If algorithm is "RSAOAEP", then iv is not used, otherwise it is required. )
     * @param {string} data.key - The encryption key
-    * @param {EncryptionAlgorithm} data.algorithm  - Specifies which encryption algorithm to use. EncryptionAlgorithm { RSAOAEP, AESCTR, AESCBC, AESGCM }
+    * @param {EncryptionAlgorithm} data.algorithm  - Specifies which encryption algorithm to use. EncryptionAlgorithm for Web { RSAOAEP, AESCTR, AESCBC, AESGCM }, EncryptionAlgorithm for Mobil { RSAOAEP, AESGCM }
     * @returns {IDecryptDataResponse  } Returns the encryptedData.
     *
     * @example
