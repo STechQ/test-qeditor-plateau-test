@@ -450,8 +450,14 @@ export interface IDeleteOrganizationFromGroupRequest {
 export interface IDeleteOrganizationFromGroupResponse {
     organization: IOrganization;
 }
+export interface IGetOrganizaionGroupDetailsOptions {
+    includeUsers?: boolean;
+    includeModules?: boolean;
+    includeModuleVersions?: boolean;
+}
 export interface IGetOrganizaionGroupDetailsRequest {
     organizationGroupId: string;
+    options?: IGetOrganizaionGroupDetailsOptions;
 }
 export interface IGetOrganizaionGroupDetailsResponse {
     organizationGroup: IOrganizationGroup;

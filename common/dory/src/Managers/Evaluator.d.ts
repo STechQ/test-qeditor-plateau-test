@@ -23,6 +23,16 @@ export declare class Evaluator implements IEvaluator {
         sourceMap?: string;
         eventName?: string;
     }): any;
+    private normalizeBindPathExpressions;
+    private createEventBindableComponents;
+    private isRuntimeBindingValue;
+    private unwrapRuntimeBindingValue;
+    private stringifyRuntimeBindingValue;
+    private createRuntimeBindingValue;
+    private registerEventBindingAssignment;
+    private createStoreBackedProxy;
+    private trackStoreProxyAccess;
+    private getStoreProxyPathSegment;
     private prepareEvaluationItems;
     createGlobal({ messagingManager, context, dory, ownerComponent, lastHistory, historyManager, ownerEventName }: {
         messagingManager?: MessagingManager;

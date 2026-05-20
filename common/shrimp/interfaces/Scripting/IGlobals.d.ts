@@ -1560,6 +1560,7 @@ export interface IGlobalsBase {
     getArrangedNestedData(obj: object, pairChar: string): {};
     getFormData(componentQID?: string): {};
     getArrangedFormData(formData: object, pairChar: string): {};
+    bind: (field: string) => any;
     Quick: IGlobals_Quick;
     containerServices?: IGlobals_ContainerServices;
     sso: IGlobals_sso;
@@ -1665,7 +1666,7 @@ export interface IGlobals_cryptography {
     * @param {IEncryptDataRequest} data - The Encrypt data request
     * @param {string} data.data - The data to be encrypted
     * @param {string} data.key  - The encryption key
-    * @param {EncryptionAlgorithm} data.algorithm  - Specifies which encryption algorithm to use. EncryptionAlgorithm for Web { RSAOAEP, AESCTR, AESCBC, AESGCM }, EncryptionAlgorithm for Mobil { RSAOAEP, AESGCM }
+    * @param {EncryptionAlgorithm} data.algorithm  - Specifies which encryption algorithm to use. EncryptionAlgorithm for Web { RSAOAEP, AESCTR, AESCBC, AESGCM }, EncryptionAlgorithm for Mobile { RSAOAEP, AESGCM }
     * @returns {IEncryptDataResponse } Returns the encryptedData.
     *
     * @example
@@ -1679,7 +1680,7 @@ export interface IGlobals_cryptography {
     * @param {string} data.encryptedData - The encrypted data
     * @param {string} data.iv - The initialization vector used during encryption. ( If algorithm is "RSAOAEP", then iv is not used, otherwise it is required. )
     * @param {string} data.key - The encryption key
-    * @param {EncryptionAlgorithm} data.algorithm  - Specifies which encryption algorithm to use. EncryptionAlgorithm for Web { RSAOAEP, AESCTR, AESCBC, AESGCM }, EncryptionAlgorithm for Mobil { RSAOAEP, AESGCM }
+    * @param {EncryptionAlgorithm} data.algorithm  - Specifies which encryption algorithm to use. EncryptionAlgorithm for Web { RSAOAEP, AESCTR, AESCBC, AESGCM }, EncryptionAlgorithm for Mobile { RSAOAEP, AESGCM }
     * @returns {IDecryptDataResponse  } Returns the encryptedData.
     *
     * @example

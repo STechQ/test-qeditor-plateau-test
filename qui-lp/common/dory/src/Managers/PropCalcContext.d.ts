@@ -9,6 +9,7 @@ export declare class PropCalcContext implements IContextItem {
     context: ContextManager;
     constructor(context: ContextManager, contextTarget?: IContextDepTarget);
     watch(bindObject: IStore, field: string): void;
+    watchPath(bindObject: IStore, rootField: string, pathSegments: Array<string | number>): void;
     /**
      * Return prop context value
      * @param self 'this' will be lost when triggering from Object defined get method
@@ -27,13 +28,14 @@ export declare class PropCalcContext implements IContextItem {
         self: PropCalcContext;
         lang?: ScriptLang;
     }): void;
+    private evaluateWithTarget;
     /**
      * Set prop context value with field and scriptValue
      * @param instanceHolder Target object instance
      * @param field Binded field
      * @param scriptValue Binded script value
      */
-    setContextTarget(instanceHolder: IContextTargetInst, field: string, scriptValue: string | object): void;
+    setContextTarget(instanceHolder: IContextTargetInst, field: string, scriptValue: string | object, extraTargetData?: Partial<IContextDepTarget>): void;
     /**
      * Reset prop context
      */

@@ -6,6 +6,7 @@ import { ISLA } from "./namedobjects/ISLA";
 import { IUnit } from "./namedobjects/IUnit";
 export interface ITask extends INamedObjectBase {
     taskId: string;
+    flowThreadId: string;
     taskDefinitionKey: string;
     taskName: string;
     taskLabel: string;

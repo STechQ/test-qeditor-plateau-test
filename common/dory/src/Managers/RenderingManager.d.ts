@@ -62,6 +62,9 @@ export declare class RenderingManager implements IRenderingManager {
     private getLang;
     private WillRender;
     private CalculatePropValue;
+    private registerStaticTwoWayBinding;
+    private getBindingPathFromBindExpression;
+    private getBindExpressionArgument;
     private GenerateProps;
     private GenerateEvents;
     /**

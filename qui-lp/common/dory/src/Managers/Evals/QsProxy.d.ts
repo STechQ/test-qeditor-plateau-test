@@ -1,3 +1,4 @@
+import { ContextManager } from "../../../../shrimp/context";
 import { IComponentCollection } from "../../../../shrimp/interfaces/ComponentInterfaces/IComponentCollection";
 import { IDictionary } from "../../../../shrimp/interfaces/IDictionary";
 import { IGlobalsQS } from "../../../../shrimp/interfaces/Scripting/IGlobals";
@@ -12,12 +13,16 @@ export declare class QSProxy {
 }
 export declare class QsProxyGenerator {
     constructor();
-    generateProxies(globals: IGlobalsQS, messagingManager: MessagingManager, dory: Dory, ownerComponent?: IComponentCollection): void;
+    generateProxies(globals: IGlobalsQS, messagingManager: MessagingManager, dory: Dory, context: ContextManager, ownerComponent?: IComponentCollection): void;
     globalProxyGenerator({ proxyObject, objectDict, fieldKey, ownerComp }: {
         proxyObject: IDictionary<any>;
         objectDict: IDictionary<any>;
         fieldKey: string;
         ownerComp?: IComponentCollection;
     }): void;
+    private createTrackedStoreValue;
+    private createNestedBindingPath;
+    private getStoreProxyPathSegment;
+    private isIgnoredStoreProxyProp;
 }
 //# sourceMappingURL=QsProxy.d.ts.map

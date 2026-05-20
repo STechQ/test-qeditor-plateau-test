@@ -70,6 +70,7 @@ export interface IDory extends IContextItem {
         globalStore: IStore;
         sharedStore: IStore;
     }): void;
+    clearStores(): void;
     getComponentCollectionByIdProperty({ id, deep }: {
         id: string;
         deep: boolean;

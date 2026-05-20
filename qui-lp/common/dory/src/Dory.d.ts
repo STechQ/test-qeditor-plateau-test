@@ -176,6 +176,7 @@ export declare class Dory implements IDory {
         globalStore: IStore;
         sharedStore: IStore;
     }): void;
+    clearStores(): void;
     GetPreviousHistory(): HistoryItem | null;
     Trigger(eventName: string, parameters?: Record<string, any>): any;
     SetOperatorCollection(operatorCollection: IRendererOperatorCollection): void;

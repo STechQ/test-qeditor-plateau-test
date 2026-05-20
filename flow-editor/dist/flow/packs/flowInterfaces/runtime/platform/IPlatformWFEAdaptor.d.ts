@@ -1,4 +1,4 @@
-import { IWorkflowModel, StepFlowModelPropType } from "../../../../../common/everything/workflow/runtimemodels/IWorkflow";
+import { IWorkflowModel, StepFlowModelPropType, StepSubWorkflowPropType } from "../../../../../common/everything/workflow/runtimemodels/IWorkflow";
 import { IWorkflowExecutionContext } from "../../../../../common/everything/workflow/runtimeObjects/IWorkflowExecutionContext";
 import { IWFEDBTask, IWFEDBProcessInst, IWFEDBProcessInstHistory, IWFEDBSLA, IWFEDBNotes, IWFEDBFiles, IWFEDBActivity, IWFEDBActivityHistory, IWFEDBTaskHistory } from "../../../../../common/everything/workflow/runtimeObjects/IWFEDB";
 import { DataInstance } from "../../../../../common/everything/workflow/runtimeObjects/DataInstance";
@@ -12,6 +12,7 @@ import { IUser } from "../../../../../common/everything/workflow/runtimeObjects/
 import { IActivity } from "../../../../../common/everything/workflow/runtimeObjects/IActivity";
 import { IWFEAuthzResult } from "../../../../../common/everything/workflow/runtimeObjects/IWFEAuthzResult";
 import { IWorkflowContext } from "../../../../../common/everything/workflow/runtimeObjects/IWorkflowContext";
+import { ISubWorkflowExecutionResult } from "../../../../../common/everything/workflow/runtimeObjects/ISubWorkflowExecutionResult";
 export interface IWFEEventStep {
     name: string;
     ID: string;
@@ -27,6 +28,7 @@ export interface IWFExecutionParams {
 }
 export interface IPlatformWFEAdaptor {
     runFunctionWithProps: (props: StepFlowModelPropType) => Promise<any>;
+    runSubWorkflow: (props: StepSubWorkflowPropType) => Promise<ISubWorkflowExecutionResult>;
     getConstant: (modelId: string) => Promise<any> | any;
     getDataSet: (dataSetId: string) => Promise<any> | any;
     wfExecutionContext: () => IWorkflowExecutionContext;

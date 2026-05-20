@@ -69,7 +69,7 @@ export interface IWFEDBTask {
     priority?: ITask["priority"];
     currentUnit?: ITask["currentUnit"];
 }
-export interface IWFEDBTaskHistory extends OmitTyped<OmitTyped<IWFEDBTask, "updatedAt">, "flowThreadId"> {
+export interface IWFEDBTaskHistory extends OmitTyped<IWFEDBTask, "updatedAt"> {
     updatedAt: undefined;
     status: "completed" | "failed" | "suspended" | "stepChanged";
     action?: IActionData;
@@ -98,6 +98,8 @@ export interface IWFEDBThreadState {
         additionalHeaders: string | undefined;
         additionalInfo: IAdditionalInfo;
     };
+    parentFlowThreadId?: string;
+    subProcessId?: string;
 }
 export interface IWFEDBThreadStateHistory extends OmitTyped<OmitTyped<OmitTyped<OmitTyped<OmitTyped<IWFEDBThreadState, "createDate">, "updateDate">, "ongoing">, "isSystemStep">, "isNotified"> {
     type: "fail" | "stop" | "next";

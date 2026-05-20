@@ -13,5 +13,6 @@ export declare class BaseStoreContext implements IStore {
     delete(name: string): void;
     deleteAll(): void;
     clear(): void;
+    private isMatchingPath;
 }
 //# sourceMappingURL=BaseStoreContext.d.ts.map

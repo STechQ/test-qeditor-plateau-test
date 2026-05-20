@@ -62,6 +62,14 @@ export interface IPlatformWFFAdaptor {
         thread: {
             retryBrokenThread: (threadId: string, processInstanceId: string) => Promise<IProcessInstance>;
         };
+        assign: {
+            assignToUser: (taskId: string, targetUserId: string) => Promise<{
+                isSuccess: boolean;
+            }>;
+            assignToSwimlane: (taskId: string, swimlane: string) => Promise<{
+                isSuccess: boolean;
+            }>;
+        };
     };
     log: (message: string, ...optionalParams: Array<any>) => void;
 }

@@ -3,6 +3,7 @@ export declare class QsExtensions {
     constructor();
     generateExtensions(dory: Dory): {
         String: {
+            value(stringParam: string): string;
             length: (stringParam: string) => number;
             toString(stringParam: string): string;
             lowerCase(stringParam: string): string;
@@ -26,7 +27,11 @@ export declare class QsExtensions {
             addYears: (date: Date, value: number) => Date;
             getTime: (date: Date) => number;
         };
+        Boolean: {
+            value(booleanParam: boolean): boolean;
+        };
         Number: {
+            value(number: Number): Number;
             toString(number: Number): string;
             toFormattedString: (number: Number, formatType: string, opt?: Intl.NumberFormatOptions) => string;
             fixed: (number: number, digits: number) => string;

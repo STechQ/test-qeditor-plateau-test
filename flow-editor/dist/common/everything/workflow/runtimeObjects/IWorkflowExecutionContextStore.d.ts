@@ -29,6 +29,8 @@ export interface IWorkflowExecutionContextStore extends IExecutionContextStore {
     initialContext?: IContext;
     envManager: EnvManager<IWMEnvKeyMap>;
     trxQueue?: IMongoDBTransactionQueue;
+    subWorkflowModels?: Record<string, IWorkflowModel>;
+    threadSubProcessIdMap?: Record<string, string>;
     wfEngineOnUs?: {
         workflowModel?: IWorkflowModel;
         dataInstance?: DataInstance;
@@ -43,6 +45,8 @@ export interface IWorkflowExecutionContextStore extends IExecutionContextStore {
         jumpToStepId?: string;
         jumpToStepName?: string;
         status?: StatusType;
+        parentFlowThreadId?: string;
+        resumeChain?: string[];
     };
 }
 //# sourceMappingURL=IWorkflowExecutionContextStore.d.ts.map
