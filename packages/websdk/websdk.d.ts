@@ -53,9 +53,6 @@ declare class WebsdkContainer {
     private initCompleted;
     private containerServicesParameter;
     constructor();
-    private lpLockedTitle?;
-    private applyLockedTitle;
-    private installTitleLock;
     init({ PlateauUIOptions, environmentInfo }: {
         PlateauUIOptions?: IPlateauUIOptions;
         environmentInfo?: string;

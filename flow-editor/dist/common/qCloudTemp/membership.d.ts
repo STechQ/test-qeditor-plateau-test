@@ -1,5 +1,13 @@
 import { IUser_SUSI } from "./authentication";
 import { IOrganizationActions, ITags, IOrganizationGroupConfigs } from "./quickCloud";
+export interface IOrganizationCloudStorageCeph {
+    type: "ceph";
+    storageHostUrl: string;
+    bucketID: string;
+}
+export interface IOrganizationCloudStorageNonExisting {
+    type: "nonExisting";
+}
 export interface IOrganizationCloud {
     azure?: {
         resourceGroupID?: string;
@@ -10,6 +18,12 @@ export interface IOrganizationCloud {
     };
     plateauGCP?: {
         environmentPrefix?: string;
+    };
+    storage?: IOrganizationCloudStorageCeph | IOrganizationCloudStorageNonExisting;
+    publish?: {
+        type: "none";
+    } | {
+        type: "nonExisting";
     };
 }
 export interface IOrganizationConfigs {
@@ -35,6 +49,8 @@ export interface IOrganization {
     tags?: Array<ITags['ID']>;
     organizationGroupId?: string;
     calculatedInfo?: IOrganizationCalculatedInfo;
+    updatedBy?: string;
+    updateDate?: Date;
     configs?: IOrganizationConfigs;
 }
 export interface IEditorTypes {

@@ -81,7 +81,6 @@ export interface IEditSectionInput<PropType extends IPropObject = IPropObject> {
         setOutputs: (outputs: Array<string>) => void;
         setSwimlaneName: (name: IExpressionDataFiltered<"literal" | "string">) => void;
         changeOutputName: (oldName: string, newName: string) => void;
-        subscribePropValues?: (cb: (newPropValues: PropType) => void) => () => void;
         scope: {
             getStore: <TStore extends Store = Store>() => TStore;
         };

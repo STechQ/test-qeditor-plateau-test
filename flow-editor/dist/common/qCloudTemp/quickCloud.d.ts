@@ -1,16 +1,17 @@
 import { ObjectID } from "../everything/dataType/runtimemodels/types";
-import { IOrganization, IOrganizationFeatures, IEditorTypes, IOrganizationCloud } from "./membership";
+import { IOrganization, IOrganizationFeatures, IEditorTypes } from "./membership";
 import { IAppCloud } from "./application";
 import { ContentType, ModelType } from "../everything/studio/ui/IStudioUIModelBase";
 import { ITagValue } from "./tags";
 import { IModelOrigInfo, IModuleOrigInfo } from "./applicationCopy";
 import { ICopyApp } from "./symDtoObjects";
+import { ICloudProviderPublishTypeDeployables } from "../clean/domain/useCases/ICloudProviderPublish";
 export declare const DEPENDED_MODEL_KEYS: string[];
 export declare const DEPENDED_IMAGE_KEYS: string[];
 export declare const APP_ITEM_CONTENT_TYPES: string[];
 export { ObjectID };
 export type AuthenticationType = "QCLOUDAUTH" | "ADFS";
-export type ModelHistoryType = "update" | "delete" | "checkin" | "publish" | "ownerItemDelete" | "fix";
+export type ModelHistoryType = "update" | "delete" | "checkin" | "publish" | "ownerItemDelete";
 export type DomainObjectType = "domain";
 export type OrgGroupObjectType = "orgGroup";
 export type ApplicationObjectType = "application";
@@ -337,7 +338,7 @@ export interface IItemLimitations {
 }
 export interface IOrganizationActions {
     publish?: {
-        targets?: Record<keyof IOrganizationCloud, boolean>;
+        targets?: Record<ICloudProviderPublishTypeDeployables, boolean>;
     };
     entityGenerationDomain?: "softtech" | "isbank";
 }

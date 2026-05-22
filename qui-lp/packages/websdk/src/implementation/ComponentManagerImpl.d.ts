@@ -13,6 +13,7 @@ export declare class ComponentManagerImpl implements IComponentManager {
     private readonly websdkContext;
     contextName: string;
     parentInstance: any;
+    private static pendingSlotPatches;
     constructor(contextName: string, parentInstance: any, websdkContext: ContextManager);
     componentHasProp(componentName: string, compInstance: IComponent | undefined, propName: string): boolean;
     private compPropModifier;
@@ -50,6 +51,9 @@ export declare class ComponentManagerImpl implements IComponentManager {
         compLocater: ElementLocation;
         childName: string;
     }): void;
+    private enqueueSlotPatch;
+    private flushSlotPatch;
+    private refreshParentComponent;
     setVisibility(compColl: IComponentCollection, compVisibility: boolean): void;
     getComponentValue(compColl: IComponentCollection): any;
     setComponentValue(compColl: IComponentCollection, value: string): void;

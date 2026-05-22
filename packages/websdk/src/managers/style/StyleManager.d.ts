@@ -11,6 +11,8 @@ export declare class StyleManager implements IStyleManager, IAttachable {
     private cssIndexDict;
     private domInteractor;
     private isShadowDOMEnabled;
+    private static readonly _flexPropNames;
+    private static readonly _ignoredStyleProps;
     constructor(uid: any, websdkContext: ContextManager);
     attach(): void;
     detach(): void;
@@ -19,6 +21,7 @@ export declare class StyleManager implements IStyleManager, IAttachable {
     resurrect(): void;
     private decideCompStyleWithDict;
     applyStyle: (compCollection: IComponentCollection) => void;
+    private getSelector;
     addStyleRule: (matchStyleParam: matchStyle) => void;
     private deleteSheet;
     private addSheet;

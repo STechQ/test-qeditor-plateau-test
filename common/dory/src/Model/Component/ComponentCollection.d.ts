@@ -44,8 +44,6 @@ export declare class ComponentCollection implements IComponentCollection {
     private _visibilityApplied;
     private _componentDisabled;
     private _componentReadonly;
-    private _domCleanupRegistered;
-    private _styleFieldsInitialized;
     private compInstanceSetCb?;
     asChildIndex: number;
     compareComponent: boolean;

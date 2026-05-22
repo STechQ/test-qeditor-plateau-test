@@ -47,6 +47,7 @@ export interface IDory extends IContextItem {
     PageRenderStartedHook: Hook<IPageRenderStartedCb>;
     SettingModelsContext: ISettingModelsContext;
     platformType: PlatformType;
+    shellConfigs: IShellConfiguration;
     Render({ qjson, compParentInst, storeItems, pageId, pageName, theme, options }: {
         qjson: IQJSon;
         compParentInst?: any;

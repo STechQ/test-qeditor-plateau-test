@@ -9,8 +9,7 @@ export declare class ComponentProvider {
     static getComponentList: (companyLibraryGroup: Array<CompGroupType>) => Record<CompGroupType, any>;
     static getComponentProps: (companyLibraryGroup: string, name: any) => any;
     static getComponentEvents: (companyLibraryGroup: string, name: any) => any;
-    private static editModeComponentMap;
-    static getComponentConst: (name: any, isEditMode?: boolean) => ComponentTarget | undefined;
+    static getComponentConst: (name: any) => ComponentTarget | undefined;
     static editorcompList: {
         Messaging: number;
         QTimer: number;

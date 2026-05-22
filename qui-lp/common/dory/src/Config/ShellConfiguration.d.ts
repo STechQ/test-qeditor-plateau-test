@@ -130,7 +130,9 @@ export declare class ShellConfiguration implements IShellConfiguration {
     getLogBulkSize?: () => number | undefined;
     renderer: IRenderer;
     onLRChange?: (region: string) => void;
-    showBlockComponentsAsDummy?: boolean;
+    renderCCOnEdit?: boolean;
+    pageRenderCCOnEditOverride?: boolean;
+    blockComponentNameMap?: Map<string, string>;
     constructor();
 }
 //# sourceMappingURL=ShellConfiguration.d.ts.map
