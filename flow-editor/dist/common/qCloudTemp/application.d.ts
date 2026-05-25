@@ -36,6 +36,7 @@ export interface IAppCloud {
                 connStrings: IDatabaseConnectionStrings;
             };
         };
+        organizationStoragePath?: string;
     };
     plateauGCP?: {
         web?: {
@@ -49,6 +50,5 @@ export interface IAppCloud {
         hosts?: Array<string>;
         isActive: boolean;
     };
-    ceph?: {};
 }
 //# sourceMappingURL=application.d.ts.map

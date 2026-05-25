@@ -1,7 +1,4 @@
 export type OmitTyped<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
-export type RequireKey<T, K extends keyof T> = Omit<T, K> & {
-    [P in K]-?: T[P];
-};
 export type UnionKeyof<T> = T extends any ? keyof T : never;
 type IsPlainObject<T> = T extends object | undefined ? (T extends any[] ? false : true) : false;
 export type NestedUnionKeyof<ObjectType> = ObjectType extends any ? {

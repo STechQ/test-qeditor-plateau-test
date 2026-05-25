@@ -1,7 +1,6 @@
 import { FileUrlCreationRuleName } from "../../jobs/src/application/shared/fileUrlCreator";
 import { IModel, IModule, IWorkflowExportItem } from "../../ui/src/domain/model/models";
-import { ICloudProviderPublishTypeDeployables } from "../clean/domain/useCases/ICloudProviderPublish";
-import { IOrganization } from "./membership";
+import { IOrganization, IOrganizationCloud } from "./membership";
 import { IApplication, IDependentModel, IModelBodyObject, IOrganizationActions, UsageType } from "./quickCloud";
 import { IModuleExportItem, IUpdateStrategyInfo } from "./symDtoObjects";
 export interface IQCloudBaseResponse<T extends Record<string, any> | void> {
@@ -67,7 +66,7 @@ export interface IGetExportModelsResponse {
 export interface IExportItem {
     id: string;
     ver: string;
-    type: "settings_yaml" | "alert_qjson" | "pipeline_qjson" | "localProxy_yaml" | "globalLocalization_qjson" | "loading_qjson" | "componentList_js" | "namedComps" | "qjsons" | "css" | "containerServices_js" | "bpmn" | "process" | "entityDesigner" | "flow" | "assetList_js" | "lottie" | "appSettings" | "png" | "jpg" | "jpeg" | "svg" | "gif" | "woff" | "woff2" | "ttf" | "otf" | "certificate" | "constant" | "containerServIntelli_ts" | "theme" | "container" | "befunc" | "endpoint";
+    type: "settings_yaml" | "alert_qjson" | "pipeline_qjson" | "localProxy_yaml" | "globalLocalization_qjson" | "loading_qjson" | "componentList_js" | "namedComps" | "qjsons" | "css" | "containerServices_js" | "bpmn" | "process" | "entityDesigner" | "flow" | "assetList_js" | "lottie" | "appSettings" | "png" | "jpg" | "jpeg" | "svg" | "gif" | "woff" | "woff2" | "ttf" | "otf" | "certificate" | "containerServIntelli_ts" | "theme" | "container" | "befunc" | "endpoint" | "constant";
     size?: number;
     path: string;
     name: string;
@@ -184,7 +183,7 @@ export interface IBuildInformation {
     name: string;
     version: string;
 }
-export type IEnvironment = IGitlabEnvironment | IAWSLambdaEnvironment | IServerDecidedEnvironment;
+export type IEnvironment = IGitlabEnvironment | IAWSLambdaEnvironment | IAzureEnvironment;
 export interface IGitlabEnvironment {
     type: "gitlab";
     params: IGitlabEnvironmentParams;
@@ -203,8 +202,9 @@ export interface IAWSLambdaEnvironment {
         secretAccessKey: string;
     };
 }
-export interface IServerDecidedEnvironment {
-    type: "serverDecided";
+export interface IAzureEnvironment {
+    type: "azure";
+    envID: string;
 }
 export interface IDeployJobItem {
     deployObjectID: string;
@@ -294,26 +294,19 @@ export interface IExportJobStepDbItem {
 export interface IArtifactMinioDetails {
     objectName: string;
 }
-export interface IArtifactApiDetails {
-    objectName: string;
-}
-export type IArtifactInfoDBItem = {
+export interface IArtifactInfoDBItem {
     ID: IQcloudJob["jobID"] | IQcloudJob["groupID"];
     name: string;
     type: "web";
-} & ({
-    source: "api";
-    details: IArtifactApiDetails;
-} | {
     source: "minio";
     details: IArtifactMinioDetails;
-});
+}
 export interface IInitJobHistoryRequest {
     ID: string;
     appID: string;
     isMultiStep: boolean;
     type: "publish" | "download";
-    cloudProvider?: ICloudProviderPublishTypeDeployables;
+    cloudProvider?: keyof IOrganizationCloud;
     platform?: IPlatformSelection;
 }
 export interface IExportJobHistoryDbItem extends Omit<IInitJobHistoryRequest, "appID"> {

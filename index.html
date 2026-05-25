@@ -1,12 +1,18 @@
-<!doctype html><html style="overflow-y: hidden;"><title>Quick Editor</title><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head><body><link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet"><link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet"><script>try {               
+<!doctype html><html style="overflow-y: hidden;"><title>Quick Editor</title><head><meta name="viewport" content="width=device-width,initial-scale=1"></head><body><link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet"><link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet"><script>try {               
                 parent.document // can access CORS (prod | new local)
                 if (parent.location.host.indexOf(":") == -1) { throw 0; } // no port (prod)
                 if (parent.location.href.indexOf("/standalone") > -1) { throw 0; } // (standalone)
                 const base = document.createElement("base"); base.href = "/quick/";
                 document.head.appendChild(base);
             } catch(err){ }
+            // CRITICAL: Initialize quickVersions BEFORE standAlone.js loads!
+            // runtime.html accesses window.parent.quickVersions immediately on load.
+            window.quickVersions = window.quickVersions || {};
+            window.quickVersions["@stechquick/qeditor"] = { 
+                version: "3.2.0-1", 
+                date: new Date().toString() 
+            };
             const scr = document.createElement("script");
-            scr.charset = "UTF-8";
             scr.src = "./standAlone.js?ver=3.2.0-1";
             document.body.appendChild(scr);
             document.addEventListener("keydown", function (event) { 

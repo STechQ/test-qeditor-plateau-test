@@ -15,8 +15,19 @@ export type IPropObject = {
 export type IPropObjectDeep = {
     [key: string]: PropValue;
 };
+export interface IS3BucketPolicy {
+    version: string;
+    statements: Array<IS3Statement>;
+}
+export interface IS3Statement {
+    sid: string;
+    effect: 'Allow' | 'Deny';
+    principal: IExpressionData | string;
+    action: string | Array<string>;
+    resource: Array<string>;
+}
 export type IPropArray = Array<PropValue>;
-export type PropValue = IExpressionData | IPropObjectDeep | IPropArray | string | number | boolean | undefined;
+export type PropValue = IExpressionData | IPropObjectDeep | IPropArray | string | number | boolean | undefined | IS3BucketPolicy;
 export type IStepModel = {
     N: string;
     V: string;
