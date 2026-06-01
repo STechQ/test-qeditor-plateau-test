@@ -55,6 +55,7 @@ export declare class Renderer implements IRenderer {
         name: string;
     }): void;
     SetThemes(themes: ITheme[]): void;
+    SetRenderCCOnEdit(renderCCOnEdit: boolean): void;
     SetThemeMode(isLight: boolean): void;
     SetLogParams(logParams: ILogParams): void;
     GetLogParams(): ILogParams | undefined;

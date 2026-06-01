@@ -148,6 +148,7 @@ export interface IDory extends IContextItem {
         name: string;
     }): void;
     SetThemes(themes: Array<ITheme>): void;
+    SetRenderCCOnEdit(renderCCOnEdit: boolean): void;
     GetCurrentTheme(): {
         isLight: boolean;
         name: string;
