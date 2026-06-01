@@ -7,7 +7,7 @@ import { IApplicationVersion, IApplicationVersionArtifacts } from "./application
 import { IUserPreferences } from "./userPreference";
 import { IMainStatisticInfo } from "../qCloudTemp/backoffice";
 import { IRole } from "./authorization";
-import { IExportJobDbItem, IExportJobStepDbItem } from "./exporter";
+import { IArtifactInfoDBItem, IExportJobDbItem, IExportJobStepDbItem } from "./exporter";
 import { IUserRequest } from "./userRequest";
 import { FileSystemModel } from "./modelDatas";
 import { ITemplateInfo } from "./template";
@@ -16,11 +16,12 @@ import { IAnnouncementDataObj, IAnnouncementServiceObj } from "./announcement";
 import { ICodeAssistantResponse } from "@stechquick/algae/lib/qCloudTemp/AIService/codeAssistant";
 import { IExternalToken } from "./externalToken";
 import { IAppCloud } from "./application";
-import { AzureBlobContentType } from "./azureTypes";
+import { StorageContentType } from "./storageTypes";
 import { ModelType } from "../everything/studio/ui/IStudioUIModelBase";
 import { ITagDefinition, ITagValue, TagType } from "./tags";
 import { IAllOrgGroupApplicationData } from "./organizationGroupApplication";
 import { IModelOrigInfo } from "./applicationCopy";
+import { OmitTyped } from "../helpers/typeHelper";
 export type VersionIncType = 'Minor' | 'Major' | 'Fix';
 export interface IPageable {
     skip: number;
@@ -177,7 +178,7 @@ export interface IAddApplicationResponse {
 export interface IUpdateApplicationRequestLogo {
     fullName: string;
     dataBase64: string;
-    contentType: AzureBlobContentType;
+    contentType: StorageContentType;
 }
 export interface IUpdateApplicationRequest {
     ID?: string;
@@ -218,7 +219,6 @@ export interface IUpdateModelRequest {
     appID?: string;
     checkin?: boolean;
     publish?: boolean;
-    fix?: boolean;
     release?: boolean;
     shortComment?: string;
     comment?: string;
@@ -275,16 +275,15 @@ export interface IGetCodeAssistantResponse {
 export interface IGetCreateUIResponse {
     jobId: string;
 }
-export interface IGetCreateUIJobResponse {
-    qjson?: string;
-    error?: {
-        errorMsg: string;
-    };
-}
 export interface IGetAIJobResponse {
     requestedJob: string;
     status: 'InProgress' | 'Completed' | 'Failed';
-    response?: IGetCreateUIJobResponse;
+    response?: {
+        qjson?: string;
+        error?: {
+            errorMsg: string;
+        };
+    };
     error?: string;
 }
 export interface IListUsersResponse {
@@ -825,6 +824,9 @@ export interface ISaveTagValuesRequest {
     mainOrganizationID: ObjectID;
     updatedTags: ITagValue[];
 }
+export type IArtifactInfoDBItemDTO = OmitTyped<IArtifactInfoDBItem, "ID"> & {
+    ID: string;
+};
 export interface ISaveTagValuesResponse {
 }
 export interface IUpsertAllOrgApplicationsRequest {
