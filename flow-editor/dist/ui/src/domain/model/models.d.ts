@@ -335,7 +335,7 @@ export interface IExportJobArtifactInfoItem {
     source: IArtifactInfoDBItem["source"];
     details: IArtifactMinioDetails;
 }
-export type ModelHistoryType = "update" | "delete" | "checkin" | "publish" | "ownerItemDelete";
+export type ModelHistoryType = "update" | "delete" | "checkin" | "publish" | "ownerItemDelete" | "fix";
 export interface IModelCheckout {
     user: string;
     date: Date;

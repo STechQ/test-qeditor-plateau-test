@@ -81,7 +81,6 @@ export interface IRenderer {
         name: string;
     }): void;
     SetThemes(themes: Array<ITheme>): void;
-    SetRenderCCOnEdit(renderCCOnEdit: boolean): void;
     SetThemeMode(isLight: boolean): void;
 }
 export interface ISettingModelsContext extends IContextItem {

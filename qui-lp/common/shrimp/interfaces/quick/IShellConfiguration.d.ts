@@ -132,9 +132,7 @@ export interface IShellConfiguration {
     stringToBase64?: (data: string) => string;
     base64ToString?: (data: string) => string;
     renderer: IRenderer;
-    renderCCOnEdit?: boolean;
-    pageRenderCCOnEditOverride?: boolean;
-    blockComponentNameMap?: Map<string, string>;
+    showBlockComponentsAsDummy?: boolean;
 }
 export interface IHistoryBasedShellConfiguration {
     isEditor: boolean;

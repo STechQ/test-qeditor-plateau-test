@@ -44,7 +44,6 @@ export declare class RenderingManager implements IRenderingManager {
     private qjsonVersion?;
     QJsonManagerForAIService: QJsonManagerForAIService | undefined;
     private scrollRef?;
-    private readonly renderYieldEvery;
     constructor({ pjson, context, dataItem, asChildType, asChildName, controlDict, qLang, parentCompCollection, compareCompValue, dynamicCompIDSuffix, pageScripting, qjsonVersion, scrollRef }: {
         pjson: Array<ICompJson | null>;
         context: ContextManager;
@@ -85,7 +84,7 @@ export declare class RenderingManager implements IRenderingManager {
     private isEditMode;
     private getComponentParentInstance;
     RenderRoot(): Promise<void>;
-    Render(jsonIndexParam: number, allowCooperativeYield?: boolean): void;
+    Render(jsonIndexParam: number): void;
     private overrideChildStylesFromParent;
     private removeReservedFields;
     /**

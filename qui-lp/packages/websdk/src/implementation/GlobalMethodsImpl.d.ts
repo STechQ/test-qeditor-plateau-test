@@ -22,7 +22,6 @@ export declare class GlobalMethodsImpl implements IGlobalMethods {
     static settingsWrapper: IWebSDKSettingsWrapper;
     private childRenderer?;
     private readonly websdkContext;
-    private componentManager?;
     constructor({ contextName, parentInstance, config, errorContainerTarget, settingsWrapper, websdkContext, }: {
         contextName: string;
         parentInstance: any;
