@@ -1,0 +1,9 @@
+export declare const PrivilegeModelTypeTag = "privilege";
+export type PrivilegeModelType = typeof PrivilegeModelTypeTag;
+export declare const RoleModelTypeTag = "role";
+export type RoleModelType = typeof RoleModelTypeTag;
+export declare const PersonaModelTypeTag = "persona";
+export type PersonaModelType = typeof PersonaModelTypeTag;
+export declare const SwimlaneModelTypeTag = "swimlane";
+export type SwimlaneModelType = typeof SwimlaneModelTypeTag;
+//# sourceMappingURL=types.d.ts.map

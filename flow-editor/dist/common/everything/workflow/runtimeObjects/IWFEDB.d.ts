@@ -7,7 +7,7 @@ import { IFile } from "./namedobjects/IFile";
 import { INote } from "./namedobjects/INote";
 import { IProcessInstance } from "./namedobjects/IProcessInstance";
 import { ISLA } from "./namedobjects/ISLA";
-import { IUser } from "./namedobjects/IUser";
+import { IRuntimeUser } from "./namedobjects/IRuntimeUser";
 import { IAdditionalInfo } from "./IWorkflowIncomingRequest";
 export type DBDateEPOC = number;
 export type DBReturn<T> = T & {
@@ -94,7 +94,7 @@ export interface IWFEDBThreadState {
     isNotified?: boolean;
     action?: IActionData;
     ongoing: {
-        user: IUser;
+        user: IRuntimeUser;
         additionalHeaders: string | undefined;
         additionalInfo: IAdditionalInfo;
     };
@@ -120,7 +120,6 @@ export interface IWFEDBActivity {
     uniqueKeys?: IActivity["uniqueKeys"];
     actionLabel?: IActivity["actionLabel"];
     actionType?: IActivity["actionType"];
-    customType?: IActivity["customType"];
     user: IActivity["user"];
     assignedUserId?: IActivity["assignedUserId"];
     assignedSwimlaneId?: IActivity["assignedSwimlaneId"];
@@ -173,7 +172,7 @@ export interface IWFEBrokenThreads {
     stepName?: string;
     stepLabel?: string;
     action?: IActionData;
-    user?: IUser;
+    user?: IRuntimeUser;
 }
 export interface IWFEBrokenThreadsHistory extends OmitTyped<IWFEBrokenThreads, "user" | "updateDate" | "createDate"> {
     createDate: DBDateEPOC;

@@ -9,6 +9,8 @@ import { IStoreModelForFlow } from "../../../../../common/everything/store/desig
 import { IWorkflowDesignModel } from "../../../../../common/everything/workflow/designtimemodels/IWorkflowDesignModel";
 import { ModelValidatorResult } from "../../../common/ModelValidator";
 import { IFlowLocationDetail } from "../../../../../common/helpers/modelSearch/flowModelSearch";
+import { IPrivilegeItem } from "../../../../../common/everything/accessmanager/designtime/IPrivilegeDesign";
+import { IActionItem } from "../../../../../common/everything/action/IActionDesign";
 export interface IExportTypeMap {
     both: IFlowEditorModel;
     design: IFlowDesignModel | IWorkflowDesignModel;
@@ -37,6 +39,8 @@ export interface IInitOptions {
         basePath?: string;
     };
     models: Array<IStudioUIModelBase>;
+    privileges?: Array<IPrivilegeItem>;
+    actions?: Array<IActionItem>;
 }
 export interface IFlowEditorProgram {
     init(options: IInitOptions): Promise<void>;
@@ -54,6 +58,8 @@ export interface IFlowEditorProgram {
     setReadonly(readonly: boolean): void;
     setFuncType(flowType: "flow" | "workflow" | "befunc"): void;
     setModels(models: Array<IStudioUIModelBase>): void;
+    setPrivileges(privileges: Array<IPrivilegeItem>): void;
+    setActions(actions: Array<IActionItem>): void;
     undo(): Promise<boolean>;
     redo(): Promise<boolean>;
     validateAndFixModel(): Promise<ModelValidatorResult>;

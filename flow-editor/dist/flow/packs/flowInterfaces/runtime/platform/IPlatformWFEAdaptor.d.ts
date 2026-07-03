@@ -8,16 +8,17 @@ import { IAction, IActionData } from "../../../../../common/everything/workflow/
 import { ISLA } from "../../../../../common/everything/workflow/runtimemodels/ISLA";
 import { INote } from "../../../../../common/everything/workflow/runtimeObjects/namedobjects/INote";
 import { IFile } from "../../../../../common/everything/workflow/runtimeObjects/namedobjects/IFile";
-import { IUser } from "../../../../../common/everything/workflow/runtimeObjects/namedobjects/IUser";
+import { IRuntimeUser } from "../../../../../common/everything/workflow/runtimeObjects/namedobjects/IRuntimeUser";
 import { IActivity } from "../../../../../common/everything/workflow/runtimeObjects/IActivity";
 import { IWFEAuthzResult } from "../../../../../common/everything/workflow/runtimeObjects/IWFEAuthzResult";
 import { IWorkflowContext } from "../../../../../common/everything/workflow/runtimeObjects/IWorkflowContext";
 import { ISubWorkflowExecutionResult } from "../../../../../common/everything/workflow/runtimeObjects/ISubWorkflowExecutionResult";
+import { IRuntimeSwimlane } from "../../../../../common/everything/workflow/runtimeObjects/namedobjects/IRuntimeSwimlane";
+import { ISwimlaneExpressionData } from '../../../../../common/everything/workflow/runtimemodels/stepModels/IHumanTaskPropType';
 export interface IWFEEventStep {
     name: string;
     ID: string;
     label: string;
-    action: IAction;
 }
 export interface IConvertFromIProcessInstanceOptions {
     stepStates: IWFEDBProcessInst["stepStates"];
@@ -35,8 +36,8 @@ export interface IPlatformWFEAdaptor {
     wffContext: () => IWorkflowContext;
     wffContextNoProcessInstance(): IWorkflowContext;
     authz: {
-        canUserStartProcess: (user: IUser, startAction: IAction) => Promise<IWFEAuthzResult>;
-        canUserPerformActionOnTask: (user: IUser, task: IWFEDBTask, taskAction: IAction, activityList: Array<IActivity>, processInstance: IProcessInstance) => Promise<IWFEAuthzResult>;
+        canUserStartWorkflow: (user: IRuntimeUser) => Promise<IWFEAuthzResult>;
+        canUserPerformActionOnTask: (user: IRuntimeUser, task: IWFEDBTask, taskAction: IAction, activityList: Array<IActivity>, processInstance: IProcessInstance) => Promise<IWFEAuthzResult>;
     };
     system: {
         getParam<K extends keyof IWFExecutionParams>(key: K): IWFExecutionParams[K];
@@ -47,9 +48,9 @@ export interface IPlatformWFEAdaptor {
             sla: IWFEDBSLA;
             priority: ITask["priority"];
         }>;
-        resolveSwimlane: (swimlaneId: string | undefined) => Promise<string>;
-        resolveUser: (userId: string) => Promise<IUser>;
         updateDBProcessInstance: (processInstance: IWFEDBProcessInst) => Promise<void>;
+        resolveSwimlane: (swimlaneExp: ISwimlaneExpressionData) => Promise<IRuntimeSwimlane>;
+        resolveUser: (userId: string) => Promise<IRuntimeUser>;
     };
     converters: {
         convertToIProcessInstAndIDataInst: (pi: IWFEDBProcessInst | IWFEDBProcessInstHistory) => Promise<{

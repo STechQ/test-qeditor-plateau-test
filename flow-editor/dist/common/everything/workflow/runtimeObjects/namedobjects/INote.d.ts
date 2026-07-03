@@ -1,10 +1,10 @@
 import { DateTime } from "../../runtimemodels/types";
-import { IUser } from "./IUser";
+import { IRuntimeUser } from "./IRuntimeUser";
 export interface INote {
     id: string;
     created: DateTime;
     updated: DateTime;
-    user: IUser;
+    user: IRuntimeUser;
     note: string;
 }
 //# sourceMappingURL=INote.d.ts.map

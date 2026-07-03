@@ -1,16 +1,21 @@
 import { ISLA } from "../ISLA";
 import { IForm, StatusType } from "../IWorkflow";
-import { IAction } from "../../runtimeObjects/IAction";
-import { IPropObject } from "@stechquick/flow-interfaces/runtime";
+import { IActionReference } from "../../runtimeObjects/IActionReference";
+import { IExpressionData, IExpressionDataTypeSelection, IPropObject } from "@stechquick/flow-interfaces/runtime";
+export interface ISwimlaneExpressionData {
+    type: IExpressionDataTypeSelection<"swimlane" | "constant" | "context">;
+    value: string;
+}
 export type IHumanTaskPropType = IPropObject & {
     procesStatus: StatusType;
+    procesStatusLiteral?: string;
     taskStatus?: StatusType;
-    forms: Array<IForm>;
-    actions: Array<IAction>;
+    form: IForm;
+    actions: Record<number, IActionReference>;
     sendTo?: "swimlane" | "user";
-    user?: string;
     stepIdToShow?: string;
-    swimlane?: string;
+    user?: IExpressionData;
+    swimlane?: ISwimlaneExpressionData;
     priority?: number;
     sla?: ISLA;
 };

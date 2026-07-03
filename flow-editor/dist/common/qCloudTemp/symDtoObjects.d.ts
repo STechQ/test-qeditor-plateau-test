@@ -204,8 +204,12 @@ export interface ICopyApp {
 }
 export interface IMissingModule {
     name: string;
-    currentVersion: string;
-    lastReleasedVersion: string;
+    ID: string;
+    currentVersion?: string;
+    lastReleasedVersion?: string;
+    ownerName: string;
+    ownerId?: string;
+    ownerType: "application" | "module";
 }
 export interface IUpdateModelRequest {
     ID: string;
@@ -391,6 +395,40 @@ export interface IAttachModuleToAppRequest extends IAppendOuterOrg {
     outerOrgId?: NonNullable<IAppendOuterOrg["outerOrgId"]>;
     version?: string;
     updateStrategy?: string;
+}
+export interface IAttachModuleToModule {
+    applicationID: string;
+    moduleID: string;
+    version: string;
+    selectedParentModuleID: string;
+    fullPath?: string;
+    outerOrgId?: string;
+}
+export interface ICheckModuleImportConflictsRequest {
+    moduleID: string;
+    version: string;
+    outerOrgId?: string;
+    fromMarketplace?: boolean;
+}
+export interface ICheckModuleImportConflictsResponse {
+    conflicts: Array<IModelImportConflict>;
+}
+export interface IGetModuleActiveImportersRequest {
+    moduleIDs: Array<string>;
+}
+export interface IModuleActiveImporters {
+    moduleID: string;
+    importerAppNames: Array<string>;
+}
+export interface IGetModuleActiveImportersResponse {
+    blocked: Array<IModuleActiveImporters>;
+}
+export interface IModelImportConflict {
+    modelID: string;
+    modelName: string;
+    ownerType: "application" | "module";
+    ownerName: string;
+    usedByApps: Array<string>;
 }
 export interface ICheckExistenceOfModuleVersionResponse {
     majorExist: boolean;
@@ -777,6 +815,7 @@ export interface IListTreeViewItemsRequest {
         modules: Array<string>;
         appendApp: boolean;
     };
+    moduleID?: string;
 }
 export interface ICreateTagDefinitionRequest {
     mainOrganizationId: ObjectID;

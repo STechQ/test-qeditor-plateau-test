@@ -96,6 +96,8 @@ export declare const ErrorCodes: {
     readonly wfe239: "WFE-239";
     readonly wfe240: "WFE-240";
     readonly wfe241: "WFE-241";
+    readonly wfe242: "WFE-242";
+    readonly wfe243: "WFE-243";
     readonly fmProxy: "FM-Proxy";
     readonly fm3027: "FM-3027";
     readonly fm3028: "FM-3028";
@@ -118,6 +120,7 @@ export declare const ErrorCodes: {
     readonly wm3025: "WM-2735";
     readonly wm3027: "WM-2730";
     readonly wm3028: "WM-3028";
+    readonly wm3029: "WM-3029";
     readonly wm3030: "WM-3030";
     readonly wm3031: "WM-3031";
     readonly wm3032: "WM-3032";
@@ -229,6 +232,10 @@ export declare const ErrorCodes: {
     readonly wm3154: "WM-3154";
     readonly wm3155: "WM-3155";
     readonly wm3156: "WM-3156";
+    readonly wm3157: "WM-3157";
+    readonly wm3158: "WM-3158";
+    readonly wm3159: "WM-3159";
+    readonly wm3160: "WM-3160";
     readonly js1000: "JS-1000";
     readonly js1001: "JS-1001";
     readonly js1002: "JS-1002";

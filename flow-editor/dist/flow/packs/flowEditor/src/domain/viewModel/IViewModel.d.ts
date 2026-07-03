@@ -6,7 +6,7 @@ import { IStepModel } from "../../../../flowInterfaces/runtime/IStepModel";
 import { IExpressionData } from "@stechquick/flow-interfaces/runtime";
 import { INestedStore, Store } from "../../../../../../common/everything/store/designtimemodels/IStoreModel";
 import { ISLA } from "../../../../../../common/everything/workflow/runtimemodels/ISLA";
-import { IExecuteFlowByMapping, IOldCamundaFieldsForWFModel } from "../../../../../../common/everything/workflow/runtimemodels/IWorkflow";
+import { IExecuteFlowByMapping } from "../../../../../../common/everything/workflow/runtimemodels/IWorkflow";
 import { ISwitchCaseExp } from "../../../../../../common/everything/flow/runtimeModels/ISwitch";
 import { FlowExecutionType } from "@stechquick/flow-interfaces/runtime/IFlowModel";
 import { IExpressionDataFiltered } from "../../../../../../common/everything/dataType/runtimemodels/IExpression";
@@ -33,11 +33,12 @@ export interface IStepInstance {
         compiledCode: string;
         errors: Array<string>;
     };
-    oldCamundaFields?: IStepModel["oldCamundaFields"];
 }
 export interface ISwimlaneInstance {
     id: string;
     name: IExpressionDataFiltered<"string" | "literal">;
+    tooltip?: string;
+    source?: "model";
 }
 export interface IRoleInstance {
     id: string;
@@ -48,7 +49,7 @@ export interface IViewModel {
     stepRepo: Record<string, Record<string, IStepOptions> | undefined>;
     steps: Record<string, IStepInstance | undefined>;
     swimlanes: Record<string, ISwimlaneInstance>;
-    roles: Record<string, IRoleInstance>;
+    modelSwimlanes?: Record<string, ISwimlaneInstance>;
     connections: Record<string, IConnectionInstance | undefined>;
     selecteds: Array<string>;
     initOptions: IInitOptions;
@@ -74,11 +75,11 @@ export interface IViewModel {
     fileUploadFunction?: IExecuteFlowByMapping;
     fileDownloadFunction?: IExecuteFlowByMapping;
     fileDeleteFunction?: IExecuteFlowByMapping;
+    privileges?: Array<string>;
     resetHistory: () => IVMHistory;
     executeType: FlowExecutionType;
     uniqueKey?: IExpressionData;
     selectedModelId: string;
-    oldCamundaFieldsForWFModel?: IOldCamundaFieldsForWFModel;
     findReferenceInCode?: IFindReferenceInCode;
     editOutput: Record<string, IEditOutput>;
 }
