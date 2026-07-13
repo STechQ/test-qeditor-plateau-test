@@ -29,7 +29,7 @@ export type AllCreateObjectTypes = ModelType | FolderObjectType | ModuleObjectTy
 export type AppSettingsModelKeys = "settings" | "componentList" | "containerServices" | "pipeline" | "alert" | "loading" | "globalLocalization" | "localProxy" | "style" | "rootqjson" | "asset" | "appSettings" | "containerServIntelli" | "theme" | "container" | "constant";
 export type ExtensionType = "png" | "jpg" | "jpeg" | "svg" | "gif" | "json" | "woff" | "woff2" | "ttf" | "otf";
 export type ModuleShareType = 'reference' | 'version';
-export type ModuleShareScope = "Organization" | "Organization Group";
+export type ModuleShareScope = "Organization" | "Organization Group" | "Global";
 export declare const UISettingsType: {
     readonly alert: "alert";
     readonly pipeline: "pipeline";
@@ -112,14 +112,21 @@ export interface IModuleRelatedApplicationItem {
     importedDate?: Date;
     updateStrategy?: string;
     unreleased?: boolean;
+    parentModuleID?: ObjectID;
 }
 export interface IModuleRelatedModelItem {
     modelID: ObjectID;
     version: string;
 }
+export interface IModuleRelatedModuleItem {
+    moduleID: ObjectID;
+    version: string;
+}
 export interface IModuleOwnerOrgInfo {
     dbName: string;
     orgId: string;
+    appId?: string;
+    appName?: string;
 }
 export interface IModuleBackend extends ICloudObject {
     description?: string;
@@ -139,6 +146,7 @@ export interface IModuleBackend extends ICloudObject {
     unreleased?: boolean;
     applicationID?: string;
     ownerOrg?: IModuleOwnerOrgInfo;
+    importedFromGlobal?: boolean;
     origInfo?: IModuleOrigInfo;
     shareScope?: ModuleShareScope;
 }
@@ -146,8 +154,46 @@ export interface IModuleVersion extends ICloudObject {
     moduleID: ObjectID;
     version: string;
     relatedModelHistories: Array<IModuleRelatedModelItem>;
+    relatedModuleHistories?: Array<IModuleRelatedModuleItem>;
     description?: string;
     unreleased?: boolean;
+}
+export interface IMarketplaceModule {
+    ID: ObjectID;
+    moduleID: ObjectID;
+    name: string;
+    description?: string;
+    prefix?: string;
+    ownerApp?: string;
+    ownerApplicationID?: ObjectID;
+    publisherOrgId: string;
+    publisherOrgName: string;
+    ownerOrg: IModuleOwnerOrgInfo;
+    publishedBy: string;
+    publishDate: Date;
+    updateDate?: Date;
+    isActive: boolean;
+    latestVersion?: string;
+    usages?: Array<IMarketplaceModuleUsage>;
+}
+export interface IMarketplaceModuleUsageEvent {
+    type: "import" | "detach";
+    version?: string;
+    by?: string;
+    date: Date;
+}
+export interface IMarketplaceModuleUsage {
+    orgId: string;
+    orgName?: string;
+    applicationID: string;
+    appName?: string;
+    version?: string;
+    active: boolean;
+    firstImportedDate: Date;
+    lastImportedDate: Date;
+    removedDate?: Date;
+    importedBy?: string;
+    events: Array<IMarketplaceModuleUsageEvent>;
 }
 export interface IModelCopyInfo {
     sourceModelID: ObjectID;
@@ -199,7 +245,7 @@ export interface IModelInfo extends ICloudObject {
 }
 export interface IModelPackagingInfo extends IModelInfo {
     body: IModelBodyObject;
-    moduleName?: string;
+    fullPath?: string;
     historyId: string;
     version: NonNullable<IModelInfo["version"]>;
 }
@@ -230,6 +276,9 @@ export type IModelForWorkflow = {
     live?: boolean;
     overridden?: boolean;
     owner?: IOwner;
+    security?: {
+        privileges?: string[];
+    };
 };
 export interface IOwner {
     ownerType: ApplicationObjectType | ModuleObjectType;
@@ -383,6 +432,7 @@ export interface ITreeviewItem {
     migrated?: boolean;
     origInfo?: IModuleOrigInfo | IModelOrigInfo;
     shareScope?: ModuleShareScope;
+    importedFromGlobal?: boolean;
     editingVer?: string;
     unversioned?: boolean;
 }

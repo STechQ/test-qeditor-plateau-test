@@ -1,9 +1,9 @@
-import { IUser } from "./namedobjects/IUser";
+import { IRuntimeUser } from "./namedobjects/IRuntimeUser";
 import { IProcessInstance } from "./namedobjects/IProcessInstance";
 import { DataInstance } from "./DataInstance.js";
 import { IActionData } from "./IAction";
 export interface IWorkflowContext {
-    currentUser?: IUser;
+    currentUser?: IRuntimeUser;
     dataInstance?: DataInstance;
     processInstance?: IProcessInstance;
     action?: IActionData;

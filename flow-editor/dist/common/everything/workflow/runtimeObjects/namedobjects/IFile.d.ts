@@ -1,10 +1,10 @@
 /// <reference types="node" />
 import { DateTime } from "../../runtimemodels/types";
 import { INamedObjectBase } from "./INamedObjectBase";
-import { IUser } from "./IUser";
+import { IRuntimeUser } from "./IRuntimeUser";
 export interface IFile extends INamedObjectBase {
     id: string;
-    user: IUser;
+    user: IRuntimeUser;
     label?: string;
     fileName?: string;
     storageHandle?: string;

@@ -60,5 +60,6 @@ export declare class ImportExportImpl implements IImportExport {
     private exportDesignWorkflowModel;
     private exportRuntimeModel;
     private exportDesigntimeModel;
+    private getPersonaList;
 }
 //# sourceMappingURL=importExportImpl.d.ts.map

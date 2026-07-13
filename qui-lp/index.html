@@ -9,12 +9,285 @@
   <script>
     function createProm(){ const obj = {}; obj.p = new Promise((res, rej) => {obj.res = (result) => res(result); obj.rej = rej;}); return obj; }
     var quiProms = {web: createProm(), iam: createProm(), asset: createProm()};
+    var QUI_BUILD_OPTIONS = window.__quiBuildOptions || {};
+    QUI_BUILD_OPTIONS.skipPackages = "<<skipPackages>>" === "true";
+    window.__quiBuildOptions = QUI_BUILD_OPTIONS;
+    window.__checkPrefix = (path) => {
+      return QUI_BUILD_OPTIONS.skipPackages ? window.__webSDKUrlPrefix + path : path;
+    }
+    (function(){
+      var LOCAL_VERSION = "<<version>>";
+      var FRAME_TOKEN = "notSoSecretFM_ID_24785434";
+      var WEBSDK_PREFIX_TIMEOUT = 5000;
+      var WEBSDK_PREFIX_REQUEST_TYPE = "webSDKUrlPrefix";
+      var WEBSDK_PREFIX_RESPONSE_TYPE = "getWebSDKUrlPrefixResponse";
+
+      function createPromiseData(options) {
+        var timeout = options && options.timeout;
+        var message = options && options.message;
+        var resolver;
+        var reject;
+        var timer;
+        var clearTimer = function() {
+          if (timer) {
+            clearTimeout(timer);
+            timer = undefined;
+          }
+        };
+        var startTimer = function(timeoutValue) {
+          if (timer) { clearTimeout(timer); }
+          timer = setTimeout(function() {
+            reject(new Error("The operation has timed out " + (message ? "for " + message : "") + ". timeoutValue  : " + timeoutValue));
+          }, timeoutValue);
+        };
+
+        if (timeout) {
+          startTimer(timeout);
+        }
+
+        return {
+          promise: new Promise(function(res, rej) {
+            resolver = function(value) {
+              clearTimer();
+              res(value);
+            };
+            reject = function(error) {
+              clearTimer();
+              rej(error);
+            };
+          }),
+          resolver: resolver,
+          reject: reject
+        };
+      }
+
+      var CryptoHelper = {
+        guidCounter: 0,
+        GetRandomWord: function(base, length) {
+          return Math.random().toString(base).substring(2, length + 2);
+        },
+        CreateGuid: function() {
+          return [8, 4, 4, 4, 6].map(function(length) {
+            return CryptoHelper.GetRandomWord(36, length);
+          }).join("-") + ((++CryptoHelper.guidCounter) % 2150000000).toString(36);
+        }
+      };
+
+      var FrameMessaging = (function() {
+        function frameMessaging(targetWindow) {
+          this.awaitMsgList = {};
+          this.targetWindow = targetWindow;
+          var self = this;
+          window.addEventListener("message", function(ev) {
+            var packet = ev.data;
+            if (!packet || typeof packet !== "object") { return; }
+            var waiter = packet.replyId && self.awaitMsgList[packet.replyId];
+            if (!waiter) { return; }
+            delete self.awaitMsgList[packet.replyId];
+            waiter(packet);
+          });
+        }
+
+        frameMessaging.prototype.Send = function(msg, options) {
+          options = options || {};
+          var packet = {
+            id: CryptoHelper.CreateGuid(),
+            token: FRAME_TOKEN,
+            msg: msg,
+            replyId: options.replyId
+          };
+          var promData;
+          if (options.await) {
+            promData = createPromiseData({
+              timeout: options.awaitTime === undefined ? 10000 : options.awaitTime,
+              message: "frame response awaiting"
+            });
+            this.awaitMsgList[packet.id] = function(packet) {
+              promData.resolver(packet);
+            };
+          }
+          (options.targetWindow || this.targetWindow).postMessage(packet, "*");
+          return promData && promData.promise;
+        };
+
+        return frameMessaging;
+      })();
+
+      var frameMessaging = window.parent && window.parent !== window ? new FrameMessaging(window.parent) : null;
+
+      function normalizeVersion(value){
+        return typeof value === "string" ? value.trim() : "";
+      }
+
+      function hasVersion(version){
+        return !!version && version.indexOf("<<") === -1 && version.indexOf(">>") === -1;
+      }
+
+      function addVersion(url, version){
+        version = normalizeVersion(version);
+        if (!hasVersion(version)) { return url; }
+        return url + (url.indexOf("?") === -1 ? "?" : "&") + "v=" + encodeURIComponent(version);
+      }
+
+      function joinUrl(prefix, path){
+        if (!prefix) { return path; }
+        return prefix.replace(/\/+$/, "") + "/" + path.replace(/^\/+/, "");
+      }
+
+      function normalizePrefix(value){
+        if (typeof value !== "string") { return ""; }
+        var prefix = value.trim();
+        if (!prefix) { return ""; }
+        prefix = prefix.replace(/[#?].*$/, "");
+        prefix = prefix.replace(/\/packages\/websdk\/websdk\.js$/i, "");
+        prefix = prefix.replace(/\/index\.js$/i, "");
+        prefix = prefix.replace(/\/packages\/websdk\/?$/i, "");
+        return prefix.replace(/\/+$/, "");
+      }
+
+      function pickWebSdkConfig(response){
+        if (!response || typeof response !== "object") { return null; }
+        var msg = response.msg || {};
+        if (msg.type !== WEBSDK_PREFIX_RESPONSE_TYPE) { return null; }
+        return {
+          prefix: normalizePrefix(msg.webSDKUrlPrefix),
+          version: normalizeVersion(msg.webSDKVersion)
+        };
+      }
+
+      function isWebSdkPrefixResponse(packet){
+        if (!packet || typeof packet !== "object") { return false; }
+        var msg = packet.msg || {};
+        return msg.type === WEBSDK_PREFIX_RESPONSE_TYPE
+          && typeof msg.webSDKUrlPrefix === "string"
+          && typeof msg.webSDKVersion === "string";
+      }
+
+      function requestWebSdkConfig(){
+        if (!frameMessaging) {
+          return Promise.reject(new Error("parent window unavailable"));
+        }
+
+        return frameMessaging.Send({ type: WEBSDK_PREFIX_REQUEST_TYPE }, {
+          await: true,
+          awaitTime: WEBSDK_PREFIX_TIMEOUT
+        }).then(function(packet) {
+          var config = isWebSdkPrefixResponse(packet) ? pickWebSdkConfig(packet) : null;
+          if (config && config.prefix && hasVersion(config.version)) {
+            return config;
+          }
+          throw new Error("webSDKUrlPrefix or webSDKVersion unavailable");
+        });
+      }
+
+      function createScriptLoader(src, scriptAsync){
+        return new Promise(function(resolve, reject){
+          var script = document.createElement("script");
+          script.src = src;
+          script.async = scriptAsync === undefined ? false : scriptAsync;
+          script.onload = function(){
+            resolve();
+          };
+          script.onerror = function(){
+            reject(new Error("script load error: " + src));
+          };
+          (document.head || document.body).appendChild(script);
+        });
+      }
+
+      function loadScriptPromise(src, prom, getValue, errorMessage){
+        createScriptLoader(src, true)
+          .then(function(){ prom.res(getValue()); })
+          .catch(function(){ prom.rej(errorMessage); });
+      }
+
+      function loadQuiRuntimeScripts(prefix){
+        loadScriptPromise(
+          joinUrl(prefix, "settings/settings_iam.js"),
+          quiProms.iam,
+          function(){ return window.plateauUIIAMOptions; },
+          "settings_iam load error"
+        );
+        loadScriptPromise(
+          joinUrl(prefix, "settings/settings_web.js"),
+          quiProms.web,
+          function(){ return window.plateauUISettings; },
+          "settings_web load error"
+        );
+        loadScriptPromise(
+          joinUrl(prefix, "static/css/assetList.js"),
+          quiProms.asset,
+          function(){ return window.plateauUIAsset; },
+          "asset_list load error"
+        );
+      }
+
+      function ensureWebSdkReady(source, src){
+        if (window.websdk && typeof window.websdk.init === "function") {
+          return;
+        }
+        throw new Error(source + " websdk is not ready after loading: " + src);
+      }
+
+      function boot(){
+        var completed = false;
+        var shouldUseShellPackages = window.__quiBuildOptions && window.__quiBuildOptions.skipPackages === true;
+        var pending = 1;
+        var failures = [];
+        var localWebsdkUrl = addVersion("packages/websdk/websdk.js", LOCAL_VERSION);
+        var localIndexUrl = "index.js?v=" + LOCAL_VERSION;
+        var configPromise = shouldUseShellPackages ? requestWebSdkConfig() : null;
+
+        function fail(source, error){
+          failures.push({ source: source, error: error });
+          pending--;
+          if (!completed && pending === 0) {
+            console.error("[QUI] boot script load failed", failures);
+          }
+        }
+
+        function loadWebSdkCandidate(candidate){
+          if (completed) { return; }
+          completed = true;
+          window.__quiBootSource = candidate.source;
+          window.__webSDKUrlPrefix = candidate.prefix;
+          window.__webSDKVersion = candidate.version;
+          loadQuiRuntimeScripts(candidate.prefix);
+          createScriptLoader(candidate.websdkUrl)
+            .then(function(){
+              ensureWebSdkReady(candidate.source, candidate.websdkUrl);
+              return createScriptLoader(localIndexUrl, true);
+            })
+            .catch(function(error){ console.error("[QUI] boot script load failed", error); });
+        }
+
+        if (!shouldUseShellPackages) {
+          loadWebSdkCandidate({
+            source: "local",
+            prefix: "",
+            version: normalizeVersion(LOCAL_VERSION),
+            websdkUrl: localWebsdkUrl
+          });
+          return;
+        }
+
+        configPromise
+          .then(function(config){
+            if (completed) { return; }
+            var websdkUrl = addVersion(joinUrl(config.prefix, "packages/websdk/websdk.js"), config.version);
+            loadWebSdkCandidate({
+              source: "remote",
+              prefix: config.prefix,
+              version: config.version,
+              websdkUrl: websdkUrl
+            });
+          })
+          .catch(function(error){ fail("websdk-prefix", error); });
+      }
+
+      boot();
+    })();
   </script>
-  <script src="packages/websdk/websdk.js?v=<<version>>"></script>
-  <script async src="index.js?v=<<version>>"></script>
-  <script async src="./settings/settings_iam.js" onerror="quiProms.iam.rej('settings_iam load error')" onload="quiProms.iam.res(window.plateauUIIAMOptions)"></script>
-  <script async src="./settings/settings_web.js" onerror="quiProms.web.rej('settings_web load error')" onload="quiProms.web.res(window.plateauUISettings)"></script>
-  <script async src="./static/css/assetList.js" onerror="quiProms.asset.rej('asset_list load error')" onload="quiProms.asset.res(window.plateauUIAsset)"></script>
 </body>
 
 </html>

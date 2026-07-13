@@ -8,6 +8,8 @@ import { IStudioUIModelBase } from "../../../../common/everything/studio/ui/IStu
 import { IWFModels } from "../../../../common/everything/workflow/runtimemodels/IModel";
 import { IExpressionDataFiltered } from "../../../../common/everything/dataType/runtimemodels/IExpression";
 import { ValidationErrorHelper } from "../../common/ValidationErrorHelper";
+import { IPrivilegeItem } from "../../../../common/everything/accessmanager/designtime/IPrivilegeDesign";
+import { IActionItem } from "../../../../common/everything/action/IActionDesign";
 export interface IExpressionInputOptions {
     width?: string;
 }
@@ -31,7 +33,6 @@ export interface IModelBodyIO {
     otherProps?: Record<string, any>;
 }
 export type GetModelBody = (id: string, bodyKey: string) => Promise<IWFModels>;
-export type GetRoles = () => Array<IRoleProp>;
 export type GetSwimlanes = () => Array<ISwimlaneProp>;
 export type SetStoreSchema = (id: string, schema: IStoreModelForFlow) => IStoreModelForFlow;
 export { IStudioUIModelBase };
@@ -41,13 +42,11 @@ export interface ISwitchPropCase {
     output: number;
     id: number;
 }
-export interface IRoleProp {
-    id: string;
-    name: IExpressionData;
-}
 export interface ISwimlaneProp {
     id: string;
     name: IExpressionData;
+    tooltip?: string;
+    source?: "model";
 }
 export interface ISelectedSwitchCase {
     stepId?: string;
@@ -87,7 +86,6 @@ export interface IEditSectionInput<PropType extends IPropObject = IPropObject> {
         ui?: {
             basePath?: string;
             getModelBody?: GetModelBody;
-            getRoles?: GetRoles;
             getSwimlanes?: GetSwimlanes;
             setSchema?: SetStoreSchema;
             getSelectedSwitchCase?: () => Array<string>;
@@ -109,6 +107,8 @@ export interface IEditSectionInput<PropType extends IPropObject = IPropObject> {
             get: () => IFindReferenceInCode | undefined;
             set: (val: IFindReferenceInCode | undefined) => void;
         };
+        privileges?: Array<IPrivilegeItem>;
+        actions?: Array<IActionItem>;
     };
     react: {
         prop: {

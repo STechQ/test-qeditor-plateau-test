@@ -1,5 +1,5 @@
-import { ActionType, CustomType, DateTime } from "../runtimemodels/types";
-import { IUser } from "../runtimeObjects/namedobjects/IUser";
+import { ActionType, DateTime } from "../runtimemodels/types";
+import { IRuntimeUser } from "../runtimeObjects/namedobjects/IRuntimeUser";
 export interface IActivity {
     taskDefinitionKey: string;
     taskName: string;
@@ -8,9 +8,8 @@ export interface IActivity {
     taskId?: string;
     actionLabel?: string;
     actionType?: ActionType | 'addActivity';
-    customType?: CustomType;
     completed: boolean;
-    user: IUser;
+    user: IRuntimeUser;
     assignedUserId?: string;
     assignedSwimlaneId?: string;
     timeStamp: DateTime;

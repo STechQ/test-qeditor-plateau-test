@@ -1,0 +1,88 @@
+import Vue from "vue";
+declare const _default: import("vue/types/vue").ExtendedVue<Vue, {
+    show: boolean;
+    loadedRatio: number;
+    numPages: number;
+    page: number;
+    turn: number;
+    showToolbar: boolean;
+    tiffLoading: boolean;
+    zoomVal: number;
+    rotateVal: number;
+    loadedPages: number;
+    docType: undefined;
+    url: any;
+    normalizedSrc: any;
+    renderPdfUrl: string;
+    pdfLoadToken: number;
+    localLanguage: string;
+    pageTitle: string;
+    pdfKey: number;
+    currentMinWidth: number;
+    dataType: "base64" | "url" | "arrayBuffer";
+    tiffBufferData: ArrayBuffer | null;
+    tifIfds: any[];
+    blocked: boolean;
+    internalErrorMessage: string;
+    scrollEndTriggered: boolean;
+    lastScrollTop: number;
+    scrolledToBottomListener: ((e: MessageEvent) => void) | null;
+}, {
+    fetchPdfBytes(src: string): Promise<ArrayBuffer>;
+    scanForJS(content: ArrayBuffer | string, type: 'pdf' | 'html'): boolean;
+    isTiffBuffer(buffer: ArrayBuffer): boolean;
+    loadTiff(dataType: "base64" | "arrayBuffer" | "url"): Promise<void>;
+    getTiffBuffer(type: string, src: any): Promise<ArrayBuffer>;
+    escapeHTML(str: string): string;
+    renderTiffPage(): void;
+    base64ToArrayBuffer(base64: string): ArrayBuffer;
+    createPdf(): Promise<void>;
+    downloadTiff(): void;
+    base64ToAB(base64: string): ArrayBufferLike;
+    base64ToBlob(base64: string, type?: string): Blob;
+    focusSelectedPage(): void;
+    zoomIn(): void;
+    zoomOut(): void;
+    nextPage(): void;
+    previousPage(): void;
+    rotate(): void;
+    goToPage(pageNumber: number): void;
+    downloadPdf(): void;
+    printPdf(): void;
+    getSrcWithMimeType(): any;
+    getType(): any;
+    onFrameScrollBottom(): void;
+    handleScroll({ target: { scrollTop, clientHeight, scrollHeight, lastChild: { offsetHeight }, }, }: {
+        target: {
+            scrollTop: any;
+            clientHeight: any;
+            scrollHeight: any;
+            lastChild: {
+                offsetHeight: any;
+            };
+        };
+    }): void;
+}, unknown, {
+    src: any;
+    height: string;
+    width: string;
+    scale: string;
+    showToolBar: boolean;
+    pdfToolbarBackgroundColor: string;
+    pdfBackgroundColor: string;
+    hidePagination: boolean;
+    hideDescription: boolean;
+    hideDownload: boolean;
+    hideRotate: boolean;
+    hideZoom: boolean;
+    loadingContent: string;
+    displayOnScroll: boolean;
+    fileDescription: string;
+    showPrint: boolean;
+    _renderingProps: any;
+    enableSecurityScan: boolean;
+    securityErrorMessage: string;
+    securityErrorMessageIcon: string;
+}>;
+export default _default;
+//# sourceMappingURL=QDocumentViewer.vue.d.ts.map
