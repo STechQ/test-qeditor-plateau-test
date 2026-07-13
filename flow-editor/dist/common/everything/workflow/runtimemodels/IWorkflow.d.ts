@@ -1,12 +1,14 @@
 import { IFlowModel, IPropObject, ISetExpressionData, IStepFrom, IStepModel, IStepTo } from "@stechquick/flow-interfaces/runtime";
 import { IStoreMapping } from "../../store/runtimemodels/IStoreMapping";
 import { IStoreModelForWorkflow } from "../../store/runtimemodels/IStoreModel";
+import { ISwitchProps } from "../../flow/runtimeModels/ISwitch";
 import { IExpressionData } from "../../dataType/runtimemodels/IExpression";
 import { IFlowModelBase } from "@stechquick/flow-interfaces/runtime/IFlowModel";
-import { ISLA } from "./ISLA";
+import { ILegacySLA, ISLA } from "./ISLA";
+import { IAction } from "../runtimeObjects/IAction";
+import { OmitTyped } from "../../../helpers/typeHelper";
 export type WorkflowStepName = "start" | "humantask" | "subFlow" | "subWorkflow" | "flow" | "switch" | "end";
 declare const userTaskActivityFieldName = "userTaskActivity";
-declare const processStatusFieldName = "processStatus";
 export declare const NamedModels: {
     readonly getUser: {
         readonly name: "getUser";
@@ -24,10 +26,6 @@ export declare const NamedModels: {
         readonly name: "TaskPreview";
         readonly type: "qjson";
     };
-    readonly processStatus: {
-        readonly name: "ProcessStatus";
-        readonly type: "dataSet";
-    };
 };
 export declare const RequiredModels: {
     readonly iPaasEndPoint: {
@@ -35,14 +33,17 @@ export declare const RequiredModels: {
         readonly type: "constant";
     };
 };
+export declare const StatusTypes_EN: Record<StatusType, string>;
+export declare const StatusTypes_TR: Record<StatusType, string>;
 export type StatusType = "" | "Pending-InProgress" | "Pending-Approval" | "Resolved-Completed" | "New" | "Returned" | "Returned-Originator" | "Returned-Recipient" | "Resolved-Cancelled";
-export declare const PROCESS_STATUS_OTHERS_KEY = "Others";
 type NamedModelTypeChecker<K extends keyof typeof NamedModels = keyof typeof NamedModels> = {
-    [P in Exclude<K, typeof processStatusFieldName>]: P extends typeof userTaskActivityFieldName ? string | undefined : string;
-} & {
-    [P in Extract<K, typeof processStatusFieldName>]?: string;
+    [P in K]: P extends typeof userTaskActivityFieldName ? string | undefined : string;
 };
 export type IWorkflowModelNamedModels = NamedModelTypeChecker;
+export interface IOldCamundaFieldsForWFModel {
+    sla: ILegacySLA;
+    priority: number;
+}
 export interface IWorkflowModel extends IFlowModelBase {
     type: "workflow";
     label: IExpressionData;
@@ -51,7 +52,9 @@ export interface IWorkflowModel extends IFlowModelBase {
     name: string;
     _name: string;
     desc: string;
+    swimlanes: Record<string, IExpressionData>;
     sla: ISLA;
+    roles: Record<string, IExpressionData>;
     steps: Record<string, IWFStepModel>;
     startSteps: Array<IWFStepTo>;
     store: IStoreModelForWorkflow;
@@ -59,8 +62,7 @@ export interface IWorkflowModel extends IFlowModelBase {
     fileUploadFunction?: IExecuteFlowByMapping;
     fileDownloadFunction?: IExecuteFlowByMapping;
     fileDeleteFunction?: IExecuteFlowByMapping;
-    /** Workflow-level required privileges (AND semantics — user must hold every one to start). Empty / undefined = everyone allowed. */
-    privileges?: Array<string>;
+    oldCamundaFieldsForWFModel?: IOldCamundaFieldsForWFModel;
 }
 export interface IWFStepTo extends IStepTo {
 }
@@ -73,10 +75,13 @@ export type IExecuteFlowByMapping = {
     id: string;
     mapping?: IStoreMapping;
 };
-export type IForm = {
+export type IForm = ObjectWithRoles & {
     id: string;
     readonly?: boolean;
 };
+export interface ObjectWithRoles {
+    roles: Array<string>;
+}
 export interface ICounterPropType extends IPropObject {
     reset: "never" | "daily" | "monthly" | "yearly";
     key: IExpressionData;
@@ -92,6 +97,36 @@ export type IWFStepInlineFlowModelProps = {
     inline: IFlowModel;
     mapping?: IStoreMapping;
 };
+export interface ILegacyWorkflowModelForCamunda extends OmitTyped<IWorkflowModel, "steps" | "sla"> {
+    steps: Record<string, ILegacyWFStepModelForCamunda>;
+    priority: number;
+    sla: ILegacySLA;
+}
+export interface ILegacyWFStepModelForCamunda extends OmitTyped<IStepModel, "P"> {
+    P?: ILegacyWFPropObjectForCamunda;
+    S?: string;
+}
+export type ILegacyWFPropObjectForCamunda = IPropObject & {
+    label: IExpressionData;
+    stepId: string;
+    name?: string;
+    version?: string;
+    swimlane: string;
+    props: IWFStepInlineFlowModelProps | ILegacyWFStepPropsForCamunda | ISwitchProps;
+};
+export interface ILegacyWFStepPropsForCamunda {
+    type: "humanStartEnd";
+    label?: IExpressionData;
+    taskName?: IExpressionData;
+    procesStatus: StatusType;
+    taskStatus?: StatusType;
+    sendTo?: "swimlane" | "user";
+    user?: string;
+    forms: Array<IForm>;
+    actions: Array<IAction>;
+    priority?: number;
+    sla?: ILegacySLA;
+}
 export interface IAddActivityPropType extends IPropObject {
     description: string;
     descriptionCode: IExpressionData;

@@ -1,5 +1,5 @@
 import { Store } from "../../../../common/everything/store/designtimemodels/IStoreModel";
-import { ISLA } from "../../../../common/everything/workflow/runtimemodels/ISLA";
+import { ILegacySLA, ISLA } from "../../../../common/everything/workflow/runtimemodels/ISLA";
 import { IExecuteFlowByMapping } from "../../../../common/everything/workflow/runtimemodels/IWorkflow";
 import { IExpressionData } from "../runtime";
 import { FlowExecutionType } from "../runtime/IFlowModel";
@@ -9,6 +9,10 @@ import { IStepDesignModel } from "./IStepDesignModel";
 import { ISwimlaneDesignModel } from "./ISwimlaneDesignModel";
 export interface IFlowDesignModel extends IFlowCopyModel {
     maxID: number;
+}
+export interface IOldCamundaFieldsForWFModel {
+    sla: ILegacySLA;
+    priority: number;
 }
 export interface IFlowCopyModel extends IFlowCoreModel {
     name?: string;
@@ -23,10 +27,9 @@ export interface IFlowCopyModel extends IFlowCoreModel {
     fileUploadFunction?: IExecuteFlowByMapping;
     fileDownloadFunction?: IExecuteFlowByMapping;
     fileDeleteFunction?: IExecuteFlowByMapping;
-    /** Workflow-level required privileges (AND semantics). Only meaningful for workflow models. */
-    privileges?: Array<string>;
     executeType: FlowExecutionType;
     uniqueKey?: IExpressionData;
+    oldCamundaFieldsForWFModel?: IOldCamundaFieldsForWFModel;
 }
 export interface IFlowCoreModel {
     steps: Array<IStepDesignModel>;

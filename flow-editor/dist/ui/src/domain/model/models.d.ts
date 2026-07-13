@@ -4,7 +4,7 @@ import { IUserMainInfo, IUser_SUSI } from "../../../../common/qCloudTemp/authent
 import { IRole } from "../../../../common/qCloudTemp/authorization";
 import { IArtifactInfoDBItem, IArtifactMinioDetails, IQcloudJob } from "../../../../common/qCloudTemp/exporter";
 import { IOrganization } from "../../../../common/qCloudTemp/membership";
-import { ExtensionType, IApplicationLogoInfo, IEntityDesignerAddtionals, IModelBodyObject, IModelInfo, IModuleOwnerOrgInfo, IModuleRelatedApplicationItem, IModuleRelatedModelItem, IModuleRelatedModuleItem, IProcessWizardAdditionals, IQJsonAdditionals, ITreeviewItem, ModelAdditionals, ModuleShareScope, ModuleShareType, ObjectID, UsageType } from "../../../../common/qCloudTemp/quickCloud";
+import { ExtensionType, IApplicationLogoInfo, IEntityDesignerAddtionals, IModelBodyObject, IModelInfo, IModuleOwnerOrgInfo, IModuleRelatedApplicationItem, IModuleRelatedModelItem, IProcessWizardAdditionals, IQJsonAdditionals, ITreeviewItem, ModelAdditionals, ModuleShareScope, ModuleShareType, ObjectID, UsageType } from "../../../../common/qCloudTemp/quickCloud";
 import { ICopyApp, IGetOrganizaionGroupDetailsByUserTypeResponse, IListInvitationsResponseItem, ISignInResponse, IUpdateMobileUsage } from "../../../../common/qCloudTemp/symDtoObjects";
 import { IUserPreferences } from "../../../../common/qCloudTemp/userPreference";
 import { ICloudObject, IObject } from "./IObject";
@@ -183,8 +183,8 @@ export interface IModule extends IObject {
     objectType: "module";
     description?: string;
     prefix?: string;
-    owner: IApplication | IModule;
-    children: Array<IModel | IModule>;
+    owner: IApplication;
+    children: Array<IModel>;
     relatedApplications: Array<IModuleRelatedApplicationItem>;
     mainOwner?: IApplication["ID"];
     shareType?: ModuleShareType;
@@ -192,12 +192,10 @@ export interface IModule extends IObject {
     relatedModelHistories?: IModuleVersion["relatedModelHistories"];
     lastReleasedVersion?: string;
     ownerOrg?: IModuleOwnerOrgInfo;
-    importedFromGlobal?: boolean;
     origInfo?: IModuleOrigInfo;
     modifyDate?: Date;
     unreleased?: boolean;
     shareScope?: ModuleShareScope;
-    fullPath?: string;
 }
 export interface IGetModuleResponse extends IModule {
     versionID?: IModuleVersion["ID"];
@@ -208,7 +206,6 @@ export interface IModuleVersion extends ICloudObject {
     moduleID: ObjectID;
     version: string;
     relatedModelHistories: Array<IModuleRelatedModelItem>;
-    relatedModuleHistories?: Array<IModuleRelatedModuleItem>;
     description?: string;
     unreleased?: boolean;
 }

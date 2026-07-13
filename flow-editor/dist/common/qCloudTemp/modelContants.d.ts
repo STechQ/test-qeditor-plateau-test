@@ -54,11 +54,6 @@ export declare const EditorConsts: {
             readonly single: "restService";
         };
     };
-    readonly swimlaneEditor: {
-        readonly modelKeys: {
-            readonly single: "swimlane";
-        };
-    };
     readonly soapEditor: {
         readonly modelKeys: {
             readonly single: "soapService";
@@ -126,26 +121,6 @@ export declare const EditorConsts: {
     readonly dataSetEditor: {
         readonly modelKeys: {
             readonly single: "dataSet";
-        };
-    };
-    readonly privilegeEditor: {
-        readonly modelKeys: {
-            readonly single: "privilege";
-        };
-    };
-    readonly roleEditor: {
-        readonly modelKeys: {
-            readonly single: "role";
-        };
-    };
-    readonly personaEditor: {
-        readonly modelKeys: {
-            readonly single: "persona";
-        };
-    };
-    readonly actionEditor: {
-        readonly modelKeys: {
-            readonly single: "action";
         };
     };
 };

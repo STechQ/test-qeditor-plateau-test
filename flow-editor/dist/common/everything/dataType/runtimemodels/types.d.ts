@@ -1,4 +1,3 @@
-import { RoleModelType } from "../../accessmanager/types";
 export type ObjectID = string;
 export declare const DataTypeModelTypeTag = "dataType";
 export type DataTypeModelType = typeof DataTypeModelTypeTag;
@@ -17,8 +16,6 @@ export declare const DateTimeType = "datetime";
 export declare const EnumType = "enum";
 export declare const BooleanType = "boolean";
 export declare const DataType = "dataType";
-export declare const SwimlaneType = "swimlane";
-export declare const RoleType = "role";
 export declare const DataSetType = "dataSet";
 export declare const ConstantType = "constant";
 export declare const AnyType = "any";
@@ -30,7 +27,6 @@ export type BooleanType = typeof BooleanType;
 export type DataType = typeof DataType;
 export type ConstantType = typeof ConstantType;
 export type DataSetType = typeof DataSetType;
-export type SwimlaneType = typeof SwimlaneType;
 export type AnyType = typeof AnyType;
 export type VariableTypes = StringType | NumberType | DateTimeType | /*EnumType |*/ BooleanType | DataType | ConstantType | AnyType | DataSetType;
 export declare const allVariableTypes: VariableTypes[];
@@ -51,5 +47,5 @@ export type InfoType = typeof InfoType;
 export type ErrorType = typeof ErrorType;
 export type VarsType = typeof VarsType;
 export type SetExpressionDataTypes = ContextType | OutputType | InfoType | ErrorType | VarsType;
-export type ExpressionDataTypes = EnumType | BooleanType | NumberType | StringType | LiteralType | ContextType | InputType | OutputType | NotSetType | ConstantType | InfoType | ErrorType | VarsType | DataSetType | SwimlaneType | RoleModelType;
+export type ExpressionDataTypes = EnumType | BooleanType | NumberType | StringType | LiteralType | ContextType | InputType | OutputType | NotSetType | ConstantType | InfoType | ErrorType | VarsType | DataSetType;
 //# sourceMappingURL=types.d.ts.map

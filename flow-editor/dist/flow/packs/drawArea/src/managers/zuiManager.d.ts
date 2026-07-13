@@ -57,6 +57,5 @@ export declare class ZuiManager {
     private resizeTo;
     private selectStage;
     interpret(svg: SVGElement): Group | undefined;
-    private handleWheelZoom;
 }
 //# sourceMappingURL=zuiManager.d.ts.map

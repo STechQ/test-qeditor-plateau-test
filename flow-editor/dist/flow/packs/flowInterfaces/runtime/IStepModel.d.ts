@@ -1,3 +1,4 @@
+import { ILegacySLA } from "../../../../common/everything/workflow/runtimemodels/ISLA";
 import { IExpressionData } from "./IExpression";
 export type IStepFrom = {
     ID: string;
@@ -22,6 +23,7 @@ export type IStepModel = {
     P: IPropObject;
     O: Record<string, Array<IStepTo> | undefined>;
     I: Record<string, Array<IStepFrom> | undefined>;
+    oldCamundaFields?: IOldCamundaFields;
 };
 export type IPropDefiniton<T extends {
     label: string;
@@ -31,5 +33,16 @@ export type IPropDefiniton<T extends {
         defaultValue?: T[K];
     };
 };
+export interface IOldCamundaFields {
+    stepId: string;
+    name?: string;
+    swimlane: string;
+    taskName: string;
+    type: string;
+    oldLookUpKeyBS: string;
+    user: string;
+    sendTo: string;
+    sla?: ILegacySLA;
+}
 export declare let stepPropDict: Record<string, Array<string>>;
 //# sourceMappingURL=IStepModel.d.ts.map

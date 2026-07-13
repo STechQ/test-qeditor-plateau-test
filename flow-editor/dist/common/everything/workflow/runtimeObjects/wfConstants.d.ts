@@ -17,7 +17,6 @@ export declare const wfConstants: {
         di404: (piid: string, isHistory: boolean) => CustomError;
         taskId404: (taskId: string) => CustomError;
         piid404: (piid: string) => CustomError;
-        actionId404: (actionId: string) => CustomError;
         ctxErr: (field: keyof IWorkflowExecutionContextStore) => Error;
         ctxOnUsErr: (field: keyof NonNullable<IWorkflowExecutionContextStore["wfEngineOnUs"]>) => Error;
     };

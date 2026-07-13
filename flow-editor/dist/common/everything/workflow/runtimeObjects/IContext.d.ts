@@ -1,11 +1,11 @@
 import { DataInstance } from "./DataInstance";
 import { IActionData } from "./IAction";
 import { IProcessInstance } from "./namedobjects/IProcessInstance";
-import { IRuntimeUser } from "./namedobjects/IRuntimeUser";
+import { IUser } from "./namedobjects/IUser";
 import { IContextInfo } from "./IContextInfo";
 export declare const DefaultInfoSuccessCode = "100";
 export interface IContext {
-    currentUser?: IRuntimeUser;
+    currentUser?: IUser;
     dataInstance: DataInstance;
     action?: IActionData;
     processInstance: IProcessInstance;

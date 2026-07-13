@@ -6,7 +6,7 @@ import { IFile } from "./IFile";
 import { INote } from "./INote";
 import { ISLA } from "./ISLA";
 import { IUnit } from "./IUnit";
-import { IRuntimeUser } from "./IRuntimeUser";
+import { IUser } from "./IUser";
 export interface IProcessInstance {
     processInstanceId: string;
     processId: string;
@@ -16,7 +16,7 @@ export interface IProcessInstance {
     processDescription: string;
     clusterId: string;
     businessKey: string;
-    initiatorUser: IRuntimeUser;
+    initiatorUser: IUser;
     initiatorUnit: IUnit | undefined;
     currentUnit: IUnit | undefined;
     processStart: DateTime;
@@ -24,12 +24,12 @@ export interface IProcessInstance {
     sla: ISLA;
     priority?: number;
     lastUpdate: DateTime;
-    lastUpdateUser: IRuntimeUser;
+    lastUpdateUser: IUser;
     lastUpdateDescriptionCode?: string;
     lastUpdateDescription?: string;
     status: StatusType;
     statusDescription: string;
-    contributorUsers: Array<IRuntimeUser>;
+    contributorUsers: Array<IUser>;
     tasks: Array<ITask>;
     notes: Array<INote>;
     files?: Array<IFile>;

@@ -6,8 +6,6 @@ type IVariableWithUnderscoreName = IVariable & {
 type IVariables = Store | Record<string, IVariableWithUnderscoreName> | IVariableWithUnderscoreName;
 export declare class ValidationHelper {
     static validateVariableName(name: string): string;
-    static validateAccessName(name: string): string;
-    static normalizeAccessName(name: string): string;
     static validateParameterValue(name: string): string;
     static migrateVariableModel(variables: IVariables): IVariables;
     static sanitize(value: string): {

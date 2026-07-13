@@ -19,7 +19,6 @@ interface IMappingProps {
     onChangeOutParamMapping: (outParamMapping: IStoreOutParameterMapping[]) => void;
     openModelInNewTab: (modelID: string) => void;
     inParamTypes?: string[];
-    outParamTypes?: string[];
 }
 export declare const Mapping: FC<IMappingProps>;
 export {};

@@ -14,8 +14,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { Store } from "../../../../common/everything/store/designtimemodels/IStoreModel";
 import { IFlowLocationDetail } from "../../../../common/helpers/modelSearch/flowModelSearch";
-import { IPrivilegeItem } from "../../../../common/everything/accessmanager/designtime/IPrivilegeDesign";
-import { IActionItem } from "../../../../common/everything/action/IActionDesign";
 export declare class Program implements IFlowEditorProgram {
     private readonly container;
     private readonly state;
@@ -45,8 +43,6 @@ export declare class Program implements IFlowEditorProgram {
     undo(): Promise<boolean>;
     redo(): Promise<boolean>;
     setModels(models: IStudioUIModelBase[]): void;
-    setPrivileges(privileges: Array<IPrivilegeItem>): void;
-    setActions(actions: Array<IActionItem>): void;
     validateAndFixModel(): Promise<import("../../common/ModelValidator").ModelValidatorResult>;
     deleteObjects(): void;
     referenceSearchResult(result: IFlowLocationDetail): Promise<void>;

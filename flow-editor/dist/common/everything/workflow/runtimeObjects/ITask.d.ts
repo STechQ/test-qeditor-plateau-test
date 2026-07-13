@@ -20,6 +20,6 @@ export interface ITask extends INamedObjectBase {
     taskEnd: DateTime;
     sla: ISLA;
     priority?: number;
-    actions?: Record<number, IAction>;
+    actions?: Array<IAction>;
 }
 //# sourceMappingURL=ITask.d.ts.map
