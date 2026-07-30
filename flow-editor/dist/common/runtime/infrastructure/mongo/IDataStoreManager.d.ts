@@ -1,7 +1,7 @@
 import { Hook } from "@stechquick/algae/lib/helpers/hook";
 import { UpdateFilter, ClientSession, Document, AnyBulkWriteOperation } from "mongodb";
 import { AtLeastOne } from "../../../../common/helpers/typeHelper";
-export type CollectionName = "FM_Users" | "Notifies" | "FM_Models" | "Modules" | "Counters" | "DeploymentLogs" | "PermanentStore" | "ServiceCaches" | "BatchJobs" | "BatchJobsHistory" | "Locks" | "CacheInvalidations" | "JobExecution" | "Holidays" | "JobExecutionHistory" | "WFE_SlaExecution" | "WFE_SlaExecutionHistory" | "WFE_ProcessInst" | "WFE_ProcessInstHistory" | "WFE_Task" | "WFE_TaskHistory" | "WFE_Activity" | "WFE_ActivityHistory" | "WFE_ThreadState" | "WFE_ThreadStateHistory" | "WFE_Notes" | "WFE_NotesHistory" | "WFE_Files" | "WFE_FilesHistory" | "WFE_BrokenThreads" | "WFE_BrokenThreadsHistory" | "Report" | "Queue" | "RDBMS_DbModels" /** RDBMS-spesifik db-model'lerin saklandığı koleksiyon */ | "RDBMS_ExecutedDdls" /** Çalıştırılmış DDL ifadelerinin saklandığı koleksiyon */ | "GenericDataStore" | "LivePreviewDeployStage";
+export type CollectionName = "FM_Users" | "Notifies" | "FM_Models" | "Modules" | "Counters" | "DeploymentLogs" | "PermanentStore" | "ServiceCaches" | "BatchJobs" | "BatchJobsHistory" | "BatchJobsDeadLetter" | "BatchJobGroups" | "Locks" | "CacheInvalidations" | "JobExecution" | "Holidays" | "JobExecutionHistory" | "WFE_SlaExecution" | "WFE_SlaExecutionHistory" | "WFE_ProcessInst" | "WFE_ProcessInstHistory" | "WFE_Task" | "WFE_TaskHistory" | "WFE_Activity" | "WFE_ActivityHistory" | "WFE_ThreadState" | "WFE_ThreadStateHistory" | "WFE_Notes" | "WFE_NotesHistory" | "WFE_Files" | "WFE_FilesHistory" | "WFE_BrokenThreads" | "WFE_BrokenThreadsHistory" | "Report" | "Queue" | "RDBMS_DbModels" /** RDBMS-spesifik db-model'lerin saklandığı koleksiyon */ | "RDBMS_ExecutedDdls" /** Çalıştırılmış DDL ifadelerinin saklandığı koleksiyon */ | "GenericDataStore" | "LivePreviewDeployStage";
 export type IndexDefinition<T> = {
     name: string;
     keys: AtLeastOne<Record<keyof T, "asc" | "desc">>;
@@ -231,10 +231,14 @@ export interface IDataStoreManager {
     }): Promise<GetReturnType<TTrx, UpdateResult>>;
     UpdateAsNative<T, TTrx extends IMongoDBTransactionQueue | void = IMongoDBTransactionQueue>(collectionName: CollectionName, filter: FilterTypeNullable<T> | FilterTypeOrAnd<T>, update: UpdateFilter<T> | Partial<T>, options?: {
         trxQueue?: TTrx;
+        upsert?: boolean;
     }): Promise<GetReturnType<TTrx, UpdateResult>>;
     GetAndUpdateNative<T, TTrx extends IMongoDBTransactionQueue | void = IMongoDBTransactionQueue>(collectionName: CollectionName, filter: FilterTypeNullable<T> | FilterTypeOrAnd<T>, update: UpdateFilter<any>, options?: {
         upsert?: boolean;
         returnDocument?: "before" | "after";
+        sort?: {
+            [key: string]: 1 | -1;
+        };
         trxQueue?: TTrx;
     }): Promise<T | undefined>;
     Delete<T, TTrx extends IMongoDBTransactionQueue | void = IMongoDBTransactionQueue>(collectionName: CollectionName, filter: FilterTypeNullable<T> | FilterTypeOrAnd<T>, options: {
@@ -246,6 +250,12 @@ export interface IDataStoreManager {
     Aggregate<T, RetT = T, TTrx extends IMongoDBTransactionQueue | void = IMongoDBTransactionQueue>(collectionName: CollectionName, pipeline: Array<AggregateType<T>>, options?: {
         trxQueue?: TTrx;
     }): Promise<Array<RetT>>;
+    /** Streaming aggregate: sonucu belleğe ALMADAN async-iterable cursor döndürür (bulk export).
+     *  Havuzlanmış bağlantı üzerinde çalışır; `for await` ile tüketilir, tamamlanınca/otomatik kapanır.
+     *  allowDiskUse açık (büyük $sort için). Trx desteklemez — salt okuma bulk akış içindir. */
+    AggregateCursor<T, RetT = T>(collectionName: CollectionName, pipeline: Array<AggregateType<T>>, options?: {
+        batchSize?: number;
+    }): Promise<AsyncIterable<RetT>>;
     GetDistinct<T, TTrx extends IMongoDBTransactionQueue | void = IMongoDBTransactionQueue>(collectionName: CollectionName, key: string, filter?: FilterTypeNullable<T> | FilterTypeOrAnd<T>, options?: {
         trxQueue?: TTrx;
     }): Promise<T | undefined>;

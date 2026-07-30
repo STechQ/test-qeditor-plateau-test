@@ -8,10 +8,6 @@ export type WorkflowStepName = "start" | "humantask" | "subFlow" | "subWorkflow"
 declare const userTaskActivityFieldName = "userTaskActivity";
 declare const processStatusFieldName = "processStatus";
 export declare const NamedModels: {
-    readonly getUser: {
-        readonly name: "getUser";
-        readonly type: "flow";
-    };
     readonly notify: {
         readonly name: "notify";
         readonly type: "flow";
@@ -27,12 +23,6 @@ export declare const NamedModels: {
     readonly processStatus: {
         readonly name: "ProcessStatus";
         readonly type: "dataSet";
-    };
-};
-export declare const RequiredModels: {
-    readonly iPaasEndPoint: {
-        readonly name: "IPaaS_Endpoint";
-        readonly type: "constant";
     };
 };
 export type StatusType = "" | "Pending-InProgress" | "Pending-Approval" | "Resolved-Completed" | "New" | "Returned" | "Returned-Originator" | "Returned-Recipient" | "Resolved-Cancelled";
@@ -74,7 +64,7 @@ export type IExecuteFlowByMapping = {
     mapping?: IStoreMapping;
 };
 export type IForm = {
-    id: string;
+    id: IExpressionData;
     readonly?: boolean;
 };
 export interface ICounterPropType extends IPropObject {

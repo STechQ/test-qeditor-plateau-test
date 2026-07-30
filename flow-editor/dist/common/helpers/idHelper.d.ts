@@ -8,6 +8,7 @@ export declare class IdHelper {
         modelType: string;
         id: string;
     } | undefined;
+    static extractEmbeddedModelId(value: string): string | undefined;
     static embedIdType(id: string, type: ModelType): string;
     static embedIdTypeWithAppId(appId: string, modelId: string, type: ModelType): string;
     static extractIdTypeWithAppId(str: string): {

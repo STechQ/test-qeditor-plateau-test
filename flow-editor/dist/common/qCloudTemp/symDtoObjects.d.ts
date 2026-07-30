@@ -1,8 +1,9 @@
+/// <reference types="node" />
 import { IApplication, IFolder, ILoggedInUser, IModel, IWorkflowExportItem } from "../../ui/src/domain/model/models";
 import { IUserMainInfo, IUser_SUSI } from "./authentication";
 import { IFeedbackAttachment, IUserFeedback } from "./feedback";
 import { IEditorTypes, IOrganization, IOrganizationCalculatedInfo, IOrganizationFeatures } from "./membership";
-import { IApplicationDetails, IApplicationExportSettings, IModelBodyObject, IDependentModel, IOrganizationActions, ModelAdditionals, ObjectID, IModuleBackend, IModuleVersion, ITags, IOrganizationGroup, IModelInfo, ExtensionType, UsageType, AppSettingsModelKeys, AllModelAdditionalTypes, IApplication as IApplicationDbModel, IModelHistoryInfo, IModelCheckout, ModuleShareType, ModuleShareScope, ForceUpdatePlatform } from "./quickCloud";
+import { IApplicationDetails, IApplicationExportSettings, IModelBodyObject, IDependentModel, IOrganizationActions, ModelAdditionals, ObjectID, IModuleBackend, IModuleVersion, ITags, IOrganizationGroup, IModelInfo, ExtensionType, UsageType, AppSettingsModelKeys, AllModelAdditionalTypes, IApplication as IApplicationDbModel, IModelHistoryInfo, IModelCheckout, ModuleShareType, ModuleShareScope, ForceUpdatePlatform, IMarketplaceModuleUsage } from "./quickCloud";
 import { IApplicationVersion, IApplicationVersionArtifacts } from "./applicationVersion";
 import { IUserPreferences } from "./userPreference";
 import { IMainStatisticInfo } from "../qCloudTemp/backoffice";
@@ -22,6 +23,9 @@ import { ITagDefinition, ITagValue, TagType } from "./tags";
 import { IAllOrgGroupApplicationData } from "./organizationGroupApplication";
 import { IModelOrigInfo } from "./applicationCopy";
 import { OmitTyped } from "../helpers/typeHelper";
+import { IWhatsNewDataObj, IWhatsNewServiceObj, IWhatsNewSettingsDataObj, IWhatsNewSettingsServiceObj } from "./whatsNew";
+import { IUploadModelsToStorageOptions } from "../clean/domain/useCases/ICloudProviderStorage";
+import { IUploadFilesToBucketResult } from "../clean/useCases/cloudProviderStorageCephImpl";
 export type VersionIncType = 'Minor' | 'Major' | 'Fix';
 export interface IPageable {
     skip: number;
@@ -193,6 +197,7 @@ export interface IUpdateApplicationRequest {
     mobileUsage?: IUpdateMobileUsage;
     lastReleasedVersion?: string;
     copyApp?: ICopyApp;
+    isCopiedApp?: boolean;
 }
 export interface ICopyApp {
     missingModules?: IMissingModule[];
@@ -423,6 +428,12 @@ export interface IModuleActiveImporters {
 export interface IGetModuleActiveImportersResponse {
     blocked: Array<IModuleActiveImporters>;
 }
+export interface IGetModuleMarketplaceUsagesRequest {
+    moduleID: string;
+}
+export interface IGetModuleMarketplaceUsagesResponse {
+    usages: Array<IMarketplaceModuleUsage>;
+}
 export interface IModelImportConflict {
     modelID: string;
     modelName: string;
@@ -604,6 +615,12 @@ interface IAddModelResponseNewModel extends IModelInfo {
 export interface IAddModelResponse {
     newModel: IAddModelResponseNewModel;
 }
+export interface IAddModelMultipleRequest {
+    models: IAddModelRequest[];
+}
+export interface IAddModelMultipleResponse {
+    newModels: IAddModelResponseNewModel[];
+}
 export interface IUpdateOrganizationsCalculatedInfoRequest {
     values: Array<{
         orgId: string;
@@ -697,6 +714,63 @@ export interface IListAnnouncementsResponse {
 }
 export interface IListAnnouncementsResponseConsumer {
     announcements: Array<IAnnouncementServiceObj>;
+}
+export interface IWhatsNewImage {
+    fullName: string;
+    dataBase64: string;
+    contentType: StorageContentType;
+}
+export interface IBoAddWhatsNewRequest {
+    title: IWhatsNewServiceObj["title"];
+    description: IWhatsNewServiceObj["description"];
+    image?: IWhatsNewImage;
+    imageUrl?: string;
+}
+export interface IBoAddWhatsNewResponse {
+    whatsNew: IWhatsNewDataObj;
+}
+export interface IBoAddWhatsNewResponseConsumer {
+    whatsNew: IWhatsNewServiceObj;
+}
+export interface IBoUpdateWhatsNewRequest {
+    id: IWhatsNewServiceObj["id"];
+    title?: IWhatsNewServiceObj["title"];
+    description?: IWhatsNewServiceObj["description"];
+    image?: IWhatsNewImage;
+    removeImage?: boolean;
+    imageUrl?: string;
+}
+export interface IBoUpdateWhatsNewResponse {
+    whatsNew: IWhatsNewDataObj;
+}
+export interface IBoUpdateWhatsNewResponseConsumer {
+    whatsNew: IWhatsNewServiceObj;
+}
+export interface IBoDeleteWhatsNewRequest {
+    id: IWhatsNewServiceObj["id"];
+}
+export interface IBoListWhatsNewResponse {
+    whatsNews: Array<IWhatsNewDataObj>;
+}
+export interface IBoListWhatsNewResponseConsumer {
+    whatsNews: Array<IWhatsNewServiceObj>;
+}
+export interface IBoUpdateWhatsNewSettingsRequest {
+    popupName: IWhatsNewSettingsServiceObj["popupName"];
+    startDate?: IWhatsNewSettingsServiceObj["startDate"];
+    endDate?: IWhatsNewSettingsServiceObj["endDate"];
+}
+export interface IBoGetWhatsNewSettingsResponse {
+    settings: IWhatsNewSettingsDataObj;
+}
+export interface IBoGetWhatsNewSettingsResponseConsumer {
+    settings: IWhatsNewSettingsServiceObj;
+}
+export interface IBoUpdateWhatsNewSettingsResponse {
+    settings: IWhatsNewSettingsDataObj;
+}
+export interface IBoUpdateWhatsNewSettingsResponseConsumer {
+    settings: IWhatsNewSettingsServiceObj;
 }
 export interface IReleaseApplicationRequest {
     appID: ObjectID;
@@ -911,6 +985,41 @@ export interface ILegacyRequests {
             msg: string;
             level: "log" | "warning";
         }>;
+    };
+    listOrganizationsRequest: {};
+    listOrganizationsResponse: {
+        organizations: Array<IOrganization>;
+    };
+}
+export interface IOnPremRequests {
+    cloneOrgRequest: {
+        organizationId: string;
+    };
+    cloneOrgResponse: {
+        modelPaths: Array<string>;
+    };
+    readOrgRequest: {
+        organizationId: string;
+    };
+    readOrgResponse: {
+        orgTableValues: Record<string, Buffer>;
+    };
+    createCollectionsRequest: {
+        organizationId: string;
+        collections: any;
+    };
+    createCollectionsResponse: {
+        messages: Array<{
+            msg: string;
+            level: "log" | "warning" | "error";
+        }>;
+    };
+    createCephModelRequest: {
+        options: IUploadModelsToStorageOptions;
+        files: any;
+    };
+    createCephModelResponse: {
+        result: IUploadFilesToBucketResult | void;
     };
     listOrganizationsRequest: {};
     listOrganizationsResponse: {

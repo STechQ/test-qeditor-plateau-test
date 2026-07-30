@@ -99,6 +99,7 @@ export interface IApplication extends ICloudObject {
     lastPublishDate?: Date;
     mobileUsage?: IUpdateMobileUsage;
     copyApp?: ICopyApp;
+    isCopiedApp?: boolean;
     lastReleasedVersion?: string;
     tags?: Array<ITagValue>;
 }

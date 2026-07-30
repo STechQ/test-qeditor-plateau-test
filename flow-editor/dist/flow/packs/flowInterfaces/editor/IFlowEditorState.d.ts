@@ -1,5 +1,6 @@
 /// <reference types="node" />
 import { IFlowDesignModel } from "./IFlowDesignModel";
+import { IEditorUiState } from "./IStepOptions";
 export interface IFlowState {
     surfaceMatrix: {
         elements: Array<Number>;
@@ -19,5 +20,6 @@ export interface IVMHistory {
 export interface IFlowEditorState {
     draw: IFlowState;
     history: IVMHistory;
+    editorUiState?: IEditorUiState;
 }
 //# sourceMappingURL=IFlowEditorState.d.ts.map

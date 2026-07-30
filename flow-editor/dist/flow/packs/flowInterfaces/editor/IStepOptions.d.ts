@@ -63,6 +63,12 @@ export interface IFindReferenceInCode {
     endLine: number;
     endColumn: number;
 }
+export interface IEditorUiState {
+    stepID: string;
+    open: boolean;
+    code: string;
+    viewState?: any;
+}
 export interface IEditOutput {
     outputName: string;
     position?: {
@@ -106,6 +112,10 @@ export interface IEditSectionInput<PropType extends IPropObject = IPropObject> {
         findReferenceInCode?: {
             get: () => IFindReferenceInCode | undefined;
             set: (val: IFindReferenceInCode | undefined) => void;
+        };
+        editorUiState?: {
+            get: () => IEditorUiState | undefined;
+            set: (val: IEditorUiState | undefined) => void;
         };
         privileges?: Array<IPrivilegeItem>;
         actions?: Array<IActionItem>;

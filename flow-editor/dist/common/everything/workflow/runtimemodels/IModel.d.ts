@@ -12,8 +12,9 @@ import { IPrivilegeDesign } from "../../accessmanager/designtime/IPrivilegeDesig
 import { IRoleDesign } from "../../accessmanager/designtime/IRoleDesign";
 import { IPersonaDesign } from "../../accessmanager/designtime/IPersonaDesign";
 import { IActionDesign } from "../../action/IActionDesign";
+import { IReportModel } from "../../report/runtimemodels/IReportModel";
 export type IModelBaseFields = {
     id: string;
 };
-export type IWFModels = IDataTypeModel | IEnumModel | IRestServiceModel | ISoapServiceModel | IFlowModel | IWorkflowModel | IConstantModel | ISoapServiceV2Model | IDecisionTableModel | IDataSetModel | IPrivilegeDesign | ISwimlaneDesign | IRoleDesign | IPersonaDesign | IActionDesign;
+export type IWFModels = IDataTypeModel | IEnumModel | IRestServiceModel | ISoapServiceModel | IFlowModel | IWorkflowModel | IConstantModel | ISoapServiceV2Model | IDecisionTableModel | IDataSetModel | IPrivilegeDesign | ISwimlaneDesign | IRoleDesign | IPersonaDesign | IActionDesign | IReportModel;
 //# sourceMappingURL=IModel.d.ts.map

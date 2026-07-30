@@ -9,6 +9,7 @@ export interface IWMEnvKeyMap extends IEnvKeyMap {
     targetTimezone: string;
     maxBatchJobTryCount?: string;
     failedJobRetryDelayMs?: string;
+    queueAlarmDepth?: string;
     nodeType?: string;
     reportMode?: string;
     dbType?: RdbmsType;

@@ -72,6 +72,9 @@ export declare class MongoDBManager implements IDataStoreManager {
         trxQueue?: TTrx;
         upsert?: boolean;
         returnDocument?: ReturnDocument;
+        sort?: {
+            [key: string]: 1 | -1;
+        };
     }): Promise<T | undefined>;
     Delete<T, TTrx extends IMongoDBTransactionQueue | void = IMongoDBTransactionQueue>(collectionName: CollectionName, filter: FilterTypeNullable<T> | FilterTypeOrAnd<T>, options: {
         trxQueue?: TTrx;
@@ -85,6 +88,9 @@ export declare class MongoDBManager implements IDataStoreManager {
     Aggregate<T, RetT = T, TTrx extends IMongoDBTransactionQueue | void = IMongoDBTransactionQueue>(collectionName: CollectionName, pipeline: Array<AggregateType<T>>, options?: {
         trxQueue?: TTrx;
     }): Promise<Array<RetT>>;
+    AggregateCursor<T, RetT = T>(collectionName: CollectionName, pipeline: Array<AggregateType<T>>, options?: {
+        batchSize?: number;
+    }): Promise<AsyncIterable<RetT>>;
     CreateIndexes<T>(collectionName: CollectionName, indexDefinitions: IndexDefinitions<T>, options?: {
         force?: boolean;
     }): Promise<void>;

@@ -1,6 +1,6 @@
 /// <reference types="react" />
 import { IVMHistory } from "../../../../flowInterfaces/editor/IFlowEditorState";
-import { IEditOutput, IFindReferenceInCode, IStepOptions } from "../../../../flowInterfaces/editor/IStepOptions";
+import { IEditOutput, IFindReferenceInCode, IStepOptions, IEditorUiState } from "../../../../flowInterfaces/editor/IStepOptions";
 import { IInitOptions } from "../../../../flowInterfaces/editor/editors/IFlowEditorProgram";
 import { IStepModel } from "../../../../flowInterfaces/runtime/IStepModel";
 import { IExpressionData } from "@stechquick/flow-interfaces/runtime";
@@ -81,6 +81,7 @@ export interface IViewModel {
     uniqueKey?: IExpressionData;
     selectedModelId: string;
     findReferenceInCode?: IFindReferenceInCode;
+    editorUiState?: IEditorUiState;
     editOutput: Record<string, IEditOutput>;
 }
 export declare const IViewModel: unique symbol;

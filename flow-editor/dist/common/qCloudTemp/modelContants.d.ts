@@ -148,6 +148,16 @@ export declare const EditorConsts: {
             readonly single: "action";
         };
     };
+    readonly reportEditor: {
+        readonly modelKeys: {
+            readonly single: "report";
+        };
+    };
+    readonly authEditor: {
+        readonly modelKeys: {
+            readonly single: "auth";
+        };
+    };
 };
 type ModelVisualInfo = {
     type: "icon";

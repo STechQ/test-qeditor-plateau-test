@@ -22,6 +22,7 @@ export declare const LogCodes: {
     readonly bj1500: "bj-1500";
     readonly bj1501: "bj-1501";
     readonly bj1502: "bj-1502";
+    readonly bj1505: "bj-1505";
     readonly bj1503: "bj-1503";
     readonly bj1504: "bj-1504";
     readonly e3000: "e-3000";
@@ -84,6 +85,7 @@ export declare const LogCodes: {
     readonly fm2006: "fm-2006";
     readonly fm2007: "fm-2007";
     readonly fm2008: "fm-2008";
+    readonly fm2009: "fm-2009";
     readonly wm2000: "wm-2000";
     readonly wm2001: "wm-2001";
     readonly wm2003: "wm-2003";

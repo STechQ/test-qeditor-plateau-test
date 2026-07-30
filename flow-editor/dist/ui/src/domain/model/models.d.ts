@@ -223,8 +223,6 @@ export interface IApplicationDetails {
 export interface IUploadedFile {
     name: string;
     content: string;
-    isSameId: boolean;
-    existingModelsIds: string[];
 }
 export interface IApplication extends IObject {
     objectType: "application";
@@ -241,6 +239,7 @@ export interface IApplication extends IObject {
     lastPublishDate?: Date;
     tags?: Array<ITagValue>;
     copyApp?: ICopyApp;
+    isCopiedApp?: boolean;
 }
 export interface IApplicationExtended extends IApplication {
     uiPageCalc: {

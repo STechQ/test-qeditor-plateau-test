@@ -13,8 +13,10 @@ import { EndpointModelType } from "../../endpoint/runtimeModels/types";
 import { BackendFunctionType } from "../../befunc/runtimeModels/types";
 import { RoleModelType, PrivilegeModelType, PersonaModelType } from "../../accessmanager/types";
 import { ActionModelType } from "../../action/types";
+import { ReportModelType } from "../../report/runtimemodels/types";
+import { AuthModelType } from "../../authentication/types";
 export type ContentType = "qjson" | "js" | "ts" | "yaml" | "css" | "png" | "jpg" | "jpeg" | "svg" | "gif" | "lottie" | "woff" | "woff2" | "ttf" | "otf" | "json" | "wsdl" | "xsd" | "theme" | "constant";
-export type ModelType = ContentType | "entityDesigner" | "namedComponent" | FlowModelType | WorkflowModelType | RestServiceModelType | SoapServiceModelType | SoapServiceV2ModelType | "step" | "appSettings" | DataTypeModelType | EnumModelType | ConstantModelType | CertificateModelType | "erronous" | "theme" | JobSchedulerModelType | "container" | SlaModelType | EndpointModelType | BackendFunctionType | DecisionTableModelType | DataSetModelType | RoleModelType | PrivilegeModelType | PersonaModelType | SwimlaneModelType | ActionModelType;
+export type ModelType = ContentType | "entityDesigner" | "namedComponent" | FlowModelType | WorkflowModelType | RestServiceModelType | SoapServiceModelType | SoapServiceV2ModelType | "step" | "appSettings" | DataTypeModelType | EnumModelType | ConstantModelType | CertificateModelType | "erronous" | "theme" | JobSchedulerModelType | "container" | SlaModelType | EndpointModelType | BackendFunctionType | DecisionTableModelType | DataSetModelType | RoleModelType | PrivilegeModelType | PersonaModelType | SwimlaneModelType | ActionModelType | ReportModelType | AuthModelType;
 export interface IStudioUIModelBase extends IStudioUIObjectBase {
     modelType: ModelType;
     path: string;

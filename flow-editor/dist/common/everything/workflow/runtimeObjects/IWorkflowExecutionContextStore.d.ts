@@ -39,11 +39,10 @@ export interface IWorkflowExecutionContextStore extends IExecutionContextStore {
         flowThreadId?: string;
         lockMap?: Record<string, ILockParam>;
         lastCompletedTask?: IWFEDBTaskHistory;
-        jumpToStepId?: string;
-        jumpToStepName?: string;
         status?: StatusType;
         parentFlowThreadId?: string;
-        resumeChain?: string[];
+        stepResumeChain?: string[];
+        threadResumeChain?: string[];
     };
 }
 //# sourceMappingURL=IWorkflowExecutionContextStore.d.ts.map

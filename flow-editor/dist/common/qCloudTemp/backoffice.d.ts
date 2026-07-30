@@ -11,6 +11,7 @@ export interface IMainStatisticInfo {
     userRequestCount: number;
     orgGroupCount: number;
     sdUserCount?: number;
+    whatsNewCount?: number;
     announcement: {
         count: number;
         activeCount: number;
