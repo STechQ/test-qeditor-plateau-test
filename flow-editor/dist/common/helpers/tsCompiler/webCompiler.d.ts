@@ -1,14 +1,14 @@
-import { IScriptWithParam, IArgumentPim, IValuesPim, ITypePim, ICompilerLogger } from "./common";
+import { IScriptWithParam, IArgumentPim, IValuesPim, ITypePim, ICompilerLogger, ICLIWEBCompiler } from "./common";
 interface ILangDTS {
     body?: string;
     error?: string;
 }
-export declare class WebTSCompiler {
+export declare class WebTSCompiler implements ICLIWEBCompiler {
     private static loadingProms;
     private static tsInstances;
     private static loadedDTSs;
     private static LazyLoadTsCompiler;
-    static Compiler(options: Array<IScriptWithParam>, compilerData: Record<string, string>, typescriptServicesURL: string, opt: {
+    Compiler(options: Array<IScriptWithParam>, compilerData: Record<string, string>, typescriptServicesURL: string, opt: {
         gmEditMode?: boolean;
         targetVersion?: keyof typeof ts.ScriptTarget;
         moduleVersion?: keyof typeof ts.ModuleKind;
