@@ -224,6 +224,9 @@ export interface IUploadedFile {
     name: string;
     content: string;
 }
+export interface IApplicationFeatures {
+    disablePrimitiveComponents?: boolean;
+}
 export interface IApplication extends IObject {
     objectType: "application";
     publishmentId?: string;
@@ -239,6 +242,7 @@ export interface IApplication extends IObject {
     lastPublishDate?: Date;
     tags?: Array<ITagValue>;
     copyApp?: ICopyApp;
+    features?: IApplicationFeatures;
     isCopiedApp?: boolean;
 }
 export interface IApplicationExtended extends IApplication {
