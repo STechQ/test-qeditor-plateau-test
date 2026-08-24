@@ -273,12 +273,6 @@ export interface IGetUserInfoResponse {
 export interface IGetOrganizationInfoResponse {
     organizationInfo: IOrganization;
 }
-export interface IGetApplicationInfoResponse {
-    applicationInfo: IApplication;
-}
-export interface IUpdateApplicationFeaturesResponse {
-    applicationRes: IApplication;
-}
 export interface IGetChatBotResponse {
     responseText: string;
     verifiedUrls: Array<string>;
