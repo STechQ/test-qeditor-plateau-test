@@ -195,10 +195,10 @@
         });
       }
 
-      function loadScriptPromise(src, prom, getValue, errorMessage){
+      function loadScriptPromise(src, prom, getValue, errorMessage, optional){
         createScriptLoader(src, true)
           .then(function(){ prom.res(getValue()); })
-          .catch(function(){ prom.rej(errorMessage); });
+          .catch(function(){ optional ? prom.res(undefined) : prom.rej(errorMessage); });
       }
 
       function loadQuiRuntimeScripts(prefix){
@@ -218,7 +218,8 @@
           joinUrl(prefix, "static/css/assetList.js"),
           quiProms.asset,
           function(){ return window.plateauUIAsset; },
-          "asset_list load error"
+          "asset_list load error",
+          true
         );
       }
 
