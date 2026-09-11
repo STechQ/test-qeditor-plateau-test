@@ -52,12 +52,12 @@ export declare class ImportExportImpl implements IImportExport {
     }>;
     deleteObjects(): void;
     private exportEditorModel;
-    private exportDesignModel;
+    private exportFlowDesignModel;
+    private exportWorkflowDesignModel;
     private updateRuntimeObject;
     private generateFlowIntelli;
     private exportRuntimeFlowModel;
     private exportRuntimeWorkFlowModel;
-    private exportDesignWorkflowModel;
     private exportRuntimeModel;
     private exportDesigntimeModel;
     private getPersonaList;

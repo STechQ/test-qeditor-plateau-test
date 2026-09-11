@@ -11,6 +11,7 @@
     var quiProms = {web: createProm(), iam: createProm(), asset: createProm()};
     var QUI_BUILD_OPTIONS = window.__quiBuildOptions || {};
     QUI_BUILD_OPTIONS.skipPackages = "<<skipPackages>>" === "true";
+    QUI_BUILD_OPTIONS.useSettings = "<<useSettings>>" === "true";
     window.__quiBuildOptions = QUI_BUILD_OPTIONS;
     window.__checkPrefix = (path) => {
       return QUI_BUILD_OPTIONS.skipPackages ? window.__webSDKUrlPrefix + path : path;
@@ -232,7 +233,14 @@
 
       function boot(){
         var completed = false;
-        var shouldUseShellPackages = window.__quiBuildOptions && window.__quiBuildOptions.skipPackages === true;
+         var shouldUseShellPackages = false;
+         var shouldUseLocalSettings = true;
+         if (window.__quiBuildOptions) {
+          shouldUseShellPackages = window.__quiBuildOptions.skipPackages === true;
+          if (shouldUseShellPackages) {
+            shouldUseLocalSettings = window.__quiBuildOptions.useSettings === true;
+          }
+        }
         var pending = 1;
         var failures = [];
         var localWebsdkUrl = addVersion("packages/websdk/websdk.js", LOCAL_VERSION);
@@ -253,7 +261,8 @@
           window.__quiBootSource = candidate.source;
           window.__webSDKUrlPrefix = candidate.prefix;
           window.__webSDKVersion = candidate.version;
-          loadQuiRuntimeScripts(candidate.prefix);
+          var candidatePrefix =  shouldUseShellPackages && shouldUseLocalSettings ? "" : candidate.prefix; 
+          loadQuiRuntimeScripts(candidatePrefix);
           createScriptLoader(candidate.websdkUrl)
             .then(function(){
               ensureWebSdkReady(candidate.source, candidate.websdkUrl);
