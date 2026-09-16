@@ -54,6 +54,12 @@ interface IModelCtorInitials {
 }
 export interface ISetModelBodyOptions {
     time?: Date | "skip";
+    /**
+     * Sunucudaki hangi sürüme karşılık geldiği bilinen bir body veriliyorsa o sürümün updateDate'i.
+     * "unknown" -> body'nin sunucu karşılığı yok (history/lokal düzenleme): offline cache tazelik iddiası düşer.
+     * undefined -> mevcut değer korunur.
+     */
+    bodyServerDate?: Date | "unknown";
     overrideOriginal?: boolean;
     setModelModifyState?: boolean;
 }
@@ -99,19 +105,28 @@ export declare class Model implements IModel, IStudioUIModelBase {
     get modelBodyOriginal(): IModelBodyObject[] | undefined;
     private _cacheInfo?;
     get cacheInfo(): IModelCacheInfoResolved | IModelCacheInfoResolving | undefined;
+    private _bodyServerDate?;
+    get bodyServerDate(): Date | undefined;
     private _queueInfo?;
     get isQueued(): boolean;
     get isUnmodifiableTotal(): boolean | undefined;
     private _modelBody?;
     get modelBody(): IModel["modelBody"];
-    setModelBody(value: NonNullable<IModel["modelBody"]>, { time, overrideOriginal, setModelModifyState }: ISetModelBodyOptions, protection: typeof modelProtection): void;
+    setModelBody(value: NonNullable<IModel["modelBody"]>, { time, bodyServerDate, overrideOriginal, setModelModifyState }: ISetModelBodyOptions, protection: typeof modelProtection): void;
     setModelBodyOriginal(value: NonNullable<IModel["modelBody"]>, protection: typeof modelProtection): void;
     notModifiableByOthers(): boolean;
     revertModelBody(protection: typeof modelProtection): boolean;
     onPrepareModelBodyRetrieve(): void;
     onDiscardModelBodyRetrieve(): void;
+    private _cacheTimeBeforeRetrieve?;
     onBeforeModelBodyRetrieve(): void;
     onAfterModelBodyRetrieve(): void;
+    /**
+     * Sunucu istenen govdeyi dondurmedi (kopuk versiyon referansi). Eskiden hicbir sey yapilmiyordu: model sonsuza dek
+     * "resolving" kaliyor, onu bekleyen her Refresh/acilis asili kaliyordu. Elde govde varsa onunla devam edilir
+     * (govde ve tarihi degismez), yoksa bekleyenler hata ile birakilir ve sonraki denemede yeniden istenir.
+     */
+    onMissingModelBodyRetrieve(err: Error): void;
     onFailModelBodyRetrieve(err: Error): void;
 }
 export interface IFolder {
@@ -136,6 +151,7 @@ export interface IModel extends IObject, IStudioUIModelBase {
     onAfterModelBodyRetrieve(): void;
     onBeforeModelBodyRetrieve(): void;
     onFailModelBodyRetrieve(err: Error): void;
+    onMissingModelBodyRetrieve(err: Error): void;
     setModelBody(value: NonNullable<IModel["modelBody"]>, options: ISetModelBodyOptions, protection: typeof modelProtection): void;
     setModelBodyOriginal(value: NonNullable<IModel["modelBody"]>, protection: typeof modelProtection): void;
     copyFrom(model: IModel): void;
@@ -145,6 +161,8 @@ export interface IModel extends IObject, IStudioUIModelBase {
     readonly modelBody?: Array<IModelBodyObject>;
     readonly modelBodyOriginal?: Array<IModelBodyObject>;
     readonly cacheInfo?: IModelCacheInfoResolved | IModelCacheInfoResolving;
+    /** Bellekteki body'nin karşılık geldiği sunucu updateDate'i. Bilinmiyorsa undefined. */
+    readonly bodyServerDate?: Date;
     readonly isQueued: boolean;
     extension?: ExtensionType;
     usageType?: ITreeviewItem["usageType"];
