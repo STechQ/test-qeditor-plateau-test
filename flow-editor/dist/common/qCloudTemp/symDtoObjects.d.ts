@@ -874,6 +874,11 @@ export interface ICreateWorkflowExportJobRequest {
     items: Array<IWorkflowExportItem>;
     updateStrategyInfos?: Array<IUpdateStrategyInfo>;
 }
+export interface ICreateRawExportJobRequest {
+    jobID: string;
+    appID: string;
+    includeHistory: boolean;
+}
 export interface IModuleExportItem {
     ID: string;
     version: string;
