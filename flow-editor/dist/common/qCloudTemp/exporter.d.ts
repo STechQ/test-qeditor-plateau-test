@@ -93,6 +93,8 @@ export interface IRawExportJobData {
         name: string;
     };
     includeHistory: boolean;
+    /** Export'un istendiği Studio adresinin host'u; manifest'te source.host olarak yazılır. */
+    sourceHost?: string;
 }
 export type AllJobDataTypes = IExportJobData | IServiceExportJobData | IDeployJobData | IBuildJobData | IDeploymentStartJobData | IAppManagementJobData | IOrganizationManagementJobData | IWorkflowExportJobData | IRawExportJobData;
 export interface IQcloudJob {
