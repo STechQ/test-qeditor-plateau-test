@@ -74,6 +74,11 @@ export declare class S3Low {
     createS3BucketPolicy(bucketName: string, params: IS3BucketPolicy): Promise<void>;
     createBucket(params: ICreateBucketParams): Promise<string>;
     deleteBucket(params: IDeleteBucketParams): Promise<void>;
+    /**
+     * Stream'i 5 MB'lık parçalar halinde, parçaları sırayla göndererek multipart yükler (release/3.4.2'deki düzeltme): S3/Ceph son parça
+     * dışında 5 MB altı parçayı kabul etmez ve bellekte en fazla bir parça tutulur. Boş stream boş bir nesne yazar. Yükleme ya da kaynak
+     * stream hata verirse multipart upload iptal edilir ve hata yeniden fırlatılır.
+     */
     uploadStream(params: IUploadStreamParams): Promise<void>;
     uploadFile(params: IFileUploadParams): Promise<{
         success: boolean;

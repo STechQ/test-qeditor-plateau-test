@@ -80,7 +80,7 @@ export type IStreamFromWebStorageOptions = ({
 } | {
     organization: IOrganizationOptions;
 }) & {
-    container: "web" | "artifacts" | "models";
+    container: "web" | "artifacts" | "models" | "imports";
     pathToFile: string;
 };
 export type IStreamToStorageOptions = ({
@@ -88,11 +88,13 @@ export type IStreamToStorageOptions = ({
 } | {
     organization: IOrganizationOptions;
 }) & {
-    container: "web" | "artifacts" | "models";
+    container: "web" | "artifacts" | "models" | "imports";
     pathToFile: string;
     stream: Readable;
     contentType?: string;
 };
+/** Silinecek nesnenin yeri; stream'le okunan nesneyle aynı biçimde. Olmayan nesneyi silmek hata değildir. */
+export type IDeleteFromStorageOptions = IStreamFromWebStorageOptions;
 export type ICloudProviderStorageAzureType = "azure";
 export type ICloudProviderStorageCephType = "ceph";
 export type ICloudProviderStorageType = ICloudProviderStorageAzureType | ICloudProviderStorageCephType;
@@ -107,6 +109,7 @@ export interface ICloudProviderStorage {
     deleteModel(options: IDeleteModelOptions, modelId: string): Promise<IDeleteFolderResult>;
     streamFromWebStorage(options: IStreamFromWebStorageOptions): Promise<IStreamFromWebStorageResponse>;
     streamToStorage(options: IStreamToStorageOptions): Promise<void>;
+    deleteFromStorage(options: IDeleteFromStorageOptions): Promise<void>;
     readModel(options: IReadModelOptions, path: string, fullName: string): Promise<IReadModelResponse>;
     getModelsInPath(options: IGetModelsInPathOptions, path: string): Promise<IGetModelsInPathResponse>;
 }

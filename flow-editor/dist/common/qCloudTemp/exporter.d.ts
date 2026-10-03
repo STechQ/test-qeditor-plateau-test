@@ -4,6 +4,7 @@ import { ICloudProviderPublishTypeDeployables } from "../clean/domain/useCases/I
 import { IOrganization } from "./membership";
 import { IApplication, IDependentModel, IModelBodyObject, IOrganizationActions, UsageType } from "./quickCloud";
 import { IModuleExportItem, IUpdateStrategyInfo } from "./symDtoObjects";
+import { IRawImportJobRecord, RawImportJobData } from "./rawImport";
 export interface IQCloudBaseResponse<T extends Record<string, any> | void> {
     status: "success" | "customerror" | "permissionError" | "error";
     data: T;
@@ -49,6 +50,7 @@ export interface IUpdateJobStepResponse {
 export interface IGetExportModelsRequest {
     type: "named" | "entityDesigner" | "flow" | "befunc" | "endpoint" | "container" | "other";
     organizationId: string;
+    applicationID?: string;
     models: Array<{
         id: IExportItem["id"];
         ver: IExportItem["ver"];
@@ -57,6 +59,7 @@ export interface IGetExportModelsRequest {
 }
 export interface IModelBodyResponse extends IModelBodyObject {
     id: IExportItem["id"];
+    path?: string;
     createDate: Date;
     updateDate?: Date;
     dependentModels?: Array<IDependentModel>;
@@ -80,7 +83,7 @@ export interface IExportItem {
     updateDate?: Date;
     dependentModels?: Array<IDependentModel>;
 }
-export type JobType = "export" | "deploy" | "pack" | "appmanagement" | "organizationManagement" | "workflowExport" | "workflowModuleExport" | "rawExport";
+export type JobType = "export" | "deploy" | "pack" | "appmanagement" | "moduleManagement" | "organizationManagement" | "workflowExport" | "workflowModuleExport" | "rawExport" | "rawImport";
 export type JobCauseType = "download" | "publish";
 export type ExportType = "qui" | "sdk" | "model";
 export type DeployType = "module" | "application";
@@ -96,7 +99,7 @@ export interface IRawExportJobData {
     /** Export'un istendiği Studio adresinin host'u; manifest'te source.host olarak yazılır. */
     sourceHost?: string;
 }
-export type AllJobDataTypes = IExportJobData | IServiceExportJobData | IDeployJobData | IBuildJobData | IDeploymentStartJobData | IAppManagementJobData | IOrganizationManagementJobData | IWorkflowExportJobData | IRawExportJobData;
+export type AllJobDataTypes = IExportJobData | IServiceExportJobData | IDeployJobData | IBuildJobData | IDeploymentStartJobData | IAppManagementJobData | IModuleManagementJobData | IOrganizationManagementJobData | IWorkflowExportJobData | IRawExportJobData | RawImportJobData;
 export interface IQcloudJob {
     jobID: string;
     organizationId: IOrganization["id"];
@@ -186,6 +189,11 @@ export interface IAppManagementJobData {
     type: "delete" | "deletegcpenv";
     addHistory?: boolean;
     k8Namespace?: string;
+}
+export interface IModuleManagementJobData {
+    moduleID: string;
+    type: "delete";
+    addHistory?: boolean;
 }
 export interface IOrganizationManagementJobData {
     type: "delete";
@@ -290,6 +298,8 @@ export interface IExportJobDbItem {
     createdBy: string;
     status: StatusType;
     grabbed: boolean;
+    /** Yalnızca type "rawImport" job'larında (spec §4.1). */
+    rawImport?: IRawImportJobRecord;
 }
 export interface IExportJobStepDbItem {
     ID: string;

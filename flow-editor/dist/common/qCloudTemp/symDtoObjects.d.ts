@@ -3,7 +3,7 @@ import { IApplication, IFolder, ILoggedInUser, IModel, IWorkflowExportItem } fro
 import { IUserMainInfo, IUser_SUSI } from "./authentication";
 import { IFeedbackAttachment, IUserFeedback } from "./feedback";
 import { IEditorTypes, IOrganization, IOrganizationCalculatedInfo, IOrganizationFeatures } from "./membership";
-import { IApplicationDetails, IApplicationExportSettings, IModelBodyObject, IDependentModel, IOrganizationActions, ModelAdditionals, ObjectID, IModuleBackend, IModuleVersion, ITags, IOrganizationGroup, IModelInfo, ExtensionType, UsageType, AppSettingsModelKeys, AllModelAdditionalTypes, IApplication as IApplicationDbModel, IModelHistoryInfo, IModelCheckout, ModuleShareType, ModuleShareScope, ForceUpdatePlatform, IMarketplaceModuleUsage } from "./quickCloud";
+import { IApplicationDetails, IApplicationExportSettings, IModelBodyObject, IDependentModel, IOrganizationActions, ModelAdditionals, ObjectID, IModuleBackend, IModuleVersion, ITags, IOrganizationGroup, IModelInfo, ExtensionType, UsageType, AppSettingsModelKeys, AllModelAdditionalTypes, IApplication as IApplicationDbModel, IModelHistoryInfo, IModelCheckout, ModuleShareType, ModuleShareScope, ForceUpdatePlatform, IMarketplaceModuleUsage, IModelBody, ModuleObjectType } from "./quickCloud";
 import { IApplicationVersion, IApplicationVersionArtifacts } from "./applicationVersion";
 import { IUserPreferences } from "./userPreference";
 import { IMainStatisticInfo } from "../qCloudTemp/backoffice";
@@ -383,6 +383,7 @@ export interface IRelaseModuleRequest {
         modelID: string;
         version: string;
     }>;
+    selectedModuleIDs?: Array<string>;
     basedVersion?: string;
     description?: string;
     unreleased?: boolean;
@@ -1053,6 +1054,19 @@ export interface IVersionCheckResponse {
     updateUrl: string;
     title: string;
     message: string;
+}
+export interface IOverrideModelResponse {
+    modelInfo: IModelInfo;
+    modelBody: Array<IModelBody>;
+}
+export interface IOverrideModelRequest {
+    applicationID: ObjectID;
+    modelInfo: {
+        ID: ObjectID;
+        version: string;
+        ownerItem: ObjectID;
+        ownerType: ModuleObjectType;
+    };
 }
 export {};
 //# sourceMappingURL=symDtoObjects.d.ts.map

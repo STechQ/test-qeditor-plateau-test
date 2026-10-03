@@ -18,6 +18,7 @@ interface IContextAndVarsProps {
     store: Store;
     schema: Store;
     readonly?: boolean;
+    showEmptySections?: boolean;
     onChange: (store: Store) => void;
     openModelInNewTab?: (modelID: string) => void;
 }

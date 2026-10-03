@@ -47,6 +47,8 @@ export declare class FlowConnection extends FlowObjectBase {
     private prevTo;
     private isSelected;
     private text;
+    /** Global toggle from the canvas overlay; hides connection labels without touching the model. */
+    private labelsHidden;
     private readonly;
     private _bringingToFront;
     private events;
@@ -60,6 +62,8 @@ export declare class FlowConnection extends FlowObjectBase {
     protected onDeleted(): never[];
     reDraw(): void;
     setConnectionName(newName: string): void;
+    /** Hides or shows this connection's label. Purely a view state; nothing is written back. */
+    setLabelsVisible(visible: boolean): void;
     private openOutputMenu;
     private closeOutputMenu;
     private changeOutput;

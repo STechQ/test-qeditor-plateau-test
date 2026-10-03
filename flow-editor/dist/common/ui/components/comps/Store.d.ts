@@ -3,6 +3,7 @@ import { Store as StoreModel } from "../../../everything/store/designtimemodels/
 import { IOption } from "./Select";
 export interface IStoreProps {
     className?: string;
+    showEmptySections?: boolean;
     store: StoreModel;
     schema: StoreModel;
     dataTypes: Array<{

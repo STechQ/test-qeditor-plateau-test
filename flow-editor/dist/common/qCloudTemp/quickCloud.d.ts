@@ -79,7 +79,29 @@ export interface IApplicationLogoInfo {
     path: string;
     updateDate: Date;
 }
+/** Uygulama raw import ile kurulduysa kaynağı. Yalnızca uygulama kaydı import ile ilk kez yazılırken eklenir. */
+export interface IApplicationRawImportInfo {
+    sourceEnvironment?: string;
+    /** Paketin export edildiği Studio adresinin host'u (manifest source.host). */
+    sourceHost?: string;
+    sourceOrganization: {
+        id: string;
+        name: string;
+    };
+    sourceApplication: {
+        id: string;
+        name: string;
+    };
+    packageCreatedAt: string;
+    exporterVersion: string;
+    includeHistory: boolean;
+    importedAt: Date;
+    importedBy: string;
+}
 export interface IApplication extends ICloudObject {
+    status?: "deleting";
+    deleteTriggerDate?: Date;
+    tryDeletingCounter?: number;
     /**
      * This is the RESERVED ID which should be used for publishments.
      */
@@ -102,6 +124,7 @@ export interface IApplication extends ICloudObject {
     isCopiedApp?: boolean;
     lastReleasedVersion?: string;
     tags?: Array<ITagValue>;
+    rawImport?: IApplicationRawImportInfo;
 }
 export interface IOrganizationData extends IOrganization {
     showOrgInfo: boolean;
@@ -130,6 +153,9 @@ export interface IModuleOwnerOrgInfo {
     appName?: string;
 }
 export interface IModuleBackend extends ICloudObject {
+    status?: "deleting";
+    deleteTriggerDate?: Date;
+    tryDeletingCounter?: number;
     description?: string;
     modifyDate?: Date;
     prefix?: string;
@@ -234,7 +260,6 @@ export interface IModelInfo extends ICloudObject {
      * @summary versiyonlu modül içindeki versiyonlu model için var.
      * @remarks çünkü ID -> HistoryID.
      */
-    modelID?: string;
     version?: string;
     editingVer?: string;
     unversioned?: boolean;
@@ -244,10 +269,9 @@ export interface IModelInfo extends ICloudObject {
         version?: string;
     };
 }
-export interface IModelPackagingInfo extends IModelInfo {
+export interface IModelPackagingInfo extends IModelHistoryInfo {
     body: IModelBodyObject;
     fullPath?: string;
-    historyId: string;
     version: NonNullable<IModelInfo["version"]>;
 }
 export interface IDependentModel {
@@ -436,6 +460,7 @@ export interface ITreeviewItem {
     importedFromGlobal?: boolean;
     editingVer?: string;
     unversioned?: boolean;
+    description?: string;
 }
 export interface IScreenItem {
     id: string;
@@ -523,7 +548,6 @@ export interface IOrganizationGroup extends ICloudObject {
     owners?: Array<string>;
     features?: IOrganizationFeatures;
     applications?: IEditorTypes;
-    mainAppId?: IApplication["ID"];
     configs?: IOrganizationGroupConfigs;
 }
 export interface ISDActivities {

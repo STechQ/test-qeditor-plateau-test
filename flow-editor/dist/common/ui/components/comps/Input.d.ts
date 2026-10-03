@@ -1,7 +1,8 @@
-/// <reference types="react" />
+import { ReactNode } from "react";
 import "../assets/css/components/input.css";
 interface IInputProps {
-    label?: string;
+    /** Rendered as-is, so a node can be passed when part of the label needs its own styling. */
+    label?: ReactNode;
     className?: string;
     placeholder?: string;
     disabled?: boolean;

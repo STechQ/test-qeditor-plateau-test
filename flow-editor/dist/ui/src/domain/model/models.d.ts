@@ -199,6 +199,8 @@ export interface ICheckoutInfo {
 }
 export interface IModule extends IObject {
     objectType: "module";
+    status?: "deleting";
+    deleteTriggerDate?: Date;
     description?: string;
     prefix?: string;
     owner: IApplication | IModule;
@@ -247,6 +249,8 @@ export interface IApplicationFeatures {
 }
 export interface IApplication extends IObject {
     objectType: "application";
+    status?: "deleting";
+    deleteTriggerDate?: Date;
     publishmentId?: string;
     logoInfo?: IApplicationLogoInfo;
     color?: string;

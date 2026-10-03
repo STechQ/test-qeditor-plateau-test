@@ -23,6 +23,9 @@ interface IDynamicFieldBase<T extends WithIcon & Record<string, any>> {
     fieldLabel: DotPath<T>;
     prefixLabel?: string;
     collapsibleLabel: string;
+    collapsibleClassName?: string;
+    headerActionIcon?: string;
+    isRowVisible?: (item: T) => boolean;
     dialogElements: Array<IDialogElements<T>>;
     isDeletable?: boolean;
     isRenameable?: boolean;
@@ -58,6 +61,6 @@ export type IDynamicFieldPropsNonAddible<T extends WithIcon & Record<string, any
 export type IDynamicFieldProps<T extends WithIcon & Record<string, any>> = IDynamicFieldPropsAddible<T> | IDynamicFieldPropsNonAddible<T>;
 export declare const DynamicField: <T extends keyof T extends any ? {
     [key: string]: any;
-} : never>({ collapsibleLabel, fields, disabledFields, dialogElements, emptyValues: defaultValues, isAddible, isDeletable, isCollapsible, isRenameable, createItemLabel, prefixLabel, dialogTitle, disabled: readonly, fieldLabel, isSortable, triggerDialog, dropdownOptions, onChange, onRename, validate, getFieldLabel, onClickItem, openModelInNewTab, }: IDynamicFieldProps<T>) => import("react/jsx-runtime").JSX.Element;
+} : never>({ collapsibleLabel, collapsibleClassName, headerActionIcon, isRowVisible, fields, disabledFields, dialogElements, emptyValues: defaultValues, isAddible, isDeletable, isCollapsible, isRenameable, createItemLabel, prefixLabel, dialogTitle, disabled: readonly, fieldLabel, isSortable, triggerDialog, dropdownOptions, onChange, onRename, validate, getFieldLabel, onClickItem, openModelInNewTab, }: IDynamicFieldProps<T>) => import("react/jsx-runtime").JSX.Element;
 export {};
 //# sourceMappingURL=DynamicField.d.ts.map

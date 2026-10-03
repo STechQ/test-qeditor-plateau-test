@@ -1,6 +1,6 @@
 import { IOrganizationCloudStorageCeph } from "../../qCloudTemp/membership";
 import { ICloudDiContainer } from "../domain/useCases/ICloudProvider";
-import { IAssertGetStorageHostUrlOptions, ICloudProviderStorage, ICreateOrganizationOptions, IDeleteFolderResult, IDeleteModelOptions, IDeleteOrganizationOptions, IGetModelsInPathOptions, IGetModelsInPathResponse, IIsOrgStatorageConfiguredOptions, IReadModelOptions, IReadModelResponse, IStreamFromWebStorageOptions, IStreamFromWebStorageResponse, IStreamToStorageOptions, IUploadableObject, IUploadCdnFilesToStorageOptions, IUploadModelsToStorageOptions } from "../domain/useCases/ICloudProviderStorage";
+import { IAssertGetStorageHostUrlOptions, ICloudProviderStorage, ICreateOrganizationOptions, IDeleteFolderResult, IDeleteFromStorageOptions, IDeleteModelOptions, IDeleteOrganizationOptions, IGetModelsInPathOptions, IGetModelsInPathResponse, IIsOrgStatorageConfiguredOptions, IReadModelOptions, IReadModelResponse, IStreamFromWebStorageOptions, IStreamFromWebStorageResponse, IStreamToStorageOptions, IUploadableObject, IUploadCdnFilesToStorageOptions, IUploadModelsToStorageOptions } from "../domain/useCases/ICloudProviderStorage";
 import { IS3LowCredentials } from "../infrastructure/cloud/s3Low";
 export interface ICloudProviderStorageCephCredentials {
     credentials: IS3LowCredentials;
@@ -25,6 +25,7 @@ export declare class CloudProviderStorageCephImpl implements ICloudProviderStora
     uploadCdnFilesToOrganizationStorage(options: IUploadCdnFilesToStorageOptions, files: Array<IUploadableObject>): Promise<void>;
     deleteModel(options: IDeleteModelOptions, modelId: string): Promise<IDeleteFolderResult>;
     streamToStorage(options: IStreamToStorageOptions): Promise<void>;
+    deleteFromStorage(options: IDeleteFromStorageOptions): Promise<void>;
     streamFromWebStorage(options: IStreamFromWebStorageOptions): Promise<IStreamFromWebStorageResponse>;
     readModel(options: IReadModelOptions, path: string, fullName: string): Promise<IReadModelResponse>;
     getModelsInPath(options: IGetModelsInPathOptions, path: string): Promise<IGetModelsInPathResponse>;

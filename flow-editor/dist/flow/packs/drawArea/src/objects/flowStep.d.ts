@@ -43,6 +43,12 @@ export declare class FlowStep extends FlowObjectBase {
     private label;
     private description;
     private errors;
+    /** Base colours of the container, restored when the error highlight is cleared. */
+    private baseFill;
+    private baseStroke;
+    private baseLinewidth;
+    private isErroneous;
+    private isHovered;
     readonly type = "step";
     protected readonly stageType: StageType;
     constructor(id: string, stepName: string, surfacePoint: IPoint, options: IFlowStepOptions, objectManager: ObjectManager, zuiManager: ZuiManager, eventHelper: EventHelper<FlowEvents>, props?: IFlowStepProps);
@@ -87,6 +93,11 @@ export declare class FlowStep extends FlowObjectBase {
     private drawRhombusOutputs;
     private drawIOs;
     private bringShapeToFront;
+    /**
+     * Accents the step while the cursor is over it, and tells the object manager what the pointer
+     * is on so the canvas cursor can follow it.
+     */
+    private trackHover;
     private afterDraw;
     colorIO(outputName: string, conType: "input" | "output", color?: string): void;
     setOutputs(outputs: Array<string>): void;
@@ -94,6 +105,18 @@ export declare class FlowStep extends FlowObjectBase {
     setDescription(description: string): void;
     setErrors(errors: Array<string>): void;
     setContainerColor(bgColor: string, borderColor: string): void;
+    /**
+     * Paints the container red while the step has errors and restores its own base colours
+     * otherwise, so shape-specific colouring survives an error coming and going.
+     */
+    setErrorHighlight(isErroneous: boolean): void;
+    /** Accents the container's border while the cursor is over the step. */
+    setHoverHighlight(hovered: boolean): void;
+    /**
+     * Single place the container's colours are decided. Hover only touches the border — the fill
+     * stays whatever the step's state says it is, so it never competes with the erroneous tint.
+     */
+    private applyContainerStyle;
     truncateTextToFit(text: Text, content: string, maxWidth: number): void;
     changeStepID(newId: string): void;
 }

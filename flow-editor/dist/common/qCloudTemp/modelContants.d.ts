@@ -172,6 +172,11 @@ export declare class ModelContants {
     static getModelDisplayName(modelType: ModelType, modelAdditionals?: ModelAdditionals, modelKey?: string): string;
     static getModelVisualInfo(modelType: ModelType | ModuleObjectType | "folder", modelAdditionals: ModelAdditionals | undefined): ModelVisualInfo;
     static getModelBodyKeys(modelType: ModelType): string | string[] | undefined;
+    /**
+     * Tip bu Studio sürümünde tanımlı mı. getModelBodyKeys, body'si olmayan bilinen tipler (örn. step) için de undefined döndüğünden
+     * tanınmayan tipleri ayırmak için bu kullanılır.
+     */
+    static isKnownModelType(modelType: string): boolean;
     static getDesignBodyKey(modelType: ModelType): string | undefined;
 }
 export {};

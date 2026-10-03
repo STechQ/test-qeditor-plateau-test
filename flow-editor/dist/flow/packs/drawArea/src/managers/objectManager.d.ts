@@ -16,6 +16,8 @@ export declare class ObjectManager {
     private readonly switchIdCreator;
     private pasteOffset;
     private objects;
+    private hoveredStepId?;
+    private hoveredConnectionId?;
     stateManager?: StateManager;
     constructor(zuiManager: ZuiManager, selectionManager: SelectionManager, eventHelper: EventHelper<FlowEvents>);
     private addSwitchCase;
@@ -25,6 +27,17 @@ export declare class ObjectManager {
     private addOperator;
     updateSwimlanes(steps: Array<IFlowStepSwimlane>, swimlanes: Array<ISwimlaneExport>): void;
     updateSteps(steps: Array<IFlowStepUpdate>): void;
+    /** Called by FlowStep on mouse enter/leave; drives the cursor. */
+    setHoveredStep(stepID: string | undefined): void;
+    /** Called by FlowConnection on mouse enter/leave; drives the cursor. */
+    setHoveredConnection(connectionID: string | undefined): void;
+    /**
+     * Puts the cursor back to whatever the pointer is currently over. Called after a drag ends,
+     * where the interaction manager would otherwise leave the grab cursor behind.
+     */
+    restoreCursor(): void;
+    /** Hides or shows every connection label — switch case names included. */
+    setConnectionLabelsVisible(visible: boolean): void;
     setStepID(oldID: string, newID: string): void;
     addFlowStep(stepName: string, surfacePoint: IPoint, options: IFlowStepOptions, props?: IFlowStepProps, id?: string): FlowStep;
     private _addFlowStep;

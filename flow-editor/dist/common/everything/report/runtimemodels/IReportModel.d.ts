@@ -14,6 +14,10 @@ export interface IReportModel extends IModelBaseFields {
     filter?: Record<string, any>;
     runtimeParams?: IReportRuntimeParam[];
     groupBy?: string[];
+    /** groupBy alanı → tarih bucket'ı. Timestamp alanları gün/ay/yıl bazında
+     *  gruplamak için (örn. "günlük açılan süreç sayısı"). Anahtar groupBy'daki
+     *  fieldPath; bucket'sız alanlar ham değerle gruplanır. */
+    groupByBuckets?: Record<string, ReportDateBucket>;
     sort?: IReportSort[];
     pagination?: IReportPagination;
     chart?: IReportChart;
@@ -64,6 +68,8 @@ export interface IReportJoin {
     prefixParam?: string;
 }
 export type ReportAggregation = "sum" | "avg" | "min" | "max" | "count" | "push" | "addToSet" | "none";
+/** Tarih alanlı groupBy için bucket granülaritesi (bkz. IReportModel.groupByBuckets). */
+export type ReportDateBucket = "hour" | "day" | "month" | "year";
 /**
  * Array field'lar için reduction stratejisi.
  * MongoDB Atlas Charts "Array Reductions" pattern'ı.
