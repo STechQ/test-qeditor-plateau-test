@@ -59,13 +59,18 @@ export interface IRawExportExternalReference {
     /** Hedef kaynak organizasyonda bulunamadı: silinmiş ya da kırık referans, ya da ID olmayan bir değer (örn. `<<settings:anahtar>>`). */
     unresolved?: true;
 }
+/** jobs'ta `ENVIRONMENT` tanımlı değilse manifest'e yazılan ortam adı; alan boş kalmasın. */
+export declare const RAW_EXPORT_ENVIRONMENT_NOT_SET = "NOT SET";
 export interface IRawExportManifest {
     format: typeof RAW_EXPORT_FORMAT;
     formatVersion: typeof RAW_EXPORT_FORMAT_VERSION;
     createdAt: string;
     exporterVersion: string;
     source: {
-        /** Paketin export edildiği Studio ortamının adı (jobs'taki `ENVIRONMENT` env değişkeni, örn. prod, mango, isb). Tanımlı değilse alan yoktur. */
+        /**
+         * Paketin export edildiği Studio ortamının adı (jobs'taki `ENVIRONMENT` env değişkeni, örn. prod, mango, isb). Tanımlı değilse
+         * RAW_EXPORT_ENVIRONMENT_NOT_SET yazılır; eski paketlerde alan hiç olmayabilir.
+         */
         environment?: string;
         /** Export'un istendiği Studio adresinin host'u (örn. studio.onplateau.com); port ve şema yok. Bilinmiyorsa alan yoktur. */
         host?: string;

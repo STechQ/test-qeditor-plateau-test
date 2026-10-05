@@ -298,7 +298,7 @@ export interface IExportJobDbItem {
     createdBy: string;
     status: StatusType;
     grabbed: boolean;
-    /** Yalnızca type "rawImport" job'larında (spec §4.1). */
+    /** Yalnızca type "rawImport" job'larında: import'un tek job kaydı (kontrol sonucu, durma sebebi, rapor ya da hata). */
     rawImport?: IRawImportJobRecord;
 }
 export interface IExportJobStepDbItem {
