@@ -17,6 +17,8 @@ export interface ICustomError {
 }
 export declare class CustomError extends Error implements ICustomError {
     static CustomErrorName: string;
+    /** Static callback for trace integration — set by TraceManager at startup */
+    static onError: ((error: ICustomError) => void) | null;
     static isCustomError(error: unknown): boolean;
     readonly statusCode: ICustomError["statusCode"];
     readonly type: ICustomError["type"];
@@ -236,6 +238,13 @@ export declare const ErrorCodes: {
     readonly wm3158: "WM-3158";
     readonly wm3159: "WM-3159";
     readonly wm3160: "WM-3160";
+    readonly wm3161: "WM-3161";
+    readonly wm3162: "WM-3162";
+    readonly wm3163: "WM-3163";
+    readonly wm3164: "WM-3164";
+    readonly wm3165: "WM-3165";
+    readonly wm3166: "WM-3166";
+    readonly wm3167: "WM-3167";
     readonly js1000: "JS-1000";
     readonly js1001: "JS-1001";
     readonly js1002: "JS-1002";

@@ -25,6 +25,7 @@ export declare const ActionTypes: {
     changeStep: string;
     commit: string;
     manuelNotify: string;
+    parallelBranchCancelled: string;
 };
 export type ActionType = keyof typeof ActionTypes;
 export declare const ActionTypes_TR: Record<ActionType, string>;

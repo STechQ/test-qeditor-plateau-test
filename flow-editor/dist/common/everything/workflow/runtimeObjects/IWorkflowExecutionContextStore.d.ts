@@ -13,7 +13,7 @@ import { IRuntimeUser } from "./namedobjects/IRuntimeUser";
 import { IStepStates } from "../../flow/runtimeObjects/IStepStates";
 import { IMongoDBTransactionQueue } from "../../../runtime/infrastructure/mongo/IDataStoreManager";
 import { ILockParam } from "./ILock";
-import { IWFEDBTaskHistory } from "./IWFEDB";
+import { IIterationData, IWFEDBTask, IWFEDBTaskHistory, ThreadRunState } from "./IWFEDB";
 export interface IWorkflowExecutionContextStore extends IExecutionContextStore {
     workflowIncomingRequest?: IWorkflowIncomingRequest;
     processInstanceId?: string;
@@ -21,7 +21,6 @@ export interface IWorkflowExecutionContextStore extends IExecutionContextStore {
     dsManager?: MongoDBManager;
     processId?: string;
     businessKey?: string;
-    taskId?: string;
     appId?: string;
     user?: IRuntimeUser;
     envManager: EnvManager<IWMEnvKeyMap>;
@@ -43,6 +42,23 @@ export interface IWorkflowExecutionContextStore extends IExecutionContextStore {
         parentFlowThreadId?: string;
         stepResumeChain?: string[];
         threadResumeChain?: string[];
+        threads?: Record<string, {
+            taskId: string | undefined;
+        }>;
+        parallel?: {
+            threads: Record<string, {
+                stepId?: string;
+                state?: ThreadRunState;
+                deleted?: boolean;
+                parentFlowThreadId?: string;
+                iterationData?: IIterationData;
+            }>;
+            createdTasks?: Record<string, IWFEDBTask>;
+            joinLock?: Promise<void>;
+        };
+        parallelRun?: {
+            flowThreadId: string;
+        };
     };
 }
 //# sourceMappingURL=IWorkflowExecutionContextStore.d.ts.map

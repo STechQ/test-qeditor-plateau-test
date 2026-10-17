@@ -20,6 +20,7 @@ export interface IOption {
     value: string | number;
     tooltip?: string;
     type?: VariableTypes;
+    icon?: string;
 }
 export declare const Select: FC<ISelectProps>;
 export {};

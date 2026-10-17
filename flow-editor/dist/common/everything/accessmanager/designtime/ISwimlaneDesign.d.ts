@@ -6,6 +6,7 @@ export type ISwimlaneDesign = IModelBaseFields & {
 };
 export interface ISwimlaneItem {
     id: string;
+    description?: string;
     roles: Array<string>;
 }
 export type ISwimlaneItemWithRef = ISwimlaneItem & {

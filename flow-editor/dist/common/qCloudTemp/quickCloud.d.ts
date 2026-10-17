@@ -268,7 +268,23 @@ export interface IModelInfo extends ICloudObject {
         ID: string;
         version?: string;
     };
+    /**
+     * Aşağıdaki alanlar yalnızca private checkout satırlarında var (bkz. common/qCloudTemp/privateCheckout.ts).
+     * Satır orijinalle aynı ID'yi taşır ve `workspace` alanıyla ayrılır; bu satırlar varsayılan sorgularda görünmez (common/helpers/modelInfosScope.ts).
+     */
+    workspace?: ModelInfoRowKind;
+    /** Kopyanın sahibi (kullanıcı ID'si). */
+    ownerUserID?: ObjectID;
+    /** Kopyanın alındığı modelin gerçek sahibi: modül ya da app. Kopyanın ownerItem'ı her zaman app'tir. */
+    baseOwnerItem?: ObjectID;
+    baseOwnerType?: ApplicationObjectType | ModuleObjectType;
+    /** Kopyanın gövde yolu (<storageId>/<key>); API'de kaydın kimliği. */
+    storageId?: ObjectID;
+    /** Checkout anındaki gövdenin yolu: diff ve "orijinal değişti mi" karşılaştırması için. */
+    baseStorageId?: ObjectID;
 }
+/** ModelInfos satır türü. Şimdilik yalnızca "private" (private checkout kopyası); orijinal satırlarda alan yoktur. */
+export type ModelInfoRowKind = "private";
 export interface IModelPackagingInfo extends IModelHistoryInfo {
     body: IModelBodyObject;
     fullPath?: string;

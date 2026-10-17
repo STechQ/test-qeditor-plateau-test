@@ -23,5 +23,7 @@ export interface IWMEnvKeyMap extends IEnvKeyMap {
     ldapCertificatePath?: string;
     ldapIdentityCertificatePath?: string;
     ldapIdentityCertificateKeyPath?: string;
+    TRACE_MODE?: string;
+    TRACE_REDIS_URL?: string;
 }
 //# sourceMappingURL=IWMEnvKeyMap.d.ts.map

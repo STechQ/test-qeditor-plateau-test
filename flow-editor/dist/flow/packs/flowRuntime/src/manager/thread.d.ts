@@ -6,7 +6,7 @@ export declare class Thread {
     private currentStep?;
     private threadId;
     constructor(ctx: RuntimeContext, step: IThreadStepInfo);
-    next(fromStep: IThreadStepInfo, output: string | undefined): Promise<void>;
+    next(fromStep: IThreadStepInfo, output?: string | Array<string>): Promise<void>;
     jump(jumpTo: IJumpParam, fromStep: IThreadStepInfo): Promise<void>;
     tick(): Promise<boolean>;
     private flaggerize;

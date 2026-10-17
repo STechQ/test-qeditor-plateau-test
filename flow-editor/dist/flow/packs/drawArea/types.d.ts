@@ -9,6 +9,7 @@ export interface IFlowStepOptions {
     icon?: string;
     color?: string;
     errors?: PropValue;
+    allowsMultipleOutputConnections?: boolean;
 }
 export interface IFlowStepProps {
     label?: string;
@@ -54,6 +55,18 @@ export interface IFlowStepUpdate {
     label?: string;
     description?: string;
     errors?: Array<string>;
+    badge?: string;
+    mode?: "parallel" | "sequential";
+    pairCounts?: string;
+}
+export interface IFlowConnectionUpdate {
+    connectionId: string;
+    label?: string;
+    hasCondition?: boolean;
+}
+export interface IStepPair {
+    from: string;
+    to: string;
 }
 export interface IFlowStepEventInfo {
     type: "step" | "connection" | "swimlane" | "operator";
@@ -80,6 +93,7 @@ export type FlowEvents = {
     onRename(stepId: string, oldName: string, newName: string): void;
     changeOutput(connectionId: string, outputName: string): void;
     editOutput(stepId: string, outputName: string, x: number, y: number): void;
+    onConnectionRejected(reason: string): void;
 };
 export interface IDrawArea {
     readonly rootElement: HTMLElement;
@@ -87,6 +101,9 @@ export interface IDrawArea {
     detach(): void;
     updateSwimlanes(steps: Array<IFlowStepSwimlane>, swimlanes: Array<ISwimlaneExport>): void;
     updateSteps(steps: Array<IFlowStepUpdate>): void;
+    updateConnections(connections: Array<IFlowConnectionUpdate>): void;
+    setPairLinks(pairs: Array<IStepPair>): void;
+    getStepClientPoint(stepID: string): IPoint | undefined;
     addAllSwitchCases(switchCase: ISwitchCaseExp): void;
     addFlowStep(stepName: string, clientPoint: IPoint, options: IFlowStepOptions, props?: IFlowStepProps, id?: string): string;
     deleteFlowSteps(stepIDs: Array<string>): void;

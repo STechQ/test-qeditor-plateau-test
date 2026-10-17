@@ -3,7 +3,6 @@ export interface IDomCreateOptions {
     events?: {
         click?: (ev: MouseEvent) => any;
     };
-    /** Both are applied only when non-empty, so both are genuinely optional. */
     attrs?: {
         textContent?: string;
         title?: string;

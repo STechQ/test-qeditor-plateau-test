@@ -55,7 +55,7 @@ export interface IRuntimeParam<PropType = IPropObject, OutputOptions = string, S
         /**
          * commit
          */
-        next: (output?: OutputOptions) => void;
+        next: (output?: OutputOptions | Array<OutputOptions>) => void;
         /**
          * statefull commit
          */

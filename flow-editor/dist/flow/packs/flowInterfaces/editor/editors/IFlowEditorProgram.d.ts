@@ -7,7 +7,7 @@ import { IModifiedStatus } from "../common/IModifiedStatus";
 import { IWorkflowModel } from "../../../../../common/everything/workflow/runtimemodels/IWorkflow";
 import { IStoreModelForFlow } from "../../../../../common/everything/store/designtimemodels/IStoreModel";
 import { IWorkflowDesignModel } from "../../../../../common/everything/workflow/designtimemodels/IWorkflowDesignModel";
-import { ModelValidatorResult } from "../../../common/ModelValidator";
+import { EditorValidationResult } from "../../../../../common/helpers/validators/editorValidation";
 import { IFlowLocationDetail } from "../../../../../common/helpers/modelSearch/flowModelSearch";
 import { IPrivilegeItem } from "../../../../../common/everything/accessmanager/designtime/IPrivilegeDesign";
 import { IActionItem } from "../../../../../common/everything/action/IActionDesign";
@@ -62,7 +62,7 @@ export interface IFlowEditorProgram {
     setActions(actions: Array<IActionItem>): void;
     undo(): Promise<boolean>;
     redo(): Promise<boolean>;
-    validateAndFixModel(): Promise<ModelValidatorResult>;
+    validateAndFixModel(): Promise<EditorValidationResult<IFlowDesignModel>>;
     referenceSearchResult(result: IFlowLocationDetail): Promise<void>;
     deleteObjects(): void;
 }

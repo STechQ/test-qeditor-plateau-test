@@ -12,6 +12,7 @@ import { IActionData } from "../../../../../common/everything/workflow/runtimeOb
 import { IProcessInstance } from "../../../../../common/everything/workflow/runtimeObjects/namedobjects/IProcessInstance";
 import { IWFEDBProcessInst } from "../../../../../common/everything/workflow/runtimeObjects/IWFEDB";
 import { IRuntimePersona } from "../../../../../common/everything/workflow/runtimeObjects/namedobjects/IRuntimePersona";
+import { ISwimlaneItem } from "../../../../../common/everything/accessmanager/designtime/ISwimlaneDesign";
 import { ISessionResponseWFE } from "../../../../../common/everything/workflow/dtos/session";
 import type ICacheManager from "../../../../../common/runtime/infrastructure/cache/ICacheManager";
 type ConvertToDataSet<T extends string> = {
@@ -46,6 +47,7 @@ export interface IPlatformWFFAdaptor {
     };
     accessmanager: {
         getPersona(personaId: string): Promise<IRuntimePersona>;
+        getSwimlanes(): Promise<Array<ISwimlaneItem>>;
     };
     wfe: {
         processContext: {
@@ -77,9 +79,9 @@ export interface IPlatformWFFAdaptor {
             }>;
         };
         task: {
-            complete: () => Promise<ISessionResponseWFE>;
-            save: () => Promise<ISessionResponseWFE>;
-            executeFunctionAction: (functionId: string) => Promise<ISessionResponseWFE>;
+            complete: (taskId?: string) => Promise<ISessionResponseWFE>;
+            save: (taskId?: string) => Promise<ISessionResponseWFE>;
+            executeFunctionAction: (functionId: string, taskId?: string) => Promise<ISessionResponseWFE>;
         };
     };
     log: (message: string, ...optionalParams: Array<any>) => void;
@@ -106,6 +108,7 @@ export interface IPlatformWorkflowServerRequest {
 }
 export interface IChangeStepParams {
     processInstanceId: string;
+    taskId: string;
     dataInstance?: DataInstance;
     status?: StatusType;
     stepId?: string;

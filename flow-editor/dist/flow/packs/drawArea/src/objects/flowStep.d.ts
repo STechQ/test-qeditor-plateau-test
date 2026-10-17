@@ -1,4 +1,5 @@
 import { IPoint } from "../../../flowInterfaces/editor/shape/IPoint";
+import { RoundedRectangle } from "two.js/src/shapes/rounded-rectangle";
 import { Text } from "two.js/src/text";
 import { Circle } from "two.js/src/shapes/circle";
 import { FlowObjectBase, MouseDownReturn } from "./flowObjectBase";
@@ -19,6 +20,7 @@ type StepShapeInfo = {
     rectangle?: boolean;
     circle?: boolean;
     rhombus?: boolean;
+    gateway?: boolean;
     width: number;
     height: number;
 };
@@ -43,12 +45,15 @@ export declare class FlowStep extends FlowObjectBase {
     private label;
     private description;
     private errors;
-    /** Base colours of the container, restored when the error highlight is cleared. */
     private baseFill;
     private baseStroke;
     private baseLinewidth;
     private isErroneous;
     private isHovered;
+    private readonly allowsMultipleOutputConnections;
+    private badgeInfo?;
+    private modeMarker?;
+    private pairCountsText?;
     readonly type = "step";
     protected readonly stageType: StageType;
     constructor(id: string, stepName: string, surfacePoint: IPoint, options: IFlowStepOptions, objectManager: ObjectManager, zuiManager: ZuiManager, eventHelper: EventHelper<FlowEvents>, props?: IFlowStepProps);
@@ -59,6 +64,9 @@ export declare class FlowStep extends FlowObjectBase {
     private createLabel;
     private createIcon;
     private createBar;
+    /** Square body of a parallel gateway — same colours as every other box; the marker glyph and the label name it. */
+    createGatewayContainer(x: number, y: number): RoundedRectangle;
+    private createGatewayMarker;
     private createRectangleContainer;
     createCircleContainer(x: number, y: number): Circle;
     createRhombusContainer(x: number, y: number): Path;
@@ -71,6 +79,12 @@ export declare class FlowStep extends FlowObjectBase {
     getAvailableOutputs(currentConn?: FlowConnection, currentOutput?: string): Array<string>;
     setSwimlaneId(swimlaneId?: string): void;
     mouseDown(surfacePoint: IPoint): MouseDownReturn;
+    /**
+     * A gateway never appears selected alone: its pair gets the same border, purely visually —
+     * the actual selection stays on the clicked step, so dragging and deleting act on that one
+     * alone. `skipPair` breaks the mutual recursion between the two halves.
+     */
+    drawSelectionOverlay(isErroneous?: boolean, skipPair?: boolean): void;
     protected createSelectionOverlay(isErroneous?: boolean): Path[];
     private getBorder;
     moveBy(dVector: Vector, surfacePoint: IPoint): void;
@@ -93,10 +107,6 @@ export declare class FlowStep extends FlowObjectBase {
     private drawRhombusOutputs;
     private drawIOs;
     private bringShapeToFront;
-    /**
-     * Accents the step while the cursor is over it, and tells the object manager what the pointer
-     * is on so the canvas cursor can follow it.
-     */
     private trackHover;
     private afterDraw;
     colorIO(outputName: string, conType: "input" | "output", color?: string): void;
@@ -105,18 +115,13 @@ export declare class FlowStep extends FlowObjectBase {
     setDescription(description: string): void;
     setErrors(errors: Array<string>): void;
     setContainerColor(bgColor: string, borderColor: string): void;
-    /**
-     * Paints the container red while the step has errors and restores its own base colours
-     * otherwise, so shape-specific colouring survives an error coming and going.
-     */
     setErrorHighlight(isErroneous: boolean): void;
-    /** Accents the container's border while the cursor is over the step. */
     setHoverHighlight(hovered: boolean): void;
-    /**
-     * Single place the container's colours are decided. Hover only touches the border — the fill
-     * stays whatever the step's state says it is, so it never competes with the erroneous tint.
-     */
     private applyContainerStyle;
+    setBadge(badge: string): void;
+    setPairCounts(counts: string): void;
+    setModeMarker(mode: "parallel" | "sequential" | undefined): void;
+    getCenterPoint(): IPoint;
     truncateTextToFit(text: Text, content: string, maxWidth: number): void;
     changeStepID(newId: string): void;
 }

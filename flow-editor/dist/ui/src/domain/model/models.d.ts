@@ -98,6 +98,8 @@ export declare class Model implements IModel, IStudioUIModelBase {
     key: IModel["key"];
     migrated?: IModel["migrated"];
     origInfo?: IModel["origInfo"];
+    /** Kullanıcının bu modeldeki private checkout'u. ctor bunu sıfırlamaz; copyFrom'dan sağ çıkar. */
+    privateCheckout?: IModel["privateCheckout"];
     constructor(initials: IModelCtorInitials);
     copyFrom(model: IModel): void;
     private ctor;
@@ -188,6 +190,17 @@ export interface IModel extends IObject, IStudioUIModelBase {
     history?: ITreeviewItem["history"];
     selectedHistoryVersion?: string;
     origInfo?: IModelOrigInfo;
+    /** Private checkout: gövde kullanıcının kopyasından gelir, kayıtlar ona gider. ID orijinal kalır. */
+    privateCheckout?: IModelPrivateCheckoutRef;
+}
+/** Orijinal modelin üzerine giydirilen private checkout kaydı. */
+export interface IModelPrivateCheckoutRef {
+    storageId: string;
+    updateDate: Date;
+    /** Orijinal checkout'tan sonra değişti mi; sunucu design-time gövdeleri karşılaştırır (privatecheckout/compare). */
+    originalChanged?: boolean;
+    /** Editörde orijinal salt okunur gösteriliyor (View Current in Editor); kalıcı değil, sayfa yenilenince kopyaya dönülür. */
+    viewingOriginal?: boolean;
 }
 export interface IModelLink {
     model: IModel;

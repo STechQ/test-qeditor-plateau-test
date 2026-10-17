@@ -74,8 +74,10 @@ export interface IOrganizationFeatures {
     qjsonLoading?: boolean;
     aiSuggestions?: boolean;
     codeAssistant?: boolean;
+    cortex?: boolean;
     appVersion?: boolean;
     externalIntegration?: boolean;
+    tracer?: boolean;
     copyApp?: boolean;
 }
 export interface IOrganizationCalculatedInfo {

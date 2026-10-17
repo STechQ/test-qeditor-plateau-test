@@ -82,6 +82,14 @@ export interface IEditSectionInput<PropType extends IPropObject = IPropObject> {
     propValues: PropType;
     callbacks: {
         setProp: <K extends UnionKeys<PropType> & string>(name: K, value?: ValueOf<PropType, K>, data?: Record<string, string>) => Promise<Array<string> | void>;
+        getProps?: () => PropType;
+        subscribeProps?: (cb: () => void) => () => void;
+        /**
+         * Notifies the panel when the studio model list changes (any model created/updated/deleted —
+         * the modelUpdatedHook → setModels chain). Panels that keep a mapping of a referenced
+         * model's params re-sync on it. Returns an unsubscribe function.
+         */
+        subscribeModels?: (cb: () => void) => () => void;
         setStepID: (newId: string) => ValidationErrorHelper | null;
         setOutputs: (outputs: Array<string>) => void;
         setSwimlaneName: (name: IExpressionDataFiltered<"literal" | "string">) => void;
@@ -153,6 +161,7 @@ export interface IInputInfo {
 export interface IStepOptions<PropType extends IPropObject = IPropObject> {
     name: string;
     panelLabel: string;
+    paletteLabel?: string;
     version: string;
     outputs: Array<string> | ((props: PropType | undefined) => Array<string>);
     inputs: Array<IInputInfo> | (() => Array<IInputInfo>);
@@ -160,6 +169,8 @@ export interface IStepOptions<PropType extends IPropObject = IPropObject> {
     color?: string;
     icon?: string;
     deprecated?: boolean;
+    hideInPalette?: boolean;
+    allowsMultipleOutputConnections?: boolean;
     editSection?: (options: IEditSectionInput<PropType>) => (ReactEditSection | HTMLElement);
     propDefinitions: () => IPropDefiniton<PropType>;
     changeOutputName?: (props: PropType, oldName: string, newName: string) => PropType;

@@ -10,6 +10,7 @@ import { IStepRepo } from "../../domain/useCase/IStepRepo";
 import { IStepInstance, IViewModel } from "../../domain/viewModel/IViewModel";
 import { IPropObject } from "@stechquick/flow-interfaces/runtime";
 import { PropValue } from "../../../../flowInterfaces/runtime/IStepModel";
+import { IParallel } from "../../domain/useCase/IParallel";
 export declare class ImportExportImpl implements IImportExport {
     private readonly viewModel;
     private readonly stepRepo;
@@ -17,7 +18,8 @@ export declare class ImportExportImpl implements IImportExport {
     private readonly flow;
     private readonly history;
     private readonly selection;
-    constructor(container: DependencyContainer, viewModel?: IViewModel, stepRepo?: IStepRepo, drawArea?: IDrawArea, flow?: IFlow, history?: () => IHistory, selection?: () => ISelection);
+    private readonly parallel;
+    constructor(container: DependencyContainer, viewModel?: IViewModel, stepRepo?: IStepRepo, drawArea?: IDrawArea, flow?: IFlow, history?: () => IHistory, selection?: () => ISelection, parallel?: () => IParallel);
     importModel(model: IFlowDesignModel, options?: IImportOptions): Promise<void>;
     paste(coreModel: IFlowCoreModel): Promise<void>;
     private _import;

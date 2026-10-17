@@ -4,7 +4,7 @@ import { IStoreModelForWorkflow } from "../../store/runtimemodels/IStoreModel";
 import { IExpressionData } from "../../dataType/runtimemodels/IExpression";
 import { IFlowModelBase } from "@stechquick/flow-interfaces/runtime/IFlowModel";
 import { ISLA } from "./ISLA";
-export type WorkflowStepName = "start" | "humantask" | "subFlow" | "subWorkflow" | "flow" | "switch" | "end";
+export type WorkflowStepName = "start" | "humantask" | "subFlow" | "subWorkflow" | "flow" | "switch" | "end" | "parallelSplit" | "parallelJoin" | "splitForEach" | "spinoff";
 declare const userTaskActivityFieldName = "userTaskActivity";
 declare const processStatusFieldName = "processStatus";
 export declare const NamedModels: {
@@ -94,6 +94,7 @@ export interface IAddActivityProp {
 export interface IHandleSlaUpdatesProp {
     type: "workflow" | "userTask";
     inputs?: Record<string, IExpressionData>;
+    taskId?: string;
 }
 export interface IWorkflowEnvironment {
     constValueWithName: Record<string, any>;

@@ -26,6 +26,7 @@ export interface IRestServiceModel extends IModelBaseFields {
     cacheRefreshPeriodInMs?: number;
     cacheValidityDurationInMs?: number;
     mock?: Array<IRestMock>;
+    mockEnabled?: IExpressionData;
     store: Store;
     timeout?: number;
 }

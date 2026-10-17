@@ -284,6 +284,61 @@ export interface IGetChatBotResponse {
     verifiedUrls: Array<string>;
     followUpQuestions: Array<string>;
 }
+export interface IGenerateModelContextItem {
+    id: string;
+    name: string;
+    modelType: string;
+    summary?: string;
+    body?: string;
+}
+export interface IGenerateModelRequest {
+    prompt: string;
+    appId: string;
+    context: Array<IGenerateModelContextItem>;
+}
+export interface IGenerateModelResponse {
+    jobId: string;
+}
+export interface ICortexAgentRequest {
+    mode: "llm-step" | "backend-loop";
+    prompt?: string;
+    appId: string;
+    messages?: unknown[];
+    tools?: unknown[];
+    system?: string;
+    maxTurns?: number;
+}
+export interface ICortexAgentResponse {
+    finalText?: string;
+    metrics?: unknown;
+    tokens?: unknown;
+    usd?: number;
+    content?: string;
+    toolCalls?: unknown[];
+}
+export interface IGeneratedModelItem {
+    id: string;
+    modelType: string;
+    name: string;
+    path: string;
+    model: Array<{
+        key: string;
+        model: unknown;
+    }>;
+    dependentModels: Array<{
+        modelId: string;
+    }>;
+    failed?: boolean;
+    failReason?: string;
+}
+export interface IGenerateModelBundle {
+    assistantText: string;
+    models: Array<IGeneratedModelItem>;
+    tokens: {
+        input: number;
+        output: number;
+    };
+}
 export interface IGetCodeAssistantResponse {
     response: ICodeAssistantResponse["refactorResponse"] | ICodeAssistantResponse["explainResponse"] | ICodeAssistantResponse["responseError"];
 }
@@ -298,6 +353,8 @@ export interface IGetAIJobResponse {
         error?: {
             errorMsg: string;
         };
+        /** Üretim sırasında anlık ilerleme mesajı (InProgress'te dolu olabilir). */
+        progress?: string;
     };
     error?: string;
 }
@@ -1031,6 +1088,20 @@ export interface IOnPremRequests {
         files: any;
     };
     createCephModelResponse: {
+        result: IUploadFilesToBucketResult | void;
+    };
+    createGetCephModelRequest: {
+        organizationId: string;
+        modelPaths: Array<string>;
+    };
+    createGetCephModelResponse: {
+        result: Array<IModelBody>[];
+    };
+    createAzureModelRequest: {
+        options: IUploadModelsToStorageOptions;
+        files: any;
+    };
+    createAzureModelResponse: {
         result: IUploadFilesToBucketResult | void;
     };
     listOrganizationsRequest: {};

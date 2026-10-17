@@ -4,6 +4,7 @@ import { FlowExecutionType, IFlowModelBase } from "../../flowInterfaces/runtime/
 import { StepRetriever } from "../../flowInterfaces/runtime/stepRetriever";
 import { RuntimeMessage } from "../../flowInterfaces/runtime/StepRuntime";
 import { IRuntime, IRuntimeConstructor } from "./runtimes/runtime";
+import { FlowError, WrappedFlowError } from "../../flowInterfaces/runtime/flowError";
 import { IFlowLogger } from "../../flowInterfaces/runtime/IFlowLogger";
 import { IFlowEvents } from "@stechquick/flow-interfaces/runtime/IFlowEvents";
 import { IStepStates } from "../../../../common/everything/flow/runtimeObjects/IStepStates";
@@ -30,9 +31,14 @@ export interface IRuntimeOptions {
     network: <TReqBody, TRespBody>(requestOptions: IRequest<TReqBody>, cacheOptions?: RequestCacheOptions<TRespBody>) => Promise<IResponse<TRespBody>>;
     disableFlowCache?: boolean;
 }
+export interface IHandledThreadError {
+    threadId: string;
+    error: FlowError | WrappedFlowError;
+}
 export interface IFlowExecutionResult {
     executedType: FlowExecutionType;
     result: any;
+    handledErrors?: Array<IHandledThreadError>;
 }
 export declare function executeFlow(flow: IFlowModelBase, options: IRuntimeOptions): Promise<IFlowExecutionResult>;
 //# sourceMappingURL=flow.d.ts.map

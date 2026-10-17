@@ -3,7 +3,7 @@ import { IForm, StatusType } from "../IWorkflow";
 import { IActionReference } from "../../runtimeObjects/IActionReference";
 import { IExpressionData, IExpressionDataTypeSelection, IPropObject } from "@stechquick/flow-interfaces/runtime";
 export interface ISwimlaneExpressionData {
-    type: IExpressionDataTypeSelection<"swimlane" | "constant" | "context">;
+    type: IExpressionDataTypeSelection<"swimlane" | "context" | "literal">;
     value: string;
 }
 export type IHumanTaskPropType = IPropObject & {

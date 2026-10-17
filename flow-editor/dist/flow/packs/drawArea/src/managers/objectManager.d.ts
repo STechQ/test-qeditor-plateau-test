@@ -3,7 +3,7 @@ import { FlowStep } from "../objects/flowStep";
 import { FlowObjectBase } from "../objects/flowObjectBase";
 import { ZuiManager } from "./zuiManager";
 import { FlowConnection, FlowConnectionFrom, FlowConnectionTo } from "../objects/flowConnection";
-import { FlowEvents, IFlowCopy, IFlowExport, IFlowStepOptions, IFlowStepProps, IFlowStepSwimlane, IFlowStepUpdate, ISwimlaneExport } from "../../types";
+import { FlowEvents, IFlowConnectionUpdate, IFlowCopy, IFlowExport, IFlowStepOptions, IFlowStepProps, IFlowStepSwimlane, IFlowStepUpdate, IStepPair, ISwimlaneExport } from "../../types";
 import { SelectionManager } from "./selectionManager";
 import { EventHelper } from "../helper/eventHelper";
 import { ISwitchCaseExp } from "../../../../../common/everything/flow/runtimeModels/ISwitch";
@@ -16,6 +16,8 @@ export declare class ObjectManager {
     private readonly switchIdCreator;
     private pasteOffset;
     private objects;
+    private pairLinks;
+    private pairLinkGroup;
     private hoveredStepId?;
     private hoveredConnectionId?;
     stateManager?: StateManager;
@@ -27,17 +29,16 @@ export declare class ObjectManager {
     private addOperator;
     updateSwimlanes(steps: Array<IFlowStepSwimlane>, swimlanes: Array<ISwimlaneExport>): void;
     updateSteps(steps: Array<IFlowStepUpdate>): void;
-    /** Called by FlowStep on mouse enter/leave; drives the cursor. */
+    updateConnections(connections: Array<IFlowConnectionUpdate>): void;
+    getPairPartnerId(stepID: string): string | undefined;
+    setPairLinks(pairs: Array<IStepPair>): void;
     setHoveredStep(stepID: string | undefined): void;
-    /** Called by FlowConnection on mouse enter/leave; drives the cursor. */
     setHoveredConnection(connectionID: string | undefined): void;
-    /**
-     * Puts the cursor back to whatever the pointer is currently over. Called after a drag ends,
-     * where the interaction manager would otherwise leave the grab cursor behind.
-     */
     restoreCursor(): void;
-    /** Hides or shows every connection label — switch case names included. */
     setConnectionLabelsVisible(visible: boolean): void;
+    redrawPairLinks(): void;
+    drawPairSelectionOverlays(selecteds: Array<FlowObjectBase>): void;
+    getStepSurfacePoint(stepID: string): IPoint | undefined;
     setStepID(oldID: string, newID: string): void;
     addFlowStep(stepName: string, surfacePoint: IPoint, options: IFlowStepOptions, props?: IFlowStepProps, id?: string): FlowStep;
     private _addFlowStep;

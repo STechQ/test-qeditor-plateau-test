@@ -4,6 +4,20 @@ import { ModelType } from "../everything/studio/ui/IStudioUIModelBase";
 import { SwimlaneModelType } from "../everything/accessmanager/types";
 export declare class IdHelper {
     static extractId(str: string): string;
+    /**
+     * B100 (C4-G8 Task 5) — [Codex-1 BLOCKER fix] idempotent/throw'suz bare-id normalize:
+     * 2-parça `<<tip:id>>` → id; 3-parça `<<tip:appId:id>>` → SON segment (gerçek id — mevcut
+     * `extractId` burada YANLIŞ olarak `appId:id`'yi olduğu gibi bırakır, bkz. yukarıdaki metod);
+     * bare (sarmalsız) girdi → AYNEN döner; bozuk/yarım sarmal (`<<tip:` ile başlayıp `>>` ile
+     * BİTMEYEN, ya da 2/3 dışında parça sayısı taşıyan) → `{ malformed: true }` — bare ile
+     * KARIŞTIRILMAZ (çağıran `typeof result === "string"` ile ayırt eder). Mevcut `extractId`
+     * DAVRANIŞI bu metottan ETKİLENMEZ (Codex-11 — çağrıcı riski, davranış değiştirilmedi); yeni
+     * denetimler (B98 kabul kapısı, B102 deploy bütünlük denetimi, B99 dep birleşimi) YALNIZ bunu
+     * kullanır.
+     */
+    static normalizeToBareId(str: string): string | {
+        malformed: true;
+    };
     static extractIdType(str: string | boolean): {
         modelType: string;
         id: string;

@@ -76,6 +76,7 @@ export interface IWFEDBTaskHistory extends OmitTyped<IWFEDBTask, "updatedAt"> {
     performerUserId: string;
     endDate: DBDateEPOC;
 }
+export type ThreadRunState = "running" | "waitingTask" | "broken" | "waitingJoin";
 export interface IWFEDBThreadState {
     [flowThreadIdField]: string;
     processId: string;
@@ -90,6 +91,7 @@ export interface IWFEDBThreadState {
     error?: {
         message: string;
     };
+    state?: ThreadRunState;
     isSystemStep: true | undefined | false;
     isNotified?: boolean;
     action?: IActionData;
@@ -100,6 +102,12 @@ export interface IWFEDBThreadState {
     };
     parentFlowThreadId?: string;
     subProcessId?: string;
+    iterationData?: IIterationData;
+}
+export interface IIterationData {
+    index: number;
+    element: unknown;
+    total: number;
 }
 export interface IWFEDBThreadStateHistory extends OmitTyped<OmitTyped<OmitTyped<OmitTyped<OmitTyped<IWFEDBThreadState, "createDate">, "updateDate">, "ongoing">, "isSystemStep">, "isNotified"> {
     type: "fail" | "stop" | "next";

@@ -48,6 +48,7 @@ export interface ISoapServiceV2Model extends IModelBaseFields {
     name: string;
     desc: string;
     mock?: Array<ISoapMock>;
+    mockEnabled?: IExpressionData;
     contentType?: ContentType_ApplicationXml;
     store: Store;
     requestHttpHeaders?: Record<string, IExpressionData>;

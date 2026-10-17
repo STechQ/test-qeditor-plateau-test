@@ -16,6 +16,10 @@ export interface IAzureBlobFile {
     createDate?: Date;
     size: number;
 }
+export interface IUploadAzureFilesToBucketResult {
+    fails: Array<string>;
+    success: Array<string>;
+}
 export interface IUploadModelsToStorageOptions {
     organization: IOrganizationOptions;
     callbacks: {
@@ -104,7 +108,7 @@ export interface ICloudProviderStorage {
     type: ICloudProviderStorageType;
     createOrganization(options: ICreateOrganizationOptions): Promise<void>;
     deleteOrganization(options: IDeleteOrganizationOptions): Promise<void>;
-    uploadModelsToOrganizationStorage(options: IUploadModelsToStorageOptions, files: Array<IUploadableObject>): Promise<IUploadFilesToBucketResult | void>;
+    uploadModelsToOrganizationStorage(options: IUploadModelsToStorageOptions, files: Array<IUploadableObject>): Promise<IUploadFilesToBucketResult | IUploadAzureFilesToBucketResult | void>;
     uploadCdnFilesToOrganizationStorage(options: IUploadCdnFilesToStorageOptions, files: Array<IUploadableObject>): Promise<void>;
     deleteModel(options: IDeleteModelOptions, modelId: string): Promise<IDeleteFolderResult>;
     streamFromWebStorage(options: IStreamFromWebStorageOptions): Promise<IStreamFromWebStorageResponse>;

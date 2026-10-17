@@ -34,8 +34,17 @@ export interface IStepExitCancel extends IStepExitBase {
     error: Error;
 }
 export type IStepExitParam = IStepExitJump | IStepExitNext | IStepExitStop | IStepExitFail | IStepExitPause | IStepExitCancel;
+export interface IStepEnterParam {
+    step: IThreadStepInfo;
+    stepName: string;
+    stepVersion: string;
+    flowId: string;
+    threadId: string;
+    depth?: number;
+}
 export interface IFlowEvents {
-    onAfterStepExit?: (transition: IStepExitParam) => Promise<void>;
+    onBeforeStepEnter?: (info: IStepEnterParam) => Promise<void>;
+    onAfterStepExit?: (transition: IStepExitParam) => Promise<void | "handled">;
 }
 export {};
 //# sourceMappingURL=IFlowEvents.d.ts.map

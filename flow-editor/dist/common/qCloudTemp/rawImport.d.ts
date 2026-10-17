@@ -27,9 +27,9 @@ export declare const RawImportParts: {
     readonly conflictPolicy: "conflictPolicy";
     readonly package: "package";
 };
-export type RawImportBlockerCode = "notRawPackage" | "unsupportedFormatVersion" | "missingBodies" | "corruptPackage" | "appNameTaken" | "unknownModelType" | "storageNotConfigured" | "sourceOrganizationHere" | "packageTooLarge";
+export type RawImportBlockerCode = "notRawPackage" | "unsupportedFormatVersion" | "corruptPackage" | "appNameTaken" | "unknownModelType" | "storageNotConfigured" | "sourceOrganizationHere" | "packageTooLarge";
 export type RawImportNoticeCode = "historyNotIncluded" | "globalModulesDemoted" | "checkoutsCleared" | "appEnvironmentFieldsDropped";
-export type RawImportWarningCode = "missingModule" | "missingModuleVersion" | "missingReferenceTargets" | "deletedAtSource" | "newerSourceVersion";
+export type RawImportWarningCode = "missingBodies" | "moduleImportedHere" | "missingModule" | "missingModuleVersion" | "missingReferenceTargets" | "deletedAtSource" | "newerSourceVersion";
 /** Kontrolün bulduğu bir durum. items boşsa alan yazılmaz; job kaydında en fazla RAW_IMPORT_STORED_LIST_LIMIT öğe ve sonda "… and N more" tutar. */
 export interface IRawImportIssue<TCode extends string = string> {
     code: TCode;
@@ -46,12 +46,22 @@ export interface IRawImportSummary {
     /** Paketteki uygulama (aynı ID ile) hedefte zaten var mı. */
     targetAppExists: boolean;
 }
-/** Çalışan bir migration'ın sonucu: değişen kayıt ve body sayısı. */
+/** Paketteki db koleksiyonları; kontrol, migration ve yazma bu sırayla gezer. */
+export declare const RAW_IMPORT_COLLECTIONS: ReadonlyArray<RawExportCollection>;
+/** Migration'ların pakette silip eklediği: koleksiyon başına kayıt ve klasör başına body dosyası. Sıfırlar yazılmaz. */
+export type RawImportRemovedCounts = Partial<Record<RawExportCollection | "modelBodies" | "historyBodies", number>>;
+/** Çalışan bir migration'ın sonucu: değişen kayıt ve body sayısı, silinenler ve eklenenler. */
 export interface IRawImportMigrationResult {
     version: string;
+    /** Sürüm içindeki ad (örn. "001-delete-orphaned-model-infos"); yeni sonuçlarda hep vardır, eski job sonuçlarında yoktur. */
+    id?: string;
     description: string;
     records: number;
     bodies: number;
+    /** Yalnızca bir şey silindiyse. */
+    removed?: RawImportRemovedCounts;
+    /** Yalnızca bir şey eklendiyse (eklenen kayıtlar ve kopyalanan body dosyaları). */
+    added?: RawImportRemovedCounts;
     durationMs: number;
 }
 /** Ön analizin (kontrolün) sonucu. Çakışan kayıtların listesi saklanmaz; durma sebebi IRawImportStop'ta, atlananların sayısı apply raporundadır. */
@@ -67,11 +77,27 @@ export interface IRawImportCheckResult {
 export interface IRawImportApplyOptions {
     /** Reject (ya da verilmezse): hedefte aynı ID'li kayıt varsa hiçbir şey yazılmaz. Skip: o kayıtlar atlanır. */
     conflictPolicy?: RawImportConflictPolicy;
+    /** Migration'ların paketten sildikleri; yazmadan önceki analiz manifest sayılarından bunları düşer. */
+    removedByMigrations?: RawImportRemovedCounts;
+    /** Migration'ların pakete ekledikleri; yazmadan önceki analiz manifest sayılarına bunları ekler. */
+    addedByMigrations?: RawImportRemovedCounts;
 }
 export interface IRawImportModuleRelation {
     moduleID: string;
     name: string;
     importedVersion?: string;
+}
+/** Hedefte zaten olduğu için yazılmayan paket kaydı; kullanıcıya ne atlandığını anlatmak için. */
+export interface IRawImportSkippedRecord {
+    collection: RawExportCollection;
+    ID: string;
+    name?: string;
+    /** Model ve history kayıtlarının klasör yolu. */
+    path?: string;
+    /** History ve modül sürümü kayıtlarında. */
+    version?: string;
+    /** Kaydın paketteki sahibi: uygulama ya da modül adı. */
+    ownerName?: string;
 }
 export interface IRawImportApplyResult {
     application: {
@@ -82,6 +108,10 @@ export interface IRawImportApplyResult {
     source: IRawExportManifest["source"];
     inserted: Record<RawExportCollection, number>;
     skipped: Record<RawExportCollection, number>;
+    /** İçeriği export sırasında bulunamadığı için hiç yazılmayan kayıtların sayısı (yalnızca böyle kayıt varsa); inserted ve skipped'e girmez. */
+    notImported?: Record<RawExportCollection, number>;
+    /** Atlanan kayıtlar (yalnızca atlanan varsa); job kaydında ilk RAW_IMPORT_STORED_LIST_LIMIT tanesi tutulur, toplam `skipped`tadır. */
+    skippedRecords?: Array<IRawImportSkippedRecord>;
     bodies: number;
     moduleRelations: Array<IRawImportModuleRelation>;
     notices: IRawImportCheckResult["notices"];

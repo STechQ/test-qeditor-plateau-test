@@ -1,6 +1,6 @@
 import { IWorkflowModel, StepFlowModelPropType, StepSubWorkflowPropType } from "../../../../../common/everything/workflow/runtimemodels/IWorkflow";
 import { IWorkflowExecutionContext } from "../../../../../common/everything/workflow/runtimeObjects/IWorkflowExecutionContext";
-import { IWFEDBTask, IWFEDBProcessInst, IWFEDBProcessInstHistory, IWFEDBSLA, IWFEDBNotes, IWFEDBFiles, IWFEDBActivity, IWFEDBActivityHistory, IWFEDBTaskHistory } from "../../../../../common/everything/workflow/runtimeObjects/IWFEDB";
+import { IWFEDBTask, IWFEDBProcessInst, IWFEDBProcessInstHistory, IWFEDBSLA, IWFEDBNotes, IWFEDBFiles, IWFEDBActivity, IWFEDBActivityHistory, IWFEDBTaskHistory, IWFEDBThreadState, IIterationData } from "../../../../../common/everything/workflow/runtimeObjects/IWFEDB";
 import { DataInstance } from "../../../../../common/everything/workflow/runtimeObjects/DataInstance";
 import { IProcessInstance } from "../../../../../common/everything/workflow/runtimeObjects/namedobjects/IProcessInstance";
 import { ITask } from "../../../../../common/everything/workflow/runtimeObjects/ITask";
@@ -27,9 +27,19 @@ export interface IConvertFromIProcessInstanceOptions {
 export interface IWFExecutionParams {
     initiatorUserId: string | undefined;
 }
+export interface IBlockThread {
+    flowThreadId: string;
+    stepId?: string;
+    state?: IWFEDBThreadState["state"];
+    /** Sub-workflow linkage — from the DB row, or the run overlay for rows written in this run. */
+    parentFlowThreadId?: string;
+    /** splitForEach iteration payload — from the DB row, or the run overlay for rows written in this run. */
+    iterationData?: IIterationData;
+    db?: IWFEDBThreadState;
+}
 export interface IPlatformWFEAdaptor {
     runFunctionWithProps: (props: StepFlowModelPropType) => Promise<any>;
-    runSubWorkflow: (props: StepSubWorkflowPropType) => Promise<ISubWorkflowExecutionResult>;
+    runSubWorkflow: (props: StepSubWorkflowPropType, parentFlowThreadId: string) => Promise<ISubWorkflowExecutionResult>;
     getConstant: (modelId: string) => Promise<any> | any;
     getDataSet: (dataSetId: string) => Promise<any> | any;
     wfExecutionContext: () => IWorkflowExecutionContext;
@@ -83,6 +93,35 @@ export interface IPlatformWFEAdaptor {
         userTaskCompleted: (task: IWFEDBTaskHistory, taskAction: IAction, processInstance: IProcessInstance, dataInstance: DataInstance, sla?: ISLA) => Promise<void>;
         processEnded: (lastAction: IActionData, processInstance: IProcessInstance, dataInstance: DataInstance, sla?: ISLA) => Promise<void>;
         onBeforeProcessEnded: (lastAction: IActionData, descriptionCode: string, description: string) => Promise<void>;
+    };
+    parallel: {
+        seedOverlay: (thread: IWFEDBThreadState) => void;
+        isDeletedInRun: (flowThreadId: string) => boolean;
+        withJoinDecisionLock: (fn: () => Promise<void>) => Promise<void>;
+        getJoinBlockThreads: (options: {
+            joinStepId: string;
+        }) => Promise<Array<IBlockThread> | undefined>;
+        cancelLosers: (options: {
+            loserThreads: Array<IBlockThread>;
+            winnerThreadId?: string;
+        }) => Promise<void>;
+        registerCreatedTask: (task: IWFEDBTask) => void;
+        cancelOrphanedDescendants: (options: {
+            rootFlowThreadId: string;
+        }) => Promise<void>;
+        getSplitForEachBlockThreads: (options: {
+            stepId: string;
+        }) => Promise<{
+            iterations: Array<IBlockThread>;
+            activeIterationIds: Array<string>;
+        }>;
+        seedOverlayAndWriteDatabase: (options: {
+            stepId: string;
+            items: Array<{
+                flowThreadId: string;
+                iterationData: IIterationData;
+            }>;
+        }) => Promise<void>;
     };
 }
 //# sourceMappingURL=IPlatformWFEAdaptor.d.ts.map

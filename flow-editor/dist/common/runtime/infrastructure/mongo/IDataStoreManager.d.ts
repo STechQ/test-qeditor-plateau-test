@@ -1,7 +1,7 @@
 import { Hook } from "@stechquick/algae/lib/helpers/hook";
 import { UpdateFilter, ClientSession, Document, AnyBulkWriteOperation } from "mongodb";
 import { AtLeastOne } from "../../../../common/helpers/typeHelper";
-export type CollectionName = "FM_Users" | "Notifies" | "FM_Models" | "Modules" | "Counters" | "DeploymentLogs" | "PermanentStore" | "ServiceCaches" | "BatchJobs" | "BatchJobsHistory" | "BatchJobsDeadLetter" | "BatchJobGroups" | "Locks" | "CacheInvalidations" | "JobExecution" | "Holidays" | "JobExecutionHistory" | "WFE_SlaExecution" | "WFE_SlaExecutionHistory" | "WFE_ProcessInst" | "WFE_ProcessInstHistory" | "WFE_Task" | "WFE_TaskHistory" | "WFE_Activity" | "WFE_ActivityHistory" | "WFE_ThreadState" | "WFE_ThreadStateHistory" | "WFE_Notes" | "WFE_NotesHistory" | "WFE_Files" | "WFE_FilesHistory" | "WFE_BrokenThreads" | "WFE_BrokenThreadsHistory" | "Report" | "Queue" | "RDBMS_DbModels" /** RDBMS-spesifik db-model'lerin saklandığı koleksiyon */ | "RDBMS_ExecutedDdls" /** Çalıştırılmış DDL ifadelerinin saklandığı koleksiyon */ | "GenericDataStore" | "LivePreviewDeployStage";
+export type CollectionName = "FM_Users" | "Notifies" | "FM_Models" | "Modules" | "Counters" | "DeploymentLogs" | "PermanentStore" | "ServiceCaches" | "BatchJobs" | "BatchJobsHistory" | "BatchJobsDeadLetter" | "BatchJobGroups" | "Locks" | "CacheInvalidations" | "JobExecution" | "Holidays" | "JobExecutionHistory" | "WFE_SlaExecution" | "WFE_SlaExecutionHistory" | "WFE_ProcessInst" | "WFE_ProcessInstHistory" | "WFE_Task" | "WFE_TaskHistory" | "WFE_Activity" | "WFE_ActivityHistory" | "WFE_ThreadState" | "WFE_ThreadStateHistory" | "WFE_Notes" | "WFE_NotesHistory" | "WFE_Files" | "WFE_FilesHistory" | "WFE_BrokenThreads" | "WFE_BrokenThreadsHistory" | "Report" | "Queue" | "RDBMS_DbModels" /** RDBMS-spesifik db-model'lerin saklandığı koleksiyon */ | "RDBMS_ExecutedDdls" /** Çalıştırılmış DDL ifadelerinin saklandığı koleksiyon */ | "GenericDataStore" | "LivePreviewDeployStage" | "Trace_Events" | "Trace_DebugState" | "Trace_Instances";
 export type IndexDefinition<T> = {
     name: string;
     keys: AtLeastOne<Record<keyof T, "asc" | "desc">>;
@@ -213,6 +213,7 @@ export interface IDataStoreManager {
     Update<T, TTrx extends IMongoDBTransactionQueue | void = IMongoDBTransactionQueue>(collectionName: CollectionName, filter: FilterTypeNullable<T> | FilterTypeOrAnd<T>, updateValue: UpdateTypeNullable<T>, options: {
         trxQueue?: TTrx;
         ignoreUndefined?: boolean;
+        unset?: (keyof T)[];
     } & ({
         upsert: true;
         setOnInsert?: UpdateTypeNullable<T>;
