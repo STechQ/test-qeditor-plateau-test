@@ -2,7 +2,7 @@
 import { IApplication, IFolder, ILoggedInUser, IModel, IWorkflowExportItem } from "../../ui/src/domain/model/models";
 import { IUserMainInfo, IUser_SUSI } from "./authentication";
 import { IFeedbackAttachment, IUserFeedback } from "./feedback";
-import { IEditorTypes, IOrganization, IOrganizationCalculatedInfo, IOrganizationFeatures } from "./membership";
+import { IEditorTypes, IOrganization, IOrganizationCalculatedInfo, IOrganizationCloud, IOrganizationFeatures } from "./membership";
 import { IApplicationDetails, IApplicationExportSettings, IModelBodyObject, IDependentModel, IOrganizationActions, ModelAdditionals, ObjectID, IModuleBackend, IModuleVersion, ITags, IOrganizationGroup, IModelInfo, ExtensionType, UsageType, AppSettingsModelKeys, AllModelAdditionalTypes, IApplication as IApplicationDbModel, IModelHistoryInfo, IModelCheckout, ModuleShareType, ModuleShareScope, ForceUpdatePlatform, IMarketplaceModuleUsage, IModelBody, ModuleObjectType } from "./quickCloud";
 import { IApplicationVersion, IApplicationVersionArtifacts } from "./applicationVersion";
 import { IUserPreferences } from "./userPreference";
@@ -412,6 +412,43 @@ export interface IBoGetAzureCredentialsRequest {
 export interface IBoGetAzureCredentialsResponse {
     subscriptionId: string;
 }
+export interface IBoInitializeStudioStoreRequest {
+}
+export interface IBoInitializeStudioStoreResponse {
+    cloud: IOrganizationCloud;
+}
+export interface IBoGetStudioStoreStatusRequest {
+}
+export interface IStudioStoreModuleVersionStatus {
+    version: string;
+    createDate: Date;
+    unreleased?: boolean;
+    modelVersionCount: number;
+}
+export interface IStudioStoreModuleUsageStatus {
+    applicationID: ObjectID;
+    orgName?: string;
+    appName?: string;
+    version?: string;
+    lastImportedDate?: Date;
+}
+export interface IStudioStoreModuleStatus {
+    moduleID: ObjectID;
+    name: string;
+    publisherOrgName?: string;
+    publisherAppName?: string;
+    latestVersion?: string;
+    versions: Array<IStudioStoreModuleVersionStatus>;
+    modelVersionCount: number;
+    totalSize: number;
+    usages: Array<IStudioStoreModuleUsageStatus>;
+}
+export interface IBoGetStudioStoreStatusResponse {
+    initialized: boolean;
+    storageType: "azure" | "ceph";
+    cloud?: IOrganizationCloud;
+    modules: Array<IStudioStoreModuleStatus>;
+}
 export interface IAddDeleteOrganizationJobRequest {
     organizationId: string;
 }
@@ -434,6 +471,7 @@ export interface IBoRemoveTagFromOrganizationRequest {
     tagId: string;
 }
 export interface IRelaseModuleRequest {
+    applicationID: string;
     moduleID: ObjectID;
     moduleVersionIncType: 'Minor' | 'Major' | 'Fix';
     models: Array<{
@@ -444,6 +482,7 @@ export interface IRelaseModuleRequest {
     basedVersion?: string;
     description?: string;
     unreleased?: boolean;
+    shareScope?: ModuleShareScope;
 }
 export interface IUpdateModulParams {
     name?: string;
@@ -473,6 +512,10 @@ export interface IAttachModuleToModule {
     fullPath?: string;
     outerOrgId?: string;
 }
+export interface IUpdateImportedModuleVersionRequest extends IAttachModuleToAppRequest {
+    version: string;
+    selectedParentModuleID?: string;
+}
 export interface ICheckModuleImportConflictsRequest {
     moduleID: string;
     version: string;
@@ -482,21 +525,29 @@ export interface ICheckModuleImportConflictsRequest {
 export interface ICheckModuleImportConflictsResponse {
     conflicts: Array<IModelImportConflict>;
 }
-export interface IGetModuleActiveImportersRequest {
-    moduleIDs: Array<string>;
-}
-export interface IModuleActiveImporters {
-    moduleID: string;
-    importerAppNames: Array<string>;
-}
-export interface IGetModuleActiveImportersResponse {
-    blocked: Array<IModuleActiveImporters>;
-}
 export interface IGetModuleMarketplaceUsagesRequest {
     moduleID: string;
 }
 export interface IGetModuleMarketplaceUsagesResponse {
     usages: Array<IMarketplaceModuleUsage>;
+}
+export interface IListModuleUsedAppsRequest {
+    moduleID: string;
+    outerOrgId?: string;
+}
+export interface IModuleAppUsage {
+    applicationID: ObjectID;
+    applicationName: string;
+    organizationName?: string;
+    description?: string;
+    importedVersion?: string;
+    updateStrategy?: string;
+    parentModuleID?: ObjectID;
+    addedBy: string;
+    addedDate: Date;
+}
+export interface IListModuleUsedAppsResponse {
+    usages: Array<IModuleAppUsage>;
 }
 export interface IModelImportConflict {
     modelID: string;
@@ -1138,6 +1189,22 @@ export interface IOverrideModelRequest {
         ownerItem: ObjectID;
         ownerType: ModuleObjectType;
     };
+}
+export interface IListModulesRequest {
+    applicationID?: ObjectID;
+    outerOrgId?: string;
+    selectedParentModuleID?: ObjectID;
+}
+export interface IListModulesResponse {
+    modules: Array<{
+        module: IModuleBackend;
+        additionalFieldsForUI?: {
+            latestVersion?: string;
+            shareScope?: ModuleShareScope;
+            importedFromGlobal?: boolean;
+            unreleased?: boolean;
+        };
+    }>;
 }
 export {};
 //# sourceMappingURL=symDtoObjects.d.ts.map

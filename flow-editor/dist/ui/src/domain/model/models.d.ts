@@ -4,7 +4,7 @@ import { IUserMainInfo, IUser_SUSI } from "../../../../common/qCloudTemp/authent
 import { IRole } from "../../../../common/qCloudTemp/authorization";
 import { IArtifactInfoDBItem, IArtifactMinioDetails, IQcloudJob } from "../../../../common/qCloudTemp/exporter";
 import { IOrganization } from "../../../../common/qCloudTemp/membership";
-import { ExtensionType, IApplicationLogoInfo, IEntityDesignerAddtionals, IModelBodyObject, IModelInfo, IModuleOwnerOrgInfo, IModuleRelatedApplicationItem, IModuleRelatedModelItem, IModuleRelatedModuleItem, IProcessWizardAdditionals, IQJsonAdditionals, ITreeviewItem, ModelAdditionals, ModuleShareScope, ModuleShareType, ObjectID, UsageType } from "../../../../common/qCloudTemp/quickCloud";
+import { ExtensionType, IApplicationLogoInfo, IEntityDesignerAddtionals, IModelBodyObject, IModelInfo, IModuleRelatedModelItem, IModuleRelatedModuleItem, IProcessWizardAdditionals, IQJsonAdditionals, ITreeviewItem, ModelAdditionals, ModuleShareScope, ModuleShareType, ObjectID, UsageType } from "../../../../common/qCloudTemp/quickCloud";
 import { ICopyApp, IGetOrganizaionGroupDetailsByUserTypeResponse, IListInvitationsResponseItem, ISignInResponse, IUpdateMobileUsage } from "../../../../common/qCloudTemp/symDtoObjects";
 import { IUserPreferences } from "../../../../common/qCloudTemp/userPreference";
 import { ICloudObject, IObject } from "./IObject";
@@ -199,6 +199,8 @@ export interface IModelPrivateCheckoutRef {
     updateDate: Date;
     /** Orijinal checkout'tan sonra değişti mi; sunucu design-time gövdeleri karşılaştırır (privatecheckout/compare). */
     originalChanged?: boolean;
+    /** Orijinalde Start Working'de olan kişi (son karşılaştırmaya göre); başkasıysa kopyadaki Start Working pasif olur. */
+    workingBy?: string;
     /** Editörde orijinal salt okunur gösteriliyor (View Current in Editor); kalıcı değil, sayfa yenilenince kopyaya dönülür. */
     viewingOriginal?: boolean;
 }
@@ -218,19 +220,19 @@ export interface IModule extends IObject {
     prefix?: string;
     owner: IApplication | IModule;
     children: Array<IModel | IModule>;
-    relatedApplications: Array<IModuleRelatedApplicationItem>;
     mainOwner?: IApplication["ID"];
     shareType?: ModuleShareType;
     currentVersion?: string;
     relatedModelHistories?: IModuleVersion["relatedModelHistories"];
     lastReleasedVersion?: string;
-    ownerOrg?: IModuleOwnerOrgInfo;
+    ownerOrg?: string;
     importedFromGlobal?: boolean;
     origInfo?: IModuleOrigInfo;
     modifyDate?: Date;
     unreleased?: boolean;
     shareScope?: ModuleShareScope;
     fullPath?: string;
+    updateStrategy?: string;
 }
 export interface IGetModuleResponse extends IModule {
     versionID?: IModuleVersion["ID"];
@@ -257,11 +259,20 @@ export interface IUploadedFile {
     name: string;
     content: string;
 }
+export interface IRelatedModuleItem {
+    moduleID: ObjectID;
+    importedVersion?: string;
+    addedBy: string;
+    addedDate: Date;
+    moduleType: "version" | "reference" | "owned";
+    updateStrategy?: string;
+}
 export interface IApplicationFeatures {
     disablePrimitiveComponents?: boolean;
 }
 export interface IApplication extends IObject {
     objectType: "application";
+    relatedModules?: Array<IRelatedModuleItem>;
     status?: "deleting";
     deleteTriggerDate?: Date;
     publishmentId?: string;
