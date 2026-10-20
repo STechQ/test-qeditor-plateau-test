@@ -12,6 +12,8 @@ export type IHumanTaskPropType = IPropObject & {
     taskStatus?: StatusType;
     form: IForm;
     actions: Record<number, IActionReference>;
+    /** Open and lock the next accessible task after completion. Defaults to true for existing models. */
+    autoOpenNextTask?: boolean;
     sendTo?: "swimlane" | "user";
     stepIdToShow?: string;
     user?: IExpressionData;

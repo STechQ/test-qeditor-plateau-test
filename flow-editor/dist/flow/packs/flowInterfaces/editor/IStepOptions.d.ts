@@ -58,6 +58,7 @@ export interface ICompiledCode {
     errors: Array<string>;
 }
 export interface IFindReferenceInCode {
+    stepID: string;
     startLine: number;
     startColumn: number;
     endLine: number;

@@ -38,6 +38,7 @@ export interface IWorkflowExecutionContextStore extends IExecutionContextStore {
         flowThreadId?: string;
         lockMap?: Record<string, ILockParam>;
         lastCompletedTask?: IWFEDBTaskHistory;
+        autoOpenNextTask?: boolean;
         status?: StatusType;
         parentFlowThreadId?: string;
         stepResumeChain?: string[];

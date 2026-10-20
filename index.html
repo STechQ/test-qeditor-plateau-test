@@ -8,12 +8,12 @@
             // runtime.html accesses window.parent.quickVersions immediately on load.
             window.quickVersions = window.quickVersions || {};
             window.quickVersions["@stechquick/qeditor"] = { 
-                version: "4.3.0-7-BETA-release-studioTEST-V4-2026.10.19.22.42", 
+                version: "4.3.2-2-BETA-release-studioTEST-V4-2026.10.20.16.05", 
                 date: new Date().toString() 
             };
             const scr = document.createElement("script");
             scr.charset = "UTF-8";
-            scr.src = "./standAlone.js?ver=4.3.0-7-BETA-release-studioTEST-V4-2026.10.19.22.42";
+            scr.src = "./standAlone.js?ver=4.3.2-2-BETA-release-studioTEST-V4-2026.10.20.16.05";
             document.body.appendChild(scr);
             document.addEventListener("keydown", function (event) { 
                 if ((event.ctrlKey || event.metaKey) && (event.key.toLowerCase() === "z" || event.key.toLowerCase() === "y")) {

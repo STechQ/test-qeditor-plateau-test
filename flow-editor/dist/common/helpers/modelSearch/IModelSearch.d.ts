@@ -18,6 +18,7 @@ export interface ILocationResult<TLocationDetail = Record<string, any>> {
     isReplaceable?: boolean;
     matchedValue?: string;
     pendingReplaceRemoval?: boolean;
+    appliedReplaceValue?: string;
 }
 export interface IModelSearch<TLocationDetail> {
     locationFinder: (modelBody: string, searchValue: string, fileName: string, onMatch: (result: ILocationResult<TLocationDetail>) => void, searchOptions?: IModelSearchOptions) => void;
@@ -26,6 +27,7 @@ export interface IModelSearch<TLocationDetail> {
 export interface IModelSearchWorkerRequest {
     modelId: string;
     modelBody: string;
+    modelBodyKey?: string;
     modelType: ModelType;
     searchValue: string;
     fileName: string;

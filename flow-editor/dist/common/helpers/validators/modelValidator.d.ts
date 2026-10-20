@@ -20,6 +20,7 @@ import { ISoapServiceV2Design } from "../../everything/soapService/designtimeMod
 import { Store } from "../../everything/store/designtimemodels/IStoreModel";
 import { IWorkflowDesignModel } from "../../everything/workflow/designtimemodels/IWorkflowDesignModel";
 import { IForm } from "../../everything/workflow/runtimemodels/IWorkflow";
+import { IActionDesign } from "../../everything/action/IActionDesign";
 /**
  * Store variables as model bodies carry them: IVariable plus the legacy `_name`
  * alias that older bodies use for the runtime-facing name.
@@ -245,7 +246,7 @@ export type ExpressionContext = {
 };
 export declare function validateExpression(exp: IExpressionData | undefined, label: string, ctx: ExpressionContext): string[];
 export declare function validateSetTarget(exp: ISetExpressionData | undefined, label: string, outputNames: Set<string>, hasStoreOutput: boolean): string[];
-export declare function validateStoreVariableNames(vars: StoreSection | undefined, section: string): string[];
+export declare function validateStoreVariableNames(vars: StoreSection | undefined, section: string, path?: string): string[];
 export declare function validateServiceRequestBody(requestBody: Array<{
     bodyKey: string;
     value: IExpressionData;
@@ -275,12 +276,12 @@ export declare function validateDecisionTableStoreCollisions(views: StepView[], 
 export declare function validateDecisionSteps(views: StepView[]): string[];
 export declare function validateStepRequiredProps(views: StepView[]): string[];
 /** Every model type validateModel can dispatch on. */
-export type ValidatableFuncType = "workflow" | "flow" | "befunc" | "jobScheduler" | "restService" | "sla" | "soapService" | "soapServiceV2" | "decisionTable" | "dataSet" | "dataType" | "persona" | "role" | "privilege" | "swimlane" | "endpoint";
+export type ValidatableFuncType = "workflow" | "flow" | "befunc" | "jobScheduler" | "restService" | "sla" | "soapService" | "soapServiceV2" | "decisionTable" | "dataSet" | "dataType" | "persona" | "role" | "privilege" | "swimlane" | "action" | "endpoint";
 /**
  * A design-time model body, as read from storage. Every field is optional: legacy,
  * hand-edited and half-built bodies reach the validators too, so each check guards
  * rather than trusting the declared shape.
  */
-export type DesignModelBody = Partial<IWorkflowDesignModel> | Partial<IFlowDesignModel> | Partial<IJobSchedulerDesign> | Partial<IRestServiceDesign> | Partial<ISLADesign> | Partial<ISoapServiceDesign> | Partial<ISoapServiceV2Design> | Partial<IDecisionTableDesign> | Partial<IDataSetDesign> | Partial<IDataTypeDesign> | Partial<IPersonaDesign> | Partial<IRoleDesign> | Partial<IPrivilegeDesign> | Partial<ISwimlaneDesign> | Partial<IEndpointDesign>;
+export type DesignModelBody = Partial<IWorkflowDesignModel> | Partial<IFlowDesignModel> | Partial<IJobSchedulerDesign> | Partial<IRestServiceDesign> | Partial<ISLADesign> | Partial<ISoapServiceDesign> | Partial<ISoapServiceV2Design> | Partial<IDecisionTableDesign> | Partial<IDataSetDesign> | Partial<IDataTypeDesign> | Partial<IActionDesign> | Partial<IPersonaDesign> | Partial<IRoleDesign> | Partial<IPrivilegeDesign> | Partial<ISwimlaneDesign> | Partial<IEndpointDesign>;
 export declare function validateModel(model: DesignModelBody, funcType: ValidatableFuncType, options?: ModelValidationOptions): ModelValidationResult;
 //# sourceMappingURL=modelValidator.d.ts.map
