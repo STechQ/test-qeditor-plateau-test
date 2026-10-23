@@ -38,16 +38,14 @@ export interface IRawExportMissingBody {
 export interface IRawExportExcludedModule {
     ID: string;
     name: string;
-    /** Yeni paketlerde ilişkinin türü. Eski format-1 paketlerinde bulunmayabilir. */
-    moduleType?: "version" | "reference";
-    /** Version ilişkisinin sabit sürümü ya da wildcard stratejisi. */
+    /** Modülün bu uygulamayla relatedApplications ilişkisinden. */
     importedVersion?: string;
-    /** Eski format-1 paketleri için; yeni exporter stratejiyi importedVersion'a yazar. */
+    /** Modülün bu uygulamayla relatedApplications ilişkisinden. */
     updateStrategy?: string;
     mainOwner?: string;
-    /** Başka organizasyondan import edilmişse kaynak organizasyon ID'si (Module.ownerOrg). */
+    /** Başka organizasyondan import edilmişse o organizasyon (ownerOrg.orgId). */
     ownerOrgId?: string;
-    /** İç içe kullanımda parent modül; kök ilişkide bulunmaz. */
+    /** Modülün bu uygulamayla relatedApplications ilişkisinden: iç içe import edildiyse içine import edildiği modül. */
     parentModuleID?: string;
 }
 /** Değeri olmayan alanlar yazılmaz. */
@@ -98,8 +96,6 @@ export interface IRawExportManifest {
      * Bu modüllerin kayıtları ve modelleri pakette yoktur; import tarafı bunları hedefte bağımlılık olarak çözmelidir.
      */
     excludedModules: Array<IRawExportExcludedModule>;
-    /** Global scope ModuleVersion'da tutulduğu halde sürümleri pakete girmeyen sahip olunan modüller. Eski paketlerde alan yoktur. */
-    globalModuleIds?: Array<string>;
     /** Storage'da blob'u bulunamayan kayıtlar. */
     missingBodies: Array<IRawExportMissingBody>;
     /**

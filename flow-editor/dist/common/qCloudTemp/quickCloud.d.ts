@@ -24,6 +24,7 @@ export type QJsonType = "qjson" | "template" | "pageTemplate" | "quickComponent"
 export type ModelResponseType = "info" | "body" | "full";
 export type CreateUIType = "createUI";
 export type UsageType = AppSettingsObjectType | AppAssetObjectType;
+export type ModuleType = "basic";
 export type AllCreateObjectTypes = ModelType | FolderObjectType | ModuleObjectType | CreateUIType;
 export type AppSettingsModelKeys = "settings" | "componentList" | "containerServices" | "pipeline" | "alert" | "loading" | "globalLocalization" | "localProxy" | "style" | "rootqjson" | "asset" | "appSettings" | "containerServIntelli" | "theme" | "container" | "constant";
 export type ExtensionType = "png" | "jpg" | "jpeg" | "svg" | "gif" | "json" | "woff" | "woff2" | "ttf" | "otf";
@@ -124,17 +125,18 @@ export interface IApplication extends ICloudObject {
     lastReleasedVersion?: string;
     tags?: Array<ITagValue>;
     rawImport?: IApplicationRawImportInfo;
-    relatedModules?: Array<IRelatedModuleItem>;
 }
 export interface IOrganizationData extends IOrganization {
     showOrgInfo: boolean;
 }
-export interface IRelatedModuleItem {
-    moduleID: ObjectID;
+export interface IModuleRelatedApplicationItem {
+    applicationID: ObjectID;
     importedVersion?: string;
-    addedBy: string;
-    addedDate: Date;
-    moduleType: "version" | "reference" | "owned";
+    importedBy?: string;
+    importedDate?: Date;
+    updateStrategy?: string;
+    unreleased?: boolean;
+    parentModuleID?: ObjectID;
 }
 export interface IModuleRelatedModelItem {
     modelID: ObjectID;
@@ -144,6 +146,12 @@ export interface IModuleRelatedModuleItem {
     moduleID: ObjectID;
     version: string;
 }
+export interface IModuleOwnerOrgInfo {
+    dbName: string;
+    orgId: string;
+    appId?: string;
+    appName?: string;
+}
 export interface IModuleBackend extends ICloudObject {
     status?: "deleting";
     deleteTriggerDate?: Date;
@@ -152,17 +160,22 @@ export interface IModuleBackend extends ICloudObject {
     modifyDate?: Date;
     prefix?: string;
     objectType: ModuleObjectType;
+    relatedApplications: Array<IModuleRelatedApplicationItem>;
+    moduleType?: ModuleType;
     store?: {
         productID: ObjectID;
         productVerID: ObjectID;
     };
     mainOwner: ObjectID;
     shareType?: ModuleShareType;
+    currentVersion?: string;
     lastReleasedVersion?: string;
+    unreleased?: boolean;
     applicationID?: string;
-    ownerOrg?: string;
+    ownerOrg?: IModuleOwnerOrgInfo;
+    importedFromGlobal?: boolean;
     origInfo?: IModuleOrigInfo;
-    childModules?: Array<IRelatedModuleItem>;
+    shareScope?: ModuleShareScope;
 }
 export interface IModuleVersion extends ICloudObject {
     moduleID: ObjectID;
@@ -171,12 +184,6 @@ export interface IModuleVersion extends ICloudObject {
     relatedModuleHistories?: Array<IModuleRelatedModuleItem>;
     description?: string;
     unreleased?: boolean;
-    importedFromGlobal?: boolean;
-    origInfo?: IModuleOrigInfo;
-    shareScope: ModuleShareScope;
-    prefix?: string;
-    mainOwner: ObjectID;
-    ownerOrg?: string;
 }
 export interface IMarketplaceModule {
     ID: ObjectID;
@@ -187,7 +194,8 @@ export interface IMarketplaceModule {
     ownerApp?: string;
     ownerApplicationID?: ObjectID;
     publisherOrgId: string;
-    ownerOrg: string;
+    publisherOrgName: string;
+    ownerOrg: IModuleOwnerOrgInfo;
     publishedBy: string;
     publishDate: Date;
     updateDate?: Date;
@@ -260,26 +268,6 @@ export interface IModelInfo extends ICloudObject {
         ID: string;
         version?: string;
     };
-    /**
-     * Yalnızca private checkout satırlarında var (bkz. common/qCloudTemp/privateCheckout.ts): satır orijinalle aynı ID'yi taşır
-     * ve bu alt alanla ayrılır. Bu satırlar varsayılan sorgularda görünmez (common/helpers/modelInfosScope.ts).
-     */
-    workspace?: IModelInfoWorkspace;
-}
-/** ModelInfos satır türü. Şimdilik yalnızca "private" (private checkout kopyası); ileride "workspace". */
-export type ModelInfoRowKind = "private";
-/** Private checkout satırının kendine ait alanları (ModelInfos.workspace). Orijinal satırlarda bu alan yoktur. */
-export interface IModelInfoWorkspace {
-    type: ModelInfoRowKind;
-    /** Kopyanın sahibi (kullanıcı ID'si). */
-    ownerUserID: ObjectID;
-    /** Kopyanın alındığı modelin gerçek sahibi: modül ya da app. Satırın ownerItem'ı her zaman app'tir. */
-    baseOwnerItem: ObjectID;
-    baseOwnerType: ApplicationObjectType | ModuleObjectType;
-    /** Kopyanın gövde yolu (<storageId>/<key>); API'de kaydın kimliği. */
-    storageId: ObjectID;
-    /** Checkout anındaki gövdenin yolu: diff ve "orijinal değişti mi" karşılaştırması için. */
-    baseStorageId: ObjectID;
 }
 export interface IModelPackagingInfo extends IModelHistoryInfo {
     body: IModelBodyObject;
@@ -445,20 +433,21 @@ export interface ITreeviewItem {
     shortName?: string;
     modelAdditionals?: IQJsonAdditionals | IProcessWizardAdditionals | IBpmnAdditionals | IEntityDesignerAddtionals;
     children?: Array<ITreeviewItem>;
+    moduleType?: ModuleType;
     usageType?: UsageType;
     checkouts?: Array<IModelCheckout>;
+    relatedApplications?: IModuleBackend["relatedApplications"];
     size?: number;
     prefix?: string;
     dependentModels?: Array<IDependentModel>;
     moduleMainOwner?: ObjectID;
     moduleShareType?: ModuleShareType;
     currentModuleVersion?: string;
-    updateStrategy?: string;
     currentModelVersion?: string;
     unreleased?: boolean;
     lastReleasedModuleVersion?: string;
     modelID?: string;
-    ownerOrg?: string;
+    ownerOrg?: IModuleOwnerOrgInfo;
     overridden?: boolean;
     overriddenModel?: {
         ID: string;
