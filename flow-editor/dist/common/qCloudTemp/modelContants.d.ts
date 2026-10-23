@@ -178,6 +178,7 @@ export declare class ModelContants {
      */
     static isKnownModelType(modelType: string): boolean;
     static getDesignBodyKey(modelType: ModelType): string | undefined;
+    static getRuntimeBodyKey(modelType: ModelType): string | undefined;
 }
 export {};
 //# sourceMappingURL=modelContants.d.ts.map

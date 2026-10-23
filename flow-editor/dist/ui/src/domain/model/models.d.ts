@@ -4,7 +4,7 @@ import { IUserMainInfo, IUser_SUSI } from "../../../../common/qCloudTemp/authent
 import { IRole } from "../../../../common/qCloudTemp/authorization";
 import { IArtifactInfoDBItem, IArtifactMinioDetails, IQcloudJob } from "../../../../common/qCloudTemp/exporter";
 import { IOrganization } from "../../../../common/qCloudTemp/membership";
-import { ExtensionType, IApplicationLogoInfo, IEntityDesignerAddtionals, IModelBodyObject, IModelInfo, IModuleOwnerOrgInfo, IModuleRelatedApplicationItem, IModuleRelatedModelItem, IModuleRelatedModuleItem, IProcessWizardAdditionals, IQJsonAdditionals, ITreeviewItem, ModelAdditionals, ModuleShareScope, ModuleShareType, ObjectID, UsageType } from "../../../../common/qCloudTemp/quickCloud";
+import { ExtensionType, IApplicationLogoInfo, IEntityDesignerAddtionals, IModelBodyObject, IModelInfo, IModuleRelatedModelItem, IModuleRelatedModuleItem, IProcessWizardAdditionals, IQJsonAdditionals, ITreeviewItem, ModelAdditionals, ModuleShareScope, ModuleShareType, ObjectID, UsageType } from "../../../../common/qCloudTemp/quickCloud";
 import { ICopyApp, IGetOrganizaionGroupDetailsByUserTypeResponse, IListInvitationsResponseItem, ISignInResponse, IUpdateMobileUsage } from "../../../../common/qCloudTemp/symDtoObjects";
 import { IUserPreferences } from "../../../../common/qCloudTemp/userPreference";
 import { ICloudObject, IObject } from "./IObject";
@@ -54,6 +54,12 @@ interface IModelCtorInitials {
 }
 export interface ISetModelBodyOptions {
     time?: Date | "skip";
+    /**
+     * Sunucudaki hangi sürüme karşılık geldiği bilinen bir body veriliyorsa o sürümün updateDate'i.
+     * "unknown" -> body'nin sunucu karşılığı yok (history/lokal düzenleme): offline cache tazelik iddiası düşer.
+     * undefined -> mevcut değer korunur.
+     */
+    bodyServerDate?: Date | "unknown";
     overrideOriginal?: boolean;
     setModelModifyState?: boolean;
 }
@@ -92,6 +98,8 @@ export declare class Model implements IModel, IStudioUIModelBase {
     key: IModel["key"];
     migrated?: IModel["migrated"];
     origInfo?: IModel["origInfo"];
+    /** Kullanıcının bu modeldeki private checkout'u. ctor bunu sıfırlamaz; copyFrom'dan sağ çıkar. */
+    privateCheckout?: IModel["privateCheckout"];
     constructor(initials: IModelCtorInitials);
     copyFrom(model: IModel): void;
     private ctor;
@@ -99,19 +107,28 @@ export declare class Model implements IModel, IStudioUIModelBase {
     get modelBodyOriginal(): IModelBodyObject[] | undefined;
     private _cacheInfo?;
     get cacheInfo(): IModelCacheInfoResolved | IModelCacheInfoResolving | undefined;
+    private _bodyServerDate?;
+    get bodyServerDate(): Date | undefined;
     private _queueInfo?;
     get isQueued(): boolean;
     get isUnmodifiableTotal(): boolean | undefined;
     private _modelBody?;
     get modelBody(): IModel["modelBody"];
-    setModelBody(value: NonNullable<IModel["modelBody"]>, { time, overrideOriginal, setModelModifyState }: ISetModelBodyOptions, protection: typeof modelProtection): void;
+    setModelBody(value: NonNullable<IModel["modelBody"]>, { time, bodyServerDate, overrideOriginal, setModelModifyState }: ISetModelBodyOptions, protection: typeof modelProtection): void;
     setModelBodyOriginal(value: NonNullable<IModel["modelBody"]>, protection: typeof modelProtection): void;
     notModifiableByOthers(): boolean;
     revertModelBody(protection: typeof modelProtection): boolean;
     onPrepareModelBodyRetrieve(): void;
     onDiscardModelBodyRetrieve(): void;
+    private _cacheTimeBeforeRetrieve?;
     onBeforeModelBodyRetrieve(): void;
     onAfterModelBodyRetrieve(): void;
+    /**
+     * Sunucu istenen govdeyi dondurmedi (kopuk versiyon referansi). Eskiden hicbir sey yapilmiyordu: model sonsuza dek
+     * "resolving" kaliyor, onu bekleyen her Refresh/acilis asili kaliyordu. Elde govde varsa onunla devam edilir
+     * (govde ve tarihi degismez), yoksa bekleyenler hata ile birakilir ve sonraki denemede yeniden istenir.
+     */
+    onMissingModelBodyRetrieve(err: Error): void;
     onFailModelBodyRetrieve(err: Error): void;
 }
 export interface IFolder {
@@ -136,6 +153,7 @@ export interface IModel extends IObject, IStudioUIModelBase {
     onAfterModelBodyRetrieve(): void;
     onBeforeModelBodyRetrieve(): void;
     onFailModelBodyRetrieve(err: Error): void;
+    onMissingModelBodyRetrieve(err: Error): void;
     setModelBody(value: NonNullable<IModel["modelBody"]>, options: ISetModelBodyOptions, protection: typeof modelProtection): void;
     setModelBodyOriginal(value: NonNullable<IModel["modelBody"]>, protection: typeof modelProtection): void;
     copyFrom(model: IModel): void;
@@ -145,6 +163,8 @@ export interface IModel extends IObject, IStudioUIModelBase {
     readonly modelBody?: Array<IModelBodyObject>;
     readonly modelBodyOriginal?: Array<IModelBodyObject>;
     readonly cacheInfo?: IModelCacheInfoResolved | IModelCacheInfoResolving;
+    /** Bellekteki body'nin karşılık geldiği sunucu updateDate'i. Bilinmiyorsa undefined. */
+    readonly bodyServerDate?: Date;
     readonly isQueued: boolean;
     extension?: ExtensionType;
     usageType?: ITreeviewItem["usageType"];
@@ -170,6 +190,19 @@ export interface IModel extends IObject, IStudioUIModelBase {
     history?: ITreeviewItem["history"];
     selectedHistoryVersion?: string;
     origInfo?: IModelOrigInfo;
+    /** Private checkout: gövde kullanıcının kopyasından gelir, kayıtlar ona gider. ID orijinal kalır. */
+    privateCheckout?: IModelPrivateCheckoutRef;
+}
+/** Orijinal modelin üzerine giydirilen private checkout kaydı. */
+export interface IModelPrivateCheckoutRef {
+    storageId: string;
+    updateDate: Date;
+    /** Orijinal checkout'tan sonra değişti mi; sunucu design-time gövdeleri karşılaştırır (privatecheckout/compare). */
+    originalChanged?: boolean;
+    /** Orijinalde Start Working'de olan kişi (son karşılaştırmaya göre); başkasıysa kopyadaki Start Working pasif olur. */
+    workingBy?: string;
+    /** Editörde orijinal salt okunur gösteriliyor (View Current in Editor); kalıcı değil, sayfa yenilenince kopyaya dönülür. */
+    viewingOriginal?: boolean;
 }
 export interface IModelLink {
     model: IModel;
@@ -187,19 +220,19 @@ export interface IModule extends IObject {
     prefix?: string;
     owner: IApplication | IModule;
     children: Array<IModel | IModule>;
-    relatedApplications: Array<IModuleRelatedApplicationItem>;
     mainOwner?: IApplication["ID"];
     shareType?: ModuleShareType;
     currentVersion?: string;
     relatedModelHistories?: IModuleVersion["relatedModelHistories"];
     lastReleasedVersion?: string;
-    ownerOrg?: IModuleOwnerOrgInfo;
+    ownerOrg?: string;
     importedFromGlobal?: boolean;
     origInfo?: IModuleOrigInfo;
     modifyDate?: Date;
     unreleased?: boolean;
     shareScope?: ModuleShareScope;
     fullPath?: string;
+    updateStrategy?: string;
 }
 export interface IGetModuleResponse extends IModule {
     versionID?: IModuleVersion["ID"];
@@ -226,8 +259,20 @@ export interface IUploadedFile {
     name: string;
     content: string;
 }
+export interface IRelatedModuleItem {
+    moduleID: ObjectID;
+    importedVersion?: string;
+    addedBy: string;
+    addedDate: Date;
+    moduleType: "version" | "reference" | "owned";
+    updateStrategy?: string;
+}
+export interface IApplicationFeatures {
+    disablePrimitiveComponents?: boolean;
+}
 export interface IApplication extends IObject {
     objectType: "application";
+    relatedModules?: Array<IRelatedModuleItem>;
     status?: "deleting";
     deleteTriggerDate?: Date;
     publishmentId?: string;
@@ -243,6 +288,7 @@ export interface IApplication extends IObject {
     lastPublishDate?: Date;
     tags?: Array<ITagValue>;
     copyApp?: ICopyApp;
+    features?: IApplicationFeatures;
     isCopiedApp?: boolean;
 }
 export interface IApplicationExtended extends IApplication {
