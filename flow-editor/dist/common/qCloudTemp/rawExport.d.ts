@@ -1,4 +1,5 @@
 import { IStudioInfoExport } from "./studioInfoExport";
+import { ModuleShareScope } from "./quickCloud";
 /**
  * Raw export paketi: Studio modelleri id çevirisi yapılmadan, storage'daki halleriyle.
  * Bu dosya paket formatının tek kaynağıdır; ileride yazılacak import işi de buradan okur.
@@ -6,9 +7,9 @@ import { IStudioInfoExport } from "./studioInfoExport";
 export declare const RAW_EXPORT_FORMAT: "studio-raw-export";
 export declare const RAW_EXPORT_FORMAT_VERSION: 1;
 /**
- * Paketteki `db/<collection>.jsonl` dosyaları (boş olabilir). Kayıtlar Studio ID'leriyle yazılır; Mongo'nun kendi `_id` alanı
- * taşınmaz. Yalnızca uygulamanın sahibi olduğu modüller pakete alınır; başka bir uygulamadan ya da organizasyondan import edilmiş
- * modüller IRawExportManifest.excludedModules'ta listelenir.
+ * Uygulama paketindeki `db/<collection>.jsonl` dosyaları (boş olabilir). Kayıtlar Studio ID'leriyle yazılır; Mongo'nun kendi `_id`
+ * alanı taşınmaz. Yalnızca uygulamanın sahibi olduğu modüller pakete alınır; başka bir uygulamadan ya da organizasyondan import
+ * edilmiş modüller IRawExportManifest.excludedModules'ta listelenir.
  * - Applications, Modules, ModelInfos: her zaman yazılır. Modules uygulamanın sahibi olduğu modüller, ModelInfos uygulamanın ve bu
  *   modüllerin güncel modelleridir (ownerItem).
  * - ModuleVersions, ModelHistoryInfos (+ `history/`): yalnızca includeHistory true iken vardır. ModuleVersions sahip olunan modüllerin
@@ -16,8 +17,11 @@ export declare const RAW_EXPORT_FORMAT_VERSION: 1;
  *   (ModuleVersions.relatedModelHistories; release'ten sonra silinenler dahil) tüm (silme dışı) history'sidir. Yalnızca uygulamanın
  *   ya da sahip olduğu modüllerin kayıtları (ownerItem) alınır: versiyonların pin'lediği, iç içe import edilmiş modüllerin kayıtları
  *   pakete girmez. Her kayıt bir kez yer alır.
- * - Global'e açılmış (shareScope "Global") sahip olunan modüller Modules ve ModelInfos'ta son kaydedilmiş halleriyle yer alır;
- *   history açık olsa da versiyonları ve history kayıtları pakete girmez.
+ * - Global'e açılmış (shareScope "Global") sahip olunan modüller de diğer sahip olunan modüller gibi versiyonları ve history'leriyle
+ *   yazılır. Bu kuraldan önce alınmış paketlerde Global modüllerin versiyonları ve history kayıtları yoktur.
+ * Module-version paketinde seçilen ModuleVersions kaydı ile relatedModuleHistories üzerinden ulaşılan nested module versiyonları,
+ * bu versiyonların pin'lediği ModelHistoryInfos kayıtları ve `history/` body'leri bulunur. Applications, Modules, ModelInfos ve
+ * `models/` yazılmaz.
  */
 export type RawExportCollection = "Applications" | "Modules" | "ModuleVersions" | "ModelInfos" | "ModelHistoryInfos";
 export declare const RawExportPaths: {
@@ -44,9 +48,10 @@ export interface IRawExportExcludedModule {
     importedVersion?: string;
     /** Eski format-1 paketleri için; yeni exporter stratejiyi importedVersion'a yazar. */
     updateStrategy?: string;
+    /** Eski format-1 manifestlerinde bulunabilir; yeni exporter sahipliği application relation'larından çözer. */
     mainOwner?: string;
-    /** Başka organizasyondan import edilmişse kaynak organizasyon ID'si (Module.ownerOrg). */
-    ownerOrgId?: string;
+    /** Modül versiyonunun paylaşım kapsamı; eski format-1 manifestlerinde bulunmayabilir. */
+    shareScope?: ModuleShareScope;
     /** İç içe kullanımda parent modül; kök ilişkide bulunmaz. */
     parentModuleID?: string;
 }
@@ -68,6 +73,8 @@ export interface IRawExportManifest {
     formatVersion: typeof RAW_EXPORT_FORMAT_VERSION;
     createdAt: string;
     exporterVersion: string;
+    /** Alan yoksa uygulama paketidir. */
+    packageType?: "moduleVersion";
     source: {
         /**
          * Paketin export edildiği Studio ortamının adı (jobs'taki `ENVIRONMENT` env değişkeni, örn. prod, mango, isb). Tanımlı değilse
@@ -78,10 +85,16 @@ export interface IRawExportManifest {
         host?: string;
         organization: IStudioInfoExport["organization"];
         application: IStudioInfoExport["application"];
+        /** Yalnızca tek module version exportunda bulunur. */
+        module?: {
+            id: string;
+            name: string;
+            version: string;
+        };
     };
     /**
-     * Model history'si istendi mi. false iken paket yalnızca güncel kayıtlı hali içerir: ModuleVersions, ModelHistoryInfos
-     * ve `history/` yoktur (bkz. RawExportCollection).
+     * Model history'si istendi mi. Module-version paketlerinde her zaman true'dur. Uygulama paketinde false iken paket yalnızca
+     * güncel kayıtlı hali içerir: ModuleVersions, ModelHistoryInfos ve `history/` yoktur (bkz. RawExportCollection).
      */
     includeHistory: boolean;
     /**
@@ -98,7 +111,10 @@ export interface IRawExportManifest {
      * Bu modüllerin kayıtları ve modelleri pakette yoktur; import tarafı bunları hedefte bağımlılık olarak çözmelidir.
      */
     excludedModules: Array<IRawExportExcludedModule>;
-    /** Global scope ModuleVersion'da tutulduğu halde sürümleri pakete girmeyen sahip olunan modüller. Eski paketlerde alan yoktur. */
+    /**
+     * Global scope ModuleVersion'da tutulduğu halde sürümleri pakete girmeyen sahip olunan modüller. Yeni exporter bunu yalnızca
+     * includeHistory false iken yazar; Global modüllerin sürümlerini almayan eski paketlerde history açıkken de bulunur.
+     */
     globalModuleIds?: Array<string>;
     /** Storage'da blob'u bulunamayan kayıtlar. */
     missingBodies: Array<IRawExportMissingBody>;

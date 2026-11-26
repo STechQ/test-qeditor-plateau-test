@@ -25,6 +25,9 @@ export declare const NamedModels: {
         readonly type: "dataSet";
     };
 };
+export declare const FileStorageTypesDataSetName = "FileStorageTypes";
+/** Used when a workflow model has no fileStorageType (models created before the field existed). */
+export declare const DefaultFileStorageType = "S3";
 export type StatusType = "" | "Pending-InProgress" | "Pending-Approval" | "Resolved-Completed" | "New" | "Returned" | "Returned-Originator" | "Returned-Recipient" | "Resolved-Cancelled";
 export declare const PROCESS_STATUS_OTHERS_KEY = "Others";
 type NamedModelTypeChecker<K extends keyof typeof NamedModels = keyof typeof NamedModels> = {
@@ -49,6 +52,7 @@ export interface IWorkflowModel extends IFlowModelBase {
     fileUploadFunction?: IExecuteFlowByMapping;
     fileDownloadFunction?: IExecuteFlowByMapping;
     fileDeleteFunction?: IExecuteFlowByMapping;
+    fileStorageType?: string;
     /** Workflow-level required privileges (AND semantics — user must hold every one to start). Empty / undefined = everyone allowed. */
     privileges?: Array<string>;
 }
@@ -86,10 +90,12 @@ export interface IAddActivityPropType extends IPropObject {
     description: string;
     descriptionCode: IExpressionData;
     descriptionActivity: IExpressionData;
+    processInstanceId?: IExpressionData;
 }
 export interface IAddActivityProp {
     descriptionCode: string;
     description: string;
+    processInstanceId?: string;
 }
 export interface IHandleSlaUpdatesProp {
     type: "workflow" | "userTask";

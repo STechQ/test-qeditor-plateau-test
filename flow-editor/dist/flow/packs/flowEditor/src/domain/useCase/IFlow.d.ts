@@ -1,5 +1,6 @@
 import { IStepOptions } from "../../../../flowInterfaces/editor/IStepOptions";
 import { IPoint } from "../../../../flowInterfaces/editor/shape/IPoint";
+import { ConnectionDirection } from "../../../../drawArea/types";
 import { IStepInstance } from "../viewModel/IViewModel";
 export interface IItemInfo {
     ID: string;
@@ -7,6 +8,7 @@ export interface IItemInfo {
 }
 export interface IFlow {
     addStep(stepName: string, point: IPoint, version: string): void;
+    addConnectedStep(sourceStepID: string, output: string, direction: ConnectionDirection, point: IPoint, stepName: string, version: string): void;
     stepAdded(stepID: string, stepName: string, stepOptions: IStepOptions, props: IStepInstance["propValues"], swimlane?: string): void;
     stepDeleted(stepIDs: Array<string>): Array<string>;
     connectionAdded(connID: string, from: {

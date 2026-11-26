@@ -42,6 +42,7 @@ export type ISignInOrganization = {
 };
 export interface ISignInResponse {
     id: IUser_SUSI["id"];
+    objectId?: IUser_SUSI["objectId"];
     email: IUser_SUSI["email"];
     name?: string;
     lastName?: string;
@@ -263,6 +264,8 @@ export interface IGetModelResponse {
     version?: string;
     isUnmodifiable?: boolean;
     usageType?: UsageType;
+    /** Private edit'ten Start Working'de (privateEditStorageId) kaldırılan kopyanın içeriği. */
+    privateEditBody?: Array<IModelBodyObject>;
 }
 export interface IGetMainStatisticInfoResponse {
     mainStatistics: IMainStatisticInfo;
@@ -272,12 +275,6 @@ export interface IGetUserInfoResponse {
 }
 export interface IGetOrganizationInfoResponse {
     organizationInfo: IOrganization;
-}
-export interface IGetApplicationInfoResponse {
-    applicationInfo: IApplication;
-}
-export interface IUpdateApplicationFeaturesResponse {
-    applicationRes: IApplication;
 }
 export interface IGetChatBotResponse {
     responseText: string;
@@ -417,6 +414,18 @@ export interface IBoInitializeStudioStoreRequest {
 export interface IBoInitializeStudioStoreResponse {
     cloud: IOrganizationCloud;
 }
+export interface IBoImportStudioStoreModuleResponse {
+    importId: string;
+}
+export interface IBoGetStudioStoreImportStatusResponse {
+    state: "waiting" | "running" | "done" | "failed";
+    result?: {
+        moduleID: ObjectID;
+        version: string;
+        modelHistoryCount: number;
+    };
+    error?: string;
+}
 export interface IBoGetStudioStoreStatusRequest {
 }
 export interface IStudioStoreModuleVersionStatus {
@@ -427,17 +436,14 @@ export interface IStudioStoreModuleVersionStatus {
 }
 export interface IStudioStoreModuleUsageStatus {
     applicationID: ObjectID;
-    orgName?: string;
-    appName?: string;
     version?: string;
     lastImportedDate?: Date;
 }
 export interface IStudioStoreModuleStatus {
     moduleID: ObjectID;
     name: string;
-    publisherOrgName?: string;
-    publisherAppName?: string;
     latestVersion?: string;
+    studioVersionBound?: boolean;
     versions: Array<IStudioStoreModuleVersionStatus>;
     modelVersionCount: number;
     totalSize: number;
@@ -480,27 +486,26 @@ export interface IRelaseModuleRequest {
     }>;
     selectedModuleIDs?: Array<string>;
     basedVersion?: string;
-    description?: string;
+    description: string;
     unreleased?: boolean;
     shareScope?: ModuleShareScope;
+    studioVersionBound?: boolean;
 }
 export interface IUpdateModulParams {
     name?: string;
     description?: string;
     prefix?: string;
     ownerUser?: ILoggedInUser;
-    mainOwner?: ObjectID;
     shareType?: ModuleShareType;
     applicationID?: string;
     shareScope: ModuleShareScope;
 }
 export interface IAppendOuterOrg {
-    outerOrgId?: string;
+    outerOrg?: boolean;
 }
 export interface IAttachModuleToAppRequest extends IAppendOuterOrg {
     applicationID: string;
     moduleID: ObjectID;
-    outerOrgId?: NonNullable<IAppendOuterOrg["outerOrgId"]>;
     version?: string;
     updateStrategy?: string;
 }
@@ -510,11 +515,17 @@ export interface IAttachModuleToModule {
     version: string;
     selectedParentModuleID: string;
     fullPath?: string;
-    outerOrgId?: string;
+    outerOrg?: boolean;
 }
 export interface IUpdateImportedModuleVersionRequest extends IAttachModuleToAppRequest {
     version: string;
     selectedParentModuleID?: string;
+}
+export interface ICompareModuleVersionsRequest {
+    moduleID: string;
+    sourceVersion: string;
+    targetVersion: string;
+    shareScope?: ModuleShareScope;
 }
 export interface ICheckModuleImportConflictsRequest {
     moduleID: string;
@@ -531,9 +542,12 @@ export interface IGetModuleMarketplaceUsagesRequest {
 export interface IGetModuleMarketplaceUsagesResponse {
     usages: Array<IMarketplaceModuleUsage>;
 }
+export interface IListMarketplaceModuleVersionsResponseItem extends IModuleVersion {
+    studioIncompatible?: boolean;
+}
 export interface IListModuleUsedAppsRequest {
     moduleID: string;
-    outerOrgId?: string;
+    shareScope?: ModuleShareScope;
 }
 export interface IModuleAppUsage {
     applicationID: ObjectID;
@@ -983,11 +997,18 @@ export interface ICreateWorkflowExportJobRequest {
     items: Array<IWorkflowExportItem>;
     updateStrategyInfos?: Array<IUpdateStrategyInfo>;
 }
-export interface ICreateRawExportJobRequest {
+interface ICreateRawExportJobBaseRequest {
     jobID: string;
     appID: string;
-    includeHistory: boolean;
 }
+export type ICreateRawExportJobRequest = ICreateRawExportJobBaseRequest & ({
+    type?: "application";
+    includeHistory: boolean;
+} | {
+    type: "moduleVersion";
+    moduleID: string;
+    version: string;
+});
 export interface IModuleExportItem {
     ID: string;
     version: string;
@@ -1201,7 +1222,6 @@ export interface IListModulesResponse {
         additionalFieldsForUI?: {
             latestVersion?: string;
             shareScope?: ModuleShareScope;
-            importedFromGlobal?: boolean;
             unreleased?: boolean;
         };
     }>;

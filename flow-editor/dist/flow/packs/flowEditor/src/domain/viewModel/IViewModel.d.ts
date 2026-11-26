@@ -75,6 +75,7 @@ export interface IViewModel {
     fileUploadFunction?: IExecuteFlowByMapping;
     fileDownloadFunction?: IExecuteFlowByMapping;
     fileDeleteFunction?: IExecuteFlowByMapping;
+    fileStorageType?: string;
     privileges?: Array<string>;
     resetHistory: () => IVMHistory;
     executeType: FlowExecutionType;

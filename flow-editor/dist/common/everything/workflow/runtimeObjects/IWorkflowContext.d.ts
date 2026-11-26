@@ -7,6 +7,7 @@ export interface IWorkflowContext {
     dataInstance?: DataInstance;
     processInstance?: IProcessInstance;
     action?: IActionData;
+    fileStorageType?: string;
 }
 export default interface IWorkflowEnvironment {
     constants: Record<string, any>;

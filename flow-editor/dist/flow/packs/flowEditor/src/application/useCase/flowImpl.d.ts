@@ -7,6 +7,7 @@ import { IStepInstance, IViewModel } from "../../domain/viewModel/IViewModel";
 import { IStepOptions } from "../../../../flowInterfaces/editor/IStepOptions";
 import { IStepRepo } from "../../domain/useCase/IStepRepo";
 import { IHistory } from "../../domain/useCase/IHistory";
+import { ConnectionDirection } from "../../../../drawArea/types";
 export declare class FlowImpl implements IFlow {
     private readonly viewModel;
     private readonly drawArea;
@@ -15,6 +16,8 @@ export declare class FlowImpl implements IFlow {
     private readonly history;
     constructor(container: DependencyContainer, viewModel?: IViewModel, drawArea?: IDrawArea, selection?: ISelection, stepRepo?: IStepRepo, history?: IHistory);
     addStep(stepName: string, point: IPoint, version: string): void;
+    addConnectedStep(sourceStepID: string, output: string, direction: ConnectionDirection, point: IPoint, stepName: string, version: string): void;
+    private createStep;
     stepAdded(stepID: string, stepName: string, stepOptions: IStepOptions, props: IStepInstance["propValues"], swimlaneId?: string): void;
     stepDeleted(stepIDs: Array<string>): string[];
     connectionAdded(connID: string, from: {

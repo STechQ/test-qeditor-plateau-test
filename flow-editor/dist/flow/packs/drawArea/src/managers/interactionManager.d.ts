@@ -12,7 +12,6 @@ export declare class InteractionManager {
     detach(): void;
     private mouse?;
     private itemsMoved;
-    private interactiveDropdownItems;
     private mouseDown;
     private mouseMove;
     private mouseUp;

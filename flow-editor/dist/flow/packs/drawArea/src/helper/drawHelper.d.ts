@@ -30,11 +30,18 @@ export type InteractiveDropdownItem = {
     text: string;
     mousedown: () => void;
 };
+export type ConnectedStepMenuItem = {
+    text: string;
+    icon?: string;
+    iconSvg?: string;
+    mousedown: () => void;
+};
 export declare class DrawHelper {
     private static menu;
     static GetRenderer(shape: Shape, cb: (renderer: ITwoRenderer) => void, counter?: number): void;
     static CreateInteractiveDropdownMenu(point: IPoint, items: Array<InteractiveDropdownItem>): void;
     static RemoveInteractiveDropdown(): void;
+    static showConnectedStepMenu(point: IPoint, items: Array<ConnectedStepMenuItem>): void;
     static createIconWithHit(zuiManager: ZuiManager, opts: IconHitOptions): IconHitHandle;
 }
 //# sourceMappingURL=drawHelper.d.ts.map

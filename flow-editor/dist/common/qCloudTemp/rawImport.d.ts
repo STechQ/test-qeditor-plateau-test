@@ -159,15 +159,26 @@ export interface IRawImportJobRecord {
     stopped?: IRawImportStop;
     apply?: IRawImportApplyResult;
     error?: string;
+    studioStore?: {
+        moduleID: string;
+        version: string;
+        modelHistoryCount: number;
+    };
 }
 /** Bir import'un tek job'u; jobID = importId. type, AllJobDataTypes'taki diğer job data'larla uyum için (kod job.jobData.type okuyor). */
 export interface IRawImportJobData {
     type: "rawImport";
+    target?: "organization" | "studioStore";
     importId: string;
     fileName: string;
     size: number;
     conflictPolicy: RawImportConflictPolicy;
 }
+export interface IStudioStoreImportJobData extends IRawImportJobData {
+    target: "studioStore";
+    createdBy: string;
+}
+export declare function isStudioStoreImportJobData(data: RawImportJobData): data is IStudioStoreImportJobData;
 /** Eski akışın (check + apply job'ları) verileri: yalnızca eski kayıtları listelemek ve kuyrukta kalanı reddetmek için. */
 export interface IRawImportLegacyCheckJobData {
     type: "rawImport";

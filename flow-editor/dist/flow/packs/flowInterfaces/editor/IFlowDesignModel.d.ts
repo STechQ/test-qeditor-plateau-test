@@ -23,6 +23,8 @@ export interface IFlowCopyModel extends IFlowCoreModel {
     fileUploadFunction?: IExecuteFlowByMapping;
     fileDownloadFunction?: IExecuteFlowByMapping;
     fileDeleteFunction?: IExecuteFlowByMapping;
+    /** Storage type for file operations. Only meaningful for workflow models. */
+    fileStorageType?: string;
     /** Workflow-level required privileges (AND semantics). Only meaningful for workflow models. */
     privileges?: Array<string>;
     executeType: FlowExecutionType;

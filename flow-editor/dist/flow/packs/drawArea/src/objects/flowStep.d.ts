@@ -1,4 +1,5 @@
 import { IPoint } from "../../../flowInterfaces/editor/shape/IPoint";
+import { Group } from "two.js/src/group";
 import { RoundedRectangle } from "two.js/src/shapes/rounded-rectangle";
 import { Text } from "two.js/src/text";
 import { Circle } from "two.js/src/shapes/circle";
@@ -24,6 +25,17 @@ type StepShapeInfo = {
     width: number;
     height: number;
 };
+export type StepBoundaryPosition = "left" | "right" | "top" | "bottom";
+export type ConnectionPort = {
+    position: StepBoundaryPosition;
+    offset: number;
+};
+export type StepRoutingBounds = {
+    left: number;
+    top: number;
+    right: number;
+    bottom: number;
+};
 export declare class FlowStep extends FlowObjectBase {
     readonly stepName: string;
     private readonly container;
@@ -35,8 +47,18 @@ export declare class FlowStep extends FlowObjectBase {
     private readonly group;
     private readonly textWidthCalculator;
     private shapeInfo;
+    private containerBaseFill;
+    private containerBaseStroke;
     private outputs;
     private inputs;
+    private outputDefaultPositions;
+    private outputPorts;
+    private selectionOutputOverlays;
+    private quickAddHandles;
+    private quickAddHandlesVisible;
+    private isSelected;
+    private isHovered;
+    private readonly;
     private inputConns;
     private outputConns;
     private outputsOrdered;
@@ -49,8 +71,8 @@ export declare class FlowStep extends FlowObjectBase {
     private baseStroke;
     private baseLinewidth;
     private isErroneous;
-    private isHovered;
     private readonly allowsMultipleOutputConnections;
+    private readonly hideSingleOutputLabel;
     private badgeInfo?;
     private modeMarker?;
     private pairCountsText?;
@@ -77,6 +99,7 @@ export declare class FlowStep extends FlowObjectBase {
     get Errors(): Array<string> | undefined;
     get ShapeInfo(): StepShapeInfo | undefined;
     getAvailableOutputs(currentConn?: FlowConnection, currentOutput?: string): Array<string>;
+    shouldHideOutputLabel(outputName: string): boolean;
     setSwimlaneId(swimlaneId?: string): void;
     mouseDown(surfacePoint: IPoint): MouseDownReturn;
     /**
@@ -84,27 +107,56 @@ export declare class FlowStep extends FlowObjectBase {
      * the actual selection stays on the clicked step, so dragging and deleting act on that one
      * alone. `skipPair` breaks the mutual recursion between the two halves.
      */
-    drawSelectionOverlay(isErroneous?: boolean, skipPair?: boolean): void;
-    protected createSelectionOverlay(isErroneous?: boolean): Path[];
-    private getBorder;
+    drawSelectionOverlay(isErroneous?: boolean, skipPair?: boolean): Group;
+    protected createSelectionOverlay(isErroneous?: boolean): Circle[];
+    setSelected(selected: boolean): void;
+    setReadonly(readonly: boolean): void;
+    private updateOutputVisibility;
+    private hasOutputConnections;
     moveBy(dVector: Vector, surfacePoint: IPoint): void;
     mouseUp(): void;
     protected onDeleted(): void;
     reDraw(): void;
     private reDrawOutConns;
     getPosition(option: GetPositionOptions): any;
+    getCenter(): IPoint;
+    getBoundaryPoint(toward: IPoint): IPoint;
+    getBoundaryPosition(point: IPoint): StepBoundaryPosition;
+    getConnectionPort(point: IPoint): ConnectionPort;
+    getPortPoint(port: ConnectionPort): IPoint;
+    getRoutingBounds(margin?: number): StepRoutingBounds;
+    containsPoint(point: IPoint): boolean;
     closestInput(surfacePoint: IPoint, discardInputs?: Array<string>): {
         input: string;
         distSq: number;
+        port: ConnectionPort;
     } | undefined;
     unregisterConnection(conType: "input" | "output", name: string, connection: FlowConnection): void;
     registerConnection(conType: "input" | "output", name: string, connection: FlowConnection): void;
     getConnectionTo(output: string, toStep: FlowStep, toInput: string): FlowConnection | undefined;
     getConnectionsTo(output: string, toStep: FlowStep): Array<FlowConnection>;
+    private createQuickAddHandles;
+    private getQuickAddDirection;
+    private updateQuickAddVisibility;
+    shouldRetractIncomingArrow(port?: ConnectionPort): boolean;
+    private openQuickAddMenu;
     private drawInputs;
     private drawOutputs;
+    private showOutputs;
+    setOutputPort(outputName: string, port?: ConnectionPort): void;
+    getOutputPort(outputName: string): {
+        position: StepBoundaryPosition;
+        offset: number;
+    } | undefined;
+    clearOutputPort(outputName: string): void;
+    getPrimaryInput(): string;
+    resolveOutputPort(outputName: string, port?: ConnectionPort, preferProvided?: boolean): {
+        position: StepBoundaryPosition;
+        offset: number;
+    } | undefined;
+    moveOutputPort(outputName: string, port: ConnectionPort, activeConnection: FlowConnection): void;
+    optimizeOutputPortForAutoLayout(outputName: string, targets: Array<IPoint>): void;
     changeOutputName(oldName: string, newName: string): void;
-    private drawRhombusOutputs;
     private drawIOs;
     private bringShapeToFront;
     private trackHover;

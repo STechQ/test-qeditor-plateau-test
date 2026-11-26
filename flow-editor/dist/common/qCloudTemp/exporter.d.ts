@@ -88,17 +88,25 @@ export type JobCauseType = "download" | "publish";
 export type ExportType = "qui" | "sdk" | "model";
 export type DeployType = "module" | "application";
 export type StatusType = "waiting" | "running" | "success" | "failed" | "skipped";
-export interface IRawExportJobData {
-    /** Union'daki diğer job data'larla uyum için; raw export her zaman tek uygulama içindir. */
-    type: "app";
+interface IRawExportJobDataBase {
     app: {
         ID: string;
         name: string;
     };
-    includeHistory: boolean;
     /** Export'un istendiği Studio adresinin host'u; manifest'te source.host olarak yazılır. */
     sourceHost?: string;
 }
+export type IRawExportJobData = IRawExportJobDataBase & ({
+    type: "app";
+    includeHistory: boolean;
+} | {
+    type: "moduleVersion";
+    module: {
+        ID: string;
+        name: string;
+        version: string;
+    };
+});
 export type AllJobDataTypes = IExportJobData | IServiceExportJobData | IDeployJobData | IBuildJobData | IDeploymentStartJobData | IAppManagementJobData | IModuleManagementJobData | IOrganizationManagementJobData | IWorkflowExportJobData | IRawExportJobData | RawImportJobData;
 export interface IQcloudJob {
     jobID: string;
@@ -120,6 +128,10 @@ export interface IExportJobData extends IJobData {
         name: string;
         version?: string;
         versionId?: string;
+    };
+    module?: {
+        ID: string;
+        name: string;
     };
     fileUrlCreatorRuleName?: FileUrlCreationRuleName;
     modelFileNameSchema?: string;
@@ -340,6 +352,7 @@ export interface IInitJobHistoryRequest {
 }
 export interface IExportJobHistoryDbItem extends Omit<IInitJobHistoryRequest, "appID"> {
     app: IExportJobData["app"];
+    module?: IExportJobData["module"];
     createDate: IExportJobDbItem["createDate"];
     createdBy: IExportJobDbItem["createdBy"];
     status: IExportJobDbItem["status"];
@@ -379,10 +392,12 @@ export interface ITableData {
     isCheckedOut?: boolean;
     isModified?: boolean;
     newModuleVersionAvaliable?: boolean;
+    nestedModuleConflict?: boolean;
     updateStrategy?: string;
     importedVersion?: string;
     unreleased?: boolean;
     key?: string;
     prefix?: string;
 }
+export {};
 //# sourceMappingURL=exporter.d.ts.map

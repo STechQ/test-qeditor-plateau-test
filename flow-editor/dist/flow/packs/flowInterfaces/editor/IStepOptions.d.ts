@@ -165,13 +165,14 @@ export interface IStepOptions<PropType extends IPropObject = IPropObject> {
     paletteLabel?: string;
     version: string;
     outputs: Array<string> | ((props: PropType | undefined) => Array<string>);
+    allowsMultipleOutputConnections?: boolean;
+    hideSingleOutputLabel?: boolean;
     inputs: Array<IInputInfo> | (() => Array<IInputInfo>);
     autoStarts?: boolean;
     color?: string;
     icon?: string;
     deprecated?: boolean;
     hideInPalette?: boolean;
-    allowsMultipleOutputConnections?: boolean;
     editSection?: (options: IEditSectionInput<PropType>) => (ReactEditSection | HTMLElement);
     propDefinitions: () => IPropDefiniton<PropType>;
     changeOutputName?: (props: PropType, oldName: string, newName: string) => PropType;

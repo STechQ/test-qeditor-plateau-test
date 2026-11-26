@@ -2,15 +2,17 @@ import { Shape } from "two.js/src/shape";
 import { IPoint } from "../../../flowInterfaces/editor/shape/IPoint";
 import { ObjectManager } from "../managers/objectManager";
 import { FlowObjectBase, MouseDownReturn } from "./flowObjectBase";
-import { FlowStep } from "./flowStep";
+import { ConnectionPort, FlowStep } from "./flowStep";
 import { Vector } from "two.js/src/vector";
 import { StageType, ZuiManager } from "../managers/zuiManager";
 import { FlowEvents } from "../../types";
 import { EventHelper } from "../helper/eventHelper";
+import { IConnectionRoutingDesignModel } from "../../../flowInterfaces/editor/IConnectionDesignModel";
 export type FlowConnectionTo = {
     type: "step";
     step: FlowStep;
     input: string;
+    port?: ConnectionPort;
 } | {
     type: "point";
     surfacePoint: IPoint;
@@ -18,7 +20,9 @@ export type FlowConnectionTo = {
 export type FlowConnectionFrom = {
     step: FlowStep;
     output: string;
+    port?: ConnectionPort;
 };
+export type FlowConnectionRoutingState = IConnectionRoutingDesignModel;
 type GetPositionOptions = {
     type: "self" | "group" | "bounding";
 } | {
@@ -28,6 +32,7 @@ type GetPositionOptions = {
 export declare class FlowConnection extends FlowObjectBase {
     readonly from: FlowConnectionFrom;
     private _to;
+    private readonly onConnectionCancelled?;
     readonly type = "connection";
     protected readonly stageType: StageType;
     private lines;
@@ -44,6 +49,16 @@ export declare class FlowConnection extends FlowObjectBase {
     private menuIcon?;
     private textMeasureCtx;
     private arrow?;
+    private frontClone?;
+    private frontCloneStage?;
+    private routeHandles;
+    private manualRoute?;
+    private renderedPoints;
+    private segmentDrag?;
+    private endpointDrag?;
+    private isHovered;
+    private isDeleted;
+    private connectingDragDistance;
     private prevTo;
     private isSelected;
     private text;
@@ -52,12 +67,21 @@ export declare class FlowConnection extends FlowObjectBase {
     private labelsHidden;
     private conditionMarker?;
     private readonly;
-    private _bringingToFront;
+    private isConnecting;
     private events;
-    constructor(id: string, from: FlowConnectionFrom, _to: FlowConnectionTo, objectManager: ObjectManager, zuiManager: ZuiManager, eventHelper: EventHelper<FlowEvents>, readonly?: boolean, outputOpt?: Array<string>);
+    constructor(id: string, from: FlowConnectionFrom, _to: FlowConnectionTo, objectManager: ObjectManager, zuiManager: ZuiManager, eventHelper: EventHelper<FlowEvents>, readonly?: boolean, outputOpt?: Array<string>, onConnectionCancelled?: ((wasClick: boolean) => void) | undefined);
     get to(): FlowConnectionTo;
+    get IsHighlighted(): boolean;
+    get RoutingState(): FlowConnectionRoutingState | undefined;
+    setRoutingState(state?: FlowConnectionRoutingState): void;
+    resetRoute(): void;
+    prepareAutoLayoutRouting(): void;
+    setReadonly(readonly: boolean): void;
     private set to(value);
     mouseDown(surfacePoint: IPoint): MouseDownReturn;
+    startSourceEndpointDrag(): boolean;
+    setSourcePortFromStep(port: ConnectionPort, redraw?: boolean): void;
+    private startEndpointDrag;
     protected createSelectionOverlay(): Shape[];
     moveBy(dVector: Vector, surfacePoint: IPoint): void;
     mouseUp(): void;
@@ -66,6 +90,16 @@ export declare class FlowConnection extends FlowObjectBase {
     setConnectionName(newName: string): void;
     setLabelsVisible(visible: boolean): void;
     setLabelOverride(label: string | undefined, hasCondition: boolean): void;
+    private createEndpointHandles;
+    private getEndpointHandleInfo;
+    private findSegmentHandle;
+    private bindSegmentCursor;
+    private findEndpointHandle;
+    private lockCurrentRoute;
+    private ensureEndpointPorts;
+    private getRouteEndpointPort;
+    private moveEndpoint;
+    private moveSegment;
     private openOutputMenu;
     private closeOutputMenu;
     changeOutput(newOutput: string): void;
@@ -78,14 +112,27 @@ export declare class FlowConnection extends FlowObjectBase {
     updateOutputOptions(options: Array<string>): void;
     getPosition(option: GetPositionOptions): any;
     private createLinesAndArrowPoints;
-    private createFromTo;
+    private hasValidTargetApproach;
+    private routeIntersectsStep;
+    private routeManualAroundSteps;
+    private createObstacleDetours;
+    private scoreObstacleDetour;
+    private ensureSourceLeadOut;
+    private ensureArrowLeadIn;
+    private createManualRoutePoints;
+    private createAutomaticRoutePoints;
+    private scoreAutomaticRoute;
     private registerToStep;
     private unregisterToStep;
     private registerFromStep;
     private unregisterFromStep;
-    private bringToFront;
     private highlight;
     unhighlight(): void;
+    private applyDefaultStyle;
+    private updateRouteHandleVisibility;
+    private updateInteractionStyle;
+    private updateFrontClone;
+    private removeFrontClone;
     private mouseEnter;
     private mouseLeave;
 }

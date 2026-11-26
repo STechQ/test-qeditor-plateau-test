@@ -78,25 +78,6 @@ export interface IApplicationLogoInfo {
     path: string;
     updateDate: Date;
 }
-/** Uygulama raw import ile kurulduysa kaynağı. Yalnızca uygulama kaydı import ile ilk kez yazılırken eklenir. */
-export interface IApplicationRawImportInfo {
-    sourceEnvironment?: string;
-    /** Paketin export edildiği Studio adresinin host'u (manifest source.host). */
-    sourceHost?: string;
-    sourceOrganization: {
-        id: string;
-        name: string;
-    };
-    sourceApplication: {
-        id: string;
-        name: string;
-    };
-    packageCreatedAt: string;
-    exporterVersion: string;
-    includeHistory: boolean;
-    importedAt: Date;
-    importedBy: string;
-}
 export interface IApplication extends ICloudObject {
     status?: "deleting";
     deleteTriggerDate?: Date;
@@ -123,7 +104,6 @@ export interface IApplication extends ICloudObject {
     isCopiedApp?: boolean;
     lastReleasedVersion?: string;
     tags?: Array<ITagValue>;
-    rawImport?: IApplicationRawImportInfo;
     relatedModules?: Array<IRelatedModuleItem>;
 }
 export interface IOrganizationData extends IOrganization {
@@ -148,7 +128,7 @@ export interface IModuleBackend extends ICloudObject {
     status?: "deleting";
     deleteTriggerDate?: Date;
     tryDeletingCounter?: number;
-    description?: string;
+    description: string;
     modifyDate?: Date;
     prefix?: string;
     objectType: ModuleObjectType;
@@ -156,11 +136,10 @@ export interface IModuleBackend extends ICloudObject {
         productID: ObjectID;
         productVerID: ObjectID;
     };
-    mainOwner: ObjectID;
     shareType?: ModuleShareType;
     lastReleasedVersion?: string;
+    studioVersionBound?: boolean;
     applicationID?: string;
-    ownerOrg?: string;
     origInfo?: IModuleOrigInfo;
     childModules?: Array<IRelatedModuleItem>;
 }
@@ -169,14 +148,27 @@ export interface IModuleVersion extends ICloudObject {
     version: string;
     relatedModelHistories: Array<IModuleRelatedModelItem>;
     relatedModuleHistories?: Array<IModuleRelatedModuleItem>;
-    description?: string;
+    description: string;
     unreleased?: boolean;
-    importedFromGlobal?: boolean;
     origInfo?: IModuleOrigInfo;
     shareScope: ModuleShareScope;
     prefix?: string;
-    mainOwner: ObjectID;
-    ownerOrg?: string;
+    /**
+        * @deprecated Persistence-only audit field.
+        * Never read or use this field in application logic.
+        * It exists only for tracing the source Studio host directly in the database.
+    */
+    _histsourceHost?: string;
+    /**
+        * @deprecated Persistence-only audit field.
+        * Never read or use this field in application logic.
+        * It exists only for tracing the source organization directly in the database.
+    */
+    _histownerOrg?: string;
+    studioVersionBound?: boolean;
+    moduleDescription: string;
+    moduleCreateDate: Date;
+    moduleCreatedBy: string;
 }
 export interface IMarketplaceModule {
     ID: ObjectID;
@@ -184,15 +176,10 @@ export interface IMarketplaceModule {
     name: string;
     description?: string;
     prefix?: string;
-    ownerApp?: string;
     ownerApplicationID?: ObjectID;
-    publisherOrgId: string;
-    ownerOrg: string;
     publishedBy: string;
     publishDate: Date;
     updateDate?: Date;
-    isActive: boolean;
-    latestVersion?: string;
     usages?: Array<IMarketplaceModuleUsage>;
 }
 export interface IMarketplaceModuleUsageEvent {
@@ -261,14 +248,14 @@ export interface IModelInfo extends ICloudObject {
         version?: string;
     };
     /**
-     * Yalnızca private checkout satırlarında var (bkz. common/qCloudTemp/privateCheckout.ts): satır orijinalle aynı ID'yi taşır
+     * Yalnızca private edit satırlarında var (bkz. common/qCloudTemp/privateEdit.ts): satır orijinalle aynı ID'yi taşır
      * ve bu alt alanla ayrılır. Bu satırlar varsayılan sorgularda görünmez (common/helpers/modelInfosScope.ts).
      */
     workspace?: IModelInfoWorkspace;
 }
-/** ModelInfos satır türü. Şimdilik yalnızca "private" (private checkout kopyası); ileride "workspace". */
+/** ModelInfos satır türü. Şimdilik yalnızca "private" (private edit kopyası); ileride "workspace". */
 export type ModelInfoRowKind = "private";
-/** Private checkout satırının kendine ait alanları (ModelInfos.workspace). Orijinal satırlarda bu alan yoktur. */
+/** Private edit satırının kendine ait alanları (ModelInfos.workspace). Orijinal satırlarda bu alan yoktur. */
 export interface IModelInfoWorkspace {
     type: ModelInfoRowKind;
     /** Kopyanın sahibi (kullanıcı ID'si). */
@@ -311,6 +298,7 @@ export type IModelForWorkflow = {
     appId: string;
     version: string | undefined;
     live?: boolean;
+    privateOwnerId?: string;
     overridden?: boolean;
     owner?: IOwner;
     security?: {
@@ -458,7 +446,6 @@ export interface ITreeviewItem {
     unreleased?: boolean;
     lastReleasedModuleVersion?: string;
     modelID?: string;
-    ownerOrg?: string;
     overridden?: boolean;
     overriddenModel?: {
         ID: string;
@@ -468,7 +455,9 @@ export interface ITreeviewItem {
     migrated?: boolean;
     origInfo?: IModuleOrigInfo | IModelOrigInfo;
     shareScope?: ModuleShareScope;
-    importedFromGlobal?: boolean;
+    studioVersionBound?: boolean;
+    studioIncompatible?: boolean;
+    nestedModuleConflict?: boolean;
     editingVer?: string;
     unversioned?: boolean;
     description?: string;

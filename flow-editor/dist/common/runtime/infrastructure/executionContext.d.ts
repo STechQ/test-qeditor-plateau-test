@@ -3,6 +3,7 @@ export interface IExecutionContextStore {
     tuid: string;
     userId?: string;
     lpLogClientId?: string;
+    privateOwnerId?: string;
     channel: "online" | "batch" | "console";
     scope?: "initiation" | undefined;
 }

@@ -98,8 +98,8 @@ export declare class Model implements IModel, IStudioUIModelBase {
     key: IModel["key"];
     migrated?: IModel["migrated"];
     origInfo?: IModel["origInfo"];
-    /** Kullanıcının bu modeldeki private checkout'u. ctor bunu sıfırlamaz; copyFrom'dan sağ çıkar. */
-    privateCheckout?: IModel["privateCheckout"];
+    /** Kullanıcının bu modeldeki private edit'i. ctor bunu sıfırlamaz; copyFrom'dan sağ çıkar. */
+    privateEdit?: IModel["privateEdit"];
     constructor(initials: IModelCtorInitials);
     copyFrom(model: IModel): void;
     private ctor;
@@ -177,6 +177,7 @@ export interface IModel extends IObject, IStudioUIModelBase {
     checkedOut?: boolean;
     checkoutInfo?: ICheckoutInfo;
     version?: string;
+    latestPublishedVer?: string;
     editingVer?: string;
     unversioned?: boolean;
     hasHistory?: boolean;
@@ -190,14 +191,14 @@ export interface IModel extends IObject, IStudioUIModelBase {
     history?: ITreeviewItem["history"];
     selectedHistoryVersion?: string;
     origInfo?: IModelOrigInfo;
-    /** Private checkout: gövde kullanıcının kopyasından gelir, kayıtlar ona gider. ID orijinal kalır. */
-    privateCheckout?: IModelPrivateCheckoutRef;
+    /** Private edit: gövde kullanıcının kopyasından gelir, kayıtlar ona gider. ID orijinal kalır. */
+    privateEdit?: IModelPrivateEditRef;
 }
-/** Orijinal modelin üzerine giydirilen private checkout kaydı. */
-export interface IModelPrivateCheckoutRef {
+/** Orijinal modelin üzerine giydirilen private edit kaydı. */
+export interface IModelPrivateEditRef {
     storageId: string;
     updateDate: Date;
-    /** Orijinal checkout'tan sonra değişti mi; sunucu design-time gövdeleri karşılaştırır (privatecheckout/compare). */
+    /** Orijinal checkout'tan sonra değişti mi; sunucu design-time gövdeleri karşılaştırır (privateedit/compare). */
     originalChanged?: boolean;
     /** Orijinalde Start Working'de olan kişi (son karşılaştırmaya göre); başkasıysa kopyadaki Start Working pasif olur. */
     workingBy?: string;
@@ -216,7 +217,7 @@ export interface IModule extends IObject {
     objectType: "module";
     status?: "deleting";
     deleteTriggerDate?: Date;
-    description?: string;
+    description: string;
     prefix?: string;
     owner: IApplication | IModule;
     children: Array<IModel | IModule>;
@@ -225,8 +226,9 @@ export interface IModule extends IObject {
     currentVersion?: string;
     relatedModelHistories?: IModuleVersion["relatedModelHistories"];
     lastReleasedVersion?: string;
-    ownerOrg?: string;
-    importedFromGlobal?: boolean;
+    studioVersionBound?: boolean;
+    studioIncompatible?: boolean;
+    nestedModuleConflict?: boolean;
     origInfo?: IModuleOrigInfo;
     modifyDate?: Date;
     unreleased?: boolean;
@@ -244,8 +246,12 @@ export interface IModuleVersion extends ICloudObject {
     version: string;
     relatedModelHistories: Array<IModuleRelatedModelItem>;
     relatedModuleHistories?: Array<IModuleRelatedModuleItem>;
-    description?: string;
+    description: string;
     unreleased?: boolean;
+    moduleDescription: string;
+    moduleCreateDate: Date;
+    moduleCreatedBy: string;
+    studioIncompatible?: boolean;
 }
 export interface IApplicationDetails {
     moduleCount: number;
@@ -267,9 +273,6 @@ export interface IRelatedModuleItem {
     moduleType: "version" | "reference" | "owned";
     updateStrategy?: string;
 }
-export interface IApplicationFeatures {
-    disablePrimitiveComponents?: boolean;
-}
 export interface IApplication extends IObject {
     objectType: "application";
     relatedModules?: Array<IRelatedModuleItem>;
@@ -288,7 +291,6 @@ export interface IApplication extends IObject {
     lastPublishDate?: Date;
     tags?: Array<ITagValue>;
     copyApp?: ICopyApp;
-    features?: IApplicationFeatures;
     isCopiedApp?: boolean;
 }
 export interface IApplicationExtended extends IApplication {
@@ -306,6 +308,7 @@ export interface IApplicationExtended extends IApplication {
 }
 export interface ILoggedInUser {
     userId: string;
+    objectId?: string;
     authorization?: string;
     email: string;
     name?: string;

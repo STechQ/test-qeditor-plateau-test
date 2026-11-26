@@ -29,6 +29,7 @@ export interface IWorkflowExecutionContextStore extends IExecutionContextStore {
     threadSubProcessIdMap?: Record<string, string>;
     wfEngineOnUs?: {
         workflowModel?: IWorkflowModel;
+        rootWorkflowModel?: IWorkflowModel;
         dataInstance?: DataInstance;
         processInstance?: IProcessInstance;
         stepStates?: IStepStates;

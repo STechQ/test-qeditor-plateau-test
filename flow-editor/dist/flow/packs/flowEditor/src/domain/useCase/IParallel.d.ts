@@ -1,11 +1,16 @@
 import { IPoint } from "../../../../flowInterfaces/editor/shape/IPoint";
-import { IStepPair } from "../../../../drawArea/types";
+import { ConnectionDirection, IStepPair } from "../../../../drawArea/types";
+export interface IParallelBlockConnection {
+    sourceStepID: string;
+    output: string;
+    direction: ConnectionDirection;
+}
 export interface IParallel {
     /**
-     * Palette drop of "Split/Join": creates a `parallelSplit` and a `parallelJoin` sharing a fresh
-     * `blockId`, unconnected, as a single undo step.
+     * Creates a `parallelSplit` and a `parallelJoin` sharing a fresh `blockId` as one undo step.
+     * Quick-add can also connect the source step to the created split in the same operation.
      */
-    addParallelBlock(point: IPoint, version: string): void;
+    addParallelBlock(point: IPoint, version: string, connection?: IParallelBlockConnection): void;
     /** Creates the missing half of an orphaned block, reusing its `blockId`. No connection is drawn. */
     createMissingPair(stepID: string): void;
     /** Id of the step that closes (or opens) this one's block, when it exists. */

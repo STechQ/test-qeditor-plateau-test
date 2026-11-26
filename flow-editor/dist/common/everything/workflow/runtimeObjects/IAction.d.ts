@@ -29,6 +29,7 @@ export type IActionData = {
 };
 export type IActionProp = {
     uniqueKeys?: Array<string>;
+    visibilityRule?: string;
     validation?: IExpressionData;
 };
 export {};

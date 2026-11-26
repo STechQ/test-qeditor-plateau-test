@@ -147,6 +147,7 @@ export type ListOptions<T extends object = object> = {
     skip?: number;
 };
 export type UpdateResult = {
+    matchedCount: number;
     modifiedCount: number;
     upsertedCount: number;
 };
@@ -183,6 +184,13 @@ export interface IMongoDBTransactionQueue {
     onCommit: Hook<OnCommitCallback>;
     queueQuery(queryName: keyof typeof trxFuncDict | keyof typeof queryFuncDict, collection: string, args: IArguments): "queued" | ClientSession;
     queueScope(scopeName: string, scope: () => Promise<void>): void;
+    /**
+     * Unlike onCommit's fire-and-forget subscribers, these callbacks are awaited in registration order
+     * after successful commit and session cleanup. They are consumed per commit and discarded on abort/failure.
+     * No new transaction is opened; scopeName is only a diagnostic label. Callback failures are logged,
+     * not rethrown, and remaining callbacks still run. Delivery is best-effort, not durable.
+     */
+    queueAfterCommit(scopeName: string, scope: () => Promise<void>): void;
     commit(): Promise<void>;
     abort(): void;
 }

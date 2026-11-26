@@ -4,7 +4,7 @@ import { IPoint } from "../../../../flowInterfaces/editor/shape/IPoint";
 import { IDrawArea } from "../../domain/infrastructure/IDrawArea";
 import { IFlow } from "../../domain/useCase/IFlow";
 import { IHistory } from "../../domain/useCase/IHistory";
-import { IParallel } from "../../domain/useCase/IParallel";
+import { IParallel, IParallelBlockConnection } from "../../domain/useCase/IParallel";
 import { IStepRepo } from "../../domain/useCase/IStepRepo";
 import { IViewModel } from "../../domain/viewModel/IViewModel";
 export declare class ParallelImpl implements IParallel {
@@ -14,7 +14,7 @@ export declare class ParallelImpl implements IParallel {
     private readonly flow;
     private readonly history;
     constructor(container: DependencyContainer, viewModel?: IViewModel, drawArea?: IDrawArea, stepRepo?: IStepRepo, flow?: IFlow, history?: IHistory);
-    addParallelBlock(point: IPoint, version: string): void;
+    addParallelBlock(point: IPoint, version: string, connection?: IParallelBlockConnection): void;
     createMissingPair(stepID: string): void;
     findPairStepId(stepID: string): string | undefined;
     getAllPairs(): Array<IStepPair>;

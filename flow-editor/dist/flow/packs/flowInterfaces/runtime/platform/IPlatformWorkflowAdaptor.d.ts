@@ -11,7 +11,7 @@ import { IFile } from "../../../../../common/everything/workflow/runtimeObjects/
 import { IActionData } from "../../../../../common/everything/workflow/runtimeObjects/IAction";
 import { IProcessInstance } from "../../../../../common/everything/workflow/runtimeObjects/namedobjects/IProcessInstance";
 import { IWFEDBProcessInst } from "../../../../../common/everything/workflow/runtimeObjects/IWFEDB";
-import { IRuntimePersona } from "../../../../../common/everything/workflow/runtimeObjects/namedobjects/IRuntimePersona";
+import { IEditableRuntimePersona } from "../../../../../common/everything/workflow/runtimeObjects/namedobjects/IRuntimePersona";
 import { ISwimlaneItem } from "../../../../../common/everything/accessmanager/designtime/ISwimlaneDesign";
 import { ISessionResponseWFE } from "../../../../../common/everything/workflow/dtos/session";
 import type ICacheManager from "../../../../../common/runtime/infrastructure/cache/ICacheManager";
@@ -46,7 +46,7 @@ export interface IPlatformWFFAdaptor {
         };
     };
     accessmanager: {
-        getPersona(personaId: string): Promise<IRuntimePersona>;
+        getPersona(personaId: string): Promise<IEditableRuntimePersona>;
         getSwimlanes(): Promise<Array<ISwimlaneItem>>;
     };
     wfe: {
@@ -108,7 +108,7 @@ export interface IPlatformWorkflowServerRequest {
 }
 export interface IChangeStepParams {
     processInstanceId: string;
-    taskId: string;
+    taskId?: string;
     dataInstance?: DataInstance;
     status?: StatusType;
     stepId?: string;

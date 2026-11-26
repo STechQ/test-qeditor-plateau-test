@@ -1,5 +1,5 @@
 import { IPoint } from "../flowInterfaces/editor/shape/IPoint";
-import { FlowEvents, IDrawArea, IFlowConnectionUpdate, IFlowCopy, IFlowExport, IFlowStepOptions, IFlowStepProps, IFlowStepSwimlane, IFlowStepUpdate, IStepPair, ISwimlaneExport } from "./types";
+import { ConnectionDirection, FlowEvents, IDrawArea, IFlowConnectionUpdate, IFlowCopy, IFlowExport, IFlowStepOptions, IFlowStepProps, IFlowStepSwimlane, IFlowStepUpdate, IStepPair, ISwimlaneExport } from "./types";
 import { IFlowState } from "../flowInterfaces/editor/IFlowEditorState";
 import { ISwitchCaseExp } from "../../../common/everything/flow/runtimeModels/ISwitch";
 export declare class DrawArea implements IDrawArea {
@@ -24,6 +24,7 @@ export declare class DrawArea implements IDrawArea {
     pasteObjects(copyData: IFlowCopy): Record<string, string>;
     exportObjects(): IFlowExport;
     importObjects(model: IFlowExport, undoRedo?: boolean): void;
+    connectFlowSteps(sourceStepID: string, output: string, targetStepID: string, direction: ConnectionDirection): void;
     getState(): IFlowState;
     setState(state?: IFlowState): void;
     setReadonly(readonly: boolean): void;

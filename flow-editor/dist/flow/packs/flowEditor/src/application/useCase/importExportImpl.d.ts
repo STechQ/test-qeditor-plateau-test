@@ -42,6 +42,7 @@ export declare class ImportExportImpl implements IImportExport {
             t: string;
             t_i: string;
             ID: string;
+            routing: import("@stechquick/flow-interfaces/editor/IConnectionDesignModel").IConnectionRoutingDesignModel | undefined;
         }[];
     };
     setStepPropDict(step: IStepInstance): void;

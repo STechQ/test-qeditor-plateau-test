@@ -1,6 +1,7 @@
 import { PropValue } from "@stechquick/flow-interfaces/runtime";
 import { ISwitchCaseExp } from "../../../common/everything/flow/runtimeModels/ISwitch";
 import { IFlowState } from "../flowInterfaces/editor/IFlowEditorState";
+import { IConnectionRoutingDesignModel } from "../flowInterfaces/editor/IConnectionDesignModel";
 import { IInputInfo } from "../flowInterfaces/editor/IStepOptions";
 import { IPoint } from "../flowInterfaces/editor/shape/IPoint";
 export interface IFlowStepOptions {
@@ -10,6 +11,7 @@ export interface IFlowStepOptions {
     color?: string;
     errors?: PropValue;
     allowsMultipleOutputConnections?: boolean;
+    hideSingleOutputLabel?: boolean;
 }
 export interface IFlowStepProps {
     label?: string;
@@ -33,6 +35,7 @@ export interface IFlowConnectionExport {
         step: string;
         input: string;
     };
+    routing?: IConnectionRoutingDesignModel;
 }
 export interface IFlowExport extends IFlowCopy {
     maxID: number;
@@ -83,17 +86,26 @@ export interface IConnectEventInfo {
         input: string;
     };
 }
+export type ConnectionDirection = "left" | "right" | "top" | "bottom";
+export interface IShowConnectedStepMenuRequest {
+    sourceStepID: string;
+    output: string;
+    direction: ConnectionDirection;
+    menuPoint: IPoint;
+    targetPoint: IPoint;
+}
 export type FlowEvents = {
     onSelect(selecteds: Array<IFlowStepEventInfo>): void;
     onDelete(deleteds: Array<IFlowStepEventInfo>): void;
     onConnect(connection: IConnectEventInfo): void;
     onMoveSteps(movedSteps: Array<string>): void;
+    onRouteChange(connectionID: string): void;
     onPan(): void;
     onZoom(): void;
     onRename(stepId: string, oldName: string, newName: string): void;
     changeOutput(connectionId: string, outputName: string): void;
     editOutput(stepId: string, outputName: string, x: number, y: number): void;
-    onConnectionRejected(reason: string): void;
+    onShowConnectedStepMenu(request: IShowConnectedStepMenuRequest): void;
 };
 export interface IDrawArea {
     readonly rootElement: HTMLElement;
@@ -115,6 +127,7 @@ export interface IDrawArea {
     pasteObjects(copyData: IFlowCopy): Record<string, string>;
     exportObjects(): IFlowExport;
     importObjects(model: IFlowExport, undoRedo?: boolean): void;
+    connectFlowSteps(sourceStepID: string, output: string, targetStepID: string, direction: ConnectionDirection): void;
     getState(): IFlowState;
     setState(state?: IFlowState): void;
     setReadonly(readonly: boolean): void;

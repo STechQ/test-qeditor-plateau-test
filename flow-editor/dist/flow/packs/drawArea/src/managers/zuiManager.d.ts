@@ -4,7 +4,7 @@ import { IRect } from "../../../flowInterfaces/editor/shape/IRect";
 import { SelectionManager } from "./selectionManager";
 import { IFlowState } from "../../../flowInterfaces/editor/IFlowEditorState";
 import { Context } from "../core/context";
-export type StageType = "connection" | "step" | "selection" | "swimlane" | "operator";
+export type StageType = "connection" | "connectionHover" | "connectionSelected" | "step" | "selection" | "swimlane" | "operator";
 export type ResizeSubscriber = (rect: IRect) => void;
 export declare class ZuiManager {
     private readonly selectionManager;
@@ -17,6 +17,8 @@ export declare class ZuiManager {
     private readonly stepStage;
     private readonly swimlaneStage;
     private readonly connectionStage;
+    private readonly connectionHoverStage;
+    private readonly connectionSelectedStage;
     private readonly operatorStage;
     private selectionBoxRect;
     private selectionBoxStart?;
@@ -48,6 +50,12 @@ export declare class ZuiManager {
     clearStage(stage: "selection"): void;
     zoomBy(dy: number, clientPoint: IPoint): void;
     zoomSet(scale: number, clientX: number, clientY: number): void;
+    fitToSurfaceBounds(bounds: {
+        left: number;
+        top: number;
+        right: number;
+        bottom: number;
+    }, padding?: number, maxScale?: number): void;
     reset(): void;
     getSelectionRect(): IRect;
     subscribeToResize(subscriber: ResizeSubscriber): void;
@@ -55,6 +63,7 @@ export declare class ZuiManager {
     setState(surfaceMatrix: IFlowState["surfaceMatrix"]): void;
     centerSelectedStep(): void;
     private resizeTo;
+    private updateBackground;
     private selectStage;
     interpret(svg: SVGElement): Group | undefined;
     private handleWheelZoom;
